@@ -1,0 +1,1931 @@
+﻿lockitver|DO NOT DELETE THIS LINE! 2896
+qstr_Next_Page|Nächste Seite
+qstr_Game_Rules:^|Spielregeln:^
+qstr_0|0
+qstr_Show_game_rules|Spielregeln zeigen
+qstr_Continue...|Weiter...
+qstr_Candidate_#1:_{s1}|Kandidat #1: {s1}
+qstr_Candidate_#2:_{s1}|Kandidat #2: {s1}
+qstr_Who_do_you_wish_to_s|Wen möchtet Ihr unterstützen?
+qstr_{s1}_gives_his_suppo|{s1} unterstützt {s2}.
+qstr_Number_of_Supporters|Anzahl der Unterstützer: {reg0}
+qstr_{s2}_has_heard_his_v|{s2} hat den Rat seiner Vasallen angehört. Er wählt {s1} als Marschall von {s3}.
+qstr_Action|Handeln
+qstr_Mount|Aufsitzen
+qstr_Attack_Type|Angriffsart
+qstr_Stand_Ground|Standhaft bleiben
+qstr_Charge|Angreifen
+qstr_Follow_Me|Mir nach
+qstr_Hold_This_Position|Position halten
+qstr_Spread_Out|Ausfächern
+qstr_Stand_Closer|Zusammenrücken
+qstr_Fall_Back|Zurückfallen
+qstr_Advance|Vorrücken
+qstr_Dismount|Absitzen
+qstr_Fire_At_Will|Feuer frei
+qstr_Hold_Your_Fire|Feuer einstellen
+qstr_Use_Blunt_Weapons|Stumpfe Waffen einsetzen
+qstr_Use_Any_Weapon|Beliebige Waffe einsetzen
+qstr_Ready|Bereit
+qstr_Wounded|Verwundet
+qstr_Dead|Tot
+qstr_Number_of_men_knocke|Anzahl der niedergeschlagenen Männer: {reg1}
+qstr_Number_of_men_left:_|Anzahl der verbleibenden Männer: {reg1}
+qstr_Opponents_Beaten:_{r|Geschlagene Gegner: {reg1}
+qstr_Opponents_Remaining:|Verbleibende Gegner: {reg1}
+qstr_Remain_in_retirement|Im Ruhestand bleiben.
+qstr_Go_back_to_the_adven|Zurück ins Abenteurerleben.
+qstr_You_have_retired_at_|Ihr seid bei Stufe {reg4} nach {reg5} Tagen des Abenteuerns in den Ruhestand gegangen.
+qstr_Effect_on_Score|Einfluss auf Punktestand
+qstr_Settlements_owned_by|Siedlungen in Eurem Besitz: {reg0}
+qstr_Friendly_Settlements|Freundlich gesinnte Siedlungen: {reg0}
+qstr_Hostile_Settlements:|Feindlich gesinnte Siedlungen: {reg0}
+qstr_Friendly_Lords:_{reg|Freundlich gesinnte Fürsten: {reg0}
+qstr_Enemy_Lords:_{reg0}|Feindlich gesinnte Fürsten: {reg0}
+qstr_Victories:_{reg0}|Siege: {reg0}
+qstr_Defeats:_{reg0}|Niederlagen: {reg0}
+qstr_Quests_Completed:_{r|Quests vollendet: {reg0}
+qstr_Companions_Found:_{r|Gefundene Gefährten: {reg0}
+qstr_Companions_Lost/Depa|Verlorene/fortgegangene Gefährten: {reg0}
+qstr_Wealth:_{reg0}_denar|Reichtum: {reg0} Dinare
+qstr_Inventory:_{reg0}_de|Inventar: {reg0} Dinare
+qstr_Renown:_{reg0}|Ansehen: {reg0}
+qstr_Experience:_{reg0}|Erfahrung: {reg0}
+qstr_Days_Passed:_{reg0}|Verstrichene Tage: {reg0}
+qstr_Difficulty:_{reg0}%|Schwierigkeitsgrad: {reg0}%
+qstr_TOTAL_SCORE:_{reg0}|GESAMTPUNKTE: {reg0}
+qstr_{s0}__{s50}_|{s0} ({s50})
+qstr_None|Keine
+qstr_{s55}__{reg0}%_|{s55} ({reg0}%)
+qstr_{s55}|{s55}
+qstr_Staff:|Gehilfen:
+qstr_You_paid_{reg0}_cash|Ihr musstet {reg0} Dinar abtreten um Schulden zu begleichen
+qstr_Earlier_cash:|Goldsäckel, alt:
+qstr_New_cash:|Goldsäckel, neu:
+qstr_Done|Fertig
+qstr_Name:_{s1}^Level:_{r|Name: {s1}^Stufe: {reg1}
+qstr_{s1}^HP:_{reg1}/{reg|{s1}^Gesundheit: {reg1}/{reg2}
+qstr_{s1}|{s1}
+qstr_Weapon_upgrade_setti|Aufrüstung der Waffen:
+qstr_Apply_to_everyone|für alle übernehmen
+qstr_Upgrade_armor_|Rüstung verbessern 
+qstr_Upgrade_horse_|Pferd verbessern 
+qstr_Select_your_domestic|Wählt Eure neue Innenpolitik
+qstr_Centralization:|Monarchie:
+qstr_Aristocracy:|Aristokratie:
+qstr_Serfdom:|Leibeigenschaft:
+qstr_Troop_quality:|Truppenqualität:
+qstr_Mercantilism:|Merkantilismus:
+qstr_High_centralization_|Starke Monarchie verschafft dem König höhere Steuern, die Vasallen haben jedoch große Verluste bei Steuereinnahmen. Die Beziehung zu den Vasallen wird dadurch beeinträchtigt.
+qstr_High_aristocracy_wil|Hohe Aristokratie verbessert die Beziehung des Königs zu seinen Vasallen. Als Fürsten adeligen Geblüts erhalten diese das Recht größere Armeen auszuheben. Der Handel im Königreich nimmt dadurch ab.
+qstr_High_serfdom_reduces|Viel Leibeigenschaft senkt die Steuer-Ineffizienz im Königreich und Vasallen können größere Armeen ausheben. Die Truppen des Königreichs haben jedoch eine schlechtere Moral.
+qstr_High_troop_quality_i|Hohe Truppenqualität verbessert die Kampfkraft der Armee, die Zahl der Soldaten nimmt jedoch ab.
+qstr_Mercantilistic_polic|Merkantilistische Politik fördert hohe Exporte, schränkt jedoch Importe ein, der Staat übt hohen Einfluss auf die Industrie aus.
+qstr_Cancel|Abbrechen
+qstr_Dictate_the_peace_te|Diktiert Bedingungen für den Frieden
+qstr_Select_the_castle_an|Wählt Eure Forderungen. Burgen und Gold können beliebig gefordert werden.
+qstr_1000_denars|1000 Dinar
+qstr__Faction_Relations_R| Bericht der diplomatischen Beziehungen 
+qstr__Return_to_menu_| Zurück zum Menü 
+qstr_Your_kingdom|Eigenes Reich
+qstr_Player^Relation|Spieler^Beziehungen
+qstr_War|Krieg
+qstr_Casus_Belli|Provokation
+qstr_Peace|Frieden
+qstr_Truce|Waffenruhe
+qstr_Alliance|Bündnis
+qstr_Defense|Verteidigungs-Pakt
+qstr_Trade|Handels-Abkommen
+qstr_{reg59?{reg59}_days:|{reg59?{reg59} Tage:}
+qstr_{reg61}|{reg61}
+qstr_{s9}|{s9}
+qstr_Loyal|Ergeben
+qstr_Devoted|Loyal
+qstr_Fond|Zugetan
+qstr_Gracious|Gnädig
+qstr_Friendly|Freundlich
+qstr_Supportive|Wohlwollend
+qstr_Favorable|Einladend
+qstr_Cooperative|Kooperativ
+qstr_Accepting|Duldend
+qstr_Indifferent|Gleichgültig
+qstr_Suspicious|Misstrauisch
+qstr_Grumbling|Mürrisch
+qstr_Hostile|Feindlich
+qstr_Resentful|Missgünstig
+qstr_Angry|Wütend
+qstr_Hateful|Hasserfüllt
+qstr_Revengeful|Rachsüchtig
+qstr_Vengeful|Verzehrt von Rachsucht
+qstr_{reg1}|{reg1}
+qstr_{s3}|{s3}
+qstr_{reg61}_{reg58?_{reg|{reg61} {reg58?({reg58} U) :}Zentren
+qstr_{reg62}_Caravans|{reg62} Karawanen
+qstr_{reg60}_{reg59?_{reg|{reg60} {reg59?({reg59} Gef.) :}Fürsten
+qstr_How_will_your_male_v|Welchen Titel sollen Eure männlichen Vasallen tragen?
+qstr_How_will_your_female|Welchen Titel sollen Eure weiblichen Vasallen tragen?
+qstr_Sell_items_automatic|Gegenstände automatisch verkaufen:
+qstr_Price_limit_for_auto|Preisgrenze für automatischen Verkauf:
+qstr_Item_types_for_auto_|Warentypen für automatischen Verkauf:
+qstr_Select_all|Alle auswählen
+qstr_Select_invert|Auswahl umkehren
+qstr_*|*
+qstr__Courtships_in_progr| Brautwerbungen im Gange 
+qstr__Known_Lords_by_Rela| Bekannte Fürsten nach Beziehungen 
+qstr__Character_&_Compani| Charakter und Begleiter 
+qstr__Done_| Fertig 
+qstr_Your_supporters|Eure Anhänger
+qstr_Swadians|Swadier
+qstr_Vaegirs|Vaegier
+qstr_Khergits|Khergiten
+qstr_Nords|Nordmänner
+qstr_Rhodoks|Rhodok
+qstr_Sarranids|Sarraniden
+qstr__near_{s10}| nahe {s10}
+qstr_Your_recruiter_who_w|Euer Büttel mit dem Auftrag {reg10} Rekruten nach {s13} zu bringen wurde{s10} erschlagen!
+qstr_Your_caravan_sending|Eure Karawane mit dem Auftrag {s12} nach {s13} zu bringen wurde{s10} geplündert!
+qstr_Your_messenger_on_th|Euer Herold wurde auf dem Weg zu {s13}{s10} erschlagen!
+qstr_Your_soldiers_patrol|Euer Wachtrupp, der um {s13} patrouillierte wurde{s10} besiegt!
+qstr_A_scout_trying_to_ga|Euer Kundschafter, der versuchte {s13} auszuspähen wurde erschlagen{s10}!
+qstr_{s1}_is_now_a_prison|{s1} ist nun Gefangener von {s2}.
+qstr_{s54}_is_a_claimant_|{s54} ist ein Anwärter auf dem Thron von {s56}.
+qstr_nowhere|nirgends
+qstr_{s57}_and_{s58}|{s57} und {s58}
+qstr_{reg3?She:He}|{reg3?Sie:Er}
+qstr_The_town_of_{s50}|Die Stadt {s50}
+qstr_The_village_of_{s50}|Das Dorf {s50} nahe {s52}
+qstr_{s51}_belongs_to_{s1|{s51} gehört {s1} von {s2} und wird Euer Hauptsitz.^
+qstr_{s51}_belongs_to_{s1}|{s51} gehört {s1} von {s2} und wird {reg0?ihr:sein} Hauptsitz.^
+qstr_{s51}_belongs_to_{s1}_|{s51} gehört {s1} von {s2} und wird von {reg0?ihr:ihm} zur Heimat erklärt.^
+qstr_{s51}_belongs_to_{s1}_o|{s51} gehört {s1} von {s2}.^
+qstr_{s51}_belongs_to_{s2|{s51} gehört {s2}, wurde jedoch noch keinem Besitzer zugesprochen.^
+qstr_{s51}_belongs_to_{s2}|{s51} gehört {s2}.^
+qstr_{s2}Its_market_town_|{s2}Dessen Handels-Stadt ist {s8}.^
+qstr_{s7}_and_{s8}|{s7} und {s8}
+qstr_{s2}It_has_no_villag|{s2}Es hat keine Dörfer.^
+qstr_{s2}{reg0?Its_villag|{s2}{reg0?Seine Dörfer sind:Sein Dorf ist} {s8}.^
+qstr_{s2}Its_prosperity_i|{s2}Sein Wohlstand ist: {s50}
+qstr_noone|niemand
+qstr_{s9}_and_{s10}|{s9} und {s10}
+qstr_{s5}_has_been_defeat|{s5} wurde besiegt!
+qstr_{s7}_opened_the_gate|{s7} hat das Tor geöffnet
+qstr_{s7}_closed_the_gate|{s7} hat das Tor geschlossen
+qstr_+{reg1}_to_party_mor|+{reg1} auf Truppenmoral
+qstr_Requires_{reg1}_inte|Erfordert {reg1} Intelligenz zum Lesen
+qstr_wound_treament|Wundbehandlung
+qstr_trainer|Ausbilder
+qstr_surgery|Chirurgie
+qstr_+1_to_{s1}_while_in_|+1 auf {s1}, wenn im Inventar
+qstr_Move_here|Hierhin bewegen
+qstr_View_notes|Aufzeichnungen ansehen
+qstr_Accompany|Geleiten
+qstr_killed|getötet
+qstr_wounded|verwundet
+qstr_{s0}^TOTAL:_{reg3}__|{s0}^GESAMT: {reg3} ({s2})
+qstr_^None|^Keine
+qstr_nothing|nichts
+qstr_{reg0}_village{reg1?|{reg0} Dorf{reg1?s:}
+qstr_{reg0}_castle{reg1?s|{reg0} Burg{reg1?s:}
+qstr_{reg0}_castle{reg1?s:|{reg0} Burg{reg1?s:} und {s0}
+qstr_{reg0}_town{reg1?s:}|{reg0} Stadt{reg1?s:}
+qstr_{reg0}_town{reg1?s:}_|{reg0} Stadt{reg1?s:} und {s0}
+qstr_{reg0}_town{reg1?s:}_{|{reg0} Stadt{reg1?s:}, {s0}
+qstr_Your_opponents_are_r|Eure Gegner sind bereit zum Kampf.
+qstr_Try_to_destroy_as_ma|Versucht, so viele Ziele wie möglich zu zerstören. Ihr habt zweieinhalb Minuten.
+qstr_Stay_behind_the_line|Bleibt hinter der Linie auf dem Boden und schießt auf die Ziele. Versucht, keinen Schuss zu vergeuden.
+qstr_Battle_Advantage_=_{|Kampfvorteil = {reg0}.
+qstr_{s9}_wants_you_to_re|{s9} will, dass Ihr seiner Armee weiter folgt, bis er neue Anweisungen ausgibt.
+qstr_{s5}_of_the_{s7}_has|{s5} vom {s7} hat {s4} in Besitz genommen.
+qstr_{s4}_has_been_awarde|{s4} wurde {s5} vom {s7} verliehen.
+qstr_pt_in_{s11}|pt in {s11}
+qstr__Being_Raided_|(wird überfallen)
+qstr__Looted_|(geplündert)
+qstr__Under_Siege_|(wird belagert)
+qstr_The_village_of_{s1}_|Das Dorf {s1} wurde von {s2} geplündert.
+qstr_{s3}_is_no_longer_un|{s3} wird nicht länger belagert.
+qstr_Small_bands_of_enemi|Kleiner Feindtrupp in der Nähe von {s1} entdeckt.
+qstr_Enemy_patrols_spotte|Feindliche Patrouillen in der Nähe von {s1} entdeckt.
+qstr_Medium_sized_group_o|Mittlerer Feindtrupp in der Nähe von {s1} entdeckt.
+qstr_Significant_group_of|Großer Feindtrupp in der Nähe von {s1} entdeckt.
+qstr_Army_of_enemies_spot|Feindliche Armee in der Nähe von {s1} entdeckt.
+qstr_Large_army_of_enemie|Große feindliche Armee in der Nähe von {s1} entdeckt.
+qstr_Great_host_of_enemie|Große Masse feindlicher Einheiten in der Nähe von {s1} entdeckt.
+qstr_{s0}_collects_{reg0}|{s0} erhebt {reg0} Dinar von {s4}, derzeitiger Wohlstand: {reg1} Dinar
+qstr_{reg2}|{reg2}
+qstr__{s10}_of_{s13}_recr| {s10} vom {s13} rekrutiert {s11} {s12} in {s14}
+qstr_{s1}_has_been_besieg|{s1} wurde von {s2} vom {s3} belagert.
+qstr__{s1}__{s11}:_{s14}|({s1}) {s11}: {s14}
+qstr_{s14}__{s21}_|{s14} ({s21})
+qstr_{s5}_has_the_greates|{s5} genießt den größten Zuspruch unter den Fürsten vom {s4}, der nächste Marschall zu werden. {s0} ist indisponiert und hat keine Alternative.
+qstr_{s5}_has_the_greatest|{s5} genießt den größten Zuspruch unter den Fürsten vom {s4}, {s1} zu erhalten. {s0} ist indisponiert und hat keine Alternative.
+qstr_{s5}_has_the_greatest_|{s5} genießt den größten Zuspruch unter den Fürsten vom {s4}, der nächste Marschall zu werden, {s0} weist diese Wahl jedoch zurück.
+qstr_{s5}_has_the_greatest_s|{s5} genießt den größten Zuspruch unter den Fürsten vom {s4} {s1} zu erhalten, {s0} weist diese Wahl jedoch zurück.
+qstr_{s1}_is_the_new_mars|{s1} ist der neue Marschall von {s2}.
+qstr_You_gained_{reg12}_r|Ihr erhaltet {reg12} Ansehen.
+qstr_You_lose_{reg12}_ren|Ihr verliert {reg12} Ansehen.
+qstr_Your_relation_with_{|Euer Verhältnis mit {s1} hat sich verbessert.
+qstr_Your_relation_with_{s|Euer Verhältnis mit {s1} hat sich verschlechtert.
+qstr_You_gain_honour.|Ihr gewinnt an Ehre.
+qstr_You_lose_honour.|Ihr verliert an Ehre.
+qstr_{s1}_has_declared_wa|{s1} hat {s2} den Krieg erklärt.
+qstr_{s0}_is_laying_siege|{s0} belagert {s1}.
+qstr_{s0}_is_patrolling_a|{s0} patroulliert um {s1}.
+qstr_{s0}_is_raiding_arou|{s0} überfällt {s1}.
+qstr_{s0}_is_engaging_{s1|{s0} besetzt {s1}.
+qstr_{s0}_is_accompanying|{s0} begleitet {s1}.
+qstr_{s0}_is_screening_th|{s0} überprüft den Vormarsch von {s1}.
+qstr_{s0}_is_trading_with|{s0} handelt mit {s1}.
+qstr_{s0}_is_retreating_t|{s0} zieht sich zurück nach {s1}.
+qstr_{s0}_is_visiting_{s1|{s0} besucht {s1}.
+qstr_{s1}_and_{s2}_have_m|{s1} und {s2} haben Frieden miteinander geschlossen.
+qstr_{s2}_{reg3?was:is_cu|{s2} {reg3?war:ist zurzeit} bei {s3}.
+qstr_{s2}_{reg3?was:is}_t|{s2} {reg3?war:ist} auf dem Weg nach {s3} und {reg3?: im Moment} wohl in der Nähe von {s4}.
+qstr_{s2}_{reg3?was:is}_tr|{s2} {reg3?reiste:reist} nach {s3} und {reg3?war:sollte gerade} zwischen {s4} und {s1}{reg3?: sein}.
+qstr_{s2}_{reg3?was:is}_i|{s2} {reg3?war:ist} auf Reisen. {reg4?Sie:Er} {reg3?war:sollte} nahe {s3}{reg3?: sein}.
+qstr_{s2}_{reg3?was:is}_in|{s2} {reg3?war:ist} auf Reisen und {reg3?war:sollte gerade} zwischen {s3} und {s1}{reg3?: sein}.
+qstr_{s2}_{reg3?was:is}_b|{s2} {reg3?war:ist} Gefangener in {s3}.
+qstr_{s2}_{reg3?was:has_b|{s2} {reg3?wurde:wurde} von {reg4?ihren:seinen} Feinden gefangen genommen.
+qstr_{reg3?{s2}_s_locatio|{reg3?{s2}s Position war unbekannt: Ich weiß nicht, wo {s2} ist}.
+qstr_{s6}_has_joined_your|{s6} hat sich Eurem Trupp angeschlossen.
+qstr_You_now_owe_{reg2}_d|Ihr schuldet {s1} jetzt {reg2} Dinare.
+qstr_Renown_value_for_thi|Ansehenswert für dieses Gefecht ist {reg8}.
+qstr_You_have_run_into_a_|Ihr seid in eine Falle geraten!
+qstr_You_are_attacked_by_|Ihr werdet von Banditen angegriffen!
+qstr_Holding|Halten
+qstr_Following|Folgen
+qstr_Charging|Angreifen
+qstr_Advancing|Vorrücken
+qstr_Falling_Back|Zurückfallen
+qstr_Standing_Closer|Zusammenrücken
+qstr_Spreading_Out|Ausfächern
+qstr_Standing|Standhaft bleiben
+qstr_N/A|K/A
+qstr_Free|Frei
+qstr_Any_Weapon|Beliebige Waffe
+qstr_Blunt_Weapons|Stumpfe Waffen
+qstr_Your_soldiers_patrolli|Eure Soldaten der Patroullie {s6} lösen sich auf, da Ihr den Sold nicht bezahlen könnt!
+qstr_{s1}_Rebels|{s1} Rebellen
+qstr_Given_by:_{s62}|Ausgegeben von: {s62}
+qstr_Given_on:_{s60}|Ausgegeben am: {s60}
+qstr_You_have_{reg0}_days|Ihr habt {reg0} Tage, diesen Auftrag zu beenden.
+qstr_This_quest_has_been_|Dieser Auftrag wurde abgeschlossen. Sprecht mit {s59}, um sie zu beenden.
+qstr_This_quest_has_been_s|Dieser Auftrag wurde erfolgreich beendet. Sprecht mit {s59}, um Eure Belohnung abzuholen.
+qstr_This_quest_has_faile|Dieser Auftrag ist fehlgeschlagen. Sprecht mit {s59}, um die Situation zu erklären.
+qstr_At_the_time_quest_wa|Zur Zeit der Questvergabe:^{s1}
+qstr_{s5}_has_a_strength_|{s5} ist insgesamt {reg1} Mann stark.
+qstr_The_last_time_you_sa|Als ihr {reg1?sie:ihn} zum letzten Mal saht, {s1}
+qstr_The_last_time_you_he|Als ihr zum letzten Mal von {reg1?ihr:ihm} hörtet, {s1}
+qstr_Current_garrison_con|Die Garnison besteht aus {reg5} Mann.^Hat Vorräte für {reg6} Tage.
+qstr_Very_Poor|Sehr arm
+qstr_Poor|Arm
+qstr_Average|Durchschnitt
+qstr_Rich|Reich
+qstr_Very_Rich|Sehr Reich
+qstr_Manor|Herrenhaus
+qstr_A_manor_lets_you_res|Ein Herrenhaus lässt Euch im Dorf eine Ruhepause einlegen und Euren Truppen halben Sold zahlen, solange Ihr Euch ausruht.
+qstr_Mill|Mühle
+qstr_A_mill_increases_vil|Eine Mühle erhöht den Wohlstand des Dorfes um 5%.
+qstr_Watch_Tower|Wachturm
+qstr_A_watch_tower_lets_t|Ein Wachturm lässt die Dorfbewohner früher Alarm schlagen. Die Zeitspanne, in der Feinde das Dorf plündern, wird um 25% erhöht.
+qstr_School|Schule
+qstr_A_shool_increases_th|Eine Schule erhöht die Loyalität der Dörfler für Euch um +1 pro Monat.
+qstr_Messenger_Post|Botenstation
+qstr_A_messenger_post_let|Eine Botenstation lässt die Dörfer Euch eine Nachricht senden, wenn Feinde in der Nähe sind; selbst wenn Ihr Euch in weiter Ferne befindet.
+qstr_Prison_Tower|Kerkerturm
+qstr_A_prison_tower_reduc|Ein Kerkerturm verringert die Chancen von Gefangenen, erfolgreich zu fliehen.
+qstr_Prosperity_of_{s2}_h|Der Wohlstand von {s2} hat sich von {s3} nach {s4} geändert.
+qstr_{s4}_looks_upset.|{s4} sieht verärgert aus.
+qstr_your_party|Euer Trupp
+qstr_{reg0?One_of_your_pr|{reg0?Einer Eurer Gefangenen,:} {s1} von {s3} ist entflohen!
+qstr_You_brought_{reg3}_h|Ihr habt {s1} {reg3} Stück Vieh gebracht.
+qstr_I_heard_that_there_w|Man sagt, es gebe in {s62} bald ein Turnier.
+qstr_I_heard_some_people_|Ich hörte einige Leute tratschen, sie glaubten nicht, dass {s6} wirklich tot sei.
+qstr_I_heard_a_traveller_|Ich hörte von einem Wandersmann, er habe {s6} getroffen, als er außerhalb dieser Länder auf Reisen war.
+qstr_I_heard_that_{s6}_in|Ich hörte, {s6} würde eine Armee zusammenstellen und Pläne schmieden, den Thron vom {s61} zu beanspruchen.
+qstr_I_heard_that_one_can|Man sagt, man könne {s62} sehr billig in {s63} erstehen.
+qstr_I_heard_that_they_pa|Man sagt, es werde für {s62} in {s63} ein sehr hoher Preis gezahlt.
+qstr_two_days_ago|vor zwei Tagen
+qstr_Best_threat_of_{s4}_|Die beste Bedrohung von {s4} hat eine Wertstufe von {reg1}
+qstr_No_center_found_to_d|Kein Zentrum zur Verteidigung gefunden.
+qstr_You_gain_right_to_ru|Ihr erlangt das Herrschaftsrecht.
+qstr_You_lose_right_to_ru|Ihr verliert das Herrschaftsrecht.
+qstr_{s0}^{s1}|{s0}^{s1}
+qstr_{reg0}_denars_added_|{reg0} Dinar werden in Eure Schatzkammer gebracht.
+qstr_{reg0}_denars_remove|{reg0} Dinar wurden aus der Schatzkammer entfernt.
+qstr_{s1}_and_{s2}_have_e|{s1} und {s2} haben ein Bündnis geschlossen.
+qstr_{s1}_and_{s2}_have_c|{s1} und {s2} haben einen Verteidigungs-Pakt besiegelt.
+qstr_{s1}_and_{s2}_have_co|{s1} und {s2} haben ein Handels-Abkommen unterzeichnet.
+qstr_{s1}_and_{s2}_have_con|{s1} und {s2} haben einen Nicht-Angriffs-Pakt besiegelt.
+qstr_{s5}_patrol|{s5} Wachtrupp
+qstr_Transfer_to_{s5}|Verlegung nach {s5}
+qstr_{s5}_scout|{s5} Kundschafter
+qstr_{s4}_has_returned_fr|{s4} ist aus dem Exil zurückgekehrt und sucht Zuflucht bei {s6} vom {s5}.
+qstr_{s4}_has_been_grante|{s4} wurde von {s6} vom {s5} begnadigt und ist aus dem Exil zurückgekehrt.
+qstr_Given_the_way_things|So wie die Dinge gegenwärtig zwischen uns stehen, {playername}, würde ich es als sehr unklug bezeichnen, solch ein Arrangement zu treffen.
+qstr_{playername}_I_am_gr|{playername}, ich bin Euch sehr verbunden, aber in den Augen der Leute fehlt es Euch an der nötigen Rechtmäßigkeit, um ein potentieller Mitherrscher des Reiches zu sein. Eine Ehe mit Euch würde meinen eigenen Anspruch auf den Thron untergraben.
+qstr_{playername}_I_know_|{playername}, mir ist bewusst, dass ich ohne Euch nicht auf diesem Thron sitzen würde, jedoch ist Euer Name ist kaum bekannt in Calradia. Eine Ehe mit Euch würde als unziemliche Anbandelung wahrgenommen werden und würde meinen eigenen Anspruch auf den Thron in Frage stellen.
+qstr_{playername}_I_am_gra|{playername}, ich bin Euch dankbar für Euren Beistand, meinen rechtmäßigen Stand zurück zu erlangen, jedoch habt Ihr nicht ausreichenden persönlichen Besitz, um eine angemessene Partie für mich zu sein. Es wäre eine zu ungleiche Partnerschaft.
+qstr_{playername}_I_am_grat|{playername}, ich bin Euch sehr verbunden, aber würde ich zustimmen, laufe ich Gefahr, mächtige Fürsten, wie {s15} zu kränken, die der Meinung sind, mindestens genau so ehrenvoll wie Ihr zu sein.
+qstr_{playername}_I_am_grate|{playername}, ich bin Euch sehr verbunden, aber würde ich zustimmen, laufe ich Gefahr, große Fürsten, wie {s15} zu kränken, die der Meinung sind, mindestens genau so ehrenvoll wie Ihr zu sein.
+qstr_{playername}_while_I|{playername}, obwohl ich Euch Dank schulde muss ich gestehen, dass ich bereits {s15} zugetan bin.
+qstr_Our_realm_has_too_fe|Unser Reich hat zu wenig Vasallen. Mit unseren Verhältnissen in dieser prekären Lage bin ich gezwungen, eine mögliche politische Allianz als Lockmittel einsetzen, um neue Vasallen zu werben. Deswegen kann ich nicht offen zeigen, wie ich mich {reg65?einem Freier:jemandem} verspreche.
+qstr_Because_I_have_insuf|Da ich zu geringe persönliche Besitztümer im Vergleich zu {s15} mein Eigen nenne. Würde ich solch einem Arrangement zustimmen, würde ich riskieren, wie eine Puppe zu wirken, die die Stabilität des Reiches ins Wanken bringt.
+qstr_Because_my_personal_|Da meine persönlichen Besitztümer unzureichend gering sind im Vergleich mit den Fürsten vom {s14}. Würde ich solch einem Arrangement zustimmen, wie eine Puppe zu wirken, die die Stabilität des Reiches ins Wanken bringt.
+qstr_I_am_grateful_to_you|Ich bin Euch sehr verbunden, {playername}, aber Ihr habt zu viele Feinde unter den Fürsten vom {s14}, um in der Politik, die Ihr anstrebt überlebensfähig zu sein. Wenn ich zustimmen würde, könnte das zu einer Revolte führen.
+qstr_You_have_engendered_|Ihr habt in letzter Zeit zu viel Unruhe gestiftet, {playername}. Würde ich Euch jetzt zustimmen, könnte es zu einer Revolte unter den Fürsten vom {s14} kommen. Lasst uns darüber erneut sprechen, wenn die Wogen sich geglättet haben.
+qstr_If_you_desire_to_lea|Wenn Ihr den Wunsch hegt, an meiner Seite das {s14} zu regieren, dann verdient Euch die Unterstützung meiner Vasallen und werdet zum Marschall. Zeigt dem Reich Eure Fähigkeiten als Kriegsherr.
+qstr_Our_realm_has_lost_t|Unser Reich hat zu viele Ländereien verloren. Wir herrschten einst über {s1}, haben jetzt aber nur noch {s0}. Mit unseren Verhältnissen in dieser prekären Lage bin ich gezwungen, die Möglichkeit einer politischen Allianz offen zu halten und brauche einen Köder für Verhandlungen mit anderen Regenten. Deswegen kann ich nicht offen zeigen, wie ich mich {reg65?einem Freier:jemandem} verspreche. Stellt die einstige Pracht vom {s14} wieder her und ich werde freudig an Eure Seite treten, um mit Euch als meine{m Gemahl/r Gemahlin} zu regieren.
+qstr_{s0}_{reg0?have:has}|{s0} {reg0?wurden:wurde} in fremde Hände verloren. Stellt die Grenzen vom {s14} wieder richtig und ich werde freudig an Eure Seite treten, um mit Euch als meine{m Gemahl/r Gemahlin} zu regieren.
+qstr_You_have_only_been_m|Ihr wart gerade mal für {reg0} {reg1?Tage:Tag} Marschall. Lasst uns wieder darüber sprechen, wenn Ihr dieses Amt für zumindest zwei Wochen ausgeübt habt.
+qstr_If_not_for_you_I_wou|Ohne Euch würde ich nicht auf diesem Thron sitzen, {playername}. Als wir unsere lange Reise antraten, hatten wenige den Mut, mich zu unterstützen. Und noch viel weniger waren gewillt, ihr Leben für mich aufs Spiel zu setzen. Ihr habt nicht einen Augenblick gezögert, Euch für eine höhere Sache auf meine Feinde zu stürzen. Wir sind zusammen durch dick und dünn gegangen und mit göttlicher Hilfe konnten wir uns behaupten. Mit Freuden werde ich Euch sowohl als meine{n Gemahl/ Gemahlin}, sowie als Mitherrscher vom {s14} annehmen.
+qstr_You_have_bought_{reg|Ihr habt {reg2} {reg4?Sorten:Sorte} Vorräte gekauft und {reg1} Dinar ausgegeben.
+qstr_axe|Axt
+qstr_spear|Speer
+qstr_bow|Bogen
+qstr_sword|Schwert
+qstr_axes|Äxte
+qstr_spears|Speere
+qstr_bows|Bögen
+qstr_swords|Schwerter
+qstr_swing_my_axe|meine Axt schwingen
+qstr_lift_my_spear|meinen Speer stemmen
+qstr_loose_my_arrows|meine Pfeile einlegen
+qstr_swing_my_sword|mein Schwert schwingen
+qstr_sultan|Sultan
+qstr_khans|Khane
+qstr_sultans|Sultane
+qstr_kings|Könige
+qstr_lord|Fürst
+qstr_lords|Fürsten
+qstr_goatherd|Ziegenhirte
+qstr_swineherd|Schweinehirte
+qstr_stable_{boy/girl}|Stall{junge/magd}
+qstr_shepherd_{boy/girl}|Hirten{junge/mädchen}
+qstr_kvass|Kwass
+qstr_kumis|Kumys
+qstr_mead|Met
+qstr_wine|Wein
+qstr_{reg6?M:m}y_poppet|{reg6?M:m}ein Schatz
+qstr_{reg0?Y:y}ou|{reg0?I:i}hr
+qstr_{reg0?M:m}yself|{reg0?I:i}ch
+qstr_{reg0?O:o}ur_{s1}_{s|{reg0?U:u}nser {s1} {s0}
+qstr_{reg0?M:m}y_{s1}_{s0|{reg0?M:m}ein {s1} {s0}
+qstr_{reg0?Y:y}our_{s1}_{|{reg0?E:e}uer {s1} {s0}
+qstr_{s2}:_{reg3}_{reg4}_|{s2}: {reg3}, {reg4} Tage
+qstr_{s4}:_{reg4}|{s4}: {reg4}
+qstr_{s1}_gathering_suppo|{s1}(holt Unterstützung)
+qstr_{s1}__intelligence_|{s1} (Spionage)
+qstr_{s1}__ambassy_|{s1} (Botschaft)
+qstr_{s1}__minister|{s1} (Minister
+qstr_{s1}__under_arms_|{s1} (bewaffnet)
+qstr_{s1}__attempting_to_|{s1} (versucht sich wieder anzuschließen)
+qstr_{s1}__separated_afte|{s1} (durch Schlacht versprengt)
+qstr__knows_of_you.| weiß über Euch Bescheid.
+qstr__has_no_opinion_abou| hat keine Meinung über Euch.
+qstr_{s57}_and_{s50}|{s57} und {s50}
+qstr_Calradia.|Calradia.
+qstr_sworn_man|vereidigter Mann
+qstr_ruler|Herrscher
+qstr_free_man|freier Mann
+qstr_{s1}_Renown:_{reg40}|{s1} Ruf: {reg40}, Streit: {reg41}^Ehre: {reg42}, Herrschaftsrecht: {reg43}^Ihr seid {s44} von {s45}^{reg45?{reg46?Euer Lehnsherr, {s46},{s47}:Ihr seid der Herrscher von {s45}}:}^^Freunde: ^Feinde: ^^Lehen:^  {reg50?{s50}:keine Lehen}
+qstr_{s1}{s2}_{reg46?Repu|{s1}{s2} {reg46?Er ist bekannt als {s42}:}.^Ruf: {reg40}, Streit: {reg41} {reg46?Ungeduld: {reg43}:}^{s44} Adeliger vom {s45}^{reg46?Lehnsherr: {s46}, Beziehung: {reg47}:Herrscher vom {s45}}^^{reg48?Gegenwärtig Gefangener vom {s48}:}^Tage seit dem letzten Treffen: {reg49}^^Lehen {reg51?(wurde als Lehen versprochen):}:^  {reg50?{s50}:kein Lehen}
+qstr_conventional|konventionell
+qstr_adventurous|abenteuerlich
+qstr_otherwordly|weltfremd
+qstr_ambitious|ambitioniert
+qstr_moralist|sittsam
+qstr_just_met|gerade kennengelernt
+qstr_admirer|Verehrer
+qstr_promised|versprochen
+qstr_breakup|getrennt
+qstr_unknown|unbekannt
+qstr_Heroic_{s50}|Heroischer {s50}
+qstr_Allegoric_{s50}|Allegorischer {s50}
+qstr_Comic_{s50}|Ulkiger {s50}
+qstr_Mystic_{s50}|Mystischer {s50}
+qstr_Tragic_{s50}|Tragischer {s50}
+qstr_{s1}{s2}_Controversy|{s1}{s2} Streit: {reg41}^Ruf: {s42}, Brautwerbung Stand: {s43}^Gehört zum {s45}^{reg46?Ihr Vater, {s46}:Ihr Vormund, {s46}}{s47}^Besuch erlaubt: {reg45?ja:nein} {reg48?Verlobt mit {s48}:}^^Tage seit letztem Treffen: {reg49}^^Gedichte:^  {reg50?{s50}:kein Gedicht gehört}
+qstr_Gathering_support|Holt Unterstützung
+qstr_Gathering_intelligen|Spioniert im {s66}
+qstr_Ambassy_to_{s66}|Botschaft im {s66}
+qstr_Minister|Minister
+qstr_none|keiner
+qstr_{s1}_{s2}^Reputation|{s1}, {s2}^Ruf: {s42}^Geboren in {s43}^Kontakt in {s44} im {s45}.^^{reg48?Gegenwärtig Gefangener vom {s48}:}^Tage seit letztem Gespräch: {reg49}^^Aktueller Auftrag:^  {s50}{reg50?, zurück in {reg50} Tagen.:}
+qstr_{s1}^|{s1}^
+qstr_You_got_keys_of_dung|Ihr habt die Schlüssel zum Kerker.
+qstr_You_have_been_knocke|Ihr liegt schwer verletzt darnieder. Eure Verbündeten werden weiter kämpfen. 'Tab-Taste' für den Rückzug drücken
+qstr_You_must_stay_behind|Ihr müsst hinter der Linie auf dem Boden bleiben! Punkt wird nicht gezählt.
+qstr_Tutorial|Tutorial
+qstr_You_came_into_the_wo|Ihr kamt als {reg3?Tochter:Sohn} einer verarmenden Adelsfamilie auf die Welt; Euer einziger Besitz war das Haus, in dem eure Eltern lebten. Doch trotz ihrer Unbillen sparte sich Eure Familie eine gute Erziehung für Euch vom Munde ab und bereitete Euch von frühester Kindheit an auf die Prüfungen des Lebens als Aristokrat und am Hofe vor.
+qstr_You_were_born_the_{r|Ihr wurdet als {reg3?Tochter:Sohn} fahrender Händler geboren, die auf der Suche nach Gewinn ständig auf der Reise waren. Obwohl Eure Eltern wohlhabender als manch andere waren und Euch nach Kräften eine gute Bildung zukommen ließen, fandet Ihr wenig Gelegenheit, unterwegs Freunde zu finden und lebtet meist für die Momente, in denen Ihr jemandem etwas veräußern konntet.
+qstr_As_a_child_your_fami|In Eurer Kindheit überlebte Eure Familie eher schlecht als recht vom mageren Einkommen, das Euer Vater als Wachmann beim örtlichen Fürsten erhielt. Es war kein leichtes Leben, und Ihr wart zu arm, um in den Genuss einer Erziehung zu kommen. Was Ihr hauptsächlich erlerntet, war der Kampf in den Straßen, mit oder ohne Waffe in der Hand.
+qstr_{reg3?daughter:son}|{reg3?Tochter:Sohn}
+qstr_You_were_the_{reg3?d|Ihr seid {reg3?Tochter:Sohn} einer Familie, die in den Wäldern lebte und alle nur erdenklichen Arbeiten ausführte, um am Leben zu bleiben. Man jagte, fällte Holz, stellte Pfeile her, und schreckte selbst vor Wilderei nicht zurück, wenn es wieder einmal nichts zu beißen gab. Der Winter war nie eine gute Zeit für Eure Familie, denn die Kälte raffte Menschen wie Tiere dahin. Doch auch wenn Eure Geschwister nicht so viel Glück hatten, so überlebtet doch zumindest Ihr jeden Sonnenuntergang.
+qstr_You_were_a_child_of_|Ihr wart ein Kind der Steppe, geboren in einem Nomadenstamm, die in großen Lagern die dürren Prärien bevölkerten. Wie auch die anderen Stammesangehörigen verehrte Eure Familie Pferde, und sie brachten Euch schon das Reiten bei, noch bevor Ihr laufen konntet.
+qstr_As_the_{reg3?daughte|Als {reg3?Tochter:Sohn} eines Diebs hattet Ihr sehr wenig 'formale' Bildung. Stattdessen setzte man Euch auf die Straße, wo Ihr betteltet, bis Ihr lerntet, Geldbeutel zu stehlen, bis Ihr lerntet, Schlösser zu knacken, und so fort bis ans Ende Eurer Kindheit. Doch all diese langen Jahre haben Euch gerissen gemacht und Euch den Puls der Straßen und dunklen Gassen fühlen gelehrt.
+qstr_As_a_{reg3?girl:boy}|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, sandte man Euch an den Hof einer der Aristokraten des Landes. Dort erhieltet Ihr Euren ersten Unterricht in Demut im Dienste der Fürsten und Fürstinnen des Hauses. Doch durch ihre Schachpartien, ihren Klatsch, und selbst durch die Gedichte, die von großen Taten und höfischer Liebe sangen, begannt Ihr schnell und viel über die Erwachsenenwelt mit ihren Konflikten und Wettbewerben zu lernen. Auch zogt Ihr Lehren aus den rauen Spielen der anderen Kinder, die sich in Nachahmung der Schwerter ihrer Altvorderen mit Stöcken schlugen.
+qstr_As_a_{reg3?girl:boy}_|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, gingt Ihr bei einem örtlichen Handwerker in die Lehre. Nach Jahren harten Arbeitens und Studierens unter Eurem neuen Meister erhob er Euch in den Rang eines Gesellen und stellte Euch als voll bezahlten Handwerker ein, für so lange Ihr zu bleiben wünschtet.
+qstr_As_a_{reg3?girl:boy}_g|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, gingt Ihr bei einem reichen Kaufmann in die Lehre und erlerntet sein Handwerk über Jahre hinweg, in denen Ihr in Läden verkauftet und Karawanen leitetet. Bald schon wurdet Ihr ein Adept der Kunst, wohlfeil zu erstehen, teuer zu verkaufen, und dabei den Kunden in der Gewissheit zu wiegen, er habe das bessere Geschäft gemacht.
+qstr_As_a_{reg3?girl:boy}_gr|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, wuchst Ihr auf der Straße auf und tatet alles, um zu überleben. Mit Betteln, Stehlen und Handlangereien für Banden verdientet Ihr Euer täglich Brot in einer brutalen Welt, in der der nächste Tag immer ungewiss war, dem Gesetz und denen, die Euch übel wollten, immer einen Schritt voraus.
+qstr_As_a_{reg3?girl:boy}_gro|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, rittet Ihr auf den großen Steppen auf Eurem eigenen Pferd und tauchtet in den Weg des Grases und der Wüste ein. Auch wenn Ihr manchmal Hunger leiden musstet, wurdet Ihr doch ein geschickter Jäger und Pfadfinder in diesem pfadlosen Land. Das Leben eines Nomaden machte Euren Körper hart und muskulös.
+qstr_{reg3?daughter:man}|{reg3?Tochter:Mann}
+qstr_Though_the_distincti|Obwohl die Unterscheidung Euch wenig bedeutete, wurdet Ihr irgendwann {reg3?Frau:Mann}, und die ganze Welt schien sich um Euch herum zu ändern. Als Ihr zum Junker eines Adligen am Hofe ernannt wurdet, übtet Ihr lange Stunden mit allerlei Waffen und lerntet, harte Schläge auszuteilen und auch einzustecken. Man unterwies Euch in Euren Obliegenschaften Eurem Fürsten gegenüber, und in Euren Pflichten gegenüber jenen, die eines Tages Eure Vasallen sein würden. Aber außer den Idealen der Ritterlichkeit lerntet Ihr auch die weniger annehmlichen Seiten kennen -- Geschichten alter Krieger über ruchlose Machtpolitik, von Verrat und Usurpatoren, von Männern, die ihre Ziele mit Ehre als auch mit Arglist verfolgten.
+qstr_{reg3?woman:man}|{reg3?Frau:Mann}
+qstr_Though_the_distinctio|Obwohl die Unterscheidung Euch wenig bedeutete, wurdet Ihr irgendwann {s13}, und die ganze Welt schien sich um Euch herum zu ändern. Ihr seid Mitglied des kleinen, aber exklusiven Kreises der Frauen am Hof geworden, eine Riege sehr damenhafter Frauen, die Gattinnen und Gespielinnen von Adligen oder unverheiratete Jungfern sind. Doch selbst hier findet Ihr Politik am Werk, denn die Damen schmieden Ränke um gesellschaftliches Ansehen und bekämpfen einander aufs Bitterste, um das Auge jedes gerade am Hofe angesagten Junggesellen zu erhaschen. Bald lernt Ihr, derlei Situationen und Vorgänge zu Eurem Vorteil auszuspielen. Zugleich erkanntet Ihr, dass Ihr selbst großen Einfluss in der Welt ausüben könntet, wenn Ihr es nur subtil angeht .
+qstr_Though_the_distinction|Obwohl die Unterscheidung Euch wenig bedeutete, wurdet Ihr irgendwann {s13}, und die ganze Welt schien sich um Euch herum zu ändern. Ihr machtet Euch allein auf den Weg, mit nichts außer dem Instrument auf eurem Rücken und Eurer Stimme bewaffnet. Es war ein armes Dasein, und an vielen Abenden littet Ihr Hunger, weil die Menschen Euer Spiel nicht zu schätzen wussten; doch Ihr schafftet es, Euch allein mit Eurer Musik durchzuschlagen. Mit zunehmenden Jahren lerntet Ihr, das trunkene Volk in den Tavernen wie Euer eigenes Instrument zu beherrschen, und gar meisterhaft beherrschtet Ihr die Kunst, anderen Leuten Dinge abzuschwatzen.
+qstr_Though_the_distinction_|Obwohl die Unterscheidung Euch wenig bedeutete, wurdet Ihr irgendwann {reg3?Frau:Mann}, und die ganze Welt schien sich um Euch herum zu ändern. Ihr wurdet Student an der Universität einer der großen Städte, wo Ihr Theologie, Philosophie und Medizin erlerntet. Doch nicht all Eure Lektionen wurden in den Hörsälen gegeben. Vielleicht habt Ihr Euch Euren Kameraden angeschlossen, als sie die Gassen auf der Suche nach Wein, Weib, und einer zünftigen Keilerei durchstromerten - vielleicht auch nicht. Doch konntet Ihr auf alle Fälle beobachten, wie ein gebrochener Kiefer gerichtet wird oder wie ein erzürnter Bürger überredet werden kann, seine Keule niederzulegen und bare Münze als Abfindung für die Zerstörung seines Ladens anzunehmen.
+qstr_Though_the_distinction_f|Obwohl die Unterscheidung Euch wenig bedeutete, wurdet Ihr irgendwann {s13}, und die ganze Welt schien sich um Euch herum zu ändern. Ihr antwortet dem Ruf der Straße, reistet von Dorf zu Dorf, und kauftet und verkauftet, was Ihr nur konntet. Es war kein Leben im Wohlstand, aber Ihr wurdet ein Meister des Feilschens, und selbst die missgünstigsten Alten gaben Euch noch gute Preise. Und Ihr wusstet, bald schon würdet Ihr in der Position sein, Euer eigenes Handelsimperium aufzubauen...
+qstr_Though_the_distinction_fe|Obwohl die Unterscheidung Euch wenig bedeutete, wurdet Ihr irgendwann {s13}, und die ganze Welt schien sich um Euch herum zu ändern. Ihr machtet das Handwerk des Schmieds zu Eurem Beruf und fertigtet Nützliches als auch Schönes aus einfachem Metall. Mit der Zeit wurdet Ihr zu einem Meister Eurer Zunft, und man begann, für Eure edlen Werke edle Preise zu zahlen. Mit vollem Magen und Holz im Ofen konntet Ihr auf Eure Arbeit und Euren wachsenden Ruf stolz sein.
+qstr_Though_the_distinction_fel|Obwohl die Unterscheidung Euch wenig bedeutete, wurdet Ihr irgendwann {s13}, und die ganze Welt schien sich um Euch herum zu ändern. Unzufrieden mit den verzweifelten Massen und ihrer niederen Jagd nach Mammon begabt Ihr Euch in die Wälder Eures Fürsten und begannt, Euch von den dortigen Reichtümern zu nehmen, was Ihr wünschtet - zur Hölle mit dem Gesetz! Ihr jagtet Hirsch, Wildschwein und Gans und verkauftet das wertvolle Fleisch unter dem Tisch. Ihr fälltet Bäume direkt unter der Nase der Forstaufseher und verwandeltet sie in Feuerholz, das manch ein frostiges Heim im Winter warm hielt. Alles natürlich für eine Handvoll Silberstücke.
+qstr_Only_you_know_exactl|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Doch mit all der heiß flammenden Wut in Eurem Herzen war es keine schwierige Entscheidung. Es verlangt Euch nach Rache. Es verlangt Euch nach Gerechtigkeit. Das Euch Angetane kann nicht ungeschehen gemacht werden, und diese Schulden können nur mit Blut vergolten werden...
+qstr_Only_you_know_exactly|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Ihr könnt nur sagen, dass Ihr nicht länger bleiben könnt, nicht mit den schmerzhaften Erinnerungen an die einst so geliebten Menschen. Vielleicht wird Euer neues Leben Euch das Vergessen lehren, oder den Namen ehren, den Ihr nicht länger aussprechen könnt...
+qstr_Only_you_know_exactly_|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Ihr seid nicht einmal sicher, wann genau Euer Heim zum Gefängnis wurde, das Vertraute profan, aber Eure Träume von Wanderschaft bestimmen nun Euer Leben. Ob es Euch nun nach einem fernen Ort dürstete oder einfach nur nach der Straße in den Sonnenuntergang und die Freiheit der Ungebundenheit, Ihr konntet es nicht länger ertragen, am selben Ort zu verharren. Ihr gingt einfach fort und schautet nie mehr zurück...
+qstr_Only_you_know_exactly_w|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Doch Ihr wisst auch, dass Ihr nie mehr zurückkehren könnt. Es gibt nichts, zu dem Ihr zurückkehren könntet. Was auch immer Euren Zorn entfachte, ist nun fort, und Ihr müsst Euch damit auseinandersetzen, dass Ihr nun in der großen weiten Welt seid. Allein - auf Gedeih oder Verderb...
+qstr_Only_you_know_exactly_wh|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Für alle anderen ist es ganz offensichtlich, dass Eure einzige Motivation nun der persönliche Gewinn ist. Ihr wollt reich, mächtig, respektiert und gefürchtet sein. Ihr wollt jemand sein, dem andere ohne Nachdenken gehorchen. Ihr wollt, dass die Menschen Euren Namen kennen und zittern, wann immer er genannt wird. Ihr wollt alles, und Ihr werdet niemanden Euch daran hindern lassen...
+qstr_Back_to_the_beginnin|Zurück zum Anfang...
+qstr_View_next_segment...|View next segment...
+qstr_^No_food:___{reg7}|^Keine Lebensmittel: -{reg7}
+qstr_^Wage_debt:___{reg6}|^Geschuldeter Sold: -{reg6}
+qstr_Appoint_next_marshal|Nächsten Marschall ernennen
+qstr_Award_{s12}_as_fief|{s12} als Lehen zusprechen
+qstr_No_one|Niemand
+qstr_Selected_faction_is:|Ausgewählte Fraktion ist: {s10}^^{s9}
+qstr_Current_party_size_l|Momentane Truppgrößenbegrenzung ist {reg5}.^Momentane Truppgrößenmodifikatoren:^^Grundgröße: +10^Anführerschaft: {s2}{reg1}^Charisma: {s3}{reg2}^Ansehen: {s4}{reg3}^GESAMT: {reg5}
+qstr_Your_relation_with_t|Euer Verhältnis mit den Fraktionen ist:^{s2}
+qstr_{reg1}_{s1}_{reg2?ac|{reg1} {s1} {reg2?akzeptieren:akzeptiert} das Angebot.
+qstr_No_one_accepts_the_o|Niemand akzeptiert das Angebot.
+qstr_You_start_reading_{s|Ihr beginnt, {s2} zu lesen. Nach ein paar Seiten findet Ihr, dass Ihr aus diesem Buch eine Menge lernen könnt. Ihr beschließt, es bei Euch zu halten und zu lesen, wann immer Ihr Zeit findet.
+qstr_You_flip_through_the|Ihr blättert durch {s2}, aber findet den Text verwirrend und schwierig. Trotz aller Versuche habt Ihr schon bald heftige Kopfschmerzen und müsst den Versuch aufgeben.
+qstr_Villagers|Dörfler
+qstr_You_have_encountered|Ihr seid auf {s1} gestoßen.
+qstr_You_have_engaged_{s1|Ihr habt {s1} während ihrem Überfall auf {s3} angegriffen.
+qstr_You_were_caught_by_{|Ihr wurdet von {s1} gefangen, während Eure Truppen {s3} überfielen.
+qstr_You_were_victorious!|Ihr trugt den Sieg davon!
+qstr_Battle_was_lost._You|Schlacht verloren. Eure Truppen wurden erbärmlich niedergemacht.
+qstr_Your_companions_carr|Eure Gefährten tragen Euch vom Schlachtfeld.
+qstr_You_have_defeated_th|Ihr habt den Feind besiegt.
+qstr_You_have_retreated_f|Ihr habt Euch aus dem Kampf zurückgezogen.
+qstr_^^Ally_Casualties:{s|^^Verluste Verbündete:{s0}
+qstr_Some_of_your_tendons|Einige Eurer Sehnen trugen im Gefecht Verletzungen davon. Eure Stärke wird um 1 reduziert.
+qstr_You_took_a_nasty_wou|Ihr erlittet eine garstige Wunde, dank derer Ihr selbst nach der Heilung noch humpeln werdet. Eure Wendigkeit wird um 1 reduziert.
+qstr_You_have_trouble_thi|Ihr könnt nach dem Gefecht keinen klaren Gedanken fassen, vielleicht durch einen erlittenen Schlag an den Kopf, und nun werdet Ihr von häufigen Kopfschmerzen geplagt. Eure Intelligenz wird um 1 reduziert.
+qstr_Perhaps_I_m_getting_|Vielleicht hat das Glück sich gegen mich gewandt...
+qstr_Retirement_is_starti|Die Aussicht Ruhestand gewinnt langsam an Attraktion.
+qstr_No_matter!_I_will_pe|Macht nichts! Ich werde es schaffen!
+qstr_What_did_I_do_to_des|Womit habe ich das verdient?
+qstr_I_suppose_it_ll_make|Na ja, wenigstens ist es für eine schöne Geschichte gut...
+qstr_{s9}_wants_you_to_fo|{s9} will, dass Ihr Euch {reg0?ihrer:seiner} Armee bis auf weitere Befehle anschließt.
+qstr_{s8}_of_{s9}|{s8} von {s9}
+qstr_liege|Lehensherr
+qstr_former_liege|ehemaliger Lehensherr
+qstr_affiliate|Gefährte
+qstr_former_companion|ehemaliger Begleiter
+qstr_marshall|Marschall
+qstr_vassal|Vasall
+qstr__Your_own_banner_fli| Euer eigenes Banner weht über dem Burgtor.
+qstr__You_see_the_banner_| Ihr seht das Banner von Eurem {s11} {s7} über dem Burgtor wehen.
+qstr__You_see_the_banner_o| Ihr seht das Banner von Eurem {s7} über dem Burgtor wehen.
+qstr__Your_own_banner_flie| Euer eigenes Banner fliegt über den Stadttoren.
+qstr__You_see_the_banner_of| Ihr seht das Banner von Eurem {s11} {s7} über den Stadttoren.
+qstr__You_see_the_banner_of_| Ihr seht das Banner von {s7} über den Stadttoren.
+qstr_The_{reg6?town_s:cas|Die Nahrungsvorräte der {reg6?Stadt:Burg} sollten noch für weitere {reg3} Tage reichen.
+qstr_The_{reg6?town_s:cast|Die Nahrungsvorräte der {reg6?Stadt:Burg} sind erschöpft, und die Verteidiger hungern.
+qstr_You_re_preparing_to_|Ihr bereitet Euch darauf vor, die Mauern zu stürmen; dies sollte in {reg9} Stunden getan sein.
+qstr_Your_forces_are_buil|Eure Truppen bauen einen Belagerungsturm. Sie schätzen, es wird noch {reg9} Stunden bis zur Fertigstellung dauern.
+qstr_You_are_ready_to_att|Ihr seid bereit, die Mauern jederzeit anzugreifen.
+qstr_The_siege_tower_is_b|Der Belagerungsturm ist fertig und bereit zum Angriff.
+qstr_As_a_last_defensive_|Als letzte Verteidigungsanstrengung zieht Ihr Euch in die Haupthalle des Burgfrieds zurück. Ihr und Eure verbleibenden Soldaten werden hier das letzte, verzweifelte Aufgebot stellen. Wenn Ihr besiegt werdet, könnt Ihr Euch nirgends zurückziehen.
+qstr_You_ve_been_driven_a|Man hat Euch von den Mauern fortgetrieben. Jetzt strömen die Angreifer in die Straßen. Wenn Ihr sie niederringen könnt, wird sich Euer Glück vielleicht wenden.
+qstr_You_ve_breached_the_|Ihr habt die Stadtmauern durchbrochen, doch die trotzigen Verteidiger stellen sich nun Euch in den Straßen entgegen! Ihr müsst sie loswerden, bevor Ihr das Herz der Stadt angreifen könnt.
+qstr_The_town_centre_is_y|Das Stadtzentrum ist Euer, aber die verbleibenden Verteidiger haben sich in die Burg zurückgezogen. Sie muss fallen, bevor der Sieg wahrlich Euer ist.
+qstr_The_remaining_defend|Die übrig gebliebenen Verteidiger haben sich zu einem letzten Gefecht in die Burg zurückgezogen. Ihr müsst eindringen und jeden noch verbleibenden Widerstand zerschmettern.
+qstr_However_since_you_ar|Doch da Ihr keiner der eingeschworenen Gefolgsleute von {s9} seid, wird {reg0?sie:er} Euch nicht als {Fürst/Fürstin} dieser {reg8?Stadt:Burg} erkennen.
+qstr_The_enemy_has_been_f|Der Feind wurde zum Rückzug gezwungen. Der Angriff ist vorbei, doch die Belagerung hält an.
+qstr_As_you_approach_you_|Als Ihr Euch nähert, werdet Ihr von den Burgwachen entdeckt, die Euch willkommen heißen und die Tore für ihren {s10} öffnen.
+qstr_As_you_approach_you_a|Als Ihr Euch nähert, werdet Ihr von den Burgwachen entdeckt, die Euch willkommen heißen und die Tore für {ihren König/ihre Königin} öffnen.
+qstr_As_you_approach_you_ar|Als Ihr Euch nähert, werdet Ihr von den Burgwachen entdeckt, die Euch willkommen heißen und die Tore für {ihren Fürsten/ihre Fürstin} öffnen.
+qstr__This_village_and_th| Dieses Dorf und das umliegende Land gehört Euch.
+qstr__You_remember_that_t| Ihr erinnert Euch, dass dieses Dorf und das umliegende Land Eurem {s11} {s7} gehört.
+qstr__You_remember_that_th| Ihr erinnert Euch, dass dieses Dorf und das umliegende Land {s7} gehört.
+qstr__These_lands_belong_| Dieses Land gehört niemandem.
+qstr__The_village_is_infe| Das Dorf ist voller {reg8} {s35}.
+qstr__The_peasants_hired_| Die Bewohner haben Söldner angeheuert und führen einen Aufstand gegen Euch.
+qstr__The_village_has_bee| Das Dorf wurde geplündert. Eine Handvolle Seelen stieben auseinander, als Ihr Euch Euren Weg durch die ausgebrannten Häuser bahnt.
+qstr__The_village_is_bein| Das Dorf wird überfallen.
+qstr_No_one_here_seems_to|Niemand hier scheint gewillt zu sein, sich Eurem Trupp anzuschließen.
+qstr_One_{s3}_volunteers_|Ein {s3} bietet sich an, Euch zu folgen.
+qstr_{reg5}_{s3}_voluntee|{reg5} {s3} bieten an, Euch zu folgen.
+qstr_Try_as_you_might_you|Ihr schafft einfach nicht, die Banditen niederzuringen. Voller Wut machen sie das Dorf dem Erdboden gleich, um die Bauern zu strafen, und lassen dann die brennende Ödnis hinter sich, um frisches Plündergut zu suchen.
+qstr_village|Dorf
+qstr_town|Stadt
+qstr_castle|Burg
+qstr_The_{s17}_has_no_imp|Hier wurden keine Verbesserungen errichtet.
+qstr_The_{s17}_has_the_fo|Hier wurden folgenden Verbesserungen errichtet:{s18}.
+qstr_The_assasins_beat_yo|Die Meuchelmörder schlagen Euch zusammen und lassen Euch für tot liegen.
+qstr_You_have_fallen._The|Ihr seid gefallen. Die Banditen fleddern Euch gründlich und verschwinden dann in der Nacht. Sie haben Euch am Leben gelassen... gerade so.
+qstr_Luckily_some_of_your|Glücklicherweise kommen einige Eurer Gefährten auf der Suche nach Euch des Weges und finden Euch am Straßenrand liegend. Rasch bringen sie Euch in Sicherheit und verarzten Eure Wunden.
+qstr_Luckily_some_passing|Glücklicherweise kommen einige Städter des Weges, sehen Euch am Straßenrand liegen, und erkennen, dass Ihr mehr als ein lumpiger Bettler seid. Sie tragen Euch zur nächsten Herberge und verarzten Eure Wunden.
+qstr_You_fail_to_steal_an|Euer Viehdiebstahl schlägt fehl.
+qstr_You_drive_away_{reg1|Ihr treibt {reg17} Stück Vieh aus der Dorfherde fort.
+qstr_You_are_at_{s2}.|Ihr seid bei {s2}.
+qstr__This_castle_has_no_| Diese Burg hat keine Garnison.
+qstr__The_banner_of_your_| Das Banner Eures {s11} {s7} weht über den Stadttoren.
+qstr__This_town_has_no_ga| Diese Stadt hat keine Garnison.
+qstr__You_have_successful|Ihr seid erfolgreich hineingeschlichen.
+qstr_{s13}_A_tournament_w|{s13} Hier wird bald ein Turnier abgehalten.
+qstr___{reg1}_denars_per_|({reg1} Dinare pro Nacht)
+qstr_Moreover_you_earn_{r|Außerdem gewinnt Ihr {reg8} Dinare aus den Wetten, in denen Ihr schlauerweise auf Euch selbst gewettet habt...
+qstr_Victory_is_yours!_Yo|Der Sieg ist Eurer! Ihr habt diesen Kampf gewonnen, aber nun müsst Ihr Euch auf die nächste Runde vorbereiten.
+qstr_You_have_been_bested|Aus diesem Kampf seid Ihr nicht als Sieger hervorgegangen, aber der Zeremonienmeister erklärt eine ehrenvolle Anerkennung Eurer Fähigkeiten und Tapferkeit und erlaubt Euch, an der nächsten Runde teilzunehmen. 
+qstr_You_were_beaten._The|Ihr wurdet geschlagen. Ihr Erfolg hat die Bauern ermutigt, aber die Lektion, die Ihr ihnen erteilen wolltet, ist wohl noch nicht so recht durchgedrungen...
+qstr_After_beating_your_l|Nachdem Ihr Euren letzten Gegner geschlagen hab, erklärt Ihr den Bauern, wie sie sich gegen einen solchen Angriff besser verteidigen können. Hoffentlich nehmen sie sich diese Erfahrung zu Herzen und werden beim nächsten Mal vorbereitet sein.
+qstr_The_bandits_are_brok|Die Banditen sind geschlagen! Die wenigen bei Leben und Bewusstsein gebliebenen ergreifen in Todesfurcht vor den Bauern und ihrem neuen Champion das Hasenpanier.
+qstr_However_{reg3?You_ar|Doch {reg3?Ihr seid:{s1} ist} nicht in der Lage, profitable Handelsgüter zu finden.
+qstr_^Buying_{s4}_here_an|^Kaufte man {s4} hier und veräußerte es in {s5}, so brächte es einen Profit von {reg6} Dinaren pro Stück ein.{s3}
+qstr_{reg3?You_find:{s1}_|{reg3?Ihr findet:{s1} findet} das Folgende heraus:^{s3}
+qstr_{s2}^{reg1}_{s1}_ear|{s2}^{reg1} {s1} gewann {reg0} an Erfahrung.
+qstr_{s2}^{s1}_earned_an_|{s2}^{s1} gewann zusätzliche {reg0} Erfahrung.
+qstr_^You_earned_{reg0}_e|^Ihr gewannt {reg0} an Erfahrung.{s2}
+qstr_The_training_didn_t_|Diese Übung verlief gar nicht gut.
+qstr_The_training_didn_t_g|Diese Übung verlief nicht so gut.
+qstr_The_training_went_qu|Diese Übung verlief recht gut.
+qstr_The_training_went_ve|Diese Übung verlief sehr gut.
+qstr_The_training_went_pe|Diese Übung verlief perfekt.
+qstr_{s13}_asked_you_to_r|{s13} bat Euch, sich bei {reg4?ihr:ihm} mit mindestens {reg13} Truppen zu melden.
+qstr_{s13}_ordered_you_to|{s13} befahl Euch, Euch dem Angriff gegen {s14} anzuschließen.
+qstr_Find_and_speak_with_|Findet und sprecht mit {s3} von {s4}, um {reg4?ihr:ihm} Euren Treueschwur zu leisten.
+qstr_There_has_been_an_al|Es hat bei {s9} einen vermeintlichen Grenzzwischenfall gegeben.
+qstr_^^Note_that_so_long_|^^Denkt daran, dass die anderen Fürsten von Euch erwarten Ihren Feldzug anzuführen, solange Ihr der Marschall des Reichs seid. Wenn Ihr auf ein Hochzeitsfest wartet, oder anderen Dingen nachgehen müsst, wäre es ratsam, die Marschallschaft bei Eurem Herrn wieder abzugeben.
+qstr_Try_as_you_might_you_|Ihr konntet die Rebellen trotz aller Anstrengungen nicht besiegen.
+qstr_{reg0}|{reg0}
+qstr_positive|positiv
+qstr_negative|negativ
+qstr_{s11}^^_The_current_|{s11}^^ Die momentane Garnison besteht aus {reg5} Männern.^Die Vorräte reichen noch für {reg6} Tage.
+qstr_^^Additional_the_fol|^^Die folgenden Truppen beziehen ebenfalls hinter den Mauern Quartier:^
+qstr_{s12}_{s3}_with_{reg|{s12} {s3} mit {reg1} Männern.^
+qstr_{playername}_^^I_alw|{playername}, ^^Ich wusste immer, dass Ihr ein Halunke seid. Seit Ihr meinem Haus die Treue geschworen habt. ^Dachtet Ihr wirklich, Ihr könntet meine Familie gegen mich aufbringen? Eure Maske ist zerbrochen, Schlange! Ihr seid eine Zumutung, die ich nicht länger hinnehmen werde. ^Hiermit enteigne ich Euch und verbanne Euch aus unserem Haus. Ich habe meine Brüder gedrängt, Euch zu bekämpfen und werde alle Männer von Adel in Calradien vor Euch warnen. ^Zittert vor Angst, denn Ihr habt nun mächtige Feinde! ^^{s9}.
+qstr_{playername}^^_I_ve_|{playername},^^ Ich habe einen Nachricht von {s9} erhalten, über Euer krummes Spiel. Unter den aktuellen Umständen, konnte {s9} nichts beweisen, jedoch ist {reg1?sie:er} im Gegensatz zu Euch ein hochgeachtetes Mitglied unserer Familie. Niemals gab es Anlass, {reg1?ihr:ihm} zu misstrauen. Ich nehme {reg1?ihre:seine} Anschuldigungen sehr ernst. ^Hoffentlich waren Eure Versuche, die Einheit unserer Familie zu brechen nicht von Erfolg gekrönt. Hiermit erkläre ich Euren Schwur für Nichtig. Ihr gehört nicht länger zu unserem Haus. Jeder von unserem Blut wird mit gutem Gewissen Vergeltung an Euch üben... ^Es würde mich zu sehr beschämen, einzugestehen, wie sehr Ihr mich getäuscht habt, daher werde ich meinen {s11} nicht bitten, Euch für den Frevel hängen zu lassen. Ich erzähle {reg0?ihr:ihm} jedoch auch nicht von jeder miesen Ratte, die ich draussen in der Wildnis zermalme. Eines Tages begegnen wir uns vielleicht wieder dort draussen! ^^{s10}
+qstr_{playername}|{playername}
+qstr_Troops:_{reg1}|Truppen: {reg1}
+qstr_Prosperity_Report^|Wohlstandsbericht^
+qstr_Total|Caladrische
+qstr_{s0}^{s1}_Average_To|{s0}^{s1} Städte Wohlstand im Durchschnitt: {reg0}
+qstr_{s0}^{s1}_towns_with|{s0}^{s1} Städte mit dem Wohlstand 80-100: {reg0}
+qstr_{s0}^{s1}_towns_with_|{s0}^{s1} Städte mit dem Wohlstand 60-79: {reg0}
+qstr_{s0}^{s1}_towns_with_p|{s0}^{s1} Städte mit dem Wohlstand 40-59: {reg0}
+qstr_{s0}^{s1}_towns_with_pr|{s0}^{s1} Städte mit dem Wohlstand 20-39: {reg0}
+qstr_{s0}^{s1}_towns_with_pro|{s0}^{s1} Städte mit dem Wohlstand 0-19: {reg0}
+qstr_{s0}^{s1}_Average_Vi|{s0}^{s1} Dörfer Wohlstand im Durchschnitt: {reg0}
+qstr_{s0}^{s1}_villages_w|{s0}^{s1} Dörfer mit dem Wohlstand 80-100: {reg0}
+qstr_{s0}^{s1}_villages_wi|{s0}^{s1} Dörfer mit dem Wohlstand 60-79: {reg0}
+qstr_{s0}^{s1}_villages_wit|{s0}^{s1} Dörfer mit dem Wohlstand 40-59: {reg0}
+qstr_{s0}^{s1}_villages_with|{s0}^{s1} Dörfer mit dem Wohlstand 20-39: {reg0}
+qstr_{s0}^{s1}_villages_with_|{s0}^{s1} Dörfer mit dem Wohlstand 0-19: {reg0}
+qstr_Breaking_camp...|Lager wird abgebrochen...
+qstr_{s5}_has_decided_to_|{s5} hat entschieden, {s4} einem anderen Fürsten vom {s7} zu verleihen.
+qstr_A_livestock_epidemic|Eine Rinder-Seuche hat {reg4} Tiere in {s4} dahingerafft.
+qstr_Riot_in_{s6}!|Aufstand in {s6}!
+qstr_Your_party_is_spotte|Euer Trupp wird von {s1} entdeckt.
+qstr_{reg1}_{s1}_{reg2?ha|{reg1} {s1} {reg2?sind:ist} während der Nacht von Eurem Trupp entflohen.
+qstr_Building_of_{s0}_in_|Der Bau {s0} in {s4} wurde vollendet.
+qstr_{s1}_has_won_the_tou|{s1} hat das Turnier in {s2} gewonnen.
+qstr_{s1}_is_no_longer_in|{s1} wimmelt nicht länger von Banditen (bei Nacht).
+qstr_You_are_within_the_w|Euer Trupp findet bei einer verbündeten Familie Unterschlupf. Ihr müsst keinen Unterhalt bezahlen.
+qstr_You_pay_for_accommod|Ihr zahlt für Logis.
+qstr_Betrothal_to_{s5}_ex|Die Verlobung mit {s5} ist abgelaufen
+qstr__Your_tactics_skill_|Eure Taktik-Fähigkeit ist um 1 angestiegen.
+qstr__Your_persuasion_ski|Eure Überzeugungskraft ist um 1 angestiegen.
+qstr__Your_leadership_ski|Eure Führungskraft ist um 1 angestiegen.
+qstr__Your_intelligence_h|Eure Intelligenz ist um 1 angestiegen.
+qstr__Your_trade_skill_ha|Eure Handelsfertigkeit ist um 1 angestiegen.
+qstr__Your_weapon_master_|Eure Waffenmeister-Fertigkeit ist um 1 angestiegen.
+qstr__Your_engineer_skill|Eure Baumeisterfertigkeit ist um 1 angestiegen.
+qstr_You_have_finished_re|Ihr habt {s1}.{s2} ausgelesen
+qstr_Book_Read|Buch gelesen
+qstr_{s1}_is_scouted.|{s1} wird ausgespäht.
+qstr_{s1}_has_switched_fr|{s1} ist von {s2} zu {s3} gewechselt.
+qstr_Your_recruiter_who_wa|Euer Büttel mit dem Auftrag {reg10} Rekruten nach {s13} zu bringen wurde erschlagen!
+qstr_{s13}_has_been_taken|{s13} fiel den Feinden in die Hände. Der örtliche Büttel mit dem Auftrag, {reg10} Rekruten einzuziehen ist ohne jede Spur verschwunden!
+qstr_ERROR_IN_THE_RECRUIT|ERROR IN THE RECRUITER KIT SIMPLE TRIGGERS!
+qstr_A_recruiter_has_brou|Ein Büttel kehrte mit {reg10} jungen Burschen nach {s13} zurück.
+qstr_Distance_between_{s1|Entfernung zwischen {s14} und {s15}: {reg0}
+qstr_Your_caravan_has_bro|Eure Karawane brachte {s12} nach {s13}.
+qstr_{s13}_is_unimpressed|{s13} ist unbeeindruckt von Eurem kümmerlichen Geschenk.
+qstr_The_people_of_{s13}_|Die Leute von {s13} sind unbeeindruckt von Eurem kümmerlichen Geschenk.
+qstr_Your_caravan_has_los|Eure Karawane kam vom Weg ab und wird Euren Auftrag nicht mehr ausführen!
+qstr_Transfer_to_{s6}|Verlegung nach {s6}
+qstr_{s6}_patrol|{s6} Wachtrupp
+qstr_Your_messenger_reach|Euer Herold erreichte {s13}.
+qstr_{s14}|{s14}
+qstr_Your_messenger_has_l|Euer Herold kam vom Weg ab und wird Euren Auftrag nicht mehr ausführen!
+qstr_Not_enough_money_in_|Es ist kein Gold mehr in der Schatzkammer um den Truppen neue Rüstungen zu kaufen.
+qstr_Your_constable_upgra|In {s8} wurden {reg5} {s6} erfolgreich zu {s7} ausgebildet! 
+qstr_Your_soldiers_patroll|Euer Wachtrupp, der um {s6} patroullierte hat sich aus dem Staub gemacht, da Ihr den Sold nicht mehr bezahlen könnt!
+qstr_It_is_rumoured_that_|Euch kam zu Ohren, dass ein Spion in {s11} gefasst wurde.
+qstr_{s0}_is_grumbling_ag|{s0} wird mürrisch Euch gegenüber. Euer Zusammenhalt steht auf dem Spiel, wenn es so weitergeht.
+qstr_{s0}_is_grumbling_aga|{s0} wird mürrisch Euch gegenüber, aber Dank {s1}s Schlichtung, bleibt Ihr vorerst Gefährten.
+qstr_Your_last_fief_was_c|Euer letztes Lehen ist verloren, Ihr habt {reg0}/{reg1} Eurer Schatzkammer eingebüßt
+qstr_Checking_rejoin_of_{|Prüfen der Rückkehr von {s10} Tage auf Mission: {reg0}
+qstr_{reg65?my_Lady:my_Lo|{reg65?Meine Fürstin:Mein Fürst}
+qstr_{reg65?My_Lady:My_Lo|{reg65?Meine Fürstin:Mein Fürst}
+qstr_{reg65?madame:sir}|{reg65?Meine Dame:Mein Herr}
+qstr_{reg65?Madame:Sir}|{reg65?Meine Dame:Mein Herr}
+qstr__no_fiefs_|(keine Lehen)
+qstr__fiefs:_{s0}_|(Lehen: {s0})
+qstr_It_s_your_money_or_y|Dein Geld oder dein Leben, {Bube/Mädel}. Keine falsche Bewegung, oder wir machen dich nieder.
+qstr_Lucky_for_you_you_ca|Du hast Glück, ich habe gute Laune. Gib uns all dein Geld, und wir lassen dich vielleicht leben.
+qstr_This_a_robbery_eh?_I|Das ist ein Überfall, verstanden? Ich geb dir eine Chance, mir alles zu geben, was du hast, oder ich und meine Kumpels bringen dich um die Ecke. Kapiert?
+qstr_we_have_made_very_li|wir haben bis jetzt sehr wenige Fortschritte gemacht
+qstr_we_have_suceeded_in_|wir haben einige Fortschritte gemacht, aber wir haben noch viel vor uns
+qstr_we_have_become_a_sig|wir sind eine beachtliche Truppe geworden und haben eine echte Siegchance
+qstr_we_are_winning_the_w|wir gewinnen den Krieg, aber unsere Feinde sind noch starrsinnig.
+qstr_we_are_on_the_verge_|wir haben den Sieg so gut wie in der Tasche. Die verbleibenden Feinde stellen keine Bedrohung dar, aber wir müssen sie trotzdem schnappen.
+qstr_{s11}|{s11}
+qstr_The_goverment_of_the|Die Regierung vom {s10} ist {s4}.
+qstr_The_upper_class_soci|Die höhere Schicht der Gesellschaft ist {s5}.
+qstr_The_people_are_{s6}.|Das Volk sind {s6}.
+qstr_The_troops_have_{s7}|Die Armee hat {s7}.
+qstr_The_government_s_app|Die Handels-Ambitionen der Regierung sind {s0}.
+qstr_Our_goverment_is_{s4|Unsere Regierung ist {s4}.
+qstr_Our_people_are_{s6}.|Unser Volk sind {s6}.
+qstr_Our_troops_have_{s7}|Unsere Armee hat {s7}.
+qstr_Our_approach_to_trad|Unsere Handels-Ambitionen sind {s0}.
+qstr_According__to_the_re|Unsere Spitzel berichten,
+qstr_{s10}_{reg3}_lords_s|{s10} {reg3} Fürsten unterstützen {s9}.
+qstr_Sorry_currently_I_ca|Vergebt mir, im Moment kann ich leider nichts über die Stimmung der Fürsten berichten, unsere Spione haben sich noch nicht zurück gemeldet.
+qstr_{s11}_and_{s12}|{s11} und {s12}
+qstr_We_are_not_at_war_wi|Wir befinden uns mit niemandem im Krieg.
+qstr_We_are_at_war_with_{|Wir befinden uns im Krieg mit {s12}.
+qstr_{s6}_garrisoned_in_{|{s6} sind stationiert in {reg2} Städten
+qstr_{s6}_and_{reg2}_cast|{s6} und {reg2} Burgen.
+qstr_{s6}_In_addition_we_|{s6} Außerdem haben wir {reg2} Soldaten auf dem Feld.
+qstr_We_currently_have_{r|Wir haben {reg2} Soldaten
+qstr_{s6}_In_addition_you|{s6} Außerdem habt Ihr {reg2} Soldaten in Eurem Trupp und {reg3} auf Patrouille.
+qstr_He_fields_{reg2}_sol|Er führt {reg2} Soldaten.
+qstr_We_currently_have_{re|Wir haben im Moment {reg2} Bewaffnete in {s60} stationiert.
+qstr_You_are_preferring_m|Ihr bevorzugt Nahkämpfer.
+qstr_You_are_preferring_r|Ihr bevorzugt Schützen.
+qstr__and_the_additional_| und zusätzliche Lehrmeister
+qstr_We_currently_have_an|Momentan haben wir ein Einkommen von {reg0} Dinar und Kosten von {reg1} Dinar aus allen Lehen und Garnisionen.
+qstr_{s6}_We_are_losing_{|{s6} Wir büßen {reg0} Dinar wegen Steuer-Ineffizienz ein. Das sind {reg1} Prozent.
+qstr_{s6}_Overall_this_su|{s6} Alles in Allem summiert sich das zu {reg0} Dinar.
+qstr_{reg0}_denars|{reg0} Dinar
+qstr_no|keine
+qstr_{s60}_is_currently_o|{s60} wird gegenwärtig von Gesetzlosen gehalten. Ihr solltet schnellstmöglich etwas dagegen unternehmen.
+qstr__We_are_expecting_{r| Wir erwarten von Euren Untertanen {reg0} Dinar als Zehnt
+qstr__The_troop_wages_for| Der Sold für {reg0} Truppen kostet uns {reg1} Dinar.
+qstr_{s61}_and_{reg0}_den|{s61} und {reg0} Dinar Handels-Gebühren sind zu erwarten
+qstr_Well_{s60}.|Nun, {s60}.
+qstr_{s4}_{s3}._The_tax_r|{s4} {s3}. Die Steuerlast ist {s50}.{s59}{s61}. Alles in Allem summiert sich das zu {s62} Dinar.
+qstr_Tax_rate_for_{s6}:_{|Steuerlast für {s6}: {s11}
+qstr_The_{s17}_has_the_fol|Hier wurden folgende Verbesserungen errichtet: {s18}.
+qstr_You_have_shown_great|Ihr habt großes Geschick auf dem Schlachtfeld bewiesen. Aber warum sollte ich Euch bei uns aufnehmen?
+qstr_All_of_life_is_about|Das Leben besteht aus Für und Wider. Warum sollten wir Euch erlauben, unser Gefährte zu werden?
+qstr_I_know_people_do_fea|Ich weiß, wie gefürchtet Ihr bei einigen Leuten seid. Sollten wir Euch denn fürchten?
+qstr_Indeed_I_have_heard_|In der Tat habe ich von Eurer Treue und Tapferkeit gehört. Seid Ihr wohl so treu und tapfer um unseren Namen zu verdienen?
+qstr_I_m_glad_you_want_to|Es freut mich, Eurer Unterstützung gewiss zu sein. Ihr haltet es wirklich für weise, unserem Haus beizutreten?
+qstr_Beside_your_wealth_h|Von Euren Reichtümern mal abgesehen, wie könntet Ihr unserer Familie zu Diensten sein?
+qstr_My_friend_I_see_your|Mein Freund, ich verstehe Euer Ansinnen, aber wollt ihr wirklich unsere Freundschaft durch ein offizielles Bündnis verkomplizieren?
+qstr_Agreed!_Your_words_c|Einverstanden! Eure Worte sind ebenso scharf und überzeugend, wie Eure Klinge.
+qstr_I_trust_you_my_famil|Ich vertraue Euch. Meine Familie würde von Eurem Wohlhaben profitieren. Gemeinsam werden wir unseren Einfluss auf ganz Calradien ausbreiten.
+qstr_May_God_have_mercy_o|Möge Gott Gnade kenne, für die Seelen unserer Feinde, denn wir werden es nicht!
+qstr_So_be_it._We_are_hon|So sei es also. Es ehrt uns, Euch in unserer Familie aufzunehmen.
+qstr__I_will_appreciate_y| Ich werde Euch annehmen, wie meinen eigenen Sohn.
+qstr_I_accept_your_reques|Ich stimme Eurer Bitte zu. Wir werden Euch unterstützen, solange Ihr für unsere Familie das gleiche tut.
+qstr_Since_you_have_turne|Da Ihr Euch als ehrbarer Kamerad herausgestellt habt, seid Ihr es wert, unserer Familie beizutreten.
+qstr_Your_leader_is_not_e|Euer Gebieter ist noch nicht einmal ein König und ich soll mich Euch anschließen?
+qstr_{s40}_I_would_never_|{s40} Ich würde niemals für einen Herrn schwören, der weder Stadt, noch Burg sein Eigen nennt.
+qstr_{s40}_I_know_too_lit|{s40} Ich weiß einfach zu wenig über Euren Herrn.
+qstr_{s40}_I_found_your_m|{s40} Ich fand Euren Boten nicht sehr überzeugend.
+qstr_{s40}_Next_time_I_wo|{s40} Beim nächsten Mal würde ich es vorziehen, mit jemandem zu sprechen, der sich nicht wie ein Trottel benimmt.
+qstr_{s40}_Next_time_I_wou|{s40} Beim nächsten Mal würde ich es vorziehen, mit jemandem zu sprechen, der sich besser auf höfisches Benehmen versteht.
+qstr_{s40}_I_rather_stay_|{s40} Ich halte lieber meinem König die Treue.
+qstr_{s31}_{s32}_{s34}|{s31} {s32} {s34}
+qstr_{playername}_when_we|{playername}, als wir unseren langen Marsch begannen, waren nur wenige mutig genug, mich zu unterstützen. Und noch weniger waren bereit, ihr Leben für meine Sache zu riskieren. Doch Ihr zögertet nicht einen Moment, Euch auf meine Feinde zu werfen. Wir haben viel zusammen durchmacht, und es gab Zeiten, in denen ich nahe daran war, alle Hoffnung fahren zu lassen. Doch mit Gottes Hilfe haben wir alle Ungemach überwunden. Jetzt ist für mich die Zeit gekommen, von Euch zu scheiden und mitzunehmen, was rechtens mein ist. Von nun an werde ich die große Verantwortung tragen, {s3} zu regieren. Viele Herausforderungen liegen noch vor uns, und ich zähle zu ihrer Überwindung auf Eure Hilfe. Und natürlich werdet Ihr auf immer mein zuvörderster Vasall sein.
+qstr_Find_and_speak_with_{|Findet {s3} von {s4} und leistet ihm Euren Treueschwur.
+qstr__We_will_of_course_n| Selbstverständlich werden wir warten müssen, bis das Reich seinen Feldzug beendet hat.
+qstr__{s1}_has_been_accep| {s1} wurde als Vasall von {s2} anerkannt.
+qstr_I_am_{s4}_the_ruler_|Ich bin {s4}, Herrscher von {s6}
+qstr_I_am_{s4}_{s8}_of_{s|Ich bin {s4}, {s8} von {s9}
+qstr_I_am_{s4}_a_vassal_o|Ich bin {s4}, Vasall von {s6}
+qstr_{s9}{reg5?_and_the_l|{s9}{reg5? und Fürst von {s8}.:.
+qstr_{s13}_asked_you_to_g|{s13} bat Euch, {reg3} Stück Vieh zusammen zu treiben und sie ihm zu bringen.
+qstr_{s9}_wants_you_to_fol|{s9} wünscht, dass Ihr seiner Armee folgt, bis andere Anweisung erfolgt.
+qstr_{s9}_asked_you_to_sc|{s9} bat Euch, {s13}, {s14} und {s15} auszuspähen, und dann Bericht zu erstatten.
+qstr_pupil|Schüler
+qstr_you|Ihr
+qstr_You_are_challenging_|Ihr fordert mich zu einem Duell heraus? Wie amüsant! Wie Ihr wünscht, {playername}, es wird mir eine Freude sein, Euren Schädel zu spalten.
+qstr_{s16}_and_{s17}|{s16} und {s17}
+qstr_Very_well_I_will_acc|Nun gut, Ich werde Euch wieder in meine Reihen aufnehmen, wenn Ihr bereit seit, Euren feierlichen Schwur zu erneuern.
+qstr_A_pardon_will_only_b|Eine Begnadigung ist nur möglich, wenn Ihr gewillt seid, mir {s17} zu überlassen. Stimmt Ihr meinen Bedingungen zu?
+qstr_No._There_is_no_chan|Nein. Zwischen uns kann kein Friede herrschen; ich bin nicht interessiert.
+qstr_{s1}_exchanged_{s2}_|{s1} tauschte {s2} mit {s3} für {s4}.
+qstr_Our_marshal_{s1}|Unser Marschall, {s1}
+qstr_Our_liege_{s1}|Unser Lehensherr, {s1}
+qstr_go_on_the_offensive_|geht nun in die Offensive.
+qstr_act_to_defend_our_la|ergreift Maßnahmen zur Verteidigung unserer Ländereien.
+qstr_take_more_time_to_ga|nehmt Euch mehr Zeit, die Armee zu versammeln.
+qstr_You_promised_to_help|Ihr verspracht, {s13} zu helfen, den Thron von {s14} zu erringen.
+qstr_What_do_you_say_to_e|Was haltet Ihr davon, als Söldnerhauptmann in die Dienste von {s9} zu treten? Ich habe keine Zweifel, dass Ihr der Aufgabe gewachsen seid.
+qstr_{s9}_asked_you_to_ta|{s9} bat Euch, eine Nachricht zu {s13} zu bringen. {s13} war vermutlich in {s4}, als Euch dieser Auftrag anvertraut wurde.
+qstr_{s9}_asked_you_to_tak|{s9} bat Euch, eine Nachricht von {s15} nach {s13} zu bringen. {s13} war vermutlich in {s4}, als Euch dieser Auftrag anbetraut wurde.
+qstr_{s11}_asked_you_to_e|{s11} bat Euch, {reg65?ihre:seine} {s17} {s13} nach {s14} zu eskortieren.
+qstr_{s13}_asked_you_to_d|{s13} bat Euch, Euch der Banditen anzunehmen, die das Dorf {s15} besetzen und {reg65?ihr:ihm} dann Bericht zu erstatten.
+qstr_{s9}_asked_you_to_ra|{s9} bat Euch, {reg1} {s14} auszuheben und sie {reg65?ihr:ihm} zu bringen.
+qstr_{s9}_asked_you_to_co|{s9} bat Euch, Steuern von {s3} einzutreiben. {reg65?Sie:Er} bot Euch ein Fünftel allen Geldes, das Ihr dort eintreibt.
+qstr_{s9}_asked_you_to_hu|{s9} bat Euch, einen Flüchtigen namens {s4} zu schnappen. Man glaubt, dass er sich momentan in {s3} aufhält.
+qstr_{s9}_asked_you_to_as|{s9} bat Euch, einen Kaufmann in {s3} zu ermorden.
+qstr_{s9}_has_asked_you_t|{s9} hat bat Euch, Euch mit einem Spion in {s13} zu treffen.
+qstr_{s11}_asked_you_to_f|{s11} bat Euch, dem Spion zu folgen, der {s12} verlassen wird. Ihr müsst darauf achten, nicht vom Spion entdeckt zu werden, da er sonst Verdacht schöpfen und umkehren könnte. Sobald der Spion sich mit seinem Komplizen trifft, müsst Ihr sie beide überfallen und nach {s11} zurückbringen.
+qstr_{s11}_asked_you_to_c|{s11} bat Euch, einen Fürst aus {s13}, egal welchen, gefangen zu nehmen, und ihn dann für sichere Verwahrung nach {s11} zurück zu schleifen.
+qstr_{s9}_asked_you_to_le|{s9} bat Euch, ihm Euren Gefährten {s3} für eine Woche zu leihen.
+qstr_{s9}_asked_you_to_col|{s9} bat Euch, die Summe von {reg4} Dinaren einzutreiben, die {s3} {reg65?ihr:ihm} schuldet. {s3} war in {s4}, als man Euch diesen Auftrag übertrug.
+qstr_{s11}_gave_you_a_fak|{s11} gab Euch einen gefälschten Brief, um {s13} dazu zu bringen, seinen Vasall {s16} zu verbannen. Ihr sollt nach {s14} reisen, den Brief einem Eurer {s15} geben und in als Boten in die Stadt senden, im Glauben, seine Befehle seien echt.
+qstr_{s9}_has_requested_y|{s9} verlangte von Euch, ihm {reg1} {s3} als Gefangene zu bringen.
+qstr_Lend_your_experience|Verleiht Euren erfahrenen Wundarzt {s3} an {s1}.
+qstr_Then_take_it_with_my|Nehmt hin, zusammen mit meiner ewigen Dankbarkeit. Ihr seid ein edler Mensch. Ich werde nie vergessen, dass Ihr mir in meiner Not zu Hilfe kamt.
+qstr_Forgive_me_{playerna|Vergebt mir, {playername}, aber ich muss darauf bestehen, dass Ihr es annehmt. Das Geld bedeutet mir so wenig, und ich schulde Euch so viel. Hier, nehmt es, und lasst uns fürderhin nicht mehr davon sprechen.
+qstr_{playername}_what_a_|{playername}, was ein edler Mensch Ihr seid, doch ich kann Euch nicht erlauben, dies zu verweigern. Ich schulde Euch mehr, als Worte ausdrücken können, und ich bin sicher, Ihr könnt für dieses Geld besseren Nutzen finden als ich.
+qstr_{s11}_asked_you_to_r|{s11} bat Euch, {reg65?ihre:seine} {s17}, {s13}, aus {s14} zu befreien, indem Ihr mit ihm die Kleider aus tauscht und seinen Platz im Kerker einnehmt.
+qstr_{s11}_asked_you_to_re|{s11} bat Euch {reg65?ihren:seinen} {s17}, {s13}, aus {s14} zu befreien.
+qstr_{s11}_asked_you_to_d|{s11} bat Euch, eine Nachricht zu {s13} im Kerker von {s14} zu überbringen.
+qstr_You_agreed_to_challe|Ihr willigt ein, {s13} zur Verteidigung von {s11}s Ehre zum Duell heraus zu fordern.
+qstr_{s5}__Persuasion_str|{s5} (Überzeugungskraft: {reg5})
+qstr_Persuasion_Attempt|Überzeugungsversuch
+qstr_{s12}_and_{s11}|{s12} und {s11}
+qstr_You_can_find_book_me|Ihr könnt Buchhändler in {s11} finden.
+qstr_{s12}_{s11}|{s12}, {s11}
+qstr_You_can_find_ransom_|Ihr könnt Lösegeldhändler in {s11} finden.
+qstr_A_villager_from_{s7}|Ein Dorfbewohner aus {s7} bat Euch inständig, ihr Dorf vor den Banditen zu retten, die sich dort eingenistet haben.
+qstr_You_chose_well_{s0}.|Wohl gewählt, {s0}. Meine {reg65?Begleiter:Jungs} wissen, wie man sein Wort hält und seinen Lohn verdient.
+qstr_Well_done_{s0}._Keep|Gut gemacht, {s0}. Lasst Geld und Wein weiter fließen, und Ihr braucht in Calradien niemanden zu fürchten.
+qstr_We_are_at_your_servi|Wir stehen zu Euren Diensten, {s0}. Zeigt uns jene, die eine Lektion brauchen, und wir übernehmen den Rest.
+qstr_The_Guildmaster_of_{|Der Gildenmeister von {s13} bat, Euch der Plünderer im Umland anzunehmen und alle Güter zurück zu bringen, die Ihr ihnen abnehmt.
+qstr_{s9}_of_{s3}_asked_y|{s9} aus {s3} bat Euch, innerhalb von 7 Tagen {reg5} Einheiten {s6} in der Schänke in {s4} abzuliefern.
+qstr_Escort_the_merchant_|Eskortiert die Händlerkarawane in die Stadt {s8}.
+qstr_Guildmaster_of_{s4}_|Der Gildenmeister von {s4} gab Euch {reg12} Dinare, um das Lösegeld für ein von Banditen entführtes Mädchen zu zahlen. Ihr sollt die Banditen bei {s3} treffen und ihnen das Lösegeld zahlen. Danach sollt Ihr das Mädchen nach {s4} zurückbringen.
+qstr_Guildmaster_of_{s4}_p|Der Gildenmeister von {s4} versprach Euch {reg12} Dinare, wenn Ihr dafür sorgt, dass {s12} und {s13} nicht länger das Friedensabkommen zwischen {s15} und {s14} bedroht. Hierzu müsst Ihr sie entweder überzeugen oder sicherstellen, dass sie gefangen genommen werden und Gefangene bleiben, bis ein Friedensabkommen erreicht wird.
+qstr_The_Guildmaster_of_{s|Der Gildenmeister von {s14} bat Euch, mit einer Gruppe Banditen aufzuräumen, die die Straßen {s14} unsicher machen. Sie kommen nur bei Nacht und greifen nur einsame Reisende in den Straßen an.
+qstr_Guildmaster_of_{s10}|Der Gildenmeister von {s10} bat Euch, eine Viehherde nach {s13} zu bringen. Ihr bekommt dafür {reg8} Dinare.
+qstr_He_is_not_commanding|Er befehligt momentan keine Männer.
+qstr_He_currently_command|Er befehligt momentan {reg0} Männer{reg1?, von denen ungefähr {reg1} verwundet sind:}.
+qstr_The_elder_of_the_vil|Der Dorfälteste von {s3} bat Euch, ihm {reg5} Bündel Weizen zu bringen.
+qstr_The_elder_of_the_vill|Der Dorfälteste von {s13} bat Euch, {reg5} Bauern für den Kampf gegen lokale Banditen auszubilden.
+qstr_The_elder_of_the_villa|Der Dorfälteste von {s3} bat Euch, ihm {reg5} Stück Vieh zu bringen.
+qstr_{s16}_and_{s15}|{s16} und {s15}
+qstr_I_can_smell_a_fat_pu|Ich kann einen fetten Geldbeutel drei Meilen gegen den Wind riechen. Ihr könntet wohl etwas Erleichterung gebrauchen, was?
+qstr_Why_it_be_another_tr|Hallo, noch ein Reisender, ein Zufallstreffen auf der Straße! Ich sollte Euch warnen, das Land hier ist ein bisschen zu gefährlich für gute Leute wie Euch. Doch für einen kleinen Obolus sorgen meine Jungs und ich dafür, dass Ihr schnell und sicher an Euer Ziel gelangt...
+qstr_Well_well_look_at_th|Nun sieh mal einer an! Ihr spuckt am besten Euer Silber aus, Freundchen, oder meine Jungs und ich müssen's aus Euch rausholen.
+qstr_There_s_a_toll_for_p|Die Durchreise hier kostet Wegzoll, an uns abzutreten. Wenn es Euch also nichts ausmacht, nehmen wir es uns aus Eurem Geldbeutel...
+qstr_Another_fool_come_to|Schon wieder so ein Narr, der sich in meine Waffe stürzen will, ha? Nun gut, kämpfen wir!
+qstr_We_re_not_afraid_of_|Wir haben keine Angst vor Euch, {Wicht/Schranze}. Zeit für ein paar Kopfnüsse!
+qstr_That_was_a_mistake._|Das war ein Fehler. Jetzt muss ich Euren Tod lang und schmerzhaft gestalten.
+qstr_Brave_words._Let_s_s|Tapfere Worte. Lasst uns sehen, ob ihnen auch Taten folgen, Hundesohn!
+qstr_your_lordship|durchlaucht
+qstr_A_{s5}?_Well..._Yes_|{s5}? Nun... ja, ich denke, schon. Welch eine sonderbare Frage.
+qstr_Eh?_No_it_most_certa|Häh? {s5}? Keineswegs! An Eurer Statt würde ich mein Augenlicht untersuchen lassen.
+qstr_This_is_the_{reg4?to|Dies ist das {reg4?Städtchen:Dorf} {s5}, {s0}.
+qstr_{s6}_Our_{reg4?town:|{s6} Unsere {reg4?Stadt:Siedlung} und die umliegenden Ländereien gehören selbstverständlich Euch, oh {Fürst/Fürstin}.
+qstr_{s6}_Our_{reg4?town:v|{s6} Unser {reg4?Städtchen:Dorf} und die umgebenden Ländereien gehören {s7} von {s8}.
+qstr_{s3}_and_{s5}|{s3} und {s5}
+qstr_{reg20?We_mostly_pro|{reg20?Wir produzieren hauptsächlich {s5} hier: Wir produzieren in diesen Tagen nicht viel}. Wenn Ihr mehr erfahren möchtet, könnt Ihr mit unserem {reg4?Gildenmeister:Dorfältesten} sprechen. Er ist da drüben.
+qstr_{reg61}.0{reg62}|{reg61}.0{reg62}
+qstr_{reg61}.{reg62}|{reg61}.{reg62}
+qstr_Shot_distance:_{s1}_|Schussweite: {s1} Meter.
+qstr_Mod_Options|Mod Optionen
+qstr_Full_PBOD^Features|Vole PBOD^Eigenschaften
+qstr_{s3}_of_the_{s4}_wis|{s3} von den {s4} möchte einen neuen Marschall ernennen und läd seine Vasallen zur Beratung ein. {s1} und {s2} sind die vielversprechensten Kanditaten.
+qstr_Wages_for_your_Shipc|Lohn Eurer Schiffsmannschaft:
+qstr_Tributes_from_your_n|Tribute von Euren Adeligen:
+qstr_Price_threshold_of_i|Preisschwelle für Auswahl:
+qstr_{s1}^HP:_{reg0}|{s1}^TP: {reg0}
+qstr_Attributes:|Eigenschaften:
+qstr_{s3}^STR:_{reg1}^INT|{s3}^STÄ: {reg1}^INT: {reg2}^^Fähigkeiten:
+qstr_{s3}^Power_Strike:_{|{s3}^Schlagkraft: {reg1}^Bogenzugkraft: {reg2}^Wurfkraft: {reg3}^Ber. Schießen: {reg4}^^Waffenmeister:
+qstr_{s3}^1_Hand_Wpns:_{r|{s3}^1-Hand: {reg1}^2-Hand: {reg2}^Stangen: {reg3}
+qstr_{s4}^AGI:_{reg1}^CHA|{s4}^WEN: {reg1}^CHA: {reg2}^^
+qstr_{s4}^Ironflesh:_{reg|{s4}^Eisenhaut: {reg1}^Athletik: {reg2}^Schild: {reg3}^Reiten: {reg4}^^
+qstr_{s4}^Archery:_{reg1}|{s4}^Bogenschießen: {reg1}^Armbrust: {reg2}^Werfen: {reg3}
+qstr_{s4}|{s4}
+qstr_Equipments:_|Ausrüstung: 
+qstr_One_Handed_Weapons|Einhandwaffen
+qstr_Two_Handed_Weapons|Zweihandwaffen
+qstr_Polearms|Stangenwaffen
+qstr_Ranged_Weapons|Fernwaffen
+qstr_Shields|Schilde
+qstr_Helmets|Kopfschutz
+qstr_Armors|Körperschutz
+qstr_Boots|Beinschutz
+qstr_Gauntlets|Handschutz
+qstr_Horses|Reittiere
+qstr_Please_reselect_a_co|Bitte wählt einen Gefährten als Kommandanten der Schlacht.^^Aktueller Kommandant: {s0}.
+qstr_Arms:|Bewaffnung:
+qstr_{s2}^None|{s2}^keine
+qstr_{s2}^{s3}|{s2}^{s3}
+qstr_{s2}^{s4}{s3}|{s2}^{s4}{s3}
+qstr_{s2}^^Outfits:|{s2}^^Bekleidung:
+qstr_{s2}^^Horse:|{s2}^^Pferd:
+qstr_{s2}|{s2}
+qstr_{reg1}^money_in_the_|{reg1}^Geld in der Schatzkammer
+qstr_{reg2}^money_in_your|{reg2}^Geld in Eurem Inventar
+qstr_Withdraw|Abheben
+qstr_Deposit|Einzahlen
+qstr_You_can_recruit_troo|Ihr könnt Truppen von {s1} für diese {reg6?Burg:Stadt} anwerben. Das Anwerben kostet {reg4} Denare und es wird mindestens einen Tag dauern. Ihr habt {reg1} Denare übrig, (könnt {reg2}{reg3?mal:mal} anwerben) und habt {reg5} Denare in Eurer Schatzkammer.
+qstr_Decrease_times_of_re|Anzahl der Anwerbungen reduzieren
+qstr_Increase_times_of_re|Anzahl der Anwerbungen erhöhen
+qstr_Sovereign_color_of_t|Herrschaftliche Farben von den {s0}:
+qstr_Red:|Rot:
+qstr_Green:|Grün:
+qstr_Blue:|Blau:
+qstr__| 
+qstr_HTML_code:_{s0}|HTML code: {s0}
+qstr_Default|Standard
+qstr_Randomize|Zufällig
+qstr_{s1}_{reg3}/{reg2}_|{s1}({reg3}/{reg2})
+qstr_{s1}_{reg2}_|{s1}({reg2})
+qstr_Move_to_Top|Zum Anfang
+qstr_Move_Up|Nach oben
+qstr_Move_Down|Nach unten
+qstr_Move_to_Bottom|Zum Ende
+qstr_Buy_foods_automaticl|Kauft Vorräte automatisch:
+qstr_Character_Background|Charakter Hintergrund
+qstr_Your_story:|Eure Geschichte:
+qstr_Your_gender:|Euer Geschlecht:
+qstr_Your_father_was:|Euer Vater war:
+qstr_You_spent_your_early|Ihr verbrachtet Eure Kindheit als:
+qstr_Later_you_became:|Später wurdet Ihr:
+qstr_The_reason_for_an_ad|Der Grund für Euer Abenteuer:
+qstr_female|weiblich
+qstr_male|männlich
+qstr_a_thief|ein Dieb
+qstr_a_steppe_nomad|ein Steppenomade
+qstr_a_hunter|ein Jäger
+qstr_a_veteran_warrior|ein Kriegsveteran
+qstr_a_travelling_merchan|ein fahrender Händler
+qstr_an_impoverished_nobl|ein verarmter Adeliger
+qstr_a_steppe_child|ein Steppenkind
+qstr_a_street_urchin|ein Gassenkind
+qstr_a_shop_assistant|ein Ladengehilfe
+qstr_a_craftsman_s_appren|ein Handwerkslehrling
+qstr_a_page_at_a_nobleman|ein Page am Hof eines Adeligen
+qstr_a_game_poacher|ein Wilddieb
+qstr_a_smith|ein Schmied
+qstr_a_goods_peddler|ein Straßenhändler
+qstr_a_university_student|ein Universitätsstudent
+qstr_a_troubadour|ein Troubadour
+qstr_a_squire|ein Junker
+qstr_a_lady_in_waiting|eine Kammerzofe
+qstr_lust_for_money_and_p|Gier nach Geld und Macht
+qstr_being_forced_out_of_|Vertreibung aus Eurem Heim
+qstr_wanderlust|Wanderlust
+qstr_the_loss_of_a_loved_|Verlust eines geliebten Menschen
+qstr_personal_revenge|Rache
+qstr_Conscript_quality:|Rekrutenqualität:
+qstr_High_centralization_r|Hohe Zentralisation reduziert die Steuerineffizienz für den Herrscher und erhöht sie für die Vasallen. Dies beeinträchtigen die Beziehungen zwischen Herrscher und Vasallen.
+qstr_High_aristocracy_will|Hohe Aristokratie  verbessert die Beziehungen zwischen dem Herrscher und seinen Vasallen, die größere Armeen aufstellen können aber es reduziert die Handelsmöglichkeiten mit der entmachteten Händlerklasse.
+qstr_High_serfdom_reduces_|Hohe Leibeigenschaft reduziert die Steuerineffizienz für den Herrscher und seine Vasallen und die Vasallen können größere Armeen aufstellen aber die Soldaten haben eine geringere Moral.
+qstr__Sovereignty_Relatio| Bericht über Eure Beziehungen zu den Adeligen 
+qstr_Your_sovereignty|Euer Reich
+qstr_All_Sovereignties|Alle Reiche
+qstr__Back_to_shop_| Zurück zum Laden 
+qstr_Strength|Stärke
+qstr_Riding|Reiten
+qstr_Pdraw|Zug
+qstr_Pthrow|Werfen
+qstr_1_hand|1-Hand
+qstr_2_hand|2-Hand
+qstr_Polearm|Stange
+qstr_Archery|Bogen
+qstr__X_bow_|Armbr 
+qstr_Throwing_|Werfen
+qstr___Firearms|Büchsen
+qstr__Mode| Art
+qstr__to_next_lvl_|(+Stufe)
+qstr__1.3_| 1.3 
+qstr_If_you_can_see_this_|If you can see this, buy a new cpu.
+qstr___Weapons_| -Waffen-
+qstr___Armor_| -Rüstung-
+qstr_________________n/a_|                --                
+qstr_Rides|Pferd
+qstr_Walks|Fuß
+qstr_Startpage_set__Quick|Startseiten (Schnellansicht)
+qstr_Back_to_shop|Zurück zum Laden
+qstr__[?]_| [?] 
+qstr_Hotkeys:^HOME_=_Set_|Schnelltasten:^POS1 = Startseite^RMT = Zurück zum Menü^ESCAPE = Schnellansicht^BACKSPACE = Zurück zum Laden (wenn besucht)
+qstr___Quit2__|- Quit2 -
+qstr__Quick_View_| Schnellansicht 
+qstr_______|      
+qstr_Attributes|Eigenschaften
+qstr_Skills|Fähigkeiten
+qstr_Proficiencies|Fertigkeiten
+qstr_STR:|STÄ:
+qstr_AGI:|WEN:
+qstr_INT:|INT:
+qstr_CHA:|CHA:
+qstr_Health:|TP:
+qstr_Level:|Stufe:
+qstr_To_next_lvl:_|neue Stufe: 
+qstr_Ironflesh^Power_Stri|Eisenhaut^Schlagkraft^Wurfkraft^Bogenzugkraft^Waffenmeister^Schild^Athletik^Reiten^Ber. Schießen^Plündern^Ausbilder^Spurenlesen^
+qstr_Tactics^Path_finding|Taktik^Wegfindung^Aufklärung^Inventarverwaltung^Wundbehandlung^Chirurgie^Erste Hilfe^Baumeister^Rhetorik^Gefangenenhandhabung^Führung^Handel
+qstr_10|10
+qstr_One_Handed_Weapons:^|Einhandwaffen:^^Zweihandwaffen:^^Stangenwaffen:^^Bogenschießen:^^Armbrust:^^Werfen:^^Feuerwaffen:
+qstr_350^^350^^350^^350^^|350^^350^^350^^350^^350^^350^^350
+qstr__{reg1}_| {reg1} 
+qstr__100%__| 100%  
+qstr__30_| 30 
+qstr__3333333333_| 3333333333 
+qstr__Weapons_|-Waffen-
+qstr__Armor_|-Rüstung-
+qstr_n/a_________________|--                                
+qstr_{s9}_feels...|{s9} ist...
+qstr_{s6}|{s6}
+qstr_your_choice_of_compa|Eurer Gefährtenwahl,
+qstr_{s7}|{s7}
+qstr_your_style_of_leader|Euem Führungsstil...
+qstr_{s8}|{s8}
+qstr_the_general_state_of|dem Stand der Dinge.^------------------------------
+qstr_Morale:_____________|Moral:                       ^^Origin:          
+qstr_State:______________|Zustand:                       
+qstr_Startpage_set__Exten|Startseite (Erweiterte Ansicht)
+qstr_Default_title.|Standard-Titel.
+qstr_Set_Custom_Titles.|Lege Benutzerdefinierte Titel fest.
+qstr_Use_fief_based_title|Titel basierend auf den Ländereien (Standard).
+qstr_What_will_your_party|Wie soll Euer Trupp heißen?
+qstr_By_the_name_entered_|Unter dem oben angegebenen Namen.
+qstr_Simply_by_my_name:_{|Einfach mit dem Namen: {s5}.
+qstr__{s2}_siege_camp.| {s2} Belagerungslager.
+qstr__Continue_| Weiter
+qstr_Manage_Ship|Schiffe verwalten
+qstr_{s12}Cogs_are_large_|{s12}Koggen sind große Segelschiffe, bei denen das Bug und Heck höher gebaut ist als bei anderen Schiffen, um so eine burgähnliche Struktur zu bilden, die genutzt wird, um sich gegen Feinde mit Schützen zu verteidigen. Die frühen Koggen waren nicht sehr groß und hatten offen Schiffsrümpfe, was nicht viel Möglichkeit zum Segeln bot. Der Rumpf wurde später größer um mehr Fracht aufnehmen zu können.^^Koggen können mit einer kleinen Mannschaft gesegelt werden und haben dadurch nur geringe kosten.
+qstr_Select_ship:|Wählt ein Schiff:
+qstr_Name_your_ship:|Name Eures Schiffes:
+qstr_Rename_Ship.|Schiff umbenennen.
+qstr_Send_ship_to_port:|Sendet das Schiff nach:
+qstr_Verify.|Bestätigen.
+qstr_Manage_the_crew.|Mannschaft verwalten.
+qstr_View_the_ship_regist|Schiffsregister einsehen.
+qstr_This_is_your_ship__{|Das ist Euer Schiff '{s13}'. Die Besatzung besteht derzeit aus {reg7} Männern.^^
+qstr_Make_sure_you_select|Vergewissert Euch, dass ein Schiff ausgewählt ist
+qstr_Your_ship_{s15}_succ|Euer Schiff {s15} hat erfolgreich die Segel gesetzt nach {s16}.
+qstr_Make_sure_a_ship_is_|Vergewissert Euch, dass ein Schiff ausgewählt ist, es über ausreichende Besatzung verfügt und es noch Anlegeplätze für Schiffe im Zielhafen gibt.
+qstr_This_area_of_{s1}_ca|Das Handelsareal von {s1} kann als Herz der Stadt bezeichnet werden.^^ Ihr könnt fast sehen, wie von hieraus die Fäden gezogen werden, das Geld kommt und geht stetig.  Hier könnt ihr Land kaufen, das vor der Stadt bestellt wird und von denen profitieren die hart arbeiten. Gewiss habt ihr vielleicht nicht die erforderlichen Denare, um dies zu tun, aber die Geldverleiher sind bekannt dafür, das nötige Kleingeld zu haben.
+qstr_{reg1}_people_live_i|{reg1} Menschen leben in {s1}. Es sind derzeit {reg2} Morgen Land für die Bewirtschaftung verfügbar, um sie mit Nahrung und anderen Gütern zu versorgen. Ihr besitzt {reg3} Morgen Land in dieser Stadt. Ihr schuldet den Geldverleihern von {s1} derzeit {reg4} Denare. Der Zinssatz beträgt 20% und die Vertragsdauer beläuft sich auf zwei Wochen. Wenn ihr es nicht schafft, Eure Schulden bis zur gesetzten Frist zu begleichen, steigt der Zinssatz auf 40%. Der Kauf eines Morgens kostet {reg9} Denars, derweil es für {reg10} Denare verkauft werden kann. Neues Land zu bebauen kostet {reg11} Denare. Die Pacht, die den Landbesitzern bezahlt wird, beläuft sich derzeit auf {reg13} Denare pro Morgen alle zwei Wochen und muss in der Stadt eingesammelt werden. Land wird nicht verpachtet, wenn die Stadt bereits gut versorgt ist.
+qstr_Choose_how_many_acre|Wie viele Morgen möchtet ihr verkaufen :
+qstr_Choose_how_many_acres|Wie viele Morgen möchtet ihr kaufen :
+qstr_Verify|Bestätigen
+qstr_Choose_how_much_mone|Wie viel Geld möchtet ihr Euch leihen :
+qstr_Buy_and_prepare_uncu|Kauft und bewirtschaftet unbestelltes Land :
+qstr_Pay_off_your_debt_:|Zahlt Eure Schulden zurück :
+qstr_{reg5}|{reg5}
+qstr_You_cant_sell_0_acre|Ihr könnt nicht 0 Morgen Land verkaufen.
+qstr_You_cant_buy_0_acres|Ihr könnt nicht 0 Morgen Land kaufen.
+qstr_{reg6}|{reg6}
+qstr_You_cant_borrow_0_de|Ihr könnt nicht 0 Denare leihen.
+qstr_{reg7}|{reg7}
+qstr_{reg8}|{reg8}
+qstr_You_cant_pay_back_0_|Ihr könnt nicht 0 Denare zurückzahlen.
+qstr_Town|Stadt
+qstr_Acres|Morgen
+qstr_Owned|Besitz
+qstr_Balance|Bilanz
+qstr_Assets|Vermögen
+qstr_Debt|Schulden
+qstr_Deadline|Frist
+qstr_{reg3}|{reg3}
+qstr_{reg4}|{reg4}
+qstr_Merchant_Ledger|Kassenbuch
+qstr_____Assessed_Profit_|    Veranlagter Gewinn nach den Unterpunkten:
+qstr_{s0}_products_from_{|{s0}, Güter von {s1}:
+qstr_^{s1}_sold_in_{s2}_w|^{s1} verkauft in {s2} wird {reg0} Denare erbringen.{s3}
+qstr___Assessed_Profit_by|  Veranlagter Gewinn nach Eintragungsdatum
+qstr_^{s1}_sold_in_{s2}_wo|^{s1} verkauft {s2} wird  {reg0} Denare erbringen (als von {s0}).{s3}
+qstr_Production_in_{s1}|Fertigung in {s1}
+qstr_Assessed_Profit_by_T|Veranlagter Gewinn nach Produktionsort
+qstr_^{s1}_purchased_in_{|^{s1} erworben in {s2} wird {reg0} Denare erbringen (als von {s0}).{s3}
+qstr_Demand_in_{s1}|Nachfrage in {s1}
+qstr_Assessed_Profit_by_To|Veranlagter Gewinn nach Nachfrageort
+qstr_^Buy_in:_{s1}___sell|^Kauft in: {s1} - verkauft in: {s2} für {reg0} Denare Gewinn (als von {s0}).{s3}
+qstr_Supply_and_Demand_of|Versorgung mit und Nachfrage von {s1}
+qstr_____Assessed_Profit_b|    Veranlagter Gewinn nach Handelsgut
+qstr_Trim_ledger_entries_|Streicht Einträge älter als:              Tage:
+qstr_Remove_entries.|Entfernt die Einträge.
+qstr_Trim_ledger_entries_c|Streicht Einträge, die die folgenden Waren betreffen:
+qstr_Use_slider_to_choose|Nutzt den Schieberegler, um die Ware zu wählen
+qstr_Trim_ledger_entries_f|Streicht Einträge für Waren, die mit dieser Stadt verbunden sind:
+qstr_Use_slider_to_choose_|Nutzt den Schieberegler, um die Stadt zu wählen
+qstr_Remove_entries__Prod|Entfernt die Einträge (Produktion).
+qstr_Remove_entries__Dema|Entfernt die Einträge (Nachfrage).
+qstr_Trim_ledger_entries_w|Streicht Einträge mit weniger als:              Denar Gewinn:
+qstr_Ask_about_the_potent|Fragt jedes Mal nach dem möglichen Gewinn bei folgenden Waren^    wenn ihr die Preise am Markt überprüft:
+qstr____________Log_Entry|           Aufzeichnungsoptionen
+qstr_Add_Note|Notiz hinzufügen
+qstr_Clear_Notes|Notizen löschen
+qstr_Use_a_/\__caret__for|Nutzt ein /\ (Caret-Zeichen) für einen Zeilenumbruch.
+qstr_Chronological_Log|Chronologische Aufzeichnungen
+qstr_Production_Towns|Produktionsstadt
+qstr_Purchasing_Towns|Bedarfsstadt
+qstr_Trade_Goods|Handelswaren
+qstr_Manage_Ledger|Kassenbuch verwalten
+qstr_{s1}^+{s0}|{s1}^+{s0}
+qstr_{reg0}_entries_remov|{reg0} Einträge aus dem Kassenbuch entfernt.
+qstr_Personal_Reports|Persönliche Berichte
+qstr_Party_Reports|Truppberichte
+qstr_Kingdom_Reports|Reichsberichte
+qstr_Reference_Material|Referenzen
+qstr_Character_Reports|Charakterbericht
+qstr_Courtship_Relations|Brautwerbung
+qstr_Weekly_Budget|Budgetbericht
+qstr_Financial_Report|Finanzbericht
+qstr_Force_Size_Report|Truppgrößenbericht
+qstr_Morale_Report|Moralbericht
+qstr_Companion_Overview|Gefährtenübersicht
+qstr_Character&Companions|Charakter & Gefährten
+qstr_Companion_Missions|Gefährtenmissionen
+qstr_Sovereign_Relations|Diplomatie
+qstr_Lord_Holdings|Ländereien
+qstr_Known_Lords|Bekannte Adelige
+qstr_Upgrade_Trees|Truppenbäume
+qstr_All_Items|Ausrüstung
+qstr_Other_Information|Andere Informationen
+qstr_Debug&Cheats|Debug & Cheats
+qstr__Return_to_world_| Zurück in die Welt 
+qstr_No_companions_in_par|Keine Gefährten im Trupp!
+qstr_Plan_Deployment|Einsatzplan
+qstr_You_will_have_{reg1}|Ihr werdet über {reg1} Truppen zu Beginn der Schlacht verfügen
+qstr_Troop|Trupp
+qstr_#_at_start__/_#_in_p|# zu Beginn / # im Trupp
+qstr_/_{reg0}|/ {reg0}
+qstr_of_{reg0}_troops|von {reg0} Truppen
+qstr_Ready_Troops|Bereite Truppen
+qstr_Reassess|Neuzuweisen
+qstr_Scrap_All|Alle ausmustern
+qstr_Too_many_troops^Chec|Zu viele Truppen^Prüft verfügbare Anzahl
+qstr_Initial|Anfang
+qstr_Movement_1|Bewegung 1
+qstr_Movement_2|Bewegung 2
+qstr_Formation|Formation
+qstr_Attack|Angriff
+qstr_Weapon_Type|Waffentyp
+qstr_Shield|Schild
+qstr_Skirmish|Plänkeln
+qstr_Hold_Position|Position halten
+qstr_Back_10|10 Schritt zurück
+qstr_Forward_10|10 Schritt vor
+qstr_Repeat_x|Wiederhole x
+qstr_Square|Rechteck
+qstr_Wedge|Keil
+qstr_Shieldwall|Schildwall
+qstr_Ranks|Reihen
+qstr_Ranged|in Reihe
+qstr_Two_Handed|Zweihänder
+qstr_One_Handed|Einhänder
+qstr_No_Shields|Keine Schilde
+qstr_Use_Shields|Nutzt Schilde
+qstr_Avoid_Melee|Vermeide Nahkampf
+qstr_Turn_to_weapon_order|Geht zu Waffen...
+qstr_Prepare_Orders|Bereitet Befehle vor
+qstr_Dispatch_Orders|Sendet Befehle
+qstr_...Turn_to_positioni|...geht zu Positionsbefehlen
+qstr_Record_Battle_Size_a|Schlachtgröße übernehmen wie in Optionen gesetzt
+qstr_Keys_Configuration|Tasteneinstellung
+qstr_Press_Esc_to^^Disabl|Drückt Esc um^^Taste auszuschalten
+qstr_DeathCam_Mouse_Sensi|Maussensitivität DeathCam
+qstr_OK|OK
+qstr_Reset|Zurück
+qstr_Press_a_key|Drückt eine Taste
+qstr_{s10}___Formation_ty|{s10} - Formationtyp
+qstr_{s11}___Weapon_order|{s11} - Waffen
+qstr_{s12}___Shield_order|{s12} - Schild
+qstr_{s13}___Attack_order|{s13} - Angriff
+qstr_{s10}___Ranks|{s10} - Reihen
+qstr_{s11}___Shieldwall|{s11} - Schildwall
+qstr_{s12}___Wedge|{s12} - Keil
+qstr_{s13}___Square|{s13} - Rechteck
+qstr_{s14}___No_Formation|{s14} - Keine Formation
+qstr_{s15}___Escape_Menu|{s15} - Escape Menü
+qstr_{s11}___One_Handers|{s11} - Einhänder
+qstr_{s12}___Two_Handers|{s12} - Zweihänder
+qstr_{s13}___Polearms|{s13} - Stangenwaffen
+qstr_{s14}___Ranged|{s14} - Fernwaffen
+qstr_{s11}___Use_Shields|{s11} - Nutzt Schilde
+qstr_{s12}___No_Shields|{s12} - Keine Schilde
+qstr_{s13}___Free|{s13} - Frei
+qstr_{s10}___End_Order|{s10} - Ende Befähle
+qstr_{s11}___Skirmish|{s11} - Plänkeln
+qstr_{s12}___Volley_Fire|{s12} - Salvenfeuer
+qstr_{s13}___Brace_Polear|{s13} - Speerwall
+qstr_DeathCam|DeathCam
+qstr_Camera|Kamera
+qstr_Follow|Folge
+qstr_Troop_Assignments|Truppenzuweisung
+qstr_Split_Troops_into_Se|Teilt die Truppen in untergeordnete Abteilungen
+qstr_Troops_by^_Primary_D|Truppen in^ Primär-Abteilung
+qstr_#_in^Main_Division|Anzahl in^Abteilung
+qstr_Show/^Hide|zeigen/^ausblenden
+qstr_#_in^Secondary_Divis|Anzahl in^Unterabteilung
+qstr_Secondary^Division|Unter-^Abteilung
+qstr_Disabled|Deaktiviert
+qstr_Split_Active|Aufteilung
+qstr_Clear_All|Lösche alle
+qstr_Discard_Changes|Verwerfe Änderungen
+qstr_Save|Speichern
+qstr_DEBUG__TPE_:_Added__|DEBUG (TPE): '{s1}' zur Charakterauswahl hinzugefügt. Fach #{reg31}
+qstr_TOURNAMENT_SETTINGS|TURNIEREINSTELLUNGEN
+qstr_You_have_nothing.|Ihr habt nichts.
+qstr_Your_weapon_selectio|Eure Waffenauswahl ist angemessen.
+qstr_Display_Settings|Optionen
+qstr_Combat_Settings|Kampfoptionen
+qstr_ERROR!|FEHLER!
+qstr_Global_Options|Allgemeine Optionen
+qstr_Renown_Scaling|Ansehen an Stufe anpassen
+qstr_Enable_level_scaling|Stufenanpassung
+qstr_Display_Options|Optionen
+qstr_Show_combat_display|Kampfanzeige
+qstr_Show_health_bars|Zeige Gesundheit
+qstr_Show_team_points_awa|Teampunkte anzeigen
+qstr_Show_teammate_s_dama|Teamschaden anzeigen
+qstr_Show_when_awards_are|Auszeichnungen anzeigen
+qstr_Show_when_points_are|Punktevergabe anzeigen
+qstr_Team:|Team:
+qstr_Wager:|Einsatz:
+qstr_{reg21}_denars|{reg21} Denare
+qstr_Bid:|Wette:
+qstr_Difficulty:|Schwierigkeit:
+qstr_Random_team_number_a|Zufällige Teamanzahl & -größe
+qstr_Match:_{reg2}_teams_|Kampf: {reg2} Teams mit {reg3} Kämpfern
+qstr_Individual_Options|Individuelle Einstellungen
+qstr_Always_randomize_equ|Ausrüstung immer zufällig
+qstr_Never_spawn_this_cha|Charakter nie beitreten lassen
+qstr_Weapon_Choices______|Waffenauswahl             Fertigkeit
+qstr_Lance_&_Shield|Lanze & Schild
+qstr_Bow_&_Arrow|Bogen & Pfeile
+qstr_One_Handed_&_Shield|Einhänder & Schild
+qstr_Two_Handed_Weapon|Zweihandwaffe
+qstr_Crossbow_&_Bolts|Armbrust & Bolzen
+qstr_Thrown_Weapon_&_Shie|Wurfwaffe & Schild
+qstr_Polearm__spear_|Stangenwaffe (Speer)
+qstr_Enhancements|Verbesserungen
+qstr_Horse|Pferd
+qstr_Enhanced_Horse|Verbessertes Pferd
+qstr_Enhanced_Armor|Verbesserte Rüstung
+qstr_Enhanced_Weapons|Verbesserte Waffen
+qstr_Enhanced_Shield|Verbesserter Schild
+qstr_Basic_Options|Basis-Optionen
+qstr_You_may_choose_three|Ihr könnt aus drei der folgenden Waffen-        ^oder Verbesserungsoptionen wählen, die        ^Eure Ausrüstung bei Beginn festlegen.          ^Mit zusätzliche Optionen rechts könnt         ^ihr feste Einstellungen machen.
+qstr_The__Done__Button|Der 'Fertig'-Knopf
+qstr_This_will_end_the_cu|Dieser beendet die aktuelle Darstellung und     ^führt zurück zum Turniermenü.^^^^
+qstr_The__Settings__Butto|Der 'Einstellungen'-Knopf
+qstr_This_will_toggle_bet|Dieser wechselt zwischen den Optionsanzeigen         ^der visuellen und Text-Effekte oder         ^der Kampfeinstellungen.^^^
+qstr_The__Character__Choo|Die 'Charakter'-Auswahl 
+qstr_Using_the_arrows_you|Nutzt die Pfeile um zwischen Eurem         ^Charakter und Euren Gefährten zu wechseln,         ^die ihr derzeit im Trupp habt.^^^
+qstr_The__Persistent_Bet_|Der 'Einsatz'-Regler
+qstr_By_setting_this_slid|Durch Einstellung dieses Regler setzt         ^ ihr automatische die gewünschten Dinare         ^vor jeder Turnierrunde, wenn ihr genug         ^Geld dafür habt.         ^Bemerkung: Nur für den Spieler.^
+qstr_The__Persistent_Team|Der 'Team'-Regler
+qstr_By_setting_this_slide|Durch Einstellung dieses Reglers werdet         ^ihr automatisch dem gewünschten Team         ^zugewiesen, wenn es genügend Teams gibt.         ^Teamabfolge ist rot, blau, grün, gelb.         ^Bemerkung: Nur für den Spieler.^
+qstr_The__Renown_Scaling_|Die 'Ansehen an Stufe anpassen'-Auswahl
+qstr_With_this_enabled_yo|Wenn diese aktiviert ist werdet ihr Ansehen         ^im Turnier proportiional zu Eurer Stufe         ^und Ansehen bekommen. Je höher         ^Euer Ansehen, desto weniger erhaltet ihr.         ^Bemerkung: Nur für den Spieler.^
+qstr_The__Display_Health_|Die 'Zeige Gesundheit'-Auswahl
+qstr_With_this_enabled_you|^Wenn diese aktiviert ist, seht ihr         ^Gesundheitsbalken über jedem Teilnehmer         ^in Abhängigkeit von der Einstellungsauswahl         ^im Mod-Hauptmenü.^^^
+qstr_The__Always_Randomiz|Die 'Immer zufällig'-Auswahl
+qstr_With_this_enabled_you_|Wenn diese aktiviert ist, werdet Eure         ^Einstellungen zufällig vor jeder Runde         ^gewählt. Das erlaubt Euch das Turnier         ^wie bei Native zu erleben.         ^Bemerkung: Nur für den Spieler.^
+qstr_The__Never_Spawn__Ch|Die 'Nie Beitreten'-Auswahl
+qstr_With_this_enabled_th|Wenn diese aktiviert ist, wird der Charakter         ^nie ausgewählt um einem Turnier beizu-         ^treten. So können Gefährte ausgeschlossen         ^werden, die keine Kämpfer sind.         ^Bemerkung: Nur für die Gefährten.^
+qstr_The__Horse__Checkbox|Die 'Pferd'-Auswahl
+qstr_You_will_always_ente|Ihr beginnt das Spiel immer beritten.         ^Indem ihr dies aktiviert, eröffnet ihr Euch         ^die Möglichkeit das verbesserte Pferd, ein         ^Kriegsross, auszuwählen.^^
+qstr_The__Show_Combat_Dis|Die 'Kampfanzeige'-Auswahl
+qstr_Enable_this_to_see_a|Aktiviert diese um eine Echzeitanzeige         ^aller Teammitglieder, Punkte und          ^der drei Höchstplatzierten der Runde zu erhalten.         ^Bemerkung: Derzeit ausgeschaltet.^
+qstr_The__Show_Teammate_D|Die 'Teamschaden'-Auswahl
+qstr_Enable_this_to_see_t|Aktiviert diese, um den Schaden         ^im während des Kampfes zu sehen,          ^den Eure Teamkameraden austeilen.^^^
+qstr_The__Display_Awards_|Die 'Auszeichnungsanzeige'-Auswahl
+qstr_Enable_this_to_see_w|Aktiviert diese, um zu sehen, wann         ^Wettkämpfer im des Kampfes Auszeichnungen         ^erwerben.^^^^
+qstr_The__Display_Points_|Die 'Punkteanzeige im Kampf'-Auswahl
+qstr_Enable_this_to_see_wh|Aktiviert diese, um zu sehen, wann         ^Wettkämpfer im Kampf Punkte erhalten.^^^^
+qstr_The__Display_Team_Po|Die 'Teampunkte'-Auswahl
+qstr_Enable_this_to_see_whe|Aktiviert dies, um zu sehen, wann         ^Teams Punkte im Kampf erhalten.^^^^
+qstr_The__Enable_Level_Sc|Die 'Stufenanpassung'-Auswahl
+qstr_Enable_this_to_cause|Aktiviert diese, um die typischen Gegner         ^in der Arena, mit auch aufsteigen zu lassen,         ^um Schwierigkeit beizubehalten,         ^auch wenn Euer Charakter aufsteigt.^^
+qstr_{reg2}_denars|{reg2} Denare
+qstr_You_really_don_t_wan|Ihr möchtet das nicht wirklich bei Eurem Hauptcharakter EINSCHALTEN.
+qstr_DEBUG_Mode_Exit|DEBUG Mode Exit
+qstr_Exit_Tournament|Verlasse Turnier
+qstr_Continue|Weiter
+qstr_Finish|Fertig
+qstr_{s22}|{s22}
+qstr_Tournament_Options|Turniereinstellungen
+qstr_Round_Standings|Rundenstand
+qstr_Tournament_Rankings|Turnierrangliste
+qstr_Tournament_Standings|Turnierstand
+qstr_Round_{reg3}_Ranking|Runde {reg3} Rangliste
+qstr_{s12}|{s12}
+qstr_{reg2}_teams_of_{reg|{reg2} Teams mit {reg3} Kämpfer
+qstr_Page_1__1_10_|Seite 1 (1-10)
+qstr_Page_2__11_20_|Seite 2 (11-20)
+qstr_Page_3__21_30_|Seite 3 (21-30)
+qstr_Page_4__31_40_|Seite 4 (31-40)
+qstr_TOURNAMENT_AWARDS|TURNIERERAUSZEICHNUNGEN
+qstr_{s25}^Swiftest_Cut^A|{s25}^Schnellste Klinge^{s2}^+{reg1} Erfahrung^+{reg21} Ansehen^
+qstr_{s25}^Fiercest_Compe|{s25}^Verwegenster Kämpfer: {reg2}^{s2}^+{reg1} Erfahrung^+{reg21} Ansehen^
+qstr_{s25}^Dominant_Prese|{s25}^Dominanter Auftritt^{s2}^+{reg1} Erfahrung^+{reg21} Ansehen^
+qstr_{s25}^Legendary_Pres|{s25}^Legenderer Auftritt^{s2}^+{reg1} Erfahrung^+{reg21} Ansehen^
+qstr_{s25}^Mythical_Prese|{s25}^Göttlicher Auftritt^{s2}^+{reg1} Erfahrung^+{reg21} Ansehen^
+qstr_{s25}^Cautious_Appro|{s25}^Bedächtiges Vorgehen^{s2}^{reg21} Ansehen^
+qstr_{s25}|{s25}
+qstr_Slot|Fach
+qstr_#|#
+qstr_TROOP|TRUPPE
+qstr_ROUND_POINTS|RUNDENPUNKTE
+qstr_TOTAL_POINTS|GESAMTPUNKTE
+qstr_Random_teams_and_siz|Zufällige Teams und Teamgröße
+qstr_ERROR__TPE_:_An_inva|FEHLER (TPE): Ein ungültiger Gewinner ermittelt.  1. = {reg31}, 2. = {reg32}, 3. = {reg33}.
+qstr_TOURNAMENT_WINNERS|TURNIERGEWINNER
+qstr_1st|1. Platz
+qstr_Tournament_Awards|AUSZEICHNUNGEN
+qstr_{reg5}_denars|{reg5} Denare
+qstr_{reg6}_experience|{reg6} Erfahrung
+qstr_{reg7}_renown|{reg7} renown
+qstr_Tournament_Prizes|Turnierpreis
+qstr_2nd|2. Platz
+qstr_3rd|3. Platz
+qstr_City_of_{s21}|Turnier von {s21}
+qstr_Native_Arena|Native-Arena
+qstr_Adorno_s_Overhaul_Ar|Adornos Arenaüberholung
+qstr_{reg21}%|{reg21}%
+qstr_DEBUG__TPE_Design_:_|DEBUG (TPE Design): Gegenstand '{s1}' hinzugefügt.
+qstr_DEBUG__TPE_Design_:_S|DEBUG (TPE Design): Szenerie auf Option {reg1} gesetzt.
+qstr_CURRENT_COMMANDER_S_|BERICHT DES DERZEITIGEN KOMMANDANTEN!
+qstr_Your_Commander:_{s19|Euer Kommandant: {s19}
+qstr_Commander_Relation:_|Beziehung zum Kommandanten: {reg0}
+qstr_Enlisted_Faction:_{s|Eingeschrieben bei Fraktion: {s20}
+qstr_Current_Rank:_{s21}|Aktueller Rang: {s21}
+qstr_Experience_to_next_p|Erfahrung bis zur nächsten Beförderung: {s1}
+qstr_Days_in_service:_{re|Tage im Dienst: {reg20}
+qstr_Current_Wage:_{reg23|Aktueller Lohn: {reg23} Denare.
+qstr_Next_Pay/Promotion_d|Nächste Auszahlung/Beförderung: {s25}
+qstr_Army_size:_{reg26}|Armeegröße: {reg26}
+qstr_Commander_s_Army|Armee des Kommandanten
+qstr_Player_s_Kingdom|Königreich des Spielers
+qstr_Kingdom_of_Swadia|Königreich Schwadien
+qstr_Kingdom_of_Vaegirs|Königreich Vaegir
+qstr_Khergit_Khanate|Khanat Khergit
+qstr_Kingdom_of_Nords|Nord-Königreich
+qstr_Kingdom_of_Rhodoks|Königreich Rhodok
+qstr_Sarranid_Sultanate|Sarranidisches Sultanat
+qstr_DEBUG__KMT_:_Object_|DEBUG (KMT): Ausgewähltes Objekt ist {reg1}. Wert ist {reg2}.
+qstr_a_priest|ein Priester
+qstr_an_acolyte|ein Messdiener
+qstr_a_noble_in_training|ein Schildknappe
+qstr_a_courtier|ein Höfling
+qstr_a_mummer|ein Schausteller
+qstr_a_preacher|ein Prediger
+qstr_a_mercenary|ein Söldner
+qstr_a_bravo|ein Auftragsmörder
+qstr_a_gladiator|ein Arenakämpfer
+qstr_a_bandit|ein Bandit
+qstr_a_slave_trader|ein Sklavenhändler
+qstr_religious_fervor|religiöser Eifer
+qstr_sense_of_duty|Pflichtgefühl
+qstr_Native_Troops|Native Truppen
+qstr_Reworked_Troops|Überarbeitete Truppen
+qstr_Expanded_Troops|Erweiterte Truppen
+qstr_Gender_option_change|Geschlechtsauswahl geändert auf Einstellung {reg1}.
+qstr_Father_background_op|Väterliche Biographie geändert auf Einstellung {reg1}.
+qstr_Early_life_option_ch|Hintergrund Kindheit geändert auf Einstellung {reg1}.
+qstr_Later_life_option_ch|Hintergrund späteres Leben geändert auf Einstellung {reg1}.
+qstr_Reason_option_change|Motiv für Abenteuer geändert auf Einstellung {reg1}.
+qstr_ERROR:_No_valid_troo|FEHLER: Keine gültige Truppenbaumauswahl gefunden.
+qstr_Troop_tree_changed_t|Truppenbaum auf Einstellung {reg1?erweiterter oder überarbeiteter:Native-}Baum [ {reg1} ].
+qstr_Option:_Fog_of_War_h|Einstellung: Nebel des Krieges wurde {reg1?EINGESCHALTET:ausgeschaltet} [ {reg1} ].
+qstr_Option:_Gathering_co|Einstellung: Gefährten sammeln wurde {reg1?EINGESCHALTET:ausgeschaltet} [ {reg1} ].
+qstr_Option:_Starting_reg|Einstellung: Anfangsregion wurde auf {s2} gesetzt [{reg1}].
+qstr_Record_Battle_Size_as|Schlachtgröße festgelegt:
+qstr_Use_NPC_Lancer_Fix:|Nutzt NPC Lanzer-Fix:
+qstr_Use_NPC_Horse_Archer|Nutzt NPC Berittene Schützen-Fix:
+qstr_Use_NPC_Spear/Polear|Nutzt NPC Speer/Stangen-Fix:
+qstr_Use_Pike/Horse_Damag|Nutzt Pike-/Pferd-Schadensoptimierung:
+qstr_Distance_limit_for_s|Entfernung Anzeige TP-Balken:
+qstr_Show_health_bars_of_|Zeige Gesundheit verbündeter Truppen:
+qstr_Show_health_bars_of_e|Zeige Gesundheit feindlicher Truppen:
+qstr_Show_battle_minimap:|Zeige Kampfminikarte:
+qstr_Size_of_battle_minim|Größe der Kampfminikarte (%):
+qstr_Enable_Battle_Contin|Aktiviere Schlachtweiterführung:
+qstr_Batt._Cont._Charge_a|Befehle nach KO:
+qstr___Disabled__|Deaktiviert
+qstr_Charge_All|Alle Angreifen
+qstr_Formations_AI|Formations-KI
+qstr_Formations_Battle_AI|Schlachtformtions-KI:
+qstr_Native_AI_w/Formatio|Native-KI, mit/Formationen
+qstr_Disable_charge_on_be|Kein Auto-Sturmbefehl Belagerungsturm:
+qstr_Reassign_De_horsed_C|Pferdelose Kavallerie zuweisen:
+qstr_Reassign_No_Ammo_Arc|Munitionslose Schützen zuweisen:
+qstr_Keep_allies_in_the_b|Basiszuteilung Aliierte beibehalten:
+qstr_Enable_AI_Spear_Brac|Aktiviere Speerwall-KI:
+qstr_Enable_AI_Skirmishin|Aktiviere Plänkeln-KI:
+qstr_Enable_AI_Volley_Fir|Aktiviere Salvenfeuer-KI:
+qstr_Reinforcement_waves:|Verstärkungswellen:
+qstr_Report_shot_distance|Berichte Schussweite:
+qstr_Report_extra_XP_&_Wp|Berichte Extra-XP & -Fertigkeiten:
+qstr_Morale_threshold_for|Moralgrenze doppelte Vorräte:
+qstr_Speed_of_battles_on_|Kampfgeschwindigkeit auf der Karte:
+qstr_Terrain_advantage_in|Heimatvorteile in Auto-Schlacht:
+qstr_Enable_Bodyguards_in|Leibwächter in Städten/Dörfern:
+qstr_Enable_Tournament_En|Turnierverbesserungens (TPE):
+qstr_Tournament_Quests:|Turnier-Quests:
+qstr_Low_Reaction|Niedrige Reaktion
+qstr_Medium_Reaction|Mittlere Reaktion
+qstr_High_Reaction|Hohe Reaktion
+qstr_TPE_Setting_Shortcut|TPE-Kurzeinstellungen:
+qstr_Options_Panel|Einstellungsmenü
+qstr_Design_Panel|Gestaltungsmenü
+qstr_Information|Information
+qstr_Skill_penalty_from_e|Fertigkeitsabzug durch Rüstung:
+qstr_Enable_ranged_penalt|Reichweitenabzug durch Wetter:
+qstr_Disable_horse_speed_|Keine Anpassung der Pferdegeschw.:
+qstr_Allow_drowning_in_mi|Ertrinken bei Missionen möglich:
+qstr_Lords_returning_from|Fürsten kehren aus Exil zurück:
+qstr_Enabled|Aktiviert
+qstr_Frequent|Häufig
+qstr_Diplomacy_AI_changes|Diplomacy-KI-Änderungen:
+qstr_Low|Niedrig
+qstr_Medium|Mittel
+qstr_High/Experimental|Hoch/Experimentell
+qstr_Diplomacy_economic_c|Diplomacy-Ökonomie:
+qstr_Anti_woman_prejudice|Vorurteile gegen Frauen:
+qstr_High|Hoch
+qstr_Enable_Fog_of_War:|Aktiviere Nebel des Krieges:
+qstr_Disable_Time_of_Day:|Deaktiviere Tageszeit:
+qstr_Probability_of_rain/|Regen-/Schneewahrscheinlichkeit (%):
+qstr_Cloud_amount:|Wolkendichte:
+qstr_Fog_strength:|Nebelstärke:
+qstr_Disable_Companions__|Keine Beschwerden der Gefährten:
+qstr_Enable_the_cheat_men|Aktiviere das Cheat-Menü:
+qstr_Floris^Mod_Options|Floris-^Mod Optionen
+qstr_{reg0}.{reg1}|{reg0}.{reg1}
+qstr_Version_{s1}|Version {s1}
+qstr_Mouse_over_options_f|Mauszeiger über Einstellungen für weitere Informationen.
+qstr_Restore_Defaults|Auf Standard zurücksetzen
+qstr_Key_Settings|Tastenbelegung
+qstr_Record_the_Battle_Si|Speichere die Schlachtgröße, die ihr bei den normalen Spieleinstellungen gesetzt habt, so dass die Aufstellungsoptionen die ihr vor der Schlacht macht (wählt Eure Truppen) richtig funtkioniert.
+qstr_Weapon_Use_Fix_for_L|Waffengebrauch-Fix für Lanzer zwingt berittene Bots mit Lanzen dazu diese zu nutzen, bis sie von Feinden umgeben sind. (Nur in Feldschlachten aktiv.)
+qstr_Weapon_Use_Fix_for_H|Waffengebrauch-Fix für berittene Schützen zwingt berittene Bots mit Fernwaffen dazu diese zu nutzen, bis ihnen die Munition ausgeht. (Nur in Feldschlachten aktiv.)
+qstr_Weapon_Use_Fix_for_S|Waffengebrauch-Fix für Stangenwaffen zwingt Infanterie-Bots mit Stangenwaffen dazu diese zu nutzen, bis sie von Feinden umgeben sind. (Nur in Feldschlachten aktiv.)
+qstr_Damage_tweaks_will_g|Schadensoptimierung steigert leicht den Schaden von Speeren bei Pferden und den Schaden von Pferden bei Infanterie, um zu versuchen, die schlechte KI von Stangenwaffen und Angriffen auszugleichen. (Nur in Feldschlachten aktiv.)
+qstr_Sets_how_far_away_yo|Legt fest wie weit ihr Trefferpunkte und Gesundheit bei Truppen sehen könnt und ab wann sie verschwinden, falls ihr sie unten aktiviert habt.
+qstr_Ticked_you_will_see_|Häkchen: Ihr seht die Gesundheit der Truppen bis zur oben eingestellten Entfernung. Kein Häkchen: Keine Gesundheitinfo bei Verbündeten.
+qstr_Ticked_you_will_see_h|Häkchen: Ihr seht die Gesundheit der Truppen bis zur oben eingestellten Entfernung. Kein Häkchen: Keine Gesundheitinfo bei Gegnern.
+qstr_Ticked_a_minimap/rad|Häkchen: Eine Minikarte/Radar ist immer in der rechten oberen Ecke des Bildschirms sichtbar. Kein Häkchen: Keine Karte, es sei denn sie wird manuell eingeschaltet.
+qstr_Sets_the_size_of_the|Legt die Größe der Minikarte fest, falls sie oben aktiviert ist.
+qstr_Battle_Continuation_|Schlachtweiterführung erlaubt Euren Truppen, weiter zu kämpfen, nachdem ihr bewusstlos geschlagen wurdet.
+qstr_If_Battle_Continuati|Wenn die Schlachtweiterführung aktiviert ist, könnt ihr auswählen, was Eure Truppen nachdem ihr bewusstlos geschlagen wurdet: Deaktiviert lässt sie mit den letzten Befehlen weitermachen; Alle angreifen gibt jedem einen Angriffsbefehl; Formations-KI (falls aktiv für die KI) erlaubt der neuen KI für Euch zu übernehmen.
+qstr_Select_your_prefered|Wählt Eure bevorzugte Schlacht-KI: Deaktiviert bedeutet Native-KI; Formations-KI erlaubt der KI sowohl Formationen zu nutzen und Entscheidungen in der Schlacht zu treffen; Native-KI mit/Formationen bedeutet Native-KI aber führt diese nur mit den Grundformationen aus. (Nur in Feldschlachten aktiv.)
+qstr_Unticked_as_Native_w|Ohne Häkchen, wie in Native, fängt der Angriffstrupp des Spielers automatisch an zu stürmen, wenn der Belagerungsturm die Mauer erreicht hat. Falls aktiviert, wird der Befehl zum Stürmen nicht automatisch gegeben.
+qstr_Mounted_bots_once_th|Berittene Bots können, sobald ihr Pferd stirbt, einer Division Eurer Wahl neu zugewiesen werden. Falls aktiviert, werden KI-Bots neu zur Infantrerie zugewiesen. (Nur in Feldschlachten aktiv.)
+qstr_Foot_archer_bots_onc|Bogenschützen zu Fuß können, sobald sie keine Munition mehr haben, einer Division Eurer Wahl neu zugewiesen werden. Falls aktiviert, werden KI-Bots der Infanterie zugewiesen. (Nur in Feldschlachten aktiv.)
+qstr_Ticked_troops_of_all|Häkchen: Alliierte Truppen unter Eurem Kommando werden nicht zu den von Euch definierten Divisionen zugewiesen, sondern den standard Infanterie-, Schützen- und Kavalleriedivisionen. Kein Häkchen: Wie in Native werden alle Truppen unter Eurem Kommando der gleichen Division zugewiesen wie Eure Truppen des gleichen Typs.
+qstr_Enabling_AI_Special_|Die Aktivierung der KI-Spezialbefehle erlaubt dem KI-Team Salvenfeuer (Armbrüste), Plänkelmodus (Bogenschützen), und Speerwall (Infanterie mit Stangenwaffen) zu nutzen. (Nur in Feldschlachten aktiv.)
+qstr_Allows_you_to_increa|Ermöglicht es die Anzahl der Verstärkung die vor Ende der Schlachtrunde erscheinen zu erhöhen oder zu verringern.
+qstr_Ticked_the_scrolling|Häkchen: In der fortlaufenden Textanzeige während der Schlacht wird angezeigt, wie weit jeder Eurer Bogen-/Armbrustschüsse reichte. Kein Häkchen: Schussweite wird nicht angezeigt.
+qstr_One_receives_extra_w|Man kann zusätzliche Waffenfertigkeiten und Erfahrungspunkte aufgrund seiner Intelligenz erhalten. Häkchen: In der fortlaufenden Textanzeige wird vermerkt, wenn ihr Extrapunkte erhaltet. Kein Häkchen: Extrapunkte werden nicht angezeigt.
+qstr_Sets_the_morale_leve|Setzt die Moralgrenze unter der Eure Truppen doppelt so schnell Nahrung verbrauchen, um zufrieden zu bleiben. Wenn Eure Truppenmoral unter diesen Wert sinkt, erhöht sich die Geschwindigkeit des Vorratsverbrauchs auf das Doppelte der normalen und der Bonus auf die Truppenmoral jeden Essens wird ebenso verdoppelt. Stellt es sehr niedrig ein, um diese 'Schwierigkeitserleichterung' grundsätzlich auszuschalten.
+qstr_Adjusts_how_fast_aut|Legt fest, wie schnell automatisch berechnete Schlachten zwischen der KI ablaufen. Je langsamer, um so größer ist die Chance, dass ihr auch entfernt dazustoßen könnt, aber es verlangsamt auch das Tempo des Spiels.
+qstr_Ticked_autocalculate|Häkchen: In automatisch berechnete Schlachten erhalten Fraktionen einen Vorteil, wenn diese in der Heimatregion stattfinden. Kein Häkchen: Wie Native basieren Auto-Schlachten nur auf der Truppgröße und der Truppstufe.
+qstr_Bodyguards_allows_yo|Eure Gefährten können Euch als persönliche Leibwachen in Städten und Dörfern dienen. Die Anzahl der Leibwachen hängt von Eurer Führungsfähigkeit und Eurem Ansehen ab.
+qstr_Ticked_the_enhanced_|Häkchen: Das verbesserte Turniersystem ist aktiviert. Kein Häkchen: Das Turniersystem ist wie in Native.
+qstr_Set_to_disabled_this|Deaktiviert werden keine Turniereinladungen erscheinen.^^Jede 'Reaktionsstufe' legt fest, wie viel sich verändert, wenn ihr an einem Turnier teilnehmt oder eines verpasst.^^Auf der Stufe 'hohe Reaktion' verschlechtern sich Eure Beziehungen, wenn ihr nicht zu einem Turnier erscheint, zu dem ihr eingeladen wurdet.
+qstr_Select_any_of_the_pr|Wählt irgendeine Anzeigeoption aus dem Menü und ihr springt sofort zum entsprechenden Untermenü für die Turniereinstellungen.
+qstr_Ticked_you_and_your_|Häkchen: Ihr und Eure Gefährten erhalten Abzüge auf Athletik, Reiten und Berittenem Schießen von schwerer Rüstung. Kein Häkchen: So wie in Native.
+qstr_The_Weather_Proficie|Die Wetterfertigkeitsabzüge verringern in der Schlacht die Fertigkeiten der Fernwaffen aller Truppen bei starkem Nebel, Regen/Schnee oder in der Nacht, um die schlechten Bedingungen für Eure Schützen wiederzuspiegeln.
+qstr_Ticked_it_is_as_in_N|Häkchen: So wie in Native. Kein Häkchen: Je mehr ein Pferd verletzt ist, desto langsamer läuft es.
+qstr_Ticked_you_can_drown|Häkchen: Ihr könnt ertrinken, wenn ihr längere Zeit unter Wasser seid. Kein Häkchen: Wie in Native könnt ihr jahrelang am Grund eines Sees spazieren gehen.
+qstr_Allows_exiled_lords_|Erlaubt Fürsten im Exil zurückzukehren und sich einer Fraktion anzuschließen, um dem Abwandern von Fürsten im späten Spielverlauf vorzubeugen.
+qstr_Difficulty_setting._|Schwierigkeitsgrad. Je höher der Schwierigkeitsgrad, desto schwieriger wird es für den Spieler.
+qstr_Disabled_levels_the_|Deaktiviert wird das Spielfeld für weibliche Spieler 'geebnet'. Standard wie in Native. Hoch erhöht die Vorurteile gegenüber Frauen.
+qstr_Ticked_locations_you|Häkchen: Orte die ihr noch nicht besucht habt, sind auf der Weltkarte nicht sichtbar bis ihr in Reichweite kommt. Kein Häkchen: Wie in Native ist die gesamte Karte zu Beginn des Spiels sichtbar.
+qstr_Ticked_as_in_Native.|Häkchen: Wie in Native. Kein Häkchen: Das Datum schließt die Tageszeit mit ein.
+qstr_Can_set_the_likeliho|Man kann die Niederschlagswahrscheinlichkeit in Schlachten festlegen.
+qstr_Sets_the_cloud_cover|Legt die Wolkendichte auf der Karte und in Schlachten fest, was die Niederschlagswahrscheinlichkeit erhöht.
+qstr_Sets_fog_strength_on|Legt die Nebelstärke auf der Karte und in der Schlacht fest.
+qstr_Disabling_NPC_Compla|Deaktiviert NPC-Beschwerden schaltet die Beschwerden Eurer Gefährten über andere Mitglieder des Trupps auf stumm. Es entfernt jedoch nicht die Auswirkungen, die ihre Meinung hat.
+qstr_The_cheat/debug_mode|Der Cheat/Debug-Modus aktiviert Debug-Nachrichten, das Cheatmenü in Eurem Lager sowie weitere zusätzliche Optionen bei Berichte.
+qstr_{s1}_of_the_{s3}_was|{s1} von den {s3} wurde in der Schlacht besiegt, konnte aber entkommen.
+qstr_{s7}_{s8}|{s7}, {s8}
+qstr_{s9}_{s10}|{s9}, {s10}
+qstr_{reg1}_to_party_mora|{reg1} zu Truppenmoral
+qstr_tactics|Taktik
+qstr_persuasion|Rhetorik
+qstr_leadership|Führungskraft
+qstr_intelligence|Intelligenz
+qstr_prisoner_management|Gefangenenhandhabung
+qstr_trade|Handel
+qstr_weapon_mastery|Waffenmeister
+qstr_engineer|Baumeister
+qstr_charisma|Charisma
+qstr_looting|Plündern
+qstr_first_aid|Erste Hilfe
+qstr_spotting|Aufklärung
+qstr_path_finding|Wegfindung
+qstr_+1_to_{s1}_after_rea|+1 auf {s1} nach dem Lesen
+qstr_Reading_Progress:^{p|Lesefortschritt:^{playername}:{reg1}.{reg2}%
+qstr_{s0}^{s1}:{reg1}.{re|{s0}^{s1}:{reg1}.{reg2}%
+qstr_pathfinding|Wegfindung
+qstr__^| ^
+qstr_price:_base_price*{r|Preis: Basispreis*{reg1}.{reg2}
+qstr__2_speed^_2_maneuver|-2 Geschwindigkeit^-2 Manöver
+qstr__5_speed^_5_maneuver|-5 Geschwindigkeit^-5 Manöver
+qstr_+3_armor^+4_charge^+|+3 Rüstung^+4 Angriff^+10 Gesundheit
+qstr__1_requirement_of_ri|-1 Reiten erforderlich
+qstr_+1_requirement_of_ri|+1 Reiten erforderlich^+5 Gesundheit
+qstr_+1_speed^+1_armor^+1|+1 Geschwindigkeit^+1 Rüstung^+1 Angriff
+qstr_+2_requirement_of_ri|+2 Reiten erforderlich^+2 Geschwindigkeit^+2 Rüstung^+2 Angriff
+qstr__56_hit_points^_4_re|-56 Trefferpunkte^-4 Widerstand
+qstr__26_hit_points^_2_re|-26 Trefferpunkte^-2 Widerstand
+qstr_+47_hit_points^+2_re|+47 Trefferpunkte^+2 Widerstand
+qstr_+83_hit_points^+4_re|+83 Trefferpunkte^+4 Widerstand
+qstr___| -
+qstr__+| +
+qstr_{reg1?{s1}{reg4}_to_|{reg1?{s1}{reg4} auf Kopfschutz^:}{reg2?{s1}{reg4} auf Körperrüstung^:}{reg3?{s1}{reg4} auf Beinschutz:}
+qstr_{reg1?_5_swing_damag|{reg1?-5 Schwingen^:}{reg2?-5 Stechen^:}
+qstr_{reg1?_3_swing_damag|{reg1?-3 Schwingen^:}{reg2?-3 Stechen^:}
+qstr_{reg1?_3_swing_damage|{reg1?-3 Schwingen^:}{reg2?-3 Stechen^:}-3 Geschwindigkeit
+qstr_{reg1?_1_swing_damag|{reg1?-1 Schwingen^:}{reg2?-1 Stechen^:}
+qstr_{reg1?+3_swing_damag|{reg1?+3 Schwingen^:}{reg2?+3 Stechen^:}+3 Geschwindigkeit
+qstr_{reg1?+4_swing_damag|{reg1?+4 Schwingen^:}{reg2?+4 Stechen^:}
+qstr_{reg1?+5_swing_damag|{reg1?+5 Schwingen^:}{reg2?+5 Stechen^:}+1 Geschwindigkeit{reg3?^+4 Stärke erforderlich:}
+qstr_{reg1?+2_swing_damag|{reg1?+2 Schwingen^:}{reg2?+2 Stechen^:}-2 Geschwindigkeit{reg3?^+1 Stärke erforderlich:}
+qstr__5_damage|-5 Schaden
+qstr__3_damage^_3_speed|-3 Schaden^-3 Geschwindigkeit
+qstr_+3_damage^_3_speed{r|+3 Schaden^-3 Geschwindigkeit{reg3?^+2 Bogenzugkraft erforderlich:}
+qstr_+5_damage^+1_speed{r|+5 Schaden^+1 Geschwindigkeit{reg3?^+4 Bogenzugkraft erforderlich:}
+qstr_+13%_max_ammo|+13% max. Munition
+qstr_+2_damage^_2_speed{r|+2 Schaden^-2 Geschwindigkeit{reg3?^+1 Wurfkraft erforderlich:}
+qstr_+3_damage^+3_speed|+3 Schaden^+3 Geschwindigkeit
+qstr__3_damage|-3 Schaden
+qstr_Power_Draw|Bogenzugkraft
+qstr_Power_Throw|Wurfkraft
+qstr_Requires_{s1}:_{reg3|Erfordert {s1}: {reg3}
+qstr__{s61}_{s62}_| {s61}({s62})
+qstr_Bonus_chance_of_loot|Bonus-Chance beim Plündern: {reg0}%.
+qstr_You_have_deserted_fr|Ihr seid aus dem Trupp von {s13} desertiert!
+qstr_Notice!|Warnung!
+qstr_Barracks|Kasernen
+qstr_A_Barracks_helps_to_|Eine Kaserne unterstützt Euch dabei bessere Truppen auszubilden.
+qstr_{s9}^^^Level:_{reg3}|{s9}^^^Stufe: {reg3}^Gesundheit: {reg2}%^Moral: {reg4}
+qstr_Morale:_{reg0}^^Orig|Moral: {reg0}^^Herkunft: {s21}
+qstr_State:_Riding|Status: zu Pferd
+qstr_State:_On_foot|Status: zu Fuß
+qstr__{reg1}%| {reg1}%
+qstr_{s1}^{reg2}|{s1}^{reg2}
+qstr_{s1}^^{reg1}|{s1}^^{reg1}
+qstr_{s50}{s31}_upgrades_|{s50}{s31} rüstet {reg31?ihren:seinen} Helm mit {s32} auf.^
+qstr_{s50}{s31}_upgrades_{|{s50}{s31} rüstet {reg31?her:his} Rüstung mit {s32} auf.^
+qstr_{s50}{s31}_upgrades_{r|{s50}{s31} rüstet {reg31?her:his} Stiefel mit {s32} auf.^
+qstr_{s50}{s31}_upgrades_{re|{s50}{s31} rüstet {reg31?her:his} Handschuhe mit {s32} auf.^
+qstr_{s50}{s31}_upgrades_{reg|{s50}{s31} rüstet {reg31?her:his} Pferd mit {s32} auf.^
+qstr_{s50}{s31}_upgrades_{reg3|{s50}{s31} rüstet {reg31?her:his} Waffen mit {s32} auf.^
+qstr__{reg50}{reg51}_|({reg50},{reg51})
+qstr_{s1}_have_sold_{reg1|{s1} haben {reg1} {reg3?Gegenstände:Gegenstand} verkauft und ihr erhieltet {reg2} {reg4?Denare:Denar}.
+qstr_You_have_sold_{reg2}|Ihr habt {reg2} {reg4?Arten:Art} verrotteter Lebensmittel verkauft und erhieltet {reg1} {reg3?Denare:Denar}.
+qstr_Bonus!_A_{s1}{s2}.|Bonus! Ein {s1}{s2}.
+qstr_{reg4}_killed_{reg5}|{reg4} getötet, {reg5} verwundet
+qstr_{s0}^{s1}:_{reg3}__{|{s0}^{s1}: {reg3} ({s2})
+qstr_{s0}^{s1}__ally_:_{r|{s0}^{s1} (Verbündete): {reg3} ({s2})
+qstr_{s0}^{s1}__enemy_:_{|{s0}^{s1} (Gegner): {reg3} ({s2})
+qstr_Mercenaries|Landsknechte
+qstr_Outlaws|Banditen
+qstr_Sword_Sisters|Schwertschwestern
+qstr_Freelancers|Freilandser
+qstr_{s0}{s1}|{s0}{s1}
+qstr__You_were_born_years| Ihr wurdet vor vielen Jahren in einem fernen Land geboren. Euer Vater war {s2}. {s3}
+qstr_{s1}^^_You_started_t|{s1}^^ Ihr begannt etwas über die Welt zu lernen sobald ihr laufen und sprechen konntet.                              Ihr verbrachtet Eure Kindheit als {s2}. {s3}
+qstr_{s1}^^_Then_as_a_you|{s1}^^ Dann, als junger Erwachsener, veränderte sich wie immer das Leben. Ihr wurdet {s2}. {s3}
+qstr_{s1}^^_But_soon_ever|{s1}^^ Aber schon bald kam alles anders und ihr entschiedet Euch allein in die Welt zu ziehen.                              Was Euch zu dieser Entscheidung führte war {s2}. {s3}
+qstr_{s1}^^_As_a_{s3}_{s2|{s1}^^ Als ein {s3} {s2} {s4}
+qstr_{s2}{s1}_|{s2}{s1}, 
+qstr__The_following_food_| Die folgenden Vorräte wurden zerstört oder geplündert: {s2}. 
+qstr__A_pack_horse_has_ra| Ein paar Pferde sind weggelaufen!!
+qstr__Some_tools_have_bee| Einige Werkzeuge sind zerbrochen oder weggekommen.
+qstr__{reg3}| {reg3}
+qstr_Your_party_consumed_|Euer Trupp verzehrt {reg1} Einheiten Nahrung {reg4?, {reg4} aus Vorratshaltung : }({reg2} Tage übrig).
+qstr_{s2}_managed_to_fora|{s2} kann {reg4} Einheiten Nahrung bevorraten, um Eure Versorgung zu ergänzen.
+qstr__knows_of_you| kennt Euch
+qstr_{s1}_wife_of_{s3}{re|{s1}, Frau von {s3}{reg0?,{s60}:}
+qstr_{s1}_{reg1?daughter_|{s1}, {reg1?Tochter von:Mündel von} {s3}{reg4?, verlobt mit {s5}:}{reg0?,{s60}:}
+qstr_{s3}_and_{s6}|{s3} und {s6}
+qstr_{s1}{reg4?_son_of_{s|{s1}{reg4?, Sohn von {s5}{reg1?,:{reg0?,:}}:}{reg1? Gefangener{reg0?,:}:}{reg0?{s60}:}
+qstr_{s10}_{reg1?daughter|{s10}, {reg1?Tochter von:Mündel von} {s3}{reg4?, verlobt mit {s5}:}{reg0?,{s60}:}
+qstr_Messenger_{s65}|Bote {s65}
+qstr_Envoy_{s65}|Gesandter {s65}
+qstr_Consul_{s65}|Konsul {s65}
+qstr_Legate_{s65}|Legat {s65}
+qstr_Missi_Dominici_{s65}|Missi Dominici {s65}
+qstr_{s65}|{s65}
+qstr_{s10}{reg0?__who{s60|{s10}{reg0? (der{s60}):}
+qstr_{s11}__{s61}_|{s11} ({s61})
+qstr_{s0}_Trade_Ledger_Ar|{s0} Kassenbuch-Anordnungen
+qstr_Character_Renown:_{r|Charakter-Ansehen: {reg1}^Ehrenwertung: {reg2}
+qstr_{s11}^^You_right_to_|{s11}^^Euer Recht zu regieren ist {reg1}.
+qstr_{s11}^^You_have_{reg|{s11}^^Ihr habt {reg1} Freunde.^Ihr habt {reg2} Feinde.
+qstr_{s11}^^You_own_{reg0|{s11}^^Ihr besitzt {reg0} Ländereien.
+qstr_{s11}^^You_are_a_co_|{s11}^^Ihr seid Mitherrscher der {s12} Fraktion.
+qstr_{s11}^^You_are_a_mem|{s11}^^Ihr seid Mitglied der {s12} Fraktion.
+qstr_{s11}^^You_are_the_r|{s11}^^Ihr seid Herrscher der {s12} Fraktion.
+qstr_{s11}^^You_are_not_p|{s11}^^Ihr gehört zu keiner Fraktion.
+qstr_{s11}^^You_are_curre|{s11}^^Ihr lest gerade: {s13}.
+qstr_{s11}^^You_are_curren|{s11}^^Ihr lest gerade keine Bücher.
+qstr_Current_force_morale|Aktuelle Truppenmoral ist {reg5}.^Einflussfaktoren auf die Moral:^^Grundmoral: +50^Truppgröße: {s2}{reg1}^Führung: {s3}{reg2}^Nahrungsvielfalt: {s4}{reg3}{s5}{s6}^Jüngste Ereignisse: {s7}{reg4}^GESAMT: {reg5}^^Moralveränderung: {s8}{reg8}^Voraussichtliche Truppenmoral: {reg10}^^^
+qstr_{s11}Extra_morale_fo|{s11}Extra Moral für {s9} Truppen : {reg6}^
+qstr_{s11}{s12}|{s11}{s12}
+qstr_Your_estates_are:^^{|Eure Ländereien sind:^^{s8}.
+qstr_You_dont_own_any_est|Ihr besitzt keine Ländereien.
+qstr_{s11}^^{s12}|{s11}^^{s12}
+qstr_Hold|Anhalten
+qstr_{s1}_x{reg0}|{s1} x{reg0}
+qstr_Hold_Fire|Feuer einstellen
+qstr_Fire_at_Will|Feuer frei
+qstr_Use_Shield|Nutzt Schilde
+qstr_Back_10_Paces|10 Schritt zurück
+qstr_{s2}^{s1}|{s2}^{s1}
+qstr_No_Position_Orders|Keine Positionsbefehle
+qstr_No_Weapons_Orders|Keine Waffenbefehle
+qstr_ready_bows_and_missi|Bereite Bögen und Geschosse
+qstr_ready_side_arms|Bereite Einhänder
+qstr_ready_two_handers|Bereite Zweihänder
+qstr_ready_polearms|Bereite Stangenwaffen
+qstr_brandish_shields|Senkt die Schilde
+qstr_doff_your_shields|Legt die Schilde ab
+qstr_shields_at_will|Schildnutzung frei
+qstr_avoid_melee|Vermeidet Nahkampf
+qstr_stand_and_fight|Haltet die Position
+qstr_prepare_to_volley|Bereitet Salve vor
+qstr_end_volley|Beendet Salve
+qstr_brace_for_charge|Speere senken
+qstr_remove_brace_and_fig|Speere ablegen und kämpfen
+qstr_Everyone|Jeder
+qstr_Press_{s1}{s2}{s3}{s|Drückt {s1},{s2},{s3},{s4} um die Kamera zu bewegen und nutzt die Maus oder die Bewegungstasten um zu drehen. Haltet ZOOM gedrückt um euch schneller zu bewegen.
+qstr_Press_{s1}{s2}{s3}{s4|Drückt {s1},{s2},{s3},{s4},{s5},{s6} um die Kamera um die Truppen zu bewegen, denen ihr folgt. Haltet ZOOM gedrückt um euch schneller zu bewegen. Drückt {s7} oder {s8} um durch Truppen zu kreisen. Halten von {s10} kreist durch das Eure Gruppe und {s11} durch die Gegner.
+qstr_Press_{s0}_to_toggle|Drückt {s0} um die Kameramodi zu wechseln.
+qstr_No_Troops_Left.|Keine Truppen übrig.
+qstr_Undefined!|Unbekannt!
+qstr_DEBUG_:_Weather_pena|DEBUG : Wetterabzug {reg2}% - {s0}: {reg0} bis {reg1}
+qstr_DEBUG_:_{s0}_profici|DEBUG : {s0} Fertigkeit wieder hergestellt auf: {reg1}
+qstr_{s0}^{reg0}:_{s1}___|{s0}^{reg0}: {s1} - {reg1} ({reg2})
+qstr_{s1}___{reg3}_stacks|{s1} - {reg3} Stapel:^{s0}
+qstr_ranks|Reihen
+qstr_shield_wall|Schildwall
+qstr_wedge|Keil
+qstr_square|Rechteck
+qstr_up|hoch
+qstr_Not_enough_troops_in|Nicht genügend Truppen in {s2} um {s1} zu formen, halten an.
+qstr_{s1}:_infantry_forma|{s1}: Infanterieformation aufgelöst.
+qstr_{s1}:_archer_formati|{s1}: Schützenformation aufgelöst.
+qstr_{s1}:_skirmisher_for|{s1}: Plänklerformation aufgelöst.
+qstr_{s1}:_cavalry_format|{s1}: Kavallerieformation aufgelöst.
+qstr_{s1}:_formation_disa|{s1}: Formation aufgelöst.
+qstr_Cavalry_formation_di|Kavallerieformation aufgelöst.
+qstr_infantry|Infanterie
+qstr_archer|Schützen
+qstr_cavalry|Kavallerie
+qstr_polearm|Stangen
+qstr_skirmisher|Plänkler
+qstr_mounted_archer|Berittene Schützen
+qstr_support|Unterstützung
+qstr_bodyguard|Leibwache
+qstr_undetermined_type_of|unbestimmter Typ von
+qstr_You_have_{reg0}_opti|Ihr habt {reg0} Optionen übrig.
+qstr_ERROR__TPE_:_{s1}_ha|FEHLER (TPE): {s1} hat ein ungültige Anzahl ausgewählt  @ {reg21}.
+qstr_You_will_be_using_yo|Ihr werdet im nächsten Kampf Eurer^eigene Ausrüstung nutzen.
+qstr_You_have_no_weapons_|Ihr habt keine Waffen ausgewählt.
+qstr_You_re_using_more_th|Ihr belegt mehr als 4 Waffenfächer.
+qstr_You_currently_have_n|Ihr habt derzeit keine Nahkampfwaffen.
+qstr_DEBUG__TPE_Weapon_Lo|DEBUG (TPE Waffenlogik): Ihr habt {reg1} Waffenfächer ({reg3} Schild) belegt um {reg0} Waffen zu tragen. Nahkampfwaffen: {reg2}
+qstr_ERROR__script_tpe_se|FEHLER (Skript TPE Set Option): Fach #{reg31} had einen ungültigen Wert von {reg32}.
+qstr_You_already_have_thr|Ihr habt bereits drei Optionen ausgewählt.
+qstr_ERROR__TPE_Design_:_|FEHLER (TPE Design): Ungültiger Itemtyp (normale Waffe) ermittelt.
+qstr_ERROR__TPE_Design_:_A|ERROR (TPE Design): Ungültiger Itemtyp (verbesserte Waffen) ermittelt.
+qstr_DEBUG__TPE_:_{s1}_is|DEBUG (TPE): {s1} ist in Team {reg0} und sollte zu Beginn {reg1} sein.
+qstr_{s1}_enhanced_horse_|{s1} verbessertes Pferd (+2),
+qstr_{s1}_horse__+1_|{s1} Pferd (+1),
+qstr_{s1}_enhanced_armor_|{s1} verbesserte Rüstung (+1),
+qstr_{s1}_enhanced_helmet|{s1} verbesserter Helm,
+qstr_{s1}_enhanced_boots|{s1} verbesserte Stiefel,
+qstr_{s1}_armor|{s1} Rüstung,
+qstr_{s1}_helmet|{s1} Helm,
+qstr_{s1}_boots|{s1} Stiefel,
+qstr_{s1}_enhanced_shield|{s1} verbessertes Schild (+1),
+qstr_{s1}_shield|{s1} Schild,
+qstr_{s1}_enhanced_{s2}_l|{s1} verbesserte {s2} Lanze (+2),
+qstr_{s1}_{s2}__+1_|{s1} {s2} (+1),
+qstr_{s1}_enhanced_{s2}__|{s1} verbesserte {s2} (+2),
+qstr_DEBUG__TPE_:_{s2}_re|DEBUG (TPE): {s2} erhält {s1}.
+qstr___limited_| (begrenzt)
+qstr_{s22}{s21}|{s22}{s21}
+qstr_{reg2}_points|{reg2} Punkte
+qstr_{s23}|{s23}
+qstr_DEBUG__TPE____ARRAY_|DEBUG (TPE) - ARRAY COPY ATTEMPT.
+qstr_DEBUG__TPE_:_Source_|DEBUG (TPE): Quelle -> Target Copy. Fach {reg1} = {s1}.
+qstr_DEBUG__TPE_:_{s1}_ga|DEBUG (TPE): {s1} erhält {reg1} von insgesamt {reg2} Punkten in dieser Runde.
+qstr_DEBUG__TPE_sort_:_Ra|DEBUG (TPE sort): Auf Rang {reg2} ist {s1} mit {reg1} Punkten.
+qstr_DEBUG__TPE_:_Faction|DEBUG (TPE): Fraktion ({s31}) nicht gefunden. Standardfraktion wird für {s32} benutzt.
+qstr_ERROR__TPE_:_Difficu|FEHLER (TPE): Schwierigkeitsgrad ungültig (Reglerposition). Standard Teamgröße = 3.
+qstr_ERROR__TPE_:_Difficul|FEHLER (TPE): Schwierigkeitsgrad ungültig (Reglerposition). Standard Teamgröße = 3.
+qstr_Random|Zufällig
+qstr_Hard|Schwer
+qstr_Normal|Normal
+qstr_Easy|Einfach
+qstr_{s2}^Payout_Bonus_+{|{s2}^Auszahlungsrate +{reg2}%
+qstr_{s2}^AI_Upgrade___Wi|{s2}^KI-Aufrüstung - erfolgt
+qstr_{s2}^AI_Upgrade___Fo|{s2}^KI-Aufrüstung - Fokussiertes Feuer
+qstr_{s2}^|{s2}^
+qstr_Difficulty_Settings|Schwierigkeitsgrad
+qstr_DEBUG__TPE_:_{s1}_wa|DEBUG (TPE): {s1} wurde in {s2} gefunden, aber die Beziehung war zu neutral, um eine Rolle zu spielen.
+qstr_Grand_Principality|Großfürstentum
+qstr_DEBUG__TPE_:_Ranking|DEBUG (TPE): Ranglisten Updateversuch: {s1} mit {reg1} Punkten.
+qstr_DEBUG__TPE_:_Garbage|DEBUG (TPE): Mülltruppen-ID gefunden. ICD wird ausgeglichen durch {reg21}.
+qstr_{s21}|{s21}
+qstr_Red_Team|Rotes Team
+qstr_Blue_Team|Blaues Team
+qstr_Green_Team|Grünes Team
+qstr_Yellow_Team|Gelbes Team
+qstr_DEBUG__TPE_level_sca|DEBUG (TPE Stufenskalierung): Anpassung ausgeschaltet. Standardstufe von {reg22} festgelegt.
+qstr_DEBUG__TPE_:_Troop__|DEBUG (TPE): Truppe - {s31} - Stufe +{reg32} = {reg31}
+qstr____________>_STR+{re|-----------> STÄ+{reg34} = {reg33}, WEN+{reg36} = {reg35}
+qstr____________>_Str_Ski|-----------> STÄ-Fähigk. {reg37}, WEN-Fähigk. {reg38}, Waffenfert. {reg39}
+qstr_{s2}_{s1}|{s2} {s1}
+qstr_{s1}_of_{s2}|{s1} von {s2}
+qstr_points|Punkte
+qstr_point|Punkt
+qstr_because_I_said_so|weil ich es gesagt habe.
+qstr_The_Tournament_Maste|Der Turniermeister verkündet, '{s1} wurde ausgezeichnet {reg1} {s2} für {s3}.'
+qstr_{s35}{s1}_has_been_a|{s35}{s1} wurde ausgezeichnet {reg1} {s2} für {s3}. (Gesamt = {reg2})^
+qstr_AWARD_GRANTED:_{s1}_|AUSZEICHNUNG: {s1} hat die Auszeichnung SCHNELLSTE KLINGE erhalten!
+qstr_AWARD_GRANTED:_{s1}_h|AUSZEICHNUNG: {s1} hat die Auszeichnung VERWEGENSTER KÄMPFER erhalten mit {reg1} besiegten Gegnern!
+qstr_AWARD_GRANTED:_{s1}_ha|AUSZEICHNUNG: {s1} hat sich die Auszeichnung GÖTTLICHER AUFTRITT verdient.
+qstr_AWARD_GRANTED:_{s1}_has|AUSZEICHNUNG: {s1} hat sich die Auszeichnung LEGENDÄRER AUFTRITT verdient.
+qstr_AWARD_GRANTED:_{s1}_has_|AUSZEICHNUNG: {s1} hat sich die Auszeichnung DOMINANTER AUFTRITT verdient.
+qstr_DEBUG__TPE_:_{s1}_gai|DEBUG (TPE): {s1} erhält 1 Punkt. {reg2} Punkte insgesamt. Wert = {reg1}
+qstr_DEBUG__TPE_:_{s1}_gain|DEBUG (TPE): {s1} erhält 2 für das Überleben. {reg2} Punkte insgesamt. Wert = {reg1}
+qstr_{reg1}%_Difficulty|{reg1}% Schwierigkeit
+qstr_DEBUG__TPE_Design_:_I|DEBUG (TPE Design): Item '{s21}' [#{reg21}] lagert im Fach {reg22} des TPE-Erscheinungsbild.
+qstr_DEBUG__TPE_:_Faction_|DEBUG (TPE): Fraktion '{s21}' bestimmt durch '{s22}'.
+qstr_TPE_ERROR!__No_valid|TPE FEHLER!  Für diese Stadt konnte keine gültige Fraktion bestimmt werden.
+qstr_Enlisted_as_a_{s5}_i|Angeworben als ein {s5} im Trupp von {s13} des {s14}.
+qstr_Current_rank:_{s5}|Aktueller Rang: {s5}
+qstr_You_have_left_your_c|Ihr habt Euren Kommandanten verlassen!
+qstr_If_you_do_not_return|Wenn ihr nicht bei Zeiten zu Eurem Kommandanten zurückkehrt, werdet ihr zum Deserteur erklärt.
+qstr_You_have_rejoined_yo|Ihr habt Euch Eurem Kommandanten angeschlossen!
+qstr_You_have_been_captur|Ihr wurdet gefangengenommen! Flieht und schließt Euch Eurem Kommandanten wieder an!
+qstr___too_weak_for_requi|--zu schwach für die erforderliche Nahkampfwaffe
+qstr___too_weak_for_requir|--zu schwach für die erforderliche Rüstung
+qstr___lacking_required_r|--es fehlt Euch an der erforderlichen Fernwaffenfertigkeit oder -stärke
+qstr___horsemanship_needs|--Reitkunst muss verbessert werden
+qstr_{s3}_{s2}|{s3}, {s2}
+qstr_The_equipment_of_a_{|Die Ausrüstung von einem {s1}: {s2}wird Euch zugewiesen.
+qstr_The_equipment_of_a_{s|Die Ausrüstung von einem {s1}: {s2}wird Euch genommen.
+qstr_array[{reg0}]_create|Reihe[{reg0}] gebildet
+qstr_array[{reg0}]_destro|Reihe[{reg0}] zerstört
+qstr_array_p_shift_range_|Reihe p shift range array={reg21}, start index={reg22}, end index={reg23}, shift offset={reg24}, default value={reg25}
+qstr_DEBUG__GPU_:_Label__|DEBUG (GPU): Bezeichnung '{s31}' in Fach {reg32} abgelegt, wert {reg31}.
+qstr___{reg1}_{reg2}__|( {reg1}, {reg2} )
+qstr_ERROR__CCP_:_An_inva|ERROR (CCP): Ein ungültiges Item wurde gefunden und wird nicht behalten.
+qstr_DEBUG__CCP_:_Item__{|DEBUG (CCP): Item '{s31}' erfolgreich in Fach {reg31} abgelegt.
+qstr_DEBUG__CCP_:_There_w|DEBUG (CCP): Es gab keinen gültigen Ort, um das Item zu setzen.
+qstr_ERROR__CCP_:_An_inval|ERROR (CCP): Ein ungültiges Item wurde gefunden und wird nicht geschlöscht.
+qstr_DEBUG__CCP_:_Item__{s|DEBUG (CCP): Item '{s31}' wurde erfolgreich aus {reg31} entfernt.
+qstr_DEBUG__CCP_:_The_pla|DEBUG (CCP): Der Spieler hat kein '{s31}'.
+qstr_+{reg2}|+{reg2}
+qstr_You_came_into_the_wor|Ihr kamt als {reg3?Tochter:Sohn} einer verarmenden Adelsfamilie auf die Welt; Euer einziger Besitz war das Haus, in dem eure Eltern lebten. Doch trotz ihrer Unbillen sparte sich Eure Familie eine gute Erziehung für Euch vom Munde ab und bereitete Euch von frühester Kindheit an auf die Prüfungen des Lebens als Aristokrat und am Hofe vor.
+qstr_You_were_born_the_{re|Ihr wurdet als {reg3?Tochter:Sohn} fahrender Händler geboren, die auf der Suche nach Gewinn ständig auf der Reise waren. Obwohl Eure Eltern wohlhabender als manch andere waren und Euch nach Kräften eine gute Bildung zukommen ließen, fandet Ihr wenig Gelegenheit, unterwegs Freunde zu finden und lebtet meist für die Momente, in denen Ihr jemandem etwas veräußern konntet.
+qstr_As_a_child_your_famil|In Eurer Kindheit überlebte Eure Familie eher schlecht als recht vom mageren Einkommen, das Euer Vater als Wachmann beim örtlichen Fürsten erhielt. Es war kein leichtes Leben, und Ihr wart zu arm, um in den Genuss einer Erziehung zu kommen. Was Ihr hauptsächlich erlerntet, war der Kampf in den Straßen, mit oder ohne Waffe in der Hand.
+qstr_You_were_the_{reg3?da|Ihr seid {reg3?Tochter:Sohn} einer Familie, die in den Wäldern lebte und alle nur erdenklichen Arbeiten ausführte, um am Leben zu bleiben. Man jagte, fällte Holz, stellte Pfeile her, und schreckte selbst vor Wilderei nicht zurück, wenn es wieder einmal nichts zu beißen gab. Der Winter war nie eine gute Zeit für Eure Familie, denn die Kälte raffte Menschen wie Tiere dahin. Doch auch wenn Eure Geschwister nicht so viel Glück hatten, so überlebtet doch zumindest Ihr jeden Sonnenuntergang.
+qstr_You_were_a_child_of_t|Ihr wart ein Kind der Steppe, geboren in einem Nomadenstamm, die in großen Lagern die dürren Prärien bevölkerten. Wie auch die anderen Stammesangehörigen verehrte Eure Familie Pferde, und sie brachten Euch schon das Reiten bei, noch bevor Ihr laufen konntet. 
+qstr_As_the_{reg3?daughter|Als {reg3?Tochter:Sohn} eines Diebs hattet Ihr sehr wenig 'formale' Bildung. Stattdessen setzte man Euch auf die Straße, wo Ihr betteltet, bis Ihr lerntet, Geldbeutel zu stehlen, bis Ihr lerntet, Schlösser zu knacken, und so fort bis ans Ende Eurer Kindheit. Doch all diese langen Jahre haben Euch gerissen gemacht und Euch den Puls der Straßen und dunklen Gassen fühlen gelehrt.
+qstr_A_{reg3?daughter:son|Als {reg3?Tochter:Sohn}, {reg3?die:den} keiner wollte, wurdet ihr als Baby der Kirche überlassen, ein Findelkind aufgezogen von Priestern und Nonnen gemäß ihren eigenen Sitten und Gebräuchen. Ihr wart nur eines von vielen anderen Findelkindern und Waisen, doch gleichwohl habt ihr viel Aufmerksamkeit sowie auch viele Jahre des Studiums in der Kirchenbibliothek und vor dem Altar genossen. Sie lehrten Euch viele Dinge. Allmählich wurde der Glaube ein Teil Eures Lebens, so dass er Euch durchdrang wie das Blut in Euren Adern.
+qstr_As_a_{reg3?girl:boy}_grow|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, sandte man Euch an den Hof eines Adeligen des Landes. Dort erhieltet Ihr Euren ersten Unterricht in Demut im Dienste der Fürsten und Fürstinnen des Hauses. Doch durch ihre Schachpartien, ihren Klatsch, und selbst durch die Gedichte, die von großen Taten und höfischer Liebe sangen, begannt Ihr schnell und viel über die Erwachsenenwelt mit ihren Konflikten und Wettbewerben zu lernen. Auch zogt Ihr Lehren aus den rauen Spielen der anderen Kinder, die sich in Nachahmung der Schwerter der Älteren mit Stöcken schlugen.
+qstr_As_a_{reg3?girl:boy}_growi|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, gingt Ihr bei einem örtlichen Handwerker in die Lehre. Nach Jahren harten Arbeitens und Studierens unter Eurem neuen Meister erhob er Euch in den Rang eines Gesellen und stellte Euch als voll bezahlten Handwerker ein, so lange Ihr zu bleiben wünschtet.
+qstr_As_a_{reg3?girl:boy}_growin|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, gingt Ihr bei einem reichen Kaufmann in die Lehre und erlerntet sein Handwerk über Jahre hinweg, in denen Ihr in Läden verkauftet und Karawanen leitetet. Bald schon wurdet Ihr ein Adept der Kunst, wohlfeil zu erstehen, teuer zu verkaufen, und dabei den Kunden in der Gewissheit zu wiegen, er habe das bessere Geschäft gemacht.
+qstr_As_a_{reg3?girl:boy}_growing|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, wuchst Ihr auf der Straße auf und tatet alles, um zu überleben. Mit Betteln, Stehlen und Handlangereien für Banden verdientet Ihr Euer täglich Brot in einer brutalen Welt, in der der nächste Tag immer ungewiss war, dem Gesetz und denen, die Euch übel wollten, immer einen Schritt voraus.
+qstr_As_a_{reg3?girl:boy}_growing_|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, rittet Ihr auf den großen Steppen auf Eurem eigenen Pferd und tauchtet in den Weg des Grases und der Wüste ein. Auch wenn Ihr manchmal Hunger leiden musstet, wurdet Ihr doch ein geschickter Jäger und Pfadfinder in diesem pfadlosen Land. Das Leben eines Nomaden machte Euren Körper hart und muskulös.
+qstr_{reg3?girl:boy}|{reg3?Mädchen:Junge}
+qstr_As_a_{s12}_growing_o|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, schlosst Ihr Euch eine Gruppe fahrender Gaukler an, die von Stadt zu Stadt zog und Possen vorführte. Es war ein Leben voller harter Arbeit, ihr verkauftet an, erbetteltet von und bestahlt die Kunden, die zusammenkamen, um Eure Possen zu beobachten. Mit der Zeit wurdet ihr ein Darsteller, der fähig war eine ganze Masse zu begeistern.
+qstr_As_a_{s12}_growing_ou|Als ein {s12}, gerade den Kinderschuhen entwachsen, verbrachtet ihr viel Zeit am Hof, um Euch in die engen Bande des Adelskreises einzufügen. Mit den Zeit mischtet ihr mehr und mehr in der Politik und den Intrigen mit, die einem Hochgeborenen {s13} abverlangt werden. Ihr konntet es Euch nicht leisten nicht mit Verrat und Hinterlist vertraut zu sein, auch wenn ihr es gewollt hättet.
+qstr_As_a_{s12}_growing_out|Als ein {s12}, gerade den Kinderschuhen entwachsen, wurdet ihr ausgebildet und unterrichtet, um die Pflichten und die Rechte eines adeligen Landbesitzers auszuüben. Das Verwalten der Steuern und Abgaben war in Eurer Ausbildung genauso wichtig, wie Diplomatie und Selbstverteidigung. Ihr lerntet alles was ihr benötigt, um selbst ein Fürst Eurer eigenen Halle werden zu können.
+qstr_As_a_{s12}_growing_out_|Als ein {s12}, gerade den Kinderschuhen entwachsen, wurdet ihr für die Pflichten eines adeligen {s13} ausgebildet und unterrichtet. Ihr lerntet viel über Hauswirtschaft, aber noch mehr über Diplomatie und Etikette und all die Dinge, die ein zukünftiger Gemahl sich wünschen könnte. Wahrlich wurdet ihr genauso gewitzt wie jeder Lord, aber es wäre wohl unangebracht dies laut zu sagen.
+qstr_a_cleric_acolyte|ein Messdiener
+qstr_As_a_{s12}_growing_out_o|Als ein {s12}, gerade den Kinderschuhen entwachsen, wurdet ihr ein Messdiener in der Kirche, der niedrigsten Rang auf dem Weg zur Priesterschaft. Viele Jahre strenger Ausbildung und harter Arbeit folgten. Ihr wart einer von mehreren Messdiener, die die meiste Gesindearbeit in der Kirche verrichteten und wurdet zusätzlich in heiligeren Aufgaben ausgebildet. In der Nacht als Ihr ewachsen wurdet, wurde es Euch gestattet, Eure erste Messe zu halten. Danach wart ihr nicht länger ein {reg3?Messdiener:Messdienerin}, sondern ein {s13}, {reg3?die:der} bereit war, {reg3?ihr:sein} Gelübde vor Gottes abzulegen .
+qstr_{s1}^^_You_started_to|{s1}^^ Ihr fingt an etwas über die Welt zu lernen sobald ihr sprechen und laufen konntet. Ihr verbrachtet Eue Kindheit als {s2}. {s3}
+qstr_Though_the_distinction_felt|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Als Ihr zum Junker eines Adligen am Hofe ernannt wurdet, übtet Ihr lange Stunden mit allerlei Waffen und lerntet, harte Schläge auszuteilen und auch einzustecken. Man unterwies Euch in Euren Obliegenschaften Eurem Fürsten gegenüber, und in Euren Pflichten gegenüber jenen, die eines Tages Eure Vasallen sein würden. Aber außer den Idealen der Ritterlichkeit lerntet Ihr auch die weniger annehmlichen Seiten kennen -- Geschichten alter Krieger über ruchlose Machtpolitik, von Verrat und Usurpatoren, von Männern, die ihre Ziele mit Ehre als auch mit Arglist verfolgten.
+qstr_Though_the_distinction_felt_|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr ließt Euer altes Leben hinter Euch zurück und bereistet die Straßen als Söldner und Auftragsmörder, Karawanen für Kupfer bewachend und Köpfe für Silber einschlagend. Ihr wurdet ein {s14} der freien Straßen, der genauso oft mit den Banditen wie gegen sie arbeitete. Während ihr von einem Kampf zum nächsten gingt, wuchs Eure Erfahrung in der Schlacht und ihr habt gelernt, was es heißt zu töten.
+qstr_Though_the_distinction_felt_s|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr habt bei einer Händlerkompanie angeworben und reistet weit von zu Hause fort. Das Leben, das ihr fandet, war unkultiviert. Ihr marschiertet im Takt der seltsamen Trommeln und erlerntet ungewöhnliche Arten des Kampfes. Es gab Männer, die Euch lerten jede Waffe zu führen, die ihr wünscht und es gab reichlich Schlachten, um Eure Kampfkünste zu verfeinern. Ihr wart einer der wahrlich wenigen, die jeden Kriegszug überlebten, indem sie marschierten.
+qstr_Though_the_distinction_felt_su|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr seid Mitglied des kleinen, aber exklusiven Kreises der Frauen am Hof geworden, eine Riege sehr damenhafter Frauen, die Gattinnen und Gespielinnen von Adligen oder unverheiratete Jungfern sind. Doch selbst hier findet Ihr Politik am Werk, denn die Damen schmieden Ränke um gesellschaftliches Ansehen und bekämpfen einander aufs Bitterste, um das Auge jedes gerade am Hofe angesagten Junggesellen zu erhaschen. Bald lernt Ihr, derlei Situationen und Vorgänge zu Eurem Vorteil auszuspielen. Zugleich erkanntet Ihr, dass Ihr selbst großen Einfluss in der Welt ausüben könntet, wenn Ihr es nur subtil angeht.
+qstr_Though_the_distinction_felt_sud|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr machtet Euch allein auf den Weg, mit nichts außer dem Instrument auf eurem Rücken und Eurer Stimme bewaffnet. Es war ein armes Dasein, und an vielen Abenden littet Ihr Hunger, weil die Menschen Euer Spiel nicht zu schätzen wussten; doch Ihr schafftet es, Euch allein mit Eurer Musik durchzuschlagen. Mit zunehmenden Jahren lerntet Ihr, das trunkene Volk in den Tavernen wie Euer eigenes Instrument zu beherrschen, und gar meisterhaft beherrschtet Ihr die Kunst, anderen Leuten Dinge abzuschwatzen.
+qstr_Though_the_distinction_felt_sudd|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr wurdet Student an der Universität einer der großen Städte, wo Ihr Theologie, Philosophie und Medizin erlerntet. Doch nicht all Eure Lektionen wurden in den Hörsälen gegeben. Vielleicht habt Ihr Euch Euren Kameraden angeschlossen, als sie die Gassen auf der Suche nach Wein, Weib, und einer zünftigen Keilerei durchstromerten - vielleicht auch nicht. Doch konntet Ihr auf alle Fälle beobachten, wie ein gebrochener Kiefer gerichtet wird oder wie ein erzürnter Bürger überredet werden kann, seine Keule niederzulegen und bare Münze als Abfindung für die Zerstörung seines Ladens anzunehmen.
+qstr_Though_the_distinction_felt_sudde|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr antwortet dem Ruf der Straße, reistet von Dorf zu Dorf, und kauftet und verkauftet, was Ihr nur konntet. Es war kein Leben im Wohlstand, aber Ihr wurdet ein Meister des Feilschens, und selbst die missgünstigsten Alten gaben Euch noch gute Preise. Und Ihr wusstet, bald schon würdet Ihr in der Position sein, Euer eigenes Handelsimperium aufzubauen...
+qstr_Though_the_distinction_felt_sudden|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr machtet das Handwerk des Schmieds zu Eurem Beruf und fertigtet Nützliches als auch Schönes aus einfachem Metall. Mit der Zeit wurdet Ihr zu einem Meister Eurer Zunft, und man begann, für Eure edlen Werke edle Preise zu zahlen. Mit vollem Magen und Holz im Ofen konntet Ihr auf Eure Arbeit und Euren wachsenden Ruf stolz sein.
+qstr_Though_the_distinction_felt_sudden_|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Unzufrieden mit den verzweifelten Massen und ihrer niederen Jagd nach Mammon begabt Ihr Euch in die Wälder Eures Fürsten und begannt, Euch von den dortigen Reichtümern zu nehmen, was Ihr wünschtet - zur Hölle mit dem Gesetz! Ihr jagtet Hirsch, Wildschwein und Gans und verkauftet das wertvolle Fleisch unter dem Tisch. Ihr fälltet Bäume direkt unter der Nase der Forstaufseher und verwandeltet sie in Feuerholz, das manch ein frostiges Heim im Winter warm hielt. Alles natürlich für eine Handvoll Silberstücke.
+qstr_Though_the_distinction_felt_sudden_t|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr packtet Euren wenigen Besitz und gingt hinaus in die Welt, um das Wort Gottes zu verbreiten. Ihr predigtet zu jedem, der zuhören wollte und beindrucktet viele mit der Leidenschaft Eurer Worte. Obwohl ihr ein Armutgelübde für die Zeit Eurer Wanderjahre abgelegt hattet, mangelte es Euch nie an Essen, Trinken oder Obdach. Die Gastfreundschaft der Bauern war immer großzügig für einen {reg3?aufstrebende:aufstrebenden} {s13} Gottes.
+qstr_Though_the_distinction_felt_sudden_to|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden, der sich auf seine rasche Auffassungsgabe und seine noch schnelleren Reflexe verlassen kann, um durch die Tage zu kommen. Unzufrieden mit dem einfachen Leben der Lohnarbeit, fandet ihr Gefallen an den örtlichen Straßen, entschlossen Euch das zu nehmen, was Ihr zum Leben braucht. Ihr widersetztet Euch den gemeinen Gesetzen und habt Euch entschieden nach welchen Regeln auch immer zu leben, solange sie Euch vor dem Richtblock bewahren können.
+qstr_Then_as_a_young_adul|Dann als junger Erwachsener, veränderte sich das Leben, wie es es immer tut. Ihr wurdet ein Arenakämpfer. Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr erhieltet Applaus und Denare in grausamen Wettkämpfen gegen Mensch und Tier. Trunken von der Blutlust der jubelnden Menge, habt ihr gelernt zu reizen und den Kampf auszutragen, bevor ihr schließlich mit einem brutalen Gespür den Sieg zu ergreifen. Ihr bewegt Euch gewandt und auffallende Auftritte kennzeichnen Euch sowohl als Krieger als auch als Künstler.
+qstr_Then_as_a_young_adult|Dann als junger Erwachsener, veränderte sich das Leben, wie es es immer tut. Ihr wurdet ein Bandit. Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und mit dieser Veränderung kam die Erkenntnis, dass die Starken das Recht haben, es sich von den Schwachen zu nehmen. Ihr wurde Mitglied einer Räuberbande und wurdet geschickt in der Kunst des Hinterhalts. Ihr lerntet mit Leichtigkeit jede Waffe zu führen, die als Beute zurückgelassen wurde. Wenn die Zeiten gut waren, zechtet und feiertet Ihr wie ein König. Wenn die Beute mager war, liest ihr Euch vom Land durchfüttern oder führtet kleine schnelle Überfälle auf Dörfer durch. Ihr wart Stolz auf Eure Anpassungsfähigkeit und Eure Gewaltbereitschaft.
+qstr_a_slaver|ein Sklavenjäger
+qstr_Then_as_a_young_adult_|Dann als junger Erwachsener, veränderte sich das Leben, wie es es immer tut. Ihr wurdet ein Sklavenhändler. Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Durch eine seltsame Fügung des Schicksals schlosst ihr Euch eine Sklavenkarawane als Wache an und wurde gut darin, listiges menschliches Vieh auf den langen Reisen durch die Landen Calradiens zu bewachen. Genausooft musstet ihr abgelegene Dörfer überfallen oder neuen Viehbestand jagen und durch diese Erfahrung gewöhntet ihr Euch an die schonungslose Sprache des Knüppels und Stocks. Obgleich Euer Beruf toleriert wird, wird er nicht besonders respektiert und dadurch wurdet ihr auch mit Spott und Hohn vertraut.
+qstr_Only_you_know_exactly_wha|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Doch mit all der heiß flammenden Wut in Eurem Herzen war es keine schwierige Entscheidung. Es verlangt Euch nach Rache. Es verlangt Euch nach Gerechtigkeit. Das Euch Angetane kann nicht ungeschehen gemacht werden, und diese Schulden können nur mit Blut vergolten werden...
+qstr_Only_you_know_exactly_what|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Ihr könnt nur sagen, dass Ihr nicht länger bleiben könnt, nicht mit den schmerzhaften Erinnerungen an die einst so geliebten Menschen. Vielleicht wird Euer neues Leben Euch das Vergessen lehren, oder den Namen ehren, den Ihr nicht länger aussprechen könnt...
+qstr_Only_you_know_exactly_what_|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Ihr seid nicht einmal sicher, wann genau Euer Heim zum Gefängnis wurde, das Vertraute profan, aber Eure Träume von Wanderschaft bestimmen nun Euer Leben. Ob es Euch nun nach einem fernen Ort dürstete oder einfach nur nach der Straße in den Sonnenuntergang und die Freiheit der Ungebundenheit, Ihr konntet es nicht länger ertragen, am selben Ort zu verharren. Ihr gingt einfach fort und schautet nie mehr zurück...
+qstr_Only_you_know_exactly_what_c|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Doch Ihr wisst auch, dass Ihr nie mehr zurückkehren könnt. Es gibt nichts, zu dem Ihr zurückkehren könntet. Was auch immer Euren Zorn entfachte, ist nun fort, und Ihr müsst Euch damit auseinandersetzen, dass Ihr nun in der großen weiten Welt seid. Allein - auf Gedeih oder Verderb...
+qstr_Only_you_know_exactly_what_ca|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Für alle anderen ist es ganz offensichtlich, dass Eure einzige Motivation nun der persönliche Gewinn ist. Ihr wollt reich, mächtig, respektiert und gefürchtet sein. Ihr wollt jemand sein, dem andere ohne Nachdenken gehorchen. Ihr wollt, dass die Menschen Euren Namen kennen und zittern, wann immer er genannt wird. Ihr wollt alles, und Ihr werdet niemanden Euch daran hindern lassen...
+qstr_Only_you_know_exactly_what_cau|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Doch der starke Glauben der in Eurer Seele brennt, wollte Euch an keinen einzelnen Ort Frieden finden lassen. Es gab andere in der Welt, Seelen, die im Lichte Gottes gereinigt werden müssen. Nun predigt Ihr wo auch immer ihr hingeht, strebt danach Heil und Erlösung zu den Massen zu bringen, seien sie gläubig oder heidnisch. Sie werden alle die Herrlichkeit Gottes kennen, wenn Ihr fertig seid...
+qstr_a_sense_of_duty|Pflichtgefühl
+qstr_As_war_begins_to_tea|Als der Krieg begann das Land zu zerteilen und viele in den Krieg zogen, wurde der Wunsch sich ihnen anzuschließen immer drängender. Als ein {s13} von Ehre, war es Eure Pflicht sich den Armeen Eures Landes anzuschließen und Eure Heimat zu beschützen.
+qstr_{s1}^^_But_soon_every|{s1}^^ Aber bald veränderte sich alles und ihr entschiedet Euch allein als ein Abenteuer in die Welt hinauszuziehen. Was hat Euch dazu gebracht, diese Entscheidung zu treffen {s2}. {s3}
+qstr_^{s1}^^_As_a_{s3}_{s|^{s1}^^ Als {reg3?eine:ein} {s3} {s2} {s4}
+qstr_ERROR:_No_valid_fact|Fehler: Keine gültige Fraktion festgelegt.
+qstr_Equipment_will_be_de|Ausrüstung wird bestimmt durch Fraktion {s32} beginnend im Fach {reg31}.
+qstr_DEBUG__CCP_:_The_play|DEBUG (CCP): Dem Spieler wurde eine Schmiede in der Stadt {s31} gegeben.
+qstr_DEBUG__CCP_:_The_playe|DEBUG (CCP): Dem Spieler wurden {reg31} Morgen Land in der Stadt {s31} gegeben.
+qstr_You_got_{reg1}_extra|Ihr erhieltet {reg1} Extraerfahrung aufgrund Eurere Intelligenz.
+qstr_You_got_{reg1}_weapo|Ihr erhieltet {reg1} Waffen{reg2?punkte:punkt}.
+qstr_{reg3?{s1}_s_profici|{reg3?{s1}s Fertigkeit in {s2} hat sich verbessert durch {reg2} auf {reg1}.:{s1}s {s2}fertigkeit liegt nun bei {reg1}.}
+qstr_You_whistle_for_your|Ihr pfeift nach Eurem Pferd.
+qstr_Go_near_the_chest_an|Geht in die Nähe der Truhe und haltet die rechte Maustaste eine Weile gedrückt, dann könnt ihr Geld in die Truhe legen oder welches herausnehmen.
+qstr_Everyone_you_know_wh|Jeder weiß was er zu tun hat. Auf Eure Posten!
+qstr_{reg2?You:Your_mount|{reg2?Ihr:Euer Reittier} hat {reg1} zusätlichen Schaden erlitten!
+qstr_{reg2?You_strike:You|{reg2?Ihr stößt:Euer Pferd greift an} mit {reg1} zusätzlichem Schaden!
+qstr_Your_horse_received_|Euer Pferd erhielt {reg1} Schaden von einem Speerwall!
+qstr_Braced_{s1}_dealt_{r|Gesenkter {s1} verteilt {reg1} Schaden!
+qstr_Bracing_{s1}_for_cha|{s1} für den Sturm senken.
+qstr_Releasing_from_brace|Den Speerwall auflösen.
+qstr_...and_attack_enemy_|...und den feindliche {s1}-Division angreifen!
+qstr_{s2}:_returning_afte|{s2}: kehrt zurück nachdem feindliche {s1}-Division zerstört wurde.
+qstr_End_the_sparring_mat|Den Übungskampf beenden?
+qstr_DEBUG__Weapon_AI_:_{|DEBUG (Waffen-KI): {s2}s nächster Feind ist {s1} in einer Entfernung von {reg0}.
+qstr_DEBUG__TPE_:_{s2}_is|DEBUG (TPE): {s2} führt einen Speer zu Fuß und legt seinen Schild ab.
+qstr_AWARD_GRANTED:_{s1}_has_e|AUSZEICHNUNG: {s1} hat sich die Auszeichnung BEDÄCHTIGES VORGEHEN verdient!
+qstr_You_have_earned_{reg|Ihr habt {reg4} Denare für Eure findige Wette in dieser Runde erhalten.
+qstr_{s31}{reg32}|{s31}{reg32}
+qstr_Match_Time___{reg31}|Kampfdauer - {reg31}:{s32}
+qstr_Stalemate_Timer___0:|Patt-Timer - 0:{s32}
+qstr_{s31}|{s31}
+qstr_DEBUG__TPE_:_Stalema|DEBUG (TPE): Patt-Timer zurückgesetzt. Angriff regristriert zum Zeitpunkt {reg1} Sekunden.
+qstr_red|rot
+qstr_blue|blau
+qstr_green|grün
+qstr_yellow|gelb
+qstr_The_Tournament_Master|Der Turniermeister gibt bekannt, 'Punkt an {s1} Team vergeben für die Beseitigung eines Gegners.'
+qstr_Your_ally_{s1}_deliv|Euer Verbündeter, {s1}, teilt {reg1} Schaden an {s2} aus. ({s31})
+qstr_You_have_fallen_duri|Ihr seid in dieser Runde gefallen, aber ihr könnt in der nächsten Runde weitermachen, wenn nur ein Team übrig bleibt.
+qstr_DEBUG__TPE_:_Horse__|DEBUG (TPE): Pferd '{s32}' #{reg31} ist reiterlos und wird entfernt.
+qstr_DEBUG__TPE_AI_:_{s2}|DEBUG (TPE-KI): {s2} erhält {reg2} Schaden verringert durch {reg1}.
+qstr_DEBUG__TPE_AI_:_{s2}_|DEBUG (TPE-KI): {s2} teilt {reg2} Schaden aus erhöht durch {reg1}.
+qstr_Do_you_wish_to_exit?|Möchtet ihr den Kampf verlassen? Dies führt dazu zu, dass alle überlebenden Wettkämpfer 3 Punkte erhalten.
+qstr_Tester|Tester
+qstr_Character_Renown:_{re|Ansehen: {reg5}^Ehrwertung: {reg6}^Moral: {reg8}^Truppgröße: {reg7}^^Nächster Zahltag: {s1}
+qstr_You_were_a_child_of_th|Ihr wart ein Kind der Steppe, geboren in einem Nomadenstamm, die in großen Lagern die dürren Prärien bevölkerten. Wie auch die anderen Stammesangehörigen verehrte Eure Familie Pferde, und sie brachten Euch schon das Reiten bei, noch bevor Ihr laufen konntet. 
+qstr_As_the_{reg3?daughter:|Als {reg3?Tochter:Sohn} eines Diebs hattet Ihr sehr wenig 'formale' Bildung. Stattdessen setzte man Euch auf die Straße, wo Ihr betteltet, bis Ihr lerntet, Geldbeutel zu stehlen, bis Ihr lerntet, Schlösser zu knacken, und so fort bis ans Ende Eurer Kindheit. Doch all diese langen Jahre haben Euch gerissen gemacht und Euch den Puls der Straßen und dunklen Gassen fühlen gelehrt.
+qstr_As_a_{reg3?girl:boy}_growing_o|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, sandte man Euch an den Hof eines Adeligen des Landes. Dort erhieltet Ihr Euren ersten Unterricht in Demut im Dienste der Fürsten und Fürstinnen des Hauses. Doch durch ihre Schachpartien, ihren Klatsch, und selbst durch die Gedichte, die von großen Taten und höfischer Liebe sangen, begannt Ihr schnell und viel über die Erwachsenenwelt mit ihren Konflikten und Wettbewerben zu lernen. Auch zogt Ihr Lehren aus den rauen Spielen der anderen Kinder, die sich in Nachahmung der Schwerter der Älteren mit Stöcken schlugen.
+qstr_As_a_{reg3?girl:boy}_growing_ou|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, gingt Ihr bei einem reichen Kaufmann in die Lehre und erlerntet sein Handwerk über Jahre hinweg, in denen Ihr in Läden verkauftet und Karawanen leitetet. Bald schon wurdet Ihr ein Adept der Kunst, wohlfeil zu erstehen, teuer zu verkaufen, und dabei den Kunden in der Gewissheit zu wiegen, er habe das bessere Geschäft gemacht.
+qstr_As_a_{reg3?girl:boy}_growing_out|Als {reg3?Mädchen:Junge}, gerade den Kinderschuhen entwachsen, rittet Ihr auf den großen Steppen auf Eurem eigenen Pferd und tauchtet in den Weg des Grases und der Wüste ein. Auch wenn Ihr manchmal Hunger leiden musstet, wurdet Ihr doch ein geschickter Jäger und Pfadfinder in diesem pfadlosen Land. Das Leben eines Nomaden machte Euren Körper hart und muskulös.
+qstr_Though_the_distinction_felt_sudden_to_|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Als Ihr zum Junker eines Adligen am Hofe ernannt wurdet, übtet Ihr lange Stunden mit allerlei Waffen und lerntet, harte Schläge auszuteilen und auch einzustecken. Man unterwies Euch in Euren Obliegenschaften Eurem Fürsten gegenüber, und in Euren Pflichten gegenüber jenen, die eines Tages Eure Vasallen sein würden. Aber außer den Idealen der Ritterlichkeit lerntet Ihr auch die weniger annehmlichen Seiten kennen -- Geschichten alter Krieger über ruchlose Machtpolitik, von Verrat und Usurpatoren, von Männern, die ihre Ziele mit Ehre als auch mit Arglist verfolgten.
+qstr_Though_the_distinction_felt_sudden_to_y|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr seid Mitglied des kleinen, aber exklusiven Kreises der Frauen am Hof geworden, eine Riege sehr damenhafter Frauen, die Gattinnen und Gespielinnen von Adligen oder unverheiratete Jungfern sind. Doch selbst hier findet Ihr Politik am Werk, denn die Damen schmieden Ränke um gesellschaftliches Ansehen und bekämpfen einander aufs Bitterste, um das Auge jedes gerade am Hofe angesagten Junggesellen zu erhaschen. Bald lernt Ihr, derlei Situationen und Vorgänge zu Eurem Vorteil auszuspielen. Zugleich erkanntet Ihr, dass Ihr selbst großen Einfluss in der Welt ausüben könntet, wenn Ihr es nur subtil angeht.
+qstr_Though_the_distinction_felt_sudden_to_yo|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr machtet Euch allein auf den Weg, mit nichts außer dem Instrument auf eurem Rücken und Eurer Stimme bewaffnet. Es war ein armes Dasein, und an vielen Abenden littet Ihr Hunger, weil die Menschen Euer Spiel nicht zu schätzen wussten; doch Ihr schafftet es, Euch allein mit Eurer Musik durchzuschlagen. Mit zunehmenden Jahren lerntet Ihr, das trunkene Volk in den Tavernen wie Euer eigenes Instrument zu beherrschen, und gar meisterhaft beherrschtet Ihr die Kunst, anderen Leuten Dinge abzuschwatzen.
+qstr_Though_the_distinction_felt_sudden_to_you|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr wurdet Student an der Universität einer der großen Städte, wo Ihr Theologie, Philosophie und Medizin erlerntet. Doch nicht all Eure Lektionen wurden in den Hörsälen gegeben. Vielleicht habt Ihr Euch Euren Kameraden angeschlossen, als sie die Gassen auf der Suche nach Wein, Weib, und einer zünftigen Keilerei durchstromerten - vielleicht auch nicht. Doch konntet Ihr auf alle Fälle beobachten, wie ein gebrochener Kiefer gerichtet wird oder wie ein erzürnter Bürger überredet werden kann, seine Keule niederzulegen und bare Münze als Abfindung für die Zerstörung seines Ladens anzunehmen.
+qstr_Though_the_distinction_felt_sudden_to_you_|Ihr antwortet dem Ruf der Straße, reistet von Dorf zu Dorf, und kauftet und verkauftet, was Ihr nur konntet. Es war kein Leben im Wohlstand, aber Ihr wurdet ein Meister des Feilschens, und selbst die missgünstigsten Alten gaben Euch noch gute Preise. Und Ihr wusstet, bald schon würdet Ihr in der Position sein, Euer eigenes Handelsimperium aufzubauen...
+qstr_Though_the_distinction_felt_sudden_to_you_s|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Ihr machtet das Handwerk des Schmieds zu Eurem Beruf und fertigtet Nützliches als auch Schönes aus einfachem Metall. Mit der Zeit wurdet Ihr zu einem Meister Eurer Zunft, und man begann, für Eure edlen Werke edle Preise zu zahlen. Mit vollem Magen und Holz im Ofen konntet Ihr auf Eure Arbeit und Euren wachsenden Ruf stolz sein.
+qstr_Though_the_distinction_felt_sudden_to_you_so|Obgleich es Euch abrupt erschien, wart ihr irgendwann auf Eurem Weg {reg3?zur Frau:zum Mann} geworden und die ganze Welt um Euch herum schien sich zu verändern. Unzufrieden mit den verzweifelten Massen und ihrer niederen Jagd nach Mammon begabt Ihr Euch in die Wälder Eures Fürsten und begannt, Euch von den dortigen Reichtümern zu nehmen, was Ihr wünschtet - zur Hölle mit dem Gesetz! Ihr jagtet Hirsch, Wildschwein und Gans und verkauftet das wertvolle Fleisch unter dem Tisch. Ihr fälltet Bäume direkt unter der Nase der Forstaufseher und verwandeltet sie in Feuerholz, das manch ein frostiges Heim im Winter warm hielt. Alles natürlich für eine Handvoll Silberstücke.
+qstr_Only_you_know_exactly_what_caus|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Doch mit all der heiß flammenden Wut in Eurem Herzen war es keine schwierige Entscheidung. Es verlangt Euch nach Rache. Es verlangt Euch nach Gerechtigkeit. Das Euch Angetane kann nicht ungeschehen gemacht werden, und diese Schulden können nur mit Blut vergolten werden...
+qstr_Only_you_know_exactly_what_cause|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Ihr könnt nur sagen, dass Ihr nicht länger bleiben könnt, nicht mit den schmerzhaften Erinnerungen an die einst so geliebten Menschen. Vielleicht wird Euer neues Leben Euch das Vergessen lehren, oder den Namen ehren, den Ihr nicht länger aussprechen könnt...
+qstr_Only_you_know_exactly_what_caused|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Ihr seid nicht einmal sicher, wann genau Euer Heim zum Gefängnis wurde, das Vertraute profan, aber Eure Träume von Wanderschaft bestimmen nun Euer Leben. Ob es Euch nun nach einem fernen Ort dürstete oder einfach nur nach der Straße in den Sonnenuntergang und die Freiheit der Ungebundenheit, Ihr konntet es nicht länger ertragen, am selben Ort zu verharren. Ihr gingt einfach fort und schautet nie mehr zurück...
+qstr_Only_you_know_exactly_what_caused_|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Doch Ihr wisst auch, dass Ihr nie mehr zurückkehren könnt. Es gibt nichts, zu dem Ihr zurückkehren könntet. Was auch immer Euren Zorn entfachte, ist nun fort, und Ihr müsst Euch damit auseinandersetzen, dass Ihr nun in der großen weiten Welt seid. Allein - auf Gedeih oder Verderb...
+qstr_Only_you_know_exactly_what_caused_y|Nur Ihr wisst genau, was Euch dazu brachtet, Euer altes Leben aufzugeben und ein Abenteurer zu werden. Für alle anderen ist es ganz offensichtlich, dass Eure einzige Motivation nun der persönliche Gewinn ist. Ihr wollt reich, mächtig, respektiert und gefürchtet sein. Ihr wollt jemand sein, dem andere ohne Nachdenken gehorchen. Ihr wollt, dass die Menschen Euren Namen kennen und zittern, wann immer er genannt wird. Ihr wollt alles, und Ihr werdet niemanden Euch daran hindern lassen...
+qstr_You_can_recruit_your|Ihr könnt jetzt Gefangene für Euren Truppe anwerben.
+qstr_You_need_to_wait_{re|Ihr müsst {reg1} {reg2?Stunden:Stunde} warten, um Gefangene zu rekrutieren.
+qstr_Return_to_your_forti|Kehrt zu Euren Befestigungen zurück.
+qstr_Spend_{reg5}_hours_e|Befestigt das Lager in {reg5} Stunden.
+qstr__You_have_returned_t| Ihr seit zu einer befestigten Position zurückgekehrt.
+qstr__You_must_have_tools| Ihr benötigt Werkzeuge im Inventar, um Euer Lager zu befestigen.
+qstr_Your_renown_has_incr|Euer Ansehen hat sich um 100 erhöht. 
+qstr_You_honor_has_increa|Eure Ehre hat sich um 1 erhöht und beträgt nun {reg7}.
+qstr_You_have_succeed_to_|Ihr habt {reg1} Male erfolgreich Gefangene rekrutiert.
+qstr_^^Current_Commander:|^^Derzeitiger Kommandant: {s7}
+qstr_{s4}^^The_troops_you|{s4}^^Die Truppen, die ihr ausgewählt habt, sind bereit sich Euch in der Schlacht anzuschließen.
+qstr_{s4}^^Your_captains_|{s4}^^Euer Hauptmann erledigt die Truppenzuweisungen.
+qstr_{s4}^^Your_orders_ha|{s4}^^Euer Befehl wurde an Eure Hauptmänner gesendet.
+qstr_{s4}^^There_is_no_ta|{s4}^^Es ist keine taktische Planung vorhanden.
+qstr_All_your_troops_are_|Alle Eure Truppen nehmen bereits an der Schlacht teil.
+qstr_{s1}_of_the_{s3}_man|{s1} von den {s3} schaffte es zu fliehen.
+qstr_Ally|Allierter
+qstr_Friend|Freund
+qstr_Enemy|Feind
+qstr_Neutral|Neutral
+qstr_You_and_your_men_per|Ihr und Eure Männer haben {reg1} Dörfler überzeugt, sich Euch anzuschließen.
+qstr_When_the_villagers_s|Als die Dörfler Euch und Eure Männer sich näher sahen, rannten sie so schnell sie konnten weg. Schnell genug, um Euch zu entkommen.
+qstr_You_have_no_room_lef|Ihr habt keinen Platz übrig in Eurem Trupp.
+qstr_{reg5}_{s3}_volunteer|{reg5} {s3} Freiwillige, um Euch zu folgen.
+qstr_You_should_leave_15_|Ihr solltet 12 Männer zurücklassen, um Euer Schiff zu bewachen, sonst könnte es gestohlen werden.
+qstr_There_is_no_port_in_|Es gibt keinen Hafen im umgebenden Gebiet.
+qstr_You_need_at_least_a_|Ihr benötigt wenigstens eine 30 Mann starke Besatzung, um das Schiff in eine Stadt zu senden
+qstr_Your_crew_exceeds_th|Eure Mannschaft überschreitet die Grenzen.
+qstr_{s1}_and_{s0}|{s1} und{s0}
+qstr_{s1}_{s0}|{s1}, {s0}
+qstr_^^{s50}|^^{s50}
+qstr_You_now_own_a_ship_a|Ihr besitzt nun ein Schiff und könnt aus dieser Stadt ausschiffen.
+qstr_There_is_no_room_for|Es gibt keinen Platz für weitere Schiffe in diesem Hafen.
+qstr_You_don_t_have_enoug|Ihr habt nicht genügend Geld, um ein Schiff zu kaufen.
+qstr_You_don_t_own_a_ship|Ihr habt kein Schiff oder Eure Mannschaft überschreitet die Grenzen.
+qstr_{s3}^You_have_{reg1}|{s3}^Ihr habt {reg1} Schiffe in {s2}.
+qstr_Choose_{s1}|Wählt {s1}
+qstr_Your_crew_is_either_|Eure Mannschaft ist entweder zu groß oder zu klein.
+qstr_^You_are_currently_r|^Ihr seid derzeit auf Platz {reg21} von {reg22} Teilnehmern.
+qstr_^{reg1}%_Difficulty|^{reg1}% Schwierigkeit
+qstr_denars|Denare
+qstr_denar|Denar
+qstr_{reg32}_{s27}_that_y|{reg32} {s27} dass ihr in dieser Runde {reg31} {s28} erhalten werdet.
+qstr_You_have_not_placed_|Ihr habt in dieser Runde keine Wette gesetzt.
+qstr_DEBUG__TPE_:_tpe_ran|DEBUG (TPE): TPE Rangreihe, Fach #{reg1} = {s1}
+qstr_DEBUG__TPE_:_{s1}_pl|DEBUG (TPE): {s1} in Fach #{reg1} für das Turnier gelegt. TPE 1.3
+qstr_DEBUG__TPE_:_{s1}_pla|DEBUG (TPE): {s1} in Fach #{reg1} für das Turnier gelegt. TPE 2.0
+qstr_DEBUG__TPE_:_Discove|DEBUG (TPE): Ungültige Truppe entdeckt. Ersetzt durch {s1} in Fach {reg0}.
+qstr_DEBUG__TPE_:_Entry_#|DEBUG (TPE): Eintrag #{reg2} / Team #{reg1} = {s1}
+qstr_Quest_ended_due_to_t|Quest beendet, da die Turnierquests deaktiviert wurden.
+qstr_You_have_deserted_an|Ihr seid desertiert und werdet nun gesucht!
+qstr_You_have_a_bad_feeli|Ihr habt ein Schlechtes Gefühl bei Eurem Schiff {s1}.
+qstr_You_caught_some_fish|Ihr habt einige Fische gefangen.
+qstr_Due_to_insufficient_|Da ihr nicht genügend Platz habt, müsst ihr den Fisch zurück ins Meer werfen
+qstr_All_you_caught_were_|Alles, was ihr gefangen habt, waren ein paar Seegräser.
+qstr_You_missed_the_deadl|Ihr habt die Frist versäumt, um Eure Schulden in {s1} zurückzuzahlen. Der Zinssatz steigt nun auf 50%.
+qstr_Your_debt_in_{s1}_is|Eure Schuld in {s1} ist nun so hoch, dass der König selbst davon Notiz genommen hat. Er hat Eure Schuld eingefroren, aber ist unzufrieden mit der Situation.
+qstr_Your_soldiers_have_n|Eure Soldaten haben nichts zu essen!
+qstr_Current_force_morale_|Die derzeitige Truppenmoral beträgt {reg1}.
+qstr_{s1}_of_the_{s3}_has|{s1} von den {s3} wurde aus der Gefangenschaft entlassen.
+qstr__Your_prisoner_manag| Eure Gefangenenhandhabung hat sich um 1 erhöht.
+qstr__Your_charisma_has_i| Euer Charisma hat sich um 1 erhöht.
+qstr__Your_looting_skill_| Euer Plünderfähigkeit hat sich um 1 erhöht.
+qstr__{s1}_s_tactics_skil| {s1}s Taktikfähigkeit hat sich um 1 erhöht.
+qstr__{s1}_s_persuasion_s| {s1}s Überzeugungskraft hat sich um 1 erhöht.
+qstr__{s1}_s_leadership_s| {s1}s Führungskraft hat sich um 1 erhöht.
+qstr__{s1}_s_prisoner_man| {s1}s Gefangenenhandhabung hat sich um 1 erhöht.
+qstr__{s1}_s_charisma_has| {s1}s Charisma hat sich um 1 erhöht.
+qstr__{s1}_s_looting_skil| {s1}s Plünderfähigkeit hat sich um 1 erhöht.
+qstr__{s1}_s_intelligence| {s1}s Intelligenz hat sich um 1 erhöht.
+qstr__{s1}_s_trade_skill_| {s1}s Handelsfähigkeit hat sich um 1 erhöht.
+qstr__{s1}_s_weapon_maste| {s1}s Waffenmeisterung hat sich um 1 erhöht.
+qstr__{s1}_s_engineer_ski| {s1}s Baumeisterfähigkeit hat sich um 1 erhöht.
+qstr_{s1}_have_finished_r|{s1} hat {s2} zu Ende gelesen.{s3}
+qstr_{reg1}_{s1}|{reg1} {s1}
+qstr_{reg1}_{s1}_and_{s0}|{reg1} {s1} und {s0}
+qstr_{reg1}_{s1}_{s0}|{reg1} {s1}, {s0}
+qstr_{s0}_has_escaped.|{s0} ist geflohen.
+qstr_{s0}_hava_escaped.|{s0} sind geflohen.
+qstr_Number_of_prisoners_|Die Anzahl der Gefangenen übersteigt die Grenze der Gefangenenhandhabung. {s0}
+qstr_{s1}_has_been_elimin|{s1} wurde von einer anderen Truppe ausgeschaltet.
+qstr__Camp_defenses_have_| Die Lagerbefestigung ist fertiggestellt.
+qstr_You_have_broken_off_|Ihr habt den Überfall auf {s1} abgebrochen.
+qstr_You_have_broken_off_y|Ihr habt die Belagerung von {s1} abgebrochen.
+qstr_You_cannot_maintain_|Ihr könnt die Belagerung von {s1} aus dieser Entfernung nicht aufrecht erhaltene. Ihr riskiert, dass Eure Linien brechen.
+qstr_Floris_Bugfixed^Mod_|Floris Bugfixed^Mod-Optionen- und Tastenbelegungs-Rückstellung.
+qstr__Your_siege_camp_was| Euer Belagerungslager wurde zerstört, während ihr fort wart!
+qstr_DEBUG__Quest_Pack_1_|DEBUG (Quest-Pack 1): {s31} hält noch für {reg31} Tage ein Turnier ab.
+qstr_{s21}_is_insulted_by|{s21} ist verletzt durch Eurer Absage seiner Einladung.
+qstr_The_tournament_in_{s|Das Turnier in {s31} hat geendet.
+qstr_Quest_ended_due_to_{|Quest beendet, da {s31} zum Feind wurde.
+qstr_A_Messenger_Arrives|Ein Bote kommt an
+qstr_Rumor_of_the_Road|Gerüchte auf der Straße
+qstr_List_of_Active_Tourn|Liste laufender Turniere
+qstr_{s31}_has_a_tourname|{s31} hält noch für {reg31} Tage ein Turnier ab.
+qstr_array_GC|Liste GC
+qstr_array_GC:_owner_acti|Liste GC: owner active, an array or is 0
+qstr_array_GC:_removing_{|Liste GC: removing {reg21}
+qstr_Reinforcements_from_|Verstärkungen von {s14}
+qstr_The_released_prisone|Die freigelassenen Gefangenen waren nicht vertrauenswürdig und sie bereiten sich darauf vor, Euch anzugreifen!
+qstr_Warning!|Warnung!
+qstr_The_released_prisoner|Die freigelassenen Gefangenen zerstreuten sich sobald die Schlacht zu Ende war, Ihr werdet sie nicht wiedersehen.
+qstr_The_released_prisoners|Die freigelassenen Gefangenen sind loyal geblieben und haben sich Eurem Trupp angeschlossen.
+qstr_You_have_5_days_rema|Ihr seid noch 5 Tage aus dem Trupp von {s13} freigestellt bevor ihr zum Deserteur erklärt werdet.
+qstr_You_have_{reg0}_days_|Ihr habt {reg0} Tage übrig bis ihr zum Deserteur erklärt werdet!
+qstr_You_must_check_in_wi|Ihr müsst Euch sofort bei Eurem Kommandanten {s13} melden oder ihr werdet zum Deserteur erklärt!
+qstr_{reg1?She:He}_can_t_|{reg1?Sie:Er} kann es nicht lesen.
+qstr_{reg1?She:He}_have_a|{reg1?Sie:Er} hat es bereits gelesen.
+qstr_{reg1?She:He}_is_rea|{reg1?Sie:Er} liest es gerade.
+qstr_{reg1?She:He}_can_re|{reg1?Sie:Er} kann es lesen.
+qstr_Your_sovereignty_has|Euer Reich hat keine bestimmte Kultur
+qstr_Your_sovereignty_cul|Die Kultur Eures Reiches ist: {s11}
+qstr_Sovereignty_culture:|Reichskultur: Keine
+qstr_Sovereignty_culture:_|Reichskultur: {s11}
+qstr_Our_sovereignty_curr|Euer Reich verfügt derzeit über {reg2} Soldaten
+qstr_You_have_left_the_se|Ihr habt den Dienst von {s21} verlassen.
+qstr_{s6}_has_joined_your_|{s6} hat sich Eurem Trupp angeschlossen.
+qstr_Your_current_action_|Euer derzeitiges Handeln ist unehrenhaft.
+qstr_You_don_t_have_enough|Ihr habt nicht genügend Geld.
+qstr_You_don_t_have_enough_|Ihr habt nicht genügend Platz.
+qstr_Good_luck._You_get_a|Glück. Ihr bekamt ein {s4}{s3}.
+qstr_Bad_luck._You_get_a_|Pech. Ihr bekamt ein {s4}{s3}.
+qstr_You_get_a_{s3}.|Ihr bekamt ein {s3}.
+qstr_I_must_admit_I_can_t|Ich muss zugeben, dass ich es mir im Moment nicht leisten kann, Euch zu bezahlen.
+qstr_Are_you_mad?_That_s_|Seid Ihr verrückt? Das wird nicht passieren!
+qstr_The_merchant_{s9}_of|Der Händler {s9} von {s4} hat Euch gebeten, einige räuberische Banditen in der Nähe der Stadt zu erledigen.
+qstr_Do_you_have_a_need_f|Benötigt ihr Händler, {mein Herr/meine Dame}? {reg3?Ich und {reg4?{reg3} meiner Kameraden:einer meiner Kameraden} sind:ich bin} auf der Suche nach einem Dienstherrn. {reg3?Wir schließen uns:Ich schließe mich} Euch für {reg5} Denare an.
+qstr_Do_you_have_a_need_fo|Benötigt ihr Mönche, {mein Herr/meine Dame}? {reg3?Ich und {reg4?{reg3} meiner Kameraden:einer meiner Kameraden} sind:ich bin} auf der Suche nach einem Dienstherrn. {reg3?Wir schließen uns:Ich schließe mich} Euch für {reg5} Denare an.
+qstr_Do_you_have_a_need_for|Benötigt ihr Truppen, {mein Herr/meine Dame}? {reg3?Ich und {reg4?{reg3} meiner Kameraden:einer meiner Kameraden} sind:ich bin} auf der Suche nach einem Dienstherrn. {reg3?Wir schließen uns:Ich schließe mich} Euch für {reg5} Denare an.
+qstr_You_chose_well_{sir/|Ihr habt Euch richtig entschieden, {mein Herr/meine Dame}. Meine Jungs wissen wie sie ihr Wort halten und ihren Lohn verdienen.
+qstr_Well_done_{sir/madam|Gut gemacht, {mein Herr/meine Dame}. Behaltet Geld und Wein, die uns entgegenkommen und es gibt keinen Geschäft in Calradien, das ihr nicht abschließen könnt.
+qstr_We_are_at_your_servic|Wir stehen Euch zu Diensten, {mein Herr/meine Dame}. Zeigt uns den Weg zum Markt und wir werden den Rest erledigen.
+qstr_You_wont_find_better|Ihr werdet keine besseren Händler in ganz Calradien finden.
+qstr_You_won_t_regret_thi|Ihr werdet es nicht bereuen.

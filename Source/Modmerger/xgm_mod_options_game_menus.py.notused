@@ -1,0 +1,21 @@
+from header_operations import start_presentation
+from util_common import *
+from util_wrappers import *
+def modmerge_game_menus(orig_game_menus, check_duplicates = False):
+    # splice this into camp menu to call the mod options presentation
+	find_i = list_find_first_match_i( orig_game_menus, "camp" )
+	menuoptions = GameMenuWrapper(orig_game_menus[find_i]).GetMenuOptions()
+	find_i = list_find_first_match_i(menuoptions, "camp_action")		
+	OpBlockWrapper(menuoptions).InsertAfter(find_i, [
+        ("camp_mod_opition",[],"Mod Options.", [(start_presentation, "prsnt_mod_option")]),])
+         
+# Used by modmerger framework version >= 200 to merge stuff
+def modmerge(var_set):
+    try:
+        var_name_1 = "game_menus"
+        orig_game_menus = var_set[var_name_1]
+        modmerge_game_menus(orig_game_menus)
+    except KeyError:
+        errstring = "Variable set does not contain expected variable: \"%s\"." % var_name_1
+        raise ValueError(errstring)
+    

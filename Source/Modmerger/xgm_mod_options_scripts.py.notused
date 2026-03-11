@@ -1,0 +1,176 @@
+from header_common import *
+from header_presentations import *
+from header_mission_templates import *
+from ID_meshes import *
+from header_operations import *
+from header_triggers import *
+from module_constants import *
+import string
+
+## xgm stuff
+from xgm_mod_options_header import *
+from xgm_mod_options import *
+
+
+####################################################################################################################
+#  Each presentation record contains the following fields:
+#  1) Presentation id: used for referencing presentations in other files. The prefix prsnt_ is automatically added before each presentation id.
+#  2) Presentation flags. See header_presentations.py for a list of available flags
+#  3) Presentation background mesh: See module_meshes.py for a list of available background meshes
+#  4) Triggers: Simple triggers that are associated with the presentation
+####################################################################################################################
+
+scripts = [
+ ("mod_options_write_to_file", [
+		## to be generated
+	]),	
+ ("mod_options_get_from_file", [
+		## to be generated
+	]),	
+	
+ ("key_config_write_to_file", file_write_key_config()),
+ ("key_config_get_from_file", file_read_key_config()), 
+]
+
+# Global Variables -> File  
+def file_write_key_config():
+   global_key = [
+   		(dict_create, dict),
+		(dict_load_file, dict, "@%s" % mod_name + "_mod_options"),   
+    ]
+   for i in xrange(len(keys_list)):       
+      global_key.append((dict_set_int, dict, "str_key_no"+str(i+1), keys_list[i][0]))
+   global_key.append([
+	    (dict_save, dict, "@%s" % mod_name + "_mod_options"),
+		(dict_free, dict),
+	])
+   return global_key[:]   
+   
+# File -> Global Variables   
+def file_read_key_config():
+   global_key = [
+   	    (try_begin),
+			(dict_create, dict),
+			(dict_load_file, dict, "@%s" % mod_name + "_mod_options"),   
+			(neg|dict_is_empty, dict),
+    ]
+   for i in xrange(len(keys_list)):
+      global_key.append((dict_get_int, keys_list[i][0], dict, "str_key_no"+str(i+1), 0xff))  
+   global_key.append((try_end))	  
+   return global_key[:]      
+#-- Dunde's Key Config END
+
+from util_wrappers import *
+from util_presentations import *
+
+def generate_write_script(_mod_options = mod_options):
+	opblock = OpBlockWrapper([])
+	
+	opblock.Append([
+		(dict_create, dict), #Creates an empty dictionary object and stores it into <destination>
+		(dict_load_file, dict, "@%s" % mod_name + "_mod_options"), 
+	 ])
+	
+	for x in mod_options:
+		aModOption = ModOptionWrapper(x)
+		if aModOption.GetType() in [xgm_ov_checkbox, xgm_ov_numberbox, xgm_ov_combolabel, xgm_ov_combobutton, xgm_ov_slider] and not aModOption.GetId()=="sync":          
+			opblock.Append(aModOption.GetInitializeBlock()) # splice in initialize op block
+			
+			opblock.Append([                       
+				(dict_set_int, dict, "@%s" % aModOption.GetId(), reg1), #Adds (or changes) <value> as the numeric value paired to <key>
+			])                       
+
+	opblock.Append([
+	    (dict_save, dict, "@%s" % mod_name + "_mod_options"),
+		(dict_free, dict),
+	 ])
+	return opblock.Unwrap()
+	
+##############################    
+def generate_read_script(_mod_options = mod_options):
+	opblock = OpBlockWrapper([])
+	
+	opblock.Append([
+	    (try_begin),
+			(dict_create, dict),
+			(dict_load_file, dict, "@%s" % mod_name + "_mod_options"),
+			(neg|dict_is_empty, dict),
+	])
+	
+	for x in mod_options:
+		aModOption = ModOptionWrapper(x)
+		if aModOption.GetType() in [xgm_ov_checkbox, xgm_ov_numberbox, xgm_ov_combolabel, xgm_ov_combobutton, xgm_ov_slider] and not aModOption.GetId()=="sync":          
+			opblock.Append([                       
+				(try_begin),
+					(dict_get_int, reg1, dict, "@%s" % aModOption.GetId(), -99),  #Stores the numeric value paired to <key> into <destination>. If the key is not found and [<default>] is set, [<default>] will be stored instead. If [<default>] is not set, 0 will be stored
+					(neq, reg1, -99),
+			]) 
+			opblock.Append(aModOption.GetUpdateBlock()) # splice in update op block
+			
+			opblock.Append([                       
+				(try_end),
+			])  
+			
+	opblock.Append([                       
+			(dict_free, dict),
+		(try_end),
+	])    
+	
+	return opblock.Unwrap()#+opblock2.Unwrap()
+	
+
+##############################
+
+from util_scripts import *
+
+def generate_scripts():
+	try:
+		find_i = list_find_first_match_i( scripts, "mod_options_write_to_file" )
+		codeblock = OpBlockWrapper(scripts[find_i][1])
+		codeblock.Append(
+			generate_write_script()
+		)		
+
+		find_i = list_find_first_match_i( scripts, "mod_options_get_from_file" )
+		codeblock = OpBlockWrapper(scripts[find_i][1])
+		codeblock.Append(
+			generate_read_script()
+		)		
+
+
+
+	except:
+		import sys
+		print "Injecton failed:", sys.exc_info()[1]
+		raise
+
+##############################    
+
+generate_scripts() # call to generate stuff
+	
+def modmerge_scripts(orig_scripts):
+	
+	# add remaining presentations
+	from util_common import add_objects
+	num_appended, num_replaced, num_ignored = add_objects(orig_scripts, scripts)
+	#print num_appended, num_replaced, num_ignored
+
+
+# Used by modmerger framework version >= 200 to merge stuff
+# This function will be looked for and called by modmerger if this mod is active
+# Do not rename the function, though you can insert your own merging calls where indicated
+def modmerge(var_set):
+	try:
+		var_name_1 = "scripts"
+		orig_scripts = var_set[var_name_1]	
+		
+		# START do your own stuff to do merging
+		
+		modmerge_scripts(orig_scripts)
+
+		# END do your own stuff
+		
+	except KeyError:
+		errstring = "Variable set does not contain expected variable: \"%s\"." % var_name_1
+		raise ValueError(errstring)
+	

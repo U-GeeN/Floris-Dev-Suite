@@ -1,0 +1,13 @@
+Dans l'écran suivant, vous aurez à choisir la version à installer. Ce sont les choix:
+
+Floris de base Mod Pack: Cela vous donne natif avec de la musique supplémentaire, les sons et les articles. Il n'y a presque pas des améliorations graphiques et pas de scripts ajoutés ou de fonctionnalités. Juste natif plaine avec quelque chose en plus.
+
+Floris Gameplay Mod Pack: Cela a tous les scripts et les caractéristiques de la version complète, mais avec beaucoup moins de points, de la musique et des sons. Aussi beaucoup d'améliorations graphiques sont absents. Si vous voulez connaître toutes les caractéristiques Floris, mais n'ont pas un ordinateur puissant, c'est celui-ci pour vous.
+
+Floris élargi Mod Pack: La version complète avec tout ce Floris a à offrir.
+
+Floris Suite Dev: Il s'agit d'une version spéciale pour les moddeurs et développeurs qui souhaitent toucher à la source et de construire leurs propres versions.
+
+Vous pouvez installer plusieurs versions en même temps.
+
+Un programme de désinstallation sera créé, pour faciliter le retrait de vos versions installées.

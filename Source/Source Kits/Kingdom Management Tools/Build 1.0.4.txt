@@ -1,0 +1,10 @@
+CHANGELOG
+
+1.0.2 - 12/5/11
+ * Renamed the background map mesh to match what is listed in the resource. (meshes)
+
+1.0.3 - 1/3/12
+ * Extended the scrolling range of the presentation quite a bit to prevent a long list of friends taking up too much space.
+
+1.0.4 - 7/12/12
+ * Altered the presentation to only show active kingdoms.

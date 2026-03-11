@@ -1,0 +1,3752 @@
+﻿itm_no_item|INVALID ITEM
+itm_no_item_pl|INVALID ITEM
+itm_tutorial_spear|Włócznia
+itm_tutorial_spear_pl|Włócznie
+itm_tutorial_club|Pałka
+itm_tutorial_club_pl|Pałki
+itm_tutorial_battle_axe|Topór bitewny
+itm_tutorial_battle_axe_pl|Topory bitewne
+itm_tutorial_arrows|Strzały
+itm_tutorial_arrows_pl|Strzały
+itm_tutorial_bolts|Bełty
+itm_tutorial_bolts_pl|Bełty
+itm_tutorial_short_bow|Krótki łuk
+itm_tutorial_short_bow_pl|Krótkie łuki
+itm_tutorial_crossbow|Kusza
+itm_tutorial_crossbow_pl|Kusze
+itm_tutorial_throwing_daggers|Sztylety do rzucania
+itm_tutorial_throwing_daggers_pl|Sztylety do rzucania
+itm_tutorial_saddle_horse|Ujeżdżony koń
+itm_tutorial_saddle_horse_pl|Ujeżdżone konie
+itm_tutorial_shield|Tarcza migdałowa
+itm_tutorial_shield_pl|Tarcze migdałowe
+itm_tutorial_staff_no_attack|Kij
+itm_tutorial_staff_no_attack_pl|Kije
+itm_tutorial_staff|Kij
+itm_tutorial_staff_pl|Kije
+itm_tutorial_sword|Miecz
+itm_tutorial_sword_pl|Miecze
+itm_tutorial_axe|Topór
+itm_tutorial_axe_pl|Topory
+itm_tutorial_dagger|Sztylet
+itm_tutorial_dagger_pl|Szylety
+itm_horse_meat|Końskie mięso
+itm_horse_meat_pl|Końskie mięsa
+itm_practice_axe|Topór ćwiczebny
+itm_practice_axe_pl|Topory ćwiczebne
+itm_practice_dagger|Sztylet ćwiczebny
+itm_practice_dagger_pl|Sztylety ćwiczebne
+itm_practice_lance|Lanca ćwiczebna
+itm_practice_lance_pl|Lance ćwiczebne
+itm_practice_staff|Kij ćwiczebny
+itm_practice_staff_pl|Kije ćwiczebne
+itm_practice_sword|Miecz ćwiczebny
+itm_practice_sword_pl|Miecze ćwiczebne
+itm_practice_sword_heavy|Ciężki Miecz ćwiczebny
+itm_practice_sword_heavy_pl|Ciężkie Miecze ćwiczebne
+itm_practice_arrows|Strzały ćwiczebne
+itm_practice_arrows_pl|Strzały ćwiczebne
+itm_practice_arrows_10_amount|Strzały ćwiczebne
+itm_practice_arrows_10_amount_pl|Strzały ćwiczebne
+itm_practice_arrows_100_amount|Strzały ćwiczebne
+itm_practice_arrows_100_amount_pl|Strzały ćwiczebne
+itm_practice_bolts|Bełty ćwiczebne
+itm_practice_bolts_pl|Bełty ćwiczebne
+itm_practice_bolts_9_amount|Bełty ćwiczebne
+itm_practice_bolts_9_amount_pl|Bełty ćwiczebne
+itm_practice_bow|Łuk ćwiczenby
+itm_practice_bow_pl|Łuki ćwiczebne
+itm_practice_crossbow|Kusza ćwiczebna
+itm_practice_crossbow_pl|Kusze ćwiczebne
+itm_practice_javelin|Oszczepy ćwiczebne
+itm_practice_javelin_pl|Oszczepy ćwiczebne
+itm_practice_javelin_melee|Ćwiczebny oszczep do walki wręcz
+itm_practice_javelin_melee_pl|Ćwiczebne oszczepy do walki wręcz
+itm_practice_throwing_daggers|Ćwiczebne sztylety do rzucania
+itm_practice_throwing_daggers_pl|Ćwiczebne sztylety do rzucania
+itm_practice_throwing_daggers_100_amount|Ćwiczebne sztylety do rzucania
+itm_practice_throwing_daggers_100_amount_pl|Ćwiczebne sztylety do rzucania
+itm_practice_boots|Buty ćwiczebne
+itm_practice_boots_pl|Buty ćwiczebne
+itm_practice_horse|Koń ćwiczebny
+itm_practice_horse_pl|Konie ćwiczebne
+itm_practice_shield|Tarcza ćwiczebna
+itm_practice_shield_pl|Tarcze ćwiczebne
+itm_arena_axe|Topór
+itm_arena_axe_pl|Topory
+itm_arena_sword|Miecz
+itm_arena_sword_pl|Miecze
+itm_arena_sword_two_handed|Miecz 2-ręczny
+itm_arena_sword_two_handed_pl|Miecze 2-ęczne
+itm_arena_lance|Lanca
+itm_arena_lance_pl|Lance
+itm_arena_shield_red|Tarcza
+itm_arena_shield_red_pl|Tarcze
+itm_arena_shield_blue|Tarcza
+itm_arena_shield_blue_pl|Tarcze
+itm_arena_shield_green|Tarcza
+itm_arena_shield_green_pl|Tarcze
+itm_arena_shield_yellow|Tarcza
+itm_arena_shield_yellow_pl|Tarcze
+itm_arena_armor_white|Biała zbroja turniejowa
+itm_arena_armor_white_pl|Białe zbroje turniejowe
+itm_arena_armor_red|Czerwona zbroja turniejowa
+itm_arena_armor_red_pl|Czerwone zbroje turniejowe
+itm_arena_armor_blue|Niebieska zbroja turniejowa
+itm_arena_armor_blue_pl|Niebieskie zbroje turniejowe
+itm_arena_armor_green|Zielona zbroja turniejowa
+itm_arena_armor_green_pl|Zielone zbroje turniejowe
+itm_arena_armor_yellow|Żółta zbroja turniejowa
+itm_arena_armor_yellow_pl|Żółte zbroje turniejowe
+itm_arena_tunic_white|Biała tunika turniejowa
+itm_arena_tunic_white_pl|Białe tuniki turniejowe
+itm_arena_tunic_red|Czerwona tunika turniejowa
+itm_arena_tunic_red_pl|Czerwone tuniki turniejowe
+itm_arena_tunic_blue|Niebieska tunika turniejowa
+itm_arena_tunic_blue_pl|Niebieskie tuniki turniejowe
+itm_arena_tunic_green|Zielona tunika turniejowa
+itm_arena_tunic_green_pl|Zielone tuniki turniejowe
+itm_arena_tunic_yellow|Żółta tunika turniejowa
+itm_arena_tunic_yellow_pl|Żółte tuniki turniejowe
+itm_arena_helmet_red|Czerwony turniejowy hełm 
+itm_arena_helmet_red_pl|Czerwone turniejowe hełmy 
+itm_arena_helmet_blue|Niebieski turniejowy hełm
+itm_arena_helmet_blue_pl|Niebieskie turniejowe hełmy
+itm_arena_helmet_green|Zielony turniejowy hełm
+itm_arena_helmet_green_pl|Zielone turniejowe hełmy
+itm_arena_helmet_yellow|Żółty turniejowy hełm
+itm_arena_helmet_yellow_pl|Żółte turniejowe hełmy
+itm_steppe_helmet_white|Biały turniejowy hełm stepowy
+itm_steppe_helmet_white_pl|Białe turniejowe hełmy stepowe
+itm_steppe_helmet_red|Czerwony turniejowy hełm stepowy
+itm_steppe_helmet_red_pl|Czerwone turniejowe hełmy stepowe
+itm_steppe_helmet_blue|Niebieski turniejowy hełm stepowy
+itm_steppe_helmet_blue_pl|Niebieskie turniejowe hełmy stepowe
+itm_steppe_helmet_green|Zielony turniejowy hełm stepowy
+itm_steppe_helmet_green_pl|Zielone turniejowe hełmy stepowe
+itm_steppe_helmet_yellow|Żółty turniejowy hełm stepowy
+itm_steppe_helmet_yellow_pl|Żółte turniejowe hełmy stepowe
+itm_tourney_helm_white|Biały turniejowy hełm zamknięty
+itm_tourney_helm_white_pl|Białe turniejowe hełmy zamknięte
+itm_tourney_helm_red|Czerwony turniejowy hełm zamknięty
+itm_tourney_helm_red_pl|Czerwone turniejowe hełmy zamknięte
+itm_tourney_helm_blue|Niebieski turniejowy hełm zamknięty
+itm_tourney_helm_blue_pl|Niebieskie turniejowe hełmy zamknięte
+itm_tourney_helm_green|Zielony turniejowy hełm zamknięty
+itm_tourney_helm_green_pl|Zielone turniejowe hełmy zamknięte
+itm_tourney_helm_yellow|Żółty turniejowy hełm zamknięty
+itm_tourney_helm_yellow_pl|Żółte turniejowe hełmy zamknięte
+itm_arena_turban_red|Czerwony truniejowy turban
+itm_arena_turban_red_pl|Czerwone truniejowe turbany
+itm_arena_turban_blue|Niebieski truniejowy turban
+itm_arena_turban_blue_pl|Niebieskie truniejowe turbany
+itm_arena_turban_green|Zielony truniejowy turban
+itm_arena_turban_green_pl|Zielone truniejowe turbany
+itm_arena_turban_yellow|Żółty truniejowy turban
+itm_arena_turban_yellow_pl|Żółte truniejowe turbany
+itm_book_tactics|De Re Militari
+itm_book_tactics_pl|De Re Militari
+itm_book_persuasion|Rhetorica ad Herennium
+itm_book_persuasion_pl|Rhetorica ad Herennium
+itm_book_leadership|Życie Alixenusa Wielkiego
+itm_book_leadership_pl|Życie Alixenusa Wielkiego
+itm_book_intelligence|Esej o logice
+itm_book_intelligence_pl|Esej o logice
+itm_book_trade|Traktat o wartości rzeczy
+itm_book_trade_pl|Traktat o wartości rzeczy
+itm_book_weapon_mastery|Sztuka walki mieczem
+itm_book_weapon_mastery_pl|Sztuka walki mieczem
+itm_book_engineering|Metody twierdzeń mechanicznych
+itm_book_engineering_pl|Metody twierdzeń mechanicznych
+itm_book_necronomicon|Necronomicon
+itm_book_necronomicon_pl|Necronomicon
+itm_book_bible|Pismo Święte
+itm_book_bible_pl|Pismo Święte
+itm_book_prisoner_management|Notatni Ramuna
+itm_book_prisoner_management_pl|Notatki Ramuna
+itm_book_spotting_reference|Scientia Servandi
+itm_book_spotting_reference_pl|Scientia Servandi
+itm_book_first_aid_reference|Primo Auxilium
+itm_book_first_aid_reference_pl|Primo Auxilium
+itm_book_pathfinding_reference|Nasza wiedza o Calradii
+itm_book_pathfinding_reference_pl|Nasza wiedza o Calradii
+itm_book_wound_treatment_reference|Księga uzdrawiania
+itm_book_wound_treatment_reference_pl|Księga uzdrawiania
+itm_book_training_reference|Podręcznik walki
+itm_book_training_reference_pl|Podręcznik walki
+itm_book_surgery_reference|Wielka księga chirurgii
+itm_book_surgery_reference_pl|Wielka księga chirurgii
+itm_book_trade_ledger|Księga handlowa
+itm_book_trade_ledger_pl|Księga handlowa
+itm_trade_spice|Worek z przyprawami
+itm_trade_spice_pl|Worki z przyprawami
+itm_trade_salt|Worek soli
+itm_trade_salt_pl|Worki z solą
+itm_trade_oil|Dzban z oliwą
+itm_trade_oil_pl|Dzbany z oliwą
+itm_trade_pottery|Wyrób ceramiczny
+itm_trade_pottery_pl|Wyroby ceramiczne
+itm_trade_raw_flax|Kłębek lnu
+itm_trade_raw_flax_pl|Kłębki lnu
+itm_trade_linen|Płótno
+itm_trade_linen_pl|Płótna
+itm_trade_wool|Worek z wełną
+itm_trade_wool_pl|Worki z wełną
+itm_trade_wool_cloth|Wełniane sukno
+itm_trade_wool_cloth_pl|Wełniane sukna
+itm_trade_raw_silk|Niewyrobiony jedwab
+itm_trade_raw_silk_pl|Niewyrobione jedwabie
+itm_trade_raw_dyes|Barwnik
+itm_trade_raw_dyes_pl|Barwniki
+itm_trade_velvet|Aksami
+itm_trade_velvet_pl|Akasmit
+itm_trade_iron|Sztaba żelaza
+itm_trade_iron_pl|Sztaby żelaza
+itm_trade_tools|Narzędzia
+itm_trade_tools_pl|Narzędzia
+itm_trade_raw_leather|Niewygrabowane skóry
+itm_trade_raw_leather_pl|Niewygarbowane skóry
+itm_trade_leatherwork|Wyrób skórzany
+itm_trade_leatherwork_pl|Wyroby skórzane
+itm_trade_raw_date_fruit|Daktyle
+itm_trade_raw_date_fruit_pl|Daktyle
+itm_trade_furs|Futro
+itm_trade_furs_pl|Futra
+itm_trade_wine|Dzban z winem
+itm_trade_wine_pl|Dzbany z winem
+itm_trade_ale|Beczka z piwem
+itm_trade_ale_pl|Beczki z piwem
+itm_trade_smoked_fish|Wędzona ryba
+itm_trade_smoked_fish_pl|Wędzone ryby
+itm_trade_cheese|Krąg sera
+itm_trade_cheese_pl|Kręgi sera
+itm_trade_honey|Miód
+itm_trade_honey_pl|Miód
+itm_trade_sausages|Pęto kiełbasy
+itm_trade_sausages_pl|Pęta kiełbasy
+itm_trade_cabbages|Kapusta
+itm_trade_cabbages_pl|Kapusty
+itm_trade_dried_meat|Suszone mięso
+itm_trade_dried_meat_pl|Suszone mięsa
+itm_trade_apples|Kosz z owocami
+itm_trade_apples_pl|Kosze z owocami
+itm_trade_raw_grapes|Winogrona
+itm_trade_raw_grapes_pl|Winogrona
+itm_trade_raw_olives|Oliwki
+itm_trade_raw_olives_pl|Oliwki
+itm_trade_grain|Worek ze zborzem
+itm_trade_grain_pl|Worki ze zbożem
+itm_trade_cattle_meat|Kawał wołowiny
+itm_trade_cattle_meat_pl|Kawały wołowiny
+itm_trade_bread|Bochenek chleba
+itm_trade_bread_pl|Bochenki chleba
+itm_trade_chicken|Kurczak
+itm_trade_chicken_pl|Kurczaki
+itm_trade_pork|Wieprzowina
+itm_trade_pork_pl|Wieprzowina
+itm_trade_butter|Masło
+itm_trade_butter_pl|Masło
+itm_trade_dummy01|Dummy item 1
+itm_trade_dummy01_pl|Dummy item 1
+itm_trade_dummy02|Dummy item 2
+itm_trade_dummy02_pl|Dummy item 2
+itm_trade_dummy03|Dummy item 3
+itm_trade_dummy03_pl|Dummy item 3
+itm_trade_dummy04|Dummy item 4
+itm_trade_dummy04_pl|Dummy item 4
+itm_trade_dummy05|Dummy item 5
+itm_trade_dummy05_pl|Dummy item 5
+itm_trade_dummy06|Dummy item 6
+itm_trade_dummy06_pl|Dummy item 6
+itm_trade_dummy07|Dummy item 7
+itm_trade_dummy07_pl|Dummy item 7
+itm_trade_dummy08|Dummy item 8
+itm_trade_dummy08_pl|Dummy item 8
+itm_trade_dummy09|Dummy item 9
+itm_trade_dummy09_pl|Dummy item 9
+itm_trade_dummy10|Dummy item 10
+itm_trade_dummy10_pl|Dummy item 10
+itm_trade_dummy11|Dummy item 11
+itm_trade_dummy11_pl|Dummy item 11
+itm_trade_dummy12|Dummy item 12
+itm_trade_dummy12_pl|Dummy item 12
+itm_trade_dummy13|Dummy item 13
+itm_trade_dummy13_pl|Dummy item 13
+itm_trade_dummy14|Dummy item 14
+itm_trade_dummy14_pl|Dummy item 14
+itm_trade_dummy15|Dummy item 15
+itm_trade_dummy15_pl|Dummy item 15
+itm_trade_dummy16|Dummy item 16
+itm_trade_dummy16_pl|Dummy item 16
+itm_trade_dummy17|Dummy item 17
+itm_trade_dummy17_pl|Dummy item 17
+itm_trade_dummy18|Dummy item 18
+itm_trade_dummy18_pl|Dummy item 18
+itm_trade_dummy19|Dummy item 19
+itm_trade_dummy19_pl|Dummy item 19
+itm_trade_dummy20|Dummy item 20
+itm_trade_dummy20_pl|Dummy item 20
+itm_siege_supply|Zapasy
+itm_siege_supply_pl|Zapasy
+itm_quest_wine|Wino
+itm_quest_wine_pl|Wina
+itm_quest_ale|Piwo
+itm_quest_ale_pl|Piwa
+itm_an_gen_boar|Dzik
+itm_an_gen_boar_pl|Dziki
+itm_an_gen_chicken|Kurczak
+itm_an_gen_chicken_pl|Kurczaki
+itm_an_gen_cowblackwhite|Biało-czarna krowa
+itm_an_gen_cowblackwhite_pl|Bało-czarne krowy
+itm_an_gen_cowbrown|Brązowa krowa
+itm_an_gen_cowbrown_pl|Brązowe krowy
+itm_an_gen_cowbrownwhite|Biało-brązowa krowa
+itm_an_gen_cowbrownwhite_pl|Biało-brązowe krowy
+itm_an_gen_cowwhite|Biała krowa
+itm_an_gen_cowwhite_pl|Białe krowy
+itm_an_gen_deerfemale|Łania
+itm_an_gen_deerfemale_pl|Łanie
+itm_an_gen_deermale|Jeleń
+itm_an_gen_deermale_pl|Jeleń
+itm_an_gen_deeryoung|Jelonek
+itm_an_gen_deeryoung_pl|Jelonki
+itm_an_gen_donkeywild|Dziki osioł
+itm_an_gen_donkeywild_pl|Dzikie osłyy
+itm_an_gen_goatbrown|Brązowa koza
+itm_an_gen_goatbrown_pl|Brązowe kozy
+itm_an_gen_goatwhite|Biała koza
+itm_an_gen_goatwhite_pl|Białe kozy
+itm_an_gen_pig|Świnia
+itm_an_gen_pig_pl|Świnie
+itm_an_gen_sheep|Owca
+itm_an_gen_sheep_pl|Owce
+itm_an_gen_wolf|Wilk
+itm_an_gen_wolf_pl|Wilki
+itm_ho_swa_saddle_black|Ujeżdżony koń
+itm_ho_swa_saddle_black_pl|Ujeżdżone konie
+itm_ho_swa_destrier_black|Czarny rumak
+itm_ho_swa_destrier_black_pl|Czarne rumaki
+itm_ho_swa_arab_black|Czarny pustynny koń
+itm_ho_swa_arab_black_pl|Czarne pustynne konie
+itm_ho_swa_courser_black|Czarny rumak
+itm_ho_swa_courser_black_pl|Czarne rumaki
+itm_ho_swa_destrier_bay|Gniady Destrier
+itm_ho_swa_destrier_bay_pl|Gniade Destriery
+itm_ho_swa_destrier_baydark|Ciemnogniady Destrier
+itm_ho_swa_destrier_baydark_pl|Ciemnogniade Destriery
+itm_ho_swa_destrier_baysnowflake|Tarantowatogniady Destrier
+itm_ho_swa_destrier_baysnowflake_pl|Tarantowatogniade Destriery
+itm_ho_swa_destrier_blackpainted|Karosrokaty Destrier
+itm_ho_swa_destrier_blackpainted_pl|Karosrokate Destriery
+itm_ho_swa_destrier_blacksnowflake|Karotarantowaty Destrier
+itm_ho_swa_destrier_blacksnowflake_pl|Karotarantowate Destriery
+itm_ho_swa_destrier_chestnutdark|Ciemnokasztanowaty Destrier
+itm_ho_swa_destrier_chestnutdark_pl|Ciemnokasztanowate konie Destrier
+itm_ho_swa_destrier_pinto|Destrier Pinto
+itm_ho_swa_destrier_pinto_pl|Destriery Pinto
+itm_ho_swa_destrier_shadowrunner|Cienisty koń kłusy Destrier
+itm_ho_swa_destrier_shadowrunner_pl|Cieniste konie kłusy Destrier
+itm_ho_swa_rouncy_black|Czarny Rouncey
+itm_ho_swa_rouncy_black_pl|Czarne Rouncey
+itm_ho_swa_steppe_blackappaloosa|Czarny stepowy Appaloosa
+itm_ho_swa_steppe_blackappaloosa_pl|Czarne stepowe Appaloosa'y
+itm_ho_vae_saddle_feather|Użejżdony Feather
+itm_ho_vae_saddle_feather_pl|Ujeżdżone Feathery
+itm_ho_vae_rus_brown|Brązowy Vaegirski koń
+itm_ho_vae_rus_brown_pl|Brązowe Vaegirskie konie
+itm_ho_vae_arab_chestnut|Pustynny kasztanowaty koń
+itm_ho_vae_arab_chestnut_pl|Pustynne kasztanowate konie
+itm_ho_vae_destrier_baybrown|Ciemnogniady Destrier
+itm_ho_vae_destrier_baybrown_pl|Ciemnogniade Destriery
+itm_ho_vae_courser_chestnut|Kasztanowaty rumak
+itm_ho_vae_courser_chestnut_pl|Kasztanowate rumaki
+itm_ho_vae_rouncy_chestnut|Kasztanowaty Rouncey
+itm_ho_vae_rouncy_chestnut_pl|Kasztanowaty Rouncey
+itm_ho_vae_rus_baybrindle|Vaegirski gniady Brindle
+itm_ho_vae_rus_baybrindle_pl|Vaegirskie gniade Brindle
+itm_ho_vae_rus_blueroan|Dereszowaty Vaegirski koń
+itm_ho_vae_rus_blueroan_pl|Dereszowate Vaegirskie konie
+itm_ho_vae_rus_brownlight|Jasnogniady Veagirski koń
+itm_ho_vae_rus_brownlight_pl|Jasnogniade Vaegirskie konie
+itm_ho_vae_rus_chestnutmealy|Jasnokasztanowaty Vaegirski koń
+itm_ho_vae_rus_chestnutmealy_pl|Jasnokasztanowate Vaegirskie konie
+itm_ho_vae_rus_gullo|Vaegirski Grullo
+itm_ho_vae_rus_gullo_pl|Veagirskie Grullo
+itm_ho_vae_rus_palomino|Veagirski izabelowaty koń
+itm_ho_vae_rus_palomino_pl|Vaegirskie izabelowate konie
+itm_ho_vae_rus_palominospotted|Vaegirski nakrapiany Palomino
+itm_ho_vae_rus_palominospotted_pl|Veagirskie nakrapiane Palomino
+itm_ho_vae_rus_redroan|Kasztanowatodereszowaty Vaegirski koń
+itm_ho_vae_rus_redroan_pl|Kasztanowatodereszowate Vaegirski konie
+itm_ho_vae_sumpter_brown|Brązowy Sumpter
+itm_ho_vae_sumpter_brown_pl|Brązowe Sumptery
+itm_ho_khe_saddle_coloured|Krasny ujeżdżony koń
+itm_ho_khe_saddle_coloured_pl|Krasne ujeżdżone konie
+itm_ho_khe_steppe_brownpainted|Gniadosrokaty stepowy koń
+itm_ho_khe_steppe_brownpainted_pl|Gniadosrokate stepowe konie
+itm_ho_khe_arab_spotted|Narkapiany pustynny koń
+itm_ho_khe_arab_spotted_pl|Nakrapiane pustynne konie
+itm_ho_khe_destrier_appaloosabay|Gniady Destrier Appaloosa
+itm_ho_khe_destrier_appaloosabay_pl|Gniade Destrier Appaloosa'y
+itm_ho_khe_rouncy_chestnutappaloosa|Kasztanowaty Rouncey
+itm_ho_khe_rouncy_chestnutappaloosa_pl|Kasztanowate Rouncey
+itm_ho_khe_rus_painted|Srokaty Veagirski koń
+itm_ho_khe_rus_painted_pl|Srokate Vaegirskie konie
+itm_ho_khe_steppe_bayappaloosa|Stepowy gniady Appaloosa
+itm_ho_khe_steppe_bayappaloosa_pl|Stepowe gniade Appaloosa'y
+itm_ho_khe_steppe_blackpainted|Karosrokaty stepowy koń
+itm_ho_khe_steppe_blackpainted_pl|Karosrokate stepowe konie
+itm_ho_khe_steppe_blackspotted|Czarny nakrapiany stepowy koń
+itm_ho_khe_steppe_blackspotted_pl|Czarne nakrapiane stepowe konie
+itm_ho_khe_steppe_brownspotted|Brązowy nakrapiany stepowy koń
+itm_ho_khe_steppe_brownspotted_pl|Brązowe nakrapiane stepowe konie
+itm_ho_khe_steppe_buckskinspotted|Stepowy kuc nakrapiany bułan
+itm_ho_khe_steppe_buckskinspotted_pl|Stepowe kuce nakrapiane bułany
+itm_ho_khe_steppe_chestnutappy|Stepowy kasztanowaty Appaloosa
+itm_ho_khe_steppe_chestnutappy_pl|Stepowe kasztanowate Appaloosa'y
+itm_ho_khe_steppe_chestnutspot|Nakrapiany Kasztan stepowy
+itm_ho_khe_steppe_chestnutspot_pl|Nakrapiane Kszatany stepowe
+itm_ho_khe_steppe_dunpaint|Nakrapiany doński stepowy koń
+itm_ho_khe_steppe_dunpaint_pl|Nakrapiane dońskie stepowe konie
+itm_ho_nor_mule|Muł
+itm_ho_nor_mule_pl|Muły
+itm_ho_nor_courser_greysteel|Rumak Amarant
+itm_ho_nor_courser_greysteel_pl|Rumaki Amarant
+itm_ho_nor_arab_grey|Siwy pustynny koń
+itm_ho_nor_arab_grey_pl|Siwe pustynne konie
+itm_ho_nor_courser_dappledark|Ciemnoszary cętkowany rumak
+itm_ho_nor_courser_dappledark_pl|Ciemnoszare cętkowane rumaki
+itm_ho_nor_courser_dapplelight|Jabkowito szpaki rumak
+itm_ho_nor_courser_dapplelight_pl|Jabkowite szpaki rumaki
+itm_ho_nor_courser_fleabitten|Siwy rumak Fleabitten
+itm_ho_nor_courser_fleabitten_pl|Siwe rumaki Fleabitten
+itm_ho_nor_courser_grey|Siwy rumak
+itm_ho_nor_courser_grey_pl|Siwe rumaki
+itm_ho_nor_courser_grulloappaloosa|Rumak Appaloosa Grullo
+itm_ho_nor_courser_grulloappaloosa_pl|Rumaki Appaloosa Grullo
+itm_ho_nor_courser_grullobrindle|Rumak Grullo Brindle
+itm_ho_nor_courser_grullobrindle_pl|Rumaki Grullo Brindle
+itm_ho_nor_courser_pinto|Rumak Pinto
+itm_ho_nor_courser_pinto_pl|Rumaki Pinto
+itm_ho_nor_courser_splash|Rumak Splash
+itm_ho_nor_courser_splash_pl|Rumaki Splash
+itm_ho_nor_destrier_fleabittengrey|Siwy koń Destrier Fleabitten
+itm_ho_nor_destrier_fleabittengrey_pl|Siwe konie Destrier Fleabitten
+itm_ho_nor_rus_grey|Siwy Vaegirski koń
+itm_ho_nor_rus_grey_pl|Siwe Vaegirskie konie
+itm_ho_nor_steppe_greypaint|Siwosrokaty stepowy koń
+itm_ho_nor_steppe_greypaint_pl|Siwosrokate stepowe konie
+itm_ho_rho_donkey_brown|Brązowy osioł
+itm_ho_rho_donkey_brown_pl|Brązowe osły
+itm_ho_rho_rouncy_brown|Brązowy Rouncey
+itm_ho_rho_rouncy_brown_pl|Brązowe Rouncey
+itm_ho_rho_courser_baybrown|Ciemnogniady rumak
+itm_ho_rho_courser_baybrown_pl|Ciemnogniade rumaki
+itm_ho_rho_destrier_baydarkbrown|Ciemnogniady Destrier
+itm_ho_rho_destrier_baydarkbrown_pl|Ciemnogniade Destriery
+itm_ho_rho_donkey_grey|Siwy osioł
+itm_ho_rho_donkey_grey_pl|Siwe osły
+itm_ho_rho_rouncy_baybrindle|Gniady Brindle Rouncey
+itm_ho_rho_rouncy_baybrindle_pl|Gniade Brindle Rouncey
+itm_ho_rho_rouncy_baylightbrown|Jasnogniady Rouncey
+itm_ho_rho_rouncy_baylightbrown_pl|Jasnogniade Rouncey
+itm_ho_rho_rouncy_baynightbrown|Ciemnogniady Rouncey
+itm_ho_rho_rouncy_baynightbrown_pl|Ciemnogniade Rouncey
+itm_ho_rho_rouncy_blueroan|Dereszowaty Rouncey
+itm_ho_rho_rouncy_blueroan_pl|Dereszowate Rouncey
+itm_ho_rho_rouncy_browndark|Ciemnobrązowy Rouncey
+itm_ho_rho_rouncy_browndark_pl|Ciemnogbrązowe Rouncey
+itm_ho_rho_rouncy_chestnutliver|Brudnokasztanowaty Rouncey
+itm_ho_rho_rouncy_chestnutliver_pl|Brudnokasztanowate Rouncey
+itm_ho_rho_rouncy_chestnutorange|Jasnokasztanowaty Rouncey
+itm_ho_rho_rouncy_chestnutorange_pl|Jasnokasztanmowate Rouncey
+itm_ho_rho_rouncy_redroan|Kasztanowatodereszowaty Rouncey
+itm_ho_rho_rouncy_redroan_pl|Kasztanowatodereszowate Rouncey
+itm_ho_rho_rus_browndark|Ciemnobrązowy Vaegirski koń
+itm_ho_rho_rus_browndark_pl|Ciemnobrązowe Vaegirskie konie
+itm_ho_rho_steppe_brown|Brązowy stepowy koń
+itm_ho_rho_steppe_brown_pl|Brązowe stepowe konie
+itm_ho_rho_sumpter_chestnut|Kasztanowaty Sumpter
+itm_ho_rho_sumpter_chestnut_pl|Kasztanowate Sumptery
+itm_ho_sar_camel_bactrian|Wielbłąd dwugarbny
+itm_ho_sar_camel_bactrian_pl|Wielbłądy dwugarbne
+itm_ho_sar_arab_dun|Doński koń pustynny
+itm_ho_sar_arab_dun_pl|Dońskie konie pustynne
+itm_ho_sar_arab_appaloosa|Pustynny Appaloosa
+itm_ho_sar_arab_appaloosa_pl|Pystynne Appaloosa'y
+itm_ho_sar_arab_bay|Gniady koń pustynny
+itm_ho_sar_arab_bay_pl|Gniade konie pustynne
+itm_ho_sar_arab_brown|Brązowy koń pustynny
+itm_ho_sar_arab_brown_pl|Brązowe konie pustynne
+itm_ho_sar_arab_browndark|Ciemniobrązowy koń pustynny
+itm_ho_sar_arab_browndark_pl|Ciemniobrązowe konie pustynne
+itm_ho_sar_arab_brownlight|Jasnobrązowy koń pustynny
+itm_ho_sar_arab_brownlight_pl|Jasnobrązowe konie pustynne
+itm_ho_sar_arab_brownred|Rdzawy koń pustyyny
+itm_ho_sar_arab_brownred_pl|Rdzawe konie pustynne
+itm_ho_sar_arab_palomino|Pystynny Palomino
+itm_ho_sar_arab_palomino_pl|Pustynne Palomino
+itm_ho_sar_arab_skewbald|Pustynny Skewbald
+itm_ho_sar_arab_skewbald_pl|Pustynne Skewbald
+itm_ho_sar_camel_calradian|Calradyjski wielbłąd
+itm_ho_sar_camel_calradian_pl|Calradyjskie wielbłądy
+itm_ho_sar_camel_sarranid|Sarranidzki wielbłąd
+itm_ho_sar_camel_sarranid_pl|Sarranidzkie wielbłądy
+itm_ho_sar_courser_palominolight|Masłowaty rumak Palomino 
+itm_ho_sar_courser_palominolight_pl|Masłowate rumaki Palomino
+itm_ho_sar_rouncy_dun|Doński Rouncey
+itm_ho_sar_rouncy_dun_pl|Dońskie Rouncey
+itm_ho_sar_rus_dun|Doński Vaegirki koń
+itm_ho_sar_rus_dun_pl|Dońskie Vaegirskie konie
+itm_ho_sar_steppe_buckskin|Stepowy Buckskin
+itm_ho_sar_steppe_buckskin_pl|Stepowe Buckskiny
+itm_ho_pla_sumpter_white|Biały Sumpter
+itm_ho_pla_sumpter_white_pl|Białe konie Sumptery
+itm_ho_pla_arab_white|Biały koń pustynny
+itm_ho_pla_arab_white_pl|Białe konie pustynne
+itm_ho_pla_courser_white|Biały rumak
+itm_ho_pla_courser_white_pl|Białe rumaki
+itm_ho_pla_destrier_dapplegrey|Jabkowito szpaki Destrier
+itm_ho_pla_destrier_dapplegrey_pl|Jabkowite szpaki Destriery
+itm_ho_pla_rouncy_skewbald|Rouncey Skewbald
+itm_ho_pla_rouncy_skewbald_pl|Rouncey Skewbaldy
+itm_ho_pla_steppe_white|Biały koń stepowy
+itm_ho_pla_steppe_white_pl|Białe konie stepowe
+itm_ho_swa_war_royal|Królewski koń bojowy
+itm_ho_swa_war_royal_pl|Królewskie konie bojowe
+itm_ho_swa_charger_long|Koń bojowy z długim kropierzem
+itm_ho_swa_charger_long_pl|Konie bojowe z długim kropierzem
+itm_ho_swa_cata_brownie|Lekkozbrojny koń katafraktów
+itm_ho_swa_cata_brownie_pl|Lekkozbrojne konie katafraktów
+itm_ho_swa_long_lilyblue|Koń bojowy z długim kropierzem
+itm_ho_swa_long_lilyblue_pl|Konie bojowe z długim kropierzem
+itm_ho_swa_long_lilygreen|Koń bojowy z długim kropierzem
+itm_ho_swa_long_lilygreen_pl|Konie bojowe z długim kropierzem
+itm_ho_swa_long_lilygriffon|Koń bojowy z długim kropierzem
+itm_ho_swa_long_lilygriffon_pl|Konie bojowe z długim kropierzem
+itm_ho_swa_long_lilylionblack|Koń bojowy z długim kropierzem
+itm_ho_swa_long_lilylionblack_pl|Konie bojowe z długim kropierzem
+itm_ho_swa_long_lilyliondutch|Koń bojowy z długim kropierzem
+itm_ho_swa_long_lilyliondutch_pl|Konie bojowe z długim kropierzem
+itm_ho_swa_long_lilylionenglish|Koń bojowy z długim kropierzem
+itm_ho_swa_long_lilylionenglish_pl|Konie bojowe z długim kropierzem
+itm_ho_swa_long_lilyred|Koń bojowy z długim kropierzem
+itm_ho_swa_long_lilyred_pl|Konie bojowe z długim kropierzem
+itm_ho_swa_long_lionblue|Koń bojowy z długim kropierzem
+itm_ho_swa_long_lionblue_pl|Konie bojowe z długim kropierzem
+itm_ho_swa_war_lilycrossed|Koń bojowy z kropierzem
+itm_ho_swa_war_lilycrossed_pl|Konie bojowe z kropierzem
+itm_ho_swa_war_lilylion|Koń bojowy z kropierzem
+itm_ho_swa_war_lilylion_pl|Konie bojowe z kropierzem
+itm_ho_swa_war_lilyred|Koń bojowy z kropierzem
+itm_ho_swa_war_lilyred_pl|Konie bojowe z kropierzem
+itm_ho_swa_war_lilyroyal|Królewski koń bojowy z kropierzem
+itm_ho_swa_war_lilyroyal_pl|Królewskie konie bojowe z kropierzem
+itm_ho_swa_war_lionyellowblack|Koń bojowy z kropierzem
+itm_ho_swa_war_lionyellowblack_pl|Konie bojowe z kropierzem
+itm_ho_vae_war_leathered|Koń bojowy z kropierzem
+itm_ho_vae_war_leathered_pl|Konie bojowe z kropierzem
+itm_ho_vae_charger_leathered|Ciężki koń bojowy z kropierzem
+itm_ho_vae_charger_leathered_pl|Ciężkie konie bojowe z kropierzem
+itm_ho_vae_long_eagleblack|Koń bojowy z długim kropierzem
+itm_ho_vae_long_eagleblack_pl|Konie bojowe z długim kropierzem
+itm_ho_vae_long_eaglewhite|Koń bojowy z długim kropierzem
+itm_ho_vae_long_eaglewhite_pl|Konie bojowe z długim kropierzem
+itm_ho_vae_long_royalred|Koń bojowy z długim kropierzem
+itm_ho_vae_long_royalred_pl|Konie bojowe z długim kropierzem
+itm_ho_vae_sumpter_leathered|Koń Sumpter z kropierzem
+itm_ho_vae_sumpter_leathered_pl|Konie Sumpter z kropierzem
+itm_ho_vae_war_appaloosa|Koń bojowy Appaloosa
+itm_ho_vae_war_appaloosa_pl|Konie bojowe Appaloosa
+itm_ho_vae_war_eagleblack|Koń bojowy z kropierzem
+itm_ho_vae_war_eagleblack_pl|Konie bojowe z kropierzem
+itm_ho_vae_war_eaglewhite|Koń bojowy z kropierzem
+itm_ho_vae_war_eaglewhite_pl|Konie bojowe z kropierzem
+itm_ho_vae_war_imperial|Cesarski koń bojowy z kropierzem
+itm_ho_vae_war_imperial_pl|Cesarskie konie bojowe z kropierzem
+itm_ho_vae_war_palomino|Koń bojowy Palomino
+itm_ho_vae_war_palomino_pl|Konie bojowe Palomino
+itm_ho_vae_war_scaledbrown|Koń bojowy z łuskowym kropierzem
+itm_ho_vae_war_scaledbrown_pl|Konie bojowe z łuskowym kropierzem
+itm_ho_vae_war_scaledgrey|Koń bojowy z łuskowym kropierzem
+itm_ho_vae_war_scaledgrey_pl|Konie bojowe z łuskowym kropierzem
+itm_ho_vae_war_scaledorange|Koń bojowy z łuskowym kropierzem
+itm_ho_vae_war_scaledorange_pl|Konie bojowe z łuskowym kropierzem
+itm_ho_vae_war_scaledorangeleather|Koń bojowy z łuskowym kropierzem
+itm_ho_vae_war_scaledorangeleather_pl|Konie bojowe z łuskowym kropierzem
+itm_ho_khe_war_brass|Koń bojowy z blaszanym kropierzem
+itm_ho_khe_war_brass_pl|Konie bojowe z blaszanym kropierzem
+itm_ho_khe_charger_steppe|Stepowy koń bojowe
+itm_ho_khe_charger_steppe_pl|Stepowe konie bojowe
+itm_ho_khe_cata_black|Lekkozbrojny koń katafraktów
+itm_ho_khe_cata_black_pl|Lekkozbrojne konie katafraktów
+itm_ho_khe_cata_yellow|Lekkozbrojny koń katafraktów
+itm_ho_khe_cata_yellow_pl|Lekkozbrojne konie katafraktów
+itm_ho_khe_long_khergit|Khergicki koń bojowy z długim kropierzem
+itm_ho_khe_long_khergit_pl|Khergickie konie bojowe z długim kropierzem
+itm_ho_khe_long_lamellariron|Koń bojowy z długim lamelkowym kropierzem
+itm_ho_khe_long_lamellariron_pl|Konie bojowe z długim lamelkowym kropierzem
+itm_ho_khe_long_mandugai|Mandugaiski koń bojowy z długim kropierzem
+itm_ho_khe_long_mandugai_pl|Mandugaiskie konie bojowe z długim kropierzem 
+itm_ho_khe_war_chainscalewhite|Koń bojowy z kolczym kropierzem
+itm_ho_khe_war_chainscalewhite_pl|Konie bojowe z kolczym kropierzem
+itm_ho_khe_war_hordedark|Ciemny koń bojowy hordy
+itm_ho_khe_war_hordedark_pl|Ciemne konie bojowe gordy
+itm_ho_khe_war_hordelight|Lekki koń bojowy hordy
+itm_ho_khe_war_hordelight_pl|Lekkie konie bojowe hordy
+itm_ho_khe_war_ironlamellar|Koń bojowy z lamelkowym kropierzem
+itm_ho_khe_war_ironlamellar_pl|Konie bojowe z lamelkowym kropierzem
+itm_ho_khe_war_khergit|Khergicki koń bojowy
+itm_ho_khe_war_khergit_pl|Khergickie konie bojowe
+itm_ho_khe_war_maille|Koń bojowy z kolczym kropierzem
+itm_ho_khe_war_maille_pl|Konie bojowe z kolczym kropierzem
+itm_ho_khe_war_mandugai|Mandugaiski koń bojowy
+itm_ho_khe_war_mandugai_pl|Mandugaiskie konie bojowe
+itm_ho_khe_war_redlamellar|Koń bojowy z lamelkowym kropierzem
+itm_ho_khe_war_redlamellar_pl|Konie bojowe z lamelkowym kropierzem
+itm_ho_nor_war_blue|Koń bojowy z kropierzem
+itm_ho_nor_war_blue_pl|Konie bojowe z kropierzem
+itm_ho_nor_charger_lamellar|Ciężki koń bojowy z lamelkowym kropierzem
+itm_ho_nor_charger_lamellar_pl|Ciężkie konie bojowe z lamelkowym kropierzem
+itm_ho_nor_courser_plated|Rumak z płytowym kropierzem
+itm_ho_nor_courser_plated_pl|Rumak z płytoweym kropierzem
+itm_ho_nor_long_bluecalradian|Carladyjski koń bojowy z długim kropierzem
+itm_ho_nor_long_bluecalradian_pl|Calradyjskie konie bojowe z długim kropierzem
+itm_ho_nor_long_blueswan|Koń bojowy z długim kropierzem
+itm_ho_nor_long_blueswan_pl|Konie bojowe z długim kropierzem
+itm_ho_nor_long_blueunicorn|Koń bojowy z długim kropierzem
+itm_ho_nor_long_blueunicorn_pl|Konie bojowe z długim kropierzem
+itm_ho_nor_war_bluebarded|Koń bojowy z kropierzem
+itm_ho_nor_war_bluebarded_pl|Konie bojowe z kropierzem
+itm_ho_nor_war_blueblack|Koń bojowy z kropierzem
+itm_ho_nor_war_blueblack_pl|Konie bojowe z kropierzem
+itm_ho_nor_war_bluediamond|Koń bojowy z kropierzem
+itm_ho_nor_war_bluediamond_pl|Konie bojowe z kropierzem
+itm_ho_nor_war_blueplated|Koń bojowy z płytowym kropierzem
+itm_ho_nor_war_blueplated_pl|Konie bojowe z płytowym kropierzeme
+itm_ho_nor_war_bluewhite|Koń bojowy z kropierzem
+itm_ho_nor_war_bluewhite_pl|Konie bojowe z kropierzem
+itm_ho_nor_war_bluewhiteedge|Koń bojowy z kropierzem
+itm_ho_nor_war_bluewhiteedge_pl|Konie bojowe z kropierzem
+itm_ho_nor_war_lamellar|Nordycki koń bojowy z Lamelkowym kropierzem
+itm_ho_nor_war_lamellar_pl|Nordycki koń bojowy z Lamelkowym kropierzem
+itm_ho_nor_war_marked|Koń bojowy ze znaczonym kropierzem
+itm_ho_nor_war_marked_pl|Konie bojowe ze znaczonym kropierzem
+itm_ho_rho_war_chain|Koń bojowy z kolczym kropierzem
+itm_ho_rho_war_chain_pl|Konie bojowe z kolczym kropierzem
+itm_ho_rho_charger_chain|Ciężki koń bojowy z kolczym kropierzem
+itm_ho_rho_charger_chain_pl|Ciężkie konie bojowe z kolczym kropierzem
+itm_ho_rho_cata_longbrown|Lekkozbrojny koń katafraktów
+itm_ho_rho_cata_longbrown_pl|Lekkozbrojne konie katafraktów
+itm_ho_rho_cata_longgrey|Lekkozbrojny koń katafraktów
+itm_ho_rho_cata_longgrey_pl|Lekkozbrojne konie katafraktów
+itm_ho_rho_cata_longyellow|Lekkozbrojny koń katafraktów
+itm_ho_rho_cata_longyellow_pl|Lekkozbrojne konie katafraktów
+itm_ho_rho_long_goat|Koń bojowy z długim kropierzem
+itm_ho_rho_long_goat_pl|Konie bojowe z długim kropierzem
+itm_ho_rho_long_greenpurple|Koń bojowy z długim kropierzem
+itm_ho_rho_long_greenpurple_pl|Konie bojowe z długim kropierzem
+itm_ho_rho_long_rhodok|Koń bojowy z długim kropierzem
+itm_ho_rho_long_rhodok_pl|Konie bojowe z długim kropierzem
+itm_ho_rho_war_bay|Gniady Koń bojowy
+itm_ho_rho_war_bay_pl|Gniade konie bojowe
+itm_ho_rho_war_blackmailed|Czarny pocztowy koń vojowy
+itm_ho_rho_war_blackmailed_pl|Czarne pocztowe konie bojowe 
+itm_ho_rho_war_brown|Brązowy koń bojowy
+itm_ho_rho_war_brown_pl|Brązowy koń bojowy
+itm_ho_rho_war_deergreen|Koń bojowy z kropierzem
+itm_ho_rho_war_deergreen_pl|Konie bojowe z kropierzem
+itm_ho_rho_war_holyblack|Święty koń bojowy
+itm_ho_rho_war_holyblack_pl|Święte konie bojowe
+itm_ho_rho_war_royalrhodok|Rhodocki królewski Ciężkie koń bojowy
+itm_ho_rho_war_royalrhodok_pl|Rhodockie królewskie ciężkie konie bojowe
+itm_ho_sar_war_golden|Koń bojowy z kropierzem
+itm_ho_sar_war_golden_pl|Konie bojowe z kropierzem
+itm_ho_sar_charger_sarranid|Sarranidzki ciężki koń bojowy
+itm_ho_sar_charger_sarranid_pl|Sarranidzkie ciezkie konie bojowe
+itm_ho_sar_cata_lamellar|Lekkozbrojny koń katafraktów
+itm_ho_sar_cata_lamellar_pl|Lekkozbrojne konie katafraktów
+itm_ho_sar_long_allah|Koń bojowy Allaha z długim kropierzem
+itm_ho_sar_long_allah_pl|Konie bojowe Allaha z długim kropierzem
+itm_ho_sar_long_arabic|Arabski koń bojowy z długim kropierzem
+itm_ho_sar_long_arabic_pl|Arabski konie bojowe z długim kropierzem
+itm_ho_sar_long_sarranid|Sarranidzki koń bojowy z długim kropierzem
+itm_ho_sar_long_sarranid_pl|Sarranidzkie konie bojowe z długim kropierzeme
+itm_ho_sar_long_sarranidsouthern|Sarranidzki koń bojowy z długim kropierzem
+itm_ho_sar_long_sarranidsouthern_pl|Sarranidzkie konie bojowe z długim kropierzeme
+itm_ho_sar_long_tughra|Koń bojowy z długim kropierzem
+itm_ho_sar_long_tughra_pl|Konie bojowe z długim kropierzem
+itm_ho_sar_war_banded|Opasany koń bojowy
+itm_ho_sar_war_banded_pl|Opasane konie bojowe
+itm_ho_sar_war_decorated|Ceremonialny koń bojowy
+itm_ho_sar_war_decorated_pl|Ceremonialne konie bojowe
+itm_ho_sar_war_goldenchainscale|Koń bojowy z kolczym kropierzem
+itm_ho_sar_war_goldenchainscale_pl|Konie bojowe z kolczym kropierzem
+itm_ho_sar_war_maillebrown|Koń bojowy z kolczym kropierzem
+itm_ho_sar_war_maillebrown_pl|Konie bojowe z kolczym kropierzem
+itm_ho_sar_war_sarranideastern|Sarranidzki koń bojowy
+itm_ho_sar_war_sarranideastern_pl|Sarranidzkie konie bojowe
+itm_ho_sar_war_sarranidwestern|Sarranidzki koń bojowy
+itm_ho_sar_war_sarranidwestern_pl|Sarranidzkie konie bojowe
+itm_ho_sar_war_yellowroyal|Królewski koń bojowy
+itm_ho_sar_war_yellowroyal_pl|Królewskie konie bojowe
+itm_ho_pla_charger_highlander|Ciężki koń bojowy z wyżyn
+itm_ho_pla_charger_highlander_pl|Ciężkie konie bojowe z wyżyn
+itm_ho_pla_charger_plated|Ciężki koń bojowy z płytowym kropierzem
+itm_ho_pla_charger_plated_pl|Ciężkie konie bojowe z płytowym kropierzem
+itm_ho_pla_elephant_battle|Słoń bojowy
+itm_ho_pla_elephant_battle_pl|Słonie bojowe
+itm_ho_pla_war_gerulfingen|Koń bojowy Gerulfingenów
+itm_ho_pla_war_gerulfingen_pl|Konie bojowy Gerulfingenów
+itm_ho_pla_hunting_mailed|Pocztowy koń podjazdowy 
+itm_ho_pla_hunting_mailed_pl|Pocztowe konie podjazdowe
+itm_ho_pla_long_crossyellow|Koń bojowy z długim kropierzem
+itm_ho_pla_long_crossyellow_pl|Konie bojowe z długim kropierzem
+itm_ho_pla_long_eaglewhite|Koń bojowy z długim kropierzem
+itm_ho_pla_long_eaglewhite_pl|Konie bojowe z długim kropierzem
+itm_ho_pla_long_eagleyellow|Koń bojowy z długim kropierzem
+itm_ho_pla_long_eagleyellow_pl|Konie bojowe z długim kropierzem
+itm_ho_pla_long_hospitallerblack|Koń bojowy z długim kropierzem
+itm_ho_pla_long_hospitallerblack_pl|Konie bojowe z długim kropierzem
+itm_ho_pla_long_hospitallerwhite|Koń bojowy z długim kropierzem
+itm_ho_pla_long_hospitallerwhite_pl|Konie bojowe z długim kropierzem
+itm_ho_pla_long_royal|Królewski koń bojowy z długim kropierzem
+itm_ho_pla_long_royal_pl|Królewskie konie bojowe z długim kropierzem
+itm_ho_pla_war_blackcross|Krzyżacki koń bojowy 
+itm_ho_pla_war_blackcross_pl|Krzyżackie konie bojowe
+itm_ho_pla_war_holycalradian|Święty Calradyjski koń bojowy
+itm_ho_pla_war_holycalradian_pl|Święte Calradyjskie konie bojowe
+itm_ho_pla_war_imperial|Cesarski koń bojowy
+itm_ho_pla_war_imperial_pl|Cesarskie konie bojowe
+itm_ho_pla_war_royalcross|Królewski koń bojowy z krzyżem
+itm_ho_pla_war_royalcross_pl|Królewskie konie bojowe z krzyżem
+itm_ho_pla_war_templar|Koń bojowy Templariuszy
+itm_ho_pla_war_templar_pl|Konie bojowe Templariuszy
+itm_ho_pla_war_thinredcross|Jerozolimski konie bojowe
+itm_ho_pla_war_thinredcross_pl|Jerozolimski konie bojowe
+itm_we_swa_axe_hatchet|Toporek
+itm_we_swa_axe_hatchet_pl|Toporki
+itm_we_swa_axe_swadian|Swadiański topór
+itm_we_swa_axe_swadian_pl|Swadiańskie topory
+itm_we_vae_axe_onehanded|Topór 1-ręczny
+itm_we_vae_axe_onehanded_pl|Topory 1-ręczne
+itm_we_vae_axe_vaegir|Vaegirski topór
+itm_we_vae_axe_vaegir_pl|Vaegirskie topory
+itm_we_khe_axe_steppe|Stepowy topór
+itm_we_khe_axe_steppe_pl|Stepowe topory
+itm_we_khe_axe_khergit|Khergicki topór
+itm_we_khe_axe_khergit_pl|Khergickie topory
+itm_we_nor_axe_jomsviking|Topór Jomsvikingów
+itm_we_nor_axe_jomsviking_pl|Topory Jomsvikingów
+itm_we_nor_axe_danox|Danox
+itm_we_nor_axe_danox_pl|Danoxy
+itm_we_nor_axe_haloygox|Haloygox
+itm_we_nor_axe_haloygox_pl|Haloygoxy
+itm_we_nor_axe_breithofudox|Breithofudox
+itm_we_nor_axe_breithofudox_pl|Breithofudoxy
+itm_we_nor_axe_trondrox|Trondrox
+itm_we_nor_axe_trondrox_pl|Trondroxy
+itm_we_nor_axe_hoggox|Hoggox
+itm_we_nor_axe_hoggox_pl|Hoggoxy
+itm_we_nor_axe_engle|Topór Engle
+itm_we_nor_axe_engle_pl|Topory Engle
+itm_we_rho_axe_pick|Kilof
+itm_we_rho_axe_pick_pl|Kilofy
+itm_we_rho_axe_pick_military|Czekan
+itm_we_rho_axe_pick_military_pl|Czekany
+itm_we_rho_axe_pickrusty|Zardzewiały czekan
+itm_we_rho_axe_pickrusty_pl|Zardzewiałe czekany
+itm_we_rho_axe_pickminer|Czekan górniczy
+itm_we_rho_axe_pickminer_pl|Czekany górnicze
+itm_we_rho_axe_battleshort|Krótki Rhodocki topór bojowy
+itm_we_rho_axe_battleshort_pl|Krótkie Rhodockie topory bojowe
+itm_we_rho_axe_battle|Rhodocki topór bojowy
+itm_we_rho_axe_battle_pl|Rhodockie topory bojowe
+itm_we_sar_axe_onehanded|Pustynny topór
+itm_we_sar_axe_onehanded_pl|Pustynne topory
+itm_we_sar_axe_battle|Żelazny topór bojowy
+itm_we_sar_axe_battle_pl|Żelazne topory bojowe
+itm_we_sar_axe_wariron|Żelazny topór wojenny
+itm_we_sar_axe_wariron_pl|Żelazne topory wojenne
+itm_we_sar_axe_turkish|Turecki topór
+itm_we_sar_axe_turkish_pl|Tureckie topory
+itm_we_pla_axe_battleshort|Którki topór bojowy
+itm_we_pla_axe_battleshort_pl|Krótkie topory bojowe
+itm_we_pla_axe_battle|Topór bojowy
+itm_we_pla_axe_battle_pl|Topory bojowe
+itm_we_swa_axe_voulge|Topór Voulge
+itm_we_swa_axe_voulge_pl|Topory Voulge
+itm_we_swa_axe_voulgeshort|Skrócony Voulge
+itm_we_swa_axe_voulgeshort_pl|Skrócone Voulge
+itm_we_swa_axe_voulgelong|Długi Voulge
+itm_we_swa_axe_voulgelong_pl|Długie Voulge
+itm_we_vae_axe_bardiche|Topór Bardiche
+itm_we_vae_axe_bardiche_pl|Topory Bardiche
+itm_we_vae_axe_bardichelong|Długi Bardiche
+itm_we_vae_axe_bardichelong_pl|Długie Bardiche
+itm_we_vae_axe_bardichegreat|Wielki Bardiche
+itm_we_vae_axe_bardichegreat_pl|Wielkie Bardiche
+itm_we_vae_axe_bardichegreatlong|Bardzo długi Bardiche
+itm_we_vae_axe_bardichegreatlong_pl|Bardzo długie Bardiche
+itm_we_khe_axe_voulge|Khergicki Voulge
+itm_we_khe_axe_voulge_pl|Khergickie Voulge
+itm_we_nor_axe_hedmarkox_tveirhendr|Topór 2-ręczny Hedmarkox
+itm_we_nor_axe_hedmarkox_tveirhendr_pl|Topory 2-ręczne Hedmarkoxy
+itm_we_nor_axe_danox_tveirhendr|Topór 2-ręczny Danox
+itm_we_nor_axe_danox_tveirhendr_pl|Topory 2-ręczne Danoxy
+itm_we_nor_axe_nordic|Nordycki wielki topór
+itm_we_nor_axe_nordic_pl|Nordyckie wielkie topory
+itm_we_nor_axe_danelong|Długi duński topór
+itm_we_nor_axe_danelong_pl|Długie duńskie topory
+itm_we_nor_axe_danelong_alt|Długi duński topór
+itm_we_nor_axe_danelong_alt_pl|Długie duńskie topory
+itm_we_nor_axe_beardedlight|Lekki brodaty topór
+itm_we_nor_axe_beardedlight_pl|Lekkie brodate topory
+itm_we_nor_axe_beardedlight_alt|Lekki brodaty topór
+itm_we_nor_axe_beardedlight_alt_pl|Lekkie brodate topory
+itm_we_nor_axe_bearded|Brodaty topór
+itm_we_nor_axe_bearded_pl|Brodate Axe
+itm_we_nor_axe_bearded_alt|Brodaty Axe
+itm_we_nor_axe_bearded_alt_pl|Brodate Axe
+itm_we_nor_axe_hatchet|Lekki nordycki toporek
+itm_we_nor_axe_hatchet_pl|Lekkie nordyckie topory
+itm_we_nor_axe_nordicwar|Nordycki Topór wojenny
+itm_we_nor_axe_nordicwar_pl|Nordyckie topory wojenne
+itm_we_rho_axe_knight|Topór rycerski
+itm_we_rho_axe_knight_pl|Topory rycerskie
+itm_we_sar_axe_war|Sarranidzki topór wojenny
+itm_we_sar_axe_war_pl|Sarranidzkie topory wojenne
+itm_we_sar_axe_battletwo|Sarranidzki topór bitwny
+itm_we_sar_axe_battletwo_pl|Sarranidzkie topory bitewne
+itm_we_pla_axe_twohanded|2-ęczny topór wojenny
+itm_we_pla_axe_twohanded_pl|2-ręczne topory wojenne
+itm_we_pla_axe_great|Wielki topór
+itm_we_pla_axe_great_pl|Wielkie topory wojenne
+itm_we_gen_blunt_torch|Pochodnia
+itm_we_gen_blunt_torch_pl|Pochodnie
+itm_we_gen_blunt_keys|Toporek
+itm_we_gen_blunt_keys_pl|Toporki               
+itm_we_swa_blunt_club|Swadiańska pałka
+itm_we_swa_blunt_club_pl|Swadiańskie pałki
+itm_we_swa_blunt_morningstar|Swadiański Morningstar
+itm_we_swa_blunt_morningstar_pl|Swadiańskie Morningstary
+itm_we_swa_blunt_clubspiked|Pałka z kolcem
+itm_we_swa_blunt_clubspiked_pl|Pałki z kolcem
+itm_we_swa_blunt_morningstar_small|Mały swadniański Morningstar
+itm_we_swa_blunt_morningstar_small_pl|Małe swadiańskie Morningstar
+itm_we_vae_blunt_club|Vaegirska pałka
+itm_we_vae_blunt_club_pl|Vaegirskie pałki
+itm_we_vae_blunt_hammer|Młot
+itm_we_vae_blunt_hammer_pl|Młóty
+itm_we_vae_blunt_hammerthick|Ciężki młot
+itm_we_vae_blunt_hammerthick_pl|Ciężkie młoty
+itm_we_vae_blunt_hammersleek|Lśniący młot
+itm_we_vae_blunt_hammersleek_pl|Lsniące młoty
+itm_we_vae_blunt_hammerempirewar|Cesarski młot wojenny
+itm_we_vae_blunt_hammerempirewar_pl|Cesarskie młoty wojenne
+itm_we_vae_blunt_hammermilitary|Młot wojskowy
+itm_we_vae_blunt_hammermilitary_pl|Młoty wojskowy
+itm_we_vae_blunt_hammerfootman|Młot piechoty
+itm_we_vae_blunt_hammerfootman_pl|Młoty piechoty
+itm_we_vae_blunt_hammerempire|Cesarski młot
+itm_we_vae_blunt_hammerempire_pl|Cesarskie młoty
+itm_we_vae_blunt_hammerwar|Młot wojenny
+itm_we_vae_blunt_hammerwar_pl|Młoty wojenne
+itm_we_vae_blunt_hammerknight|Młot rycerski
+itm_we_vae_blunt_hammerknight_pl|Młoty rycerskie
+itm_we_vae_blunt_hammerbastard|Większy młoty rycerski
+itm_we_vae_blunt_hammerbastard_pl|Większe młoty rycerski
+itm_we_vae_blunt_hammerinquisition|Młot Inkwizycji
+itm_we_vae_blunt_hammerinquisition_pl|Młoty Inkwizycji
+itm_we_khe_blunt_club|Khergicka pałka
+itm_we_khe_blunt_club_pl|Khergickie pałki
+itm_we_nor_blunt_stick|Drewniany kij
+itm_we_nor_blunt_stick_pl|Drewniane kije
+itm_we_rho_blunt_club|Rhodockie pałka
+itm_we_rho_blunt_club_pl|Rhodocka pałki
+itm_we_sar_blunt_club|Sarranidzkie pałka
+itm_we_sar_blunt_club_pl|Sarranidzkie pałki
+itm_we_sar_blunt_maceiron|Żelazny buzdygan
+itm_we_sar_blunt_maceiron_pl|Żelazne buzdygany
+itm_we_sar_blunt_maceflanged|Buzdyzgan kołnierzowy
+itm_we_sar_blunt_maceflanged_pl|Buzdyzgany kołnierzowe
+itm_we_sar_blunt_macespiked|Buzdyzgan z kolcami
+itm_we_sar_blunt_macespiked_pl|Buzdyzgann z kolcami
+itm_we_sar_blunt_clubdesert|Pustynna pałka
+itm_we_sar_blunt_clubdesert_pl|Pustynna pałki
+itm_we_sar_blunt_macestraight|Prosty buzdyzgan
+itm_we_sar_blunt_macestraight_pl|Proste buzdyzgany
+itm_we_sar_blunt_macepointy|Buzdyzgan Pointy
+itm_we_sar_blunt_macepointy_pl|Buzdyzgany Pointy
+itm_we_sar_blunt_macefootman|Buzdyzgan piechoty
+itm_we_sar_blunt_macefootman_pl|Buzdyzgany piechoty
+itm_we_sar_blunt_macelong|Buzdyzgan kawaleryjski
+itm_we_sar_blunt_macelong_pl|Buzdyzgany kawaleryjskie
+itm_we_pla_blunt_morningstar_mercenary|Morningstar najemnika
+itm_we_pla_blunt_morningstar_mercenary_pl|Morningstary najmnika
+itm_we_pla_blunt_morningstar_squared|Buzdyzgan o kanciastym obuchu
+itm_we_pla_blunt_morningstar_squared_pl|Buzdyzgany o kanciastym obuchu
+itm_we_swa_blunt_club_long|Długa pałka z kolcem
+itm_we_swa_blunt_club_long_pl|Długa pałka z kolcem
+itm_we_swa_blunt_morningstar_large|Duży Morningstar
+itm_we_swa_blunt_morningstar_large_pl|Duże Morningstary
+itm_we_vae_blunt_maul|Maul
+itm_we_vae_blunt_maul_pl|Maul'y
+itm_we_vae_blunt_sledgehammer|Młot kowalski
+itm_we_vae_blunt_sledgehammer_pl|Młoty kowalskie
+itm_we_vae_blunt_greathammer|Wielki młot
+itm_we_vae_blunt_greathammer_pl|Wielkie młoty
+itm_we_vae_blunt_maul_magnus|Maul maga
+itm_we_vae_blunt_maul_magnus_pl|Maul'y maga
+itm_we_vae_blunt_maul_manhunter|Maul łówców głów
+itm_we_vae_blunt_maul_manhunter_pl|Maul'y łowców gów
+itm_we_vae_blunt_mallet|Knypel
+itm_we_vae_blunt_mallet_pl|Knyple
+itm_we_sar_blunt_maceknobbedlong|Guzowaty buzdyzgan z długim trzonem
+itm_we_sar_blunt_maceknobbedlong_pl|Guzowaty buzdyzgan z długim trzonem
+itm_we_sar_blunt_macespikedlong|Buzdyzgan z kolcami z długim trzonem
+itm_we_sar_blunt_macespikedlong_pl|Buzdyzgany z kolcami z długim trzonem
+itm_we_sar_blunt_mace_ironlong|Długi żelazny buzdyzgan
+itm_we_sar_blunt_mace_ironlong_pl|Długie żelazne buzdyzgany
+itm_we_sar_blunt_mace_twohanded|2-ręczny byzdyzgan
+itm_we_sar_blunt_mace_twohanded_pl|2-ręczne buzdyzgany
+itm_we_pla_blunt_goedendag|Goedendag
+itm_we_pla_blunt_goedendag_pl|Goedendagi
+itm_we_pla_blunt_becdecorbin|Bec de Corbin
+itm_we_pla_blunt_becdecorbin_pl|Bec de Corbiny
+itm_we_pla_blunt_crowhammer|Młot z kruczym obuchem
+itm_we_pla_blunt_crowhammer_pl|Młoty z kruczym obuchem
+itm_we_swa_spear_boar|Włócznia na dzika
+itm_we_swa_spear_boar_pl|Włócznie na dziki
+itm_we_swa_spear_glaive_small|Mała glewia
+itm_we_swa_spear_glaive_small_pl|Małe glewie
+itm_we_swa_spear_glaive|Glewia
+itm_we_swa_spear_glaive_pl|Glewie
+itm_we_swa_spear_bill_english|Angielska halabanrda
+itm_we_swa_spear_bill_english_pl|Angielskie halabanrdy
+itm_we_swa_spear_bill|Halabarda
+itm_we_swa_spear_bill_pl|Halabardy
+itm_we_swa_spear_glaive_long|Długa Glewia
+itm_we_swa_spear_glaive_long_pl|Długie glewie
+itm_we_swa_spear_glaive_hooked|Glewia zakonczona hakiem
+itm_we_swa_spear_glaive_hooked_pl|Glewia zakończona hakiem
+itm_we_vae_spear_scythe|Spisa
+itm_we_vae_spear_scythe_pl|Spisy
+itm_we_vae_spear_scythe_military|Spisa żołnierska
+itm_we_vae_spear_scythe_military_pl|Spisy żołnierskie
+itm_we_vae_spear_scythe_shortened|Skrócona spisa żołnierska
+itm_we_vae_spear_scythe_shortened_pl|Skrócone spisy żołnierskie
+itm_we_vae_spear_polehammer|Vaegirski długi młot
+itm_we_vae_spear_polehammer_pl|Vaegirskie długie młoty
+itm_we_vae_spear_vaegir|Vaegirska włócznia
+itm_we_vae_spear_vaegir_pl|Vaegirskie włócznie
+itm_we_vae_spear_pike|Vaegirska pika
+itm_we_vae_spear_pike_pl|Vaegirskie piki
+itm_we_vae_spear_polehammer_short|Skrócony długi młot
+itm_we_vae_spear_polehammer_short_pl|Skrócone długie młoty
+itm_we_vae_spear_polehammer_knight|Długi młot rycerski
+itm_we_vae_spear_polehammer_knight_pl|Długie młoty rycerskie
+itm_we_vae_spear_polehammer_knightlong|Bardzo długi młot rycerski
+itm_we_vae_spear_polehammer_knightlong_pl|Bardzo długie młoty rycerskie
+itm_we_khe_spear_staff|Khergicka pała
+itm_we_khe_spear_staff_pl|Khergitckie pały
+itm_we_khe_spear_bamboolong|Bambusowa długa włócznia
+itm_we_khe_spear_bamboolong_pl|Bambusowe długie włócznie
+itm_we_khe_spear_nagita|Nagita
+itm_we_khe_spear_nagita_pl|Nagity
+itm_we_khe_spear_viper|Włócznia znaku żmiji
+itm_we_khe_spear_viper_pl|Włócznie znaku zmiji
+itm_we_khe_spear_haftedblade|Ostrzee zamocowane na trzonku
+itm_we_khe_spear_haftedblade_pl|Ostrza zamocowane na trzonkach
+itm_we_khe_spear_nagitakhergit|Khergicka Nagita
+itm_we_khe_spear_nagitakhergit_pl|Khergickie Nagity
+itm_we_khe_spear_short|Khergitcka krótka włócznia
+itm_we_khe_spear_short_pl|Khergickie którkie włócznie
+itm_we_khe_spear_khergit|Khergicka włócznia
+itm_we_khe_spear_khergit_pl|Khergickie włócznie
+itm_we_khe_spear_hookedspear|Któtka włócznia zakończona hakiem
+itm_we_khe_spear_hookedspear_pl|Krótkie włócznie zakończone hakiem
+itm_we_khe_spear_hook|Khergicki hak
+itm_we_khe_spear_hook_pl|Khergickie haki
+itm_we_khe_spear_hookpointy|Hak Pointy
+itm_we_khe_spear_hookpointy_pl|Hak Pointy
+itm_we_khe_spear_dragon|Włócznia znaku smoka
+itm_we_khe_spear_dragon_pl|Włócznie znaku smoka
+itm_we_khe_spear_nagitablack|Czarna Nagita
+itm_we_khe_spear_nagitablack_pl|Czarne Nagity
+itm_we_khe_spear_nagitadecorated|Ceremonialna Nagita
+itm_we_khe_spear_nagitadecorated_pl|Ceremonialne Nagita
+itm_we_nor_spear_sviar|Włócznia Sviar
+itm_we_nor_spear_sviar_pl|WłócznieSviar
+itm_we_nor_spear_svia|Włócznia Svia
+itm_we_nor_spear_svia_pl|Włócznie Svia
+itm_we_nor_spear_hoggkesja|Włócznia Hoggkesja
+itm_we_nor_spear_hoggkesja_pl|Włócznie Hoggkesja
+itm_we_nor_spear_krokaspjott_kastad|Włócznia Kastad Krokaspjott
+itm_we_nor_spear_krokaspjott_kastad_pl|Włócznie Kastad Krokaspjott
+itm_we_nor_spear_hoggspjott_langr|Włócznia Langr Hoggspjott
+itm_we_nor_spear_hoggspjott_langr_pl|Włócznie Langr Hoggspjott
+itm_we_nor_spear_spjotkesja|Włócznia Spjotkesja
+itm_we_nor_spear_spjotkesja_pl|Włócznie Spjotkesja
+itm_we_nor_spear_spjot|Włócznia Spjot
+itm_we_nor_spear_spjot_pl|Włócznie Spjot
+itm_we_nor_spear_fjadraspjot|Włócznia Fjadraspjot
+itm_we_nor_spear_fjadraspjot_pl|Włócznie Fjadraspjot
+itm_we_nor_spear_krokaspjott|Włócznia Krokaspjott
+itm_we_nor_spear_krokaspjott_pl|Włócznie Krokaspjott
+itm_we_nor_spear_krokaspjott_langr|Dłuższa włócznia Krokaspjott
+itm_we_nor_spear_krokaspjott_langr_pl|Dłuższa włócznia Krokaspjott
+itm_we_nor_spear_nordic|Nordycka włócznia
+itm_we_nor_spear_nordic_pl|Nordyckie włócznie
+itm_we_nor_spear_long|Długa nordycka włócznia
+itm_we_nor_spear_long_pl|Długie nordyckie włócznie
+itm_we_nor_spear_reinforced|Wzmacniana nordycka włócznia
+itm_we_nor_spear_reinforced_pl|Wzmacniane nordyckie włócznie
+itm_we_rho_spear_fork_pitch|Widły
+itm_we_rho_spear_fork_pitch_pl|Widły
+itm_we_rho_spear_fork_military|Widły żołnierskie
+itm_we_rho_spear_fork_military_pl|Widły żołnierskie
+itm_we_rho_spear_fork_battle|Widły bojowe
+itm_we_rho_spear_fork_battle_pl|Widły wojowe
+itm_we_rho_spear_mountain|Górska włócznia
+itm_we_rho_spear_mountain_pl|Górskie włócznie
+itm_we_rho_spear_large|Wielka włócznia
+itm_we_rho_spear_large_pl|Wielkie włócznie
+itm_we_rho_spear_phalanx|Falangijska pika
+itm_we_rho_spear_phalanx_pl|Falangijska pika
+itm_we_rho_spear_scorpion|Włócznia Scorpion
+itm_we_rho_spear_scorpion_pl|Włócznie Scorpion
+itm_we_rho_spear_manhunter|Włócznia łowców głów
+itm_we_rho_spear_manhunter_pl|Włócznie łowców głów
+itm_we_rho_spear_mountian_short|Krótka górska włócznia
+itm_we_rho_spear_mountian_short_pl|Krótkie górskie włócznie
+itm_we_rho_spear_hunting|Włócznia łowiecka
+itm_we_rho_spear_hunting_pl|Włócznie łowieckie
+itm_we_rho_spear_long|Długa włócznia
+itm_we_rho_spear_long_pl|Długie włócznie
+itm_we_rho_spear_pike_short|Krótka pika
+itm_we_rho_spear_pike_short_pl|Krótkie piki
+itm_we_rho_spear_pike|Pika
+itm_we_rho_spear_pike_pl|Piki
+itm_we_rho_spear_phalanx_short|Krótka falangijska pika
+itm_we_rho_spear_phalanx_short_pl|Krótkie falangijskie piki
+itm_we_rho_spear_pike_long|Długa pika
+itm_we_rho_spear_pike_long_pl|Długie piki
+itm_we_rho_spear_phalanx_long|Długa falangijska pika
+itm_we_rho_spear_phalanx_long_pl|Długie falangijskie piki
+itm_we_sar_spear_staff|Pałka
+itm_we_sar_spear_staff_pl|Pałka
+itm_we_sar_spear_staff_quarter|ćwierćpłka
+itm_we_sar_spear_staff_quarter_pl|Ćwierćpałki
+itm_we_sar_spear_staff_iron|żelazna pałka
+itm_we_sar_spear_staff_iron_pl|Żelazne pałki
+itm_we_sar_spear_pikestrong|Mocna pustynna pika
+itm_we_sar_spear_pikestrong_pl|Mocne pustynne piki
+itm_we_sar_spear_pike|Pustynna pika
+itm_we_sar_spear_pike_pl|Pustynne piki
+itm_we_sar_spear_halbert|Pustynna halabarda
+itm_we_sar_spear_halbert_pl|Pustynne halabardy
+itm_we_sar_spear_halbertlong|Długa pustynna halabarda
+itm_we_sar_spear_halbertlong_pl|Długie pustynne halabardy
+itm_we_pla_spear_crook_shepperd|Laska pasterska
+itm_we_pla_spear_crook_shepperd_pl|Laski pasterskie
+itm_we_pla_spear_staff_bishop|Pastorał
+itm_we_pla_spear_staff_bishop_pl|Pastorały
+itm_we_pla_spear_halberd|Halabarda
+itm_we_pla_spear_halberd_pl|Halanarda
+itm_we_pla_spear_halberd_dark|Ciemna halabarda
+itm_we_pla_spear_halberd_dark_pl|Ciemne halabardy
+itm_we_pla_spear_halberd_elite|Elitarna halabarda
+itm_we_pla_spear_halberd_elite_pl|Elitarne halabardy
+itm_we_pla_spear_halberd_bearded|Brodata halabarda
+itm_we_pla_spear_halberd_bearded_pl|Brodate halabardy
+itm_we_pla_spear_halberd_long|Długa halabarda
+itm_we_pla_spear_halberd_long_pl|Długie halabardy
+itm_we_pla_spear_halberd_glaive|Halabarda glewie
+itm_we_pla_spear_halberd_glaive_pl|Halabardy glewie
+itm_we_pla_spear_halberd_pointy|Halabarda Pointy
+itm_we_pla_spear_halberd_pointy_pl|Halabardy Pointy
+itm_we_pla_spear_halberd_ornate|Ozdobna halabarda
+itm_we_pla_spear_halberd_ornate_pl|Ozdobne halabardy
+itm_we_pla_spear_halberd_sleek|Gładka halabarda
+itm_we_pla_spear_halberd_sleek_pl|Gładkie halabardy
+itm_we_pla_spear_halberd_alps|Alpejska halabarda
+itm_we_pla_spear_halberd_alps_pl|Alpejskie halabardy
+itm_we_pla_spear_halberd_late|Późna halabarda
+itm_we_pla_spear_halberd_late_pl|Póxne halabardy
+itm_we_pla_spear_halberd_swiss|Szwajcarska halabarda
+itm_we_pla_spear_halberd_swiss_pl|Szwajcarskie halabardy
+itm_we_pla_spear_halberd_mountain|Górska halabarda
+itm_we_pla_spear_halberd_mountain_pl|Górskie halabardy
+itm_we_pla_spear_halberd_hardened|Hartowana halabarda
+itm_we_pla_spear_halberd_hardened_pl|Hartowane halabardy
+itm_we_pla_spear_halberd_coloured|Kolorowa Halabarda
+itm_we_pla_spear_halberd_coloured_pl|Kolorowe halabardy
+itm_we_pla_spear_halberd_colouredlong|Długa kolorowa halabarda
+itm_we_pla_spear_halberd_colouredlong_pl|Długie kolorowe halabardy
+itm_we_swa_spear_lance_jousting|Potyczkowa lanca
+itm_we_swa_spear_lance_jousting_pl|Potyczkowe lance
+itm_we_swa_spear_lance_light|Lekka lanca
+itm_we_swa_spear_lance_light_pl|Lekkie lance
+itm_we_swa_spear_lance_heavy|Ciężka lanca
+itm_we_swa_spear_lance_heavy_pl|Ciężkie lance
+itm_we_swa_spear_lance_great|Wielka lanca
+itm_we_swa_spear_lance_great_pl|Wielkie lance
+itm_we_swa_spear_lance_colouredbw|Biało-czarna lanca
+itm_we_swa_spear_lance_colouredbw_pl|Biało-czarne lance
+itm_we_swa_spear_lance_colouredby|Niebiesko-żółta lanca
+itm_we_swa_spear_lance_colouredby_pl|Niebiesko-żółte lance
+itm_we_swa_spear_lance_colouredrb|Czerwono-czarna lanca
+itm_we_swa_spear_lance_colouredrb_pl|Czerwono-czarne lance
+itm_we_swa_spear_lance_colouredry|Czerwono-żółta lanca
+itm_we_swa_spear_lance_colouredry_pl|Czerono-żółte lance
+itm_we_swa_spear_lance_colouredwb|Biało-czarna lanca
+itm_we_swa_spear_lance_colouredwb_pl|Biało-czarne lance
+itm_we_swa_spear_lance_colouredwbl|Biało-niebieska lanca
+itm_we_swa_spear_lance_colouredwbl_pl|Biało-niebieskie lance
+itm_we_swa_spear_lance_colouredwr|Biało-czerwona lanca
+itm_we_swa_spear_lance_colouredwr_pl|Biało-czerwone lance
+itm_we_swa_spear_lance_iron|Żelazna lanca
+itm_we_swa_spear_lance_iron_pl|Żelazne lance
+itm_we_vae_spear_lance|Vaegirska lanca
+itm_we_vae_spear_lance_pl|Vaegirskie lance
+itm_we_vae_spear_lancedouble|Dwustronna lanca
+itm_we_vae_spear_lancedouble_pl|Dwustronne lance
+itm_we_vae_spear_lancefootman|Piesza lanca
+itm_we_vae_spear_lancefootman_pl|Piesze lance
+itm_we_khe_spear_lance|Khergicka lanca
+itm_we_khe_spear_lance_pl|Khergickie lance
+itm_we_khe_spear_lanceflag_a|Khergicka lanca z niebieską chorągwią
+itm_we_khe_spear_lanceflag_a_pl|Khergickie lance z niebieską chorągwią
+itm_we_khe_spear_lancehook|Lanca zakończona hakiem
+itm_we_khe_spear_lancehook_pl|Lance zakończone hakiem
+itm_we_khe_spear_lanceflag_b|Khergicka lanca z żółtą chorągwią
+itm_we_khe_spear_lanceflag_b_pl|Khergickie lance z żółtą chorągwią
+itm_we_khe_spear_lanceflag_c|Khergicka lanca z żółtą chorągwią
+itm_we_khe_spear_lanceflag_c_pl|Khergickie lance z żółtą chorągwią
+itm_we_khe_spear_lanceflag_d|Khergicka lanca z żółtą chorągwią
+itm_we_khe_spear_lanceflag_d_pl|Khergickie lance z żółtą chorągwią
+itm_we_khe_spear_lancehookdouble|Dwustronna lanca zakończona hakiem
+itm_we_khe_spear_lancehookdouble_pl|Dwustronne lance zakończone hakiem
+itm_we_nor_spear_svia_langr|Langr Svia
+itm_we_nor_spear_svia_langr_pl|Langr Svia'y
+itm_we_nor_spear_bryntvari_langr|Langr Bryntvari
+itm_we_nor_spear_bryntvari_langr_pl|Langr Bryntvari'i
+itm_we_rho_spear_lance|Rhodocka lanca
+itm_we_rho_spear_lance_pl|Rhodockie lance
+itm_we_rho_spear_lancesmall|Mała Rhodocka lanca
+itm_we_rho_spear_lancesmall_pl|Małe Rhodockie lance
+itm_we_rho_spear_lancelarge|Wielka Rhodocka lanca
+itm_we_rho_spear_lancelarge_pl|Wielkie Rhodockie lance
+itm_we_sar_spear_desert|Pustynna lanca
+itm_we_sar_spear_desert_pl|Pustynne lance
+itm_we_sar_spear_lance|Sarranidzka lanca
+itm_we_sar_spear_lance_pl|Sarranidzkie lance
+itm_we_sar_spear_lancecoloured|Malowana Sarranidzka lanca
+itm_we_sar_spear_lancecoloured_pl|Malowane Sarranidzkie lance
+itm_we_sar_spear_lancedark|Ciemna Sarranidzka lanca
+itm_we_sar_spear_lancedark_pl|Ciemne Sarranidzkie lance
+itm_we_pla_spear_lancegothic|Gotycka lanca
+itm_we_pla_spear_lancegothic_pl|Gotyckie lance
+itm_we_swa_sword_clamshelldagger|Muszlowy sztylet
+itm_we_swa_sword_clamshelldagger_pl|Muszlowe sztylery
+itm_we_swa_sword_senlac|Senlacki miecz
+itm_we_swa_sword_senlac_pl|Senlackie miecze
+itm_we_swa_sword_clamshell|Muszlowy miecz
+itm_we_swa_sword_clamshell_pl|Muszlowe miecze
+itm_we_swa_sword_knight|Rycerski miecz
+itm_we_swa_sword_knight_pl|Rycerskie miecze
+itm_we_swa_sword_lord|Miecz Swadiańskiego Lorda
+itm_we_swa_sword_lord_pl|Miecze Swadiańskich Lordów
+itm_we_swa_sword_estocdagger|Estocki sztylet
+itm_we_swa_sword_estocdagger_pl|Estockie sztylety
+itm_we_swa_sword_steel|Książęcy miecz
+itm_we_swa_sword_steel_pl|Książęce miecze
+itm_we_swa_sword_albion|Albionski miecz
+itm_we_swa_sword_albion_pl|Albionskie miecze
+itm_we_swa_sword_bayeux|Bayeukski miecz
+itm_we_swa_sword_bayeux_pl|Bayeukskie miecze
+itm_we_swa_sword_albionlong|Długi Albionski miecz
+itm_we_swa_sword_albionlong_pl|Długie Albionskie miecze
+itm_we_vae_sword_sickle|Sierp
+itm_we_vae_sword_sickle_pl|Sierpy
+itm_we_vae_sword_knife|Nóż
+itm_we_vae_sword_knife_pl|Noże
+itm_we_vae_sword_sickle_military|Wojskowy sierp
+itm_we_vae_sword_sickle_military_pl|Wojskowe sierpy
+itm_we_vae_sword_jarl|Miecz Jarla
+itm_we_vae_sword_jarl_pl|Miecze Jarlów
+itm_we_vae_sword_cleaver_military|Wojskowy tasak
+itm_we_vae_sword_cleaver_military_pl|Wojskowe tasaki
+itm_we_vae_sword_cleaver|Tasak
+itm_we_vae_sword_cleaver_pl|Tasaki
+itm_we_vae_sword_cleaver_soldier|Żołnierski tasak
+itm_we_vae_sword_cleaver_soldier_pl|Żołnierskie tasaki
+itm_we_vae_sword_sovereign|Królewski miecz
+itm_we_vae_sword_sovereign_pl|Królewskie miecze
+itm_we_vae_sword_cleaver_butcher|Rzeźnicki tasak
+itm_we_vae_sword_cleaver_butcher_pl|Rzeźnickie tasaki
+itm_we_khe_sword_dagger|Khergitcki sztylet
+itm_we_khe_sword_dagger_pl|Khergickie sztylety
+itm_we_khe_sword_executionerone|Khergitcki egzekutor
+itm_we_khe_sword_executionerone_pl|Khergickie egzekutory
+itm_we_khe_sword_nomad|Nomadzka szabla
+itm_we_khe_sword_nomad_pl|Nomadzkie szable
+itm_we_khe_sword_khergit|Khergickia szabla
+itm_we_khe_sword_khergit_pl|Khergickie szable
+itm_we_khe_sword_steppe|Stepowa szabla
+itm_we_khe_sword_steppe_pl|Stepowe szable
+itm_we_khe_sword_broad|Szeroka szabla
+itm_we_khe_sword_broad_pl|Szerokie szable
+itm_we_khe_sword_ringed|Szabla z pierścieniową rękojeścią
+itm_we_khe_sword_ringed_pl|Szable z pierścieniową rękojeścią
+itm_we_khe_sword_red|Szabla z czerwoną rękojeścią
+itm_we_khe_sword_red_pl|Szable z czerwoną rękojeścią
+itm_we_khe_sword_horse|Kawaleryjska szabla
+itm_we_khe_sword_horse_pl|Kawaleryjskie szable
+itm_we_khe_sword_mountain|Górska szabla
+itm_we_khe_sword_mountain_pl|Górskie szable
+itm_we_khe_sword_heavy|Ciężka szabla
+itm_we_khe_sword_heavy_pl|Ciężkie szable
+itm_we_nor_sword_seax|Seax
+itm_we_nor_sword_seax_pl|Seaxy
+itm_we_nor_sword_pict|Piktyjski miecz
+itm_we_nor_sword_pict_pl|Piktyjskie miecze
+itm_we_nor_sword_angle|Angolski długi miecz
+itm_we_nor_sword_angle_pl|Angolskie długie miecze
+itm_we_nor_sword_nordic|Nordycki miecz wojenny
+itm_we_nor_sword_nordic_pl|Nordyckie miecze wojenne
+itm_we_nor_sword_saxon|Saksoński miecz
+itm_we_nor_sword_saxon_pl|Saksońskie miecze
+itm_we_nor_sword_eurodino|Eurodino miecz
+itm_we_nor_sword_eurodino_pl|Eurodino miecze
+itm_we_nor_sword_leuku|Leuku
+itm_we_nor_sword_leuku_pl|Leuki
+itm_we_nor_sword_seax_long|Długi Seax
+itm_we_nor_sword_seax_long_pl|długie Seaxy
+itm_we_nor_sword_berserkr|Berserkerski miecz
+itm_we_nor_sword_berserkr_pl|Berserkerie miecze
+itm_we_nor_sword_clontarf|Clontarfski miecz
+itm_we_nor_sword_clontarf_pl|Clontarfskie miecze
+itm_we_nor_sword_pictlong|Piktyjski długi miecz
+itm_we_nor_sword_pictlong_pl|Piktyjskie długie miecze
+itm_we_nor_sword_celtic|Celtycki miecz
+itm_we_nor_sword_celtic_pl|Celtyckie miecze
+itm_we_rho_sword_rondeldagger|Sztylet tarczkowy
+itm_we_rho_sword_rondeldagger_pl|Sztylety tarczkowe
+itm_we_rho_sword_short|Rhodocki krótki miecz
+itm_we_rho_sword_short_pl|Rhodockie krótkie miecze
+itm_we_rho_sword_squire|Miecz giermka
+itm_we_rho_sword_squire_pl|Miecze giermków
+itm_we_rho_sword_castellan|Miecz kasztelański
+itm_we_rho_sword_castellan_pl|Miecze kasztelańskie
+itm_we_rho_sword_estoc_small|Mały Estoc
+itm_we_rho_sword_estoc_small_pl|Małe Estocki
+itm_we_rho_sword_general|Miecz generalski
+itm_we_rho_sword_general_pl|Miecze generalskie
+itm_we_rho_sword_rondel|Miecz taczkowy
+itm_we_rho_sword_rondel_pl|Miecze tarczkowe
+itm_we_rho_sword_killerdagger|Sztylet zabójcy
+itm_we_rho_sword_killerdagger_pl|Sztylety zabójcy
+itm_we_rho_sword_estoc_slender|Slender Estoc
+itm_we_rho_sword_estoc_slender_pl|Slender Estocki
+itm_we_rho_sword_milanese|Miediolański krótki miecz
+itm_we_rho_sword_milanese_pl|Mediolańskie krótkie miecze
+itm_we_rho_sword_espada_eslavona|Miecz Eslavona
+itm_we_rho_sword_espada_eslavona_pl|Miecze Eslavone
+itm_we_rho_sword_falchion_italian|Włoski bułat
+itm_we_rho_sword_falchion_italian_pl|Włoskie bułaty
+itm_we_rho_sword_italian|Włoski miecz
+itm_we_rho_sword_italian_pl|Włoskie miecze
+itm_we_rho_sword_espada_eslavona_large|Większy miecz Eslavona
+itm_we_rho_sword_espada_eslavona_large_pl|Większe miecze Eslavona
+itm_we_sar_sword_khyber|Khyberski nóż
+itm_we_sar_sword_khyber_pl|Khyberskie noże
+itm_we_sar_sword_sarranid|Sarranidzki miecz
+itm_we_sar_sword_sarranid_pl|Sarranidzkie miecze
+itm_we_sar_sword_arming|Sarranidzki prosty miecz
+itm_we_sar_sword_arming_pl|Sarranidzkie proste miecze
+itm_we_sar_sword_cavalry|Sarranidzki miecz kawaleryjski
+itm_we_sar_sword_cavalry_pl|Sarranidzkie miecze kawaleryjskie
+itm_we_sar_sword_scimitar|Scimitar
+itm_we_sar_sword_scimitar_pl|Scimitary
+itm_we_sar_sword_guard|Sarranidzki miecz obronny
+itm_we_sar_sword_guard_pl|Sarranidzkie miecze obronne
+itm_we_sar_sword_dagger|Sarranidzki sztylet
+itm_we_sar_sword_dagger_pl|Sarranidzkie sztylet
+itm_we_sar_sword_falchion|Falchion
+itm_we_sar_sword_falchion_pl|Falchiony
+itm_we_sar_sword_scimitar_sultan|Sułtański bułat
+itm_we_sar_sword_scimitar_sultan_pl|Sułtańskie bułaty
+itm_we_sar_sword_scimitar_talwar|Talwarski miecz
+itm_we_sar_sword_scimitar_talwar_pl|Talwarskie miecze
+itm_we_sar_sword_scimitar_elite|Elitarny bułat
+itm_we_sar_sword_scimitar_elite_pl|Elitarne bułaty
+itm_we_sar_sword_scimitar_safah|Safahski Scimitar
+itm_we_sar_sword_scimitar_safah_pl|Safahakiw Scimitary
+itm_we_pla_sword_dagger|Sztylet najmenika
+itm_we_pla_sword_dagger_pl|Sztylety najemników
+itm_we_pla_sword_strange|Dziwny miecz
+itm_we_pla_sword_strange_pl|Dziwne miecze
+itm_we_pla_sword_strange_short|Dziwny krótki miecz
+itm_we_pla_sword_strange_short_pl|Dziwne krótkie miecze
+itm_we_pla_sword_reeve|Sądziowski miecz
+itm_we_pla_sword_reeve_pl|Sędziowskie miecze
+itm_we_pla_sword_templar|Miecz Templariuszy
+itm_we_pla_sword_templar_pl|Miecze Templariuszy
+itm_we_pla_sword_gothic|Gotycki miecz
+itm_we_pla_sword_gothic_pl|Gotyczne miecze
+itm_we_pla_sword_ritter|Renonski miecz
+itm_we_pla_sword_ritter_pl|Renonskie miecze
+itm_we_pla_sword_hospitaller|Miecz szpitalników
+itm_we_pla_sword_hospitaller_pl|Miecze szpitalników
+itm_we_pla_sword_duelling_dagger|Pojedynkowy sztylet
+itm_we_pla_sword_duelling_dagger_pl|Pojedynkowe sztylety
+itm_we_pla_sword_archer|Miecz łuczników
+itm_we_pla_sword_archer_pl|Miecze łuczników
+itm_we_pla_sword_mercenary|Miecz najemników
+itm_we_pla_sword_mercenary_pl|Miecze najemniów
+itm_we_pla_sword_kleines_messer|Mały nóż
+itm_we_pla_sword_kleines_messer_pl|Małe noże
+itm_we_pla_sword_gaddhjalt|Gaddhjaltcki miecz
+itm_we_pla_sword_gaddhjalt_pl|Gaddhjaltckie miecze
+itm_we_pla_sword_laird|Lairdzki miecz
+itm_we_pla_sword_laird_pl|Lairdzkie miecze
+itm_we_swa_sword_crusader|Miecz krzyżowców
+itm_we_swa_sword_crusader_pl|Miecze krzyżowców
+itm_we_swa_sword_longenglish|Angielski miecz
+itm_we_swa_sword_longenglish_pl|Angielskie miecze
+itm_we_swa_sword_clamshell_claymore|Claymore
+itm_we_swa_sword_clamshell_claymore_pl|Claymore'y
+itm_we_swa_sword_twohanded_claymore|2-ręczny Claymore
+itm_we_swa_sword_twohanded_claymore_pl|2-ręczne Claymore'y
+itm_we_swa_sword_empire|Cesarski 2-ręczniak
+itm_we_swa_sword_empire_pl|Cesarskie 2-ręczniaki
+itm_we_swa_sword_clamshell_cross|Muszlowy krzyżowy miecz
+itm_we_swa_sword_clamshell_cross_pl|Muszlowe krzyżowe miecze
+itm_we_swa_sword_clamshell_claymorelong|Długi Claymore
+itm_we_swa_sword_clamshell_claymorelong_pl|Długie Claymore'y
+itm_we_swa_sword_dark|2-ręczny miecz
+itm_we_swa_sword_dark_pl|2-ręczne miecze
+itm_we_vae_sword_cleaverwar|Tasak wojenny
+itm_we_vae_sword_cleaverwar_pl|Tasaki wojenne
+itm_we_vae_sword_lord|Miecz Veagirskiego Bojara
+itm_we_vae_sword_lord_pl|Miecze Veagirskiego Bojaraów
+itm_we_khe_sword_sabre|2-ręczna szabla
+itm_we_khe_sword_sabre_pl|2-ręczne szable
+itm_we_khe_sword_sabredark|2-ręczna szabla
+itm_we_khe_sword_sabredark_pl|2-ręczne szable
+itm_we_khe_sword_executionerlord|2-ręczny egzekutor Khergickiego Chana
+itm_we_khe_sword_executionerlord_pl|22-ręczne egzekutory Khergickiego Chana
+itm_we_khe_sword_executionertwo|2-ręczny Khergicki egzekutor
+itm_we_khe_sword_executionertwo_pl|2-ręczne Khergickie egzekutory
+itm_we_nor_sword_danish_great|Duński wielki miecz
+itm_we_nor_sword_danish_great_pl|Duńskie wielkie miecze
+itm_we_nor_sword_nordicbastard|Ogromne nordycki miecz
+itm_we_nor_sword_nordicbastard_pl|Ogromne nordyckie miecze
+itm_we_nor_sword_nordictwohander|Nordycki 2-ręczniak
+itm_we_nor_sword_nordictwohander_pl|Nordyckie 2-ręczniaki
+itm_we_rho_sword_estoc|Estoc
+itm_we_rho_sword_estoc_pl|Estocki
+itm_we_rho_sword_estoc_empire|Cesarski Estoc
+itm_we_rho_sword_estoc_empire_pl|Cesarskie Estoc
+itm_we_rho_sword_great|Wielki miecz
+itm_we_rho_sword_great_pl|Wielkie miecze
+itm_we_rho_sword_great_long|Długi wielki miecz
+itm_we_rho_sword_great_long_pl|Długie wielkie miecze
+itm_we_rho_sword_claymore|2-ręczny Claymore
+itm_we_rho_sword_claymore_pl|2-ręcznie Claymore'y
+itm_we_rho_sword_greatsword_flaming|Płomienisty wielki miecz
+itm_we_rho_sword_greatsword_flaming_pl|Płomieniste wielkie miecze
+itm_we_rho_sword_greatsword_inquisition|Wielki miecz inkwizycji
+itm_we_rho_sword_greatsword_inquisition_pl|Wielkie miecze inkwizycji
+itm_we_rho_sword_greatsword_twohanded|2-ręczny wielki miecz
+itm_we_rho_sword_greatsword_twohanded_pl|2-ręczne wielkie miecze
+itm_we_sar_sword_scimitarbastard|Większy bułat
+itm_we_sar_sword_scimitarbastard_pl|Większe bułaty
+itm_we_sar_sword_scimitartwolarge|Wielki 2-ręczny bułat
+itm_we_sar_sword_scimitartwolarge_pl|Wielkie 2-ręczne bułaty
+itm_we_sar_sword_dha|Dha
+itm_we_sar_sword_dha_pl|Dha'y
+itm_we_sar_sword_scimitartwo|2-ręczny bułat
+itm_we_sar_sword_scimitartwo_pl|2-ręczne bułaty
+itm_we_sar_sword_scimitartwosmall|Mały 2-ręczny bułat
+itm_we_sar_sword_scimitartwosmall_pl|Małe 2-ręczne bułaty
+itm_we_pla_sword_strange_great|Wielki dziwny miecz
+itm_we_pla_sword_strange_great_pl|Wielkie dziwne miecze
+itm_we_pla_sword_grosser_messer|Wielki miecz
+itm_we_pla_sword_grosser_messer_pl|Wielki miecze
+itm_we_pla_sword_zweilander|Zweilander
+itm_we_pla_sword_zweilander_pl|Zweilandery
+itm_we_pla_sword_zweilander_flaming|Płomienisty Zweilander
+itm_we_pla_sword_zweilander_flaming_pl|Płomieniste Zweilandery
+itm_we_pla_sword_great_four|Olbrzymi miecz
+itm_we_pla_sword_great_four_pl|Olbrzymie miecze
+itm_we_pla_sword_bastard_german|Ogromny niemiecki miecz
+itm_we_pla_sword_bastard_german_pl|Ogromne niemieckie miecze
+itm_we_pla_sword_zweilander_large|Wielki Zweilander
+itm_we_pla_sword_zweilander_large_pl|Wielkie Zweilandery
+itm_we_pla_sword_flamberge|Flamberge
+itm_we_pla_sword_flamberge_pl|Flambergi
+itm_we_pla_sword_zweihander_grosser|Wielki Zweihander
+itm_we_pla_sword_zweihander_grosser_pl|Wielkie Zweihandery
+itm_we_swa_arrow_gromite|Dobre strzały
+itm_we_swa_arrow_gromite_pl|Dobre strzały
+itm_we_swa_arrow_steel|Stalowe strzały
+itm_we_swa_arrow_steel_pl|Stalowe strzały
+itm_we_vae_arrow_sharp|Ostrzone strzały
+itm_we_vae_arrow_sharp_pl|Ostrzone strzały
+itm_we_vae_arrow_imperial|Cesarskie strzały
+itm_we_vae_arrow_imperial_pl|Cesarskie strzały
+itm_we_khe_arrow_khergit|Khergickie strzały
+itm_we_khe_arrow_khergit_pl|Khergickie strzały
+itm_we_khe_arrow_mongol|Mongolskie strzały
+itm_we_khe_arrow_mongol_pl|Mongolskie strzały
+itm_we_khe_arrow_mongol_piercing|Ostrzone Mongolskie strzały
+itm_we_khe_arrow_mongol_piercing_pl|Ostrzone Mongolskie strzały
+itm_we_khe_arrow_patterngreen|Zielone deseniowane strzały
+itm_we_khe_arrow_patterngreen_pl|Zielone deseniowane strzały
+itm_we_khe_arrow_patternred|Czerwone deseniowane strzały
+itm_we_khe_arrow_patternred_pl|Czerwone deseniowane strzały
+itm_we_khe_arrow_patternyellow|Żółte deseniowane strzały
+itm_we_khe_arrow_patternyellow_pl|Żółte deseniowane strzały
+itm_we_khe_arrow_patternyellowgreen|Żółto-zielone deseniowane strzały
+itm_we_khe_arrow_patternyellowgreen_pl|Żółto zielone deseniowane strzały
+itm_we_nor_arrow_bodkin|Szpikulcowe strzały
+itm_we_nor_arrow_bodkin_pl|Szpikulcowe strzały
+itm_we_nor_arrow_barbed|Ząbkowane strzały
+itm_we_nor_arrow_barbed_pl|Ząbkowane strzały
+itm_we_rho_bolt|Bełty
+itm_we_rho_bolt_pl|Bełty
+itm_we_rho_bolt_steel|Stalowe bełty
+itm_we_rho_bolt_steel_pl|Stalowe bełty
+itm_we_rho_cartridges|Kule
+itm_we_rho_cartridges_pl|Kule
+itm_we_sar_arrow_sarranid|Sarranidzkie strzały
+itm_we_sar_arrow_sarranid_pl|Sarranidzkie strzały
+itm_we_sar_arrow_desert|Pustynne strzały
+itm_we_sar_arrow_desert_pl|Pustynne strzały
+itm_we_sar_arrow_black|Czarne strzały
+itm_we_sar_arrow_black_pl|Czarne strzały
+itm_we_pla_arrow|Strzały
+itm_we_pla_arrow_pl|Strzały
+itm_we_pla_arrow_amazon|Amazońskie strzały
+itm_we_pla_arrow_amazon_pl|Amazońskie strzały
+itm_we_swa_bow_practice|Swadianński treningowe łuk
+itm_we_swa_bow_practice_pl|Swadiańskie treningowy łuki
+itm_we_swa_bow_straight|Dziwny łuk
+itm_we_swa_bow_straight_pl|Dziwne łuki
+itm_we_swa_bow_long|Długi łuk
+itm_we_swa_bow_long_pl|Długie łuki
+itm_we_swa_bow_short|Krótki łuk
+itm_we_swa_bow_short_pl|Krótkie łuki
+itm_we_swa_bow_self|Jednolity łuk
+itm_we_swa_bow_self_pl|Jednolite łuki
+itm_we_swa_bow|Swadiański długi łuk
+itm_we_swa_bow_pl|Swadiańskie długie łuki
+itm_we_vae_bow_hunting|Cesarski mysliwski łuk
+itm_we_vae_bow_hunting_pl|Cesarskie myśliwskie łuki
+itm_we_vae_bow_war|Łuk wojenny
+itm_we_vae_bow_war_pl|Łuki wojenne
+itm_we_vae_bow_imperial|Cesarski łuk wojenny
+itm_we_vae_bow_imperial_pl|Cesarskie łuki wojenne
+itm_we_vae_bow_practice|Veagiski treningowy łuk
+itm_we_vae_bow_practice_pl|Vaegirskie treningowe łuki
+itm_we_vae_bow_white|Biały myśliwy łuk
+itm_we_vae_bow_white_pl|Białe myśliwe łuki
+itm_we_vae_bow_black|Czarny wojenny łuk
+itm_we_vae_bow_black_pl|Czarne wojenne łuki
+itm_we_khe_bow_practice|Khergicki treningowy łuk
+itm_we_khe_bow_practice_pl|Khergickie treningowe łuki
+itm_we_khe_bow_red|RCzerwony Khergicki łuk
+itm_we_khe_bow_red_pl|Czerwone Khergickie łuki
+itm_we_khe_bow_strong|Mocny Khergicki łuk
+itm_we_khe_bow_strong_pl|Mocne Khergickie łuki
+itm_we_khe_bow_light|Lekki Khergicki łuk
+itm_we_khe_bow_light_pl|Lekkie Khergickie łuki
+itm_we_khe_bow|Khergicki łuk
+itm_we_khe_bow_pl|Khergickie łuki
+itm_we_khe_bow_heavy|Ciężki Khergicki łuk
+itm_we_khe_bow_heavy_pl|Ciężki Khergicki łuki
+itm_we_khe_bow_patterngreen|Zielony deseniowany łuk
+itm_we_khe_bow_patterngreen_pl|Zielone deseniowane łuki
+itm_we_khe_bow_patternred|Czerwony deseniowany łuk
+itm_we_khe_bow_patternred_pl|Czerwone deseniowane łuki
+itm_we_khe_bow_patternyellow|Żółty deseniowany łuk
+itm_we_khe_bow_patternyellow_pl|Żółte deseniowane łuki
+itm_we_khe_bow_patternyellowgreen|Żółto-zielony deseniowany łuk
+itm_we_khe_bow_patternyellowgreen_pl|Żółto-zielone deseniowane łuki
+itm_we_nor_bow_hunting|Łuk myśliwski
+itm_we_nor_bow_hunting_pl|Łuki myśliwskie
+itm_we_nor_bow|Nordycki łuk
+itm_we_nor_bow_pl|Nordyckie łuki
+itm_we_nor_bow_strong|Mocny nordycki łuk
+itm_we_nor_bow_strong_pl|Mocne nordyckie łuki
+itm_we_rho_crossbow_hunting|Kusza myśliwska
+itm_we_rho_crossbow_hunting_pl|Kusze myśliwskie
+itm_we_rho_crossbow|Kusza
+itm_we_rho_crossbow_pl|Kusze
+itm_we_rho_crossbow_siege|Kusza oblężnicza
+itm_we_rho_crossbow_siege_pl|Kusze oblężnicze
+itm_we_rho_crossbow_light|Lekka kusza
+itm_we_rho_crossbow_light_pl|Lekkie kusze
+itm_we_rho_crossbow_heavy|Ciężka kusza
+itm_we_rho_crossbow_heavy_pl|Ciężkie kusze
+itm_we_rho_crossbow_arbalest|Arbalest
+itm_we_rho_crossbow_arbalest_pl|Arbalesty
+itm_we_sar_bow_practice|Sarranidzki traningowy łuk
+itm_we_sar_bow_practice_pl|Sarranidzkie treningowe łuki
+itm_we_sar_bow_leopard|Łuk w panterę
+itm_we_sar_bow_leopard_pl|Łuki w panterę
+itm_we_sar_bow_recurved|Sarranidzki zakrzywiony łuk
+itm_we_sar_bow_recurved_pl|Sarranidzkie kompozytowe łuki
+itm_we_sar_bow_desert|Pustynny łuk
+itm_we_sar_bow_desert_pl|Pustynne łuki
+itm_we_sar_bow_strong|Mocny łuk
+itm_we_sar_bow_strong_pl|Mocne łuki
+itm_we_sar_bow_sarranid|Sarranidzki mocny łuk
+itm_we_sar_bow_sarranid_pl|Sarranidzkie mocne łuki
+itm_we_pla_bow_amazon|Amazoński łuk
+itm_we_pla_bow_amazon_pl|Amazońskie łuki
+itm_we_pla_pistol_arquebus|Arquebus
+itm_we_pla_pistol_arquebus_pl|Arquebusy
+itm_we_pla_pistol_blunderbus|Blunderbus
+itm_we_pla_pistol_blunderbus_pl|Blunderbusy
+itm_we_pla_pistol_matchlock|Matchlock Rifle
+itm_we_pla_pistol_matchlock_pl|Matchlock Rifle
+itm_we_pla_pistol_flintlock_rifle|Flintlock Rifle
+itm_we_pla_pistol_flintlock_rifle_pl|Flintlock Rifle
+itm_we_pla_pistol_flintlock|Flintlock Pistol
+itm_we_pla_pistol_flintlock_pl|Flintlock Pistol
+itm_we_swa_throw_stone|Swadiańskie kamienie
+itm_we_swa_throw_stone_pl|Swadiańskie kamienie
+itm_we_swa_throw_darts|Rzutki
+itm_we_swa_throw_darts_pl|Rzutki
+itm_we_swa_throw_darts_war|Rzutki bojowe
+itm_we_swa_throw_darts_war_pl|Rzutki bojowe
+itm_we_swa_throw_darts_piercing|Ostrzone rzutki
+itm_we_swa_throw_darts_piercing_pl|Ostrzone rzutki
+itm_we_swa_throw_darts_heavy|Ciężkie rzutki
+itm_we_swa_throw_darts_heavy_pl|Ciężkie rzutki
+itm_we_vae_throw_snow|Kulki źnieżne
+itm_we_vae_throw_snow_pl|Kulki snieżne
+itm_we_vae_sword_throw_knives|Noże do rzucania
+itm_we_vae_sword_throw_knives_pl|NOże do rzucania
+itm_we_vae_sword_throw_daggers|Sztylety do rzucania
+itm_we_vae_sword_throw_daggers_pl|Sztylety do rzucania
+itm_we_vae_sword_throw_bollock|Sztylety Bollock do rzucania
+itm_we_vae_sword_throw_bollock_pl|Sztylety Bollock do rzucania
+itm_we_vae_sword_throw_dirk|Długie sztylety do rzucania
+itm_we_vae_sword_throw_dirk_pl|Długie sztylety do rzucania
+itm_we_khe_throw_stone|Khergickie kamienie
+itm_we_khe_throw_stone_pl|Khergickie kamienie
+itm_we_nor_axe_throw_light|Lekkie toporki do rzycania
+itm_we_nor_axe_throw_light_pl|Lekkie toporki do rzycania
+itm_we_nor_axe_throw_light_melee|Lekkie toporki do rzycania
+itm_we_nor_axe_throw_light_melee_pl|Lekkie toporki do rzycania
+itm_we_nor_axe_throw_vendelox|Topór Vendelox
+itm_we_nor_axe_throw_vendelox_pl|Topory Vendelox
+itm_we_nor_axe_throw_vendelox_melee|Topór Vendelox
+itm_we_nor_axe_throw_vendelox_melee_pl|Topory Vendelox
+itm_we_nor_axe_throw_mammen|Topór Mammenów
+itm_we_nor_axe_throw_mammen_pl|Topory Mammenów
+itm_we_nor_axe_throw_mammen_melee|Topór Mammenów
+itm_we_nor_axe_throw_mammen_melee_pl|Topory Mammenów
+itm_we_nor_spear_kastspjottmidtaggir|Kastspjott Midtaggir
+itm_we_nor_spear_kastspjottmidtaggir_pl|Kastspjott Midtaggiry
+itm_we_nor_spear_kastspjottmidtaggir_melee|Kastspjott Midtaggir
+itm_we_nor_spear_kastspjottmidtaggir_melee_pl|Kastspjott Midtaggiry
+itm_we_nor_spear_atgeirr|Atgeirr
+itm_we_nor_spear_atgeirr_pl|Atgeirry
+itm_we_nor_spear_atgeirr_melee|Atgeirr
+itm_we_nor_spear_atgeirr_melee_pl|Atgeirry
+itm_we_nor_throw_stone|Nordyckie kamienie
+itm_we_nor_throw_stone_pl|Nordyckie kamienie
+itm_we_nor_axe_throw_hedmarkrox|Topór Hedmarkrox
+itm_we_nor_axe_throw_hedmarkrox_pl|Topory Hedmarkrox
+itm_we_nor_axe_throw_hedmarkrox_melee|Topór Hedmarkrox
+itm_we_nor_axe_throw_hedmarkrox_melee_pl|Topory Hedmarkrox
+itm_we_nor_axe_throw_bearded|Brodate topory do rzucania
+itm_we_nor_axe_throw_bearded_pl|Brodate topory do rzucania
+itm_we_nor_axe_throw_bearded_melee|Brodaty topór
+itm_we_nor_axe_throw_bearded_melee_pl|Brodaty topór
+itm_we_nor_spear_bryntvari_a|Krótkie Bryntvari
+itm_we_nor_spear_bryntvari_a_pl|Krótkie Bryntvari
+itm_we_nor_spear_bryntvari_a_melee|Krótki Bryntvari
+itm_we_nor_spear_bryntvari_a_melee_pl|Krótkie Bryntvari
+itm_we_nor_spear_bryntvari_b|Długie Bryntvari
+itm_we_nor_spear_bryntvari_b_pl|Długie Bryntvari
+itm_we_nor_spear_bryntvari_b_melee|Długi Bryntvari
+itm_we_nor_spear_bryntvari_b_melee_pl|Długi Bryntvari
+itm_we_rho_throw_stone|Rhodockie kamienie
+itm_we_rho_throw_stone_pl|Rhodockie kamienie
+itm_we_sar_spear_javelin|Oszczepy
+itm_we_sar_spear_javelin_pl|Oszczepy
+itm_we_sar_spear_javelin_melee|Oszczep
+itm_we_sar_spear_javelin_melee_pl|Oszczepy
+itm_we_sar_spear_throwing_spears|Włócznie do rzucania
+itm_we_sar_spear_throwing_spears_pl|Włócznie do rzucania
+itm_we_sar_spear_throwing_spear_melee|Włócznia do rzucania
+itm_we_sar_spear_throwing_spear_melee_pl|Włócznie do rzucania
+itm_we_sar_spear_jarid|Rzutki
+itm_we_sar_spear_jarid_pl|Rzutki
+itm_we_sar_spear_jarid_melee|Rzutka
+itm_we_sar_spear_jarid_melee_pl|Rzutki
+itm_we_sar_throw_stone|Sarranidzkie kamienie
+itm_we_sar_throw_stone_pl|Sarranidzkie kamienie
+itm_ar_swa_ban_scale_a|Niebieska zbroja
+itm_ar_swa_ban_scale_a_pl|Niebieskie zbroje
+itm_ar_swa_dip_coatplate_a|Czerwony płaszcz płytowy dyplomaty
+itm_ar_swa_dip_coatplate_a_pl|Czerwone płaszcze płytowe dyplomaty
+itm_ar_swa_t2_gambeson_a|Czerwony Gambeson
+itm_ar_swa_t2_gambeson_a_pl|Czerwone Gambesony
+itm_ar_swa_t3_hauberk_a|Mocna kolczuga
+itm_ar_swa_t3_hauberk_a_pl|Mocne kolczugi
+itm_ar_swa_t4_captain_a|Swadiański żółty surcot
+itm_ar_swa_t4_captain_a_pl|Swadiańskie żółte surcoty
+itm_ar_swa_t4_tabardmail_a|Kolczuga pod czerwonym tarbardem
+itm_ar_swa_t4_tabardmail_a_pl|Kolczugi pod czerwonym tarbardem
+itm_ar_swa_t5_mailsurcoat_a|Kolczuga z czerwonym surcotem
+itm_ar_swa_t5_mailsurcoat_a_pl|Kolczugi z czerwonym surcotem
+itm_ar_swa_t6_coatplate_b|Czarny płaszcz płytowy
+itm_ar_swa_t6_coatplate_b_pl|Czerwone płaszcze płytowe
+itm_ar_swa_t7_fullplate_a|Pełna płytowa zbroja
+itm_ar_swa_t7_fullplate_a_pl|Pełne płytowe zbroje
+itm_ar_swa_t7_fullplate_b|Pomarańczowa pełna płytowa zbroja
+itm_ar_swa_t7_fullplate_b_pl|Pomarańczowe pełne płytowe zbroje
+itm_ar_swa_t7_fullplate_c|Ciężka pełna płytowa zbroja
+itm_ar_swa_t7_fullplate_c_pl|Ciężkie pełne płytowe zbroje
+itm_ar_swa_ban_scale_b|Zielona łuskowa zbroja
+itm_ar_swa_ban_scale_b_pl|Zielone łuskowe zbroje
+itm_ar_swa_ban_scale_c|Czarna łuskowa zbroja
+itm_ar_swa_ban_scale_c_pl|Czarna łuskowa zbroja
+itm_ar_swa_t2_gambeson_b|Biały Gambeson
+itm_ar_swa_t2_gambeson_b_pl|Białe Gambesony
+itm_ar_swa_t2_gambeson_c|Niebieski Gambeson
+itm_ar_swa_t2_gambeson_c_pl|Niebieskie Gambesony
+itm_ar_swa_t2_gambeson_d|Ciemnoniebieski Gambeson
+itm_ar_swa_t2_gambeson_d_pl|Ciemnoniebieskie Gambesony
+itm_ar_swa_t2_gambeson_e|Brązowy Gambeson
+itm_ar_swa_t2_gambeson_e_pl|Brązowe Gambesony
+itm_ar_swa_t3_hauberk_b|Czerwona mona kolczuga
+itm_ar_swa_t3_hauberk_b_pl|Czerwone mocne kolczugi
+itm_ar_swa_t3_lightarmor_a|Lekka zielona zbroja
+itm_ar_swa_t3_lightarmor_a_pl|Lekkie zielone zbroje
+itm_ar_swa_t3_lightarmor_b|Lekka czerwona zbroja
+itm_ar_swa_t3_lightarmor_b_pl|Lekkie czerwone zbroje
+itm_ar_swa_t3_lightarmor_c|Lekka niebeiska zbroja
+itm_ar_swa_t3_lightarmor_c_pl|Lekkie niebieskie zbroje
+itm_ar_swa_t4_captain_b|Swadiański czerwony surcot
+itm_ar_swa_t4_captain_b_pl|Swadiańskie czerwone surcoty
+itm_ar_swa_t4_captain_c|Swadiański biały surcot
+itm_ar_swa_t4_captain_c_pl|Swadiańskie białe surcoty
+itm_ar_swa_t4_tabardmail_b|Kolczuga pod zielonym tarbardem
+itm_ar_swa_t4_tabardmail_b_pl|Kolczugi pod zielonym tarbardem
+itm_ar_swa_t4_tabardmail_c|Kolczuga pod czerwonożółtym tarbardem
+itm_ar_swa_t4_tabardmail_c_pl|Kolczugi pod czerwonożółtym tarbardem
+itm_ar_swa_t4_tabardmail_d|Kolczuga pod czerwonobiałym tarbardem
+itm_ar_swa_t4_tabardmail_d_pl|Kolczugi pod czerwonobiałym tarbardem
+itm_ar_swa_t4_tabardmail_e|Kolczuga pod czerwonoczarnym tarbardem
+itm_ar_swa_t4_tabardmail_e_pl|Kolczugi pod czerwonoczarnym tarbardem
+itm_ar_swa_t4_tabardmail_f|Kolczuga pod purpurowym tarbardem
+itm_ar_swa_t4_tabardmail_f_pl|Kolczugi pod purpurowym tarbardem
+itm_ar_swa_t4_tabardmail_g|Kolczuga pod czarnożółtym tarbardem
+itm_ar_swa_t4_tabardmail_g_pl|Kolczugi pod czarnożółtym tarbardem
+itm_ar_swa_t5_lightmail_a|Lekka czerwona zbroja płytowa
+itm_ar_swa_t5_lightmail_a_pl|Lekkie czerwone zbroje płytowe
+itm_ar_swa_t5_mailsurcoat_b|Zbroja płytowa z czerwonobiałym surcotem
+itm_ar_swa_t5_mailsurcoat_b_pl|Zbroje płytowe z czerwonobiałym surcotem
+itm_ar_swa_t5_mailsurcoat_c|Zbroja płytowa z niebieskobiałym surcotem
+itm_ar_swa_t5_mailsurcoat_c_pl|Zbroje płytowe z zielonożółtym surcotem
+itm_ar_swa_t5_mailsurcoat_d|Zbroja płytowa z zielonożółtym surcotem
+itm_ar_swa_t5_mailsurcoat_d_pl|Zbroje płytowe z zielonożółtym surcotem
+itm_ar_swa_t5_mailsurcoat_e|Zbroja płytowa z purpurowym surcotem
+itm_ar_swa_t5_mailsurcoat_e_pl|Zbroje płytowe z purpurowym surcotem
+itm_ar_swa_t5_surcoatmail_a|Koczuga pod zielonym surcocie
+itm_ar_swa_t5_surcoatmail_a_pl|Kolczugi pod zielonym surcocie
+itm_ar_swa_t5_surcoatmail_b|Kolczuga pod niebieskożółtym surcocie
+itm_ar_swa_t5_surcoatmail_b_pl|Kolczugi pod niebieskożółtym surcocie
+itm_ar_swa_t5_surcoatmail_c|Kolczuga pod czerwonoczarnym surcocie
+itm_ar_swa_t5_surcoatmail_c_pl|Kolczugi pod czerwonoczarnym surcocie
+itm_ar_swa_t5_surcoatmail_d|Kolczuga pod purpurowoczarnym surcocie
+itm_ar_swa_t5_surcoatmail_d_pl|Kolczugi pod purpurowoczarnym surcocie
+itm_ar_swa_t6_churburg_a|Niebieski Churburg
+itm_ar_swa_t6_churburg_a_pl|Niebieskie Churburgi
+itm_ar_swa_t6_churburg_b|RCzerwony Churburg
+itm_ar_swa_t6_churburg_b_pl|Czerwyne Churburgi
+itm_ar_swa_t6_churburg_c|Wzmocniony Churburg
+itm_ar_swa_t6_churburg_c_pl|Wzmocnione Churburgi
+itm_ar_swa_t6_coatplate_c|Zielony płaszcz płytowy
+itm_ar_swa_t6_coatplate_c_pl|Zielone płaszcze płytowe
+itm_ar_swa_t6_coatplate_d|Pupurowy płaszcz płytowy
+itm_ar_swa_t6_coatplate_d_pl|Purpurowe płaszcze płytowe
+itm_ar_swa_t7_fullplate_d|Czarnoczerwona pełna zbroja płytowa
+itm_ar_swa_t7_fullplate_d_pl|CZarnoczerwone pełne zbroje płytowe
+itm_ar_swa_t7_fullplate_e|Zółtozielona pełna zborja płytowa
+itm_ar_swa_t7_fullplate_e_pl|Żółtozielone pełne zbroje płytowe
+itm_ar_swa_t7_fullplate_f|Pomarańczowoczarna pełna cięzka zbroja płytowa
+itm_ar_swa_t7_fullplate_f_pl|Pomarańczowoczarne pełne ciężke zbroje płytowe
+itm_ar_vae_ban_tribal_a|Plemienna zbroja łuskowa
+itm_ar_vae_ban_tribal_a_pl|Plemienne zbroje łuskowe
+itm_ar_vae_t2_leather_a|Zielona zbroja skórzana
+itm_ar_vae_t2_leather_a_pl|Zielone zbroje skórzane
+itm_ar_vae_t3_padded_a|Niebieska skórzana przeszywnica
+itm_ar_vae_t3_padded_a_pl|Niebieskie skórzane przeszywnice
+itm_ar_vae_t4_jerkin_a|Skórzany kaftan
+itm_ar_vae_t4_jerkin_a_pl|Skórzane kaftany
+itm_ar_vae_t4_jerkin_b|Czerwony skórzany kaftan
+itm_ar_vae_t4_jerkin_b_pl|Czerwony skózany kaftan
+itm_ar_vae_t5_studded_a|Podbita zielona zbroja skórzana
+itm_ar_vae_t5_studded_a_pl|Podbita zielona zbroja skózana
+itm_ar_vae_t6_cuirbouilli_a|Czerwona zbroja Cuir Bouilli
+itm_ar_vae_t6_cuirbouilli_a_pl|Czerwone zbroje Cuir Bouilli
+itm_ar_vae_t7_elite_a|Vaegirska żółta zbroja elitarna
+itm_ar_vae_t7_elite_a_pl|Vaegirskie żółte zbroje elitarne
+itm_ar_vae_t7_elite_b|Vaegirska zielona zbroja elitarna
+itm_ar_vae_t7_elite_b_pl|Vaegirskie zielonee zbroje elitarne
+itm_ar_vae_t7_elite_c|Vaegirska czerwona zbroja elitarna
+itm_ar_vae_t7_elite_c_pl|Vaegirskie czerwone zbroje elitarne
+itm_ar_vae_ban_tribal_b|Czerwona nomadzka zbroja futrzana
+itm_ar_vae_ban_tribal_b_pl|Czerwone nomadzkie zbroje futrzane
+itm_ar_vae_ban_tribal_c|Pomarańczowa nomadzka zbroja futrzana
+itm_ar_vae_ban_tribal_c_pl|Pomarańczone nomadzkie zbroje futrzane
+itm_ar_vae_t2_leather_b|Czarna zbroja skórzana
+itm_ar_vae_t2_leather_b_pl|Czarne zbroje skórzane
+itm_ar_vae_t2_leather_c|Niebieska zbroja skórzana
+itm_ar_vae_t2_leather_c_pl|Niebieskie zbroje skórzane
+itm_ar_vae_t2_leather_d|Czerwona zbroja skózana
+itm_ar_vae_t2_leather_d_pl|Czerwone zbroje skórzane
+itm_ar_vae_t2_leather_e|Lekka zbroja skórzana
+itm_ar_vae_t2_leather_e_pl|Lekkie zbroje skózane
+itm_ar_vae_t3_padded_b|Biała skórzana przeszywnica
+itm_ar_vae_t3_padded_b_pl|Białe skórzane przeszywnice
+itm_ar_vae_t3_padded_c|Czarna skórzana przeszywnica
+itm_ar_vae_t3_padded_c_pl|Czarne skórzane przeszywnice
+itm_ar_vae_t3_padded_d|Czerwona skórzana przeszywnica
+itm_ar_vae_t3_padded_d_pl|Czerwone skórzane przeszywnice
+itm_ar_vae_t3_padded_e|Skórzna kamizelka
+itm_ar_vae_t3_padded_e_pl|Skórzne kamizelki
+itm_ar_vae_t4_jerkin_c|Ciemny skórzany kaftan
+itm_ar_vae_t4_jerkin_c_pl|Ciemne skórzane kaftany
+itm_ar_vae_t4_jerkin_d|Kolczy skórzany kaftan
+itm_ar_vae_t4_jerkin_d_pl|Kolcze skórzane kaftany
+itm_ar_vae_t4_jerkin_e|Ciemny pikowany skórzany kaftan
+itm_ar_vae_t4_jerkin_e_pl|Ciemne kolcze skórzane kaftany
+itm_ar_vae_t4_jerkin_f|Czerwony pikowany skórzany kaftan
+itm_ar_vae_t4_jerkin_f_pl|Czerwone kolcze skórzane kaftany
+itm_ar_vae_t4_jerkin_g|Wzmocniony skórzany kaftan
+itm_ar_vae_t4_jerkin_g_pl|Wzmacniane skórzane kaftany
+itm_ar_vae_t4_jerkin_h|Ciemny wzmacniany skórzany kaftan
+itm_ar_vae_t4_jerkin_h_pl|Ciemne wzmacniane skórzane kaftany
+itm_ar_vae_t4_jerkin_i|Ciemnoczerwony wzmacniany skórzany kaftan
+itm_ar_vae_t4_jerkin_i_pl|Ciemnoczerwony wzmacniane skórzane kaftany
+itm_ar_vae_t4_jerkin_j|Jasnoczerwony wzmacniny skórzany kaftan
+itm_ar_vae_t4_jerkin_j_pl|Jasnoczerwony wzmacniany skórzane kaftany
+itm_ar_vae_t5_lamellar_a|Vaegirska niebieska lamelkowa zbroja
+itm_ar_vae_t5_lamellar_a_pl|Vaegirskie niebieskie lamelkowe zbroje
+itm_ar_vae_t5_lamellar_b|Vaegirskia biała lamelkowa zbroja
+itm_ar_vae_t5_lamellar_b_pl|Vaegirskie białe lamelkowe zbroje
+itm_ar_vae_t5_lamellar_c|Vaegirska czarna lamelkowa zbroja
+itm_ar_vae_t5_lamellar_c_pl|Vaegirskie czarne lamelkowe zbroje
+itm_ar_vae_t5_lamellar_d|Vaegirska żółta lamelkowa zbroja
+itm_ar_vae_t5_lamellar_d_pl|Vaegirskie żółte lamelkowe zbroje
+itm_ar_vae_t5_lamellar_e|Vaegirska zielona lamelkowa zbroja
+itm_ar_vae_t5_lamellar_e_pl|Vaegirskie zielone lamelkowe zbroje
+itm_ar_vae_t5_studded_b|Ringed Macle zbroja
+itm_ar_vae_t5_studded_b_pl|Ringed Macle zbroje
+itm_ar_vae_t5_studded_c|Czarny ćwiekowany skórzany płaszcz
+itm_ar_vae_t5_studded_c_pl|Czarne ćwiekowane skórzane płaszcze
+itm_ar_vae_t5_studded_d|Czerwony ćwiekowany skórzany płaszcz
+itm_ar_vae_t5_studded_d_pl|Czerwone ćwiekowane skórzane płaszcze
+itm_ar_vae_t5_studded_e|Niebieski ćwiekowany skórzany płaszcz
+itm_ar_vae_t5_studded_e_pl|Niebieskie ćwiekowane skórzane płaszcze
+itm_ar_vae_t6_banded_a|Vaegirska paskowa zbroja
+itm_ar_vae_t6_banded_a_pl|Vaegirskie paskowe zbroje
+itm_ar_vae_t6_cuirbouilli_b|Czarna zbroja Cuir Bouilli
+itm_ar_vae_t6_cuirbouilli_b_pl|Czarne zbroje Cuir Bouilli
+itm_ar_vae_t6_cuirbouilli_c|Zielona zbroje Cuir Bouilli
+itm_ar_vae_t6_cuirbouilli_c_pl|Zielone Cuir Bouilli
+itm_ar_vae_t6_kuyak_a|Zielony Kuyak
+itm_ar_vae_t6_kuyak_a_pl|Zielone Kuyaki
+itm_ar_vae_t6_kuyak_b|Żółty Kuyak
+itm_ar_vae_t6_kuyak_b_pl|Żółte Kuyaki
+itm_ar_vae_t7_elite_d|Vaegirska szara zbroja elitarna
+itm_ar_vae_t7_elite_d_pl|Vaegirskie szare zbroje elitarne
+itm_ar_vae_t7_elite_e|Vaegirska niebieska zbroja elitarna
+itm_ar_vae_t7_elite_e_pl|Vaegirskie niebieskie zbroje elitarne
+itm_ar_vae_t7_elite_f|Vaegirska biała zbroja elitarna
+itm_ar_vae_t7_elite_f_pl|Vaegirskie białe zbroje elitarne
+itm_ar_khe_ban_robe_a|Khergicka czarna szata
+itm_ar_khe_ban_robe_a_pl|Khergickie czarne szaty
+itm_ar_khe_t2_armor_a|Khergicka czerwona szata
+itm_ar_khe_t2_armor_a_pl|Khergickie szaty
+itm_ar_khe_t3_steppe_a|Zielona zbroja stepowa
+itm_ar_khe_t3_steppe_a_pl|Zielone zbroje stepowe
+itm_ar_khe_t4_lamellar_a|Khergicka brązowa lamelkowa zbroja
+itm_ar_khe_t4_lamellar_a_pl|Khergickie brązowe lamelkowe zbroje
+itm_ar_khe_t4_lamellar_b|Khergicka zielona lamelkowa zbroja
+itm_ar_khe_t4_lamellar_b_pl|Khergickie zielone lamelkowe zbroje
+itm_ar_khe_t5_guard_a|Khergicka niebieska zbroja strażnika
+itm_ar_khe_t5_guard_a_pl|Khergickie niebieskie zbroje strażnika
+itm_ar_khe_t6_tunic_a|Khergicka czerwona tunika
+itm_ar_khe_t6_tunic_a_pl|Khergickie czerwone tuniki
+itm_ar_khe_t7_mongol_a|Elitarna zbroja khergickiego Chana
+itm_ar_khe_t7_mongol_a_pl|Elitarne zbroje khergickiego Chana
+itm_ar_khe_t7_mongol_b|Khergicka ciężka elitarna zbroja
+itm_ar_khe_t7_mongol_b_pl|Khergickie ciężkie elitarne zbroje
+itm_ar_khe_t7_mongol_c|Khergicka elitarna lamelkowa zbroja
+itm_ar_khe_t7_mongol_c_pl|Khergickie elitarne lamelkowe zbroje
+itm_ar_khe_ban_steppe_c|Czarna zbroja stepowa
+itm_ar_khe_ban_steppe_c_pl|Czarne zbroje stepowe
+itm_ar_khe_ban_vest_d|Khergicka czarna lamelkowa kamizelka
+itm_ar_khe_ban_vest_d_pl|Khergickie czarne lamelkowe kamizelki
+itm_ar_khe_t2_armor_b|Khergicka zielnoa zbroja
+itm_ar_khe_t2_armor_b_pl|Khergickie zielone zbroje
+itm_ar_khe_t2_armor_c|Czerwona nomadzka zbroja
+itm_ar_khe_t2_armor_c_pl|Czerwone nomadzkie zbroje
+itm_ar_khe_t2_armor_d|Zielona nomadzka zbroja
+itm_ar_khe_t2_armor_d_pl|Zielone nomadzkie zbroje
+itm_ar_khe_t2_armor_e|Purpurowa nomadzka zbroja
+itm_ar_khe_t2_armor_e_pl|Purpurowe nomadzkie zbroje
+itm_ar_khe_t3_steppe_b|Czerwona stepowa zbroja
+itm_ar_khe_t3_steppe_b_pl|Czerwone stepowe zbroje
+itm_ar_khe_t3_vest_a|Khergicka czerwona lamelkowa kamizelka
+itm_ar_khe_t3_vest_a_pl|Khergickie czerwone lamelkowe kamizelki
+itm_ar_khe_t3_vest_b|Khergicka purpurowa lamelkowa kamizelka
+itm_ar_khe_t3_vest_b_pl|Khergickie purpurowe lamelkowe kamizelki
+itm_ar_khe_t3_vest_c|Khergicka biała lamelkowa kamizelka
+itm_ar_khe_t3_vest_c_pl|Khergickie białe lamelkowe kamizelki
+itm_ar_khe_t4_lamellar_c|Khergicka purpurowa lamelkowa zbroja
+itm_ar_khe_t4_lamellar_c_pl|Khergickie purpurowe lamelkowe zbroje
+itm_ar_khe_t4_lamellar_d|Khergicka czerwona lamelkowa zbroja
+itm_ar_khe_t4_lamellar_d_pl|Khergickie czerwone lamelkowe zbroje
+itm_ar_khe_t4_lamellar_e|Khergicka niebieska lamelkowa zbroja
+itm_ar_khe_t4_lamellar_e_pl|Khergickie niebieskie lamelkowe zbroje
+itm_ar_khe_t4_lamellar_f|Khergicka pomarańczowa lamelkowa zbroja
+itm_ar_khe_t4_lamellar_f_pl|Khergickie pomarańczowe lamelkowe zbroje
+itm_ar_khe_t4_lamellar_g|Khergicka żółta lamelkowa zbroja
+itm_ar_khe_t4_lamellar_g_pl|Khergickie żółte lamelkowe zbroje
+itm_ar_khe_t4_lamellar_h|Khergicka różowa lamelkowa zbroja
+itm_ar_khe_t4_lamellar_h_pl|Khergickie różowe lamelkowe zbroje
+itm_ar_khe_t4_lamellar_i|Khergicka szara lamelkowa zbroja
+itm_ar_khe_t4_lamellar_i_pl|Khergickie szare lamelkowe zbroje
+itm_ar_khe_t4_lamellar_j|Khergicka błękitna lamelkowa zbroja
+itm_ar_khe_t4_lamellar_j_pl|Khergickie błękitne lamelkowe zbroje
+itm_ar_khe_t5_armor_a|Khergicka zielona zbroja
+itm_ar_khe_t5_armor_a_pl|Khergickie zielone zbroje
+itm_ar_khe_t5_armor_b|Khergicka żółta zbroja
+itm_ar_khe_t5_armor_b_pl|Khergickie żółte zbroje
+itm_ar_khe_t5_armor_c|Khergicka czerwona zbroja
+itm_ar_khe_t5_armor_c_pl|Khergickie czerwone zbroje
+itm_ar_khe_t5_armor_d|Khergicka purpurowa zbroja
+itm_ar_khe_t5_armor_d_pl|Khergickie purpurowe zbroje
+itm_ar_khe_t5_armor_e|Khergicka niebieska zbroja
+itm_ar_khe_t5_armor_e_pl|Khergickie niebieskie zbroje
+itm_ar_khe_t5_guard_b|Khergicka szara zbroja stażnika
+itm_ar_khe_t5_guard_b_pl|Khergickie szare zbroje strażnika
+itm_ar_khe_t5_guard_c|Khergicka czerwona zbroja strażnika
+itm_ar_khe_t5_guard_c_pl|Khergickie czerwone zbroje strażnika
+itm_ar_khe_t5_guard_d|Khergicka purpurowa zbroja strażnika
+itm_ar_khe_t5_guard_d_pl|Khergickie purpurowe zbroje strażnika
+itm_ar_khe_t5_guard_e|Khergicka pomarańczowa zbroja strażnika
+itm_ar_khe_t5_guard_e_pl|Khergickie pomarańczowe zbroje strażnika
+itm_ar_khe_t6_tunic_b|Khergicka żótła tunika
+itm_ar_khe_t6_tunic_b_pl|Khergickie żółte tuniki
+itm_ar_khe_t6_tunic_c|Khergicka zielona tunika
+itm_ar_khe_t6_tunic_c_pl|Khergickie zielone tuniki
+itm_ar_khe_t6_tunic_d|Khergicka pomarańczona tunika
+itm_ar_khe_t6_tunic_d_pl|Khergickie pomarańczowe tuniki
+itm_ar_khe_t6_tunic_e|Khergicka biała tunika
+itm_ar_khe_t6_tunic_e_pl|Khergickie białe tuniki
+itm_ar_khe_t6_tunic_f|Khergicka purpurowa tunika
+itm_ar_khe_t6_tunic_f_pl|Khergickie purpurowe tuniki
+itm_ar_khe_t7_mongol_d|Khergicka eitarna zbroja kawalerzysty
+itm_ar_khe_t7_mongol_d_pl|Khergickie elitarne zbroje kawalerzysty
+itm_ar_khe_t7_mongol_e|Khergicka eitarna zbroja strażnika
+itm_ar_khe_t7_mongol_e_pl|Khergickie eiltarne zbroje strażnika
+itm_ar_khe_t7_mongol_f|Khergicka żelazna elitarna zbroja
+itm_ar_khe_t7_mongol_f_pl|Khergickie żelazne elitarne zbroje
+itm_ar_nor_ban_raider_a|Niebieska kolczuga jeździecka
+itm_ar_nor_ban_raider_a_pl|Niebieskie kolczugi jeździeckie
+itm_ar_nor_t2_vikinglamellar_a|Niebieska lamelkowa zbroja wikingów
+itm_ar_nor_t2_vikinglamellar_a_pl|Niebieskie lamelkowe zbroje wikingów
+itm_ar_nor_t3_furcoat_a|Zielone futro na zbroi
+itm_ar_nor_t3_furcoat_a_pl|Zielone futra na zbroi
+itm_ar_nor_t4_lightarmor_a|Nordycka niebieska lekka zbroja
+itm_ar_nor_t4_lightarmor_a_pl|Nordyckie niebieskie lekkie zbroje
+itm_ar_nor_t4_lightarmor_b|Nordycka zielona lekka zbroja
+itm_ar_nor_t4_lightarmor_b_pl|Nordyckie zielone lekkie zbroje
+itm_ar_nor_t5_byrnie_a|Nordyckie czerwone brynie
+itm_ar_nor_t5_byrnie_a_pl|Nordyckie czerwone brynie
+itm_ar_nor_t6_mailshirt_a|Nordycka koszula kolcza z białym krukiem
+itm_ar_nor_t6_mailshirt_a_pl|Nordyckie koszule kolcza z biały krukiem
+itm_ar_nor_t7_vikingbyrnie_a|Czerwonobrązowe brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_a_pl|CZerwonnobrązowe brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_b|Niebieskobiałe brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_b_pl|Niebieskobiałe brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_c|Niebieskiobrązowe brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_c_pl|Niebieskiobrązowe brynie wikingów
+itm_ar_nor_ban_raider_b|Brązowa kolczuga jeździecka
+itm_ar_nor_ban_raider_b_pl|Brązowe kolczugi jeździeckie
+itm_ar_nor_ban_raider_c|Czerwona kolczuga jeździecka
+itm_ar_nor_ban_raider_c_pl|Czerwone kolczugi jeździeckie
+itm_ar_nor_t2_vikinglamellar_b|Zielona lamelkowa zbroja wikingów
+itm_ar_nor_t2_vikinglamellar_b_pl|Zielone lamelkowe zbroje wikingów
+itm_ar_nor_t2_vikinglamellar_c|Czerwona lamelkowa zbroja wikingów
+itm_ar_nor_t2_vikinglamellar_c_pl|Czerwone lamelkowe zbroje wikingów
+itm_ar_nor_t2_vikinglamellar_d|Zielona deseniowana lamelkowa zbroja
+itm_ar_nor_t2_vikinglamellar_d_pl|Zielone deseniowane lamelkowe zbroje
+itm_ar_nor_t2_vikinglamellar_e|Niebieska deseniowana lamelkowa zbroja
+itm_ar_nor_t2_vikinglamellar_e_pl|Niebieskie deseniowane lamelkowe zbroje
+itm_ar_nor_t3_furcoat_b|Brązowe futro na zbroi
+itm_ar_nor_t3_furcoat_b_pl|Brązowe futra na zbroi
+itm_ar_nor_t3_furcoat_c|Zielone futro na zbroi
+itm_ar_nor_t3_furcoat_c_pl|Zielone futra na zbroi
+itm_ar_nor_t3_furcoat_d|Niebeiskie futro na zbroi
+itm_ar_nor_t3_furcoat_d_pl|Niebieskie futra na zbroi
+itm_ar_nor_t3_furcoat_e|Szare futro na zbroi
+itm_ar_nor_t3_furcoat_e_pl|Szare futra na zbroi
+itm_ar_nor_t4_lightarmor_c|Nordycka czerwona lekka zbroja
+itm_ar_nor_t4_lightarmor_c_pl|Nordyckie czerwone lekkie zbroje
+itm_ar_nor_t4_lightarmor_d|Nordycka zielona lekka zbroja płytowa
+itm_ar_nor_t4_lightarmor_d_pl|Nordyckie zielone lekkie zbroje płytowe
+itm_ar_nor_t4_lightarmor_e|Nordycka biała lekka zbroja płytowa
+itm_ar_nor_t4_lightarmor_e_pl|Nordyckie białe lekkie zbroje płytowe
+itm_ar_nor_t4_lightarmor_f|Nordycka niebieskia lekka zbroja płytowa
+itm_ar_nor_t4_lightarmor_f_pl|Nordyckie niebeiskie lekkie zbroje płytowe
+itm_ar_nor_t4_lightarmor_g|Nordycka zielona lekka skórzana zbroja
+itm_ar_nor_t4_lightarmor_g_pl|Nordyckie zielone lekkie skórzane zbroje
+itm_ar_nor_t4_lightarmor_h|Nordycka czerwona lekka skórzana zbroja
+itm_ar_nor_t4_lightarmor_h_pl|Nordyckie czerwone lekkie skórzane zbroje
+itm_ar_nor_t4_lightarmor_i|Nordycka biała lekka skórzana zbroja
+itm_ar_nor_t4_lightarmor_i_pl|Nordyckie białe lekkie skórzane zbroje
+itm_ar_nor_t4_lightarmor_j|Nordycka ciemnozielone ubranie
+itm_ar_nor_t4_lightarmor_j_pl|Nordyckie ciemnozielone ubrania
+itm_ar_nor_t5_byrnie_b|Nordyckie zielone byrnie
+itm_ar_nor_t5_byrnie_b_pl|Nordyckie zielone byrnie
+itm_ar_nor_t5_byrnie_c|Nordyckie niebieskie brynie
+itm_ar_nor_t5_byrnie_c_pl|Nordyckie niebeiskie brynie
+itm_ar_nor_t5_byrnie_d|Nordyckie brynie czerwone w paski
+itm_ar_nor_t5_byrnie_d_pl|Nordyckie brynie w paski
+itm_ar_nor_t5_byrnie_e|Nordyckie brynie w niebieskie paski
+itm_ar_nor_t5_byrnie_e_pl|Nordyckie brynie w niebeiskie paski
+itm_ar_nor_t5_byrnie_f|Nordyckie purpurowe brynie
+itm_ar_nor_t5_byrnie_f_pl|Nordyckie purpurowe brynie
+itm_ar_nor_t5_byrnie_g|Nordyckie jasnozielone brynie
+itm_ar_nor_t5_byrnie_g_pl|Light jasnozielone Nordyckie brynie
+itm_ar_nor_t5_byrnie_h|Nordyckie różowe brynie
+itm_ar_nor_t5_byrnie_h_pl|Nordyckie różowe brynie
+itm_ar_nor_t5_byrnie_i|Nordyckie białe brynie
+itm_ar_nor_t5_byrnie_i_pl|Nordyckie białe brynie
+itm_ar_nor_t5_byrnie_j|Nordyckie żółte brynie
+itm_ar_nor_t5_byrnie_j_pl|Nordyckie żółte brynie
+itm_ar_nor_t6_mailshirt_b|Nordycka czarna koszula kolcza
+itm_ar_nor_t6_mailshirt_b_pl|Nordyckie czarne koszule kolcze
+itm_ar_nor_t6_mailshirt_c|Nordycka czerwona koszula kolcza
+itm_ar_nor_t6_mailshirt_c_pl|Nordyckie czerwone koszule kolcze
+itm_ar_nor_t6_mailshirt_d|Nordycka brązowa koszula kolcza
+itm_ar_nor_t6_mailshirt_d_pl|Nordyckie brązowe koszule kolcze
+itm_ar_nor_t6_mailshirt_e|Nordycka biała koszula kolcza
+itm_ar_nor_t6_mailshirt_e_pl|Nordyckie białe koszule kolcze
+itm_ar_nor_t6_mailshirt_f|Nordycka koszula kolcza z niebieskim jednorożcem
+itm_ar_nor_t6_mailshirt_f_pl|Nordyckie koszule kolcze z niebieskim jednorożcem
+itm_ar_nor_t7_vikingbyrnie_d|Purpurowobiałe brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_d_pl|Purpurowobiałe brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_e|CZerwonozielone brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_e_pl|Czerwonobiałe brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_f|Brązowobiałe brynie wikingów
+itm_ar_nor_t7_vikingbyrnie_f_pl|Brązowobiałe brynie wikingów
+itm_ar_rho_ban_highlander_a|Brązowy strój górala
+itm_ar_rho_ban_highlander_a_pl|Brązowe stroje górala
+itm_ar_rho_t2_ragged_a|Skórzany chłopski strój
+itm_ar_rho_t2_ragged_a_pl|Skórzane chłopskie stroje
+itm_ar_rho_t3_aketon_a|Wysciełany skórzany chłopski strój
+itm_ar_rho_t3_aketon_a_pl|Wyściełane skórzane chłopskie stroje
+itm_ar_rho_t4_mailshirt_a|Żółta chłopska koszula kolcza
+itm_ar_rho_t4_mailshirt_a_pl|Żółte chłopskie koszule kolcze
+itm_ar_rho_t4_highlander_a|Brązowa góralska zbroja
+itm_ar_rho_t4_highlander_a_pl|Brązowe góralskie zbroje
+itm_ar_rho_t5_brigandine_a|Czerwona brygantyna
+itm_ar_rho_t5_brigandine_a_pl|czerwone brygantyny
+itm_ar_rho_t6_corrazina_a|Zielona Corrazina
+itm_ar_rho_t6_corrazina_a_pl|Zielone Corraziny
+itm_ar_rho_t7_bnw_a|Poharatana czarnobiała zbroja
+itm_ar_rho_t7_bnw_a_pl|Poharatane czaronbiałe zbroje
+itm_ar_rho_t7_gothic_a|Gotytcka żółta zbroja płytowa
+itm_ar_rho_t7_gothic_a_pl|Gotyckie żółte zbroje płytowe
+itm_ar_rho_t7_milan_a|Mediolańska żółta zbroja płytowa
+itm_ar_rho_t7_milan_a_pl|Mediolańskie żółte zbroje płytowe
+itm_ar_rho_ban_highlander_b|Zielona góralski strój
+itm_ar_rho_ban_highlander_b_pl|Zielone góralskie stroje
+itm_ar_rho_ban_highlander_c|Mieszany góralski strój
+itm_ar_rho_ban_highlander_c_pl|Mieszane góralski strój
+itm_ar_rho_t2_ragged_b|Zielony znoszony strój
+itm_ar_rho_t2_ragged_b_pl|Zielone znoszone stroje
+itm_ar_rho_t2_ragged_c|Niebieski znoszony strój
+itm_ar_rho_t2_ragged_c_pl|Niebieskie znoszone stroje
+itm_ar_rho_t2_ragged_d|Zielony skórzany chłopski strój
+itm_ar_rho_t2_ragged_d_pl|Zielone skórzane chłopskie stroje
+itm_ar_rho_t2_ragged_e|Ciemny skórzany chłopski strój
+itm_ar_rho_t2_ragged_e_pl|Ciemne skórzane chłopskie stroje
+itm_ar_rho_t3_aketon_b|Niebieska wysciechłana płachta
+itm_ar_rho_t3_aketon_b_pl|Niebieskie wyściechłane płachty
+itm_ar_rho_t3_aketon_c|Kolczy znoszony chłopski strój
+itm_ar_rho_t3_aketon_c_pl|Kolcza znoszone chłopskie stroje
+itm_ar_rho_t3_aketon_d|Czarna wysciechłana płachta
+itm_ar_rho_t3_aketon_d_pl|Czarne wyściechłane płachty
+itm_ar_rho_t3_aketon_e|Zielona wysciechłana płachta
+itm_ar_rho_t3_aketon_e_pl|Zielone wyściechłane płachty
+itm_ar_rho_t4_highlander_b|Zielonożółta góralska zbroja
+itm_ar_rho_t4_highlander_b_pl|Zielonożółte góralskie zbroje
+itm_ar_rho_t4_highlander_c|Brązowożółta góralska zbroja
+itm_ar_rho_t4_highlander_c_pl|Brązowożółte góralskie zbroje
+itm_ar_rho_t4_highlander_d|Zielona góralska zbroja
+itm_ar_rho_t4_highlander_d_pl|Zielone góralskie zbroje
+itm_ar_rho_t4_mailshirt_b|Czerwona chłopska koszula kolcza
+itm_ar_rho_t4_mailshirt_b_pl|Czerwone chłopskie koszule kolcze
+itm_ar_rho_t4_mailshirt_c|Zielona koszula kolcza
+itm_ar_rho_t4_mailshirt_c_pl|Zielone koszule kolcze
+itm_ar_rho_t4_mailshirt_d|Czerwona koszula kolcza
+itm_ar_rho_t4_mailshirt_d_pl|Czerwone koszule kolcze
+itm_ar_rho_t4_mailshirt_e|Biała koszula kolcza
+itm_ar_rho_t4_mailshirt_e_pl|Białe koszule kolcze
+itm_ar_rho_t4_mailshirt_f|Żółtka koszula kolcza
+itm_ar_rho_t4_mailshirt_f_pl|Żółte koszule kolcze
+itm_ar_rho_t5_brigandine_b|Niebieska brygantyna
+itm_ar_rho_t5_brigandine_b_pl|Niebieskie brygantyny
+itm_ar_rho_t5_brigandine_c|Czarna brygantyna
+itm_ar_rho_t5_brigandine_c_pl|Czarne brygantyny
+itm_ar_rho_t5_brigandine_d|Purpurowa brygantyna
+itm_ar_rho_t5_brigandine_d_pl|purpurowe brygantyny
+itm_ar_rho_t5_brigandine_e|Żółta brygantyna
+itm_ar_rho_t5_brigandine_e_pl|Żółte brygantyny
+itm_ar_rho_t5_brigandine_f|Zielona brygantyna
+itm_ar_rho_t5_brigandine_f_pl|Zielone brygantyny
+itm_ar_rho_t5_brigandine_g|Biała brygantyna
+itm_ar_rho_t5_brigandine_g_pl|BIałe brygantyny
+itm_ar_rho_t5_highlander_a|Brązowa elitarna góralska zbroja
+itm_ar_rho_t5_highlander_a_pl|Brązowe elitarne góralskie zbroje
+itm_ar_rho_t5_highlander_b|Żółta elitarna góralska zbroja
+itm_ar_rho_t5_highlander_b_pl|Żółte elitarne góralskie zbroje
+itm_ar_rho_t5_highlander_c|Zielona elitarna góralska zbroja
+itm_ar_rho_t5_highlander_c_pl|Zielone elitarne góralskie zbroje
+itm_ar_rho_t6_corrazina_b|Szara Corrazina
+itm_ar_rho_t6_corrazina_b_pl|Szare Corraziny
+itm_ar_rho_t6_corrazina_c|Czerwona Corrazina
+itm_ar_rho_t6_corrazina_c_pl|Czerwone Corraziny
+itm_ar_rho_t6_mailplate_a|Zielona zbroja półpłytowa z kolczugą
+itm_ar_rho_t6_mailplate_a_pl|Zielone zbroje półpłytowe z kolczugą
+itm_ar_rho_t6_mailplate_b|Czerwona zbroja półpłytowa z kolczugą
+itm_ar_rho_t6_mailplate_b_pl|Czerwone zbroje półpłytowe z kolczugą
+itm_ar_rho_t6_mailplate_c|Niebieska zbroja półpłytowa z kolczugą
+itm_ar_rho_t6_mailplate_c_pl|Niebieskie zbroje półpłytowe z kolczugą
+itm_ar_rho_t7_bnw_b|Czarnobiała zbroja paskowa
+itm_ar_rho_t7_bnw_b_pl|Czarnobiałe zbroje paskowe
+itm_ar_rho_t7_gothic_b|Gotycka czerwona zbroja płytowa
+itm_ar_rho_t7_gothic_b_pl|Gotyckie czerwone zbroje płytowe
+itm_ar_rho_t7_milan_b|Mediolańska zielona zbroja płytowa
+itm_ar_rho_t7_milan_b_pl|Mediolańskie zielone zbroje płytowe
+itm_ar_sar_ban_skirmisher_a|Brązowa zbroja harcownika
+itm_ar_sar_ban_skirmisher_a_pl|Brązowe zbroje harcownika
+itm_ar_sar_sla_t2_a|Wysciełana skórzana zbroja łowcy niewolników
+itm_ar_sar_sla_t2_a_pl|Wieściełane skórzane zbroje łowcy niewolników
+itm_ar_sar_sla_t3_a|Podbita skórzana zbroja łowcy niewolników
+itm_ar_sar_sla_t3_a_pl|Podbite skórzane zbroje łowcy niewolników
+itm_ar_sar_sla_t4_a|Żółta rogowa zbroja łówcy niewolniów
+itm_ar_sar_sla_t4_a_pl|Żółte rogowe zbroje łowcy niewolników
+itm_ar_sar_sla_t5_a|Zielona zbroja łowcy Vij
+itm_ar_sar_sla_t5_a_pl|Zielone zbroje łowcy Vij
+itm_ar_sar_sla_t6_a|Ciemna kolczuga łowcy Maratha
+itm_ar_sar_sla_t6_a_pl|Ciemne kolczugi łowcy Maratha
+itm_ar_sar_t2_quilted_a|Jasnozielona kolcza kamizelka
+itm_ar_sar_t2_quilted_a_pl|Jasnozielone kolcze kamizelki
+itm_ar_sar_t3_leather_a|Sarranidzka skórzana zbroja z żółtą przepaską
+itm_ar_sar_t3_leather_a_pl|Sarranidzkie skórzane zbroje z żółtą przepaską
+itm_ar_sar_t4_cavrobe_a|Żółta kawaleryjska szata
+itm_ar_sar_t4_cavrobe_a_pl|Żółte kawaleryjskie szaty
+itm_ar_sar_t4_chihal_a|Deseniowana szata chihal
+itm_ar_sar_t4_chihal_a_pl|Deseniowana szata Chihal
+itm_ar_sar_t5_mailshirt_a|Sarranidzka pomarańczowa koszula kolcza
+itm_ar_sar_t5_mailshirt_a_pl|Sarranidzkie pomarańczowe koszule kolcze
+itm_ar_sar_t6_chaintab_a|Sarranidzka zielona kolcza zbroja
+itm_ar_sar_t6_chaintab_a_pl|Sarranidzkie zielone kolcze zbroje
+itm_ar_sar_t7_fullplate_a|Sarranidzka pełna płytowa zbroja
+itm_ar_sar_t7_fullplate_a_pl|Sarranidzkie pełne płytowe zbroje
+itm_ar_sar_t7_fullplate_b|Sarranidzka miedziana pełna płytowa zbroja
+itm_ar_sar_t7_fullplate_b_pl|Sarranidzkie miedziane pełne płytowe zbroje
+itm_ar_sar_t7_fullplate_c|Sarranidzka złota pełna płytowa zbroja
+itm_ar_sar_t7_fullplate_c_pl|Sarranidzkie złote pełne płytowe zbroje
+itm_ar_sar_ban_skirmisher_b|Czerwona zbroja harcownika
+itm_ar_sar_ban_skirmisher_b_pl|Czerwone zbroje harcownika
+itm_ar_sar_ban_skirmisher_c|Żółta zbroja harcownika
+itm_ar_sar_ban_skirmisher_c_pl|Żółte zbroje harcownika
+itm_ar_sar_sla_t2_b|Kolcza skórzana zbroja łowcy niewolników
+itm_ar_sar_sla_t2_b_pl|Kolcze skórzane zbroje łowcy niewolników
+itm_ar_sar_sla_t3_b|Kolcza płytowa zbroja łowcy niewolników
+itm_ar_sar_sla_t3_b_pl|Kolcze płytowe zbroje łowcy niewolników
+itm_ar_sar_sla_t4_b|Niebiesta rogowa zbroja łowcy niwolników
+itm_ar_sar_sla_t4_b_pl|Niebieskie rogowe zbroje łowcy niewolników
+itm_ar_sar_sla_t5_b|Purpurowa zbroja łowcy Vij
+itm_ar_sar_sla_t5_b_pl|Purpurowe zbroje łowcy Vij
+itm_ar_sar_sla_t6_b|Niebieska kolczuga perskiego łowcy niewolników
+itm_ar_sar_sla_t6_b_pl|Niebieskie kolczugi perskiego łowcy niewolników
+itm_ar_sar_t2_quilted_b|Czerwnona pikowana kamizelka
+itm_ar_sar_t2_quilted_b_pl|Czerwone pikowane kamizelki
+itm_ar_sar_t2_quilted_c|Zielona pikowana kamizelka
+itm_ar_sar_t2_quilted_c_pl|Zielone pikowane kamizelki
+itm_ar_sar_t2_quilted_d|Zielonożółtka pikowana koszula
+itm_ar_sar_t2_quilted_d_pl|Zielonożółte pikowane koszule
+itm_ar_sar_t2_quilted_e|Niebieskia pikowana koszula
+itm_ar_sar_t2_quilted_e_pl|Niebieskie pikowane koszule
+itm_ar_sar_t3_leather_b|Sarranidzka skórzana zbroja z szarą przepaską
+itm_ar_sar_t3_leather_b_pl|Sarranidzkie skórzane zbroje z szarą przepaską
+itm_ar_sar_t3_archer_a|Żółta wyściełana kamizelka łucznika
+itm_ar_sar_t3_archer_a_pl|Żółte wyściełane kamizelki łucznika
+itm_ar_sar_t3_archer_b|Czerwona wyściełana kamizelka łucznika
+itm_ar_sar_t3_archer_b_pl|Czerwone wyściełane kamizelki łucznika
+itm_ar_sar_t3_archer_c|Niebieska wyściełana kamizelka łucznika
+itm_ar_sar_t3_archer_c_pl|Niebieskie wyściełane kamizelki łucznika
+itm_ar_sar_t4_cavrobe_b|Czerwona kawaleryjska szata
+itm_ar_sar_t4_cavrobe_b_pl|Czerwona kawaleryjskie szaty
+itm_ar_sar_t4_cavrobe_c|Niebieska kawaleryjska szata
+itm_ar_sar_t4_cavrobe_c_pl|Niebieskie kawaleryjskie szaty
+itm_ar_sar_t4_cavrobe_d|Zielona kawaleryjska szata
+itm_ar_sar_t4_cavrobe_d_pl|Zielone kawaleryjskie szaty
+itm_ar_sar_t4_cavrobe_e|Purpurowa kawaleryjska szata
+itm_ar_sar_t4_cavrobe_e_pl|Purpurowe kawaleryjskie szaty
+itm_ar_sar_t4_chihal_b|Czerwona szata chihal
+itm_ar_sar_t4_chihal_b_pl|Czerwone szaty chihal
+itm_ar_sar_t4_chihal_c|Purpurowa szata chihal
+itm_ar_sar_t4_chihal_c_pl|purpurowe szaty chihal
+itm_ar_sar_t4_chihal_d|Zielona szata chihal
+itm_ar_sar_t4_chihal_d_pl|Zielone szaty chihal
+itm_ar_sar_t4_chihal_e|Sarranidzka żółta podbita kolczuga
+itm_ar_sar_t4_chihal_e_pl|Sarranidzkie żółte podbite kolczugi
+itm_ar_sar_t5_mailshirt_b|Sarranidzka zilona koszula kolcza
+itm_ar_sar_t5_mailshirt_b_pl|Sarranidzkie zielone koszule kolcze
+itm_ar_sar_t5_mailshirt_c|Sarranidzka żółtakoszula kolcza
+itm_ar_sar_t5_mailshirt_c_pl|Sarranidzkie żółte koszule kolcze
+itm_ar_sar_t5_mailshirt_d|Sarranidzka ciemnoróżowa koszula kolcza
+itm_ar_sar_t5_mailshirt_d_pl|Sarranidzkie ciemnoróżowe koszule kolcze
+itm_ar_sar_t5_mailshirt_e|Sarranidzka jasnopurpurowa koszula kolcza
+itm_ar_sar_t5_mailshirt_e_pl|Sarranidzkie jasnopurpurowe koszule kolcze
+itm_ar_sar_t5_mailshirt_f|Sarranidzka jasnoniebieska koszula kolcza
+itm_ar_sar_t5_mailshirt_f_pl|Sarranidzkie jasnoniebiskie koszule kolcze
+itm_ar_sar_t5_mailshirt_g|Sarranidzka czerwona koszula kolcza
+itm_ar_sar_t5_mailshirt_g_pl|Sarranidzkie czerwone koszule kolcze
+itm_ar_sar_t5_mailshirt_h|Sarranidzka ciemnopurpurowa koszula kolcza
+itm_ar_sar_t5_mailshirt_h_pl|Sarranidzkie ciemnopurpurowa koszule kolcze
+itm_ar_sar_t5_mailshirt_i|Sarranidzka jasnoróżowa koszula kolcza
+itm_ar_sar_t5_mailshirt_i_pl|Sarranidzkie jasnorózowe koszule kolcze
+itm_ar_sar_t5_mailshirt_j|Sarranidzka ciemnoniebieska koszula kolcza
+itm_ar_sar_t5_mailshirt_j_pl|Sarranidzkie ciemnoniebieskie koszule kolcze
+itm_ar_sar_t6_chaintab_b|Sarranidzka biała kolcza zbroja
+itm_ar_sar_t6_chaintab_b_pl|Sarranidzkie białe kolcze zbroje
+itm_ar_sar_t6_plate_a|Sarranidzka pomarańczowa zbroja płytowa
+itm_ar_sar_t6_plate_a_pl|Sarranidzkie pomarańczowe zbroje płytowe
+itm_ar_sar_t6_plate_b|Sarranidzka czerwona zbroja płytowa
+itm_ar_sar_t6_plate_b_pl|Sarranidzkie czerwone zbroje płytowe
+itm_ar_sar_t6_plate_c|Sarranidzka skrzydlata zbroja płytowa
+itm_ar_sar_t6_plate_c_pl|Sarranidzkie skrzydlate zbroje płytowe
+itm_ar_sar_t6_plate_d|Sarranidzka brązowa zbroja płytowa
+itm_ar_sar_t6_plate_d_pl|Sarranidzkie brązowe zbroje płytowe
+itm_ar_sar_t7_fullplate_d|Sarranidzka ciemna pełna płytowa zbroja
+itm_ar_sar_t7_fullplate_d_pl|Sarranidzkie ciemne pełne płytowe zbroje
+itm_ar_sar_t7_fullplate_e|Sarranidzka brązowa pełna płytowa zbroja
+itm_ar_sar_t7_fullplate_e_pl|Sarranidzkie brązowe pełne płytowe zbroje
+itm_ar_sar_t7_fullplate_f|Sarranidzka niebeiska pełna płytowa zbroja
+itm_ar_sar_t7_fullplate_f_pl|Sarranidzkie niebieskie pełne płytowe zbroje
+itm_ar_pla_t2_tabard_a|Białoczarny tabard
+itm_ar_pla_t2_tabard_a_pl|Białoczarne tabardy
+itm_ar_pla_t3_tabard_a|Heraldyczna kolczuga z tabardem
+itm_ar_pla_t3_tabard_a_pl|Heraldyczne kolczugi z tabardem
+itm_ar_pla_t4_heraldic_a|Heraldyczna kolczuga
+itm_ar_pla_t4_heraldic_a_pl|Heraldyczne kolczugi
+itm_ar_pla_t4_heraldic_b|Krótka heraldyczna kolczuga
+itm_ar_pla_t4_heraldic_b_pl|Krótkie heraldyczne kolczugi
+itm_ar_pla_t5_mailsurcoat_tableau|Heraldyczna kolczuga z surcotem
+itm_ar_pla_t5_mailsurcoat_tableau_pl|Heraldyczne kolczugi z surcotem
+itm_ar_pla_t5_mailsurcoat_a|Heraldyczna kolczuga z surcotem
+itm_ar_pla_t5_mailsurcoat_a_pl|Heraldyczne kolczugi z surcotem
+itm_ar_pla_t5_mailsurcoat_b|Kolczuga z surcotem Gerulfingen
+itm_ar_pla_t5_mailsurcoat_b_pl|Kolczugi z surcotem Gerulfingen
+itm_ar_pla_t6_heraldic_a|Heraldyczna ciężka zbroja półpłytowa z kolczugą
+itm_ar_pla_t6_heraldic_a_pl|Heraldyczne ciężkie zbroje półpłytowe z kolczugą
+itm_ar_pla_t7_knight_a|Cesarska zbroja
+itm_ar_pla_t7_knight_a_pl|Cesarskie zbroje
+itm_ar_pla_t7_knight_b|Duńska zbroja płytowa
+itm_ar_pla_t7_knight_b_pl|Duńskie zbroje płytowe
+itm_ar_pla_t7_knight_c|Cesarska zbroja płytowa
+itm_ar_pla_t7_knight_c_pl|Cesarskie zbroje płytowe
+itm_ar_pla_pri_bishop|Biskupi habit
+itm_ar_pla_pri_bishop_pl|Biskupie habity
+itm_ar_pla_pri_captain|Kapitańska zbroja
+itm_ar_pla_pri_captain_pl|Kapitańskie zbroje
+itm_ar_pla_str_samurai|Dziwna zbroja
+itm_ar_pla_str_samurai_pl|Dziwne zbroje
+itm_ar_pla_t2_tabard_b|Tabard z czerwonym krzyżem
+itm_ar_pla_t2_tabard_b_pl|Tabardy z czerwonym krzyżem
+itm_ar_pla_t2_tabard_c|Tabard z czarnym krzyżem
+itm_ar_pla_t2_tabard_c_pl|Tabardy z czarnym krzyżem
+itm_ar_pla_t2_tabard_d|Tabardy z długim czerwonym krzyżem
+itm_ar_pla_t2_tabard_d_pl|Tabardy z długim czerwonym krzyżem
+itm_ar_pla_t2_tabard_e|Tabard z białym krzyżem
+itm_ar_pla_t2_tabard_e_pl|Tabardy z białym krzyżem
+itm_ar_pla_t3_tabard_b|Kolczuga z białym tabardem z czerwonym krzyżem
+itm_ar_pla_t3_tabard_b_pl|Kolczugi z białym tabardem z czerwonym krzyżem
+itm_ar_pla_t3_tabard_c|Kolczuga z białym tabardem z czarnym krzyżem
+itm_ar_pla_t3_tabard_c_pl|Kolczugi z białym tabardem z czarnym krzyżem
+itm_ar_pla_t3_tabard_d|Kolczuga z czarnym tabardem z długim czerwonym krzyżem
+itm_ar_pla_t3_tabard_d_pl|Kolczugi z czarnym tabardem z długim czerwonym krzyżem
+itm_ar_pla_t3_tabard_e|Kolczuga z czarnym tabardem z białym krzyżem
+itm_ar_pla_t3_tabard_e_pl|Kolczugi z czarnym tabardem z białym krzyżem
+itm_ar_pla_t4_mail_c|Kolczuga z czerwonym krzyżem
+itm_ar_pla_t4_mail_c_pl|Kolczugi z czerwonym krzyżem
+itm_ar_pla_t4_mail_d|Biała kolczuga z czarnym krzyżem
+itm_ar_pla_t4_mail_d_pl|Bałe kolczugi z czarnym krzyżem
+itm_ar_pla_t4_mail_e|Biała kolczuga z długim czerwonym krzyżem
+itm_ar_pla_t4_mail_e_pl|Białe kolczugi z długim czerwonym krzyżem
+itm_ar_pla_t4_mail_f|Cesarska kolczuga
+itm_ar_pla_t4_mail_f_pl|Cesarskie kolczugi
+itm_ar_pla_t4_mail_g|Czarna kolczuga z czerwonym krzyżem
+itm_ar_pla_t4_mail_g_pl|CZarne kolczugi z czerwonym krzyżem
+itm_ar_pla_t4_mail_h|Czarna kolczuga z białym krzyżem
+itm_ar_pla_t4_mail_h_pl|Czarne kolczugi z białym krzyżem
+itm_ar_pla_t4_mail_i|Czarna kolczuga z długim czerwonym krzyżem
+itm_ar_pla_t4_mail_i_pl|Czarne kolczugi z długim czerwonym krzyżem
+itm_ar_pla_t4_mail_j|Kólewska kolczuga
+itm_ar_pla_t4_mail_j_pl|Królewskie kolczugi
+itm_ar_pla_t5_mailsurcoat_c|Kolczuga z białym surcotem z czerwonym krzyżem
+itm_ar_pla_t5_mailsurcoat_c_pl|Kolczugi z białym surcotem z czerwonym krzyżem
+itm_ar_pla_t5_mailsurcoat_d|Kolczuga z białym surcotem z czarnym krzyżem
+itm_ar_pla_t5_mailsurcoat_d_pl|Kolczugi z białym surcotem z czarnym krzyżem
+itm_ar_pla_t5_mailsurcoat_e|Kolczuga z czarnym surcotem z czerwonym krzyżem
+itm_ar_pla_t5_mailsurcoat_e_pl|Kolczugi z czarnym surcotem z czerwonym krzyżem
+itm_ar_pla_t5_mailsurcoat_f|Kolczuga z czarnym surcotem z białym krzyżem
+itm_ar_pla_t5_mailsurcoat_f_pl|Kolczugi z czarnym surcotem z białym krzyżem
+itm_ar_pla_t5_mailsurcoat_g|Kolczuga z białym surcotem z długim czerwonym krzyżem
+itm_ar_pla_t5_mailsurcoat_g_pl|Kolczugi z białym surcotem z długim czerwonym krzyżem
+itm_ar_pla_t5_mailsurcoat_h|Kolczuga z czarnym surcotem z długim czerwonym krzyżem
+itm_ar_pla_t5_mailsurcoat_h_pl|Kolczugi z czarnym surcotem z długim czerwonym krzyżem
+itm_ar_pla_t5_mailsurcoat_i|Kolczuga z królewskim surcotem
+itm_ar_pla_t5_mailsurcoat_i_pl|Kolczugi z królewskim surcotem
+itm_ar_pla_t5_mailsurcoat_j|Kolczuga z cesarskim surcotem
+itm_ar_pla_t5_mailsurcoat_j_pl|Kolczugi z cesarskim surcotem
+itm_ar_pla_t6_heraldic_b|Ciężka niebieska zbroja półpłytowa z kolczugą
+itm_ar_pla_t6_heraldic_b_pl|Ciężkie niebieskie zbroje półpłytowe z kolczugą
+itm_ar_pla_t6_heraldic_c|Ciężkia pomarańczowa zbroja półpłytowa z kolczugą
+itm_ar_pla_t6_heraldic_c_pl|Ciężkie pomarańczowe zbroje półpłytowe z kolczugą
+itm_ar_pla_t6_heraldic_d|Ciężka biała zbroja półpłytowa z kolczugą
+itm_ar_pla_t6_heraldic_d_pl|Ciężkie białe zbroje półpłytowe z kolczugą
+itm_ar_pla_t6_heraldic_e|Ciężka zbroja półpłytowa z kolczugą z czerwonym krzyżem
+itm_ar_pla_t6_heraldic_e_pl|Ciężkie zbroje półpłytowe z kolczugą z czerwonym krzyżem
+itm_ar_pla_t6_heraldic_f|Ciężka zbroja półpłytowa z kolczugą z czarnym krzyżem
+itm_ar_pla_t6_heraldic_f_pl|Ciężkie zbroje półpłytowe z kolczugą z czarnym krzyżem
+itm_ar_swa_mer_outfit|Swadiański strój kupca
+itm_ar_swa_mer_outfit_pl|Swadiańskie stroje kupca
+itm_ar_swa_nob_outfit|Swadiański zielony strój arystokracki
+itm_ar_swa_nob_outfit_pl|Swadiańskie zielone stroje arystokrackie
+itm_ar_swa_shi_linen|Biała lniana koszula
+itm_ar_swa_shi_linen_pl|Białe lniane koszule
+itm_ar_swa_sla_loin|Brązowe góralskie ubranie
+itm_ar_swa_sla_loin_pl|Brązowe góralskie ubrania
+itm_ar_swa_tun_tabard|Zielony tabard
+itm_ar_swa_tun_tabard_pl|Zielone tabardy
+itm_ar_swa_nob_outfit_a|Swadiański biały strój arystokracki
+itm_ar_swa_nob_outfit_a_pl|Swadiańskie białe stroje arystokrackie
+itm_ar_swa_nob_outfit_b|Swadiański żółty strój arystokracki
+itm_ar_swa_nob_outfit_b_pl|Swadiańskie żółte stroje arystokrackie
+itm_ar_swa_nob_outfit_c|Swadiański niebieski strój arystokracki
+itm_ar_swa_nob_outfit_c_pl|Swadiańskie niebieskie stroje arystokrackie
+itm_ar_swa_nob_outfit_d|Swadiański purpurowy strój arystokracki
+itm_ar_swa_nob_outfit_d_pl|Swadiańskie purpurowe stroje arystokrackie
+itm_ar_swa_nob_outfit_e|Swadiański pomarańczowy strój arystokracki
+itm_ar_swa_nob_outfit_e_pl|Swadiańskie pomarańczowe stroje arystokrackie
+itm_ar_swa_shi_linen_a|Czarna lniana koszula
+itm_ar_swa_shi_linen_a_pl|Czarne lniane koszule
+itm_ar_swa_shi_linen_b|Żółta lnia na koszula
+itm_ar_swa_shi_linen_b_pl|Żółte lniane koszule
+itm_ar_swa_tun_tabard_a|Czerwony tabard
+itm_ar_swa_tun_tabard_a_pl|Czerwone tabardy
+itm_ar_swa_tun_tabard_b|Purpurowy tabard
+itm_ar_swa_tun_tabard_b_pl|Purpurowe tabardy
+itm_ar_swa_tun_tabard_c|Niebieski tabard
+itm_ar_swa_tun_tabard_c_pl|Niebieskie tabardy
+itm_ar_vae_mer_jacket|Skórzana krutka
+itm_ar_vae_mer_jacket_pl|Skórzane kurtki
+itm_ar_vae_nob_outfit|Vaegirski brązowy strój arystokracki
+itm_ar_vae_nob_outfit_pl|Vaegirskie brązowe stroje arystokrackie
+itm_ar_vae_shi_red|Vaegirska czerwona koszula
+itm_ar_vae_shi_red_pl|Vaegirskie czerwone koszule
+itm_ar_vae_sla_jacketgray|Szara kurtka
+itm_ar_vae_sla_jacketgray_pl|Szare kurtki
+itm_ar_vae_tun_red|Vaegirska czerwona tunika
+itm_ar_vae_tun_red_pl|Vaegirskie czerwone tuniki
+itm_ar_vae_nob_outfit_a|Vaegirski biały strój arystokracki
+itm_ar_vae_nob_outfit_a_pl|Vaegirskie białe stroje arystokrackie
+itm_ar_vae_nob_outfit_b|Vaegirski żółty strój arystokracki
+itm_ar_vae_nob_outfit_b_pl|Vaegirskie żółte stroje arystokrackie
+itm_ar_vae_nob_outfit_c|Vaegirski zielony strój arystokracki
+itm_ar_vae_nob_outfit_c_pl|Vaegirskie zielone stroje arystokrackie
+itm_ar_vae_nob_outfit_d|Vaegirski czerwony strój arystokracki
+itm_ar_vae_nob_outfit_d_pl|Vaegirskie czerwone stroje arystokrackie
+itm_ar_vae_nob_outfit_e|Vaegirski strój arystokracki
+itm_ar_vae_nob_outfit_e_pl|Vaegirskie stroje arystokrackie
+itm_ar_vae_shi_blue|Vaegirska niebieska koszula
+itm_ar_vae_shi_blue_pl|Vaegirskie niebieskie koszule
+itm_ar_vae_shi_green|Vaegirska zielona koszula
+itm_ar_vae_shi_green_pl|Vaegirskie zielone koszule
+itm_ar_vae_tun_black|Vaegirska czarna tunika
+itm_ar_vae_tun_black_pl|Vaegirskie czarne tuniki
+itm_ar_vae_tun_purple|Vaegirska purpurowa tunika
+itm_ar_vae_tun_purple_pl|Vaegirskie purpurowe tuniki
+itm_ar_vae_tun_white|Vaegirska biała tunika
+itm_ar_vae_tun_white_pl|Vaegirskie białe tuniki
+itm_ar_khe_mer_nomadvest|Nomadzka kamizelka
+itm_ar_khe_mer_nomadvest_pl|Nomadzkie kamizelki
+itm_ar_khe_nob_kazakhrobe|Kazahska szata
+itm_ar_khe_nob_kazakhrobe_pl|Kazahskie szaty
+itm_ar_khe_shi_peltcoat|Zielony furzany płaszcz
+itm_ar_khe_shi_peltcoat_pl|Zielone furzane płaszcze
+itm_ar_khe_sla_naked|Khergicki malowany niewolnik
+itm_ar_khe_sla_naked_pl|Khergickie malowani niewolnicy
+itm_ar_khe_tun_furcoat|Brązowy furzany płaszcz
+itm_ar_khe_tun_furcoat_pl|Brązowe furzane płaszcze
+itm_ar_khe_nob_nomadrobe_a|Nomadzka tygrysia szata
+itm_ar_khe_nob_nomadrobe_a_pl|Nomadzkie tygrysie szaty
+itm_ar_khe_nob_nomadrobe_b|Nomadzka zielona szata
+itm_ar_khe_nob_nomadrobe_b_pl|Nomadzkie zielone szaty
+itm_ar_khe_nob_nomadrobe_c|Nomadzka czerwona szata
+itm_ar_khe_nob_nomadrobe_c_pl|Nomadzkie czerwone szaty
+itm_ar_khe_nob_nomadrobe_d|Nomadzka barwna szata
+itm_ar_khe_nob_nomadrobe_d_pl|Nomadzkie barwne szaty
+itm_ar_khe_nob_nomadrobe_e|Nomadzka purpurowa szata
+itm_ar_khe_nob_nomadrobe_e_pl|Nomadzkie purpurowe szaty
+itm_ar_khe_shi_peltcoat_a|Czerwony furzany płaszcz
+itm_ar_khe_shi_peltcoat_a_pl|Czerwone furzane płaszcze
+itm_ar_khe_shi_peltcoat_b|Purpurowy furzany płaszcz
+itm_ar_khe_shi_peltcoat_b_pl|Purpurowe furzane płaszcze
+itm_ar_khe_tun_furcoat_a|Czarny furzany płaszcz
+itm_ar_khe_tun_furcoat_a_pl|Czarne furzane płaszcze
+itm_ar_khe_tun_furcoat_b|Biały furzany płaszcz
+itm_ar_khe_tun_furcoat_b_pl|Białe furzane płaszcze
+itm_ar_khe_tun_furcoat_c|Żółty furzany płaszcz
+itm_ar_khe_tun_furcoat_c_pl|Żółte furzane płaszcze
+itm_ar_nor_mer_tunic|Tunika kupiecka
+itm_ar_nor_mer_tunic_pl|Tuniki kupieckie
+itm_ar_nor_nob_skjorta|Czarna Skjorta
+itm_ar_nor_nob_skjorta_pl|Czarne Skjorty
+itm_ar_nor_shi_skjortira|Biała lniana Skjortira
+itm_ar_nor_shi_skjortira_pl|Białe lniane Skjortiry
+itm_ar_nor_sla_trousers|Niebieskie spodnie
+itm_ar_nor_sla_trousers_pl|Niebieskie spodnie
+itm_ar_nor_tun_blue|Niebieska tunika wikingów
+itm_ar_nor_tun_blue_pl|Niebieskie tuniki wikingów
+itm_ar_nor_nob_skjorta_a|Niebieska Skjorta
+itm_ar_nor_nob_skjorta_a_pl|Niebieskie Skjorty
+itm_ar_nor_nob_skjorta_b|Skjorta w paski
+itm_ar_nor_nob_skjorta_b_pl|Skjorty w paski
+itm_ar_nor_nob_skjorta_c|Zielononiebieska Skjorta
+itm_ar_nor_nob_skjorta_c_pl|Zielononiebieskie Skjorty
+itm_ar_nor_nob_skjorta_d|Zielonoczerwona Skjorta
+itm_ar_nor_nob_skjorta_d_pl|Zielonoczerwona Skjorty
+itm_ar_nor_nob_skjorta_e|Brązowa Skjorta
+itm_ar_nor_nob_skjorta_e_pl|Brązowe Skjorty
+itm_ar_nor_shi_skjortira_a|Zielona lniana Skjortira
+itm_ar_nor_shi_skjortira_a_pl|Zielone lniane Skjortiry
+itm_ar_nor_shi_skjortira_b|Brązowa lniana Skjortira
+itm_ar_nor_shi_skjortira_b_pl|Brązowe lniane Skjortiry
+itm_ar_nor_tun_green|Zielona tunika wikingów
+itm_ar_nor_tun_green_pl|Zielone tuniki wikingów
+itm_ar_nor_tun_purple|Purpurowa tunika wikingów
+itm_ar_nor_tun_purple_pl|Purpurowe tuniki wikingów
+itm_ar_nor_tun_red|Czerwona tunika wikingów
+itm_ar_nor_tun_red_pl|Czerwone tuniki wikingów
+itm_ar_rho_mer_highlandergreen|Zielony góraski strój kupca
+itm_ar_rho_mer_highlandergreen_pl|Zielone góraskie stroje kupca
+itm_ar_rho_nob_robe|Rhodocka szata arystokracki
+itm_ar_rho_nob_robe_pl|Rhodockie szaty arystokrackie
+itm_ar_rho_shi_capegreen|Tunika z zieloną peleryną
+itm_ar_rho_shi_capegreen_pl|Tuniki z zielona peleryną
+itm_ar_rho_sla_tunic|Jasnozielony góralski ubiór
+itm_ar_rho_sla_tunic_pl|Jasnozielone góralskie ubiory
+itm_ar_rho_tun_vest|Biała tunika z kamizelką
+itm_ar_rho_tun_vest_pl|Białe tuniki z kamizelką
+itm_ar_rho_nob_robe_a|Rhodocka zielona szata arystokracka
+itm_ar_rho_nob_robe_a_pl|Rhodockie zielone szaty arystokrackie
+itm_ar_rho_nob_robe_b|Rhodocka żółta szata arystokracka
+itm_ar_rho_nob_robe_b_pl|Rhodockie żółte szaty arystokrackie
+itm_ar_rho_nob_robe_c|Rhodocka czerwona szata arystokracka
+itm_ar_rho_nob_robe_c_pl|Rhodockie czerwone szaty arystokrackie
+itm_ar_rho_nob_robe_d|Rhodocka jasnoniebieska szata arystokracka
+itm_ar_rho_nob_robe_d_pl|Rhodockie jasnoniebieskie szaty arystokrackie
+itm_ar_rho_nob_robe_e|Rhodocka szata arystokracka
+itm_ar_rho_nob_robe_e_pl|Rhodockie szaty arystokrackie
+itm_ar_rho_shi_capered|Tunika z czerwoną peleryną
+itm_ar_rho_shi_capered_pl|Tuniki czerwoną peleryną
+itm_ar_rho_shi_capeyellow|Tunika z żółtą peleryną
+itm_ar_rho_shi_capeyellow_pl|Tuniki z żółtą peleryną
+itm_ar_rho_tun_vest_a|Niebieska tunika z kamizelką
+itm_ar_rho_tun_vest_a_pl|Niebieskie tuniki z kamizelką
+itm_ar_rho_tun_vest_b|Zielona tunika z kamizelką
+itm_ar_rho_tun_vest_b_pl|Zielone tuniki z kamizelką
+itm_ar_rho_tun_vest_c|Czerwona tunika z kamizelką
+itm_ar_rho_tun_vest_c_pl|Czerwone tuniki z kamizelką
+itm_ar_sar_mer_ethiopian|Tunika etiopskiego kupca
+itm_ar_sar_mer_ethiopian_pl|Tuniki etiopskich kupców
+itm_ar_sar_nob_maratha|Pomarańczowa tunika Maratha 
+itm_ar_sar_nob_maratha_pl|Pomarańczowe tuniki Maratha 
+itm_ar_sar_shi_robe|Brązowa znoszona szata w paski
+itm_ar_sar_shi_robe_pl|Brązowe znoszone szaty w paski
+itm_ar_sar_sla_naked|Sarranidzki łachman niewolnika
+itm_ar_sar_sla_naked_pl|Sarranidzkie łachmany niewolników
+itm_ar_sar_tun_robeblack|Czarna znoszona szata
+itm_ar_sar_tun_robeblack_pl|Czarne znoszone szaty
+itm_ar_sar_nob_maratha_a|Czerwona tunika Maratha
+itm_ar_sar_nob_maratha_a_pl|Czerwone tuniki Maratha
+itm_ar_sar_nob_maratha_b|Czarna tunika Maratha
+itm_ar_sar_nob_maratha_b_pl|Czarne tuniki Maratha
+itm_ar_sar_nob_maratha_c|Biała tunika Maratha
+itm_ar_sar_nob_maratha_c_pl|Białe tuniki Maratha
+itm_ar_sar_nob_maratha_d|Żółta tunika Maratha
+itm_ar_sar_nob_maratha_d_pl|Żółte tuniki Maratha
+itm_ar_sar_nob_maratha_e|Niebieska tunika Maratha
+itm_ar_sar_nob_maratha_e_pl|Niebieskie tuniki Maratha
+itm_ar_sar_shi_robe_a|Zielona znoszona szata w paski
+itm_ar_sar_shi_robe_a_pl|Zielone znoszone szaty w paski
+itm_ar_sar_shi_robe_b|Czerwona znoszona szata w paski
+itm_ar_sar_shi_robe_b_pl|Czerwone znoszone szaty w paski
+itm_ar_sar_tun_robebeige|Beżowa znoszona szata
+itm_ar_sar_tun_robebeige_pl|Beżowe znoszone szaty
+itm_ar_sar_tun_robegreen|Zielona znoszona szata
+itm_ar_sar_tun_robegreen_pl|Zielone znoszone szaty
+itm_ar_sar_tun_robered|Czerwona znoszona szata
+itm_ar_sar_tun_robered_pl|Czerwone znoszone szaty
+itm_ar_pla_mer_highlanderbrown|Brązowy góraski strój kupca
+itm_ar_pla_mer_highlanderbrown_pl|Brązowe góraskie stroje kupców
+itm_ar_pla_mer_leatherapron|Skórzany fartuch
+itm_ar_pla_mer_leatherapron_pl|Skórzane fartuchy
+itm_ar_pla_mer_surgeon|Ubranie felczera
+itm_ar_pla_mer_surgeon_pl|Ubrania felczerów
+itm_ar_pla_pri_decoratedrobe|Dekorowana szata duchownego
+itm_ar_pla_pri_decoratedrobe_pl|Dekorowana szaty duchownych
+itm_ar_pla_pri_monkrobe|Szata mnicha
+itm_ar_pla_pri_monkrobe_pl|Szaty mnicha
+itm_ar_pla_pri_pilgrimdisguise|Strój pielgrzyma
+itm_ar_pla_pri_pilgrimdisguise_pl|Stroje pielgrzymów
+itm_ar_pla_pri_robe|Szata
+itm_ar_pla_pri_robe_pl|Szaty
+itm_ar_pla_tun_tribal|Strój wojownika plemiennego
+itm_ar_pla_tun_tribal_pl|Stroje wojowników plemiennych
+itm_ar_pla_tun_tunic|Tunika zwiadowcy
+itm_ar_pla_tun_tunic_pl|Tuniki zwiadowców
+itm_dress_general_bride|Suknia panny młodej
+itm_dress_general_bride_pl|Suknie panny młodej
+itm_dress_swadia_common_a|Swadiańska różowa suknia
+itm_dress_swadia_common_a_pl|Swadiańskie różowe suknie
+itm_dress_swadia_common_b|Swadiańska wełniana suknia
+itm_dress_swadia_common_b_pl|Swadiańskie wełniane suknie
+itm_dress_swadia_lady_a|Swadiańska czerwona dworska suknia
+itm_dress_swadia_lady_a_pl|Swadiańskie czerwone dworskie suknie
+itm_dress_swadia_lady_b|Swadiańska brązowa dworska suknia
+itm_dress_swadia_lady_b_pl|Swadiańskie brązowe dworskie suknie
+itm_dress_swadia_lady_isolla|Swadiańska książęca suknia
+itm_dress_swadia_lady_isolla_pl|Swadiańskie książęce suknie
+itm_dress_swadia_lady_c|Swadiańska biała dworska suknia
+itm_dress_swadia_lady_c_pl|Swadiańskie białe dworskie suknie
+itm_dress_swadia_lady_d|Swadiańska czarna dworska suknia
+itm_dress_swadia_lady_d_pl|Swadiańskie czarne dworskie suknie
+itm_dress_swadia_lady_e|Swadiańska zielona dworska suknia
+itm_dress_swadia_lady_e_pl|Swadiańskie zielone dworskie suknie
+itm_dress_vaegir_common_a|Vaegirska chłopska suknia
+itm_dress_vaegir_common_a_pl|Vaegirskie chłopskie suknie
+itm_dress_vaegir_common_b|Vaegirska brązowa suknia
+itm_dress_vaegir_common_b_pl|Vaegirskie brązowe suknie
+itm_dress_vaegir_lady_a|Vaegirska czerwona dworska suknia
+itm_dress_vaegir_lady_a_pl|Vaegirskie czerwone dworskie suknie
+itm_dress_vaegir_lady_b|Vaegirska czarna dworska suknia
+itm_dress_vaegir_lady_b_pl|Vaegirskie czarne dworskie suknie
+itm_dress_vaegir_lady_c|Vaegirska żółta dworska suknia
+itm_dress_vaegir_lady_c_pl|Vaegirskie żółte dworskie suknie
+itm_dress_vaegir_lady_d|Vaegirska zielona dworska suknia
+itm_dress_vaegir_lady_d_pl|Vaegirskie zielone dworskie suknie
+itm_dress_vaegir_lady_e|Vaegirska niebieska dworska suknia
+itm_dress_vaegir_lady_e_pl|Vaegirskie niebieskie dworskie suknie
+itm_dress_khergit_common_a|Khergicka czerwona skórzana suknia
+itm_dress_khergit_common_a_pl|Khergickie czerwone skórzane suknie
+itm_dress_khergit_common_b|Khergicka niebieska suknia
+itm_dress_khergit_common_b_pl|Khergickie niebieskie suknie
+itm_dress_khergit_lady_a|Khergicka niebieska dworska suknia
+itm_dress_khergit_lady_a_pl|Khergickie niebieskie dworskie suknie
+itm_dress_khergit_lady_b|Khergicka zielona dworska suknia
+itm_dress_khergit_lady_b_pl|Khergickie zielone dworskie suknie
+itm_dress_khergit_lady_c|Khergicka czerwona dworska suknia
+itm_dress_khergit_lady_c_pl|Khergickie czerwone dworskie suknie
+itm_dress_khergit_lady_d|Khergicka purpurowa dworska suknia
+itm_dress_khergit_lady_d_pl|Khergickie purpurowe dworskie suknie
+itm_dress_khergit_lady_e|Khergicka zdobiona dworska suknia
+itm_dress_khergit_lady_e_pl|Khergickie zdobiona dworskie suknie
+itm_dress_nord_common_a|Nordycka chłopska suknia
+itm_dress_nord_common_a_pl|Nordyckie chłopskie suknie
+itm_dress_nord_common_b|Nordycka niebieska suknia
+itm_dress_nord_common_b_pl|Nordyckie niebieskie suknie
+itm_dress_nord_lady_a|Nordycka zielona dworska suknia
+itm_dress_nord_lady_a_pl|Nordyckie zielone dworskie suknie
+itm_dress_nord_lady_b|Nordycka purpurowa dworska suknia
+itm_dress_nord_lady_b_pl|Nordyckie purpurowe dworskie suknie
+itm_dress_nord_lady_c|Nordycka żółta dworska suknia
+itm_dress_nord_lady_c_pl|Nordyckie żółte dworskie suknie
+itm_dress_nord_lady_d|Nordycka niebieska dworska suknia
+itm_dress_nord_lady_d_pl|Nordyckie niebieskie dworskie suknie
+itm_dress_nord_lady_e|Nordycka czerwona dworska suknia
+itm_dress_nord_lady_e_pl|Nordyckie czerwone dworskie suknie
+itm_dress_rhodok_common_a|Rhodocka czerwona suknia
+itm_dress_rhodok_common_a_pl|Rhodockie czerwone suknie
+itm_dress_rhodok_common_b|Rhodocka cłopska suknia
+itm_dress_rhodok_common_b_pl|Rhodockie chłopskie suknie
+itm_dress_rhodok_lady_a|Rhodocka niebieska dworska suknia
+itm_dress_rhodok_lady_a_pl|Rhodockie niebieskie dworskie suknie
+itm_dress_rhodok_lady_b|Rhodocka zielona dworska suknia
+itm_dress_rhodok_lady_b_pl|Rhodockie zielone dworskie suknie
+itm_dress_rhodok_lady_c|Rhodocka czerwona dworska suknia
+itm_dress_rhodok_lady_c_pl|Rhodockie czerwone dworskie suknie
+itm_dress_rhodok_lady_d|Rhodocka purpurowa dworska suknia
+itm_dress_rhodok_lady_d_pl|Rhodockie purpurowe dworskie suknie
+itm_dress_rhodok_lady_e|Rhodocka żółta dworska suknia
+itm_dress_rhodok_lady_e_pl|Rhodockie żółte dworskie suknie
+itm_dress_sarranid_common_a|Sarranidzka szara suknia
+itm_dress_sarranid_common_a_pl|Sarranidzkie szare suknie
+itm_dress_sarranid_common_b|Sarranidzka brązowa suknia
+itm_dress_sarranid_common_b_pl|Sarranidzkie brązowe suknie
+itm_dress_sarranid_lady_a|Sarranidzka purpurowa dworska suknia
+itm_dress_sarranid_lady_a_pl|Sarranidzkie purpurowe dworskie suknie
+itm_dress_sarranid_lady_b|Sarranidzka pomarańczowa dworska suknia
+itm_dress_sarranid_lady_b_pl|Sarranidzkie pomarańczowe dworskie suknie
+itm_dress_sarranid_lady_arwa|Sarranidzka książęca suknia
+itm_dress_sarranid_lady_arwa_pl|Sarranidzkie książęce suknie
+itm_dress_sarranid_lady_c|Sarranidzka czerwona dworska suknia
+itm_dress_sarranid_lady_c_pl|Sarranidzkie czerwone dworskie suknie
+itm_dress_sarranid_lady_d|Sarranidzka zielona dworska suknia
+itm_dress_sarranid_lady_d_pl|Sarranidzkie zielone dworskie suknie
+itm_dress_sarranid_lady_e|Sarranidzka niebieska dworska suknia
+itm_dress_sarranid_lady_e_pl|Sarranidzkie niebieskie dworskie suknie
+itm_bo_gen_t0_bride_shoes|Buty panny młodej
+itm_bo_gen_t0_bride_shoes_pl|Buty panny młodej
+itm_bo_swa_t0_sandal|Swadiańskie sandały niewolnika
+itm_bo_swa_t0_sandal_pl|Swadiańskie sandały niewolnika
+itm_bo_swa_t1_sandal|Swadiańskie sandały
+itm_bo_swa_t1_sandal_pl|Swadiańskie sandały
+itm_bo_swa_t2_hose|Wełniane pończochy
+itm_bo_swa_t2_hose_pl|Wełniane pończochy
+itm_bo_swa_t3_wrapping|Paskowe buty
+itm_bo_swa_t3_wrapping_pl|Paskowe buty
+itm_bo_swa_t4_sandal|Swadiańskie platerowane sandały
+itm_bo_swa_t4_sandal_pl|Swadiańskie platerowane sandały
+itm_bo_swa_t5_hose|Kolcze pończochy
+itm_bo_swa_t5_hose_pl|Kolcze pończochy
+itm_bo_swa_t6_mail|Platerowane kolcze buty
+itm_bo_swa_t6_mail_pl|Platerowane kolcze buty
+itm_bo_swa_t7_greaves|Żelazne nagolenniki
+itm_bo_swa_t7_greaves_pl|Żelazne nagolenniki
+itm_bo_vae_t0_sandal|Północne sandały niewolnika
+itm_bo_vae_t0_sandal_pl|Północne sandały niewolnika
+itm_bo_vae_t1_sandal|Vaegirskie sandały
+itm_bo_vae_t1_sandal_pl|Vaegirskie sandały
+itm_bo_vae_t2_shoes|Vaegirskie ubuwie
+itm_bo_vae_t2_shoes_pl|Vaegirskie ubuwia
+itm_bo_vae_t3_leather|Vaegirskie skórzane buty
+itm_bo_vae_t3_leather_pl|Vaegirskie skórzane buty
+itm_bo_vae_t4_shoes|Vaegirskie skórzane platerowane ubuwie
+itm_bo_vae_t4_shoes_pl|Vaegirskie skórzane platerowane ubuwia
+itm_bo_vae_t5_chausses|Kolcze nogawki
+itm_bo_vae_t5_chausses_pl|Kolcze nogawki
+itm_bo_vae_t6_leather|Wzmacniane skórzane nagolenniki
+itm_bo_vae_t6_leather_pl|Wzmacniane skórzane nagolenniki
+itm_bo_vae_t7_greaves|Skórzane nagolenniki
+itm_bo_vae_t7_greaves_pl|Skórzane nagolenniki
+itm_bo_khe_t0_sandal|Wschodnie sandały niewolnika
+itm_bo_khe_t0_sandal_pl|Wschodnie sandały niewolnika
+itm_bo_khe_t1_sandal|Khergickie sandały
+itm_bo_khe_t1_sandal_pl|Khergickie sandały
+itm_bo_khe_t2_boots|Khergickie skórzane buty
+itm_bo_khe_t2_boots_pl|Khergickie skórzane buty
+itm_bo_khe_t3_boots|Kazahskie buty
+itm_bo_khe_t3_boots_pl|Kazahskie buty
+itm_bo_khe_t4_sandal|Khergickie platerowane sandały
+itm_bo_khe_t4_sandal_pl|Khergickie platerowane sandały
+itm_bo_khe_t5_mail|Khergickie kolcze buty
+itm_bo_khe_t5_mail_pl|Khergickie kolcze buty
+itm_bo_khe_t6_mail|Wznacniane lamelkowe buty
+itm_bo_khe_t6_mail_pl|Wznacniane lamelkowe buty
+itm_bo_khe_t7_greaves|Lamelkowe nagolenniki
+itm_bo_khe_t7_greaves_pl|Lamelkowe nagolenniki
+itm_bo_nor_t0_sandal|Północne sandały niewolnika
+itm_bo_nor_t0_sandal_pl|Północne sandały niewolnika
+itm_bo_nor_t1_sandal|Nordyckie sandały
+itm_bo_nor_t1_sandal_pl|Nordyckie sandały
+itm_bo_nor_t2_shoes|Nordyckie ubuwie
+itm_bo_nor_t2_shoes_pl|Nordyckie ubuwia
+itm_bo_nor_t3_boots|Futrzane buty
+itm_bo_nor_t3_boots_pl|Futrzane buty
+itm_bo_nor_t4_sandal|Nordyckie platerowane sandały
+itm_bo_nor_t4_sandal_pl|Nordyckie platerowane sandały
+itm_bo_nor_t5_mail|Nordyckie kolcze sandały
+itm_bo_nor_t5_mail_pl|Nordyckie kolcze sandały
+itm_bo_nor_t6_mail|Nordyckie platerowane kolcze sandały
+itm_bo_nor_t6_mail_pl|Nordyckie platerowane kolcze sandały
+itm_bo_nor_t7_greaves|Ciemne nagolenniki
+itm_bo_nor_t7_greaves_pl|Ciemne nagolenniki
+itm_bo_rho_t0_sandal|Rhodockie sandały niewolnika
+itm_bo_rho_t0_sandal_pl|Rhodockie sandały niewolnika
+itm_bo_rho_t1_bear|Buty z niedźwiedziej łapy
+itm_bo_rho_t1_bear_pl|Buty z niedźwiedziej łapy
+itm_bo_rho_t2_highlander|Brązowe góraskie buty
+itm_bo_rho_t2_highlander_pl|Brązowe góraskie buty
+itm_bo_rho_t3_highlander|Brązowe góraskie futrzane buty
+itm_bo_rho_t3_highlander_pl|Brązowe góraskie futrzane buty
+itm_bo_rho_t4_greaves|Obszyte nagolenniki
+itm_bo_rho_t4_greaves_pl|Obszyte nagolenniki
+itm_bo_rho_t5_greaves|Obszyte kolcze nagolenniki
+itm_bo_rho_t5_greaves_pl|Obszyte kolcze nagolenniki
+itm_bo_rho_t6_shynbaulds|Shynbauldsy
+itm_bo_rho_t6_shynbaulds_pl|Shynbauldsy
+itm_bo_rho_t7_greaves|Stalowe nagolenniki
+itm_bo_rho_t7_greaves_pl|Stalowe nagolenniki
+itm_bo_sar_t0_sandal|Wschodnie sandały niewolnika
+itm_bo_sar_t0_sandal_pl|Wschodnie sandały niewolnika
+itm_bo_sar_t1_sandal|Sarranidzkie Sandal
+itm_bo_sar_t1_sandal_pl|Sarranidzkie Sandal
+itm_bo_sar_t2_shoes|Sarranidzkie ubuwie
+itm_bo_sar_t2_shoes_pl|Sarranidzkie ubuwia
+itm_bo_sar_t3_boots|Sarranidzkie skórzane buty
+itm_bo_sar_t3_boots_pl|Sarranidzkie skórzane buty
+itm_bo_sar_t4_camel|Platerowane buty ze skóry wielbłąda
+itm_bo_sar_t4_camel_pl|Platerowane buty ze skóry wielbłąda
+itm_bo_sar_t5_mail|Mosiężne kolcze buty
+itm_bo_sar_t5_mail_pl|Mosiężne kolcze buty
+itm_bo_sar_t6_mail|Mosiężne platerowane kolcze buty
+itm_bo_sar_t6_mail_pl|Mosiężne platerowane kolcze buty
+itm_bo_sar_t7_greaves|Mosiężne nagolenniki
+itm_bo_sar_t7_greaves_pl|Mosiężne nagolenniki
+itm_bo_pla_str_samurai|Dziwne buty
+itm_bo_pla_str_samurai_pl|Dziwne buty
+itm_bo_pla_t0_sandal|Sandały mnicha
+itm_bo_pla_t0_sandal_pl|Sandały mnichów
+itm_bo_pla_t1_priest|Getry duchownego
+itm_bo_pla_t1_priest_pl|Getry duchownego
+itm_bo_pla_t2_ankle|Buty do kostek
+itm_bo_pla_t2_ankle_pl|Buty do kostek
+itm_bo_pla_t3_hunter|Buty myśliwskie
+itm_bo_pla_t3_hunter_pl|Buty myśliwskie
+itm_bo_pla_t4_greaves|Białe obszywane nagolenniki
+itm_bo_pla_t4_greaves_pl|Białe obszywane nagolenniki
+itm_bo_pla_t4_greaves_b|Czarne obszywane nagolenniki
+itm_bo_pla_t4_greaves_b_pl|Czarne obszywane nagolenniki
+itm_bo_pla_t5_highlander|góraskie kolcze buty
+itm_bo_pla_t5_highlander_pl|Góraskie kolcze buty
+itm_bo_pla_t6_shynbaulds|Smocze Shynbaulds
+itm_bo_pla_t6_shynbaulds_pl|Smocze Shynbauldsy
+itm_bo_pla_t7_greaves|Smocze nagolenniki
+itm_bo_pla_t7_greaves_pl|Smocze nagolenniki
+itm_ga_swa_a2_leather|Białe skórzane rękawice
+itm_ga_swa_a2_leather_pl|Białe skórzane rękawice
+itm_ga_swa_a4_plate|Płytowe rękawice
+itm_ga_swa_a4_plate_pl|Płytowe rękawice
+itm_ga_swa_a5_churburg|Kolcze rękawice
+itm_ga_swa_a5_churburg_pl|Kolcze rękawice
+itm_ga_swa_a6_plate|Płytowe rękawice
+itm_ga_swa_a6_plate_pl|Płytowe rękawice
+itm_ga_swa_a6_dark|Ciemne rękawice
+itm_ga_swa_a6_dark_pl|Ciemne rękawice
+itm_ga_vae_a2_leather|Ciemne skórzane rękawice
+itm_ga_vae_a2_leather_pl|Ciemne skórzane rękawice
+itm_ga_vae_a4_leather|Skórzane rękawice
+itm_ga_vae_a4_leather_pl|Skórzane rękawice
+itm_ga_vae_a5_mail|Kolcze rękawice
+itm_ga_vae_a5_mail_pl|Kolcze rękawice
+itm_ga_vae_a6_black|Czarne rękawice Wisby
+itm_ga_vae_a6_black_pl|Czarne rękawice Wisby
+itm_ga_vae_a6_red|Czerwone rękawice Wisby
+itm_ga_vae_a6_red_pl|Czerwone rękawice Wisby
+itm_ga_khe_a2_leather|Zielone skórzane rękawice
+itm_ga_khe_a2_leather_pl|Zielone skórzane rękawice
+itm_ga_khe_a4_lamellar|Lamelkowe rękawice
+itm_ga_khe_a4_lamellar_pl|Lamelkowe rękawice
+itm_ga_khe_a5_armor|Khergickie wzmacniane rękawice
+itm_ga_khe_a5_armor_pl|Khergickie wznacniane rękawice
+itm_ga_khe_a6_lamellar|Lamelkowe rękawice
+itm_ga_khe_a6_lamellar_pl|Lamelkowe rękawice
+itm_ga_khe_a6_green|Zielone lamelkowe rękawice
+itm_ga_khe_a6_green_pl|Zielone lamelkowe rękawice
+itm_ga_nor_a2_leather|Czerwone płócienne rękawice
+itm_ga_nor_a2_leather_pl|Czerwone płócienne rękawice
+itm_ga_nor_a4_scale|Łuskowe rękawice
+itm_ga_nor_a4_scale_pl|Łuskowe rękawice
+itm_ga_nor_a5_scale|Nordyckie łuskowe rękawice
+itm_ga_nor_a5_scale_pl|Nordyckie łuskowe rękawice
+itm_ga_nor_a6_mail|Nordyckie kolcze rękawice
+itm_ga_nor_a6_mail_pl|Nordyckie kolcze rękawice
+itm_ga_nor_a6_fur|Nordyckie futrzane rękawice
+itm_ga_nor_a6_fur_pl|Nordyckie futrzane rękawice
+itm_ga_rho_a2_leather|Czerwone skórzane rękawice
+itm_ga_rho_a2_leather_pl|Czerwone skórzane rękawice
+itm_ga_rho_a4_brigandine|Brygantynowe rękawice
+itm_ga_rho_a4_brigandine_pl|Brygantynowe rękawice
+itm_ga_rho_a5_bnw|Czarnobiałe rękawice
+itm_ga_rho_a5_bnw_pl|Czarnobiałe rękawice
+itm_ga_rho_a6_hourglass|Klepsydrowe rękawice
+itm_ga_rho_a6_hourglass_pl|Klepsydrowe rękawice
+itm_ga_rho_a6_ornate|Ozdobne klepsydrowe rękawice
+itm_ga_rho_a6_ornate_pl|Ozdobne klepsydrowe rękawice
+itm_ga_sar_a2_leather|Niebieskie skórzane rękawice
+itm_ga_sar_a2_leather_pl|Niebieskie skórzane rękawice
+itm_ga_sar_a4_brass|Mosiężne kolcze rękawice
+itm_ga_sar_a4_brass_pl|Mosiężne kolcze rękawice
+itm_ga_sar_a5_scale|Mosiężne łuskowe rękawice
+itm_ga_sar_a5_scale_pl|Mosiężne łuskowe rękawice
+itm_ga_sar_a6_lamellar|Mosiężne lamelkowe rękawice
+itm_ga_sar_a6_lamellar_pl|Mosiężne lamelkowe rękawice
+itm_ga_sar_a6_blue|Niebieskie lamelkowe rękawice
+itm_ga_sar_a6_blue_pl|Niebieskie lamelkowe rękawice
+itm_ga_pla_a2_leather|Skórzane rękawice
+itm_ga_pla_a2_leather_pl|Skórzane rękawice
+itm_ga_pla_a4_iron|Kolcze rękawice
+itm_ga_pla_a4_iron_pl|Kolcze rękawice
+itm_ga_pla_a5_iron|Żelazne przegubowe rękawice
+itm_ga_pla_a5_iron_pl|Żelazne przegubowe rękawice
+itm_ga_pla_a6_iron|Żelazne rękawice
+itm_ga_pla_a6_iron_pl|Żelazne rękawice
+itm_ga_pla_pri_bishop|Biskupie rękawice
+itm_ga_pla_pri_bishop_pl|Biskupie rękawice
+itm_ga_pla_a6_dragon|Cesarskie czarne rękawice
+itm_ga_pla_a6_dragon_pl|Cesarskie czarne rękawice
+itm_he_gen_lad_bride_crown|Wianek
+itm_he_gen_lad_bride_crown_pl|Wianki
+itm_he_swa_lad_common_a|Białe chusta
+itm_he_swa_lad_common_a_pl|Białe chusty
+itm_he_swa_lad_lady_a|Rubinowy henin
+itm_he_swa_lad_lady_a_pl|Rubinowe heniny
+itm_he_swa_t1_common_a|Żółty kaptur
+itm_he_swa_t1_common_a_pl|Żółte kaptury
+itm_he_swa_t1_crown|Swadiaśka korona
+itm_he_swa_t1_crown_pl|Swadiańskie korony
+itm_he_swa_t1_noble_a|Biała czapka wojskowa
+itm_he_swa_t1_noble_a_pl|Białe czapki wojskowe
+itm_he_swa_lad_common_b|Słomiany kapelusz
+itm_he_swa_lad_common_b_pl|Słomiane kapelusze
+itm_he_swa_lad_lady_b|Brązowy henin
+itm_he_swa_lad_lady_b_pl|Brązowe heniny
+itm_he_swa_t1_common_b|Czarny kaptur
+itm_he_swa_t1_common_b_pl|Czarne kaptury
+itm_he_swa_t1_common_c|Czerwony kaptur
+itm_he_swa_t1_common_c_pl|Czerwone kaptury
+itm_he_swa_t1_noble_b|Czarna czapka wojskowa
+itm_he_swa_t1_noble_b_pl|Czarne czapki wojskowe
+itm_he_swa_t1_noble_c|Czerwony czapka wojskowa
+itm_he_swa_t1_noble_c_pl|Czerwone czapki wojskowe
+itm_he_vae_lad_common_a|Biała opaska na głowę
+itm_he_vae_lad_common_a_pl|Białe opaski na głowę
+itm_he_vae_lad_lady_a|Czerwona Barbette
+itm_he_vae_lad_lady_a_pl|Czerwone Barbetty
+itm_he_vae_t1_common_a|Czerwony filcowy kapelusz
+itm_he_vae_t1_common_a_pl|Czerwone filcowe kapelusze
+itm_he_vae_t1_crown|Vaegirska korona
+itm_he_vae_t1_crown_pl|Vaegirskie korony
+itm_he_vae_t1_noble_a|Vaegirski rubinowy top
+itm_he_vae_t1_noble_a_pl|Vaegirskie rubibnowe topy
+itm_he_vae_lad_common_b|Purpurowa opaska na głowę
+itm_he_vae_lad_common_b_pl|Purpurowe opaski na głowę
+itm_he_vae_lad_lady_b|Zielona Barbette
+itm_he_vae_lad_lady_b_pl|Zielone Barbetty
+itm_he_vae_t1_common_b|Biały filcowy kapelusz
+itm_he_vae_t1_common_b_pl|Białe filcowe kapelusze
+itm_he_vae_t1_common_c|Brązowy filcowy kapelusz
+itm_he_vae_t1_common_c_pl|Brązowe filcowe kapelusze
+itm_he_vae_t1_noble_b|Vaegirski zielone top
+itm_he_vae_t1_noble_b_pl|Vaegirskie zielone topy
+itm_he_vae_t1_noble_c|Vaegirski czarny top
+itm_he_vae_t1_noble_c_pl|Vaegirskie czarne topy
+itm_he_khe_lad_common_a|Skórzana Nomadzka czapka
+itm_he_khe_lad_common_a_pl|Skórzane Nomadzkie czapki
+itm_he_khe_lad_lady_a|Khergicki niebieski czepiec
+itm_he_khe_lad_lady_a_pl|Khergickie niebieskie czepce
+itm_he_khe_t1_common_a|Czerwony Douli
+itm_he_khe_t1_common_a_pl|Czerwone Douli
+itm_he_khe_t1_crown|Khergicka korona
+itm_he_khe_t1_crown_pl|Khergickie korony
+itm_he_khe_t1_noble_a|Kazahska brązowa czapka
+itm_he_khe_t1_noble_a_pl|Kazahskie brązowe czapki
+itm_he_khe_lad_common_b|Nomadzka czarna czapka
+itm_he_khe_lad_common_b_pl|Nomadzkie czarne czapki
+itm_he_khe_lad_lady_b|Khergicki biały czepiec
+itm_he_khe_lad_lady_b_pl|Khergickie białe czepce
+itm_he_khe_t1_common_b|Zielone Douli
+itm_he_khe_t1_common_b_pl|Zielone Douli
+itm_he_khe_t1_common_c|Niebieskie Douli
+itm_he_khe_t1_common_c_pl|Niebieskie Douli
+itm_he_khe_t1_noble_b|Kazahski zielony czapka
+itm_he_khe_t1_noble_b_pl|Kazahskie zielone czapki
+itm_he_khe_t1_noble_c|Kazahska niebieska czapka
+itm_he_khe_t1_noble_c_pl|Kazahskie niebieskie czapki
+itm_he_nor_lad_common_a|Zielony czapiec
+itm_he_nor_lad_common_a_pl|Zielone czapce
+itm_he_nor_lad_lady_a|Zielony czepiec
+itm_he_nor_lad_lady_a_pl|Zielone czapce
+itm_he_nor_t1_common_a|Zielona wełniana czapka
+itm_he_nor_t1_common_a_pl|Zielone wełniane czapki
+itm_he_nor_t1_crown|Nordycka korona
+itm_he_nor_t1_crown_pl|Nordyckie korony
+itm_he_nor_t1_noble_a|Nordycka czerwona czapka
+itm_he_nor_t1_noble_a_pl|Nordyckie czerwone czapki
+itm_he_nor_lad_common_b|Czerwony czapiec
+itm_he_nor_lad_common_b_pl|Czerwone czapce
+itm_he_nor_lad_lady_b|Czerwony damski czapiec
+itm_he_nor_lad_lady_b_pl|Czerwone damskie czapce
+itm_he_nor_t1_common_b|Czarna wełniana czapka
+itm_he_nor_t1_common_b_pl|Czarne wełniane czapki
+itm_he_nor_t1_common_c|Niebieska wełniana czapka
+itm_he_nor_t1_common_c_pl|Niebieskie wełniane czapki
+itm_he_nor_t1_noble_b|Nordycka zielona czapka
+itm_he_nor_t1_noble_b_pl|Nordyckie zielone czapki
+itm_he_nor_t1_noble_c|Nordycka niebieska czapka
+itm_he_nor_t1_noble_c_pl|Nordyckie niebieskie czapki
+itm_he_rho_lad_common_a|Niebieski damska smurfna
+itm_he_rho_lad_common_a_pl|Niebieskie damskie smurfny
+itm_he_rho_lad_lady_a|Niebieski hennin
+itm_he_rho_lad_lady_a_pl|Niebieskie henniny
+itm_he_rho_t1_common_a|Ciemny filcowy kapelusz
+itm_he_rho_t1_common_a_pl|Ciemne filcowe kapelusze
+itm_he_rho_t1_crown|Rhodocka korona
+itm_he_rho_t1_crown_pl|Rhodockie korony
+itm_he_rho_t1_noble_a|Czarny góraski Beret
+itm_he_rho_t1_noble_a_pl|Czarne góraskie Berety
+itm_he_rho_lad_common_b|Zielony damska smurfna
+itm_he_rho_lad_common_b_pl|Zielone damskie smurfny
+itm_he_rho_lad_lady_b|Czerwony hennin
+itm_he_rho_lad_lady_b_pl|Czerwone henniny
+itm_he_rho_t1_common_b|Czerwony filcowy kapelusz
+itm_he_rho_t1_common_b_pl|Czerwone filcowe kapelusze
+itm_he_rho_t1_common_c|Zielony filcowy kapelusz
+itm_he_rho_t1_common_c_pl|Zielone filcowe kapelusze
+itm_he_rho_t1_noble_b|Brązowy góraski Beret
+itm_he_rho_t1_noble_b_pl|Brązowe góraskie Berety
+itm_he_rho_t1_noble_c|Zielony góraski Beret
+itm_he_rho_t1_noble_c_pl|Zielone góraskie Berety
+itm_he_sar_lad_common_a|Brązowa prosta chusta
+itm_he_sar_lad_common_a_pl|Brązowe proste chusty
+itm_he_sar_lad_lady_a|Purpurowa damska chusta
+itm_he_sar_lad_lady_a_pl|Purpurowe damskie chusty
+itm_he_sar_t1_common_a|Żółty turban
+itm_he_sar_t1_common_a_pl|Żółte turbany
+itm_he_sar_t1_crown|Sarranidzka korona
+itm_he_sar_t1_crown_pl|Sarranidzkie korony
+itm_he_sar_t1_noble_a|Żółty arystokracki turban
+itm_he_sar_t1_noble_a_pl|Żółte arystokrackie turbany
+itm_he_sar_lad_common_b|Czarna prosta chusta
+itm_he_sar_lad_common_b_pl|Czarne proste chusty
+itm_he_sar_lad_lady_b|Pomarańczowa damska chusta
+itm_he_sar_lad_lady_b_pl|Pomarańczowe damskie chusty
+itm_he_sar_t1_common_b|Czerwony turban
+itm_he_sar_t1_common_b_pl|Czerwone turbany
+itm_he_sar_t1_common_c|Niebieski turban
+itm_he_sar_t1_common_c_pl|Niebieskie turbany
+itm_he_sar_t1_noble_b|Czerwony arystokracki turban
+itm_he_sar_t1_noble_b_pl|Czerwone arystokrackie turbany
+itm_he_sar_t1_noble_c|Niebieski arystokracki turban
+itm_he_sar_t1_noble_c_pl|Niebieskie arystokrackie turbany
+itm_he_pla_pri_bishopmitre|Biskupia mitra
+itm_he_pla_pri_bishopmitre_pl|Biskupie mitry
+itm_he_pla_pri_hood|Czarny kaptur
+itm_he_pla_pri_hood_pl|Czarne kaptury
+itm_he_pla_pri_noel|Szyszak
+itm_he_pla_pri_noel_pl|Szyszaki
+itm_he_pla_pri_pilgrim|Kaptur pielgrzyma
+itm_he_pla_pri_pilgrim_pl|Kaptury pielgrzymów
+itm_he_pla_pri_priestcoif|Czepiec duchownego
+itm_he_pla_pri_priestcoif_pl|Czepce duchownego
+itm_he_pla_pri_surgeoncoif|Czepiec felczera
+itm_he_pla_pri_surgeoncoif_pl|Czepce felczerów
+itm_he_swa_t2_coif_a|Czerwony wyściełany czepiec
+itm_he_swa_t2_coif_a_pl|Czerwone wyściełane czepce
+itm_he_swa_t3_helmet_a|Segmentowany hełm
+itm_he_swa_t3_helmet_a_pl|Segmentowane hełmy
+itm_he_swa_t4_bascinet_a|Brązowa przyłbica z kołnierzem
+itm_he_swa_t4_bascinet_a_pl|Brązowe przyłbice z kołnierzem
+itm_he_swa_t5_flat_a|Czerwony hełm garnczkowy
+itm_he_swa_t5_flat_a_pl|Czerwone hełm garnczkowy
+itm_he_swa_t6_full_a|Niebieski pełny hełm
+itm_he_swa_t6_full_a_pl|Niebieskie pełne hełmy
+itm_he_swa_t7_great_a|Hełm garnczkowy
+itm_he_swa_t7_great_a_pl|Hełmy garnczkowe
+itm_he_swa_t7_great_b|Skrzydlaty czerwony hełm
+itm_he_swa_t7_great_b_pl|Skrzydlate czerwone hełmy
+itm_he_swa_t2_coif_b|Zielony wyściełany czepiec
+itm_he_swa_t2_coif_b_pl|Zielone wyściełane czepce
+itm_he_swa_t2_coif_c|Niebieski wyściełany czepiec
+itm_he_swa_t2_coif_c_pl|Niebieskie wyściełane czepce
+itm_he_swa_t2_coif_d|Żółty wyściełany czepiec
+itm_he_swa_t2_coif_d_pl|Żółte wyściełane czepce
+itm_he_swa_t2_coif_e|Brązowy wyściełany czepiec
+itm_he_swa_t2_coif_e_pl|Brązowe wyściełane czepce
+itm_he_swa_t3_helmet_b|Żelazny hełm z kołnierzem
+itm_he_swa_t3_helmet_b_pl|Żelazne hełmy z kołnierzem
+itm_he_swa_t3_helmet_c|Czerwony hełm z kołnierzem
+itm_he_swa_t3_helmet_c_pl|Czerwone hełmy z kołnierzem
+itm_he_swa_t3_helmet_d|Żołnierski skórzany hełm
+itm_he_swa_t3_helmet_d_pl|Żołnierskie skórzane hełmy
+itm_he_swa_t3_helmet_e|Żołnierski czerwony hełm
+itm_he_swa_t3_helmet_e_pl|Żołnierskie czerwone hełmy
+itm_he_swa_t4_bascinet_b|Brązowa przyłbica z nosalem
+itm_he_swa_t4_bascinet_b_pl|Brązowe przyłbice z nosalem
+itm_he_swa_t4_bascinet_c|Czerwona przyłbica z kołnierzem
+itm_he_swa_t4_bascinet_c_pl|Czerwone przyłbice z kołnierzem
+itm_he_swa_t4_bascinet_d|Niebieska przyłbica z nosalem
+itm_he_swa_t4_bascinet_d_pl|Niebieskie przyłbice z nosalem
+itm_he_swa_t4_bascinet_e|Żółta przyłbica z kołnierzem
+itm_he_swa_t4_bascinet_e_pl|Żółte przyłbice z kołnierzem
+itm_he_swa_t4_bascinet_f|Zielona przyłbica z nosalem
+itm_he_swa_t4_bascinet_f_pl|Zielone przyłbice z nosalem
+itm_he_swa_t4_bascinet_g|Czarna przyłbica z nosalem
+itm_he_swa_t4_bascinet_g_pl|Czarne przyłbice z nosalem
+itm_he_swa_t5_flat_b|Zielony hełm garnczkowy
+itm_he_swa_t5_flat_b_pl|Zielone hełmy garnczkowe
+itm_he_swa_t5_flat_c|Czarny hełm garnczkowy
+itm_he_swa_t5_flat_c_pl|Czarne hełmy garnczkowe
+itm_he_swa_t5_flat_d|Niebieski hełm garnczkowy
+itm_he_swa_t5_flat_d_pl|Niebieskie hełmy garnczkowe
+itm_he_swa_t5_flat_e|Biały hełm garnczkowy
+itm_he_swa_t5_flat_e_pl|Białe hełmy garnczkowe
+itm_he_swa_t5_flat_f|Żółty hełm garnczkowy
+itm_he_swa_t5_flat_f_pl|Żółte hełmy garnczkowe
+itm_he_swa_t5_flat_g|Pomarańczowy hełm garnczkowy
+itm_he_swa_t5_flat_g_pl|Pomarańczowe hełmy garnczkowe
+itm_he_swa_t6_full_b|Zamknięty hełm
+itm_he_swa_t6_full_b_pl|Zamknięte hełmy
+itm_he_swa_t6_full_c|Zamknięty hełm w paski
+itm_he_swa_t6_full_c_pl|Zamknięte hełmy w paski
+itm_he_swa_t6_full_d|Zamknięty hełm w paski
+itm_he_swa_t6_full_d_pl|Zamknięte hełmy w paski
+itm_he_swa_t6_full_e|Zamknięty hełm w paski
+itm_he_swa_t6_full_e_pl|Zamknięte hełmy w paski
+itm_he_swa_t6_full_f|Niebieski zamknięty hełm
+itm_he_swa_t6_full_f_pl|Niebieskie zamknięte hełmy
+itm_he_swa_t7_great_c|Rogowy hełm
+itm_he_swa_t7_great_c_pl|Rogowe hełmy
+itm_he_swa_t7_great_d|Hełm garnczkowy
+itm_he_swa_t7_great_d_pl|Hełmy garnczkowe
+itm_he_swa_t7_great_e|Hełm garnczkowy z krzyżem
+itm_he_swa_t7_great_e_pl|Hełmy garnczkowe z krzyżem 
+itm_he_swa_t7_great_f|Hełm garnczkowy
+itm_he_swa_t7_great_f_pl|Hełmy garnczkowe
+itm_he_vae_t2_furcap_a|Czapka z futrem
+itm_he_vae_t2_furcap_a_pl|Czapki z futrem
+itm_he_vae_t3_furcap_a|Czapka z lamelkowym futrem
+itm_he_vae_t3_furcap_a_pl|Czapki z lamelkowym futrem
+itm_he_vae_t4_helmet_a|Vaegirski hełm
+itm_he_vae_t4_helmet_a_pl|Vaegirskie hełmy
+itm_he_vae_t5_helmet_a|Vaegirski bogaty hełm
+itm_he_vae_t5_helmet_a_pl|Vaegirskie bogate hełmy
+itm_he_vae_t6_warhelmet_a|Vaegirski hełm wojenny
+itm_he_vae_t6_warhelmet_a_pl|Vaegirskie hełme wojenne
+itm_he_vae_t7_warmask_a|Vaegirska maska wojenna
+itm_he_vae_t7_warmask_a_pl|Vaegirskie maski wojenne
+itm_he_vae_t7_warmask_b|Lichina
+itm_he_vae_t7_warmask_b_pl|Lichiny
+itm_he_vae_t2_furcap_b|Lekka skórzana czapka
+itm_he_vae_t2_furcap_b_pl|Lekkie skórzane czapki
+itm_he_vae_t2_furcap_c|Skórzana czapka wojownika
+itm_he_vae_t2_furcap_c_pl|Skórzane czapki wojowników
+itm_he_vae_t2_furcap_d|Ozdobna skórzana czapka
+itm_he_vae_t2_furcap_d_pl|Ozdobne skórzane czapki
+itm_he_vae_t2_furcap_e|Jarmułka
+itm_he_vae_t2_furcap_e_pl|Jarmułki
+itm_he_vae_t3_furcap_b|Czapka z kolczym futrem
+itm_he_vae_t3_furcap_b_pl|Cai z kolczym futrem
+itm_he_vae_t3_furcap_c|Pierścieniowa skórzana czapka
+itm_he_vae_t3_furcap_c_pl|Pierścieniowe skórzane czapki
+itm_he_vae_t3_furcap_d|Ruska czapka z kolczym czepcem
+itm_he_vae_t3_furcap_d_pl|Ruskie czapki z kolczym czepcem
+itm_he_vae_t3_furcap_e|Ruska czapka z lamelkowym czepcem
+itm_he_vae_t3_furcap_e_pl|Ruskie czapki z lamelkowym czepcem
+itm_he_vae_t4_helmet_b|Vaegirski kolczy hełm
+itm_he_vae_t4_helmet_b_pl|Vaegirskie kolcze hełmy
+itm_he_vae_t4_helmet_c|Ruski hełm
+itm_he_vae_t4_helmet_c_pl|Ruskie hełmy
+itm_he_vae_t4_helmet_d|Ruski hełm
+itm_he_vae_t4_helmet_d_pl|Ruskie hełmy
+itm_he_vae_t4_helmet_e|Hełm Tagancha
+itm_he_vae_t4_helmet_e_pl|Hełmy Tagancha
+itm_he_vae_t4_helmet_f|Vaegirski złoty zdobiny hełm
+itm_he_vae_t4_helmet_f_pl|Vaegirskie złote zdobione hełmy
+itm_he_vae_t4_helmet_g|Vaegirski żelazny zdobiony hełm
+itm_he_vae_t4_helmet_g_pl|Vaegirskie żelazne zdobione hełmy
+itm_he_vae_t5_helmet_b|Bogaty hełm Tagancha
+itm_he_vae_t5_helmet_b_pl|Bogate hełmy Tagancha
+itm_he_vae_t5_helmet_c|Hełm Gnezdovo
+itm_he_vae_t5_helmet_c_pl|Hełmy Gnezdovo
+itm_he_vae_t5_helmet_d|Hełm Gnezdovo z czepcem
+itm_he_vae_t5_helmet_d_pl|Hełmy Gnezdovo z czepcem
+itm_he_vae_t5_helmet_e|Bogato zdobiony złoty hełm
+itm_he_vae_t5_helmet_e_pl|Bogato zdobione złote hełmy
+itm_he_vae_t5_helmet_f|Bogato zdobiony żelazny hełm
+itm_he_vae_t5_helmet_f_pl|Bogato zdobione żelazne hełmy
+itm_he_vae_t5_helmet_g|Bogaty pieczętowany hełm
+itm_he_vae_t5_helmet_g_pl|Bogate pieczętowane hełmy
+itm_he_vae_t6_warhelmet_b|Vaegirski maskowy hełm
+itm_he_vae_t6_warhelmet_b_pl|Vaegirskie maskowe hełmy
+itm_he_vae_t6_warhelmet_c|Hełm Nikolskoe
+itm_he_vae_t6_warhelmet_c_pl|Hełmy Nikolskoe
+itm_he_vae_t6_warhelmet_d|Novgorodzki hełm
+itm_he_vae_t6_warhelmet_d_pl|Novgorodzkie hełmy
+itm_he_vae_t6_warhelmet_e|Zamknięty złoty zdobiony hełm
+itm_he_vae_t6_warhelmet_e_pl|Zamknięte złote zdobione hełmy
+itm_he_vae_t6_warhelmet_f|Zamknięty żelazny zdobiony hełm
+itm_he_vae_t6_warhelmet_f_pl|Zamknięte żelazne zdobione hełmy
+itm_he_vae_t7_warmask_c|Zdobiona maska wojenna
+itm_he_vae_t7_warmask_c_pl|Zdobione maski wojenne
+itm_he_vae_t7_warmask_d|Maska wojenna Suttenhoo
+itm_he_vae_t7_warmask_d_pl|Maski wojenne Suttenhoo
+itm_he_vae_t7_warmask_e|Novgorodzki maska wojenna
+itm_he_vae_t7_warmask_e_pl|Novgorodzkie maski wojenne
+itm_he_vae_t7_warmask_f|Maska wojenna Gnyozdovo
+itm_he_vae_t7_warmask_f_pl|Maski wojenne Gnyozdovo
+itm_he_khe_t2_steppe_a|Skórzana stepowa czapka
+itm_he_khe_t2_steppe_a_pl|Skórzane stepowe czapki
+itm_he_khe_t3_steppe_a|Stepowa czapka
+itm_he_khe_t3_steppe_a_pl|Stepowe czapki
+itm_he_khe_t4_war_a|Khergicki hełm wojenny
+itm_he_khe_t4_war_a_pl|Khergickie hełmy wojenne
+itm_he_khe_t5_neck_a|Węgierski hełm
+itm_he_khe_t5_neck_a_pl|Węgierskie hełmy
+itm_he_khe_t6_helmet_a|Khergicki lamelkowy hełm
+itm_he_khe_t6_helmet_a_pl|Khergickie lamelkowe hełmy
+itm_he_khe_t7_mask_a|Żelazna maska Noken 
+itm_he_khe_t7_mask_a_pl|Żelazne maski Noken
+itm_he_khe_t7_mask_b|Khergicka wspaniała maska
+itm_he_khe_t7_mask_b_pl|Khergickie wspaniałe maski
+itm_he_khe_t2_steppe_b|Nomadzka czapka
+itm_he_khe_t2_steppe_b_pl|Nomadzkie czapki
+itm_he_khe_t2_steppe_c|Filcowa stepowa czapka
+itm_he_khe_t2_steppe_c_pl|Filcowa stepowe czapki
+itm_he_khe_t2_steppe_d|Żelazny hełm
+itm_he_khe_t2_steppe_d_pl|Żelazne hełm
+itm_he_khe_t2_steppe_e|Zielona czapka
+itm_he_khe_t2_steppe_e_pl|Zielone czapki
+itm_he_khe_t3_steppe_b|Skórzana Nomadzka czapka
+itm_he_khe_t3_steppe_b_pl|Skórzane Nomadzkie czapki
+itm_he_khe_t3_steppe_c|Platerowany stożkowy hełm
+itm_he_khe_t3_steppe_c_pl|Platerowane stożkowe hełmy
+itm_he_khe_t3_steppe_d|Czarny stożkowy hełm
+itm_he_khe_t3_steppe_d_pl|Czarne stożkowe hełmy
+itm_he_khe_t3_steppe_e|Niebieski stożkowy hełm
+itm_he_khe_t3_steppe_e_pl|Niebieskie stożkowe hełmy
+itm_he_khe_t4_war_b|Khergicki hełm strażnika
+itm_he_khe_t4_war_b_pl|Khergickie hełmy strażników
+itm_he_khe_t4_war_c|Khergicki kawaleryjski hełm
+itm_he_khe_t4_war_c_pl|Khergickie kawaleryjskie hełmy
+itm_he_khe_t4_war_d|Khergicki słaby lamelkowy hełm
+itm_he_khe_t4_war_d_pl|Khergickie słabe lamelkowe hełmy
+itm_he_khe_t4_war_e|Khergicki ciemny hełm
+itm_he_khe_t4_war_e_pl|Khergickie ciemne hełmy
+itm_he_khe_t4_war_f|Khergicki płócienny hełm
+itm_he_khe_t4_war_f_pl|Khergickie płócienne hełmy
+itm_he_khe_t4_war_g|Khergicki zdobiony hełm
+itm_he_khe_t4_war_g_pl|Khergickie zdobione hełmy
+itm_he_khe_t5_neck_b|Ciemny hełm z kołnierzem
+itm_he_khe_t5_neck_b_pl|Ciemne hełmy z kołnierzem
+itm_he_khe_t5_neck_c|Żelazny hełm z kołnierzem
+itm_he_khe_t5_neck_c_pl|Żelazne hełmy z kołnierzem
+itm_he_khe_t5_neck_d|Lamelkowy hełm z kołnierzem
+itm_he_khe_t5_neck_d_pl|Lamelkowe hełmy z kołnierzem
+itm_he_khe_t5_neck_e|Żelazny kołpak
+itm_he_khe_t5_neck_e_pl|Żelazne kołpaki
+itm_he_khe_t5_neck_f|Ciemny kołpak
+itm_he_khe_t5_neck_f_pl|Ciemne kołpaki
+itm_he_khe_t5_neck_g|Złoty hełm z kołnierzem
+itm_he_khe_t5_neck_g_pl|Złote hełmy z kołnierzem
+itm_he_khe_t6_helmet_b|Khergicki wyściełany hełm
+itm_he_khe_t6_helmet_b_pl|Khergickie wysciełane hełmy
+itm_he_khe_t6_helmet_c|Khergicki żelazny hełm
+itm_he_khe_t6_helmet_c_pl|Khergickie żelazne hełmy
+itm_he_khe_t6_helmet_d|Khergicki ciemny kołpak
+itm_he_khe_t6_helmet_d_pl|Khergickie ciemne kołpaki
+itm_he_khe_t6_helmet_e|Khergicki czerwony kołpak
+itm_he_khe_t6_helmet_e_pl|Khergickie czerwone kołpaki
+itm_he_khe_t6_helmet_f|Khergicki zdobiony kołpak
+itm_he_khe_t6_helmet_f_pl|Khergickie zdobione kołpaki
+itm_he_khe_t7_mask_c|Khergicka maska wodza
+itm_he_khe_t7_mask_c_pl|Khergickie maski wodza
+itm_he_khe_t7_mask_d|Khergicka lamelkowa maska
+itm_he_khe_t7_mask_d_pl|Khergickie lamelkowe maski
+itm_he_khe_t7_mask_e|Khergicka ciężka maska
+itm_he_khe_t7_mask_e_pl|Khergickie ciężkie maski
+itm_he_khe_t7_mask_f|Khergicka złota maska
+itm_he_khe_t7_mask_f_pl|Khergickie złote maski
+itm_he_nor_t2_spangen_a|Okularowy hełm
+itm_he_nor_t2_spangen_a_pl|Okularowe hełmy
+itm_he_nor_t3_valsgarde_a|Mały żelazny hełm z Valsgardu
+itm_he_nor_t3_valsgarde_a_pl|Małe żelazne hełmy z Valsgardu
+itm_he_nor_t4_valsgarde_a|Czarny hełm z puklerzem z Valsgardu
+itm_he_nor_t4_valsgarde_a_pl|Czarne hełmy z puklerzem z Valsgardu
+itm_he_nor_t5_valsgarde_a|Niebieski misiurkowaty hełm z Valsgardu
+itm_he_nor_t5_valsgarde_a_pl|Niebieskie misiurkowate hełmy z Valsgardu
+itm_he_nor_t6_valsgarde_a|Złoty hełm z Valsgardu
+itm_he_nor_t6_valsgarde_a_pl|Złote hełmy z Valsgardu
+itm_he_nor_t7_valsgarde_a|Duży marmurowy hełm z Valsgardu
+itm_he_nor_t7_valsgarde_a_pl|Duże marmurowe hełmy z Valsgardu
+itm_he_nor_t7_valsgarde_b|Duży hełm Vendel 
+itm_he_nor_t7_valsgarde_b_pl|Duże hełmy Vendel
+itm_he_nor_t2_spangen_b|Mały złoty hełm okularowy
+itm_he_nor_t2_spangen_b_pl|Małe złote hełmy okularowe
+itm_he_nor_t2_spangen_c|Mały żelazny hełm okularowy
+itm_he_nor_t2_spangen_c_pl|Małe żelazne hełmy okularowe
+itm_he_nor_t2_spangen_d|Mały spiczasty hełm okularowy
+itm_he_nor_t2_spangen_d_pl|Małe spiczaste hełmy okularowe
+itm_he_nor_t2_spangen_e|Mały niebieski hełm ouklarowy
+itm_he_nor_t2_spangen_e_pl|Małe niebieskie hełmy okularowe
+itm_he_nor_t3_valsgarde_b|Mały czarny hełm z Valsgardu
+itm_he_nor_t3_valsgarde_b_pl|Małe czarne hełmy z Valsgardu
+itm_he_nor_t3_valsgarde_c|Mały niebieski hełm z Valsgardu
+itm_he_nor_t3_valsgarde_c_pl|Małe niebieskie hełmy z Valsgardu
+itm_he_nor_t3_valsgarde_d|Mały dziki hełm z Valsgardu
+itm_he_nor_t3_valsgarde_d_pl|Małe dziki hełmy z Valsgardu
+itm_he_nor_t3_valsgarde_e|Mały marmurowy hełm z Valsgardu
+itm_he_nor_t3_valsgarde_e_pl|Małe marmurowe hełmy z Valsgardu
+itm_he_nor_t4_valsgarde_b|Czarny hełm z kołnierzem z Valsgardu
+itm_he_nor_t4_valsgarde_b_pl|Czarne hełmy z kołnierzem z Valsgardu
+itm_he_nor_t4_valsgarde_c|Spiczasty hełm z Valsgardu
+itm_he_nor_t4_valsgarde_c_pl|Spiczaste hełmy z Valsgardu
+itm_he_nor_t4_valsgarde_d|Marmurowy hełm z puklerzem z Valsgardu
+itm_he_nor_t4_valsgarde_d_pl|Marmurowe hełmy z puklerzem z Valsgardu
+itm_he_nor_t4_valsgarde_e|Marmurowy hełm z kołnierzem z Valsgardu
+itm_he_nor_t4_valsgarde_e_pl|Marmurowe hełm z kołnierzem z Valsgardu
+itm_he_nor_t4_valsgarde_f|Żelazny hełm z puklerzem z Valsgardu
+itm_he_nor_t4_valsgarde_f_pl|Żelazne hełmy z puklerzem z Valsgardu
+itm_he_nor_t4_valsgarde_g|Niebieski hełm z kołnierzem z Valsgardu
+itm_he_nor_t4_valsgarde_g_pl|Niebieskie hełmy z kołnierzem z Valsgardu
+itm_he_nor_t5_valsgarde_b|Żelazny hełm z Valsgardu
+itm_he_nor_t5_valsgarde_b_pl|Żelazne hełm z Valsgardu
+itm_he_nor_t5_valsgarde_c|Nordycki hełm huskara
+itm_he_nor_t5_valsgarde_c_pl|Nordycki hełm huskarlów
+itm_he_nor_t5_valsgarde_d|Gjermund Bustorre
+itm_he_nor_t5_valsgarde_d_pl|Gjermundy Bustorre'a
+itm_he_nor_t5_valsgarde_e|Czarny skórzany hełm z Valsgardu 
+itm_he_nor_t5_valsgarde_e_pl|Czarne skórzane hełmy z Valsgardu 
+itm_he_nor_t5_valsgarde_f|Marmurowy kolczy hełm z Valsgardu 
+itm_he_nor_t5_valsgarde_f_pl|Marmurowe hełm z Valsgardu 
+itm_he_nor_t5_valsgarde_g|Żelazny kolczy hełm z Valsgardu 
+itm_he_nor_t5_valsgarde_g_pl|Żelazne kolcze hełmy z Valsgardu 
+itm_he_nor_t6_valsgarde_b|Książęcy grzbietowy hełm
+itm_he_nor_t6_valsgarde_b_pl|Książęce grzbietowe hełmy
+itm_he_nor_t6_valsgarde_c|Marmurowy hełm z Valsgardu
+itm_he_nor_t6_valsgarde_c_pl|Marmurowe hełmy z Valsgardu
+itm_he_nor_t6_valsgarde_d|Hełm Vendel
+itm_he_nor_t6_valsgarde_d_pl|Hełmy Vendel
+itm_he_nor_t6_valsgarde_e|Wzmocniony hełm
+itm_he_nor_t6_valsgarde_e_pl|Wzmocnione hełmy
+itm_he_nor_t6_valsgarde_f|Żelazny hełm z Valsgardu
+itm_he_nor_t6_valsgarde_f_pl|Żelazne hełmy z Valsgardu
+itm_he_nor_t7_valsgarde_c|Duży złoty hełm z Valsgardu
+itm_he_nor_t7_valsgarde_c_pl|Duże złote hełmy z Valsgardu
+itm_he_nor_t7_valsgarde_d|Duży żelazny hełm z Valsgardu
+itm_he_nor_t7_valsgarde_d_pl|Duże żelazne hełmy z Valsgardu
+itm_he_nor_t7_valsgarde_e|Duży czarny hełm z Valsgardu
+itm_he_nor_t7_valsgarde_e_pl|Duże czarne hełmy z Valsgardu
+itm_he_nor_t7_valsgarde_f|Duży niebieski hełm z Valsgardu
+itm_he_nor_t7_valsgarde_f_pl|Duże niebieskie hełmy z Valsgardu
+itm_he_rho_t2_beret_a|Skórzana czapka
+itm_he_rho_t2_beret_a_pl|Skórzane czapki
+itm_he_rho_t3_bascinet_a|Złota płytowa przyłbica
+itm_he_rho_t3_bascinet_a_pl|Złote płytowe przyłbice
+itm_he_rho_t4_kettle_a|Bizantyjski hełm
+itm_he_rho_t4_kettle_a_pl|Bizantyjskie hełmy
+itm_he_rho_t5_kettle_a|Kapalin
+itm_he_rho_t5_kettle_a_pl|Kapaliny
+itm_he_rho_t6_kettle_a|Kapalin
+itm_he_rho_t6_kettle_a_pl|Kapaliny
+itm_he_rho_t7_clap_a|Hełm z drucianą przyłbicą
+itm_he_rho_t7_clap_a_pl|Hełmy z drucianą przyłbicą
+itm_he_rho_t7_clap_b|Hełm z psią przyłbicą
+itm_he_rho_t7_clap_b_pl|Hełm z pisą przyłbicą
+itm_he_rho_t2_beret_b|Zielony góraski Beret z piórem
+itm_he_rho_t2_beret_b_pl|Zielone góraskie Berety z piórem
+itm_he_rho_t2_beret_c|Brązowy góraski Beret z piórem
+itm_he_rho_t2_beret_c_pl|Brązowe góraskie Berety z piórem
+itm_he_rho_t2_beret_d|Niebieski góraski Beret z piórem
+itm_he_rho_t2_beret_d_pl|Niebieskie góraskie Berety z piórem
+itm_he_rho_t2_beret_e|Czerwony góraski Beret z piórem
+itm_he_rho_t2_beret_e_pl|Czerwone góraskie Berety z piórem
+itm_he_rho_t3_bascinet_b|Żelazny Basinet
+itm_he_rho_t3_bascinet_b_pl|Żelazne Basinety
+itm_he_rho_t3_bascinet_c|Basinet z tkaniną
+itm_he_rho_t3_bascinet_c_pl|Basinety z tkaniną
+itm_he_rho_t3_bascinet_d|Zdobiony Basinet
+itm_he_rho_t3_bascinet_d_pl|Zdobione Basinety
+itm_he_rho_t3_kettle_a|Kapalin z wyściełanym czepcem
+itm_he_rho_t3_kettle_a_pl|Kapaliny z wyściełanym czepcem
+itm_he_rho_t4_kettle_b|Zadarty Morion
+itm_he_rho_t4_kettle_b_pl|Zadarte Moriony
+itm_he_rho_t4_kettle_c|Zadarty Morion
+itm_he_rho_t4_kettle_c_pl|Zadarty Moriony
+itm_he_rho_t4_kettle_d|Spiczasty kapalin
+itm_he_rho_t4_kettle_d_pl|Spiczaste kapaliny
+itm_he_rho_t4_kettle_e|Żelazny otwarta salada
+itm_he_rho_t4_kettle_e_pl|Żelazne otwarte salady
+itm_he_rho_t4_kettle_f|Zielona otwarta salada
+itm_he_rho_t4_kettle_f_pl|Zielone otwarte salady
+itm_he_rho_t4_kettle_g|Rhodocki Basinet
+itm_he_rho_t4_kettle_g_pl|Rhodockie Basinety
+itm_he_rho_t5_barbuta_a|Barbuta
+itm_he_rho_t5_barbuta_a_pl|Barbuty
+itm_he_rho_t5_barbuta_b|Mocna Barbuta
+itm_he_rho_t5_barbuta_b_pl|Mocne Barbuty
+itm_he_rho_t5_bascinet_a|Basinet
+itm_he_rho_t5_bascinet_a_pl|Basinety
+itm_he_rho_t5_bascinet_b|Żelazna otwarta salada z czepcem
+itm_he_rho_t5_bascinet_b_pl|Żelazne otwarte salady z czepcem
+itm_he_rho_t5_bascinet_c|Zielona otwarta salada z czepcem
+itm_he_rho_t5_bascinet_c_pl|Zielone otwarte salady z czepcem
+itm_he_rho_t5_kettle_b|Mocny kapalin
+itm_he_rho_t5_kettle_b_pl|Mocne kapaliny
+itm_he_rho_t6_sallet_a|Zamknięta żelazna salada
+itm_he_rho_t6_sallet_a_pl|Zamknięte Żelazne salady
+itm_he_rho_t6_sallet_b|Zamknięta zielona salada
+itm_he_rho_t6_sallet_b_pl|Zamnknięte zielone salady
+itm_he_rho_t6_sallet_c|Żelazna zamknięta salada z czepcem
+itm_he_rho_t6_sallet_c_pl|Żelazne zamknięte salady z czepcem
+itm_he_rho_t6_sallet_d|Zielona zamknięta salada z czepcem
+itm_he_rho_t6_sallet_d_pl|Zielone zamknięte salady z czepcem
+itm_he_rho_t6_sallet_e|Zamknięta salada
+itm_he_rho_t6_sallet_e_pl|Zamknięte salady
+itm_he_rho_t7_clap_c|Rhodocki Armet
+itm_he_rho_t7_clap_c_pl|Rhodockie Armety
+itm_he_rho_t7_clap_d|Zamknięty Basinet
+itm_he_rho_t7_clap_d_pl|Zamknięte Basinety
+itm_he_rho_t7_clap_e|Rhodocka salada
+itm_he_rho_t7_clap_e_pl|Rhodockie salady
+itm_he_rho_t7_clap_f|Basinet z świńską przyłbicą
+itm_he_rho_t7_clap_f_pl|Basinety z świńską przyłbicą
+itm_he_sar_t2_tuareg_a|Żółty hełm Tuareg
+itm_he_sar_t2_tuareg_a_pl|Żółte hełmy Tuareg
+itm_he_sar_t3_rabati_a|Niebieski Rabati
+itm_he_sar_t3_rabati_a_pl|Niebieskie Rabati
+itm_he_sar_t4_tuareg_a|Sarranidzka żółty kolczy czepiec
+itm_he_sar_t4_tuareg_a_pl|Sarranidzkie żółte kolcze czepce
+itm_he_sar_t5_horseman_a|Żółty kawaleryjski hełm
+itm_he_sar_t5_horseman_a_pl|Żółte kawaleryjskie hełmy
+itm_he_sar_t6_spire_a|Żelazny stożkowy hełm
+itm_he_sar_t6_spire_a_pl|Żelazne stożkowe hełmy
+itm_he_sar_t7_veiled_a|Żelazny zakryty hełm
+itm_he_sar_t7_veiled_a_pl|Żelazne zakryte hełmy
+itm_he_sar_t7_veiled_b|Mosiężny zakryty hełm
+itm_he_sar_t7_veiled_b_pl|Mosiężne zakryte hełmy
+itm_he_sar_t2_tuareg_b|Czerwony hełm Tuareg
+itm_he_sar_t2_tuareg_b_pl|Czerwone hełmy Tuareg
+itm_he_sar_t2_tuareg_c|Biały hełm Tuareg
+itm_he_sar_t2_tuareg_c_pl|Białe hełmy Tuareg
+itm_he_sar_t2_tuareg_d|Niebieski hełm Tuareg
+itm_he_sar_t2_tuareg_d_pl|Niebieskie hełmy Tuareg
+itm_he_sar_t2_tuareg_e|Czarny hełm Tuareg
+itm_he_sar_t2_tuareg_e_pl|Czarne hełmy Tuareg
+itm_he_sar_t3_rabati_b|Czerwony Rabati
+itm_he_sar_t3_rabati_b_pl|Czerwone Rabati
+itm_he_sar_t3_rabati_c|Żółty zamknięty hełm Tuateg
+itm_he_sar_t3_rabati_c_pl|Żółte zamknięte hełmy Tuateg
+itm_he_sar_t3_rabati_d|Czerwony zamknięty hełm Tuateg
+itm_he_sar_t3_rabati_d_pl|Czerwone zamknięte hełmy Tuateg
+itm_he_sar_t3_rabati_e|Niebieski zamknięty hełm Tuateg
+itm_he_sar_t3_rabati_e_pl|Niebieskie zamknięte hełmy Tuateg
+itm_he_sar_t4_tuareg_b|Sarranidzki czerwona kolczy czepiec
+itm_he_sar_t4_tuareg_b_pl|Sarranidzkie czerwone kelcze czepce
+itm_he_sar_t4_tuareg_c|Sarranidzki niebieski kolczy czepiec
+itm_he_sar_t4_tuareg_c_pl|Sarranidzkie niebieskie kelcze czepce
+itm_he_sar_t4_tuareg_d|Sarranidzki żółty filcowy kapelusz
+itm_he_sar_t4_tuareg_d_pl|Sarranidzkie żółte filcowe kapelusze
+itm_he_sar_t4_tuareg_e|Sarranidzki zielony filcowy kapelusz
+itm_he_sar_t4_tuareg_e_pl|Sarranidzkie zielone filcowe kapelusze
+itm_he_sar_t4_tuareg_f|Mongolski złoty hełm
+itm_he_sar_t4_tuareg_f_pl|Mongolskie złote hełmy
+itm_he_sar_t4_tuareg_g|Mongolski żelazny hełm
+itm_he_sar_t4_tuareg_g_pl|Mongolskie żelazne hełmy
+itm_he_sar_t5_horseman_b|Mosiężny kawaleryjski hełm
+itm_he_sar_t5_horseman_b_pl|Mosiężne kawaleryjskie hełmy
+itm_he_sar_t5_horseman_c|Zielony kawaleryjski hełm
+itm_he_sar_t5_horseman_c_pl|Zielone kawaleryjskie hełmy
+itm_he_sar_t5_horseman_d|Preski żelazny hełm
+itm_he_sar_t5_horseman_d_pl|Preskie żelazne hełmy
+itm_he_sar_t5_horseman_e|Preski mosiężny hełm
+itm_he_sar_t5_horseman_e_pl|Preskie mosiężne hełmy
+itm_he_sar_t5_horseman_f|Żelazny hełm Rajput
+itm_he_sar_t5_horseman_f_pl|Żelazne hełmy Rajput
+itm_he_sar_t5_horseman_g|Mosiężny hełm Rajput
+itm_he_sar_t5_horseman_g_pl|Mosiężne hełmy Rajput
+itm_he_sar_t6_spire_b|Złoty stożkowy hełm
+itm_he_sar_t6_spire_b_pl|Złote stożkowe hełmy
+itm_he_sar_t6_spire_c|Żelazny hełm z nosalem
+itm_he_sar_t6_spire_c_pl|Żelazne hełmy z nosalem
+itm_he_sar_t6_spire_d|Złoty hełm z nosalem
+itm_he_sar_t6_spire_d_pl|złote hełmy z nosalem
+itm_he_sar_t6_spire_e|Żelazny otwarty hełm
+itm_he_sar_t6_spire_e_pl|Żelazne otwarte hełmy
+itm_he_sar_t6_spire_f|Mosiężny otwarty hełm
+itm_he_sar_t6_spire_f_pl|Mosiężne otwarte hełmy
+itm_he_sar_t7_veiled_c|Sułtański żelazny hełm
+itm_he_sar_t7_veiled_c_pl|Sułtańskie żelazne hełmy
+itm_he_sar_t7_veiled_d|Sułtański mosiężny hełm
+itm_he_sar_t7_veiled_d_pl|Sułtańskie mosiężne hełmy
+itm_he_sar_t7_veiled_e|Ghulamski żelazny hełm
+itm_he_sar_t7_veiled_e_pl|Ghulamskie żelazne hełmy
+itm_he_sar_t7_veiled_f|Ghulamski mosiężny hełm
+itm_he_sar_t7_veiled_f_pl|Ghulamskie mosiężne hełmy
+itm_he_pla_pri_bishoptophelm|Biskupi hełm garnczkowy
+itm_he_pla_pri_bishoptophelm_pl|Biskupie hełmy garnczkowe
+itm_he_pla_pri_captain|Fryzyjski hełm
+itm_he_pla_pri_captain_pl|Fryzyjskie hełmy
+itm_he_pla_str_samurai|Dziwny hełm
+itm_he_pla_str_samurai_pl|Dziwne hełmy
+itm_he_pla_t2_cap_a|Czapka z nosalem
+itm_he_pla_t2_cap_a_pl|czapki z nosalem
+itm_he_pla_t3_nasal_a|Kolczy hełm z nosalem
+itm_he_pla_t3_nasal_a_pl|Kolcze hełmy z nosalem
+itm_he_pla_t4_kettle_a|Kapalin najemnika
+itm_he_pla_t4_kettle_a_pl|Kapaliny najemników
+itm_he_pla_t5_nasal_a|Hełm
+itm_he_pla_t5_nasal_a_pl|Hełm
+itm_he_pla_t6_faceplate_a|Biały hełm z płytą
+itm_he_pla_t6_faceplate_a_pl|Białe hełmy z płytą
+itm_he_pla_t7_gerulfingen|Zamknięty hełm z Gerulfingen
+itm_he_pla_t7_gerulfingen_pl|Zamknięte hełmy z Gerulfingen
+itm_he_pla_t7_crusader_a|Biały hełm krzyżowy
+itm_he_pla_t7_crusader_a_pl|Białe hełmy krzyżowe
+itm_he_pla_t7_crusader_b|Czarny hełm krzyżowy
+itm_he_pla_t7_crusader_b_pl|Czarne hełmy krzyżowe
+itm_he_pla_t2_cap_b|Stożkowa czapka z nosalem
+itm_he_pla_t2_cap_b_pl|Stożkowe czapki z nosalem
+itm_he_pla_t2_cap_c|Frygijska czapka z nosalem
+itm_he_pla_t2_cap_c_pl|Frygijskie czapki z nosalem
+itm_he_pla_t2_cap_d|Stożkowa czapka
+itm_he_pla_t2_cap_d_pl|Stożkowe czapki
+itm_he_pla_t2_cap_e|Frygijska czapka
+itm_he_pla_t2_cap_e_pl|Frygijskie czapki
+itm_he_pla_t3_nasal_b|Skórzany hełm z nosalem
+itm_he_pla_t3_nasal_b_pl|Skórzane hełmy z nosalem
+itm_he_pla_t3_skull_a|Kolczy jarmułkowy hełm
+itm_he_pla_t3_skull_a_pl|Kolcze jarmułkowe hełmy
+itm_he_pla_t3_skull_b|Skórzany jarmułkowy hełm
+itm_he_pla_t3_skull_b_pl|Skórzane jarmułkowe hełmy
+itm_he_pla_t3_skull_c|Wyściełany skórzany jarmułkowy hełm
+itm_he_pla_t3_skull_c_pl|Wyściełane skórzane jarmułkowe hełmy
+itm_he_pla_t4_kettle_b|Biały kapalin najemnika
+itm_he_pla_t4_kettle_b_pl|Białe kapaliny najemników
+itm_he_pla_t4_kettle_c|Czerwona kapalin najemnika
+itm_he_pla_t4_kettle_c_pl|Czerwone kapaliny najemników
+itm_he_pla_t4_kettle_d|Niebieski kapalin najemnika
+itm_he_pla_t4_kettle_d_pl|Niebieskie kapaliny najemników
+itm_he_pla_t4_kettle_e|Zielony kapalin najemnika
+itm_he_pla_t4_kettle_e_pl|Zielone kapaliny najemników
+itm_he_pla_t4_kettle_f|Żółty kapalin najemnika
+itm_he_pla_t4_kettle_f_pl|Żółte kapaliny najemników
+itm_he_pla_t4_kettle_g|Jarmułkowy hełm z czepcem najemnika
+itm_he_pla_t4_kettle_g_pl|Jarmułkowe hełmy z czepcem najemników
+itm_he_pla_t5_nasal_b|Wzmacniany niebieski hełm z nosalem
+itm_he_pla_t5_nasal_b_pl|Wzmacniane niebieskie hełmy z nosalem
+itm_he_pla_t5_nasal_c|Wzmacniany zielony hełm z nosalem
+itm_he_pla_t5_nasal_c_pl|Wzmacniane zielone hełmy z nosalem
+itm_he_pla_t5_nasal_d|Wzmacniany czerwona hełm z nosalem
+itm_he_pla_t5_nasal_d_pl|Wzmacniane czerwone hełmy z nosalem
+itm_he_pla_t5_nasal_e|Wzmacniany frygijski hełm z nosalem
+itm_he_pla_t5_nasal_e_pl|Wzmacniane frygijskie hełmy z nosalem
+itm_he_pla_t5_nasal_f|Wzmacniany stożkowy heł z nosalem
+itm_he_pla_t5_nasal_f_pl|Wzmacniane stożkowe hełmy z nosalem
+itm_he_pla_t5_nasal_g|Wzmacniany hełm z nosalem najemnika
+itm_he_pla_t5_nasal_g_pl|Wzmacniane hełmy z nosalem najemników
+itm_he_pla_t6_faceplate_b|Niebieski hełm z płytą
+itm_he_pla_t6_faceplate_b_pl|Niebieskie hełmy z płytą
+itm_he_pla_t6_faceplate_c|Hełm z płytą najemnika
+itm_he_pla_t6_faceplate_c_pl|Hełmy z płytą najemników
+itm_he_pla_t6_faceplate_d|Frygijski hełm z płytą
+itm_he_pla_t6_faceplate_d_pl|Frygijskie hełmy z płytą
+itm_he_pla_t6_faceplate_e|Zdobiony hełm z płytą
+itm_he_pla_t6_faceplate_e_pl|Zdobione hełmy z płytą
+itm_he_pla_t6_faceplate_f|Frygijski prosty hełm z płytą
+itm_he_pla_t6_faceplate_f_pl|Frygijski prosty hełmy z płytą
+itm_he_pla_t7_crusader_c|Ciemny hełm krzyżowy
+itm_he_pla_t7_crusader_c_pl|Ciemne hełmy krzyżowe
+itm_he_pla_t7_crusader_d|Żółty hełm krzyżowy z nosalem
+itm_he_pla_t7_crusader_d_pl|Żółte hełmy krzyżowe z nosalem
+itm_he_pla_t7_crusader_e|Zakapturzony hełm krzyżowy
+itm_he_pla_t7_crusader_e_pl|Zakapturzone hełmy krzyżowe
+itm_he_pla_t7_crusader_f|Krzyżowy hełm Sugarloaf
+itm_he_pla_t7_crusader_f_pl|Krzyżowe hełmy Sugarloaf
+itm_sh_swa_rou_bandit_a|Czarna góraska tarcza z kolcem
+itm_sh_swa_rou_bandit_a_pl|Czarne góraskie tarcze z kolcem
+itm_sh_swa_hea_english_a|Swadiańska rogowa trójkątna tarcza
+itm_sh_swa_hea_english_a_pl|Swadiańskie rogowe trójkątne tarcze
+itm_sh_swa_hea_english_b|Swadiańska wysoka trójkątna tarcza
+itm_sh_swa_hea_english_b_pl|Swadiańskie wysokie trójkątne tarcze
+itm_sh_swa_hea_english_c|Swadiańska trójkątna tarcza w paski
+itm_sh_swa_hea_english_c_pl|Swadiańskie trójkątne tarcze w paski
+itm_sh_swa_hea_plain|Zwykła trójkątna tarcza
+itm_sh_swa_hea_plain_pl|Zwykłe trójkątne tarcze
+itm_sh_swa_hea_swadian|Swadiańska trójkątna tarcza
+itm_sh_swa_hea_swadian_pl|Swadiańskie trójkątne tarcze
+itm_sh_swa_kit_horseman|Migdałowa tarcza kawalerzysty
+itm_sh_swa_kit_horseman_pl|Migdałowe tarcze kawalerzystów
+itm_sh_swa_kit_swadian_a|Czarnobiała migdałowa tarcza
+itm_sh_swa_kit_swadian_a_pl|Czarnobiałe migdałowe tarcze
+itm_sh_swa_hea_horseman|Trójkątna tarcza kawalerzysty
+itm_sh_swa_hea_horseman_pl|Trójkątne tarcze kawalerzystów
+itm_sh_swa_rou_bandit_b|Czarna góraska tarcza
+itm_sh_swa_rou_bandit_b_pl|Czarne góraskie tarcze
+itm_sh_swa_hea_english_d|Swadiańska trójkątna tarcza z krzyżem
+itm_sh_swa_hea_english_d_pl|Swadiańskie trójkątne tarcze z krzyżem
+itm_sh_swa_hea_french_a|Swadiańska liliowa trójkątna tarcza
+itm_sh_swa_hea_french_a_pl|Swadiańskie liliowe trójkątne tarcze
+itm_sh_swa_hea_french_b|Czerwona liliowa trójkątna tarcza
+itm_sh_swa_hea_french_b_pl|Czerwone liliowe trójkątne tarcze
+itm_sh_swa_hea_french_c|Niebieska liliowa trójkątna tarcza
+itm_sh_swa_hea_french_c_pl|Niebieskie liliowe trójkątne tarcze
+itm_sh_swa_hea_french_d|Zielona liliowa trójkątna tarcza
+itm_sh_swa_hea_french_d_pl|Zielone liliowe trójkątne tarcze
+itm_sh_swa_kit_swadian_b|Czerwonobiała migdałowa tarcza
+itm_sh_swa_kit_swadian_b_pl|Czerwonobiałe migdałowe tarcze
+itm_sh_swa_kit_swadian_c|Żółtobiała migdałowa tarcza
+itm_sh_swa_kit_swadian_c_pl|Żółtobiałe migdałowe tarcze
+itm_sh_swa_hea_french_e|Duża liliowa trójkątna tarcza
+itm_sh_swa_hea_french_e_pl|Duże liliowe trójkątne tarcze
+itm_sh_vae_rou_bandit_a|Okrągła tarcza kyrta skórą
+itm_sh_vae_rou_bandit_a_pl|Okrągłe tarcze kryta skórą
+itm_sh_vae_kit_fur|Migdałowa tarcza kryta furem
+itm_sh_vae_kit_fur_pl|Migdałowe tarcze kryte furem
+itm_sh_vae_kit_old|Stara migdałowa tarcza
+itm_sh_vae_kit_old_pl|Stare migdałowe tarcze
+itm_sh_vae_kit_plain|Zwykła migdałowa tarcza
+itm_sh_vae_kit_plain_pl|Zwykłe migdałowe tarcze
+itm_sh_vae_kit_leather|Skórzana migdałowa tarcza
+itm_sh_vae_kit_leather_pl|Skórzane migdałowe tarcze
+itm_sh_vae_hae_striped_a|Czerwona tarcza
+itm_sh_vae_hae_striped_a_pl|Czerwone tarcze
+itm_sh_vae_hae_striped_b|Niebieska tarcza
+itm_sh_vae_hae_striped_b_pl|Niebieskie tarcze
+itm_sh_vae_kit_heavy|Ciężka migdałowa tarcza
+itm_sh_vae_kit_heavy_pl|Ciężkie migdałowe tarcze
+itm_sh_vae_kit_vaegir_a|Vaegirska niebiesko-czerwona migdałowa tarcza
+itm_sh_vae_kit_vaegir_a_pl|Vaegirskie niebiesko-czerwone migdałowe tarcze
+itm_sh_vae_rou_bandit_b|Vaegirska drewniana tarcza
+itm_sh_vae_rou_bandit_b_pl|Vaegirskie drewniane tarcze
+itm_sh_vae_hea_wood|Trójkątna drewniana tarcza
+itm_sh_vae_hea_wood_pl|Trójkątne drewniane tarcze
+itm_sh_vae_hea_steel|Vaegirska stalowa trójkątna tarcza
+itm_sh_vae_hea_steel_pl|Vaegirskie stalowe trójkątne tarcze
+itm_sh_vae_kit_vaegir_b|Vaegirska niebiesko-żółta migdałowa tarcza
+itm_sh_vae_kit_vaegir_b_pl|Vaegirskie niebiesko-żółte migdałowe tarcze
+itm_sh_vae_kit_vaegir_c|Vaegirska niebiesko-biała migdałowa tarcza
+itm_sh_vae_kit_vaegir_c_pl|Vaegirskie niebiesko-białe migdałowe tarcze
+itm_sh_vae_kit_vaegir_d|Vaegirska zielono-czarna migdałowa tarcza
+itm_sh_vae_kit_vaegir_d_pl|Vaegirskie zielono-czarna migdałowe tarcze
+itm_sh_vae_kit_vaegir_e|Vaegirska zielono-biała migdałowa tarcza
+itm_sh_vae_kit_vaegir_e_pl|Vaegirskie zielono-białe migdałowe tarcze
+itm_sh_vae_kit_vaegir_f|Vaegirska zielono-żółta migdałowa tarcza
+itm_sh_vae_kit_vaegir_f_pl|Vaegirskie zielono-żółte migdałowe tarcze
+itm_sh_vae_kit_steel|Stalowa migdałowa
+itm_sh_vae_kit_steel_pl|Stalowe migdałowe
+itm_sh_khe_rou_bandit_a|Kryta tarcza
+itm_sh_khe_rou_bandit_a_pl|Kryte tarcze
+itm_sh_khe_rou_old|Stara okrągła tarcza
+itm_sh_khe_rou_old_pl|Stare okrągłe tarcze
+itm_sh_khe_rou_plain|Zwykła Okrągła tarcza
+itm_sh_khe_rou_plain_pl|Zwykłe Okrągłe tarcze
+itm_sh_khe_rou_round|Okrągła tarcza
+itm_sh_khe_rou_round_pl|Okrągłe tarcze
+itm_sh_khe_rou_heavy|Ciężka Okrągła tarcza
+itm_sh_khe_rou_heavy_pl|Ciężkie Okrągłe tarcze
+itm_sh_khe_rou_steel_a|Khergicka mosiężna tarcza
+itm_sh_khe_rou_steel_a_pl|Khergickie mosiężne tarcze
+itm_sh_khe_rou_steel_b|Zdobiona mosiężna tarcza
+itm_sh_khe_rou_steel_b_pl|Zdobione mosiężne tarcze
+itm_sh_khe_rou_steel_c|Stalowa tarcza najemnika 
+itm_sh_khe_rou_steel_c_pl|Stalowe tarcze najemników
+itm_sh_khe_rou_steel_d|Khergicka stalowa tarcza
+itm_sh_khe_rou_steel_d_pl|Khergickie stalowe tarcze
+itm_sh_khe_rou_bandit_b|Nomadzka stalowa tarcza
+itm_sh_khe_rou_bandit_b_pl|Nomadzkie stalowe tarcze
+itm_sh_khe_rou_steel_k|Brązowy żółwia tarcza Vijaynagarów
+itm_sh_khe_rou_steel_k_pl|Brązowe żółwie tarcze Vijaynagarów
+itm_sh_khe_rou_steel_l|Żółta żółwia tarcza Vijaynagarów
+itm_sh_khe_rou_steel_l_pl|Żółte zółwie tarcze Vijaynagarów
+itm_sh_khe_rou_steel_e|Hiduska czerwona stalowa tarcza
+itm_sh_khe_rou_steel_e_pl|Hinduska czerwone stalowe tarcze
+itm_sh_khe_rou_steel_f|Pomarańczowa stalowa tarcza Maratha
+itm_sh_khe_rou_steel_f_pl|Pomarańczowe stalowe tarcze Maratha
+itm_sh_khe_rou_steel_g|Khergicka niebieska stalowa tarcza
+itm_sh_khe_rou_steel_g_pl|Khergickie niebieskie stalowe tarcze
+itm_sh_khe_rou_steel_h|Khergicka biała stalowa tarcza
+itm_sh_khe_rou_steel_h_pl|Khergickie białe stalowe tarcze
+itm_sh_khe_rou_steel_i|Khergicka żółta stalowa tarcza
+itm_sh_khe_rou_steel_i_pl|Khergickie żółte stalowe tarcze
+itm_sh_khe_rou_steel_j|Mongolska stalowa tarcza
+itm_sh_khe_rou_steel_j_pl|Mongolskie stalowe tarcze
+itm_sh_nor_rou_bandit_a|Tarcza Jomsvikingów
+itm_sh_nor_rou_bandit_a_pl|Tarcze Jomsvikingów
+itm_sh_nor_rou_small_a|Mała czerwona drewniana tarcza
+itm_sh_nor_rou_small_a_pl|Małe czerwone drewniane tarcze
+itm_sh_nor_rou_small_b|Mała czarna skórzana tarcza
+itm_sh_nor_rou_small_b_pl|Małe czarne skórzane tarcze
+itm_sh_nor_rou_medium_a|Średnia czerwona drewniana tarcza
+itm_sh_nor_rou_medium_a_pl|Średnie czerwone drewniane tarcze
+itm_sh_nor_rou_medium_b|Średnia czarna skórzana tarcza
+itm_sh_nor_rou_medium_b_pl|Średnie czarne skórzane tarcze
+itm_sh_nor_rou_roundshield_a|Czerwona okrągła tarcza
+itm_sh_nor_rou_roundshield_a_pl|Czerwona okrągłe tarcze
+itm_sh_nor_rou_roundshield_b|Żółta okrągła tarcza
+itm_sh_nor_rou_roundshield_b_pl|Żółte okrągłe tarcze
+itm_sh_nor_rou_large_a|Duża czerwona drewniana tarcza
+itm_sh_nor_rou_large_a_pl|Duże czerwone drewniane tarcze
+itm_sh_nor_rou_large_b|Duża czarna skórzana tarcza
+itm_sh_nor_rou_large_b_pl|Duże czarne skórzane tarcze
+itm_sh_nor_rou_bandit_b|Nordycka drewniana tarcza
+itm_sh_nor_rou_bandit_b_pl|Nordyckie drewniane tarcze
+itm_sh_nor_rou_small_c|Mała żółta skórzana tarcza
+itm_sh_nor_rou_small_c_pl|Małe żółte skórzane tarcze
+itm_sh_nor_rou_small_d|Mała niebieska skórzana tarcza
+itm_sh_nor_rou_small_d_pl|Małe niebieskie skórzane tarcze
+itm_sh_nor_rou_medium_c|Średnia żółta skórzana tarcza
+itm_sh_nor_rou_medium_c_pl|Średnie żółte skórzane tarcze
+itm_sh_nor_rou_medium_d|Średnia niebieska skórzana tarcza
+itm_sh_nor_rou_medium_d_pl|Średnie niebieskie skórzane tarcze
+itm_sh_nor_rou_roundshield_c|Niebieska okrągła tarcza
+itm_sh_nor_rou_roundshield_c_pl|Niebieskie okrągłe tarcze
+itm_sh_nor_rou_roundshield_d|Zielona okrągła tarcza
+itm_sh_nor_rou_roundshield_d_pl|Zielone okrągłe tarcze
+itm_sh_nor_rou_large_c|Duża żółta skórzana tarcza
+itm_sh_nor_rou_large_c_pl|Duże żółte skórzane tarcze
+itm_sh_nor_rou_large_d|Duża niebieska skórzana tarcza
+itm_sh_nor_rou_large_d_pl|Duże niebieskie skórzane tarcze
+itm_sh_rho_rou_bandit_a|Góraska tarcza z kolcem
+itm_sh_rho_rou_bandit_a_pl|Góraskie tarcze z kolcem
+itm_sh_rho_buc_steel_a|Okrągły stalowy puklerz
+itm_sh_rho_buc_steel_a_pl|Okrągłe stalowe puklerze
+itm_sh_rho_hea_golden|Złota trójkątna tarcza
+itm_sh_rho_hea_golden_pl|Złote trójkątne tarcze
+itm_sh_rho_pav_deploy_a|Rozstawiana pawędź ze słońcem
+itm_sh_rho_pav_deploy_a_pl|Rozstawiane pawędzie ze słońcem
+itm_sh_rho_pav_deploy_b|Rozstawiana pawędź z kwiatami
+itm_sh_rho_pav_deploy_b_pl|Rozstawiane pawędzie z kwiatami
+itm_sh_rho_pav_deploy_c|Rozstawiana pawędź Jelkalan
+itm_sh_rho_pav_deploy_c_pl|Rozstawiane pawędzie Jelkalan
+itm_sh_rho_pav_deploy_d|Rozstawiana pawędź giermka
+itm_sh_rho_pav_deploy_d_pl|Rozstawiane pawędzie giermków
+itm_sh_rho_pav_deploy_e|Rozstawiana pawędź zamkowa
+itm_sh_rho_pav_deploy_e_pl|Rozstawiane pawędzie zamkowe
+itm_sh_rho_pav_deploy_f|Rozstawiana bogata pawędź
+itm_sh_rho_pav_deploy_f_pl|Rozstawiane bogata pawędzie
+itm_sh_rho_rou_bandit_b|Góraska tarcza
+itm_sh_rho_rou_bandit_b_pl|Góraskie tarcze
+itm_sh_rho_buc_leather|Skórzany puklerz
+itm_sh_rho_buc_leather_pl|Skórzane puklerze
+itm_sh_rho_buc_wood|Drewniany puklerz
+itm_sh_rho_buc_wood_pl|Drewniane puklerze
+itm_sh_rho_buc_steel_b|Długi stalowy puklerz
+itm_sh_rho_buc_steel_b_pl|Długi stalowe puklerze
+itm_sh_rho_hea_black|Czarna trójkątna tarcza
+itm_sh_rho_hea_black_pl|Czarne trójkątne tarcze
+itm_sh_rho_hea_cross|Kryżowa trójkątna tarcza
+itm_sh_rho_hea_cross_pl|Krzyżowa trójkątne tarcze
+itm_sh_rho_hea_iron|Żelazna trójkątna tarcza
+itm_sh_rho_hea_iron_pl|Żelazne trójkątne tarcze
+itm_sh_rho_hea_red|Czerwona trójkątna tarcza
+itm_sh_rho_hea_red_pl|Czerwone trójkątne tarcze
+itm_sh_rho_pav_steel|Stalowa pawędź Tower
+itm_sh_rho_pav_steel_pl|Stalowe pawędzie Tower
+itm_sh_sar_rou_bandit_a|Okrągła tarcza kryta skórą
+itm_sh_sar_rou_bandit_a_pl|Okrągłe tarcze kryte skórą
+itm_sh_sar_pav_slaver_a|Brązowa pawędź Balayan
+itm_sh_sar_pav_slaver_a_pl|Brązowe pawędzie Balayan
+itm_sh_sar_pav_slaver_b|Czerwona pawędź Balayan
+itm_sh_sar_pav_slaver_b_pl|Czerwone pawędzie Balayan
+itm_sh_sar_pav_slaver_c|Pawędź Balayan w kwiaty
+itm_sh_sar_pav_slaver_c_pl|Pawędzie Balayan w kwiaty
+itm_sh_sar_rou_plain|Zwykła kawaleryjska tarcza
+itm_sh_sar_rou_plain_pl|Zwykłe kawaleryjskie tarcze
+itm_sh_sar_rou_round|Okrągła kawaleryjska tarcza
+itm_sh_sar_rou_round_pl|Okrągłe kawaleryjskie tarcze
+itm_sh_sar_rou_steel_a|Sarranidzka stalowa tarcza
+itm_sh_sar_rou_steel_a_pl|Sarranidzkie stalowe tarcze
+itm_sh_sar_rou_steel_b|Hinduska stalowa tarcza
+itm_sh_sar_rou_steel_b_pl|Hinduskie stalowe tarcze
+itm_sh_sar_rou_steel_c|Stalowa tarcza Rajputi
+itm_sh_sar_rou_steel_c_pl|Stalowe tarcze Rajputi
+itm_sh_sar_rou_steel_d|Turecka stalowa tarcza
+itm_sh_sar_rou_steel_d_pl|Tureckie stalowe tarcze
+itm_sh_sar_rou_elite|Elitarna kawaleryjska tarcza
+itm_sh_sar_rou_elite_pl|Eiltarna kawaleryjskie tarcze
+itm_sh_sar_rou_mamluk|Okrągła tarcza mamluka
+itm_sh_sar_rou_mamluk_pl|Okrągłe tarcze mamluków
+itm_sh_sar_rou_bandit_b|Drewniana słoneczna tarcza
+itm_sh_sar_rou_bandit_b_pl|Drewniane słoneczne tarcze
+itm_sh_sar_rou_steel_e|Hindiska brązowa stalowa tarcza
+itm_sh_sar_rou_steel_e_pl|Hinduskie brązowe stalowe tarcze
+itm_sh_sar_rou_steel_f|Stalowa tarcza Maratha
+itm_sh_sar_rou_steel_f_pl|Stalowe tarcze Maratha
+itm_sh_sar_rou_steel_g|Żółta stalowa tarcza Rajputi
+itm_sh_sar_rou_steel_g_pl|Żółte stalowe tarcze Rajputi
+itm_sh_sar_rou_steel_h|Stalowa tarcza Rajputi w kwiaty
+itm_sh_sar_rou_steel_h_pl|Stalowe tarcze Rajputi w kwiaty
+itm_sh_sar_rou_steel_i|Czerwona stalowa tarcza Rajputi
+itm_sh_sar_rou_steel_i_pl|Czerwone stalowe tarcze Rajputi
+itm_sh_sar_rou_steel_j|Sułtańska żółta stalowa tarcza
+itm_sh_sar_rou_steel_j_pl|Sułtańskie żółte stalowe tarcze
+itm_sh_sar_rou_steel_k|Sułtańska złota stalowa tarcza
+itm_sh_sar_rou_steel_k_pl|Sułtańskie złote stalowe tarcze
+itm_sh_sar_rou_steel_l|Sułtańska zielona stalowa tarcza
+itm_sh_sar_rou_steel_l_pl|Sułtańskie zielone stalowe tarcze
+itm_sh_pla_mus_lyre|Lira
+itm_sh_pla_mus_lyre_pl|Liry
+itm_sh_pla_mus_lute|Lutnia
+itm_sh_pla_mus_lute_pl|Lutnie
+itm_sh_pla_mus_violin|Skrzypce
+itm_sh_pla_mus_violin_pl|Skrzypce
+itm_sh_pla_hea_big_c|Trójkątna tarcza z Gerulfingen
+itm_sh_pla_hea_big_c_pl|Trójkątne tarcze z Gerulfingen
+itm_sh_pla_kit_cross_a|Duża migdałowa tarcza z krzyżem
+itm_sh_pla_kit_cross_a_pl|Duże migdałowe tarcze z krzyżem
+itm_sh_pla_kit_eagle|Migdałowa tarcza z czarnym orłem
+itm_sh_pla_kit_eagle_pl|Migdałowe tarcze z czarnym orłem
+itm_sh_pla_pav_plain|Zwykła pawędź
+itm_sh_pla_pav_plain_pl|Zwykłe pawędzie
+itm_sh_pla_pav_heavy|Ciężka pawędź
+itm_sh_pla_pav_heavy_pl|Ciężkie pawędzie
+itm_sh_pla_hea_big_a|Duża trójkątna tarcza z krzyżem
+itm_sh_pla_hea_big_a_pl|Duże trójkątne tarcze z krzyżem
+itm_sh_pla_hea_big_b|Stalowa trójkątna tarcza
+itm_sh_pla_hea_big_b_pl|Stalowe trójkątne tarcze
+itm_sh_pla_rou_dragon|Smocza stalowa tarcza
+itm_sh_pla_rou_dragon_pl|Smocza stalowe tarcze
+itm_sh_pla_pav_eagle|Orla pawędź
+itm_sh_pla_pav_eagle_pl|Orle pawędzie
+itm_sh_pla_hea_templar|Trójkątna tarcza templariuszy
+itm_sh_pla_hea_templar_pl|Trójkątne tarcze templariuszy
+itm_sh_pla_hea_teutonic|Krzyżacka trójkątna tarcza
+itm_sh_pla_hea_teutonic_pl|Krzyżackie trójkątne tarcze
+itm_sh_pla_rou_amazon|Amazońska tarcza
+itm_sh_pla_rou_amazon_pl|Amazońskie tarcze
+itm_sh_pla_kit_cross_b|Mała migdałowa tarcza z krzyżem
+itm_sh_pla_kit_cross_b_pl|Małe migdałowe tarcze z krzyżem
+itm_sh_pla_rou_design|Deseniowa tarcza
+itm_sh_pla_rou_design_pl|Deseniowa tarcze
+itm_sh_pla_rou_hermitage_a|Zdobiona tarcza z Hermitage
+itm_sh_pla_rou_hermitage_a_pl|Zdobione tarcze z Hermitage 
+itm_sh_pla_rou_hermitage_b|Damska tarcza z Hermitage
+itm_sh_pla_rou_hermitage_b_pl|Damskie tarcze z Hermitage
+itm_sh_pla_rou_steel|Zdobiona stalowa tarcza
+itm_sh_pla_rou_steel_pl|Zdobione stalowe tarcze
+itm_items_end|KONIEC PRZEDMIOTÓW
+itm_items_end_pl|KONIEC PRZEDMIOTÓW
+itm_red_tpe_tunic|Turniejowa tunika
+itm_red_tpe_tunic_pl|Turniejowe tuniki
+itm_blue_tpe_tunic|Turniejowa tunika
+itm_blue_tpe_tunic_pl|Turniejowe tuniki
+itm_green_tpe_tunic|Turniejowa tunika
+itm_green_tpe_tunic_pl|Turniejowe tuniki
+itm_gold_tpe_tunic|Turniejowa tunika
+itm_gold_tpe_tunic_pl|Turniejowe tuniki
+itm_red_tpe_armor|Turniejowa Armor
+itm_red_tpe_armor_pl|Turniejowe Armor
+itm_blue_tpe_armor|Turniejowa Armor
+itm_blue_tpe_armor_pl|Turniejowe Armor
+itm_green_tpe_armor|Turniejowa Armor
+itm_green_tpe_armor_pl|Turniejowe Armor
+itm_gold_tpe_armor|Turniejowa Armor
+itm_gold_tpe_armor_pl|Turniejowe Armor
+itm_tpe_enhanced_shield_red|Turniejowa tarcza
+itm_tpe_enhanced_shield_red_pl|Turniejowe tarcze
+itm_tpe_enhanced_shield_blue|Turniejowa tarcza
+itm_tpe_enhanced_shield_blue_pl|Turniejowe tarcze
+itm_tpe_enhanced_shield_green|Turniejowa tarcza
+itm_tpe_enhanced_shield_green_pl|Turniejowe tarcze
+itm_tpe_enhanced_shield_yellow|Turniejowa tarcza
+itm_tpe_enhanced_shield_yellow_pl|Turniejowe tarcze
+itm_tpe_normal_boots|Turniejowe nagolenniki
+itm_tpe_normal_boots_pl|Turniejowe nagolenniki
+itm_tpe_enhanced_boots|Turniejowe nagolenniki
+itm_tpe_enhanced_boots_pl|Turniejowe nagolenniki
+itm_tpe_normal_spear|Turniejowa włócznia
+itm_tpe_normal_spear_pl|Turniejowe włócznie
+itm_tpe_enhanced_spear|Turniejowa włócznia
+itm_tpe_enhanced_spear_pl|Turniejowe włócznie
+itm_tpe_normal_bow|Turniejowy łuk
+itm_tpe_normal_bow_pl|Turniejowe łuki
+itm_tpe_enhanced_bow|Turniejowy łuk
+itm_tpe_enhanced_bow_pl|Turniejowe łuki
+itm_tpe_normal_crossbow|Turniejowa kusza
+itm_tpe_normal_crossbow_pl|Turniejowe kusze
+itm_tpe_enhanced_crossbow|Turniejowa kusza
+itm_tpe_enhanced_crossbow_pl|Turniejowe kusze
+itm_tpe_normal_javelin|Turniejowe oszczepy
+itm_tpe_normal_javelin_pl|Turniejowe oszczepy
+itm_tpe_normal_javelin_melee|Turniejowy oszczep
+itm_tpe_normal_javelin_melee_pl|Turniejowe oszczepy
+itm_tpe_enhanced_javelin|Turniejowe oszczepy
+itm_tpe_enhanced_javelin_pl|Turniejowe oszczepy
+itm_tpe_enhanced_javelin_melee|Turniejowy oszczep
+itm_tpe_enhanced_javelin_melee_pl|Turniejowe oszczepy
+itm_tpe_normal_sword|Turniejowy miecz
+itm_tpe_normal_sword_pl|Turniejowe miecze
+itm_tpe_enhanced_sword|Turniejowy miecz
+itm_tpe_enhanced_sword_pl|Turniejowe miecze
+itm_tpe_normal_greatsword|Turniejowy wielki miecz
+itm_tpe_normal_greatsword_pl|Turniejowe wielkie miecze
+itm_tpe_enhanced_greatsword|Turniejowy wielki miecz
+itm_tpe_enhanced_greatsword_pl|Turniejowe wielkie miecze
+itm_tpe_normal_lance|Turniejowa Lanca
+itm_tpe_normal_lance_pl|Turniejowe Lance
+itm_tpe_enhanced_lance|Turniejowa Lanca
+itm_tpe_enhanced_lance_pl|Turniejowe Lance
+itm_tpe_normal_horse_red|Turniejowy koń
+itm_tpe_normal_horse_red_pl|Turniejowe konie
+itm_tpe_normal_horse_blue|Turniejowy koń
+itm_tpe_normal_horse_blue_pl|Turniejowe konie
+itm_tpe_normal_horse_green|Turniejowy koń
+itm_tpe_normal_horse_green_pl|Turniejowe konie
+itm_tpe_normal_horse_yellow|Turniejowy koń
+itm_tpe_normal_horse_yellow_pl|Turniejowe konie
+itm_tpe_enhanced_horse_red|Turniejowy koń bojowy
+itm_tpe_enhanced_horse_red_pl|Turniejowe konie bojowe
+itm_tpe_enhanced_horse_blue|Turniejowy koń bojowy
+itm_tpe_enhanced_horse_blue_pl|Turniejowe konie bojowe
+itm_tpe_enhanced_horse_green|Turniejowy koń bojowy
+itm_tpe_enhanced_horse_green_pl|Turniejowe konie bojowe
+itm_tpe_enhanced_horse_yellow|Turniejowy koń bojowy
+itm_tpe_enhanced_horse_yellow_pl|Turniejowe konie bojowe
+itm_tpe_normal_axe|Turniejowy topór
+itm_tpe_normal_axe_pl|Turniejowe topory
+itm_tpe_enhanced_axe|Turniejowy topór
+itm_tpe_enhanced_axe_pl|Turniejowe topory
+itm_tpe_normal_quarterstaff|Turniejowy kij
+itm_tpe_normal_quarterstaff_pl|Turniejowe kije
+itm_tpe_enhanced_quarterstaff|Turniejowy kij
+itm_tpe_enhanced_quarterstaff_pl|Turniejowe kije
+itm_tpe_normal_greataxe|Turniejowy wielki topór
+itm_tpe_normal_greataxe_pl|Turniejowe wielkie topory
+itm_tpe_enhanced_greataxe|Turniejowy wielki topór
+itm_tpe_enhanced_greataxe_pl|Turniejowe wielkie topory
+itm_tpe_normal_scimitar|Turniejowy bułat
+itm_tpe_normal_scimitar_pl|Turniejowe bułaty
+itm_tpe_enhanced_scimitar|Turniejowy bułat
+itm_tpe_enhanced_scimitar_pl|Turniejowe bułaty
+itm_tpe_normal_throwing_axe|Turniejowe topory do rzucania
+itm_tpe_normal_throwing_axe_pl|Turniejowe topory do rzucania
+itm_tpe_normal_throwing_axe_melee|Turniejowy topór
+itm_tpe_normal_throwing_axe_melee_pl|Turniejowe topory
+itm_tpe_enhanced_throwing_axe|Turniejowe topory do rzucania
+itm_tpe_enhanced_throwing_axe_pl|Turniejowe topory do rzucania
+itm_tpe_enhanced_throwing_axe_melee|Turniejowy topór
+itm_tpe_enhanced_throwing_axe_melee_pl|Turniejowe topory
+itm_tpe_normal_throwing_daggers|Turniejowe sztylety
+itm_tpe_normal_throwing_daggers_pl|Turniejowe sztylety
+itm_tpe_normal_throwing_daggers_melee|Turniejowy sztylet
+itm_tpe_normal_throwing_daggers_melee_pl|Turniejowe sztylety
+itm_tpe_enhanced_throwing_daggers|Turniejowe sztylety
+itm_tpe_enhanced_throwing_daggers_pl|Turniejowe sztylety
+itm_tpe_enhanced_throwing_daggers_melee|Turniejwy sztylet
+itm_tpe_enhanced_throwing_daggers_melee_pl|Turniejowe sztylety
