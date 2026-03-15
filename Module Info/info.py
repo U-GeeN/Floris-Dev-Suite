@@ -14,12 +14,11 @@
 # If you need examples, please scroll down for the directories the devs use.	#
 # Make sure you use forward slashes (/) and NOT backward slashes (\).			#
 #################################################################################
-export_dir_main_guest					= "/Users/ekrieger/Library/Application Support/Steam/steamapps/common/MountBlade Warband"
-export_dir_custom_guest					= "Floris Expanded Mod Pack 2.55"
+export_dir_main_guest					= "C:/Program Files/Mount&Blade Warband/"
+export_dir_custom_guest					= "./Native/"
 #################################################################################
 # Don't change anything below this point unless you know what you're doing.		#
 #################################################################################
-
 
 
 
@@ -53,11 +52,11 @@ export_dir_custom_steam					= "./Native/"
 # compiled to. Changing this will affect the directories that are automatically	#
 # created, so do so with care.													#
 #################################################################################
-export_dir_basic						= "/Modules/Floris Basic Mod Pack 2.55/"
-export_dir_expanded						= "/Modules/Floris Expanded Mod Pack 2.55/"
-export_dir_gameplay						= "/Modules/Floris Gameplay Mod Pack 2.55/"
-export_dir_devsuite						= "/Modules/Floris Dev Suite 2.55/"
-export_dir_native						= "/Modules/Native 1.153/"
+export_dir_basic						= "./Modules/Floris Basic Mod Pack 2.54/"
+export_dir_expanded						= "./Modules/Floris Expanded Mod Pack 2.54/"
+export_dir_gameplay						= "./Modules/Floris Gameplay Mod Pack 2.54/"
+export_dir_devsuite						= "./Modules/Floris Dev Suite 2.54/"
+export_dir_native						= "./Modules/Native 1.153/"
 #################################################################################
 # These are the directories where copies of the compiled files are copied to.	#
 # It is important for the installer. Don't change this!							#
@@ -79,32 +78,49 @@ export_dir								= "./"
 # First importing important python stuff:										#
 #################################################################################
 import os
+import platform
+
+# macOS Steam paths (actual folder names on macOS Steam)
+export_dir_macos_steam_primary = os.path.expanduser(
+    "~/Library/Application Support/Steam/steamapps/common/MountBlade Warband/")
+export_dir_macos_steam_secondary = os.path.expanduser(
+    "~/Library/Application Support/Steam/steamapps/common/MountBlade Warband./")
+
+# The module name to compile to inside Warband/Modules/
+export_dir_macos_custom = "./Floris Expanded Mod Pack 2.55/"
+
 #################################################################################
-# Now check what directory exists, create module_info.py and write the right	#
-# info to that directory. This is the exact reason why this file isn't called	#
-# module_info.py anymore.														#
+# Priority: macOS Steam > Windows paths > test_build fallback
 #################################################################################
 f = open("./module_info.py","w")
-line = f.write("from info import *\n")
-if os.path.exists(export_dir_main_monnikje):
-	line = f.write("export_dir_main		= export_dir_main_monnikje\n")
-	line = f.write("export_dir_custom	= export_dir_custom_monnikje\n")
+f.write("from info import *\n")
+
+if os.path.exists(export_dir_macos_steam_primary):
+	f.write("export_dir_main		= '" + export_dir_macos_steam_primary + "'\n")
+	f.write("export_dir_custom	= '" + export_dir_macos_custom + "'\n")
+elif os.path.exists(export_dir_macos_steam_secondary):
+	f.write("export_dir_main		= '" + export_dir_macos_steam_secondary + "'\n")
+	f.write("export_dir_custom	= '" + export_dir_macos_custom + "'\n")
+elif os.path.exists(export_dir_main_monnikje):
+	f.write("export_dir_main		= export_dir_main_monnikje\n")
+	f.write("export_dir_custom	= export_dir_custom_monnikje\n")
 elif os.path.exists(export_dir_main_duh):
-	line = f.write("export_dir_main		= export_dir_main_duh\n")
-	line = f.write("export_dir_custom	= export_dir_custom_duh\n")
+	f.write("export_dir_main		= export_dir_main_duh\n")
+	f.write("export_dir_custom	= export_dir_custom_duh\n")
 elif os.path.exists(export_dir_main_caba):
-	line = f.write("export_dir_main		= export_dir_main_caba\n")
-	line = f.write("export_dir_custom	= export_dir_custom_caba\n")
+	f.write("export_dir_main		= export_dir_main_caba\n")
+	f.write("export_dir_custom	= export_dir_custom_caba\n")
 elif os.path.exists(export_dir_main_windy):
-	line = f.write("export_dir_main		= export_dir_main_windy\n")
-	line = f.write("export_dir_custom	= export_dir_custom_windy\n")
-elif os.path.exists(export_dir_main_guest):
-	line = f.write("export_dir_main		= export_dir_main_guest\n")
-	line = f.write("export_dir_custom	= export_dir_custom_guest\n")
+	f.write("export_dir_main		= export_dir_main_windy\n")
+	f.write("export_dir_custom	= export_dir_custom_windy\n")
 elif os.path.exists(export_dir_main_steam):
-	line = f.write("export_dir_main		= export_dir_main_steam\n")
-	line = f.write("export_dir_custom	= export_dir_custom_steam\n")
+	f.write("export_dir_main		= export_dir_main_steam\n")
+	f.write("export_dir_custom	= export_dir_custom_steam\n")
 else:
-	line = f.write("export_dir_main		= export_dir_main_normal\n")
-	line = f.write("export_dir_custom	= export_dir_custom_normal\n")
+	# Fallback to test_build
+	default_dir = "./test_build/"
+	if not os.path.exists(default_dir):
+		os.makedirs(default_dir)
+	f.write("export_dir_main		= '" + default_dir + "'\n")
+	f.write("export_dir_custom	= './Native/'\n")
 f.close()

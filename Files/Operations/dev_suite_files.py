@@ -2,7 +2,7 @@ from module_info import *
 
 import shutil, os, glob
 
-export_dir_module = export_dir_main + "/Modules/"
+export_dir_module = export_dir_main + "./Modules/"
 export_dir_devsuite = export_dir_main + export_dir_devsuite
 
 if os.path.exists(export_dir_devsuite):

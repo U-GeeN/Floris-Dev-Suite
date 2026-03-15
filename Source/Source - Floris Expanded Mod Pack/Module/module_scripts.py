@@ -1380,7 +1380,7 @@ scripts = [
         (store_troop_faction, ":faction_no", ":troop_no"),
         (call_script, "script_troop_set_title_according_to_faction", ":troop_no", ":faction_no"),
       (try_end),
-      # Jrider ï¿½
+      # Jrider –
       #LAZERAS MODIFIED  {ENTK}
 	  # TPE+ 1.3 - Initialize TPE defaults - Windyplains
 	  (call_script, "script_tpe_initialize_player_settings"),
@@ -2024,20 +2024,20 @@ scripts = [
 	#Tier 5
 	(troop_set_slot, troop_trees_0, slot_rhodok_provisionato, "trp_rhodok_n_veterano"),
 	(troop_set_slot, troop_trees_0, slot_rhodok_veterano, "trp_rhodok_n_veterano"),
-	(troop_set_slot, troop_trees_0, slot_rhodok_balestriere_veterano, "trp_rhodok_n_balestriere"),
-	(troop_set_slot, troop_trees_0, slot_rhodok_balestriere_d_assedio, "trp_rhodok_n_balestriere"),
-	(troop_set_slot, troop_trees_0, slot_rhodok_balestriere_a_cavallo, "trp_rhodok_n_balestriere"),
+	(troop_set_slot, troop_trees_0, slot_rhodok_balestriere_veterano, "trp_rhodok_n_balestriere_veterano"),
+	(troop_set_slot, troop_trees_0, slot_rhodok_balestriere_d_assedio, "trp_rhodok_n_balestriere_veterano"),
+	(troop_set_slot, troop_trees_0, slot_rhodok_balestriere_a_cavallo, "trp_rhodok_n_balestriere_veterano"),
 	(troop_set_slot, troop_trees_0, slot_rhodok_picchiere_veterano, "trp_rhodok_n_veterano"),
 	(troop_set_slot, troop_trees_0, slot_rhodok_guardia, "trp_rhodok_n_veterano"),
 	#Tier 6
 	(troop_set_slot, troop_trees_0, slot_rhodok_capitano_di_ventura, "trp_rhodok_n_veterano"),
-	(troop_set_slot, troop_trees_0, slot_rhodok_balestriere_pesante, "trp_rhodok_n_balestriere"),
-	(troop_set_slot, troop_trees_0, slot_rhodok_capitano_d_assedio, "trp_rhodok_n_balestriere"),
+	(troop_set_slot, troop_trees_0, slot_rhodok_balestriere_pesante, "trp_rhodok_n_balestriere_veterano"),
+	(troop_set_slot, troop_trees_0, slot_rhodok_capitano_d_assedio, "trp_rhodok_n_balestriere_veterano"),
 	(troop_set_slot, troop_trees_0, slot_rhodok_picchiere_fiammingo, "trp_rhodok_n_veterano"),
 	(troop_set_slot, troop_trees_0, slot_rhodok_guardia_ducale, "trp_rhodok_n_veterano"),
 	#Tier 7
 	(troop_set_slot, troop_trees_0, slot_rhodok_condottiero, "trp_rhodok_n_veterano"),
-	(troop_set_slot, troop_trees_0, slot_rhodok_condottiero_d_assedio, "trp_rhodok_n_balestriere"),
+	(troop_set_slot, troop_trees_0, slot_rhodok_condottiero_d_assedio, "trp_rhodok_n_balestriere_veterano"),
 	#Extra
 	(troop_set_slot, troop_trees_0, slot_rhodok_extra1, "trp_rhodok_n_extra1"),
 	(troop_set_slot, troop_trees_0, slot_rhodok_extra2, "trp_rhodok_n_extra2"),
@@ -2065,7 +2065,7 @@ scripts = [
 	#Tier 5
 	(troop_set_slot, troop_trees_1, slot_rhodok_provisionato, "trp_rhodok_r_picchiere_veterano"),
 	(troop_set_slot, troop_trees_1, slot_rhodok_veterano, "trp_rhodok_r_picchiere_veterano"),
-	(troop_set_slot, troop_trees_1, slot_rhodok_balestriere_veterano, "trp_rhodok_r_balestriere_d_assedio"),
+	(troop_set_slot, troop_trees_1, slot_rhodok_balestriere_veterano, "trp_rhodok_r_balestriere_veterano"),
 	(troop_set_slot, troop_trees_1, slot_rhodok_balestriere_d_assedio, "trp_rhodok_r_balestriere_d_assedio"),
 	(troop_set_slot, troop_trees_1, slot_rhodok_balestriere_a_cavallo, "trp_rhodok_r_balestriere_d_assedio"),
 	(troop_set_slot, troop_trees_1, slot_rhodok_picchiere_veterano, "trp_rhodok_r_picchiere_veterano"),
@@ -2106,14 +2106,14 @@ scripts = [
 	#Tier 5
 	(troop_set_slot, troop_trees_2, slot_rhodok_provisionato, "trp_rhodok_e_provisionato"),
 	(troop_set_slot, troop_trees_2, slot_rhodok_veterano, "trp_rhodok_e_veterano"),
-	(troop_set_slot, troop_trees_2, slot_rhodok_balestriere_veterano, "trp_rhodok_e_balestriere_d_assedio"),
+	(troop_set_slot, troop_trees_2, slot_rhodok_balestriere_veterano, "trp_rhodok_e_balestriere_veterano"),
 	(troop_set_slot, troop_trees_2, slot_rhodok_balestriere_d_assedio, "trp_rhodok_e_balestriere_d_assedio"),
 	(troop_set_slot, troop_trees_2, slot_rhodok_balestriere_a_cavallo, "trp_rhodok_e_balestriere_a_cavallo"),
 	(troop_set_slot, troop_trees_2, slot_rhodok_picchiere_veterano, "trp_rhodok_e_picchiere_veterano"),
 	(troop_set_slot, troop_trees_2, slot_rhodok_guardia, "trp_rhodok_e_guardia"),
 	#Tier 6
 	(troop_set_slot, troop_trees_2, slot_rhodok_capitano_di_ventura, "trp_rhodok_e_capitano_di_ventura"),
-	(troop_set_slot, troop_trees_2, slot_rhodok_balestriere_pesante, "trp_rhodok_e_balestriere_d_assedio"),
+	(troop_set_slot, troop_trees_2, slot_rhodok_balestriere_pesante, "trp_rhodok_e_balestriere_pesante"),
 	(troop_set_slot, troop_trees_2, slot_rhodok_capitano_d_assedio, "trp_rhodok_e_capitano_d_assedio"),
 	(troop_set_slot, troop_trees_2, slot_rhodok_picchiere_fiammingo, "trp_rhodok_e_picchiere_fiammingo"),
 	(troop_set_slot, troop_trees_2, slot_rhodok_guardia_ducale, "trp_rhodok_e_guardia_ducale"),
@@ -7700,7 +7700,7 @@ scripts = [
         #(call_script, "script_troop_set_title_according_to_faction_gender_and_lands", ":troop_no", ":faction_no"),
 	  # 	(call_script, "script_troop_set_title_according_to_faction", ":troop_no", ":faction_no"), ##BUGFIX - Caba
       # (try_end),
-      # Jrider ï¿½
+      # Jrider –
       #LAZERAS MODIFIED  {ENTK}
   ]),
   
@@ -44811,9 +44811,9 @@ scripts = [
               (assign, ":continue", 1),
             (try_end),
                   ## CC
-            (try_begin),
-              (is_between, ":troop_no", bandit_heroes_begin, bandit_heroes_end),
-              (assign, ":continue", 1),
+                  (try_begin),
+                    (is_between, ":troop_no", bandit_heroes_begin, bandit_heroes_end),
+                    (assign, ":continue", 1),
 				  ##Floris MTT begin
 					(try_begin),
 						(eq, "$troop_trees", troop_trees_0),

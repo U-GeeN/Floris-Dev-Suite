@@ -1411,7 +1411,7 @@ reinforcement_cost_hard = 300
 
 merchant_toll_duration        = 72 #Tolls are valid for 72 hours
 
-hero_escape_after_defeat_chance = 50
+hero_escape_after_defeat_chance = 70
 
 
 raid_distance = 4

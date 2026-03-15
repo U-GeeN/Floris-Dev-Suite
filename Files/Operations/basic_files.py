@@ -2,11 +2,11 @@ from module_info import *
 
 import shutil, os, glob
 
-export_dir_music = export_dir_main + export_dir_basic + "/Music/"
-export_dir_resource = export_dir_main + export_dir_basic + "/Resource/"
-export_dir_sceneobj = export_dir_main + export_dir_basic + "/SceneObj/"
-export_dir_sounds = export_dir_main + export_dir_basic + "/Sounds/"
-export_dir_textures = export_dir_main + export_dir_basic + "/Textures/"
+export_dir_music = export_dir_main + export_dir_basic + "./Music/"
+export_dir_resource = export_dir_main + export_dir_basic + "./Resource/"
+export_dir_sceneobj = export_dir_main + export_dir_basic + "./SceneObj/"
+export_dir_sounds = export_dir_main + export_dir_basic + "./Sounds/"
+export_dir_textures = export_dir_main + export_dir_basic + "./Textures/"
 
 if os.path.exists(export_dir_music):
     shutil.rmtree(export_dir_music)

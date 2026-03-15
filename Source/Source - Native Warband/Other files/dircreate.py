@@ -6,12 +6,12 @@ import os
 if not os.path.exists(export_dir):
     os.makedirs(export_dir)
 
-export_dir_data = export_dir_main + export_dir_native + "/Data/"
-export_dir_music = export_dir_main + export_dir_native + "/Music/"
-export_dir_resource = export_dir_main + export_dir_native + "/Resource/"
-export_dir_sceneobj = export_dir_main + export_dir_native + "/SceneObj/"
-export_dir_sounds = export_dir_main + export_dir_native + "/Sounds/"
-export_dir_textures = export_dir_main + export_dir_native + "/Textures/"
+export_dir_data = export_dir_main + export_dir_native + "./Data/"
+export_dir_music = export_dir_main + export_dir_native + "./Music/"
+export_dir_resource = export_dir_main + export_dir_native + "./Resource/"
+export_dir_sceneobj = export_dir_main + export_dir_native + "./SceneObj/"
+export_dir_sounds = export_dir_main + export_dir_native + "./Sounds/"
+export_dir_textures = export_dir_main + export_dir_native + "./Textures/"
 
 if not os.path.exists(export_dir_data):
     os.makedirs(export_dir_data)
