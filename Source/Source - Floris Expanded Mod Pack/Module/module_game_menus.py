@@ -17237,7 +17237,14 @@ game_menus = [
          (call_script, "script_player_arrived"),
          (party_set_morale, "p_main_party", 100),
          (set_encountered_party, "$current_town"),
-         (call_script, "script_prepare_alley_to_fight"),####
+         (try_begin),
+           (eq, "$g_skip_tutorial", 1),
+           (assign, "$current_startup_quest_phase", 4),
+           (party_relocate_near_party, "p_main_party", "$g_starting_town", 2),
+           (change_screen_map),
+         (else_try),
+           (call_script, "script_prepare_alley_to_fight"),####
+         (try_end),
 	
        ]),
     ]

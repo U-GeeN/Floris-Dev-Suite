@@ -33,6 +33,7 @@ scripts = [
 		(assign,"$background_answer_4", cb4_revenge),
 		#(assign, "$g_fog", 0),
 		(assign, "$g_gether_npcs", 0),
+		(assign, "$g_skip_tutorial", 0),
 		(assign, "$troop_trees", troop_trees_2),
 		(troop_set_slot, ccp_objects, ccp_val_menu_trooptrees, troop_trees_2),
 	]),

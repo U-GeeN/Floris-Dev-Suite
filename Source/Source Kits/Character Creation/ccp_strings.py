@@ -19,6 +19,7 @@ strings = [
 	("ccp_label_mtt", "Troop Tree"),
 	("ccp_label_gather_npcs", "Gather Companions"),
 	("ccp_label_region", "Starting Region"),
+	("ccp_label_skip_tutorial", "Skip Tutorial"),
 	("ccp_empty", "{s31}"),
 	("ccp_str", "STR"),
 	("ccp_agi", "AGI"),

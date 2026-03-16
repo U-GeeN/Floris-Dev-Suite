@@ -118,6 +118,8 @@ ccp_obj_stat_weapon_crossbow           = 41
 ccp_obj_stat_weapon_throwing           = 42
 ccp_obj_stat_container                 = 43
 ccp_obj_button_back                    = 44
+ccp_obj_checkbox_skip_tutorial         = 45
+ccp_val_checkbox_skip_tutorial         = 46
 
 # Slots of CCP_DATA
 # Slots 0-99 reserved.

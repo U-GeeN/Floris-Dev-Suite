@@ -225,6 +225,10 @@ presentations = [
 		(troop_set_slot, ccp_objects, ccp_val_checkbox_gather_npcs, "$g_gether_npcs"),
 		(call_script, "script_gpu_create_checkbox_white", 755, 495, "str_ccp_label_gather_npcs", ccp_obj_checkbox_gather_npcs, ccp_val_checkbox_gather_npcs), # was 755, 460 with Fog of War
 		
+		# Skip Tutorial
+		(troop_set_slot, ccp_objects, ccp_val_checkbox_skip_tutorial, "$g_skip_tutorial"),
+		(call_script, "script_gpu_create_checkbox_white", 755, 425, "str_ccp_label_skip_tutorial", ccp_obj_checkbox_skip_tutorial, ccp_val_checkbox_skip_tutorial),
+		
 		# Initialize the equipment list
 		(call_script, "script_ccp_initialize_faction_items"),
 		
@@ -506,6 +510,14 @@ presentations = [
 			(ge, DEBUG_CCP_general, 1),
 			(assign, reg1, ":value"),
 			(display_message, "@Option: Gathering companions has been {reg1?ENABLED:turned off} [ {reg1} ]."),
+		
+		(else_try), ####### SKIP TUTORIAL CHECKBOX #######
+			(troop_slot_eq, ccp_objects, ccp_obj_checkbox_skip_tutorial, ":object"),
+			(assign, "$g_skip_tutorial", ":value"),
+			(troop_set_slot, ccp_objects, ccp_val_checkbox_skip_tutorial, ":value"),
+			(ge, DEBUG_CCP_general, 1),
+			(assign, reg1, ":value"),
+			(display_message, "@Option: Skip Tutorial has been {reg1?ENABLED:turned off} [ {reg1} ]."),
 		
 		(else_try), ####### STARTING REGION MENU #######
 			(troop_slot_eq, ccp_objects, ccp_obj_menu_initial_region, ":object"),
