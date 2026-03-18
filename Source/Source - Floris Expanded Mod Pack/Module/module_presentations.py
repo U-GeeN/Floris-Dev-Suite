@@ -16724,16 +16724,16 @@ presentations = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_rhodok_e_guardia", 640, 590), #Tier 5
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_rhodok_e_veterano", 640, 510),
 #        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_rhodok_e_balestriere_veterano", 640, 430),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_rhodok_e_balestriere_d_assedio", 640, 350),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_rhodok_e_balestriere_d_assedio", 640, 390),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_rhodok_e_balestriere_a_cavallo", 640, 270),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_rhodok_e_picchiere_veterano", 640, 150),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_rhodok_e_lanza_spezzata", 640, 30),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 20, "trp_rhodok_e_guardia_ducale", 790, 590), #Tier 6
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_rhodok_e_capitano_di_ventura", 790, 510),
 #        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 22, "trp_rhodok_e_balestriere_pesante", 790, 430),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 23, "trp_rhodok_e_capitano_d_assedio", 790, 350),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 23, "trp_rhodok_e_capitano_d_assedio", 790, 390),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 24, "trp_rhodok_e_picchiere_fiammingo", 790, 150),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 25, "trp_rhodok_e_condottiero_d_assedio", 940, 350), #Tier 7
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 25, "trp_rhodok_e_condottiero_d_assedio", 940, 390), #Tier 7
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 26, "trp_rhodok_e_condottiero", 940, 150),
 
         ## cost
@@ -16753,9 +16753,9 @@ presentations = [
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_rhodok_e_guardia", 695, 645), #Tier 5-6
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_rhodok_e_veterano", 695, 565),
 #        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_rhodok_e_balestriere_veterano", 695, 485),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_rhodok_e_balestriere_d_assedio", 695, 405),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_rhodok_e_balestriere_d_assedio", 695, 445),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_rhodok_e_picchiere_veterano", 695, 205),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_rhodok_e_capitano_d_assedio", 845, 405), #Tier 6-7
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_rhodok_e_capitano_d_assedio", 845, 445), #Tier 6-7
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_rhodok_e_picchiere_fiammingo", 845, 205),
         ## cost
 
@@ -16783,18 +16783,18 @@ presentations = [
         (call_script, "script_prsnt_lines", 50, 4, 440, 70),
         (call_script, "script_prsnt_lines", 110, 4, 520, 630), #Tier 4-5
         (call_script, "script_prsnt_lines", 110, 4, 520, 550),
-        (call_script, "script_prsnt_lines", 55, 4, 520, 430),
-        (call_script, "script_prsnt_lines", 55, 4, 575, 470),
-        (call_script, "script_prsnt_lines", 55, 4, 575, 390),
+        (call_script, "script_prsnt_lines", 110, 4, 520, 430), #balestr. - balestr. d'ass.
+#        (call_script, "script_prsnt_lines", 55, 4, 575, 470),
+#        (call_script, "script_prsnt_lines", 55, 4, 575, 390),
         (call_script, "script_prsnt_lines", 110, 4, 520, 310),
         (call_script, "script_prsnt_lines", 110, 4, 520, 190),
         (call_script, "script_prsnt_lines", 110, 4, 520, 70),
         (call_script, "script_prsnt_lines", 110, 4, 665, 630), #Tier 5-6
         (call_script, "script_prsnt_lines", 110, 4, 665, 550),
-        (call_script, "script_prsnt_lines", 110, 4, 665, 470),
-        (call_script, "script_prsnt_lines", 110, 4, 665, 390),
+#        (call_script, "script_prsnt_lines", 110, 4, 665, 470),
+        (call_script, "script_prsnt_lines", 110, 4, 665, 430),
         (call_script, "script_prsnt_lines", 110, 4, 665, 190),
-        (call_script, "script_prsnt_lines", 110, 4, 815, 390), #Tier 6-7
+        (call_script, "script_prsnt_lines", 110, 4, 815, 430), #Tier 6-7
         (call_script, "script_prsnt_lines", 110, 4, 815, 190),
         ##### - lineS
 
@@ -16806,7 +16806,7 @@ presentations = [
         (call_script, "script_prsnt_lines", 4, 110, 440, 435),
         (call_script, "script_prsnt_lines", 4, 115, 440, 310),
         (call_script, "script_prsnt_lines", 4, 120, 440, 70),
-        (call_script, "script_prsnt_lines", 4, 80, 575, 390), #Tier 4-5
+#        (call_script, "script_prsnt_lines", 4, 40, 575, 390), #Tier 4-5
         ##### | lines
       ]),
 
