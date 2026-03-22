@@ -16571,107 +16571,75 @@ presentations = [
         (position_set_y, pos1, 500),
         (overlay_set_size, reg0, pos1),
 
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 0, "trp_nord_e_bondi", 60, 350), #Tier 1
-#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 1, "trp_nord_e_berserkr", 210, 470), #Tier 2
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 2, "trp_nord_e_huskarl", 210, 230),
-#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 3, "trp_nord_e_kertilsveinr", 360, 550), #Tier 3
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 4, "trp_nord_e_bogmadur", 360, 390),
-#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 5, "trp_nord_e_gesith", 360, 310),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_nord_e_gridman", 360, 150),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_nord_e_ascoman", 500, 590), #Tier 4
-#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_nord_e_vikingr", 500, 510),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_nord_e_einhleyping", 500, 430),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_nord_e_bogsveigir", 500, 350),
-#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_nord_e_hermadur", 500, 270),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_nord_e_innaesmaen", 500, 190),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_nord_e_vigamadr", 500, 110),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_nord_e_heimthegi", 640, 590), #Tier 5
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_nord_e_hirdman", 640, 510),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_nord_e_lausaman", 640, 430),
-#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_nord_e_heahgerefa", 640, 350),
-#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_nord_e_himthige", 640, 270),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_nord_e_kappi", 640, 190),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 20, "trp_nord_e_skjadsveinn", 640, 110),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_nord_e_skutilsveinr", 790, 510), #Tier 6
-#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 22, "trp_nord_e_ealdorman", 790, 350),
-#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 23, "trp_nord_e_erfane_himthige", 790, 270),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 24, "trp_nord_e_hetja", 790, 190),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 25, "trp_nord_e_husbondi", 790, 110),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 26, "trp_nord_e_aetheling", 940, 510), #Tier 7
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 27, "trp_nord_e_vaeringi", 940, 110),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 0, "trp_nord_e_bondi", 80, 340), #Tier 1
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 1, "trp_nord_e_berserkr", 215, 340), #Tier 2
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 2, "trp_nord_e_huskarl", 350, 270),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 3, "trp_nord_e_kertilsveinr", 350, 590), #Tier 3
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 4, "trp_nord_e_bogmadur", 350, 390),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 5, "trp_nord_e_gesith", 350, 350),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_nord_e_gridman", 350, 240),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_nord_e_ascoman", 485, 440), #Tier 4
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_nord_e_vikingr", 485, 550),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_nord_e_einhleyping", 485, 470),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_nord_e_bogsveigir", 485, 340),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_nord_e_hermadur", 485, 310),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_nord_e_innaesmaen", 485, 140),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_nord_e_vigamadr", 485, 240),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_nord_e_heimthegi", 620, 440), #Tier 5
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_nord_e_hirdman", 620, 140),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_nord_e_lausaman", 620, 470),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_nord_e_heahgerefa", 620, 390),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_nord_e_himthige", 620, 310),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_nord_e_kappi", 620, 230),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 20, "trp_nord_e_skjadsveinn", 620, 240),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_nord_e_skutilsveinr", 755, 140), #Tier 6
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 22, "trp_nord_e_ealdorman", 755, 390),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 23, "trp_nord_e_erfane_himthige", 755, 310),
+#        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 24, "trp_nord_e_hetja", 755, 230),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 25, "trp_nord_e_husbondi", 755, 240),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 26, "trp_nord_e_aetheling", 890, 140), #Tier 7
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 27, "trp_nord_e_vaeringi", 890, 240),
 
         ## cost
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_bondi", 115, 405), #Tier 1-2
-#        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_berserkr", 265, 525), #Tier 2-3
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_huskarl", 265, 285),
-#        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_kertilsveinr", 420, 605), #Tier 3-4
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_bogmadur", 420, 445),
-#        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_gesith", 420, 365),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_gridman", 420, 205),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_ascoman", 550, 645), #Tier 4-5
-#        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_vikingr", 550, 565),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_einhleyping", 550, 485),
-#        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_hermadur", 550, 325),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_innaesmaen", 550, 245),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_vigamadr", 550, 165),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_hirdman", 695, 565), #Tier 5-6
-#        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_heahgerefa", 695, 405),
-#        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_himthige", 695, 325),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_kappi", 695, 245),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_skjadsveinn", 695, 165),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_skutilsveinr", 845, 565), #Tier 6-7
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_husbondi", 845, 165),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_bondi", 125, 395), #Tier 1-2: 80+45=125
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_berserkr", 260, 395), #Tier 2-3: 215+45=260
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_bogmadur", 395, 445), #Tier 3-4: 350+45=395
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_gridman", 395, 295),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_ascoman", 530, 495), #Tier 4-5: 485+45=530
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_vigamadr", 530, 295),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_hirdman", 665, 195), #Tier 5-6: 620+45=665
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_skjadsveinn", 665, 295),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_skutilsveinr", 800, 195), #Tier 6-7: 755+45=800
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_nord_e_husbondi", 800, 295),
         ## cost
 
         ##### - lines
-        (call_script, "script_prsnt_lines", 55, 4, 85, 390), #Tier 1-2
-        (call_script, "script_prsnt_lines", 55, 4, 140, 510),
-        (call_script, "script_prsnt_lines", 55, 4, 140, 270),
-        (call_script, "script_prsnt_lines", 55, 4, 235, 510), #Tier 2-3
-        (call_script, "script_prsnt_lines", 55, 4, 290, 590),
-        (call_script, "script_prsnt_lines", 55, 4, 290, 430),
-        (call_script, "script_prsnt_lines", 55, 4, 235, 270),
-        (call_script, "script_prsnt_lines", 55, 4, 290, 350),
-        (call_script, "script_prsnt_lines", 55, 4, 290, 190),
-        (call_script, "script_prsnt_lines", 50, 4, 390, 590), #Tier 3-4
-        (call_script, "script_prsnt_lines", 50, 4, 440, 630),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 550),
-        (call_script, "script_prsnt_lines", 50, 4, 390, 430),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 470),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 395),
-        (call_script, "script_prsnt_lines", 50, 4, 390, 350),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 385),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 310),
-        (call_script, "script_prsnt_lines", 50, 4, 390, 190),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 230),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 150),
-        (call_script, "script_prsnt_lines", 110, 4, 520, 630), #Tier 4-5
-        (call_script, "script_prsnt_lines", 110, 4, 520, 550),
-        (call_script, "script_prsnt_lines", 110, 4, 520, 470),
-        (call_script, "script_prsnt_lines", 55, 4, 520, 315),
-        (call_script, "script_prsnt_lines", 55, 4, 575, 390),
-        (call_script, "script_prsnt_lines", 110, 4, 520, 230),
-        (call_script, "script_prsnt_lines", 55, 4, 575, 305),
-        (call_script, "script_prsnt_lines", 110, 4, 520, 150),
-        (call_script, "script_prsnt_lines", 110, 4, 665, 550), #Tier 5-6
-        (call_script, "script_prsnt_lines", 110, 4, 665, 390),
-        (call_script, "script_prsnt_lines", 110, 4, 665, 310),
-        (call_script, "script_prsnt_lines", 110, 4, 665, 230),
-        (call_script, "script_prsnt_lines", 110, 4, 665, 150),
-        (call_script, "script_prsnt_lines", 110, 4, 815, 550), #Tier 6-7
-        (call_script, "script_prsnt_lines", 110, 4, 815, 150),
+        (call_script, "script_prsnt_lines", 105, 4, 103, 380), #Tier 1-2: X: 95+8=103
+        (call_script, "script_prsnt_lines", 52, 4, 238, 380), #Tier 2-3 Out: X: 230+8=238
+        (call_script, "script_prsnt_lines", 53, 4, 290, 430), #Tier 2-3 In (Upper): X: 282+8=290
+        (call_script, "script_prsnt_lines", 53, 4, 290, 280), #Tier 2-3 In (Lower)
+        (call_script, "script_prsnt_lines", 52, 4, 373, 430), #Tier 3-4 Out (Upper): X: 365+8=373
+        (call_script, "script_prsnt_lines", 53, 4, 425, 480), #Tier 3-4 In (UU): X: 417+8=425
+        (call_script, "script_prsnt_lines", 53, 4, 425, 380), #Tier 3-4 In (UL)
+        (call_script, "script_prsnt_lines", 52, 4, 373, 280), #Tier 3-4 Out (Lower)
+        (call_script, "script_prsnt_lines", 53, 4, 425, 280), #Tier 3-4 In (Vigamadr)
+        (call_script, "script_prsnt_lines", 53, 4, 425, 180), #Tier 3-4 In (Innaesmaen)
+        (call_script, "script_prsnt_lines", 105, 4, 508, 480), #Tier 4-5 (Ascoman -> Heimthegi): X: 485+15=500, W: 135-30=105
+        (call_script, "script_prsnt_lines", 52, 4, 508, 280), #Tier 4-5 Out (Vigamadr)
+        (call_script, "script_prsnt_lines", 53, 4, 560, 280), #Tier 4-5 In (Skjadsveinn): X: 552+8=560
+        (call_script, "script_prsnt_lines", 53, 4, 560, 180), #Tier 4-5 In (Hirdman)
+        (call_script, "script_prsnt_lines", 105, 4, 643, 180), #Tier 5-6 (Hirdman -> Skutilsveinr): X: 635+8=643
+        (call_script, "script_prsnt_lines", 105, 4, 643, 280), #Tier 5-6 (Skjadsveinn -> Husbondi)
+        (call_script, "script_prsnt_lines", 105, 4, 778, 180), #Tier 6-7 (Skutilsveinr -> Aetheling): X: 770+8=778
+        (call_script, "script_prsnt_lines", 105, 4, 778, 280), #Tier 6-7 (Husbondi -> Vaeringi)
+
         ##### - lines
 
         ##### | lines
-        (call_script, "script_prsnt_lines", 4, 240, 140, 270), #Tier 1-2
-        (call_script, "script_prsnt_lines", 4, 160, 290, 430), #Tier 2-3
-        (call_script, "script_prsnt_lines", 4, 160, 290, 190),
-        (call_script, "script_prsnt_lines", 4, 80, 440, 550), #Tier 3-4
-        (call_script, "script_prsnt_lines", 4, 75, 440, 395),
-        (call_script, "script_prsnt_lines", 4, 75, 440, 310),
-        (call_script, "script_prsnt_lines", 4, 80, 440, 150),
-        (call_script, "script_prsnt_lines", 4, 75, 575, 315), #Tier 4-5
-        (call_script, "script_prsnt_lines", 4, 75, 575, 230),
+        (call_script, "script_prsnt_lines", 4, 150, 290, 280), #Tier 2-3 Split: X: 282+8=290
+        (call_script, "script_prsnt_lines", 4, 100, 425, 380), #Tier 3-4 Upper Split: X: 417+8=425
+        (call_script, "script_prsnt_lines", 4, 100, 425, 180),  #Tier 3-4 Lower Split
+        (call_script, "script_prsnt_lines", 4, 100, 560, 180),  #Tier 4-5 Vigamadr Split: X: 552+8=560
         ##### | lines
       ]),
 
