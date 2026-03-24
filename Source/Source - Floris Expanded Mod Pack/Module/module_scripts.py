@@ -1380,7 +1380,7 @@ scripts = [
         (store_troop_faction, ":faction_no", ":troop_no"),
         (call_script, "script_troop_set_title_according_to_faction", ":troop_no", ":faction_no"),
       (try_end),
-      # Jrider –
+      # Jrider Â–
       #LAZERAS MODIFIED  {ENTK}
 	  # TPE+ 1.3 - Initialize TPE defaults - Windyplains
 	  (call_script, "script_tpe_initialize_player_settings"),
@@ -7700,7 +7700,7 @@ scripts = [
         #(call_script, "script_troop_set_title_according_to_faction_gender_and_lands", ":troop_no", ":faction_no"),
 	  # 	(call_script, "script_troop_set_title_according_to_faction", ":troop_no", ":faction_no"), ##BUGFIX - Caba
       # (try_end),
-      # Jrider –
+      # Jrider Â–
       #LAZERAS MODIFIED  {ENTK}
   ]),
   
