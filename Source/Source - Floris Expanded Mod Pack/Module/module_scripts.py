@@ -16866,13 +16866,8 @@ scripts = [
     # OUTPUT: reg0 = prisoner_limit
     ("game_get_party_prisoner_limit",
       [
-        #      (store_script_param_1, ":party_no"),
-        (assign, ":troop_no", "trp_player"),
-        
-        (assign, ":limit", 0),
-        (store_skill_level, ":skill", "skl_prisoner_management", ":troop_no"),
-        (store_mul, ":limit", ":skill", 5),
-        (assign, reg0, ":limit"),
+        # Bypassed prisoner limit to allow infinite scaling
+        (assign, reg0, 1000000),
         (set_trigger_result, reg0),
     ]),
     
@@ -74076,6 +74071,71 @@ scripts = [
 	(assign, "$g_ft_force_pause", 2), # Set fast travel auto-pause to actual threats.
 	## WINDYPLAINS- ##
    ]),   
+
+  # script_cf_captain_system_init_recruitment
+  # This will be called by the simple trigger.
+  # It will find a free slot and then open the menu.
+  ("cf_captain_system_init_recruitment", [
+    (assign, ":found_slot", -1),
+    (try_for_range, ":cur_slot", "trp_captain1", "trp_captain10_end"),
+      (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
+      (assign, ":found_slot", ":cur_slot"),
+      (assign, ":cur_slot", "trp_captain10_end"), # break
+    (try_end),
+    (gt, ":found_slot", -1),
+    (jump_to_menu, "mnu_captain_recruitment"),
+  ]),
+
+  # script_captain_system_promote
+  # Input: arg1 = captain_troop, arg2 = source_troop
+  ("captain_system_promote", [
+    (store_script_param, ":captain_troop", 1),
+    (store_script_param, ":source_troop", 2),
+    
+    # 1. Set Name
+    (store_random_in_range, ":name_no", "str_name_1", "str_surname_1"),
+    (troop_set_name, ":captain_troop", ":name_no"),
+
+    # 2. Copy Stats
+    (troop_get_type, ":type", ":source_troop"),
+    (troop_set_type, ":captain_troop", ":type"),
+    
+    # Attributes
+    (try_for_range, ":attr", 0, 4), # str, agi, int, cha
+      (store_attribute_level, ":val", ":source_troop", ":attr"),
+      (troop_raise_attribute, ":captain_troop", ":attr", ":val"),
+    (try_end),
+    
+    # Skills
+    (try_for_range, ":skill", 0, 42), # Standard skills
+      (store_skill_level, ":val", ":source_troop", ":skill"),
+      (troop_raise_skill, ":captain_troop", ":skill", ":val"),
+    (try_end),
+    
+    # Proficiencies
+    (try_for_range, ":prof", 0, 7), # Standard profs
+      (store_proficiency_level, ":val", ":source_troop", ":prof"),
+      (troop_raise_proficiency, ":captain_troop", ":prof", ":val"),
+    (try_end),
+
+    # 3. Copy Equipment
+    (troop_clear_inventory, ":captain_troop"),
+    (troop_get_inventory_capacity, ":cap", ":source_troop"),
+    (try_for_range, ":i_slot", 0, ":cap"),
+      (troop_get_inventory_slot, ":item", ":source_troop", ":i_slot"),
+      (gt, ":item", -1),
+      (troop_add_item, ":captain_troop", ":item"),
+    (try_end),
+    
+    # 4. Remove one unit from party
+    (party_remove_members, "p_main_party", ":source_troop", 1),
+    
+    # 5. Set Occupation and Add to Party
+    (troop_set_slot, ":captain_troop", slot_troop_occupation, 20), # slto_captain
+    (party_add_members, "p_main_party", ":captain_troop", 1),
+    
+    (display_message, "@One of your troops has been promoted to Captain!"),
+  ]),
 
   ]
   
