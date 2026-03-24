@@ -8607,6 +8607,89 @@ simple_triggers = [
 		]
 
 	),
+
+  # Infinite prisoners escape trigger - MOBILE PARTIES (Player & NPC)
+  # Processed every 12 hours
+  (12,
+   [
+      (try_for_parties, ":party_no"),
+          (party_is_active, ":party_no"),
+          (party_get_num_prisoners, ":num_prisoners", ":party_no"),
+          (gt, ":num_prisoners", 0),
+          
+          # Only mobile parties (not centers)
+          (party_get_slot, ":spt", ":party_no", 0), # slot_party_type = 0
+          (try_begin),
+              (neg|is_between, ":spt", 2, 5), # Exclude Castle (2), Town (3), Village (4)
+              
+              (party_stack_get_troop_id, ":leader", ":party_no", 0),
+              (assign, ":pm_skill", 0),
+              (try_begin),
+                  (gt, ":leader", 0),
+                  (store_skill_level, ":pm_skill", "skl_prisoner_management", ":leader"),
+              (try_end),
+
+              # Reduced safely managed amount to 3 per skill level
+              (store_mul, ":pm_bonus", ":pm_skill", 3),
+              (store_sub, ":unmanaged", ":num_prisoners", ":pm_bonus"),
+              (val_max, ":unmanaged", 0),
+              
+              # Formula: (unmanaged * unmanaged) / 1000
+              (store_mul, ":unmanaged_sq", ":unmanaged", ":unmanaged"),
+              (store_div, ":escape_chance", ":unmanaged_sq", 1000),
+              
+              # Guard factor: -1% per 2 troops in the party
+              (party_get_num_companions, ":num_troops", ":party_no"),
+              (store_div, ":guard_factor", ":num_troops", 2),
+              (val_sub, ":escape_chance", ":guard_factor"),
+              
+              (val_max, ":escape_chance", 0),
+              
+              (store_random_in_range, ":rand", 0, 100),
+              (lt, ":rand", ":escape_chance"),
+              
+              # Escape quantity logic: 5% to 15% missing per stack
+              (store_random_in_range, ":escape_percent", 5, 16),
+              
+              (party_get_num_prisoner_stacks, ":num_stacks", ":party_no"),
+              (try_for_range_backwards, ":stack_no", 0, ":num_stacks"),
+                  (party_prisoner_stack_get_troop_id, ":troop_id", ":party_no", ":stack_no"),
+                  (neg|troop_is_hero, ":troop_id"), 
+                  (party_prisoner_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
+                  
+                  (store_mul, ":to_remove", ":stack_size", ":escape_percent"),
+                  (val_div, ":to_remove", 100),
+                  
+                  # Remainder chance
+                  (store_random_in_range, ":rand2", 0, 100),
+                  (try_begin),
+                      (lt, ":rand2", ":escape_percent"),
+                      (val_add, ":to_remove", 1),
+                  (try_end),
+                  
+                  (val_min, ":to_remove", ":stack_size"),
+                  (try_begin),
+                      (gt, ":to_remove", 0),
+                      (party_remove_prisoners, ":party_no", ":troop_id", ":to_remove"),
+                      
+                      (try_begin),
+                          (eq, ":party_no", "p_main_party"),
+                          (str_store_troop_name, s1, ":troop_id"),
+                          (assign, reg1, ":to_remove"),
+                          (try_begin),
+                              (eq, ":to_remove", 1),
+                              (display_message, "@{reg1} {s1} has escaped from your party!", 0xFFFF5533),
+                          (else_try),
+                              (str_store_troop_name_plural, s1, ":troop_id"),
+                              (display_message, "@{reg1} {s1} have escaped from your party!", 0xFFFF5533),
+                          (try_end),
+                      (try_end),
+                  (try_end),
+              (try_end),
+          (try_end),
+      (try_end),
+   ]),
+
 ####################################################################################################################################
 # LAV MODIFICATIONS END (COMPANIONS OVERSEER MOD)
 ####################################################################################################################################
