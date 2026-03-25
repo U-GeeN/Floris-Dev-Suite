@@ -758,11 +758,7 @@ simple_triggers_part5 = [
       (try_end),
    ]),
 
-  # Captain System Weekly Recruitment
-  (1, [ # 24 * 7
-    (display_message, "@DEBUG: Captain Recruitment trigger firing..."),
-    (call_script, "script_cf_captain_system_init_recruitment"),
-  ]),
+
 
 ####################################################################################################################################
 # LAV MODIFICATIONS END (COMPANIONS OVERSEER MOD)
