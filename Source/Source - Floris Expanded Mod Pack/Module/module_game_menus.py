@@ -2415,6 +2415,9 @@ game_menus = [
         ]
        ),
 	  ## Floris - Trade Ledger
+	  ("action_recruit_captain", [], "Promote a troop to Captain.",
+	       [(call_script, "script_cf_captain_system_init_recruitment"),
+	        ]),
 	   
 #TEMPERED CHANGES BEGIN, TOGGLE OPTIONS
       # ("action_no_drowning",[(eq, "$drowning", 1)],"_Disable drowning in missions.",
