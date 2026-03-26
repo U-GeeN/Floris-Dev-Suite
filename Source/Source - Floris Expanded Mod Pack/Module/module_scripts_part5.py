@@ -14791,62 +14791,132 @@ scripts_part5 = [
 	## WINDYPLAINS- ##
    ]),   
 
-  # script_cf_captain_system_init_recruitment
-  # Called by the simple trigger. Queues the captain recruitment menu unconditionally.
-  ("cf_captain_system_init_recruitment", [
-    (call_script, "script_add_notification_menu", "mnu_captain_recruitment", 0, 0),
+  # script_cf_lieutenant_system_init_recruitment
+  # Called by the simple trigger. Queues the lieutenant recruitment menu unconditionally.
+  ("cf_lieutenant_system_init_recruitment", [
+    (call_script, "script_add_notification_menu", "mnu_lieutenant_recruitment", 0, 0),
   ]),
 
 
-  # script_captain_system_promote
-  # Input: arg1 = captain_troop, arg2 = source_troop
-  ("captain_system_promote", [
-    (store_script_param, ":captain_troop", 1),
+  # script_lieutenant_system_promote
+  # Input: arg1 = lieutenant_troop, arg2 = source_troop
+  ("lieutenant_system_promote", [
+    (store_script_param, ":lieutenant_troop", 1),
     (store_script_param, ":source_troop", 2),
     
     # 1. Set Name
+    (store_sub, ":slot_offset", ":lieutenant_troop", lieutenants_begin),
+    (try_begin),
+      (eq, ":slot_offset", 0), (str_store_string, s5, "@Lieutenant I"),
+    (else_try),
+      (eq, ":slot_offset", 1), (str_store_string, s5, "@Lieutenant II"),
+    (else_try),
+      (eq, ":slot_offset", 2), (str_store_string, s5, "@Lieutenant III"),
+    (else_try),
+      (eq, ":slot_offset", 3), (str_store_string, s5, "@Lieutenant IV"),
+    (else_try),
+      (eq, ":slot_offset", 4), (str_store_string, s5, "@Lieutenant V"),
+    (else_try),
+      (eq, ":slot_offset", 5), (str_store_string, s5, "@Lieutenant VI"),
+    (else_try),
+      (eq, ":slot_offset", 6), (str_store_string, s5, "@Lieutenant VII"),
+    (else_try),
+      (eq, ":slot_offset", 7), (str_store_string, s5, "@Lieutenant VIII"),
+    (else_try),
+      (eq, ":slot_offset", 8), (str_store_string, s5, "@Lieutenant IX"),
+    (else_try),
+      (eq, ":slot_offset", 9), (str_store_string, s5, "@Lieutenant X"),
+    (try_end),
     (store_random_in_range, ":name_no", "str_name_1", "str_surname_1"),
-    (troop_set_name, ":captain_troop", ":name_no"),
+    (str_store_string, s1, ":name_no"),
+    (str_store_string, s1, "@{s5} {s1}"),
+    (troop_set_name, ":lieutenant_troop", s1),
 
     # 2. Copy Stats
     (troop_get_type, ":type", ":source_troop"),
-    (troop_set_type, ":captain_troop", ":type"),
+    (troop_set_type, ":lieutenant_troop", ":type"),
     
     # Attributes
     (try_for_range, ":attr", 0, 4), # str, agi, int, cha
       (store_attribute_level, ":val", ":source_troop", ":attr"),
-      (troop_raise_attribute, ":captain_troop", ":attr", ":val"),
+      (store_attribute_level, ":cur_val", ":lieutenant_troop", ":attr"),
+      (store_sub, ":diff", ":val", ":cur_val"),
+      (try_begin),
+         (gt, ":diff", 0),
+         (troop_raise_attribute, ":lieutenant_troop", ":attr", ":diff"),
+      (try_end),
     (try_end),
     
+    (assign, ":skill_pool", 0),
     # Skills
     (try_for_range, ":skill", 0, 42), # Standard skills
       (store_skill_level, ":val", ":source_troop", ":skill"),
-      (troop_raise_skill, ":captain_troop", ":skill", ":val"),
+      (store_div, ":quarter", ":val", 4), # 1/4 of the skill
+      (val_add, ":skill_pool", ":quarter"),
+      
+      (store_sub, ":three_quarters", ":val", ":quarter"),
+      (store_skill_level, ":cur_val", ":lieutenant_troop", ":skill"),
+      (store_sub, ":diff", ":three_quarters", ":cur_val"),
+      (try_begin),
+         (gt, ":diff", 0),
+         (troop_raise_skill, ":lieutenant_troop", ":skill", ":diff"),
+      (try_end),
+    (try_end),
+    
+    # Redistribute the skill pool to Leadership and Charisma
+    (store_div, ":half_pool", ":skill_pool", 2),
+    
+    # Add to Leadership
+    (assign, ":ldr_add", ":half_pool"),
+    (store_skill_level, ":cur_ldr", ":lieutenant_troop", "skl_leadership"),
+    (store_sub, ":max_ldr_add", 10, ":cur_ldr"),
+    (try_begin),
+      (gt, ":ldr_add", ":max_ldr_add"),
+      (assign, ":ldr_add", ":max_ldr_add"),
+    (try_end),
+    (try_begin),
+      (gt, ":ldr_add", 0),
+      (troop_raise_skill, ":lieutenant_troop", "skl_leadership", ":ldr_add"),
+    (try_end),
+
+    # Remaining skill points to Charisma
+    (store_sub, ":cha_add", ":skill_pool", ":ldr_add"),
+    (try_begin),
+      (gt, ":cha_add", 0),
+      (troop_raise_attribute, ":lieutenant_troop", ca_charisma, ":cha_add"),
     (try_end),
     
     # Proficiencies
     (try_for_range, ":prof", 0, 7), # Standard profs
       (store_proficiency_level, ":val", ":source_troop", ":prof"),
-      (troop_raise_proficiency, ":captain_troop", ":prof", ":val"),
+      (store_proficiency_level, ":cur_val", ":lieutenant_troop", ":prof"),
+      (store_sub, ":diff", ":val", ":cur_val"),
+      (try_begin),
+         (gt, ":diff", 0),
+         (troop_raise_proficiency, ":lieutenant_troop", ":prof", ":diff"),
+      (try_end),
     (try_end),
 
-    # 3. Copy Equipment
-    (troop_clear_inventory, ":captain_troop"),
-    (troop_get_inventory_capacity, ":cap", ":source_troop"),
-    (try_for_range, ":i_slot", 0, ":cap"),
-      (troop_get_inventory_slot, ":item", ":source_troop", ":i_slot"),
-      (gt, ":item", -1),
-      (troop_add_item, ":captain_troop", ":item"),
+    # Copy xp
+    (troop_get_xp, ":xp", ":source_troop"),
+    (troop_get_xp, ":cur_xp", ":lieutenant_troop"),
+    (store_sub, ":diff_xp", ":xp", ":cur_xp"),
+    (try_begin),
+      (gt, ":diff_xp", 0),
+      (add_xp_to_troop, ":diff_xp", ":lieutenant_troop"),
     (try_end),
+
+    # 3. Empty Inventory
+    (troop_clear_inventory, ":lieutenant_troop"),
     
     # 4. Remove one unit from party
     (party_remove_members, "p_main_party", ":source_troop", 1),
     
     # 5. Set Occupation and Add to Party
-    (troop_set_slot, ":captain_troop", slot_troop_occupation, 20), # slto_captain
-    (party_add_members, "p_main_party", ":captain_troop", 1),
+    (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, 20), # slto_lieutenant
+    (party_add_members, "p_main_party", ":lieutenant_troop", 1),
     
-    (display_message, "@One of your troops has been promoted to Captain!"),
+    (display_message, "@One of your troops has been promoted to lieutenant!"),
   ]),
 
   

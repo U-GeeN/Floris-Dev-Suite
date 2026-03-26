@@ -2039,7 +2039,7 @@ game_menus = [
        ],
        "Promote a troop to Lieutenant.",
        [
-         (jump_to_menu, "mnu_captain_recruitment"),
+         (jump_to_menu, "mnu_lieutenant_recruitment"),
        ]
        ),
       ("camp_wait_here",[],"Wait here for some time.",
@@ -19857,7 +19857,7 @@ game_menus = [
 		]
 	),
 
-  ("captain_recruitment", 0,
+  ("lieutenant_recruitment", 0,
    "{s11}",
    "none",
    [
@@ -19882,52 +19882,52 @@ game_menus = [
      (try_end),
    ],
    [
-     ("captain_promote_1", [(gt, "$g_lieutenant_candidate_1", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_1")], "Promote {s1} to Lieutenant", [
+     ("lieutenant_promote_1", [(gt, "$g_lieutenant_candidate_1", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_1")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
           (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
         (try_end),
-        (call_script, "script_captain_system_promote", ":found_slot", "$g_lieutenant_candidate_1"),
+        (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_1"),
         (jump_to_menu, "mnu_camp"),
      ]),
-     ("captain_promote_2", [(gt, "$g_lieutenant_candidate_2", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_2")], "Promote {s1} to Lieutenant", [
+     ("lieutenant_promote_2", [(gt, "$g_lieutenant_candidate_2", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_2")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
           (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
         (try_end),
-        (call_script, "script_captain_system_promote", ":found_slot", "$g_lieutenant_candidate_2"),
+        (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_2"),
         (jump_to_menu, "mnu_camp"),
      ]),
-     ("captain_promote_3", [(gt, "$g_lieutenant_candidate_3", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_3")], "Promote {s1} to Lieutenant", [
+     ("lieutenant_promote_3", [(gt, "$g_lieutenant_candidate_3", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_3")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
           (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
         (try_end),
-        (call_script, "script_captain_system_promote", ":found_slot", "$g_lieutenant_candidate_3"),
+        (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_3"),
         (jump_to_menu, "mnu_camp"),
      ]),
-     ("captain_promote_4", [(gt, "$g_lieutenant_candidate_4", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_4")], "Promote {s1} to Lieutenant", [
+     ("lieutenant_promote_4", [(gt, "$g_lieutenant_candidate_4", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_4")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
           (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
         (try_end),
-        (call_script, "script_captain_system_promote", ":found_slot", "$g_lieutenant_candidate_4"),
+        (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_4"),
         (jump_to_menu, "mnu_camp"),
      ]),
-     ("captain_promote_5", [(gt, "$g_lieutenant_candidate_5", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_5")], "Promote {s1} to Lieutenant", [
+     ("lieutenant_promote_5", [(gt, "$g_lieutenant_candidate_5", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_5")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
           (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
         (try_end),
-        (call_script, "script_captain_system_promote", ":found_slot", "$g_lieutenant_candidate_5"),
+        (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_5"),
         (jump_to_menu, "mnu_camp"),
      ]),
-     ("captain_choice_refuse", [], "@Not now.", [(jump_to_menu, "mnu_camp")]),
+     ("lieutenant_choice_refuse", [], "@Not now.", [(jump_to_menu, "mnu_camp")]),
    ]
   ),
 ]
