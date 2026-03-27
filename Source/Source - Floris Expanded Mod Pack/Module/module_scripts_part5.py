@@ -14847,26 +14847,7 @@ scripts_part5 = [
     (try_end),
 
     (assign, "$g_lieutenant_total_volunteers", ":total_volunteers"),
-    (assign, reg1, "$g_lieutenant_total_volunteers"),
-
-    (try_begin),
-      (lt, "$g_lieutenant_total_volunteers", 4),
-      (assign, reg1, "$g_lieutenant_total_volunteers"),
-      (display_message, "@The call for a new Lieutenant was met with silence. Only {reg1} troops volunteered. Your men lose respect for your authority."),
-      (call_script, "script_change_player_party_morale", -15),
-    (else_try),
-      (lt, "$g_lieutenant_total_volunteers", 10),
-      (assign, reg1, "$g_lieutenant_total_volunteers"),
-      (display_message, "@A few troops ({reg1}) have stepped forward to volunteer for promotion, but the interest is lukewarm."),
-      (call_script, "script_change_player_party_morale", -5),
-      # Removed: script_add_notification_menu - menu is now opened directly by the camp action.
-    (else_try),
-      (assign, reg1, "$g_lieutenant_total_volunteers"),
-      (display_message, "@Your command is respected! {reg1} troops have eagerly volunteered for the Lieutenant position."),
-      (call_script, "script_change_player_party_morale", 10),
-      # Removed: script_add_notification_menu - menu is now opened directly by the camp action.
-    (try_end),
-    (gt, "$g_lieutenant_total_volunteers", 0), # Added: Return success only if we have volunteers
+    (gt, "$g_lieutenant_total_volunteers", 0),
   ]),
 
 
@@ -14876,6 +14857,15 @@ scripts_part5 = [
     (store_script_param, ":lieutenant_troop", 1),
     (store_script_param, ":source_troop", 2),
     
+    # 0. Copy Level/XP
+    (troop_get_xp, ":xp", ":source_troop"),
+    (troop_get_xp, ":cur_xp", ":lieutenant_troop"),
+    (store_sub, ":diff_xp", ":xp", ":cur_xp"),
+    (try_begin),
+      (gt, ":diff_xp", 0),
+      (add_xp_to_troop, ":diff_xp", ":lieutenant_troop"),
+    (try_end),
+
     # 1. Set Name
     (store_sub, ":slot_offset", ":lieutenant_troop", lieutenants_begin),
     (try_begin),
@@ -14904,12 +14894,12 @@ scripts_part5 = [
     (str_store_string, s1, "@{s5} {s1}"),
     (troop_set_name, ":lieutenant_troop", s1),
 
-    # 2. Copy Stats
+    # 2. Copy Base Stats (1:1 Sync)
     (troop_get_type, ":type", ":source_troop"),
     (troop_set_type, ":lieutenant_troop", ":type"),
     
-    # Attributes
-    (try_for_range, ":attr", 0, 4), # str, agi, int, cha
+    # Attributes sync
+    (try_for_range, ":attr", 0, 4),
       (store_attribute_level, ":val", ":source_troop", ":attr"),
       (store_attribute_level, ":cur_val", ":lieutenant_troop", ":attr"),
       (store_sub, ":diff", ":val", ":cur_val"),
@@ -14919,47 +14909,19 @@ scripts_part5 = [
       (try_end),
     (try_end),
     
-    (assign, ":skill_pool", 0),
-    # Skills
-    (try_for_range, ":skill", 0, 42), # Standard skills
+    # Skills sync
+    (try_for_range, ":skill", 0, 42),
       (store_skill_level, ":val", ":source_troop", ":skill"),
-      (store_div, ":quarter", ":val", 4), # 1/4 of the skill
-      (val_add, ":skill_pool", ":quarter"),
-      
-      (store_sub, ":three_quarters", ":val", ":quarter"),
       (store_skill_level, ":cur_val", ":lieutenant_troop", ":skill"),
-      (store_sub, ":diff", ":three_quarters", ":cur_val"),
+      (store_sub, ":diff", ":val", ":cur_val"),
       (try_begin),
          (gt, ":diff", 0),
          (troop_raise_skill, ":lieutenant_troop", ":skill", ":diff"),
       (try_end),
     (try_end),
     
-    # Redistribute the skill pool to Leadership and Charisma
-    (store_div, ":half_pool", ":skill_pool", 2),
-    
-    # Add to Leadership
-    (assign, ":ldr_add", ":half_pool"),
-    (store_skill_level, ":cur_ldr", ":lieutenant_troop", "skl_leadership"),
-    (store_sub, ":max_ldr_add", 10, ":cur_ldr"),
-    (try_begin),
-      (gt, ":ldr_add", ":max_ldr_add"),
-      (assign, ":ldr_add", ":max_ldr_add"),
-    (try_end),
-    (try_begin),
-      (gt, ":ldr_add", 0),
-      (troop_raise_skill, ":lieutenant_troop", "skl_leadership", ":ldr_add"),
-    (try_end),
-
-    # Remaining skill points to Charisma
-    (store_sub, ":cha_add", ":skill_pool", ":ldr_add"),
-    (try_begin),
-      (gt, ":cha_add", 0),
-      (troop_raise_attribute, ":lieutenant_troop", ca_charisma, ":cha_add"),
-    (try_end),
-    
-    # Proficiencies
-    (try_for_range, ":prof", 0, 7), # Standard profs
+    # Proficiencies sync
+    (try_for_range, ":prof", 0, 7),
       (store_proficiency_level, ":val", ":source_troop", ":prof"),
       (store_proficiency_level, ":cur_val", ":lieutenant_troop", ":prof"),
       (store_sub, ":diff", ":val", ":cur_val"),
@@ -14969,29 +14931,46 @@ scripts_part5 = [
       (try_end),
     (try_end),
 
-    # Copy xp
-    (troop_get_xp, ":xp", ":source_troop"),
-    (troop_get_xp, ":cur_xp", ":lieutenant_troop"),
-    (store_sub, ":diff_xp", ":xp", ":cur_xp"),
+    # 3. Distribute Surplus Stats (Hero Growth)
+    # entrylevel is 14. Any level above 14 gets random point distribution favoring CHA/Fight stats.
+    (store_character_level, ":source_level", ":source_troop"),
+    (store_sub, ":surplus", ":source_level", 14),
     (try_begin),
-      (gt, ":diff_xp", 0),
-      (add_xp_to_troop, ":diff_xp", ":lieutenant_troop"),
+       (gt, ":surplus", 0),
+       (try_for_range, ":unused", 0, ":surplus"),
+          # Weighted Attribute Point
+          (store_random_in_range, ":roll", 0, 101),
+          (try_begin),
+             (lt, ":roll", 35), (troop_raise_attribute, ":lieutenant_troop", ca_charisma, 1),
+          (else_try),
+             (lt, ":roll", 65), (troop_raise_attribute, ":lieutenant_troop", ca_strength, 1),
+          (else_try),
+             (lt, ":roll", 90), (troop_raise_attribute, ":lieutenant_troop", ca_agility, 1),
+          (else_try),
+             (troop_raise_attribute, ":lieutenant_troop", ca_intelligence, 1),
+          (try_end),
+          
+          # Weighted Skill Point
+          (store_random_in_range, ":roll_sk", 0, 101),
+          (try_begin),
+             (lt, ":roll_sk", 40), (troop_raise_skill, ":lieutenant_troop", "skl_leadership", 1),
+          (else_try),
+             (lt, ":roll_sk", 60), (troop_raise_skill, ":lieutenant_troop", "skl_power_strike", 1),
+          (else_try),
+             (lt, ":roll_sk", 75), (troop_raise_skill, ":lieutenant_troop", "skl_ironflesh", 1),
+          (else_try),
+             (lt, ":roll_sk", 85), (troop_raise_skill, ":lieutenant_troop", "skl_athletics", 1),
+          (else_try),
+             (lt, ":roll_sk", 95), (troop_raise_skill, ":lieutenant_troop", "skl_shield", 1),
+          (else_try),
+             (troop_raise_skill, ":lieutenant_troop", "skl_weapon_master", 1),
+          (try_end),
+       (try_end),
     (try_end),
 
-    # 3. Visual Inheritance
-    # Since direct face key manipulation is limited in Warband scripts,
-    # we use the standard operation to copy the face from the source troop.
-    (troop_set_face_key_from_current_profile, ":lieutenant_troop"),
-
-
-
-    # 4. Empty Inventory
+    # 4. Global Refinements
     (troop_clear_inventory, ":lieutenant_troop"),
-    
-    # 5. Remove one unit from party
     (party_remove_members, "p_main_party", ":source_troop", 1),
-    
-    # 6. Set Occupation and Add to Party
     (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, slto_lieutenant),
     (party_add_members, "p_main_party", ":lieutenant_troop", 1),
     
