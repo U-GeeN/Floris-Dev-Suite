@@ -430,7 +430,6 @@ simple_triggers_part5 = [
 ##Floris: A simple trigger that checks the current version of the Floris Expanded Mod Pack. The version number is defined in module_constants.py.
 ##Also does a few other mod tasks
 (0, [
-    (display_message, "@DEBUG: Floris Heartbeat firing..."),
     (try_begin),
         (party_slot_eq, "p_main_party", slot_party_pref_wp_prof_decrease, 2),
         (call_script, "script_weather_restore_proficiencies"),
@@ -575,6 +574,37 @@ simple_triggers_part5 = [
         (call_script, "script_start_quest", "qst_freelancer_vacation", "$enlisted_lord"),		
 	(try_end),
 	
+	# --- Lieutenant recruitment notification purge ---
+	# The old code called script_add_notification_menu for mnu_lieutenant_recruitment,
+	# leaving stale entries in trp_notification_menu_types that caused the menu to fire
+	# every time the player resumed travel. This block compacts them out of the queue.
+	(assign, ":write_slot", 0),
+	(try_for_range, ":read_slot", 0, 80), # Fixed range is necessary, try_for_range evaluates limit once.
+	  (troop_get_slot, ":queued_menu", "trp_notification_menu_types", ":read_slot"),
+	  (try_begin),
+	    (gt, ":queued_menu", 0),
+	    (try_begin),
+	      # Skip (discard) any lieutenant_recruitment entries
+	      (eq, ":queued_menu", "mnu_lieutenant_recruitment"),
+	    (else_try),
+	      # Keep all other entries - copy them to the write position
+	      (troop_set_slot, "trp_notification_menu_types", ":write_slot", ":queued_menu"),
+	      (troop_get_slot, ":var1", "trp_notification_menu_var1", ":read_slot"),
+	      (troop_set_slot, "trp_notification_menu_var1", ":write_slot", ":var1"),
+	      (troop_get_slot, ":var2", "trp_notification_menu_var2", ":read_slot"),
+	      (troop_set_slot, "trp_notification_menu_var2", ":write_slot", ":var2"),
+	      (val_add, ":write_slot", 1),
+	    (try_end),
+	  (try_end),
+	(try_end),
+	# Zero out any trailing slots left after compaction
+	(try_for_range, ":clear_slot", ":write_slot", 80),
+	  (troop_set_slot, "trp_notification_menu_types", ":clear_slot", 0),
+	  (troop_set_slot, "trp_notification_menu_var1", ":clear_slot", 0),
+	  (troop_set_slot, "trp_notification_menu_var2", ":clear_slot", 0),
+	(try_end),
+	# --- End lieutenant recruitment notification purge ---
+
     (assign, "$g_mod_version", floris_version),
   ]),
 

@@ -14792,9 +14792,81 @@ scripts_part5 = [
    ]),   
 
   # script_cf_lieutenant_system_init_recruitment
-  # Called by the simple trigger. Queues the lieutenant recruitment menu unconditionally.
+  # Logic to calculate volunteers and determine if recruitment can proceed
   ("cf_lieutenant_system_init_recruitment", [
-    (call_script, "script_add_notification_menu", "mnu_lieutenant_recruitment", 0, 0),
+    (assign, ":total_volunteers", 0),
+    (assign, ":candidate_idx", 0),
+    (assign, "$g_lieutenant_candidate_1", -1),
+    (assign, "$g_lieutenant_candidate_2", -1),
+    (assign, "$g_lieutenant_candidate_3", -1),
+    (assign, "$g_lieutenant_candidate_4", -1),
+    (assign, "$g_lieutenant_candidate_5", -1),
+
+    (store_skill_level, ":persuasion", "skl_persuasion", "trp_player"),
+    (store_skill_level, ":leadership", "skl_leadership", "trp_player"),
+    
+    (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+    (try_for_range, ":stack_no", 0, ":num_stacks"),
+      (party_stack_get_troop_id, ":troop_id", "p_main_party", ":stack_no"),
+      (neg|troop_is_hero, ":troop_id"),
+      
+      (party_stack_get_size, ":stack_size", "p_main_party", ":stack_no"),
+      (party_stack_get_num_wounded, ":num_wounded", "p_main_party", ":stack_no"),
+      (store_sub, ":num_available", ":stack_size", ":num_wounded"),
+      (gt, ":num_available", 0),
+      
+      (store_character_level, ":level", ":troop_id"),
+      
+      # Chance calculation: troop level % + skill bonuses
+      (assign, ":chance", ":level"),
+      
+      (store_mul, ":lead_bonus", ":leadership", 2), # +2% per leadership
+      (val_add, ":chance", ":lead_bonus"),
+      (val_add, ":chance", ":persuasion"), # +1% per persuasion
+      
+      (val_clamp, ":chance", 0, 101), # Cap chance at 100%
+      
+      # Iterate through available troops in stack
+      (try_for_range, ":unused", 0, ":num_available"),
+        (store_random_in_range, ":random", 0, 100),
+        (lt, ":random", ":chance"),
+        (val_add, ":total_volunteers", 1),
+        
+        # Track up to 5 specific candidate troop IDs for the menu
+        (try_begin),
+          (lt, ":candidate_idx", 5),
+          (val_add, ":candidate_idx", 1),
+          (try_begin), (eq, ":candidate_idx", 1), (assign, "$g_lieutenant_candidate_1", ":troop_id"),
+          (else_try), (eq, ":candidate_idx", 2), (assign, "$g_lieutenant_candidate_2", ":troop_id"),
+          (else_try), (eq, ":candidate_idx", 3), (assign, "$g_lieutenant_candidate_3", ":troop_id"),
+          (else_try), (eq, ":candidate_idx", 4), (assign, "$g_lieutenant_candidate_4", ":troop_id"),
+          (else_try), (eq, ":candidate_idx", 5), (assign, "$g_lieutenant_candidate_5", ":troop_id"),
+          (try_end),
+        (try_end),
+      (try_end),
+    (try_end),
+
+    (assign, "$g_lieutenant_total_volunteers", ":total_volunteers"),
+    (assign, reg1, "$g_lieutenant_total_volunteers"),
+
+    (try_begin),
+      (lt, "$g_lieutenant_total_volunteers", 4),
+      (assign, reg1, "$g_lieutenant_total_volunteers"),
+      (display_message, "@The call for a new Lieutenant was met with silence. Only {reg1} troops volunteered. Your men lose respect for your authority."),
+      (call_script, "script_change_player_party_morale", -15),
+    (else_try),
+      (lt, "$g_lieutenant_total_volunteers", 10),
+      (assign, reg1, "$g_lieutenant_total_volunteers"),
+      (display_message, "@A few troops ({reg1}) have stepped forward to volunteer for promotion, but the interest is lukewarm."),
+      (call_script, "script_change_player_party_morale", -5),
+      # Removed: script_add_notification_menu - menu is now opened directly by the camp action.
+    (else_try),
+      (assign, reg1, "$g_lieutenant_total_volunteers"),
+      (display_message, "@Your command is respected! {reg1} troops have eagerly volunteered for the Lieutenant position."),
+      (call_script, "script_change_player_party_morale", 10),
+      # Removed: script_add_notification_menu - menu is now opened directly by the camp action.
+    (try_end),
+    (gt, "$g_lieutenant_total_volunteers", 0), # Added: Return success only if we have volunteers
   ]),
 
 
@@ -14807,25 +14879,25 @@ scripts_part5 = [
     # 1. Set Name
     (store_sub, ":slot_offset", ":lieutenant_troop", lieutenants_begin),
     (try_begin),
-      (eq, ":slot_offset", 0), (str_store_string, s5, "@Lieutenant I"),
+      (eq, ":slot_offset", 0), (str_store_string, s5, "@Lieutenant X"),
     (else_try),
-      (eq, ":slot_offset", 1), (str_store_string, s5, "@Lieutenant II"),
+      (eq, ":slot_offset", 1), (str_store_string, s5, "@Lieutenant IX"),
     (else_try),
-      (eq, ":slot_offset", 2), (str_store_string, s5, "@Lieutenant III"),
+      (eq, ":slot_offset", 2), (str_store_string, s5, "@Lieutenant IIX"),
     (else_try),
-      (eq, ":slot_offset", 3), (str_store_string, s5, "@Lieutenant IV"),
+      (eq, ":slot_offset", 3), (str_store_string, s5, "@Lieutenant VII"),
     (else_try),
-      (eq, ":slot_offset", 4), (str_store_string, s5, "@Lieutenant V"),
+      (eq, ":slot_offset", 4), (str_store_string, s5, "@Lieutenant VI"),
     (else_try),
-      (eq, ":slot_offset", 5), (str_store_string, s5, "@Lieutenant VI"),
+      (eq, ":slot_offset", 5), (str_store_string, s5, "@Lieutenant V"),
     (else_try),
-      (eq, ":slot_offset", 6), (str_store_string, s5, "@Lieutenant VII"),
+      (eq, ":slot_offset", 6), (str_store_string, s5, "@Lieutenant IV"),
     (else_try),
-      (eq, ":slot_offset", 7), (str_store_string, s5, "@Lieutenant VIII"),
+      (eq, ":slot_offset", 7), (str_store_string, s5, "@Lieutenant III"),
     (else_try),
-      (eq, ":slot_offset", 8), (str_store_string, s5, "@Lieutenant IX"),
+      (eq, ":slot_offset", 8), (str_store_string, s5, "@Lieutenant II"),
     (else_try),
-      (eq, ":slot_offset", 9), (str_store_string, s5, "@Lieutenant X"),
+      (eq, ":slot_offset", 9), (str_store_string, s5, "@Lieutenant I"),
     (try_end),
     (store_random_in_range, ":name_no", "str_name_1", "str_surname_1"),
     (str_store_string, s1, ":name_no"),
@@ -14906,17 +14978,25 @@ scripts_part5 = [
       (add_xp_to_troop, ":diff_xp", ":lieutenant_troop"),
     (try_end),
 
-    # 3. Empty Inventory
+    # 3. Visual Inheritance
+    # Since direct face key manipulation is limited in Warband scripts,
+    # we use the standard operation to copy the face from the source troop.
+    (troop_set_face_key_from_current_profile, ":lieutenant_troop"),
+
+
+
+    # 4. Empty Inventory
     (troop_clear_inventory, ":lieutenant_troop"),
     
-    # 4. Remove one unit from party
+    # 5. Remove one unit from party
     (party_remove_members, "p_main_party", ":source_troop", 1),
     
-    # 5. Set Occupation and Add to Party
-    (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, 20), # slto_lieutenant
+    # 6. Set Occupation and Add to Party
+    (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, slto_lieutenant),
     (party_add_members, "p_main_party", ":lieutenant_troop", 1),
     
-    (display_message, "@One of your troops has been promoted to lieutenant!"),
+    (str_store_troop_name, s1, ":lieutenant_troop"),
+    (display_message, "@{s1} has been promoted and joined your ranks!"),
   ]),
 
   

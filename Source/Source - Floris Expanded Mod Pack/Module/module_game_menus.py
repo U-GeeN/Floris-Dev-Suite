@@ -2026,22 +2026,7 @@ game_menus = [
        [(jump_to_menu, "mnu_camp_action"),
         ]
        ),
-      # Lieutenant promotion: manual option
-      ("camp_lieutenant_promote",
-       [
-         (assign, ":free_slot", -1),
-         (try_for_range, ":lslot", lieutenants_begin, lieutenants_end),
-           (eq, ":free_slot", -1),
-           (troop_slot_eq, ":lslot", slot_troop_occupation, 0),
-           (assign, ":free_slot", ":lslot"),
-         (try_end),
-         (gt, ":free_slot", -1),
-       ],
-       "Promote a troop to Lieutenant.",
-       [
-         (jump_to_menu, "mnu_lieutenant_recruitment"),
-       ]
-       ),
+
       ("camp_wait_here",[],"Wait here for some time.",
        [
            (assign,"$g_camp_mode", 1),
@@ -2418,9 +2403,31 @@ game_menus = [
      ],
     [
  
-      ("action_read_book",[],"Select a book to read.",
-       [(jump_to_menu, "mnu_camp_action_read_book"),
-        ]
+       ("action_read_book",[],"Select a book to read.",
+        [(jump_to_menu, "mnu_camp_action_read_book"),
+         ]
+        ),
+      # Lieutenant promotion: manual option
+      ("camp_lieutenant_promote",
+       [
+         (assign, ":free_slot", -1),
+         (try_for_range, ":lslot", lieutenants_begin, lieutenants_end),
+           (eq, ":free_slot", -1),
+           (troop_slot_eq, ":lslot", slot_troop_occupation, 0),
+           (assign, ":free_slot", ":lslot"),
+         (try_end),
+         (gt, ":free_slot", -1),
+         # Move initialization roll here - if no one volunteers, the choice doesn't show.
+         (call_script, "script_cf_lieutenant_system_init_recruitment"),
+         (gt, "$g_lieutenant_total_volunteers", 0),
+       ],
+       "Promote a troop to Lieutenant.",
+       [
+         (try_begin),
+           (gt, "$g_lieutenant_total_volunteers", 0),
+           (jump_to_menu, "mnu_lieutenant_recruitment"),
+         (try_end),
+       ]
        ),
 	 ## Floris - Trade Ledger
 	 ("action_view_trade_ledger", [(store_item_kind_count, reg0, "itm_book_trade_ledger"),(ge, reg0, 1),
@@ -19861,32 +19868,18 @@ game_menus = [
    "{s11}",
    "none",
    [
-     (str_store_string, s11, "@One of your troops has distinguished themselves in leadership and valor. You may promote them to the rank of Lieutenant in your company."),
-     (assign, "$g_lieutenant_candidate_1", -1),
-     (assign, "$g_lieutenant_candidate_2", -1),
-     (assign, "$g_lieutenant_candidate_3", -1),
-     (assign, "$g_lieutenant_candidate_4", -1),
-     (assign, "$g_lieutenant_candidate_5", -1),
-     (assign, ":found", 0),
-     (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
-     (try_for_range, ":stack_no", 0, ":num_stacks"),
-       (party_stack_get_troop_id, ":troop_id", "p_main_party", ":stack_no"),
-       (neg|troop_is_hero, ":troop_id"),
-       (val_add, ":found", 1),
-       (try_begin), (eq, ":found", 1), (assign, "$g_lieutenant_candidate_1", ":troop_id"),
-       (else_try), (eq, ":found", 2), (assign, "$g_lieutenant_candidate_2", ":troop_id"),
-       (else_try), (eq, ":found", 3), (assign, "$g_lieutenant_candidate_3", ":troop_id"),
-       (else_try), (eq, ":found", 4), (assign, "$g_lieutenant_candidate_4", ":troop_id"),
-       (else_try), (eq, ":found", 5), (assign, "$g_lieutenant_candidate_5", ":troop_id"),
-       (try_end),
-     (try_end),
-   ],
+      # Candidates and volunteer count are pre-computed by the simple trigger that queued this menu.
+      # Do NOT call script_cf_lieutenant_system_init_recruitment here - it would re-roll on every resume.
+      (assign, reg1, "$g_lieutenant_total_volunteers"),
+      (str_store_string, s11, "@One of your troops has distinguished themselves in leadership and valor. A total of {reg1} troops have volunteered. You may promote one of the following to the rank of Lieutenant in your company."),
+    ],
    [
      ("lieutenant_promote_1", [(gt, "$g_lieutenant_candidate_1", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_1")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
+          (eq, ":found_slot", -1),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
-          (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
+          (assign, ":found_slot", ":cur_slot"),
         (try_end),
         (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_1"),
         (jump_to_menu, "mnu_camp"),
@@ -19894,8 +19887,9 @@ game_menus = [
      ("lieutenant_promote_2", [(gt, "$g_lieutenant_candidate_2", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_2")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
+          (eq, ":found_slot", -1),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
-          (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
+          (assign, ":found_slot", ":cur_slot"),
         (try_end),
         (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_2"),
         (jump_to_menu, "mnu_camp"),
@@ -19903,8 +19897,9 @@ game_menus = [
      ("lieutenant_promote_3", [(gt, "$g_lieutenant_candidate_3", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_3")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
+          (eq, ":found_slot", -1),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
-          (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
+          (assign, ":found_slot", ":cur_slot"),
         (try_end),
         (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_3"),
         (jump_to_menu, "mnu_camp"),
@@ -19912,8 +19907,9 @@ game_menus = [
      ("lieutenant_promote_4", [(gt, "$g_lieutenant_candidate_4", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_4")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
+          (eq, ":found_slot", -1),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
-          (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
+          (assign, ":found_slot", ":cur_slot"),
         (try_end),
         (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_4"),
         (jump_to_menu, "mnu_camp"),
@@ -19921,8 +19917,9 @@ game_menus = [
      ("lieutenant_promote_5", [(gt, "$g_lieutenant_candidate_5", -1), (str_store_troop_name, s1, "$g_lieutenant_candidate_5")], "Promote {s1} to Lieutenant", [
         (assign, ":found_slot", -1),
         (try_for_range, ":cur_slot", lieutenants_begin, lieutenants_end),
+          (eq, ":found_slot", -1),
           (troop_slot_eq, ":cur_slot", slot_troop_occupation, 0),
-          (assign, ":found_slot", ":cur_slot"), (assign, ":cur_slot", lieutenants_end),
+          (assign, ":found_slot", ":cur_slot"),
         (try_end),
         (call_script, "script_lieutenant_system_promote", ":found_slot", "$g_lieutenant_candidate_5"),
         (jump_to_menu, "mnu_camp"),
