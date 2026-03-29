@@ -14867,14 +14867,46 @@ scripts_part5 = [
     (gt, "$g_lieutenant_total_volunteers", 0),
   ]),
 
-  # Helper for starting the mission safely
+  # Helper for starting the mission safely using the camp scene
   ("lieutenant_system_start_sparring_mission", [
     (store_script_param, ":num_enemies", 1),
+    
     (assign, "$g_lieutenant_sparring_mode", 1),
+    (assign, "$g_training_ground_training_num_enemies", ":num_enemies"),
+    (assign, "$g_training_ground_training_num_gourds_to_destroy", 0),
     (assign, "$g_mt_mode", ctm_melee),
-    (assign, "$g_encountered_party", training_grounds_begin), # CRITICAL FIX: prevents scene ID crash
-    (call_script, "script_start_training_at_training_ground", -1, ":num_enemies"),
+    (assign, "$g_training_ground_training_scene", "scn_camp_scene"),
+
+    (modify_visitors_at_site, "$g_training_ground_training_scene"),
+    (reset_visitors),
+    (set_visitor, 1, "trp_player"),
+
+    (try_begin),
+      (ge, ":num_enemies", 1),
+      (troop_get_slot, ":opponent_troop", "trp_temp_array_a", 0),
+      (set_visitor, 11, ":opponent_troop"),
+    (try_end),
+    (try_begin),
+      (ge, ":num_enemies", 2),
+      (troop_get_slot, ":opponent_troop", "trp_temp_array_a", 1),
+      (set_visitor, 12, ":opponent_troop"),
+    (try_end),
+    (try_begin),
+      (ge, ":num_enemies", 3),
+      (troop_get_slot, ":opponent_troop", "trp_temp_array_a", 2),
+      (set_visitor, 13, ":opponent_troop"),
+    (try_end),
+    (try_begin),
+      (ge, ":num_enemies", 4),
+      (troop_get_slot, ":opponent_troop", "trp_temp_array_a", 3),
+      (set_visitor, 14, ":opponent_troop"),
+    (try_end),
+
+    (set_jump_mission, "mt_training_ground_training"),
+    (jump_to_scene, "$g_training_ground_training_scene"),
+    (change_screen_mission),
   ]),
+
 
 
   ("lieutenant_system_finish_promotion", [
