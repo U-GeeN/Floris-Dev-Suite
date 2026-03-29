@@ -14795,12 +14795,15 @@ scripts_part5 = [
   # Logic to calculate volunteers and determine if recruitment can proceed
   ("cf_lieutenant_system_init_recruitment", [
     (assign, ":total_volunteers", 0),
-    (assign, ":candidate_idx", 0),
-    (assign, "$g_lieutenant_candidate_1", -1),
-    (assign, "$g_lieutenant_candidate_2", -1),
-    (assign, "$g_lieutenant_candidate_3", -1),
-    (assign, "$g_lieutenant_candidate_4", -1),
-    (assign, "$g_lieutenant_candidate_5", -1),
+    
+    # Clear volunteer pool storage (trp_temp_array_c)
+    # Slot 0 = unique type count
+    # 1..50 = troop_ids
+    # 51..100 = counts
+    (troop_set_slot, "trp_temp_array_c", 0, 0),
+    (try_for_range, ":i", 1, 101),
+      (troop_set_slot, "trp_temp_array_c", ":i", 0),
+    (try_end),
 
     (store_skill_level, ":persuasion", "skl_persuasion", "trp_player"),
     (store_skill_level, ":leadership", "skl_leadership", "trp_player"),
@@ -14810,44 +14813,84 @@ scripts_part5 = [
       (party_stack_get_troop_id, ":troop_id", "p_main_party", ":stack_no"),
       (neg|troop_is_hero, ":troop_id"),
       
+      (store_character_level, ":level", ":troop_id"),
+      (ge, ":level", 14), # Require level 14+
+      
       (party_stack_get_size, ":stack_size", "p_main_party", ":stack_no"),
       (party_stack_get_num_wounded, ":num_wounded", "p_main_party", ":stack_no"),
       (store_sub, ":num_available", ":stack_size", ":num_wounded"),
       (gt, ":num_available", 0),
       
-      (store_character_level, ":level", ":troop_id"),
-      
       # Chance calculation: troop level % + skill bonuses
       (assign, ":chance", ":level"),
-      
       (store_mul, ":lead_bonus", ":leadership", 2), # +2% per leadership
       (val_add, ":chance", ":lead_bonus"),
       (val_add, ":chance", ":persuasion"), # +1% per persuasion
-      
       (val_clamp, ":chance", 0, 101), # Cap chance at 100%
       
-      # Iterate through available troops in stack
+      # Count volunteers in this stack
+      (assign, ":volunteers_in_stack", 0),
       (try_for_range, ":unused", 0, ":num_available"),
         (store_random_in_range, ":random", 0, 100),
         (lt, ":random", ":chance"),
-        (val_add, ":total_volunteers", 1),
-        
-        # Track up to 5 specific candidate troop IDs for the menu
-        (try_begin),
-          (lt, ":candidate_idx", 5),
-          (val_add, ":candidate_idx", 1),
-          (try_begin), (eq, ":candidate_idx", 1), (assign, "$g_lieutenant_candidate_1", ":troop_id"),
-          (else_try), (eq, ":candidate_idx", 2), (assign, "$g_lieutenant_candidate_2", ":troop_id"),
-          (else_try), (eq, ":candidate_idx", 3), (assign, "$g_lieutenant_candidate_3", ":troop_id"),
-          (else_try), (eq, ":candidate_idx", 4), (assign, "$g_lieutenant_candidate_4", ":troop_id"),
-          (else_try), (eq, ":candidate_idx", 5), (assign, "$g_lieutenant_candidate_5", ":troop_id"),
-          (try_end),
-        (try_end),
+        (val_add, ":volunteers_in_stack", 1),
+      (try_end),
+      
+      (gt, ":volunteers_in_stack", 0),
+      (val_add, ":total_volunteers", ":volunteers_in_stack"),
+      
+      # Combine into unique types
+      (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
+      (assign, ":found", 0),
+      (store_add, ":end_search", ":num_unique", 1),
+      (try_for_range, ":i", 1, ":end_search"),
+        (eq, ":found", 0),
+        (troop_slot_eq, "trp_temp_array_c", ":i", ":troop_id"),
+        (assign, ":found", 1),
+        (store_add, ":count_slot", ":i", 50),
+        (troop_get_slot, ":cur_count", "trp_temp_array_c", ":count_slot"),
+        (val_add, ":cur_count", ":volunteers_in_stack"),
+        (troop_set_slot, "trp_temp_array_c", ":count_slot", ":cur_count"),
+      (try_end),
+      (try_begin),
+        (eq, ":found", 0),
+        (lt, ":num_unique", 50), # Max 50 types
+        (val_add, ":num_unique", 1),
+        (troop_set_slot, "trp_temp_array_c", 0, ":num_unique"),
+        (troop_set_slot, "trp_temp_array_c", ":num_unique", ":troop_id"),
+        (store_add, ":count_slot", ":num_unique", 50),
+        (troop_set_slot, "trp_temp_array_c", ":count_slot", ":volunteers_in_stack"),
       (try_end),
     (try_end),
 
     (assign, "$g_lieutenant_total_volunteers", ":total_volunteers"),
     (gt, "$g_lieutenant_total_volunteers", 0),
+  ]),
+
+  # Helper for starting the mission safely
+  ("lieutenant_system_start_sparring_mission", [
+    (store_script_param, ":num_enemies", 1),
+    (assign, "$g_lieutenant_sparring_mode", 1),
+    (assign, "$g_mt_mode", ctm_melee),
+    (assign, "$g_encountered_party", training_grounds_begin), # CRITICAL FIX: prevents scene ID crash
+    (call_script, "script_start_training_at_training_ground", -1, ":num_enemies"),
+  ]),
+
+
+  ("lieutenant_system_finish_promotion", [
+    (store_script_param, ":source_troop", 1),
+    (assign, ":lieutenant_troop", -1),
+    (try_for_range, ":lt", lieutenants_begin, lieutenants_end),
+      (neg|main_party_has_troop, ":lt"),
+      (assign, ":lieutenant_troop", ":lt"),
+      (assign, ":lt", lieutenants_end), # break
+    (try_end),
+    (try_begin),
+      (gt, ":lieutenant_troop", 0),
+      (call_script, "script_lieutenant_system_promote", ":lieutenant_troop", ":source_troop"),
+    (else_try),
+      (display_message, "@You already have the maximum number of Lieutenants!"),
+    (try_end),
   ]),
 
 
@@ -14968,8 +15011,19 @@ scripts_part5 = [
        (try_end),
     (try_end),
 
-    # 4. Global Refinements
+    # 4. Global Refinements & Equipment Copy
     (troop_clear_inventory, ":lieutenant_troop"),
+    
+    (try_for_range, ":slot", 0, 96), # Max inventory/equipment slots
+      (troop_get_inventory_slot, ":item", ":source_troop", ":slot"),
+      (try_begin),
+        (ge, ":item", 0),
+        (troop_get_inventory_slot_modifier, ":imod", ":source_troop", ":slot"),
+        (troop_add_item, ":lieutenant_troop", ":item", ":imod"),
+      (try_end),
+    (try_end),
+    (troop_equip_items, ":lieutenant_troop"),
+    
     (party_remove_members, "p_main_party", ":source_troop", 1),
     (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, slto_lieutenant),
     (party_add_members, "p_main_party", ":lieutenant_troop", 1),

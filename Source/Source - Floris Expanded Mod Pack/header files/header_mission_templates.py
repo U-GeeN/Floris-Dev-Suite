@@ -119,16 +119,12 @@ af_override_weapon_2        = 0x00000004
 af_override_weapon_3        = 0x00000008
 af_override_head            = 0x00000010
 af_override_body            = 0x00000020
-#af_override_leg             = 0x00000040
 af_override_foot            = 0x00000040
 af_override_gloves          = 0x00000080
 af_override_horse           = 0x00000100
 af_override_fullhelm        = 0x00000200
-
-#af_override_hands           = 0x00000100
 af_require_civilian         = 0x10000000
 
-#af_override_all_but_horse   = 0x000000ff
 af_override_all_but_horse   = af_override_weapons | af_override_head | af_override_body |af_override_gloves
 af_override_all             = af_override_horse | af_override_all_but_horse
 af_override_everything      = af_override_all | af_override_foot
