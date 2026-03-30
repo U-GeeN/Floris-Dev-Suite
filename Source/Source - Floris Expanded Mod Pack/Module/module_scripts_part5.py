@@ -14926,50 +14926,14 @@ scripts_part5 = [
   ]),
 
 
-  # script_lieutenant_system_promote
-  # Input: arg1 = lieutenant_troop, arg2 = source_troop
   ("lieutenant_system_promote", [
     (store_script_param, ":lieutenant_troop", 1),
     (store_script_param, ":source_troop", 2),
     
-    # 0. Copy Level/XP
-    (troop_get_xp, ":xp", ":source_troop"),
-    (troop_get_xp, ":cur_xp", ":lieutenant_troop"),
-    (store_sub, ":diff_xp", ":xp", ":cur_xp"),
-    (try_begin),
-      (gt, ":diff_xp", 0),
-      (add_xp_to_troop, ":diff_xp", ":lieutenant_troop"),
-    (try_end),
-
-    # 1. Set Name
-    (store_sub, ":slot_offset", ":lieutenant_troop", lieutenants_begin),
-    (try_begin),
-      (eq, ":slot_offset", 0), (str_store_string, s5, "@Lieutenant X"),
-    (else_try),
-      (eq, ":slot_offset", 1), (str_store_string, s5, "@Lieutenant IX"),
-    (else_try),
-      (eq, ":slot_offset", 2), (str_store_string, s5, "@Lieutenant IIX"),
-    (else_try),
-      (eq, ":slot_offset", 3), (str_store_string, s5, "@Lieutenant VII"),
-    (else_try),
-      (eq, ":slot_offset", 4), (str_store_string, s5, "@Lieutenant VI"),
-    (else_try),
-      (eq, ":slot_offset", 5), (str_store_string, s5, "@Lieutenant V"),
-    (else_try),
-      (eq, ":slot_offset", 6), (str_store_string, s5, "@Lieutenant IV"),
-    (else_try),
-      (eq, ":slot_offset", 7), (str_store_string, s5, "@Lieutenant III"),
-    (else_try),
-      (eq, ":slot_offset", 8), (str_store_string, s5, "@Lieutenant II"),
-    (else_try),
-      (eq, ":slot_offset", 9), (str_store_string, s5, "@Lieutenant I"),
-    (try_end),
-    (store_random_in_range, ":name_no", "str_name_1", "str_surname_1"),
-    (str_store_string, s1, ":name_no"),
-    (str_store_string, s1, "@{s5} {s1}"),
-    (troop_set_name, ":lieutenant_troop", s1),
-
-    # 2. Copy Base Stats (1:1 Sync)
+    # VERSION 5: REFINED 1:1 SYNC
+    (party_remove_members, "p_main_party", ":lieutenant_troop", 1), # Clear any existing LT in the party first
+    
+    # 1. Mirror Base Stats (Phase 1: Attributes & Skills)
     (troop_get_type, ":type", ":source_troop"),
     (troop_set_type, ":lieutenant_troop", ":type"),
     
@@ -14984,69 +14948,36 @@ scripts_part5 = [
       (try_end),
     (try_end),
     
-    # Skills sync
+    # Skills sync (0 to 42 for Floris)
+    (assign, ":skills_copied", 0),
     (try_for_range, ":skill", 0, 42),
-      (store_skill_level, ":val", ":source_troop", ":skill"),
-      (store_skill_level, ":cur_val", ":lieutenant_troop", ":skill"),
+      (store_skill_level, ":val", ":skill", ":source_troop"),
+      (store_skill_level, ":cur_val", ":skill", ":lieutenant_troop"),
       (store_sub, ":diff", ":val", ":cur_val"),
       (try_begin),
          (gt, ":diff", 0),
          (troop_raise_skill, ":lieutenant_troop", ":skill", ":diff"),
+         (val_add, ":skills_copied", 1),
       (try_end),
     (try_end),
+    (assign, reg1, ":skills_copied"),
+    (display_message, "@DEBUG [V5]: Skills Mirrored: {reg1} blocks."),
     
-    # Proficiencies sync
+    # 2. Mirror Proficiencies (Phase 2: Linear Sync to prevent doubling)
     (try_for_range, ":prof", 0, 7),
       (store_proficiency_level, ":val", ":source_troop", ":prof"),
       (store_proficiency_level, ":cur_val", ":lieutenant_troop", ":prof"),
       (store_sub, ":diff", ":val", ":cur_val"),
       (try_begin),
          (gt, ":diff", 0),
-         (troop_raise_proficiency, ":lieutenant_troop", ":prof", ":diff"),
+         (troop_raise_proficiency_linear, ":lieutenant_troop", ":prof", ":diff"),
       (try_end),
     (try_end),
+    (display_message, "@DEBUG [V5]: Proficiencies Mirrored."),
 
-    # 3. Distribute Surplus Stats (Hero Growth)
-    # entrylevel is 14. Any level above 14 gets random point distribution favoring CHA/Fight stats.
-    (store_character_level, ":source_level", ":source_troop"),
-    (store_sub, ":surplus", ":source_level", 14),
-    (try_begin),
-       (gt, ":surplus", 0),
-       (try_for_range, ":unused", 0, ":surplus"),
-          # Weighted Attribute Point
-          (store_random_in_range, ":roll", 0, 101),
-          (try_begin),
-             (lt, ":roll", 35), (troop_raise_attribute, ":lieutenant_troop", ca_charisma, 1),
-          (else_try),
-             (lt, ":roll", 65), (troop_raise_attribute, ":lieutenant_troop", ca_strength, 1),
-          (else_try),
-             (lt, ":roll", 90), (troop_raise_attribute, ":lieutenant_troop", ca_agility, 1),
-          (else_try),
-             (troop_raise_attribute, ":lieutenant_troop", ca_intelligence, 1),
-          (try_end),
-          
-          # Weighted Skill Point
-          (store_random_in_range, ":roll_sk", 0, 101),
-          (try_begin),
-             (lt, ":roll_sk", 40), (troop_raise_skill, ":lieutenant_troop", "skl_leadership", 1),
-          (else_try),
-             (lt, ":roll_sk", 60), (troop_raise_skill, ":lieutenant_troop", "skl_power_strike", 1),
-          (else_try),
-             (lt, ":roll_sk", 75), (troop_raise_skill, ":lieutenant_troop", "skl_ironflesh", 1),
-          (else_try),
-             (lt, ":roll_sk", 85), (troop_raise_skill, ":lieutenant_troop", "skl_athletics", 1),
-          (else_try),
-             (lt, ":roll_sk", 95), (troop_raise_skill, ":lieutenant_troop", "skl_shield", 1),
-          (else_try),
-             (troop_raise_skill, ":lieutenant_troop", "skl_weapon_master", 1),
-          (try_end),
-       (try_end),
-    (try_end),
-
-    # 4. Global Refinements & Equipment Copy
+    # 3. Mirror Equipment
     (troop_clear_inventory, ":lieutenant_troop"),
-    
-    (try_for_range, ":slot", 0, 96), # Max inventory/equipment slots
+    (try_for_range, ":slot", 0, 96), 
       (troop_get_inventory_slot, ":item", ":source_troop", ":slot"),
       (try_begin),
         (ge, ":item", 0),
@@ -15055,7 +14986,75 @@ scripts_part5 = [
       (try_end),
     (try_end),
     (troop_equip_items, ":lieutenant_troop"),
+
+    # 4. Finalize XP / Level (Phase 3: Chunked Injection to avoid 32k overflow)
+    (try_begin),
+      (troop_is_hero, ":source_troop"),
+      (troop_get_xp, ":target_xp", ":source_troop"),
+    (else_try),
+      (store_character_level, ":source_level", ":source_troop"),
+      (get_level_boundary, ":target_xp", ":source_level"),
+    (try_end),
+    (val_max, ":target_xp", 1),
+
+    (troop_get_xp, ":cur_xp", ":lieutenant_troop"),
+    (store_sub, ":diff_xp", ":target_xp", ":cur_xp"),
     
+    (assign, reg1, ":target_xp"),
+    (assign, reg2, ":cur_xp"),
+    (display_message, "@DEBUG [V6]: Target XP {reg1}, Current XP {reg2}."),
+
+    (try_begin),
+      (gt, ":diff_xp", 0),
+      # Incremental injection (Warband engines can cap single-pulse XP at 32,767)
+      (assign, ":xp_per_step", 25000),
+      (try_for_range, ":unused", 0, 100), # Handle up to 2.5 million XP
+        (try_begin),
+           (gt, ":diff_xp", ":xp_per_step"),
+           (add_xp_to_troop, ":xp_per_step", ":lieutenant_troop"),
+           (val_sub, ":diff_xp", ":xp_per_step"),
+        (else_try),
+           (gt, ":diff_xp", 0),
+           (add_xp_to_troop, ":diff_xp", ":lieutenant_troop"),
+           (assign, ":diff_xp", 0), # Stop loop
+        (try_end),
+        (eq, ":diff_xp", 0),
+        (assign, ":unused", 100), # Break loop
+      (try_end),
+    (try_end),
+    
+    # Final Result Verification
+    (troop_get_xp, reg1, ":lieutenant_troop"),
+    (display_message, "@DEBUG [V6.1]: Final Synchronized XP: {reg1}."),
+
+    # 4. Set Identity and Occupation
+    (store_sub, ":slot_offset", ":lieutenant_troop", "trp_lieutenant1"),
+    (try_begin),
+      (eq, ":slot_offset", 0), (str_store_string, s5, "@Lieutenant I"),
+    (else_try),
+      (eq, ":slot_offset", 1), (str_store_string, s5, "@Lieutenant II"),
+    (else_try),
+      (eq, ":slot_offset", 2), (str_store_string, s5, "@Lieutenant III"),
+    (else_try),
+      (eq, ":slot_offset", 3), (str_store_string, s5, "@Lieutenant IV"),
+    (else_try),
+      (eq, ":slot_offset", 4), (str_store_string, s5, "@Lieutenant V"),
+    (else_try),
+      (eq, ":slot_offset", 5), (str_store_string, s5, "@Lieutenant VI"),
+    (else_try),
+      (eq, ":slot_offset", 6), (str_store_string, s5, "@Lieutenant VII"),
+    (else_try),
+      (eq, ":slot_offset", 7), (str_store_string, s5, "@Lieutenant IIX"),
+    (else_try),
+      (eq, ":slot_offset", 8), (str_store_string, s5, "@Lieutenant IX"),
+    (else_try),
+      (eq, ":slot_offset", 9), (str_store_string, s5, "@Lieutenant X"),
+    (try_end),
+    (store_random_in_range, ":name_no", "str_name_1", "str_surname_1"),
+    (str_store_string, s1, ":name_no"),
+    (str_store_string, s1, "@{s5} {s1}"),
+    (troop_set_name, ":lieutenant_troop", s1),
+
     (party_remove_members, "p_main_party", ":source_troop", 1),
     (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, slto_lieutenant),
     (party_add_members, "p_main_party", ":lieutenant_troop", 1),
