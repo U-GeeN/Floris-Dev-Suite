@@ -14298,9 +14298,15 @@ game_menus = [
    "none",
    [
      (try_begin),
-       (eq, "$g_lieutenant_sparring_mode", 1),
-       (assign, "$g_lieutenant_sparring_mode", 0),
-       (jump_to_menu, "mnu_lieutenant_sparring_result"),
+        (eq, "$g_lieutenant_sparring_mode", 1),
+        (assign, "$g_lieutenant_sparring_mode", 0),
+        (try_begin),
+          (ge, "$g_training_ground_training_success_ratio", 100),
+          (jump_to_menu, "mnu_lieutenant_candidate_selection"),
+        (else_try),
+          (display_message, "@You were defeated in sparring. The volunteers shake their heads, slightly disappointed."),
+          (jump_to_menu, "mnu_camp"),
+        (try_end),
      (try_end),
 
      (store_skill_level, ":trainer_skill", "skl_trainer", "trp_player"),
@@ -19864,43 +19870,89 @@ game_menus = [
        ),
 	   
       ("camp_inspect",[],"Inspect your camp.",
-       [
-			(call_script,"script_visit_camp"),
+        [
+			    (call_script,"script_visit_camp"),
         ]
-       ),
+      ),
 
       ("resume_travelling",[],"Resume travelling.",		#Seafaring Icon fix
-       [   
-			(try_begin),
-				(party_get_current_terrain, ":terrain", "p_main_party"),
-				(eq, ":terrain", 0),
-				(assign, "$g_player_icon_state", pis_ship),
-			(else_try),
-				(assign, "$g_player_icon_state", pis_normal),
-			(try_end),			
-		   #(party_set_slot,"p_main_party",slot_party_entrenched,0), #TEMPERED ADDED LINE FOR NO ENTRENCHMENT
-		   #(assign,"$current_camp_party",-1), #TEMPERED ADDED LINE FOR NO ENTRENCHMENT 
-		   (assign, "$g_camp_mode", 0),
+        [   
+          (try_begin),
+            (party_get_current_terrain, ":terrain", "p_main_party"),
+            (eq, ":terrain", 0),
+            (assign, "$g_player_icon_state", pis_ship),
+          (else_try),
+            (assign, "$g_player_icon_state", pis_normal),
+          (try_end),			
+          #(party_set_slot,"p_main_party",slot_party_entrenched,0), #TEMPERED ADDED LINE FOR NO ENTRENCHMENT
+          #(assign,"$current_camp_party",-1), #TEMPERED ADDED LINE FOR NO ENTRENCHMENT 
+          (assign, "$g_camp_mode", 0),
            (change_screen_map),
         ]
-       ),
-	   
+      ),
 		]
 	),
 
   ("lieutenant_sparring_selection", 0,
-    "Choose your opponent #{reg1}:^^(Selected partners: {reg2}/{reg3})",
+    "{s11}",
     "none",
     [
-      (assign, reg1, "$temp_2"),
-      (store_sub, reg2, "$temp_2", 1),
-      (assign, reg3, "$temp"),
+      (str_store_string, s11, "@Pick 4 volunteers for the sparring contest.^^Selected candidates:^"),
+      (try_for_range, ":i", 0, 4),
+        (troop_get_slot, ":t", "trp_temp_array_a", ":i"),
+        (assign, reg1, ":i"),
+        (val_add, reg1, 1),
+        (try_begin),
+          (gt, ":t", 0),
+          (str_store_troop_name, s1, ":t"),
+          (str_store_string, s11, "@{s11}  {s1}^"),
+        (else_try),
+          (str_store_string, s11, "@{s11}^"),
+        (try_end),
+      (try_end),
+      (str_store_string, s11, "@{s11}^Select candidates from the list below."),
     ],
     [
+      # FIXED ACTIONS AT TOP
+      ("start_train", 
+       [
+         (eq, "$temp_2", 5), # Exactly 4 selected
+       ], "--- START CONTEST ---",
+       [
+         (call_script, "script_lieutenant_system_start_sparring_mission", 4),
+       ]),
+
+      ("reset", [], "Reset Selection", 
+       [
+         (try_for_range, ":i", 0, 4),
+           (troop_get_slot, ":t", "trp_temp_array_a", ":i"),
+           (gt, ":t", 0),
+           (assign, ":found", 0),
+           (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
+           (store_add, ":end", ":num_unique", 1),
+           (try_for_range, ":j", 1, ":end"),
+             (eq, ":found", 0),
+             (troop_slot_eq, "trp_temp_array_c", ":j", ":t"),
+             (store_add, ":count_slot", ":j", 50),
+             (troop_get_slot, ":c", "trp_temp_array_c", ":count_slot"),
+             (val_add, ":c", 1),
+             (troop_set_slot, "trp_temp_array_c", ":count_slot", ":c"),
+             (assign, ":found", 1),
+           (try_end),
+           (troop_set_slot, "trp_temp_array_a", ":i", 0),
+         (try_end),
+         (assign, "$temp_2", 1),
+         (jump_to_menu, "mnu_lieutenant_sparring_selection"),
+       ]),
+
+      ("cancel", [], "Cancel.",
+       [(jump_to_menu, "mnu_camp")]),
+    ] + [
+      # Selection Options (Visible only if < 5)
       (
-        "s" + str(i),
+        "select_" + str(i),
         [
-          (le, "$temp_2", "$temp"),
+          (lt, "$temp_2", 5), # Still picking
           (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
           (ge, ":num_unique", i + 1),
           (troop_get_slot, ":troop_id", "trp_temp_array_c", i + 1),
@@ -19921,101 +19973,58 @@ game_menus = [
           (store_sub, ":slot_index", "$temp_2", 1),
           (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
           (val_add, "$temp_2", 1),
-
-          (str_store_troop_name, s1, ":troop_id"),
-          (display_message, "@DEBUG: Selected {s1} for sparring slot {reg1}."),
           (jump_to_menu, "mnu_lieutenant_sparring_selection"),
         ]
-      ) for i in range(12)
-    ] + [
-      ("lieutenant_sparring_random", [(le, "$temp_2", "$temp")], "Choose randomly.",
-       [
-         (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
-         (store_add, ":upper_bound", ":num_unique", 1),
-         (assign, ":found", 0),
-         (try_for_range, ":unused", 0, 100),
-           (eq, ":found", 0),
-           (store_random_in_range, ":idx", 1, ":upper_bound"),
-           (store_add, ":count_slot", ":idx", 50),
-           (troop_get_slot, ":count", "trp_temp_array_c", ":count_slot"),
-           (gt, ":count", 0),
-           (assign, ":found", 1),
-           
-           (troop_get_slot, ":troop_id", "trp_temp_array_c", ":idx"),
-           (val_sub, ":count", 1),
-           (troop_set_slot, "trp_temp_array_c", ":count_slot", ":count"),
-           
-           (store_sub, ":slot_index", "$temp_2", 1),
-           (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
-
-           (str_store_troop_name, s1, ":troop_id"),
-           (display_message, "@DEBUG: Selected {s1} (random) for sparring slot {reg1}."),
-         (try_end),
-
-         (val_add, "$temp_2", 1),
-         (jump_to_menu, "mnu_lieutenant_sparring_selection"),
-       ]),
-
-      ("start_train", 
-       [
-         (store_sub, ":count", "$temp_2", 1),
-         (gt, ":count", 0),
-         (assign, reg1, ":count"),
-       ], "Commence the sparring contest with {reg1} partners.",
-       [
-         (store_sub, ":count", "$temp_2", 1),
-         (call_script, "script_lieutenant_system_start_sparring_mission", ":count"),
-       ]),
-
-      ("cancel", [], "Cancel.",
-       [(jump_to_menu, "mnu_camp_action")]),
+      ) for i in range(24)
     ]
   ),
 
-
-  ("lieutenant_sparring_result", 0,
-   "{s7}",
-   "none",
-   [
-      (try_begin),
-        (ge, "$g_training_ground_training_success_ratio", 100),
-        (str_store_string, s7, "@You emerge victorious! The volunteers are impressed. You may now select one candidate to promote."),
-      (else_try),
-        (str_store_string, s7, "@You were defeated in sparring. The volunteers shake their heads, slightly disappointed. You must earn their respect another day."),
-      (try_end),
-   ],
-   [
-     ("continue_success", [(ge, "$g_training_ground_training_success_ratio", 100)], "Select a candidate to promote.",
-      [(jump_to_menu, "mnu_lieutenant_candidate_selection"),]),
-     ("continue_fail", [(lt, "$g_training_ground_training_success_ratio", 100)], "Continue.",
-      [(jump_to_menu, "mnu_camp"),]),
-   ]
-  ),
-
   ("lieutenant_candidate_selection", 0,
-   "Which of your sparring partners will you promote to Lieutenant?",
-   "none",
-   [],
-   [
-     (
-       "s" + str(i),
-       [
-         (ge, "$temp", i + 1),
-         (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
-         (gt, ":troop_id", 0),
-         (str_store_troop_name, s0 + i, ":troop_id"),
-       ],
-       "{s" + str(i) + "}",
-       [
-         (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
-         (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"),
-         (jump_to_menu, "mnu_camp"),
-       ]
-     ) for i in range(12)
-   ] + [
-     ("cancel", [], "None of them are worthy.",
-      [(jump_to_menu, "mnu_camp")]),
-   ]
+    "{s11}",
+    "none",
+    [
+      (str_store_string, s11, "@You emerge victorious! Everyone is impressed.^^Which of your candidates will you promote to Lieutenant?"),
+    ],
+    [
+      (
+        "s" + str(i),
+        [
+          (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
+          (gt, ":troop_id", 0),
+          (str_store_troop_name, s1, ":troop_id"),
+          
+          # Attributes
+          (store_attribute_level, reg10, ":troop_id", ca_strength),
+          (store_attribute_level, reg11, ":troop_id", ca_agility),
+          (store_attribute_level, reg12, ":troop_id", ca_intelligence),
+          (store_attribute_level, reg13, ":troop_id", ca_charisma),
+          
+          # Skills
+          (store_skill_level, reg14, "skl_ironflesh", ":troop_id"),
+          (store_skill_level, reg15, "skl_power_strike", ":troop_id"),
+          (store_skill_level, reg16, "skl_power_throw", ":troop_id"),
+          (store_skill_level, reg17, "skl_power_draw", ":troop_id"),
+          (store_skill_level, reg18, "skl_weapon_master", ":troop_id"),
+          (store_skill_level, reg19, "skl_shield", ":troop_id"),
+          (store_skill_level, reg20, "skl_athletics", ":troop_id"),
+          (store_skill_level, reg21, "skl_riding", ":troop_id"),
+          (store_skill_level, reg22, "skl_tracking", ":troop_id"),
+          (store_skill_level, reg23, "skl_tactics", ":troop_id"),
+          (store_skill_level, reg24, "skl_pathfinding", ":troop_id"),
+          (store_skill_level, reg25, "skl_spotting", ":troop_id"),
+          (store_skill_level, reg26, "skl_leadership", ":troop_id"),
+        ],
+        "{s1} (S:{reg10} A:{reg11} I:{reg12} C:{reg13}) IF:{reg14} PS:{reg15} PT:{reg16} PD:{reg17} WM:{reg18} SH:{reg19} ATH:{reg20} RID:{reg21} TRK:{reg22} TAC:{reg23} PF:{reg24} SP:{reg25} LS:{reg26}",
+        [
+          (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
+          (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"),
+          (jump_to_menu, "mnu_camp"),
+        ]
+      ) for i in range(4) # Matches the 4 selected candidates
+    ] + [
+      ("cancel", [], "None of them are worthy.",
+       [(jump_to_menu, "mnu_camp")]),
+    ]
   ),
 
   ("lieutenant_recruitment", 0,

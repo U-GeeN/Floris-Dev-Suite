@@ -14962,12 +14962,6 @@ scripts_part5 = [
       (val_add, ":current_attr_total", ":val"),
     (try_end),
 
-    (str_store_troop_name, s1, ":source_troop"),
-    (assign, reg1, ":source_level"),
-    (assign, reg2, ":target_attr_points"),
-    (assign, reg5, ":current_attr_total"),
-    (display_message, "@DEBUG: Promoting {s1} (Lvl {reg1}). Target Attr: {reg2} (Current: {reg5})"),
-
     (store_sub, ":attr_points_to_add", ":target_attr_points", ":current_attr_total"),
     (try_for_range, ":unused", 0, ":attr_points_to_add"),
       (assign, ":best_attr", -1),
@@ -15073,12 +15067,14 @@ scripts_part5 = [
         (store_sub, ":priority", ":s_val", ":l_val"),
         (val_mul, ":priority", 2),
         
-        # Fighting/Leader preference
+        # Priority weights: Focus on Leadership
         (try_begin),
-           (this_or_next|eq, ":skl", 1),  # leadership
-           (this_or_next|ge, ":skl", 33), # combat
-           (is_between, ":skl", 21, 28), # athletic/horse
-           (val_add, ":priority", 5),
+          (eq, ":skl", 1), # Leadership
+          (val_add, ":priority", 15),
+        (else_try),
+          (this_or_next|ge, ":skl", 33), # Combat
+          (is_between, ":skl", 21, 28), # Athletic/Horse
+          (val_add, ":priority", 5),
         (try_end),
         
         (gt, ":priority", ":max_pri"),
@@ -15094,15 +15090,6 @@ scripts_part5 = [
         (assign, ":unused", 100), # Break if no skill can be raised
       (try_end),
     (try_end),
-
-    # Bonus: Ensure we verify the result
-    (assign, ":final_skill_total", 0),
-    (try_for_range, ":skill", 0, 42),
-      (store_skill_level, ":val", ":skill", ":lieutenant_troop"),
-      (val_add, ":final_skill_total", ":val"),
-    (try_end),
-    (assign, reg6, ":final_skill_total"),
-    (display_message, "@DEBUG: Promotion complete. Final Skill Points: {reg6} / {reg2}"),
 
     # Phase 3: Mirror Proficiencies
     (try_for_range, ":prof", 0, 7),
