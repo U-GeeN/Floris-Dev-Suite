@@ -14867,6 +14867,114 @@ scripts_part5 = [
     (gt, "$g_lieutenant_total_volunteers", 0),
   ]),
 
+  # script_lieutenant_system_calculate_projected_stats
+  # Replicates promotion logic to show "final" stats in menus without modifying troops
+  ("lieutenant_system_calculate_projected_stats", [
+    (store_script_param_1, ":source_troop"),
+
+    # Determine template
+    (store_character_level, ":source_level", ":source_troop"),
+    (store_sub, ":slot_idx", ":source_level", 14),
+    (val_clamp, ":slot_idx", 0, 29),
+    (store_add, ":template", lieutenants_begin, ":slot_idx"),
+
+    # 1. Virtual Attributes
+    (store_attribute_level, ":v_str", ":template", 0),
+    (store_attribute_level, ":v_agi", ":template", 1),
+    (store_attribute_level, ":v_int", ":template", 2),
+    (store_attribute_level, ":v_cha", ":template", 3),
+
+    (store_add, ":target_attr_points", ":source_level", 32),
+    (store_add, ":current_attr_total", ":v_str", ":v_agi"),
+    (val_add, ":current_attr_total", ":v_int"),
+    (val_add, ":current_attr_total", ":v_cha"),
+    (store_sub, ":attr_points_to_add", ":target_attr_points", ":current_attr_total"),
+    (try_for_range, ":unused", 0, ":attr_points_to_add"),
+      (assign, ":best_attr", -1),
+      (assign, ":max_diff", -100),
+      (try_for_range, ":attr", 0, 4),
+        (store_attribute_level, ":s_val", ":source_troop", ":attr"),
+        (try_begin), (eq, ":attr", 0), (assign, ":l_val", ":v_str"),
+        (else_try), (eq, ":attr", 1), (assign, ":l_val", ":v_agi"),
+        (else_try), (eq, ":attr", 2), (assign, ":l_val", ":v_int"),
+        (else_try), (assign, ":l_val", ":v_cha"), (try_end),
+        (store_sub, ":diff", ":s_val", ":l_val"),
+        (try_begin), (eq, ":attr", 3), (val_add, ":diff", 2), (try_end), # Favor CHA as per promote logic
+        (gt, ":diff", ":max_diff"), (assign, ":max_diff", ":diff"), (assign, ":best_attr", ":attr"),
+      (try_end),
+      (try_begin),
+        (eq, ":best_attr", 0), (val_add, ":v_str", 1),
+        (else_try), (eq, ":best_attr", 1), (val_add, ":v_agi", 1),
+        (else_try), (eq, ":best_attr", 2), (val_add, ":v_int", 1),
+        (else_try), (val_add, ":v_cha", 1),
+      (try_end),
+    (try_end),
+
+    # 2. Virtual Skills (using trp_temp_array_b for staging)
+    (troop_set_slot, "trp_temp_array_b", 10, 0), (troop_set_slot, "trp_temp_array_b", 11, 1), (troop_set_slot, "trp_temp_array_b", 12, 2),
+    (troop_set_slot, "trp_temp_array_b", 13, 7), (troop_set_slot, "trp_temp_array_b", 14, 8), (troop_set_slot, "trp_temp_array_b", 15, 9),
+    (troop_set_slot, "trp_temp_array_b", 16, 10), (troop_set_slot, "trp_temp_array_b", 17, 11), (troop_set_slot, "trp_temp_array_b", 18, 12),
+    (troop_set_slot, "trp_temp_array_b", 19, 13), (troop_set_slot, "trp_temp_array_b", 20, 14), (troop_set_slot, "trp_temp_array_b", 21, 15),
+    (troop_set_slot, "trp_temp_array_b", 22, 16), (troop_set_slot, "trp_temp_array_b", 23, 17), (troop_set_slot, "trp_temp_array_b", 24, 21),
+    (troop_set_slot, "trp_temp_array_b", 25, 22), (troop_set_slot, "trp_temp_array_b", 26, 23), (troop_set_slot, "trp_temp_array_b", 27, 24),
+    (troop_set_slot, "trp_temp_array_b", 28, 25), (troop_set_slot, "trp_temp_array_b", 29, 26), (troop_set_slot, "trp_temp_array_b", 30, 27),
+    (troop_set_slot, "trp_temp_array_b", 31, 33), (troop_set_slot, "trp_temp_array_b", 32, 34), (troop_set_slot, "trp_temp_array_b", 33, 35),
+    (troop_set_slot, "trp_temp_array_b", 34, 36),
+
+    (assign, ":current_skill_total", 0),
+    (try_for_range, ":i", 10, 35),
+      (troop_get_slot, ":skl", "trp_temp_array_b", ":i"),
+      (store_skill_level, ":val", ":skl", ":template"),
+      (store_add, ":val_slot", ":i", 30),
+      (troop_set_slot, "trp_temp_array_b", ":val_slot", ":val"), # virtual levels in slots 40-64
+      (val_add, ":current_skill_total", ":val"),
+    (try_end),
+
+    (store_add, ":target_skill_points", ":source_level", ":v_int"),
+    (val_add, ":target_skill_points", 5),
+    (store_sub, ":points_remaining", ":target_skill_points", ":current_skill_total"),
+    
+    (try_for_range, ":unused", 0, 100),
+      (gt, ":points_remaining", 0),
+      (assign, ":best_skill_idx", -1), (assign, ":max_pri", -100),
+      (try_for_range, ":i", 10, 35),
+        (troop_get_slot, ":skl", "trp_temp_array_b", ":i"),
+        (store_add, ":val_slot", ":i", 30),
+        (troop_get_slot, ":l_val", "trp_temp_array_b", ":val_slot"),
+        (lt, ":l_val", 10),
+        # Cap check using virtual attributes
+        (assign, ":base_attr_val", -1),
+        (try_begin), (this_or_next|eq, ":skl", 33), (this_or_next|eq, ":skl", 34), (this_or_next|eq, ":skl", 35), (eq, ":skl", 36), (assign, ":base_attr_val", ":v_str"),
+        (else_try), (this_or_next|ge, ":skl", 21), (assign, ":base_attr_val", ":v_agi"),
+        (else_try), (is_between, ":skl", 7, 18), (assign, ":base_attr_val", ":v_int"),
+        (else_try), (assign, ":base_attr_val", ":v_cha"), (try_end),
+        (store_div, ":cap", ":base_attr_val", 3),
+        (lt, ":l_val", ":cap"),
+        # Priority
+        (store_skill_level, ":s_val", ":skl", ":source_troop"),
+        (store_sub, ":priority", ":s_val", ":l_val"), (val_mul, ":priority", 2),
+        (try_begin), (eq, ":skl", 1), (val_add, ":priority", 15), (else_try), (this_or_next|ge, ":skl", 33), (is_between, ":skl", 21, 28), (val_add, ":priority", 5), (try_end),
+        (gt, ":priority", ":max_pri"), (assign, ":max_pri", ":priority"), (assign, ":best_skill_idx", ":i"),
+      (try_end),
+      (try_begin), (ge, ":best_skill_idx", 0),
+        (store_add, ":val_slot", ":best_skill_idx", 30),
+        (troop_get_slot, ":val", "trp_temp_array_b", ":val_slot"), 
+        (val_add, ":val", 1), 
+        (troop_set_slot, "trp_temp_array_b", ":val_slot", ":val"), 
+        (val_sub, ":points_remaining", 1),
+      (else_try), (assign, ":unused", 100), (try_end),
+    (try_end),
+
+    # Map to registers
+    (assign, reg10, ":v_str"), (assign, reg11, ":v_agi"), (assign, reg12, ":v_int"), (assign, reg13, ":v_cha"),
+    (try_for_range, ":i", 10, 35),
+      (troop_get_slot, ":skl", "trp_temp_array_b", ":i"), 
+      (store_add, ":val_slot", ":i", 30),
+      (troop_get_slot, ":val", "trp_temp_array_b", ":val_slot"),
+      (try_begin), (eq, ":skl", 36), (assign, reg14, ":val"), (else_try), (eq, ":skl", 35), (assign, reg15, ":val"), (else_try), (eq, ":skl", 34), (assign, reg16, ":val"), (else_try), (eq, ":skl", 33), (assign, reg17, ":val"), (else_try), (eq, ":skl", 27), (assign, reg18, ":val"), (else_try), (eq, ":skl", 26), (assign, reg19, ":val"), (else_try), (eq, ":skl", 25), (assign, reg20, ":val"), (else_try), (eq, ":skl", 24), (assign, reg21, ":val"), (else_try), (eq, ":skl", 16), (assign, reg22, ":val"), (else_try), (eq, ":skl", 15), (assign, reg23, ":val"), (else_try), (eq, ":skl", 14), (assign, reg24, ":val"), (else_try), (eq, ":skl", 13), (assign, reg25, ":val"), (else_try), (eq, ":skl", 1), (assign, reg26, ":val"), (try_end),
+    (try_end),
+  ]),
+
   # Helper for starting the mission safely using the camp scene
   ("lieutenant_system_start_sparring_mission", [
     (store_script_param, ":num_enemies", 1),

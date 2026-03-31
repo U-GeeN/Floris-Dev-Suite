@@ -19992,27 +19992,7 @@ game_menus = [
           (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
           (gt, ":troop_id", 0),
           (str_store_troop_name, s1, ":troop_id"),
-          
-          # Attributes
-          (store_attribute_level, reg10, ":troop_id", ca_strength),
-          (store_attribute_level, reg11, ":troop_id", ca_agility),
-          (store_attribute_level, reg12, ":troop_id", ca_intelligence),
-          (store_attribute_level, reg13, ":troop_id", ca_charisma),
-          
-          # Skills
-          (store_skill_level, reg14, "skl_ironflesh", ":troop_id"),
-          (store_skill_level, reg15, "skl_power_strike", ":troop_id"),
-          (store_skill_level, reg16, "skl_power_throw", ":troop_id"),
-          (store_skill_level, reg17, "skl_power_draw", ":troop_id"),
-          (store_skill_level, reg18, "skl_weapon_master", ":troop_id"),
-          (store_skill_level, reg19, "skl_shield", ":troop_id"),
-          (store_skill_level, reg20, "skl_athletics", ":troop_id"),
-          (store_skill_level, reg21, "skl_riding", ":troop_id"),
-          (store_skill_level, reg22, "skl_tracking", ":troop_id"),
-          (store_skill_level, reg23, "skl_tactics", ":troop_id"),
-          (store_skill_level, reg24, "skl_pathfinding", ":troop_id"),
-          (store_skill_level, reg25, "skl_spotting", ":troop_id"),
-          (store_skill_level, reg26, "skl_leadership", ":troop_id"),
+          (call_script, "script_lieutenant_system_calculate_projected_stats", ":troop_id"),
         ],
         "{s1} (S:{reg10} A:{reg11} I:{reg12} C:{reg13}) IF:{reg14} PS:{reg15} PT:{reg16} PD:{reg17} WM:{reg18} SH:{reg19} ATH:{reg20} RID:{reg21} TRK:{reg22} TAC:{reg23} PF:{reg24} SP:{reg25} LS:{reg26}",
         [
