@@ -19889,155 +19889,87 @@ game_menus = [
 	),
 
   ("lieutenant_sparring_selection", 0,
-   "Choose your opponent #{reg1}:",
-   "none",
-   [(assign, reg1, "$temp_2")],
-   [
-     ("s0", 
-      [
-        (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
-        (ge, ":num_unique", 1),
-        (troop_get_slot, ":troop_id", "trp_temp_array_c", 1),
-        (troop_get_slot, reg1, "trp_temp_array_c", 51),
-        (gt, reg1, 0),
-        (str_store_troop_name, s0, ":troop_id"),
-      ], 
-      "{s0} ({reg1})",
-      [
-        (troop_get_slot, ":troop_id", "trp_temp_array_c", 1),
-        (troop_get_slot, ":count", "trp_temp_array_c", 51),
-        (val_sub, ":count", 1),
-        (troop_set_slot, "trp_temp_array_c", 51, ":count"),
-        
-        (store_sub, ":slot_index", "$temp_2", 1),
-        (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
-        
-        (try_begin),
-          (eq, "$temp", "$temp_2"),
-          (call_script, "script_lieutenant_system_start_sparring_mission", "$temp"),
-        (else_try),
-          (val_add, "$temp_2", 1),
-          (jump_to_menu, "mnu_lieutenant_sparring_selection"),
-        (try_end),
-      ]),
-
-     ("s1", 
-      [
-        (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
-        (ge, ":num_unique", 2),
-        (troop_get_slot, ":troop_id", "trp_temp_array_c", 2),
-        (troop_get_slot, reg1, "trp_temp_array_c", 52),
-        (gt, reg1, 0),
-        (str_store_troop_name, s0, ":troop_id"),
-      ], 
-      "{s0} ({reg1})",
-      [
-        (troop_get_slot, ":troop_id", "trp_temp_array_c", 2),
-        (troop_get_slot, ":count", "trp_temp_array_c", 52),
-        (val_sub, ":count", 1),
-        (troop_set_slot, "trp_temp_array_c", 52, ":count"),
-        
-        (store_sub, ":slot_index", "$temp_2", 1),
-        (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
-        
-        (try_begin),
-          (eq, "$temp", "$temp_2"),
-          (call_script, "script_lieutenant_system_start_sparring_mission", "$temp"),
-        (else_try),
-          (val_add, "$temp_2", 1),
-          (jump_to_menu, "mnu_lieutenant_sparring_selection"),
-        (try_end),
-      ]),
-
-     ("s2", 
-      [
-        (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
-        (ge, ":num_unique", 3),
-        (troop_get_slot, ":troop_id", "trp_temp_array_c", 3),
-        (troop_get_slot, reg1, "trp_temp_array_c", 53),
-        (gt, reg1, 0),
-        (str_store_troop_name, s0, ":troop_id"),
-      ], 
-      "{s0} ({reg1})",
-      [
-        (troop_get_slot, ":troop_id", "trp_temp_array_c", 3),
-        (troop_get_slot, ":count", "trp_temp_array_c", 53),
-        (val_sub, ":count", 1),
-        (troop_set_slot, "trp_temp_array_c", 53, ":count"),
-        
-        (store_sub, ":slot_index", "$temp_2", 1),
-        (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
-        
-        (try_begin),
-          (eq, "$temp", "$temp_2"),
-          (call_script, "script_lieutenant_system_start_sparring_mission", "$temp"),
-        (else_try),
-          (val_add, "$temp_2", 1),
-          (jump_to_menu, "mnu_lieutenant_sparring_selection"),
-        (try_end),
-      ]),
-
-     ("s3", 
-      [
-        (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
-        (ge, ":num_unique", 4),
-        (troop_get_slot, ":troop_id", "trp_temp_array_c", 4),
-        (troop_get_slot, reg1, "trp_temp_array_c", 54),
-        (gt, reg1, 0),
-        (str_store_troop_name, s0, ":troop_id"),
-      ], 
-      "{s0} ({reg1})",
-      [
-        (troop_get_slot, ":troop_id", "trp_temp_array_c", 4),
-        (troop_get_slot, ":count", "trp_temp_array_c", 54),
-        (val_sub, ":count", 1),
-        (troop_set_slot, "trp_temp_array_c", 54, ":count"),
-        
-        (store_sub, ":slot_index", "$temp_2", 1),
-        (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
-        
-        (try_begin),
-          (eq, "$temp", "$temp_2"),
-          (call_script, "script_lieutenant_system_start_sparring_mission", "$temp"),
-        (else_try),
-          (val_add, "$temp_2", 1),
-          (jump_to_menu, "mnu_lieutenant_sparring_selection"),
-        (try_end),
-      ]),
-
-     ("lieutenant_sparring_random", [], "Choose randomly.",
-      [
-        (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
-        (store_add, ":upper_bound", ":num_unique", 1),
-        (assign, ":found", 0),
-        (try_for_range, ":unused", 0, 100),
-          (eq, ":found", 0),
-          (store_random_in_range, ":idx", 1, ":upper_bound"),
-          (store_add, ":count_slot", ":idx", 50),
+    "Choose your opponent #{reg1}:^^(Selected partners: {reg2}/{reg3})",
+    "none",
+    [
+      (assign, reg1, "$temp_2"),
+      (store_sub, reg2, "$temp_2", 1),
+      (assign, reg3, "$temp"),
+    ],
+    [
+      (
+        "s" + str(i),
+        [
+          (le, "$temp_2", "$temp"),
+          (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
+          (ge, ":num_unique", i + 1),
+          (troop_get_slot, ":troop_id", "trp_temp_array_c", i + 1),
+          (store_add, ":count_slot", i + 1, 50),
+          (troop_get_slot, reg10, "trp_temp_array_c", ":count_slot"),
+          (gt, reg10, 0),
+          (str_store_troop_name, s0 + i, ":troop_id"),
+          (assign, reg1, reg10),
+        ],
+        "{s" + str(i) + "} ({reg1})",
+        [
+          (troop_get_slot, ":troop_id", "trp_temp_array_c", i + 1),
+          (store_add, ":count_slot", i + 1, 50),
           (troop_get_slot, ":count", "trp_temp_array_c", ":count_slot"),
-          (gt, ":count", 0),
-          (assign, ":found", 1),
-          
-          (troop_get_slot, ":troop_id", "trp_temp_array_c", ":idx"),
           (val_sub, ":count", 1),
           (troop_set_slot, "trp_temp_array_c", ":count_slot", ":count"),
           
           (store_sub, ":slot_index", "$temp_2", 1),
           (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
-        (try_end),
-
-        (try_begin),
-          (eq, "$temp", "$temp_2"),
-          (call_script, "script_lieutenant_system_start_sparring_mission", "$temp"),
-        (else_try),
           (val_add, "$temp_2", 1),
-          (jump_to_menu, "mnu_lieutenant_sparring_selection"),
-        (try_end),
-      ]),
 
-     ("cancel", [], "Cancel.",
-      [(jump_to_menu, "mnu_camp_action")]),
-   ]
+          (str_store_troop_name, s1, ":troop_id"),
+          (display_message, "@DEBUG: Selected {s1} for sparring slot {reg1}."),
+          (jump_to_menu, "mnu_lieutenant_sparring_selection"),
+        ]
+      ) for i in range(12)
+    ] + [
+      ("lieutenant_sparring_random", [(le, "$temp_2", "$temp")], "Choose randomly.",
+       [
+         (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
+         (store_add, ":upper_bound", ":num_unique", 1),
+         (assign, ":found", 0),
+         (try_for_range, ":unused", 0, 100),
+           (eq, ":found", 0),
+           (store_random_in_range, ":idx", 1, ":upper_bound"),
+           (store_add, ":count_slot", ":idx", 50),
+           (troop_get_slot, ":count", "trp_temp_array_c", ":count_slot"),
+           (gt, ":count", 0),
+           (assign, ":found", 1),
+           
+           (troop_get_slot, ":troop_id", "trp_temp_array_c", ":idx"),
+           (val_sub, ":count", 1),
+           (troop_set_slot, "trp_temp_array_c", ":count_slot", ":count"),
+           
+           (store_sub, ":slot_index", "$temp_2", 1),
+           (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
+
+           (str_store_troop_name, s1, ":troop_id"),
+           (display_message, "@DEBUG: Selected {s1} (random) for sparring slot {reg1}."),
+         (try_end),
+
+         (val_add, "$temp_2", 1),
+         (jump_to_menu, "mnu_lieutenant_sparring_selection"),
+       ]),
+
+      ("start_train", 
+       [
+         (store_sub, ":count", "$temp_2", 1),
+         (gt, ":count", 0),
+         (assign, reg1, ":count"),
+       ], "Commence the sparring contest with {reg1} partners.",
+       [
+         (store_sub, ":count", "$temp_2", 1),
+         (call_script, "script_lieutenant_system_start_sparring_mission", ":count"),
+       ]),
+
+      ("cancel", [], "Cancel.",
+       [(jump_to_menu, "mnu_camp_action")]),
+    ]
   ),
 
 
@@ -20065,14 +19997,22 @@ game_menus = [
    "none",
    [],
    [
-     ("s0", [(troop_get_slot, ":troop_id", "trp_temp_array_a", 0), (gt, ":troop_id", 0), (str_store_troop_name, s0, ":troop_id")], "{s0}",
-      [(troop_get_slot, ":troop_id", "trp_temp_array_a", 0), (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"), (jump_to_menu, "mnu_camp")]),
-     ("s1", [(ge, "$temp", 2), (troop_get_slot, ":troop_id", "trp_temp_array_a", 1), (gt, ":troop_id", 0), (str_store_troop_name, s1, ":troop_id")], "{s1}",
-      [(troop_get_slot, ":troop_id", "trp_temp_array_a", 1), (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"), (jump_to_menu, "mnu_camp")]),
-     ("s2", [(ge, "$temp", 3), (troop_get_slot, ":troop_id", "trp_temp_array_a", 2), (gt, ":troop_id", 0), (str_store_troop_name, s2, ":troop_id")], "{s2}",
-      [(troop_get_slot, ":troop_id", "trp_temp_array_a", 2), (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"), (jump_to_menu, "mnu_camp")]),
-     ("s3", [(ge, "$temp", 4), (troop_get_slot, ":troop_id", "trp_temp_array_a", 3), (gt, ":troop_id", 0), (str_store_troop_name, s3, ":troop_id")], "{s3}",
-      [(troop_get_slot, ":troop_id", "trp_temp_array_a", 3), (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"), (jump_to_menu, "mnu_camp")]),
+     (
+       "s" + str(i),
+       [
+         (ge, "$temp", i + 1),
+         (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
+         (gt, ":troop_id", 0),
+         (str_store_troop_name, s0 + i, ":troop_id"),
+       ],
+       "{s" + str(i) + "}",
+       [
+         (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
+         (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"),
+         (jump_to_menu, "mnu_camp"),
+       ]
+     ) for i in range(12)
+   ] + [
      ("cancel", [], "None of them are worthy.",
       [(jump_to_menu, "mnu_camp")]),
    ]

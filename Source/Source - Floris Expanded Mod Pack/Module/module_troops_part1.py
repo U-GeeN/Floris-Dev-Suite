@@ -1587,9 +1587,26 @@ troops_part1 = [
 #  ["rhodok_r_extra5","I1 Docile Rhodok Cittadino","I1 Docile Rhodok Cittadini",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_5,																														[									itm_ar_rho_tun_vest												,itm_bo_rho_t1_bear												,itm_he_rho_t1_common_a																												,itm_we_rho_sword_rondeldagger			,itm_we_rho_axe_pick															],def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(50)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),knows_common|knows_ironflesh_1|knows_power_strike_1|knows_athletics_2,rhodok_man_face_younger_1,rhodok_man_face_young_4],
 ##### Here are the Rhodok Troops from the Reworked Tree using the Expanded items #####
 #Tier 1
-  ["rhodok_r_cittadino","I1 Rhodok Cittadino","I1 Rhodok Cittadini",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_5,																																[									itm_ar_rho_tun_vest												,itm_bo_rho_t1_bear												,itm_he_rho_t1_common_a																												,itm_we_rho_sword_rondeldagger			,itm_we_rho_axe_pick															,itm_ar_rho_shi_capegreen,itm_ar_rho_shi_capered,itm_ar_rho_shi_capeyellow,itm_ar_rho_tun_vest_a,itm_ar_rho_tun_vest_b,itm_ar_rho_tun_vest_c,itm_bo_rho_t2_highlander,itm_we_rho_blunt_club,itm_we_rho_throw_stone],def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(50)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),knows_common|knows_ironflesh_1|knows_power_strike_1|knows_athletics_2,rhodok_man_face_younger_1,rhodok_man_face_young_4],
+  ["rhodok_r_cittadino","I1 Rhodok Cittadino","I1 Rhodok Cittadini",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_5,
+    [
+      itm_ar_rho_tun_vest
+      ,itm_bo_rho_t1_bear
+      ,itm_he_rho_t1_common_a
+      ,itm_we_rho_sword_rondeldagger
+      ,itm_we_rho_axe_pick
+			,itm_ar_rho_shi_capegreen,
+      itm_ar_rho_shi_capered,
+      itm_ar_rho_shi_capeyellow,
+      itm_ar_rho_tun_vest_a,
+      itm_ar_rho_tun_vest_b,
+      itm_ar_rho_tun_vest_c,
+      itm_bo_rho_t2_highlander,
+      itm_we_rho_blunt_club,
+      itm_we_rho_throw_stone],
+      def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(50)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),knows_common|knows_ironflesh_1|knows_power_strike_1|knows_athletics_2,rhodok_man_face_younger_1,rhodok_man_face_young_4],
 #Tier 2
-  ["rhodok_r_novizio","I2 Rhodok Novizio","I2 Rhodok Novizi",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_5,																								[																	itm_ar_rho_t2_ragged_b			,itm_bo_rho_t2_highlander																		,itm_he_rho_t2_beret_a				,itm_ga_rho_a2_leather			,itm_sh_rho_buc_leather			,itm_we_rho_sword_estoc					,itm_we_rho_sword_short															,itm_ar_rho_t2_ragged_a,itm_sh_rho_buc_wood,itm_we_rho_sword_killerdagger],def_attrib|level(10),wp_one_handed(102)|wp_two_handed(40)|wp_polearm(98)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_3|knows_athletics_3,rhodok_man_face_younger_1,rhodok_man_face_middle_2],
+  ["rhodok_r_novizio","I2 Rhodok Novizio","I2 Rhodok Novizi",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_5,
+												[																	itm_ar_rho_t2_ragged_b			,itm_bo_rho_t2_highlander																		,itm_he_rho_t2_beret_a				,itm_ga_rho_a2_leather			,itm_sh_rho_buc_leather			,itm_we_rho_sword_estoc					,itm_we_rho_sword_short															,itm_ar_rho_t2_ragged_a,itm_sh_rho_buc_wood,itm_we_rho_sword_killerdagger],def_attrib|level(10),wp_one_handed(102)|wp_two_handed(40)|wp_polearm(98)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_3|knows_athletics_3,rhodok_man_face_younger_1,rhodok_man_face_middle_2],
   ["rhodok_r_recluta","I2 Rhodok Recluta","I2 Rhodok Reclute",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_5,																																		[																	itm_ar_rho_t2_ragged_d			,itm_bo_rho_t2_highlander																		,itm_he_rho_t2_beret_b																				,itm_we_rho_spear_fork_battle			,itm_we_rho_axe_pick															,itm_ar_rho_t2_ragged_a,itm_we_rho_spear_mountian_short,itm_we_rho_spear_fork_military,itm_we_rho_axe_pickrusty],def_attrib|level(10),wp_one_handed(90)|wp_two_handed(40)|wp_polearm(80)|wp_archery(40)|wp_crossbow(100)|wp_throwing(40),knows_common|knows_ironflesh_1|knows_power_strike_3|knows_athletics_3,rhodok_man_face_younger_3,rhodok_man_face_middle_4],
 #Tier 3
   ["rhodok_r_lanciere_a_cavallo","C3 Rhodok Lanciere a Cavallo","C3 Rhodok Lancieri a Cavalli",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_5,								[itm_ho_rho_cata_longbrown											,itm_ar_rho_t3_aketon_b			,itm_bo_rho_t3_highlander																		,itm_he_rho_t3_bascinet_a			,itm_ga_rho_a4_brigandine		,itm_sh_rho_buc_steel_a			,itm_we_rho_spear_lance					,itm_we_rho_sword_squire														,itm_ho_rho_cata_longgrey,itm_ho_rho_cata_longyellow,itm_sh_rho_buc_steel_b,itm_we_rho_spear_lancesmall],def_attrib|level(16),wp_one_handed(144)|wp_two_handed(40)|wp_polearm(146)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),knows_common|knows_ironflesh_4|knows_power_strike_4|knows_shield_1|knows_athletics_3|knows_riding_2,rhodok_man_face_young_1,rhodok_man_face_old_4],

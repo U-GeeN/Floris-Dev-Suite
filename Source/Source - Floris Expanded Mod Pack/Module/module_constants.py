@@ -1122,8 +1122,8 @@ dplmc_slto_dead            = 15 #not normally set
 ##diplomacy end+
 
 slto_lieutenant        = 20
-lieutenants_begin      = "trp_lieutenant1"
-lieutenants_end        = "trp_lieutenant10_end"
+lieutenants_begin      = "trp_lieutenant_l14"
+lieutenants_end        = "trp_lieutenant_l42_end"
 
 ########################################################
 ##  QUEST SLOTS            #############################
@@ -1424,6 +1424,9 @@ surnames_begin = "str_surname_1"
 surnames_end = "str_surnames_end"
 names_begin = "str_name_1"
 names_end = surnames_begin
+
+female_names_begin = "str_female_name_1"
+female_names_end   = "str_female_names_end"
 countersigns_begin = "str_countersign_1"
 countersigns_end = names_begin
 secret_signs_begin = "str_secret_sign_1"
