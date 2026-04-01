@@ -756,6 +756,10 @@ scenes = [
 ("sea_4"							,sf_generate									,"none"								,"none"								,(0,0)			,(240,240)		,-0.5	,"0x0000000030000000c00d2348000000008000000000000000"	,[]											,[]																				),
 ("sea_2"							,sf_generate									,"none"								,"none"								,(0,0)			,(240,240)		,-0.5	,"0x0000000030000000c00d2348000000008000000000000000"	,[]											,[]																				),
 #Wulf end
+# Lieutenant Sparring Ground - reuses training_ground terrain code.
+# The compiled training_ground .sco has entry points 0 (player) and 11-13 (opponents) already placed.
+# No scene editor work required.
+("lieutenant_sparring",	sf_generate,	"none",	"none",	(0,0),	(120,120),	-100,	"0x30000500400360d80000189f00002a8380006d91",	[],	["tutorial_chest_1","tutorial_chest_2"],	"outer_terrain_plain"),
 ]
 
 # modmerger_start version=201 type=2

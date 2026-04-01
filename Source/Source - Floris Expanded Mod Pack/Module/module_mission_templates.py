@@ -15893,6 +15893,71 @@ mission_templates = [
               (finish_mission,0)]),
 #Wulf end
       ]),
+
+## LIEUTENANT SPARRING MISSION TEMPLATE
+## Player at entry 0, opponents at entries 11-13 (see script_lieutenant_system_start_sparring_mission)
+## af_override_all forces training weapons on every visitor regardless of their real gear.
+## Win condition: all enemies downed -> routes to training_ground_training_result which reads
+##   $g_lieutenant_sparring_mode to redirect to mnu_lieutenant_candidate_selection.
+  (
+    "lieutenant_sparring", mtf_arena_fight, -1,
+    "You enter a sparring match with your men.",
+    [
+      ## Player entry (16 is the fenced melee ring player start)
+      (16,  mtef_visitor_source|mtef_team_0, af_override_all, aif_start_alarmed, 1, [itm_practice_sword_heavy, itm_practice_shield]),
+      ## Up to 3 opponent slots (entries 17, 18, 19 assigned by script)
+      (17, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_sword_heavy, itm_practice_shield]),
+      (18, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_sword_heavy, itm_practice_shield]),
+      (19, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_sword_heavy, itm_practice_shield]),
+    ],
+    [
+      (ti_before_mission_start, 0, 0, [], [(call_script, "script_change_banners_and_chest")]),
+      (ti_inventory_key_pressed, 0, 0, [(display_message, "str_cant_use_inventory_arena")], []),
+
+      # Allow player to abort with TAB
+      (ti_tab_pressed, 0, 0, [],
+        [(question_box, "@End the sparring match?")]),
+      (ti_question_answered, 0, 0, [],
+        [
+          (store_trigger_param_1, ":answer"),
+          (eq, ":answer", 0),
+          # Treat as a defeat (ratio = 0)
+          (assign, "$g_training_ground_training_success_ratio", 0),
+          (jump_to_menu, "mnu_training_ground_training_result"),
+          (finish_mission),
+        ]),
+
+      # Ambient sound
+      (0, 0, ti_once, [],
+        [
+          (play_sound, "snd_arena_ambiance", sf_looping),
+          (call_script, "script_music_set_situation_with_culture", mtf_sit_arena),
+        ]),
+
+      # Player falls -> defeat
+      (0, 2, ti_once,
+        [(main_hero_fallen)],
+        [
+          (assign, "$g_training_ground_training_success_ratio", 0),
+          (jump_to_menu, "mnu_training_ground_training_result"),
+          (finish_mission),
+        ]),
+
+      # All opponents down -> victory (wait 3 seconds first)
+      (3, 4, ti_once,
+        [
+          (neg|main_hero_fallen),
+          (num_active_teams_le, 1),
+        ],
+        [
+          (call_script, "script_play_victorious_sound"),
+          (assign, "$g_training_ground_training_success_ratio", 100),
+          (jump_to_menu, "mnu_training_ground_training_result"),
+          (finish_mission),
+        ]),
+    ],
+  ),
+## END LIEUTENANT SPARRING MISSION TEMPLATE
 ]
 
 # modmerger_start version=201 type=4
