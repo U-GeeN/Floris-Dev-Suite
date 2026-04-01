@@ -2609,6 +2609,12 @@ dialogs_part1 = [
   [anyone,"member_separate_yes", [
       ], "Well. I'll be off, then. Look me up if you need me.", "close_window",
    [
+     (try_begin),
+       (is_between, "$g_talk_troop", "trp_lieutenant_l14", "trp_lieutenant_l42_end"),
+       (troop_set_slot, "$g_talk_troop", slot_troop_occupation, slto_inactive),
+       (troop_set_slot, "$g_talk_troop", slot_troop_cur_center, -1),
+       (remove_member_from_party, "$g_talk_troop"),
+     (else_try),
             (troop_set_slot, "$g_talk_troop", slot_troop_occupation, 0),
             (troop_set_slot, "$g_talk_troop", slot_troop_playerparty_history, pp_history_dismissed),
             (remove_member_from_party, "$g_talk_troop"),
@@ -2618,7 +2624,9 @@ dialogs_part1 = [
             (call_script, "script_troop_set_title_according_to_faction_gender_and_lands", "$g_talk_troop", ":faction_no"),
             # Jrider -
 #LAZERAS MODIFIED  {ENTK}
+     (try_end),
        ]],
+
 
 
   [anyone|plyr,"member_talk", [], "I'd like to ask you something.", "member_question",[]],

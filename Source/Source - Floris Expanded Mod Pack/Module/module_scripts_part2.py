@@ -4608,7 +4608,14 @@ scripts_part2 = [
           (party_stack_get_size, ":stack_size", ":party", ":stack_no"),
           
         (try_begin),
+          # Lieutenant removal (requested by USER)
+          (is_between, ":stack_troop", "trp_lieutenant_l14", "trp_lieutenant_l42_end"),
+          (party_remove_members, ":party", ":stack_troop", ":stack_size"),
+          (troop_set_slot, ":stack_troop", slot_troop_occupation, slto_inactive),
+          (troop_set_slot, ":stack_troop", slot_troop_cur_center, -1),
+        (else_try),
 			##diplomacy start+
+
 			  #To avoid problems with temporarily-rejoined promoted companions and ladies
 			  #suddenly forgetting that they're lords, check this.
 				#If the troop is a companion or a kingdom lady...
