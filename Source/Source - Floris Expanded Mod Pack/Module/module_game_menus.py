@@ -2417,43 +2417,10 @@ game_menus = [
            (assign, ":free_slot", ":lslot"),
          (try_end),
          (gt, ":free_slot", -1),
-         # Move initialization roll here - if no one volunteers, the choice doesn't show.
-         (call_script, "script_cf_lieutenant_system_init_recruitment"),
-         (gt, "$g_lieutenant_total_volunteers", 0),
        ],
        "Promote a troop to Lieutenant.",
        [
-         (try_begin),
-           (assign, reg1, "$g_lieutenant_total_volunteers"),
-           (assign, ":morale_change", "$g_lieutenant_total_volunteers"),
-           (val_sub, ":morale_change", 10),
-           (try_begin),
-             (lt, "$g_lieutenant_total_volunteers", 4),
-             (assign, ":morale_change", -15),
-             (display_message, "@The call for a new Lieutenant was met with silence. Only {reg1} troops volunteered. Your men lose respect for your authority."),
-           (else_try),
-             (ge, "$g_lieutenant_total_volunteers", 19),
-             (assign, ":morale_change", 10),
-             (display_message, "@Your command is highly respected! {reg1} troops have eagerly volunteered for the Lieutenant position."),
-           (else_try),
-             (lt, "$g_lieutenant_total_volunteers", 10),
-             (display_message, "@A few troops ({reg1}) have stepped forward to volunteer for promotion, but the interest is lukewarm."),
-           (else_try),
-             (display_message, "@Your command is respected! {reg1} troops have eagerly volunteered for the Lieutenant position."),
-           (try_end),
-           
-           (try_begin),
-             (neq, ":morale_change", 0),
-             (call_script, "script_change_player_party_morale", ":morale_change"),
-           (try_end),
-            (assign, "$temp", 4),
-            (try_begin),
-              (lt, "$g_lieutenant_total_volunteers", 4),
-              (assign, "$temp", "$g_lieutenant_total_volunteers"),
-            (try_end),
-            (assign, "$temp_2", 1),
-            (jump_to_menu, "mnu_lieutenant_sparring_selection"),
-         (try_end),
+         (jump_to_menu, "mnu_lieutenant_promotion_info"),
        ]
        ),
 	 ## Floris - Trade Ledger
@@ -2532,6 +2499,9 @@ game_menus = [
 			(jump_to_menu,"mnu_test_scene"),
         ]
        ),
+
+
+
       # ("toggle_cheat_on",[(eq, "$cheat_mode", 0)],"_Toggle cheat menu on.",
        # [
 			# (assign,"$cheat_mode",1),
@@ -5064,7 +5034,6 @@ game_menus = [
     ]
   ),
 
-  
 # Towns
   (
     "zendar",mnf_auto_enter,
@@ -5141,6 +5110,7 @@ game_menus = [
 	  ("enter",[(eq,"$temp_presentation_shown",0)],"camp steppe forest",[[set_jump_mission,"mt_ai_training"],[jump_to_scene,"scn_camp_steppe_forest"],[change_screen_mission]]),
     ]
   ),
+
   (
     "battlefields",0,
     "{!}Select a field...",
@@ -14313,8 +14283,7 @@ game_menus = [
           (ge, "$g_training_ground_training_success_ratio", 100),
           (jump_to_menu, "mnu_lieutenant_candidate_selection"),
         (else_try),
-          (display_message, "@You were defeated in sparring. The volunteers shake their heads, slightly disappointed."),
-          (jump_to_menu, "mnu_camp"),
+          (jump_to_menu, "mnu_lieutenant_sparring_defeat"),
         (try_end),
      (try_end),
 
@@ -19902,6 +19871,129 @@ game_menus = [
 		]
 	),
 
+  ("lieutenant_promotion_info", 0,
+   "You are about to ask for volunteers for the rank of Lieutenant. The men will decide based on your skills and their experience.^^Party Lieutenants: {reg7}       Leadership: {reg4}^Party Morale: {reg6}            Persuasion: {reg3}^Eligible Troops: {reg1}         Renown: {reg5}^^Estimated Response: {s10}^^(Note: Fewer than 10 volunteers may cause a morale penalty.)",
+   "none",
+   [
+     (assign, ":eligible_count", 0),
+     (assign, ":avg_chance", 0),
+     (store_skill_level, ":persuasion", "skl_persuasion", "trp_player"),
+     (store_skill_level, ":leadership", "skl_leadership", "trp_player"),
+     (troop_get_slot, ":renown", "trp_player", slot_troop_renown),
+
+     (assign, ":lt_count", 0),
+     (try_for_range, ":lt", lieutenants_begin, lieutenants_end),
+       (main_party_has_troop, ":lt"),
+       (val_add, ":lt_count", 1),
+     (try_end),
+     (assign, reg7, ":lt_count"),
+     (store_mul, ":lt_penalty", ":lt_count", 8),
+     
+     (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+     (try_for_range, ":stack_no", 0, ":num_stacks"),
+       (party_stack_get_troop_id, ":troop_id", "p_main_party", ":stack_no"),
+       (neg|troop_is_hero, ":troop_id"),
+       (store_character_level, ":level", ":troop_id"),
+       (is_between, ":level", 14, 43),
+       (party_stack_get_size, ":stack_size", "p_main_party", ":stack_no"),
+       (party_stack_get_num_wounded, ":num_wounded", "p_main_party", ":stack_no"),
+       (store_sub, ":num_available", ":stack_size", ":num_wounded"),
+       (gt, ":num_available", 0),
+       
+       (val_add, ":eligible_count", ":num_available"),
+       
+       (assign, ":chance", ":level"),
+       (store_mul, ":lead_bonus", ":leadership", 2),
+       (val_add, ":chance", ":lead_bonus"),
+       (val_add, ":chance", ":persuasion"),
+       (val_sub, ":chance", ":lt_penalty"),
+       (val_clamp, ":chance", 0, 101),
+       (store_mul, ":weighted", ":chance", ":num_available"),
+       (val_add, ":avg_chance", ":weighted"),
+     (try_end),
+     
+     (assign, ":expected_volunteers", 0),
+     (try_begin),
+       (gt, ":eligible_count", 0),
+       (assign, ":expected_volunteers", ":avg_chance"),
+       (val_div, ":expected_volunteers", 100),
+     (try_end),
+     
+     (try_begin),
+       (eq, ":expected_volunteers", 0),
+       (str_store_string, s10, "@None. Your men seem uninterested."),
+     (else_try),
+       (lt, ":expected_volunteers", 4),
+       (str_store_string, s10, "@Very low. Perhaps a handful of men might step forward."),
+     (else_try),
+       (lt, ":expected_volunteers", 10),
+       (str_store_string, s10, "@Moderate. A small group of men are likely to volunteer."),
+     (else_try),
+       (lt, ":expected_volunteers", 20),
+       (str_store_string, s10, "@Good. You can expect a solid turnout of candidates."),
+     (else_try),
+       (str_store_string, s10, "@Excellent. Many men are eager to prove themselves."),
+     (try_end),
+
+     (assign, reg1, ":eligible_count"),
+     (assign, reg3, ":persuasion"),
+     (assign, reg4, ":leadership"),
+     (assign, reg5, ":renown"),
+     (party_get_morale, reg6, "p_main_party"),
+   ],
+   [
+     ("proceed_promotion", [
+       (gt, reg1, 0),
+     ], "Proceed with the call.", [
+         (try_begin),
+           (call_script, "script_cf_lieutenant_system_init_recruitment"),
+           (gt, "$g_lieutenant_total_volunteers", 0),
+           
+           (assign, reg1, "$g_lieutenant_total_volunteers"),
+           (assign, ":morale_change", "$g_lieutenant_total_volunteers"),
+           (val_sub, ":morale_change", 10),
+           (try_begin),
+             (lt, "$g_lieutenant_total_volunteers", 4),
+             (assign, ":morale_change", -15),
+             (display_message, "@The call for a new Lieutenant was met with silence. Only {reg1} troops volunteered. Your men lose respect for your authority."),
+           (else_try),
+             (ge, "$g_lieutenant_total_volunteers", 19),
+             (assign, ":morale_change", 0),
+             (display_message, "@Your command is highly respected! {reg1} troops have eagerly volunteered for the Lieutenant position."),
+           (else_try),
+             (lt, "$g_lieutenant_total_volunteers", 10),
+             (display_message, "@A few troops ({reg1}) have stepped forward to volunteer for promotion, but the interest is lukewarm."),
+           (else_try),
+             (display_message, "@Your command is respected! {reg1} troops have eagerly volunteered for the Lieutenant position."),
+           (try_end),
+           
+           (try_begin),
+             (neq, ":morale_change", 0),
+             (call_script, "script_change_player_party_morale", ":morale_change"),
+           (try_end),
+           
+           (assign, "$temp", 4),
+           (try_begin),
+             (lt, "$g_lieutenant_total_volunteers", 4),
+             (assign, "$temp", "$g_lieutenant_total_volunteers"),
+           (try_end),
+           (assign, "$temp_2", 1),
+           (jump_to_menu, "mnu_lieutenant_sparring_selection"),
+           
+         (else_try),
+           # Failed - no volunteers
+           (display_message, "@The call for a new Lieutenant was met with complete silence. No one volunteered. (-15 Morale)"),
+           (call_script, "script_change_player_party_morale", -15),
+           (jump_to_menu, "mnu_camp"),
+         (try_end),
+     ]),
+     
+     ("cancel_promotion", [], "Cancel.", [
+       (jump_to_menu, "mnu_camp"),
+     ]),
+   ]
+  ),
+
   ("lieutenant_sparring_selection", 0,
     "{s11}",
     "none",
@@ -19926,9 +20018,9 @@ game_menus = [
       ("start_train", 
        [
          (eq, "$temp_2", 5), # Exactly 4 selected
-       ], "--- START CONTEST ---",
+       ], "--- PREPARE FOR CONTEST ---",
        [
-         (call_script, "script_lieutenant_system_start_sparring_mission", 4),
+         (jump_to_menu, "mnu_lieutenant_weapon_selection"),
        ]),
 
       ("reset", [], "Reset Selection", 
@@ -19955,7 +20047,12 @@ game_menus = [
        ]),
 
       ("cancel", [], "Cancel.",
-       [(jump_to_menu, "mnu_camp")]),
+       [
+         (try_for_range, ":j", 0, 4),
+            (troop_set_slot, "trp_temp_array_a", ":j", 0),
+         (try_end),
+         (jump_to_menu, "mnu_camp")
+       ]),
     ] + [
       # Selection Options (Visible only if < 5)
       (
@@ -20007,12 +20104,79 @@ game_menus = [
         [
           (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
           (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"),
+          (try_for_range, ":j", 0, 4),
+             (troop_set_slot, "trp_temp_array_a", ":j", 0),
+          (try_end),
           (jump_to_menu, "mnu_camp"),
         ]
       ) for i in range(4) # Matches the 4 selected candidates
     ] + [
       ("cancel", [], "None of them are worthy.",
-       [(jump_to_menu, "mnu_camp")]),
+       [
+          (try_for_range, ":j", 0, 4),
+             (troop_set_slot, "trp_temp_array_a", ":j", 0),
+          (try_end),
+          (jump_to_menu, "mnu_camp")
+       ]),
+    ]
+  ),
+
+  ("lieutenant_weapon_selection", 0,
+    "Choose a Weapon.",
+    "none",
+    [],
+    [
+       ("weapon_longsword", [], "Longsword.", [
+          (assign, "$g_lieutenant_sparring_weapon", 0),
+          (call_script, "script_lieutenant_system_start_sparring_mission", 4),
+       ]),
+       ("weapon_sword_shield", [], "Sword and shield.", [
+          (assign, "$g_lieutenant_sparring_weapon", 1),
+          (call_script, "script_lieutenant_system_start_sparring_mission", 4),
+       ]),
+       ("weapon_staff", [], "Staff.", [
+          (assign, "$g_lieutenant_sparring_weapon", 2),
+          (call_script, "script_lieutenant_system_start_sparring_mission", 4),
+       ]),
+       ("weapon_bow", [], "Bow and dagger.", [
+          (assign, "$g_lieutenant_sparring_weapon", 3),
+          (call_script, "script_lieutenant_system_start_sparring_mission", 4),
+       ]),
+    ]
+  ),
+
+  ("lieutenant_sparring_defeat", 0,
+    "{s11}^That didn't go very well. Your men {s12}.^You lose {reg2} morale for the {reg1} unbeaten opponents.",
+    "none",
+    [
+      (assign, reg1, "$g_lieutenant_sparring_enemies_alive"),
+      (try_begin),
+         (eq, reg1, 0),
+         (assign, reg1, 4), # Player pressed TAB or fell before any were counted? Fail safe.
+      (try_end),
+      (store_sub, ":beaten", 4, reg1),
+      (try_begin),
+         (eq, ":beaten", 0),
+         (str_store_string, s12, "@are embarrassed by your performance"),
+      (else_try),
+         (le, ":beaten", 2),
+         (str_store_string, s12, "@are disappointed"),
+      (else_try),
+         (str_store_string, s12, "@are utterly unimpressed"),
+      (try_end),
+      (store_mul, ":morale_loss", reg1, -5),
+      (assign, reg2, ":morale_loss"),
+      (val_mul, reg2, -1),
+      (assign, "$temp_3", reg1),
+      (call_script, "script_change_player_party_morale", ":morale_loss"),
+      (assign, reg1, "$temp_3"),
+      (str_clear, s11),
+      (try_for_range, ":i", 0, 4),
+         (troop_set_slot, "trp_temp_array_a", ":i", 0),
+      (try_end),
+    ],
+    [
+      ("continue", [], "Continue.", [(jump_to_menu, "mnu_camp")]),
     ]
   ),
 

@@ -12274,6 +12274,43 @@ scripts_part5 = [
 
 #Tempered populate entrenchment scene
 
+## Lieutenant System - preview the current camp terrain scene (no horses, no companions)
+  ("ssp_preview_camp_scene",
+    [
+      (party_get_current_terrain, ":terrain_type", "p_main_party"),
+      (assign, ":scene_to_use", "scn_dhorak_keep"), # fallback: small enclosed map
+      (try_begin),
+        (eq, ":terrain_type", rt_steppe),
+        (assign, ":scene_to_use", "scn_not_entrenched_steppe"),
+      (else_try),
+        (eq, ":terrain_type", rt_plain),
+        (assign, ":scene_to_use", "scn_not_entrenched_plain"),
+      (else_try),
+        (eq, ":terrain_type", rt_snow),
+        (assign, ":scene_to_use", "scn_not_entrenched_snow"),
+      (else_try),
+        (eq, ":terrain_type", rt_desert),
+        (assign, ":scene_to_use", "scn_not_entrenched_desert"),
+      (else_try),
+        (eq, ":terrain_type", rt_steppe_forest),
+        (assign, ":scene_to_use", "scn_not_entrenched_steppe_forest"),
+      (else_try),
+        (eq, ":terrain_type", rt_forest),
+        (assign, ":scene_to_use", "scn_not_entrenched_plain_forest"),
+      (else_try),
+        (eq, ":terrain_type", rt_snow_forest),
+        (assign, ":scene_to_use", "scn_not_entrenched_snow_forest"),
+      (else_try),
+        (eq, ":terrain_type", rt_desert_forest),
+        (assign, ":scene_to_use", "scn_not_entrenched_desert_forest"),
+      (try_end),
+      (assign, "$g_training_ground_training_scene", ":scene_to_use"),
+      (set_jump_mission, "mt_ai_training"),
+      (jump_to_scene, ":scene_to_use"),
+      (change_screen_mission),
+    ]),
+## End ssp_preview_camp_scene
+
   ("visit_camp",
     [	(party_get_current_terrain, ":terrain_type", "p_main_party"),
 		(party_get_slot,":entrench","p_main_party",slot_party_entrenched),		
@@ -14795,6 +14832,7 @@ scripts_part5 = [
   # Logic to calculate volunteers and determine if recruitment can proceed
   ("cf_lieutenant_system_init_recruitment", [
     (assign, ":total_volunteers", 0),
+    (assign, ":total_eligible", 0),
     
     # Clear volunteer pool storage (trp_temp_array_c)
     # Slot 0 = unique type count
@@ -14805,6 +14843,14 @@ scripts_part5 = [
       (troop_set_slot, "trp_temp_array_c", ":i", 0),
     (try_end),
 
+    # Count current lieutenants for penalty calculations
+    (assign, ":lt_count", 0),
+    (try_for_range, ":lt", lieutenants_begin, lieutenants_end),
+      (main_party_has_troop, ":lt"),
+      (val_add, ":lt_count", 1),
+    (try_end),
+    (store_mul, ":lt_penalty", ":lt_count", 8), # -8% chance per existing Lt
+
     (store_skill_level, ":persuasion", "skl_persuasion", "trp_player"),
     (store_skill_level, ":leadership", "skl_leadership", "trp_player"),
     
@@ -14814,52 +14860,60 @@ scripts_part5 = [
       (neg|troop_is_hero, ":troop_id"),
       
       (store_character_level, ":level", ":troop_id"),
-      (is_between, ":level", 14, 43), # Require level 14-42 (matching templates)
-      
-      (party_stack_get_size, ":stack_size", "p_main_party", ":stack_no"),
-      (party_stack_get_num_wounded, ":num_wounded", "p_main_party", ":stack_no"),
-      (store_sub, ":num_available", ":stack_size", ":num_wounded"),
-      (gt, ":num_available", 0),
-      
-      # Chance calculation: troop level % + skill bonuses
-      (assign, ":chance", ":level"),
-      (store_mul, ":lead_bonus", ":leadership", 2), # +2% per leadership
-      (val_add, ":chance", ":lead_bonus"),
-      (val_add, ":chance", ":persuasion"), # +1% per persuasion
-      (val_clamp, ":chance", 0, 101), # Cap chance at 100%
-      
-      # Count volunteers in this stack
-      (assign, ":volunteers_in_stack", 0),
-      (try_for_range, ":unused", 0, ":num_available"),
-        (store_random_in_range, ":random", 0, 100),
-        (lt, ":random", ":chance"),
-        (val_add, ":volunteers_in_stack", 1),
-      (try_end),
-      
-      (gt, ":volunteers_in_stack", 0),
-      (val_add, ":total_volunteers", ":volunteers_in_stack"),
-      
-      # Combine into unique types
-      (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
-      (assign, ":found", 0),
-      (store_add, ":end_search", ":num_unique", 1),
-      (try_for_range, ":i", 1, ":end_search"),
-        (eq, ":found", 0),
-        (troop_slot_eq, "trp_temp_array_c", ":i", ":troop_id"),
-        (assign, ":found", 1),
-        (store_add, ":count_slot", ":i", 50),
-        (troop_get_slot, ":cur_count", "trp_temp_array_c", ":count_slot"),
-        (val_add, ":cur_count", ":volunteers_in_stack"),
-        (troop_set_slot, "trp_temp_array_c", ":count_slot", ":cur_count"),
-      (try_end),
       (try_begin),
-        (eq, ":found", 0),
-        (lt, ":num_unique", 50), # Max 50 types
-        (val_add, ":num_unique", 1),
-        (troop_set_slot, "trp_temp_array_c", 0, ":num_unique"),
-        (troop_set_slot, "trp_temp_array_c", ":num_unique", ":troop_id"),
-        (store_add, ":count_slot", ":num_unique", 50),
-        (troop_set_slot, "trp_temp_array_c", ":count_slot", ":volunteers_in_stack"),
+        (is_between, ":level", 14, 43), # Require level 14-42 (matching templates)
+        
+        (party_stack_get_size, ":stack_size", "p_main_party", ":stack_no"),
+        (party_stack_get_num_wounded, ":num_wounded", "p_main_party", ":stack_no"),
+        (store_sub, ":num_available", ":stack_size", ":num_wounded"),
+        (try_begin),
+          (gt, ":num_available", 0),
+          (val_add, ":total_eligible", ":num_available"),
+          
+          # Chance calculation: troop level % + skill bonuses
+          (assign, ":chance", ":level"),
+          (store_mul, ":lead_bonus", ":leadership", 2), # +2% per leadership
+          (val_add, ":chance", ":lead_bonus"),
+          (val_add, ":chance", ":persuasion"), # +1% per persuasion
+          (val_sub, ":chance", ":lt_penalty"), # increasingly difficult to get more Lts
+          (val_clamp, ":chance", 0, 101), # Cap chance at 100% and min 0
+          
+          # Count volunteers in this stack
+          (assign, ":volunteers_in_stack", 0),
+          (try_for_range, ":unused", 0, ":num_available"),
+            (store_random_in_range, ":random", 0, 100),
+            (lt, ":random", ":chance"),
+            (val_add, ":volunteers_in_stack", 1),
+          (try_end),
+          
+          (try_begin),
+            (gt, ":volunteers_in_stack", 0),
+            (val_add, ":total_volunteers", ":volunteers_in_stack"),
+            
+            # Combine into unique types
+            (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
+            (assign, ":found", 0),
+            (store_add, ":end_search", ":num_unique", 1),
+            (try_for_range, ":i", 1, ":end_search"),
+              (eq, ":found", 0),
+              (troop_slot_eq, "trp_temp_array_c", ":i", ":troop_id"),
+              (assign, ":found", 1),
+              (store_add, ":count_slot", ":i", 50),
+              (troop_get_slot, ":cur_count", "trp_temp_array_c", ":count_slot"),
+              (val_add, ":cur_count", ":volunteers_in_stack"),
+              (troop_set_slot, "trp_temp_array_c", ":count_slot", ":cur_count"),
+            (try_end),
+            (try_begin),
+              (eq, ":found", 0),
+              (lt, ":num_unique", 50), # Max 50 types
+              (val_add, ":num_unique", 1),
+              (troop_set_slot, "trp_temp_array_c", 0, ":num_unique"),
+              (troop_set_slot, "trp_temp_array_c", ":num_unique", ":troop_id"),
+              (store_add, ":count_slot", ":num_unique", 50),
+              (troop_set_slot, "trp_temp_array_c", ":count_slot", ":volunteers_in_stack"),
+            (try_end),
+          (try_end),
+        (try_end),
       (try_end),
     (try_end),
 
@@ -14983,20 +15037,23 @@ scripts_part5 = [
     (assign, "$g_training_ground_training_num_enemies", ":num_enemies"),
     (assign, "$g_training_ground_training_num_gourds_to_destroy", 0),
     (assign, "$g_mt_mode", ctm_melee),
-    (assign, "$g_training_ground_training_scene", "scn_lieutenant_sparring"),
+    (try_begin),
+      (le, "$g_training_ground_training_scene", 0),
+      (assign, "$g_training_ground_training_scene", "scn_training_ground_ranged_melee_4"),
+    (try_end),
 
     (modify_visitors_at_site, "$g_training_ground_training_scene"),
     (reset_visitors),
-    (set_visitor, 16, "trp_player"),
+    (set_visitor, 0, "trp_player"),
 
     (try_for_range, ":i", 0, ":num_enemies"),
       (troop_get_slot, ":opponent_troop", "trp_temp_array_a", ":i"),
-      (store_add, ":entry_point", 17, ":i"),
-      (set_visitor, ":entry_point", ":opponent_troop"),
+      (store_add, ":visitor_point", 1, ":i"),
+      (set_visitor, ":visitor_point", ":opponent_troop"),
     (try_end),
 
     (set_jump_mission, "mt_lieutenant_sparring"),
-    (set_jump_entry, 16),
+    (set_jump_entry, 0),
     (jump_to_scene, "$g_training_ground_training_scene"),
     (change_screen_mission),
   ]),
