@@ -88,5 +88,4 @@ echo "Cleaning up..."
 echo "______________________________"
 echo
 echo "Script processing has ended."
-echo "Press Enter to exit..."
-read
+
