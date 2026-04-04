@@ -19872,7 +19872,7 @@ game_menus = [
 	),
 
   ("lieutenant_promotion_info", 0,
-   "You are about to ask for volunteers for the rank of Lieutenant. The men will decide based on your skills and their experience.^^Party Lieutenants: {reg7}       Leadership: {reg4}^Party Morale: {reg6}            Persuasion: {reg3}^Eligible Troops: {reg1}         Renown: {reg5}^^Estimated Response: {s10}^^(Note: Fewer than 10 volunteers may cause a morale penalty.)",
+   "You are about to ask for volunteers for the rank of Lieutenant. The men will decide based on your skills and their experience.^^Party Lieutenants: {reg7}       Leadership: {reg4}^Party Morale: {reg6}            Persuasion: {reg3}^Eligible Troops: {reg1} (14+)    Renown: {reg5}^^Estimated Response: {s10}{s11}^^(Note: Fewer than 10 volunteers may cause a morale penalty.)",
    "none",
    [
      (assign, ":eligible_count", 0),
@@ -19888,6 +19888,13 @@ game_menus = [
      (try_end),
      (assign, reg7, ":lt_count"),
      (store_mul, ":lt_penalty", ":lt_count", 8),
+     (val_add, ":lt_penalty", "$g_lieutenant_recruitment_penalty"),
+     (str_clear, s11),
+     (try_begin),
+       (gt, "$g_lieutenant_recruitment_penalty", 0),
+       (assign, reg8, "$g_lieutenant_recruitment_penalty"),
+       (str_store_string, s11, "@^^(A recent recruitment attempt is reducing volunteer interest by {reg8}%%.)"),
+     (try_end),
      
      (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
      (try_for_range, ":stack_no", 0, ":num_stacks"),
@@ -19902,10 +19909,14 @@ game_menus = [
        
        (val_add, ":eligible_count", ":num_available"),
        
-       (assign, ":chance", ":level"),
+       (store_div, ":renown_bonus", ":renown", 100),
+       (assign, ":chance", 20),
+       (val_add, ":chance", ":level"),
+       (val_add, ":chance", ":renown_bonus"),
        (store_mul, ":lead_bonus", ":leadership", 2),
        (val_add, ":chance", ":lead_bonus"),
        (val_add, ":chance", ":persuasion"),
+       (val_add, ":chance", ":renown_bonus"),
        (val_sub, ":chance", ":lt_penalty"),
        (val_clamp, ":chance", 0, 101),
        (store_mul, ":weighted", ":chance", ":num_available"),
@@ -19958,7 +19969,6 @@ game_menus = [
              (display_message, "@The call for a new Lieutenant was met with silence. Only {reg1} troops volunteered. Your men lose respect for your authority."),
            (else_try),
              (ge, "$g_lieutenant_total_volunteers", 19),
-             (assign, ":morale_change", 0),
              (display_message, "@Your command is highly respected! {reg1} troops have eagerly volunteered for the Lieutenant position."),
            (else_try),
              (lt, "$g_lieutenant_total_volunteers", 10),
@@ -19972,6 +19982,8 @@ game_menus = [
              (call_script, "script_change_player_party_morale", ":morale_change"),
            (try_end),
            
+           (assign, "$g_lieutenant_recruitment_penalty", 80),
+           (assign, "$g_lieutenant_recruitment_penalty_ticks", 0),
            (assign, "$temp", 4),
            (try_begin),
              (lt, "$g_lieutenant_total_volunteers", 4),
@@ -19984,6 +19996,8 @@ game_menus = [
            # Failed - no volunteers
            (display_message, "@The call for a new Lieutenant was met with complete silence. No one volunteered. (-15 Morale)"),
            (call_script, "script_change_player_party_morale", -15),
+           (assign, "$g_lieutenant_recruitment_penalty", 80),
+           (assign, "$g_lieutenant_recruitment_penalty_ticks", 0),
            (jump_to_menu, "mnu_camp"),
          (try_end),
      ]),

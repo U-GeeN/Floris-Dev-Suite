@@ -14850,6 +14850,8 @@ scripts_part5 = [
       (val_add, ":lt_count", 1),
     (try_end),
     (store_mul, ":lt_penalty", ":lt_count", 8), # -8% chance per existing Lt
+    (val_add, ":lt_penalty", "$g_lieutenant_recruitment_penalty"), # Apply the 'recent try' penalty
+
 
     (store_skill_level, ":persuasion", "skl_persuasion", "trp_player"),
     (store_skill_level, ":leadership", "skl_leadership", "trp_player"),
@@ -14870,12 +14872,16 @@ scripts_part5 = [
           (gt, ":num_available", 0),
           (val_add, ":total_eligible", ":num_available"),
           
-          # Chance calculation: troop level % + skill bonuses
-          (assign, ":chance", ":level"),
+          # Chance calculation: 20% base + troop level % + skill bonuses + renown/100
+          (troop_get_slot, ":renown", "trp_player", slot_troop_renown),
+          (store_div, ":renown_bonus", ":renown", 100), # +1% per 100 renown
+          (assign, ":chance", 20), # 20% base
+          (val_add, ":chance", ":level"),
           (store_mul, ":lead_bonus", ":leadership", 2), # +2% per leadership
           (val_add, ":chance", ":lead_bonus"),
           (val_add, ":chance", ":persuasion"), # +1% per persuasion
-          (val_sub, ":chance", ":lt_penalty"), # increasingly difficult to get more Lts
+          (val_add, ":chance", ":renown_bonus"),
+          (val_sub, ":chance", ":lt_penalty"), # balanced difficulty based on current Lt count and cooldown
           (val_clamp, ":chance", 0, 101), # Cap chance at 100% and min 0
           
           # Count volunteers in this stack
@@ -15101,6 +15107,13 @@ scripts_part5 = [
       (try_end),
 
       (call_script, "script_lieutenant_system_promote", ":lieutenant_troop", ":source_troop"),
+      
+      # Set recovery penalty: Starting at 80 (-80% chance)
+      (assign, "$g_lieutenant_recruitment_penalty", 80),
+      (assign, "$g_lieutenant_recruitment_penalty_ticks", 0),
+      
+      # Morale bonus for successful promotion (Success reflects well on the commander)
+      (call_script, "script_change_player_party_morale", 5),
     (try_end),
   ]),
 

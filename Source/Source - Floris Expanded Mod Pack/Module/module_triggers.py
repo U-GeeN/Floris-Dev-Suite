@@ -1830,9 +1830,26 @@ triggers = [
                                 (try_end),
                             (try_end),
                          (try_end),
-                    (try_end)])
-##
-
+                    (try_end)]),
+# Lieutenant Recruitment Penalty Decay (Non-linear over 1 week)
+# Runs every 12 hours
+  (12.0, 0, 0, 
+   [
+     (gt, "$g_lieutenant_recruitment_penalty", 0),
+   ], 
+   [
+     (val_add, "$g_lieutenant_recruitment_penalty_ticks", 1),
+     (try_begin),
+       (le, "$g_lieutenant_recruitment_penalty_ticks", 4), # First 2 days
+       (val_sub, "$g_lieutenant_recruitment_penalty", 10), # -1/8 of 80
+     (else_try),
+       (val_sub, "$g_lieutenant_recruitment_penalty", 4),  # -1/20 of 80 (rest over 5 days)
+     (try_end),
+     (try_begin),
+       (lt, "$g_lieutenant_recruitment_penalty", 0),
+       (assign, "$g_lieutenant_recruitment_penalty", 0),
+     (try_end),
+   ]),
 ]
 
 
