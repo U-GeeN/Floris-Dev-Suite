@@ -2150,6 +2150,11 @@ slot_agent_cur_weapon_1           = 53
 slot_agent_cur_weapon_2           = 54
 slot_agent_cur_weapon_3           = 55
 slot_agent_cur_weapon_4           = 56
+slot_agent_pending_blunt_damage   = 57
+slot_agent_is_applying_blunt      = 58
+slot_agent_last_attacker         = 59
+
+
 
 # party slots
 slot_town_seneschal     = 15

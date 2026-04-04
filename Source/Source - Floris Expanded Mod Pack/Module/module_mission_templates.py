@@ -16047,8 +16047,103 @@ mission_templates = [
         ]),
     ],
   ),
-## END LIEUTENANT SPARRING MISSION TEMPLATE
 ]
+
+# Damage Recalculation System - Inject triggers into all mission templates
+# We create a new list for each mission to avoid issues with shared common trigger lists.
+#for i_mt in range(len(mission_templates)):
+#  mission_templates[i_mt] = list(mission_templates[i_mt])
+#  mission_templates[i_mt][5] = list(mission_templates[i_mt][5])
+#  
+#  if not damage_recalculation_hit in mission_templates[i_mt][5]:
+#    mission_templates[i_mt][5].append(damage_recalculation_hit)
+#  if not damage_recalculation_apply in mission_templates[i_mt][5]:
+#    mission_templates[i_mt][5].append(damage_recalculation_apply)
+#    
+#  # Convert back to tuple for compatibility
+#  mission_templates[i_mt] = tuple(mission_templates[i_mt])
+
+####################################################################################################################
+# DAMAGE RECALCULATION SYSTEM
+####################################################################################################################
+damage_recalculation_hit = (
+  ti_on_agent_hit, 0, 0, [
+    (store_trigger_param_1, ":victim"),
+    (gt, ":victim", -1),
+    (agent_is_human, ":victim"),
+    (neg|agent_slot_eq, ":victim", slot_agent_is_applying_blunt, 1),
+  ],
+  [
+    (store_trigger_param_1, ":victim"),
+    (store_trigger_param_2, ":attacker"),
+    (store_trigger_param_3, ":damage"),
+    
+    (agent_set_slot, ":victim", slot_agent_last_attacker, ":attacker"),
+    
+    (assign, ":total_armor", 0),
+    (try_for_range, ":slot", ek_head, ek_gloves + 1),
+      (agent_get_item_slot, ":item", ":victim", ":slot"),
+      (gt, ":item", -1),
+      (item_get_slot, ":head", ":item", slot_item_head_armor),
+      (item_get_slot, ":body", ":item", slot_item_body_armor),
+      (item_get_slot, ":leg", ":item", slot_item_leg_armor),
+      (val_add, ":total_armor", ":head"),
+      (val_add, ":total_armor", ":body"),
+      (val_add, ":total_armor", ":leg"),
+    (try_end),
+    
+    # 1. Armor value transforms portion of damage to blunt
+    (store_sub, ":reduced_damage", ":damage", ":blunt_damage"),
+    
+    # 4. If overkill, more than 3x damage of remaining hp -> dead
+    (store_agent_hit_points, ":cur_hp", ":victim", 1),
+    (store_mul, ":overkill_limit", ":cur_hp", 3),
+    
+    (try_begin),
+      (gt, ":damage", ":overkill_limit"),
+      # Overkill! No blunt conversion, lethal damage remains.
+      (agent_set_slot, ":victim", slot_agent_pending_blunt_damage, 0),
+    (else_try),
+      # 2. Apply blunt damage after original damage (deferred)
+      (agent_get_slot, ":pending", ":victim", slot_agent_pending_blunt_damage),
+      (val_add, ":pending", ":blunt_damage"),
+      (agent_set_slot, ":victim", slot_agent_pending_blunt_damage, ":pending"),
+      
+      # Use set_trigger_result to apply reduced original damage
+      (set_trigger_result, ":reduced_damage"),
+    (try_end),
+  ])
+
+damage_recalculation_apply = (
+  0, 0, 0, [],
+  [
+    (try_for_agents, ":agent"),
+      (agent_is_alive, ":agent"),
+      (agent_is_human, ":agent"),
+      (agent_get_slot, ":pending", ":agent", slot_agent_pending_blunt_damage),
+      (gt, ":pending", 0),
+      
+      (agent_get_slot, ":attacker", ":agent", slot_agent_last_attacker),
+      (try_begin),
+        (lt, ":attacker", 0),
+        (assign, ":attacker", ":agent"),
+      (try_end),
+      
+      # 3. if blunt damage deals last hit, -> not dead
+      (store_agent_hit_points, ":hp", ":agent", 1),
+      (try_begin),
+        (le, ":hp", ":pending"),
+        (agent_set_no_death_knock_down_only, ":agent", 1),
+      (try_end),
+      
+      (agent_set_slot, ":agent", slot_agent_is_applying_blunt, 1),
+      (agent_deliver_damage_to_agent, ":attacker", ":agent", ":pending", itm_practice_staff),
+      (agent_set_slot, ":agent", slot_agent_is_applying_blunt, 0),
+      
+      (agent_set_slot, ":agent", slot_agent_pending_blunt_damage, 0),
+      (agent_set_no_death_knock_down_only, ":agent", 0),
+    (try_end),
+  ])
 
 # modmerger_start version=201 type=4
 try:
