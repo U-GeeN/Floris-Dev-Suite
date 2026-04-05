@@ -16086,14 +16086,33 @@ damage_recalculation_hit = (
       (val_add, ":relevant_armor", ":val"),
     (try_end),
     
+    # Check for piercing damage to reduce blunt portion
+    (assign, ":modifier", 100),
+    (assign, ":item_id", reg0),
+    (try_begin),
+      (gt, ":item_id", -1),
+      (item_get_type, ":itp", ":item_id"),
+      (try_begin), # Piercing-oriented weapons
+        (this_or_next|eq, ":itp", itp_type_bow),
+        (this_or_next|eq, ":itp", itp_type_crossbow),
+        (this_or_next|eq, ":itp", itp_type_thrown),
+        (this_or_next|eq, ":itp", itp_type_musket),
+        (this_or_next|eq, ":itp", itp_type_pistol),
+        (eq, ":itp", itp_type_polearm),
+        (assign, ":modifier", 65), # Smaller blunt transformation for piercing items
+      (try_end),
+    (try_end),
+    
     # 1. Armor value transforms portion of damage to blunt
-    # Formula: blunt = damage * armor / (armor + 50)
+    # Formula: blunt = (damage * armor / (armor + 50)) * modifier
     (store_add, ":denominator", ":relevant_armor", 50),
     (store_mul, ":blunt_damage", ":damage", ":relevant_armor"),
     (val_div, ":blunt_damage", ":denominator"),
+    (val_mul, ":blunt_damage", ":modifier"),
+    (val_div, ":blunt_damage", 100),
     (store_sub, ":reduced_damage", ":damage", ":blunt_damage"),
     
-    # 4. If overkill, more than 3x damage of remaining hp -> dead
+    # 4. If overkill, more than 4x damage of remaining hp -> dead
     (store_agent_hit_points, ":cur_hp", ":victim", 1),
     (store_mul, ":overkill_limit", ":cur_hp", 4),
     
