@@ -16049,19 +16049,8 @@ mission_templates = [
   ),
 ]
 
-# Damage Recalculation System - Inject triggers into all mission templates
-# We create a new list for each mission to avoid issues with shared common trigger lists.
-#for i_mt in range(len(mission_templates)):
-#  mission_templates[i_mt] = list(mission_templates[i_mt])
-#  mission_templates[i_mt][5] = list(mission_templates[i_mt][5])
-#  
-#  if not damage_recalculation_hit in mission_templates[i_mt][5]:
-#    mission_templates[i_mt][5].append(damage_recalculation_hit)
-#  if not damage_recalculation_apply in mission_templates[i_mt][5]:
-#    mission_templates[i_mt][5].append(damage_recalculation_apply)
-#    
-#  # Convert back to tuple for compatibility
-#  mission_templates[i_mt] = tuple(mission_templates[i_mt])
+# Constants for Warband 1.174+ support in older Module Systems
+store_trigger_param_4 = 2074
 
 ####################################################################################################################
 # DAMAGE RECALCULATION SYSTEM
@@ -16077,27 +16066,36 @@ damage_recalculation_hit = (
     (store_trigger_param_1, ":victim"),
     (store_trigger_param_2, ":attacker"),
     (store_trigger_param_3, ":damage"),
+    (store_trigger_param_4, ":hit_body_part"), # 0 = Head, 1 = Body, 2 = Leg...
     
     (agent_set_slot, ":victim", slot_agent_last_attacker, ":attacker"),
     
-    (assign, ":total_armor", 0),
+    (assign, ":relevant_armor", 0),
     (try_for_range, ":slot", ek_head, ek_gloves + 1),
       (agent_get_item_slot, ":item", ":victim", ":slot"),
       (gt, ":item", -1),
-      (item_get_slot, ":head", ":item", slot_item_head_armor),
-      (item_get_slot, ":body", ":item", slot_item_body_armor),
-      (item_get_slot, ":leg", ":item", slot_item_leg_armor),
-      (val_add, ":total_armor", ":head"),
-      (val_add, ":total_armor", ":body"),
-      (val_add, ":total_armor", ":leg"),
+      (try_begin),
+        (eq, ":hit_body_part", 0), # Head hit
+        (item_get_slot, ":val", ":item", slot_item_head_armor),
+      (else_try),
+        (eq, ":hit_body_part", 2), # Leg hit
+        (item_get_slot, ":val", ":item", slot_item_leg_armor),
+      (else_try),
+        (item_get_slot, ":val", ":item", slot_item_body_armor),
+      (try_end),
+      (val_add, ":relevant_armor", ":val"),
     (try_end),
     
     # 1. Armor value transforms portion of damage to blunt
+    # Formula: blunt = damage * armor / (armor + 50)
+    (store_add, ":denominator", ":relevant_armor", 50),
+    (store_mul, ":blunt_damage", ":damage", ":relevant_armor"),
+    (val_div, ":blunt_damage", ":denominator"),
     (store_sub, ":reduced_damage", ":damage", ":blunt_damage"),
     
     # 4. If overkill, more than 3x damage of remaining hp -> dead
     (store_agent_hit_points, ":cur_hp", ":victim", 1),
-    (store_mul, ":overkill_limit", ":cur_hp", 3),
+    (store_mul, ":overkill_limit", ":cur_hp", 4),
     
     (try_begin),
       (gt, ":damage", ":overkill_limit"),
@@ -16115,7 +16113,7 @@ damage_recalculation_hit = (
   ])
 
 damage_recalculation_apply = (
-  0, 0, 0, [],
+  0.1, 0, 0, [],
   [
     (try_for_agents, ":agent"),
       (agent_is_alive, ":agent"),
@@ -16144,6 +16142,24 @@ damage_recalculation_apply = (
       (agent_set_no_death_knock_down_only, ":agent", 0),
     (try_end),
   ])
+
+# Damage Recalculation System - Inject triggers into combat mission templates
+for i_mt in range(len(mission_templates)):
+  mt = list(mission_templates[i_mt])
+  mt_name = mt[0]
+  
+  # Only add to combat-oriented missions to avoid crashes and technical mission conflicts
+  is_combat = False
+  if any(x in mt_name for x in ["charge", "siege", "battle", "arena", "tournament", "raid", "duel"]):
+    is_combat = True
+    
+  if is_combat:
+    mt[5] = list(mt[5])
+    if not damage_recalculation_hit in mt[5]:
+      mt[5].append(damage_recalculation_hit)
+    if not damage_recalculation_apply in mt[5]:
+      mt[5].append(damage_recalculation_apply)
+    mission_templates[i_mt] = tuple(mt)
 
 # modmerger_start version=201 type=4
 try:
