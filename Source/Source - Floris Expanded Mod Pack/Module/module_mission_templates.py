@@ -16049,9 +16049,6 @@ mission_templates = [
   ),
 ]
 
-# Constants for Warband 1.174+ support in older Module Systems
-store_trigger_param_4 = 2074
-
 ####################################################################################################################
 # DAMAGE RECALCULATION SYSTEM
 ####################################################################################################################
@@ -16066,12 +16063,39 @@ damage_recalculation_hit = (
     (store_trigger_param_1, ":victim"),
     (store_trigger_param_2, ":attacker"),
     (store_trigger_param_3, ":damage"),
-    (store_trigger_param_4, ":hit_body_part"), # 0 = Head, 1 = Body, 2 = Leg...
     
     (agent_set_slot, ":victim", slot_agent_last_attacker, ":attacker"),
     
+    # Determine hit location from pos0 (hit world position) vs agent base position
+    (agent_get_position, pos1, ":victim"),
+    (set_fixed_point_multiplier, 100),
+    (position_get_z, ":agent_z", pos1),
+    (position_get_z, ":hit_z", pos0),  # pos0 = hit position in ti_on_agent_hit
+    (store_sub, ":hit_height", ":hit_z", ":agent_z"),
+    
+    # Check if victim is mounted - shifts body part thresholds upward by ~120cm
+    (assign, ":head_threshold", 150), # default: 1.5m for head
+    (assign, ":leg_threshold", 70),   # default: 0.7m for legs
+    (agent_get_horse, ":horse", ":victim"),
+    (try_begin),
+      (gt, ":horse", -1), # victim is mounted
+      # Rider body is ~1.2m higher; adjust thresholds accordingly
+      (assign, ":head_threshold", 200), # > 2.0m -> head
+      (assign, ":leg_threshold", 100),  # < 1.0m -> legs (saddle area/flanks)
+    (try_end),
+    
+    # Map height to body part: 0=Head, 1=Body, 2=Leg
+    (assign, ":hit_body_part", 1), # default: body
+    (try_begin),
+      (gt, ":hit_height", ":head_threshold"),
+      (assign, ":hit_body_part", 0),
+    (else_try),
+      (lt, ":hit_height", ":leg_threshold"),
+      (assign, ":hit_body_part", 2),
+    (try_end),
     (assign, ":relevant_armor", 0),
-    (try_for_range, ":slot", ek_head, ek_gloves + 1),
+    (assign, ":val", 0),
+    (try_for_range, ":slot", ek_head, ek_gloves),
       (agent_get_item_slot, ":item", ":victim", ":slot"),
       (gt, ":item", -1),
       (try_begin),
@@ -16088,8 +16112,9 @@ damage_recalculation_hit = (
     
     # Check for piercing damage to reduce blunt portion
     (assign, ":modifier", 100),
-    (assign, ":item_id", reg0),
     (try_begin),
+      (gt, ":attacker", -1),
+      (agent_get_wielded_item, ":item_id", ":attacker", 0),
       (gt, ":item_id", -1),
       (item_get_type, ":itp", ":item_id"),
       (try_begin), # Piercing-oriented weapons
@@ -16099,13 +16124,13 @@ damage_recalculation_hit = (
         (this_or_next|eq, ":itp", itp_type_musket),
         (this_or_next|eq, ":itp", itp_type_pistol),
         (eq, ":itp", itp_type_polearm),
-        (assign, ":modifier", 65), # Smaller blunt transformation for piercing items
+        (assign, ":modifier", 75), # Smaller blunt transformation for piercing items
       (try_end),
     (try_end),
     
     # 1. Armor value transforms portion of damage to blunt
-    # Formula: blunt = (damage * armor / (armor + 50)) * modifier
-    (store_add, ":denominator", ":relevant_armor", 50),
+    # Formula: blunt = (damage * armor / (armor + 30)) * modifier
+    (store_add, ":denominator", ":relevant_armor", 30),
     (store_mul, ":blunt_damage", ":damage", ":relevant_armor"),
     (val_div, ":blunt_damage", ":denominator"),
     (val_mul, ":blunt_damage", ":modifier"),
@@ -16120,6 +16145,9 @@ damage_recalculation_hit = (
       (gt, ":damage", ":overkill_limit"),
       # Overkill! No blunt conversion, lethal damage remains.
       (agent_set_slot, ":victim", slot_agent_pending_blunt_damage, 0),
+      (assign, reg0, ":cur_hp"),
+      (assign, reg1, ":overkill_limit"),
+      (display_message, "@[DMG] OVERKILL! HP:{reg0} Limit:{reg1} -> lethal hit", 0xff4400),
     (else_try),
       # 2. Apply blunt damage after original damage (deferred)
       (agent_get_slot, ":pending", ":victim", slot_agent_pending_blunt_damage),
