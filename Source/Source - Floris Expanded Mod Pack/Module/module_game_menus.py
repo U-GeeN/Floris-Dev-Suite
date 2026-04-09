@@ -19872,7 +19872,7 @@ game_menus = [
 	),
 
   ("lieutenant_promotion_info", 0,
-   "You are about to ask for volunteers for the rank of Lieutenant. The men will decide based on your skills and their experience.^^Party Lieutenants: {reg7}       Leadership: {reg4}^Party Morale: {reg6}            Persuasion: {reg3}^Eligible Troops: {reg1} (14+)    Renown: {reg5}^^Estimated Response: {s10}{s11}^^(Note: Fewer than 10 volunteers may cause a morale penalty.)",
+   "You are about to ask for volunteers for the rank of Lieutenant. The men will decide based on your skills and their experience.^^Party Lieutenants: {reg7}        Leadership: {reg4}^Party Morale: {reg6}            Persuasion: {reg3}^Eligible Troops: {reg1} (14+)    Renown: {reg5}^^Estimated Response: {s10}{s11}^^(Note: Fewer than 10 volunteers may cause a morale penalty.)",
    "none",
    [
      (assign, ":eligible_count", 0),
@@ -19984,12 +19984,15 @@ game_menus = [
            
            (assign, "$g_lieutenant_recruitment_penalty", 80),
            (assign, "$g_lieutenant_recruitment_penalty_ticks", 0),
-           (assign, "$temp", 4),
+           (assign, "$g_lieutenant_sparring_target_count", 4),
            (try_begin),
              (lt, "$g_lieutenant_total_volunteers", 4),
-             (assign, "$temp", "$g_lieutenant_total_volunteers"),
+             (assign, "$g_lieutenant_sparring_target_count", "$g_lieutenant_total_volunteers"),
            (try_end),
-           (assign, "$temp_2", 1),
+           (assign, "$g_lieutenant_sparring_selected_count", 1),
+           (try_for_range, ":i", 0, 4),
+             (troop_set_slot, "trp_temp_array_a", ":i", 0),
+           (try_end),
            (jump_to_menu, "mnu_lieutenant_sparring_selection"),
            
          (else_try),
@@ -20009,129 +20012,43 @@ game_menus = [
   ),
 
   ("lieutenant_sparring_selection", 0,
-    "{s11}",
+    ".",
     "none",
     [
-      (str_store_string, s11, "@Pick 4 volunteers for the sparring contest.^^Selected candidates:^"),
-      (try_for_range, ":i", 0, 4),
-        (troop_get_slot, ":t", "trp_temp_array_a", ":i"),
-        (assign, reg1, ":i"),
-        (val_add, reg1, 1),
-        (try_begin),
-          (gt, ":t", 0),
-          (str_store_troop_name, s1, ":t"),
-          (str_store_string, s11, "@{s11}  {s1}^"),
-        (else_try),
-          (str_store_string, s11, "@{s11}^"),
-        (try_end),
-      (try_end),
-      (str_store_string, s11, "@{s11}^Select candidates from the list below."),
+      (start_presentation, "prsnt_lieutenant_sparring_selection"),
     ],
     [
-      # FIXED ACTIONS AT TOP
-      ("start_train", 
-       [
-         (eq, "$temp_2", 5), # Exactly 4 selected
-       ], "--- PREPARE FOR CONTEST ---",
-       [
-         (jump_to_menu, "mnu_lieutenant_weapon_selection"),
-       ]),
-
-      ("reset", [], "Reset Selection", 
-       [
-         (try_for_range, ":i", 0, 4),
-           (troop_get_slot, ":t", "trp_temp_array_a", ":i"),
-           (gt, ":t", 0),
-           (assign, ":found", 0),
-           (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
-           (store_add, ":end", ":num_unique", 1),
-           (try_for_range, ":j", 1, ":end"),
-             (eq, ":found", 0),
-             (troop_slot_eq, "trp_temp_array_c", ":j", ":t"),
-             (store_add, ":count_slot", ":j", 50),
-             (troop_get_slot, ":c", "trp_temp_array_c", ":count_slot"),
-             (val_add, ":c", 1),
-             (troop_set_slot, "trp_temp_array_c", ":count_slot", ":c"),
-             (assign, ":found", 1),
-           (try_end),
-           (troop_set_slot, "trp_temp_array_a", ":i", 0),
-         (try_end),
-         (assign, "$temp_2", 1),
-         (jump_to_menu, "mnu_lieutenant_sparring_selection"),
-       ]),
-
-      ("cancel", [], "Cancel.",
-       [
-         (try_for_range, ":j", 0, 4),
-            (troop_set_slot, "trp_temp_array_a", ":j", 0),
-         (try_end),
-         (jump_to_menu, "mnu_camp")
-       ]),
-    ] + [
-      # Selection Options (Visible only if < 5)
-      (
-        "select_" + str(i),
-        [
-          (lt, "$temp_2", 5), # Still picking
-          (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
-          (ge, ":num_unique", i + 1),
-          (troop_get_slot, ":troop_id", "trp_temp_array_c", i + 1),
-          (store_add, ":count_slot", i + 1, 50),
-          (troop_get_slot, reg10, "trp_temp_array_c", ":count_slot"),
-          (gt, reg10, 0),
-          (str_store_troop_name, s0 + i, ":troop_id"),
-          (assign, reg1, reg10),
-        ],
-        "{s" + str(i) + "} ({reg1})",
-        [
-          (troop_get_slot, ":troop_id", "trp_temp_array_c", i + 1),
-          (store_add, ":count_slot", i + 1, 50),
-          (troop_get_slot, ":count", "trp_temp_array_c", ":count_slot"),
-          (val_sub, ":count", 1),
-          (troop_set_slot, "trp_temp_array_c", ":count_slot", ":count"),
-          
-          (store_sub, ":slot_index", "$temp_2", 1),
-          (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
-          (val_add, "$temp_2", 1),
-          (jump_to_menu, "mnu_lieutenant_sparring_selection"),
-        ]
-      ) for i in range(24)
+      ("continue", [], "Continue.",
+       [(jump_to_menu, "mnu_camp")]
+      ),
     ]
   ),
 
+  ("lieutenant_sparring_mission_launch", 0,
+    "     The training ground is being prepared for your sparring match...",
+    "none",
+    [],
+    [
+      ("continue", [], "Enter the field.",
+       [
+         (call_script, "script_lieutenant_system_start_sparring_mission", "$g_lieutenant_sparring_selected_count"),
+       ]),
+    ]
+  ),
+
+  # Replaced by prsnt_lieutenant_candidate_selection for a styled UI.
+  # This menu now just launches that presentation and routes back to camp.
   ("lieutenant_candidate_selection", 0,
-    "{s11}",
+    ".",
     "none",
     [
-      (str_store_string, s11, "@You emerge victorious! Everyone is impressed.^^Which of your candidates will you promote to Lieutenant?"),
+      (assign, "$g_lieutenant_selected_candidate", 0),
+      (start_presentation, "prsnt_lieutenant_candidate_selection"),
     ],
     [
-      (
-        "s" + str(i),
-        [
-          (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
-          (gt, ":troop_id", 0),
-          (str_store_troop_name, s1, ":troop_id"),
-          (call_script, "script_lieutenant_system_calculate_projected_stats", ":troop_id"),
-        ],
-        "{s1} (S:{reg10} A:{reg11} I:{reg12} C:{reg13}) IF:{reg14} PS:{reg15} PT:{reg16} PD:{reg17} WM:{reg18} SH:{reg19} ATH:{reg20} RID:{reg21} TRK:{reg22} TAC:{reg23} PF:{reg24} SP:{reg25} LS:{reg26}",
-        [
-          (troop_get_slot, ":troop_id", "trp_temp_array_a", i),
-          (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"),
-          (try_for_range, ":j", 0, 4),
-             (troop_set_slot, "trp_temp_array_a", ":j", 0),
-          (try_end),
-          (jump_to_menu, "mnu_camp"),
-        ]
-      ) for i in range(4) # Matches the 4 selected candidates
-    ] + [
-      ("cancel", [], "None of them are worthy.",
-       [
-          (try_for_range, ":j", 0, 4),
-             (troop_set_slot, "trp_temp_array_a", ":j", 0),
-          (try_end),
-          (jump_to_menu, "mnu_camp")
-       ]),
+      ("continue", [], "Continue.",
+       [(jump_to_menu, "mnu_camp")]
+      ),
     ]
   ),
 
@@ -20203,6 +20120,8 @@ game_menus = [
    []
   ),
 ]
+
+
 
 # modmerger_start version=201 type=2
 try:

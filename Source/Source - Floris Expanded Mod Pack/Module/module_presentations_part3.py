@@ -7593,4 +7593,431 @@ reducing the overall operational cost."),
 		(try_end),
 		]),
 	]),
+
+  # ===================================================================
+  # Lieutenant Candidate Selection Presentation
+  # Mirrors prsnt_change_commander style:
+  #   Left panel  - scrollable list of candidate name buttons
+  #   Right panel - portrait + full stats for the highlighted candidate
+  #   Bottom row  - "Promote" (confirms) and "Cancel" (skips all)
+  # $g_lieutenant_selected_candidate holds the index (0-3) of the
+  # candidate the player is currently viewing.
+  # trp_temp_array_a[0..3] = troop IDs of the candidates.
+  # ===================================================================
+  ("lieutenant_candidate_selection", 0, mesh_load_window, [
+    (ti_on_presentation_load,
+      [
+        (presentation_set_duration, 999999),
+        (set_fixed_point_multiplier, 1000),
+
+        # ---- Title text ----------------------------------------
+        (create_text_overlay, "$g_presentation_obj_1",
+            "@You emerge victorious! Who will you promote to Lieutenant?",
+            tf_center_justify|tf_vertical_align_center),
+        (position_set_x, pos1, 500),
+        (position_set_y, pos1, 670),
+        (overlay_set_position, "$g_presentation_obj_1", pos1),
+
+        # ---- "Cancel" button (obj_3) ---------------------------
+        (create_game_button_overlay, "$g_presentation_obj_3", "@None are worthy"),
+        (position_set_x, pos1, 800),
+        (position_set_y, pos1, 40),
+        (overlay_set_position, "$g_presentation_obj_3", pos1),
+
+        # ---- Candidates List -----------------------------------
+        (assign, ":pos_y", 520), # Start Y
+        
+        (try_for_range, ":idx", 0, 4),
+          (troop_get_slot, ":troop_id", "trp_temp_array_a", ":idx"),
+          (gt, ":troop_id", 0),
+
+          # Col 1: Avatar (Manual implementation to remove name line)
+          (store_mul, ":cur_troop", ":troop_id", 2), # with weapons
+          (create_mesh_overlay_with_tableau_material, reg0, -1, "tableau_game_party_window", ":cur_troop"),
+          (position_set_x, pos1, 400), # Scaled from 150
+          (position_set_y, pos1, 400),
+          (overlay_set_size, reg0, pos1),
+          (position_set_x, pos1, 50), 
+          (store_add, ":avatar_y", ":pos_y", 10),
+          (position_set_y, pos1, ":avatar_y"),
+          (overlay_set_position, reg0, pos1),
+          (troop_set_slot, "trp_temp_array_b", ":idx", ":troop_id"), # Store troop_id for event lookup
+
+          # Col 2: Name over Level + Attributes
+          (str_store_troop_name, s1, ":troop_id"),
+          (store_character_level, reg1, ":troop_id"),
+          (store_attribute_level, reg4, ":troop_id", ca_strength),
+          (store_attribute_level, reg5, ":troop_id", ca_intelligence),
+          (store_attribute_level, reg6, ":troop_id", ca_agility),
+          (store_attribute_level, reg7, ":troop_id", ca_charisma),
+          (str_store_string, s1, "@{s1}^Level:  {reg1}^^Attributes:^STR:  {reg4}^INT:  {reg5}^AGI:  {reg6}^CHA: {reg7}"),
+          
+          (create_text_overlay, reg0, "@{s1}", tf_left_align),
+          (position_set_x, pos1, 750), # 75% scale
+          (position_set_y, pos1, 750),
+          (overlay_set_size, reg0, pos1),
+          (position_set_x, pos1, 170), 
+          (store_add, ":text_y", ":pos_y", 15),
+          (position_set_y, pos1, ":text_y"),
+          (overlay_set_position, reg0, pos1),
+
+          # Col 3: Combat Skills
+          (store_skill_level, reg1, skl_ironflesh, ":troop_id"),
+          (store_skill_level, reg2, skl_power_strike, ":troop_id"),
+          (store_skill_level, reg3, skl_power_throw, ":troop_id"),
+          (store_skill_level, reg4, skl_power_draw, ":troop_id"),
+          (store_skill_level, reg5, skl_weapon_master, ":troop_id"),
+          (store_skill_level, reg6, skl_shield, ":troop_id"),
+          (str_store_string, s2, "@Skills:^Ironflesh:    {reg1}^P. Strike:    {reg2}^P. Throw:   {reg3}^P. Draw:    {reg4}^W. Master: {reg5}^Shield:       {reg6}"),
+          
+          (create_text_overlay, reg0, "@{s2}", tf_left_align),
+          (position_set_x, pos1, 750),
+          (position_set_y, pos1, 750),
+          (overlay_set_size, reg0, pos1),
+          (position_set_x, pos1, 290),
+          (position_set_y, pos1, ":text_y"),
+          (overlay_set_position, reg0, pos1),
+
+          # Col 4: Mobility
+          (store_skill_level, reg1, skl_athletics, ":troop_id"),
+          (store_skill_level, reg2, skl_riding, ":troop_id"),
+          (store_skill_level, reg3, skl_tracking, ":troop_id"),
+          (store_skill_level, reg4, skl_tactics, ":troop_id"),
+          (store_skill_level, reg5, skl_pathfinding, ":troop_id"),
+          (store_skill_level, reg6, skl_spotting, ":troop_id"),
+          (str_store_string, s3, "@Athletics:      {reg1}^Riding:         {reg2}^Tracking:      {reg3}^Tactics:        {reg4}^Path-finding: {reg5}^Spotting:      {reg6}"),
+          
+          (create_text_overlay, reg0, "@{s3}", tf_left_align),
+          (position_set_x, pos1, 750),
+          (position_set_y, pos1, 750),
+          (overlay_set_size, reg0, pos1),
+          (position_set_x, pos1, 410),
+          (position_set_y, pos1, ":text_y"),
+          (overlay_set_position, reg0, pos1),
+
+          # Col 5: Tactical
+          (store_skill_level, reg1, skl_tactics, ":troop_id"),
+          (store_skill_level, reg2, skl_wound_treatment, ":troop_id"),
+          (store_skill_level, reg3, skl_surgery, ":troop_id"),
+          (store_skill_level, reg4, skl_first_aid, ":troop_id"),
+          (store_skill_level, reg5, skl_persuasion, ":troop_id"),
+          (store_skill_level, reg6, skl_leadership, ":troop_id"),
+          (str_store_string, s4, "@Tactics:     {reg1}^W. Treat.:  {reg2}^Surgery:     {reg3}^First Aid:   {reg4}^Persuasion: {reg5}^Leadership: {reg6}"),
+          
+          (create_text_overlay, reg0, "@{s4}", tf_left_align),
+          (position_set_x, pos1, 750),
+          (position_set_y, pos1, 750),
+          (overlay_set_size, reg0, pos1),
+          (position_set_x, pos1, 530),
+          (position_set_y, pos1, ":text_y"),
+          (overlay_set_position, reg0, pos1),
+
+          # Col 6: Proficiencies
+          (store_proficiency_level, reg1, ":troop_id", wpt_one_handed_weapon),
+          (store_proficiency_level, reg2, ":troop_id", wpt_two_handed_weapon),
+          (store_proficiency_level, reg3, ":troop_id", wpt_polearm),
+          (store_proficiency_level, reg4, ":troop_id", wpt_archery),
+          (store_proficiency_level, reg5, ":troop_id", wpt_crossbow),
+          (store_proficiency_level, reg6, ":troop_id", wpt_throwing),
+          (str_store_string, s5, "@Proficiencies:^1H Weap: {reg1}^2H Weap: {reg2}^Polearm: {reg3}^Archery: {reg4}^Crossbow: {reg5}^Throwing: {reg6}"),
+          
+          (create_text_overlay, reg0, "@{s5}", tf_left_align),
+          (position_set_x, pos1, 750),
+          (position_set_y, pos1, 750),
+          (overlay_set_size, reg0, pos1),
+          (position_set_x, pos1, 650),
+          (position_set_y, pos1, ":text_y"),
+          (overlay_set_position, reg0, pos1),
+
+          # "Promote" Button
+          (create_game_button_overlay, reg0, "@Promote"),
+          (position_set_x, pos1, 850), # Move left 1/3 button length (from 960)
+          (store_add, ":btn_y", ":pos_y", 40),
+          (position_set_y, pos1, ":btn_y"),
+          (overlay_set_position, reg0, pos1),
+          (troop_set_slot, "trp_temp_array_c", ":idx", reg0), # store promote btn
+
+          (val_sub, ":pos_y", 140),
+        (try_end),
+#        ####### mouse fix pos system #######
+#        (call_script, "script_mouse_fix_pos_ready"),
+#        ####### mouse fix pos system #######
+      ]),
+
+#    (ti_on_presentation_run,
+#     [
+#        ####### mouse fix pos system #######
+#        (call_script, "script_mouse_fix_pos_run"),
+#        ####### mouse fix pos system #######
+#    ]),
+
+    (ti_on_presentation_event_state_change,
+      [
+        (store_trigger_param_1, ":object"),
+
+        # "Cancel" -> dismiss all candidates
+        (try_begin),
+          (eq, ":object", "$g_presentation_obj_3"),
+          (try_for_range, ":j", 0, 4),
+            (troop_set_slot, "trp_temp_array_a", ":j", 0),
+          (try_end),
+          (change_screen_return),
+          (presentation_set_duration, 0),
+        (else_try),
+          # Check Candidate Row Buttons (Promote button only)
+          (assign, ":done", 0),
+          (try_for_range, ":idx", 0, 4),
+            (eq, ":done", 0),
+            (troop_get_slot, ":troop_id", "trp_temp_array_b", ":idx"), # script saved troop here!
+            (gt, ":troop_id", 0),
+            
+            (troop_get_slot, ":btn_promote", "trp_temp_array_c", ":idx"),
+            
+            (eq, ":object", ":btn_promote"), # No more avatar click to promote
+
+            
+            (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"),
+            (try_for_range, ":j", 0, 4),
+              (troop_set_slot, "trp_temp_array_a", ":j", 0),
+            (try_end),
+            (change_screen_return),
+            (presentation_set_duration, 0),
+            (assign, ":done", 1),
+          (try_end),
+        (try_end),
+      ]),
+  ]),
+
+  ("lieutenant_sparring_selection", 0, mesh_load_window, [
+    (ti_on_presentation_load,
+      [
+        (presentation_set_duration, 999999),
+        (set_fixed_point_multiplier, 1000),
+
+        # Title
+        (create_text_overlay, "$g_presentation_obj_1", "@Pick 4 volunteers for the sparring contest.", tf_center_justify),
+        (position_set_x, pos1, 500),
+        (position_set_y, pos1, 690),
+        (overlay_set_position, "$g_presentation_obj_1", pos1),
+
+        # Headlines
+        (create_text_overlay, reg0, "@Volunteers:", 0),
+        (position_set_x, pos1, 70),
+        (position_set_y, pos1, 630),
+        (overlay_set_position, reg0, pos1),
+
+        (create_text_overlay, reg0, "@Selected Candidates:", 0),
+        (position_set_x, pos1, 480),
+        (position_set_y, pos1, 630),
+        (overlay_set_position, reg0, pos1),
+
+        # Add selected candidates (Right Column)
+        (assign, ":pos_y", 578),
+        (try_for_range, ":i", 0, 4),
+          (troop_get_slot, ":t", "trp_temp_array_a", ":i"),
+          (gt, ":t", 0),
+          (str_store_troop_name, s1, ":t"),
+          (create_text_overlay, reg0, "@{s1}", 0),
+          (position_set_x, pos1, 480),
+          (position_set_y, pos1, ":pos_y"),
+          (overlay_set_position, reg0, pos1),
+          (val_sub, ":pos_y", 40),
+        (try_end),
+
+        # Reset Selection button under selected list
+        (create_game_button_overlay, "$g_presentation_obj_2", "@Reset Selection"),
+        (position_set_x, pos1, 550),
+        (position_set_y, pos1, 390),
+        (overlay_set_position, "$g_presentation_obj_2", pos1),
+
+        # Weapon Selection Menu (Checkboxes as Radio Buttons)
+        (create_text_overlay, "$g_presentation_obj_weapon_label", "@Selected Weapon:", 0),
+        (position_set_x, pos1, 480),
+        (position_set_y, pos1, 300),
+        (overlay_set_position, "$g_presentation_obj_weapon_label", pos1),
+        
+        # Weapon 0
+        (assign, ":val", 0),
+        (try_begin), (eq, "$g_lieutenant_sparring_weapon", 0), (assign, ":val", 1), (try_end),
+        (create_check_box_overlay, "$g_presentation_obj_weapon_0", "mesh_checkbox_off", "mesh_checkbox_on"),
+        (overlay_set_val, "$g_presentation_obj_weapon_0", ":val"),
+        (position_set_x, pos1, 485),
+        (position_set_y, pos1, 266),
+        (overlay_set_position, "$g_presentation_obj_weapon_0", pos1),
+        (create_text_overlay, reg0, "@Longsword", 0),
+        (position_set_x, pos1, 505), (position_set_y, pos1, 260), (overlay_set_position, reg0, pos1),
+        
+        # Weapon 1
+        (assign, ":val", 0),
+        (try_begin), (eq, "$g_lieutenant_sparring_weapon", 1), (assign, ":val", 1), (try_end),
+        (create_check_box_overlay, "$g_presentation_obj_weapon_1", "mesh_checkbox_off", "mesh_checkbox_on"),
+        (overlay_set_val, "$g_presentation_obj_weapon_1", ":val"),
+        (position_set_x, pos1, 485),
+        (position_set_y, pos1, 226),
+        (overlay_set_position, "$g_presentation_obj_weapon_1", pos1),
+        (create_text_overlay, reg0, "@Sword & Shield", 0),
+        (position_set_x, pos1, 505), (position_set_y, pos1, 220), (overlay_set_position, reg0, pos1),
+        
+        # Weapon 2
+        (assign, ":val", 0),
+        (try_begin), (eq, "$g_lieutenant_sparring_weapon", 2), (assign, ":val", 1), (try_end),
+        (create_check_box_overlay, "$g_presentation_obj_weapon_2", "mesh_checkbox_off", "mesh_checkbox_on"),
+        (overlay_set_val, "$g_presentation_obj_weapon_2", ":val"),
+        (position_set_x, pos1, 485),
+        (position_set_y, pos1, 186),
+        (overlay_set_position, "$g_presentation_obj_weapon_2", pos1),
+        (create_text_overlay, reg0, "@Staff", 0),
+        (position_set_x, pos1, 505), (position_set_y, pos1, 180), (overlay_set_position, reg0, pos1),
+        
+        # Weapon 3
+        (assign, ":val", 0),
+        (try_begin), (eq, "$g_lieutenant_sparring_weapon", 3), (assign, ":val", 1), (try_end),
+        (create_check_box_overlay, "$g_presentation_obj_weapon_3", "mesh_checkbox_off", "mesh_checkbox_on"),
+        (overlay_set_val, "$g_presentation_obj_weapon_3", ":val"),
+        (position_set_x, pos1, 485),
+        (position_set_y, pos1, 146),
+        (overlay_set_position, "$g_presentation_obj_weapon_3", pos1),
+        (create_text_overlay, reg0, "@Bow & Dagger", 0),
+        (position_set_x, pos1, 505), (position_set_y, pos1, 140), (overlay_set_position, reg0, pos1),
+
+
+        # Main Control Buttons (Bottom Right)
+        (create_game_button_overlay, "$g_presentation_obj_3", "@Cancel"),
+        (position_set_x, pos1, 500),
+        (position_set_y, pos1, 20),
+        (overlay_set_position, "$g_presentation_obj_3", pos1),
+
+        (create_game_button_overlay, "$g_presentation_obj_4", "@Continue"),
+        (position_set_x, pos1, 850),
+        (position_set_y, pos1, 20),
+        (overlay_set_position, "$g_presentation_obj_4", pos1),
+        (try_begin),
+           (store_add, ":limit", "$g_lieutenant_sparring_target_count", 1),
+           (neq, "$g_lieutenant_sparring_selected_count", ":limit"),
+           (overlay_set_color, "$g_presentation_obj_4", 0x888888),
+        (try_end),
+
+        # Scrollable container for volunteers (Left side, shifted right)
+        (str_clear, s0),
+        (create_text_overlay, "$g_presentation_obj_5", s0, tf_scrollable),
+        (position_set_x, pos1, 70),
+        (position_set_y, pos1, 150),
+        (overlay_set_position, "$g_presentation_obj_5", pos1),
+        (position_set_x, pos1, 400),
+        (position_set_y, pos1, 450),
+        (overlay_set_area_size, "$g_presentation_obj_5", pos1),
+        (set_container_overlay, "$g_presentation_obj_5"),
+        
+        (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
+        (store_mul, ":total_height", ":num_unique", 40),
+        (try_begin),
+          (le, ":num_unique", 11),
+          (assign, ":pos_y", 450),
+        (else_try),
+          (assign, ":pos_y", ":total_height"),
+        (try_end),
+        (val_sub, ":pos_y", 40),
+        (assign, ":pos_x", 0),
+
+        (try_for_range, ":i", 1, 24),
+          (ge, ":num_unique", ":i"),
+          (troop_get_slot, ":troop_id", "trp_temp_array_c", ":i"),
+          (store_add, ":count_slot", ":i", 50),
+          (troop_get_slot, reg10, "trp_temp_array_c", ":count_slot"),
+          (gt, reg10, 0),
+          (str_store_troop_name, s1, ":troop_id"),
+          (assign, reg1, reg10),
+          (create_button_overlay, reg0, "@{s1} ({reg1})"),
+          (position_set_x, pos1, ":pos_x"),
+          (position_set_y, pos1, ":pos_y"),
+          (overlay_set_position, reg0, pos1),
+          (troop_set_slot, "trp_temp_array_b", ":i", reg0),
+          (val_sub, ":pos_y", 40),
+        (try_end),
+
+        (set_container_overlay, -1),
+      ]),
+
+    (ti_on_presentation_event_state_change,
+      [
+        (store_trigger_param_1, ":object"),
+        # Fixed Buttons
+        (try_begin),
+          (eq, ":object", "$g_presentation_obj_2"), # Reset
+          (try_for_range, ":i", 0, 4),
+            (troop_get_slot, ":t", "trp_temp_array_a", ":i"),
+            (gt, ":t", 0),
+            (assign, ":found", 0),
+            (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
+            (store_add, ":end", ":num_unique", 1),
+            (try_for_range, ":j", 1, ":end"),
+              (eq, ":found", 0),
+              (troop_slot_eq, "trp_temp_array_c", ":j", ":t"),
+              (store_add, ":count_slot", ":j", 50),
+              (troop_get_slot, ":c", "trp_temp_array_c", ":count_slot"),
+              (val_add, ":c", 1),
+              (troop_set_slot, "trp_temp_array_c", ":count_slot", ":c"),
+              (assign, ":found", 1),
+            (try_end),
+            (troop_set_slot, "trp_temp_array_a", ":i", 0),
+          (try_end),
+          (assign, "$g_lieutenant_sparring_selected_count", 1),
+          (start_presentation, "prsnt_lieutenant_sparring_selection"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_3"), # Cancel
+          (try_for_range, ":j", 0, 4),
+            (troop_set_slot, "trp_temp_array_a", ":j", 0),
+          (try_end),
+          (change_screen_return),
+          (presentation_set_duration, 0),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_4"), # Continue
+          (store_add, ":limit", "$g_lieutenant_sparring_target_count", 1),
+          (assign, reg1, "$g_lieutenant_sparring_selected_count"),
+          (assign, reg2, ":limit"),
+          (try_begin),
+            (eq, "$g_lieutenant_sparring_selected_count", ":limit"),
+            (presentation_set_duration, 0),
+            (jump_to_menu, "mnu_lieutenant_sparring_mission_launch"),
+          (try_end),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_weapon_0"),
+          (assign, "$g_lieutenant_sparring_weapon", 0),
+          (start_presentation, "prsnt_lieutenant_sparring_selection"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_weapon_1"),
+          (assign, "$g_lieutenant_sparring_weapon", 1),
+          (start_presentation, "prsnt_lieutenant_sparring_selection"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_weapon_2"),
+          (assign, "$g_lieutenant_sparring_weapon", 2),
+          (start_presentation, "prsnt_lieutenant_sparring_selection"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_weapon_3"),
+          (assign, "$g_lieutenant_sparring_weapon", 3),
+          (start_presentation, "prsnt_lieutenant_sparring_selection"),
+        (else_try),
+          # Try checking volunteer buttons
+          (store_add, ":limit", "$g_lieutenant_sparring_target_count", 1),
+          (lt, "$g_lieutenant_sparring_selected_count", ":limit"),
+          (troop_get_slot, ":num_unique", "trp_temp_array_c", 0),
+          (assign, ":matched", 0),
+          (store_add, ":end", ":num_unique", 1),
+          (try_for_range, ":i", 1, ":end"),
+            (eq, ":matched", 0),
+            (troop_slot_eq, "trp_temp_array_b", ":i", ":object"),
+            (assign, ":matched", 1),
+            (troop_get_slot, ":troop_id", "trp_temp_array_c", ":i"),
+            (store_add, ":count_slot", ":i", 50),
+            (troop_get_slot, ":count", "trp_temp_array_c", ":count_slot"),
+            (val_sub, ":count", 1),
+            (troop_set_slot, "trp_temp_array_c", ":count_slot", ":count"),
+            (store_sub, ":slot_index", "$g_lieutenant_sparring_selected_count", 1),
+            (troop_set_slot, "trp_temp_array_a", ":slot_index", ":troop_id"),
+            (val_add, "$g_lieutenant_sparring_selected_count", 1),
+            (start_presentation, "prsnt_lieutenant_sparring_selection"),
+          (try_end),
+        (try_end),
+      ]),
+  ]),
 ]

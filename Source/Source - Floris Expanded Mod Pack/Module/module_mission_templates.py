@@ -15903,7 +15903,7 @@ mission_templates = [
     "lieutenant_sparring", mtf_arena_fight, -1,
     "You enter a sparring match with your men.",
     [
-      (0, mtef_visitor_source|mtef_team_0, af_override_all, aif_start_alarmed, 1, [itm_practice_boots]),
+      (0, mtef_leader_only|mtef_team_0, af_override_all, aif_start_alarmed, 1, [itm_practice_boots]),
       (1, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_boots]),
       (2, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_boots]),
       (3, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_boots]),
@@ -15914,6 +15914,10 @@ mission_templates = [
          (store_trigger_param_1, ":agent"),
          (agent_is_human, ":agent"),
          (agent_get_team, ":team", ":agent"),
+         (agent_get_troop_id, ":troop_id", ":agent"),
+         (str_store_troop_name, s10, ":troop_id"),
+         (assign, reg10, ":team"),
+         (display_message, "@DEBUG: Spawned {s10} on team {reg10}"),
          (try_begin),
            (eq, ":team", 0), # Player
            (try_begin),
@@ -15973,9 +15977,10 @@ mission_templates = [
              (agent_set_wielded_item, ":agent", "itm_practice_bow"),
            (try_end),
          (try_end),
-         (try_end),
       ]),
       (ti_before_mission_start, 0, 0, [], [
+         (display_message, "@DEBUG: Sparring Mission Launched!"),
+         (team_set_relation, 0, 1, -1),
          (call_script, "script_change_banners_and_chest"),
          (replace_scene_props, "spr_inventory", "spr_chest_b"),
          (replace_scene_props, "spr_chest_a", "spr_chest_gothic"),
@@ -16016,7 +16021,7 @@ mission_templates = [
         ]),
 
       # Player falls -> defeat
-      (0, 2, ti_once,
+      (1, 2, ti_once,
         [(main_hero_fallen)],
         [
           (assign, ":enemies_alive", 0),
@@ -16032,6 +16037,10 @@ mission_templates = [
           (jump_to_menu, "mnu_training_ground_training_result"),
           (finish_mission),
         ]),
+
+      (ti_before_mission_start, 0, 0, [], [
+        (display_message, "@DEBUG: Mission Launched!"),
+      ]),
 
       # All opponents down -> victory (wait 3 seconds first)
       (3, 4, ti_once,

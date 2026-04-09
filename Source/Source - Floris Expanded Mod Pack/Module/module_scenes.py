@@ -759,7 +759,7 @@ scenes = [
 # Lieutenant Sparring Ground - reuses training_ground terrain code.
 # The compiled training_ground .sco has entry points 0 (player) and 11-13 (opponents) already placed.
 # No scene editor work required.
-("lieutenant_sparring",	sf_generate,	"none",	"none",	(0,0),	(120,120),	-100,	"0x30000500400360d80000189f00002a8380006d91",	[],	["tutorial_chest_1","tutorial_chest_2"],	"outer_terrain_plain"),
+("lieutenant_sparring", sf_generate, "none", "none", (0,0), (100,100), -100, "0x00000001300005000004189f00002a8300006d91", [], [], "outer_terrain_plain"),
 ]
 
 # modmerger_start version=201 type=2

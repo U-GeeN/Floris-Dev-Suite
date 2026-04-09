@@ -15037,30 +15037,32 @@ scripts_part5 = [
 
   # Helper for starting the mission safely using the camp scene
   ("lieutenant_system_start_sparring_mission", [
-    (store_script_param, ":num_enemies", 1),
+    (store_script_param, ":raw_count", 1),
+    # If count is 5, it means 4 enemies were selected (count = 1 + selected).
+    (store_sub, ":num_enemies", ":raw_count", 1),
+    (val_clamp, ":num_enemies", 1, 5),
     
     (assign, "$g_lieutenant_sparring_mode", 1),
     (assign, "$g_training_ground_training_num_enemies", ":num_enemies"),
     (assign, "$g_training_ground_training_num_gourds_to_destroy", 0),
-    (assign, "$g_mt_mode", ctm_melee),
-    (try_begin),
-      (le, "$g_training_ground_training_scene", 0),
-      (assign, "$g_training_ground_training_scene", "scn_training_ground_ranged_melee_4"),
-    (try_end),
+    (assign, "$g_mt_mode", 0), # melee
 
-    (modify_visitors_at_site, "$g_training_ground_training_scene"),
-    (reset_visitors),
     (set_visitor, 0, "trp_player"),
-
     (try_for_range, ":i", 0, ":num_enemies"),
       (troop_get_slot, ":opponent_troop", "trp_temp_array_a", ":i"),
-      (store_add, ":visitor_point", 1, ":i"),
-      (set_visitor, ":visitor_point", ":opponent_troop"),
+      (try_begin),
+        (gt, ":opponent_troop", 0),
+        (store_add, ":visitor_point", 1, ":i"),
+        (set_visitor, ":visitor_point", ":opponent_troop"),
+        (str_store_troop_name, s11, ":opponent_troop"),
+        (assign, reg11, ":visitor_point"),
+      (try_end),
     (try_end),
 
     (set_jump_mission, "mt_lieutenant_sparring"),
     (set_jump_entry, 0),
     (jump_to_scene, "$g_training_ground_training_scene"),
+    #(jump_to_scene, "scn_lieutenant_sparring"),
     (change_screen_mission),
   ]),
 
