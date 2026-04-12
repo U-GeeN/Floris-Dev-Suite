@@ -1832,5 +1832,5 @@ trp_lieutenant_l39 = 1830
 trp_lieutenant_l40 = 1831
 trp_lieutenant_l41 = 1832
 trp_lieutenant_l42 = 1833
-trp_lieutenant_l42_end = 1834
+trp_lieutenant_end = 1834
 trp_troops_end = 1835

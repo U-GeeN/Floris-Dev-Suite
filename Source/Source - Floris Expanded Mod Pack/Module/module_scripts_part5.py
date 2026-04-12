@@ -14838,9 +14838,13 @@ scripts_part5 = [
     # Slot 0 = unique type count
     # 1..50 = troop_ids
     # 51..100 = counts
-    (troop_set_slot, "trp_temp_array_c", 0, 0),
-    (try_for_range, ":i", 1, 101),
+    (try_for_range, ":i", 0, 101),
       (troop_set_slot, "trp_temp_array_c", ":i", 0),
+    (try_end),
+
+    # Clear lieutenant stat cache (trp_temp_array_a)
+    (try_for_range, ":i", 0, 301),
+      (troop_set_slot, "trp_temp_array_a", ":i", 0),
     (try_end),
 
     # Count current lieutenants for penalty calculations
@@ -14851,7 +14855,6 @@ scripts_part5 = [
     (try_end),
     (store_mul, ":lt_penalty", ":lt_count", 8), # -8% chance per existing Lt
     (val_add, ":lt_penalty", "$g_lieutenant_recruitment_penalty"), # Apply the 'recent try' penalty
-
 
     (store_skill_level, ":persuasion", "skl_persuasion", "trp_player"),
     (store_skill_level, ":leadership", "skl_leadership", "trp_player"),
@@ -14927,94 +14930,208 @@ scripts_part5 = [
     (gt, "$g_lieutenant_total_volunteers", 0),
   ]),
 
-  # script_lieutenant_system_calculate_projected_stats
-  # Replicates promotion logic to show "final" stats in menus without modifying troops
-  ("lieutenant_system_calculate_projected_stats", [
+  ("lieutenant_system_calculate_stats", [
     (store_script_param_1, ":source_troop"),
+    (store_script_param, ":candidate_idx", 2), # Optional slot index 0-3
+    
+    (assign, ":attr_cache_base", -1),
+    (assign, ":skill_cache_base", -1),
+    (assign, ":prof_cache_base", -1),
+    
+    (try_begin),
+      (is_between, ":candidate_idx", 1, 5), # 1-4
+      (store_sub, ":idx", ":candidate_idx", 1), # 0-3
+      (store_mul, ":attr_cache_base", ":idx", 10),
+      (val_add, ":attr_cache_base", 110), # Attrs: 110, 120, 130, 140
+      (store_mul, ":skill_cache_base", ":idx", 25),
+      (val_add, ":skill_cache_base", 150), # Skills: 150, 175, 200, 225
+      (store_mul, ":prof_cache_base", ":idx", 10),
+      (val_add, ":prof_cache_base", 250), # Profs: 250, 260, 270, 280
+    (try_end),
 
-    # Determine template
-    (store_character_level, ":source_level", ":source_troop"),
-    (store_sub, ":slot_idx", ":source_level", 14),
-    (val_clamp, ":slot_idx", 0, 29),
-    (store_add, ":template", lieutenants_begin, ":slot_idx"),
-
-    # 1. Virtual Attributes
-    (store_attribute_level, ":v_str", ":template", 0),
-    (store_attribute_level, ":v_agi", ":template", 1),
-    (store_attribute_level, ":v_int", ":template", 2),
-    (store_attribute_level, ":v_cha", ":template", 3),
-
-    (store_add, ":target_attr_points", ":source_level", 32),
-    (store_add, ":current_attr_total", ":v_str", ":v_agi"),
-    (val_add, ":current_attr_total", ":v_int"),
-    (val_add, ":current_attr_total", ":v_cha"),
-    (store_sub, ":attr_points_to_add", ":target_attr_points", ":current_attr_total"),
-    (try_for_range, ":unused", 0, ":attr_points_to_add"),
-      (assign, ":best_attr", -1),
-      (assign, ":max_diff", -100),
-      (try_for_range, ":attr", 0, 4),
-        (store_attribute_level, ":s_val", ":source_troop", ":attr"),
-        (try_begin), (eq, ":attr", 0), (assign, ":l_val", ":v_str"),
-        (else_try), (eq, ":attr", 1), (assign, ":l_val", ":v_agi"),
-        (else_try), (eq, ":attr", 2), (assign, ":l_val", ":v_int"),
-        (else_try), (assign, ":l_val", ":v_cha"), (try_end),
-        (store_sub, ":diff", ":s_val", ":l_val"),
-        (try_begin), (eq, ":attr", 3), (val_add, ":diff", 2), (try_end), # Favor CHA as per promote logic
-        (gt, ":diff", ":max_diff"), (assign, ":max_diff", ":diff"), (assign, ":best_attr", ":attr"),
+    (assign, ":found_cache", 0),
+    # Always initialize skill IDs for trp_temp_array_b (slots 10-34)
+    (troop_set_slot, "trp_temp_array_b", 10, skl_ironflesh),
+    (troop_set_slot, "trp_temp_array_b", 11, skl_power_strike),
+    (troop_set_slot, "trp_temp_array_b", 12, skl_power_throw),
+    (troop_set_slot, "trp_temp_array_b", 13, skl_power_draw),
+    (troop_set_slot, "trp_temp_array_b", 14, skl_weapon_master),
+    (troop_set_slot, "trp_temp_array_b", 15, skl_shield),
+    (troop_set_slot, "trp_temp_array_b", 16, skl_athletics),
+    (troop_set_slot, "trp_temp_array_b", 17, skl_riding),
+    (troop_set_slot, "trp_temp_array_b", 18, skl_tracking),
+    (troop_set_slot, "trp_temp_array_b", 19, skl_tactics),
+    (troop_set_slot, "trp_temp_array_b", 20, skl_pathfinding),
+    (troop_set_slot, "trp_temp_array_b", 21, skl_spotting),
+    (troop_set_slot, "trp_temp_array_b", 22, skl_wound_treatment),
+    (troop_set_slot, "trp_temp_array_b", 23, skl_surgery),
+    (troop_set_slot, "trp_temp_array_b", 24, skl_first_aid),
+    (troop_set_slot, "trp_temp_array_b", 25, skl_persuasion),
+    (troop_set_slot, "trp_temp_array_b", 26, skl_leadership),
+    (troop_set_slot, "trp_temp_array_b", 27, skl_trade),
+    (troop_set_slot, "trp_temp_array_b", 28, skl_prisoner_management),
+    (troop_set_slot, "trp_temp_array_b", 29, skl_engineer),
+    (troop_set_slot, "trp_temp_array_b", 30, skl_inventory_management),
+    (troop_set_slot, "trp_temp_array_b", 31, skl_trainer),
+    (troop_set_slot, "trp_temp_array_b", 32, skl_foraging),
+    (troop_set_slot, "trp_temp_array_b", 33, skl_looting),
+    (troop_set_slot, "trp_temp_array_b", 34, skl_horse_archery),
+    (try_begin),
+      (gt, ":attr_cache_base", 0),
+      (troop_get_slot, ":v_str", "trp_temp_array_a", ":attr_cache_base"),
+      (gt, ":v_str", 0),
+      (assign, ":found_cache", 1),
+      (store_add, ":idx", ":attr_cache_base", 1), (troop_get_slot, ":v_agi", "trp_temp_array_a", ":idx"),
+      (store_add, ":idx", ":attr_cache_base", 2), (troop_get_slot, ":v_int", "trp_temp_array_a", ":idx"),
+      (store_add, ":idx", ":attr_cache_base", 3), (troop_get_slot, ":v_cha", "trp_temp_array_a", ":idx"),
+      
+      # Load Skills from cache to trp_temp_array_b 40-65
+      (try_for_range, ":i", 0, 25),
+        (store_add, ":c_idx", ":skill_cache_base", ":i"),
+        (troop_get_slot, ":val", "trp_temp_array_a", ":c_idx"),
+        (store_add, ":b_idx", 40, ":i"),
+        (troop_set_slot, "trp_temp_array_b", ":b_idx", ":val"),
       (try_end),
+      
+      # Load Proficiencies
+      (store_add, ":idx", ":prof_cache_base", 0), (troop_get_slot, reg41, "trp_temp_array_a", ":idx"),
+      (store_add, ":idx", ":prof_cache_base", 1), (troop_get_slot, reg42, "trp_temp_array_a", ":idx"),
+      (store_add, ":idx", ":prof_cache_base", 2), (troop_get_slot, reg43, "trp_temp_array_a", ":idx"),
+      (store_add, ":idx", ":prof_cache_base", 3), (troop_get_slot, reg44, "trp_temp_array_a", ":idx"),
+      (store_add, ":idx", ":prof_cache_base", 4), (troop_get_slot, reg45, "trp_temp_array_a", ":idx"),
+      (store_add, ":idx", ":prof_cache_base", 5), (troop_get_slot, reg46, "trp_temp_array_a", ":idx"),
+    (try_end),
+
+    (try_begin),
+      (eq, ":found_cache", 0),
+    # Determine template/level (preliminary for skills floor)
+    (store_character_level, ":source_level", ":source_troop"),
+
+    # 1. Attributes
+    (store_attribute_level, ":v_str", ":source_troop", 0),
+    (store_attribute_level, ":v_agi", ":source_troop", 1),
+    (store_attribute_level, ":v_cha", ":source_troop", 3),
+
+    # Derive the matching lieutenant dummy troop for the source level.
+    (store_sub, ":lt_slot_idx", ":source_level", 14),
+    (val_clamp, ":lt_slot_idx", 0, 28),
+    (store_add, ":lt_template", lieutenants_begin, ":lt_slot_idx"),
+
+    # Use Lieutenant template for INT value only.
+    # Read INT attribute from the level-matched dummy troop.
+    (store_attribute_level, ":v_int", ":lt_template", 2),
+
+    # 2. Distribute surplus attribute points into STR/AGI/CHA.
+    #    Budget = level + 32  (Warband formula: 20 base + 4 per level + level bonus).
+    #    Sum current totals, then randomly assign any leftover points.
+    #    Distribution weights: CHA 50%, STR 25%, AGI 25% (INT is set by the template only).
+    (store_add, ":attr_budget", ":source_level", 32),
+    (store_add, ":attr_total", ":v_str", ":v_agi"),
+    (val_add, ":attr_total", ":v_int"),
+    (val_add, ":attr_total", ":v_cha"),
+    (store_sub, ":attr_surplus", ":attr_budget", ":attr_total"),
+
+    # Safety clamp — never distribute negative surplus.
+    (try_begin),
+      (lt, ":attr_surplus", 0),
+      (assign, ":attr_surplus", 0),
+    (try_end),
+
+    # Randomly distribute surplus into STR / AGI / CHA.
+    (try_for_range, ":_unused_attr", 0, ":attr_surplus"),
+      (store_random_in_range, ":attr_roll", 0, 4),
       (try_begin),
-        (eq, ":best_attr", 0), (val_add, ":v_str", 1),
-        (else_try), (eq, ":best_attr", 1), (val_add, ":v_agi", 1),
-        (else_try), (eq, ":best_attr", 2), (val_add, ":v_int", 1),
-        (else_try), (val_add, ":v_cha", 1),
+        (lt, ":attr_roll", 2),           # 50% -> CHA (rolls 0-1)
+        (val_add, ":v_cha", 1),
+      (else_try),
+        (eq, ":attr_roll", 2),           # 25% -> STR (roll 2)
+        (val_add, ":v_str", 1),
+      (else_try),
+        (val_add, ":v_agi", 1),          # 25% -> AGI (roll 3)
       (try_end),
     (try_end),
 
-    # 2. Virtual Skills (using trp_temp_array_b for staging)
-    (troop_set_slot, "trp_temp_array_b", 10, 0), (troop_set_slot, "trp_temp_array_b", 11, 1), (troop_set_slot, "trp_temp_array_b", 12, 2),
-    (troop_set_slot, "trp_temp_array_b", 13, 7), (troop_set_slot, "trp_temp_array_b", 14, 8), (troop_set_slot, "trp_temp_array_b", 15, 9),
-    (troop_set_slot, "trp_temp_array_b", 16, 10), (troop_set_slot, "trp_temp_array_b", 17, 11), (troop_set_slot, "trp_temp_array_b", 18, 12),
-    (troop_set_slot, "trp_temp_array_b", 19, 13), (troop_set_slot, "trp_temp_array_b", 20, 14), (troop_set_slot, "trp_temp_array_b", 21, 15),
-    (troop_set_slot, "trp_temp_array_b", 22, 16), (troop_set_slot, "trp_temp_array_b", 23, 17), (troop_set_slot, "trp_temp_array_b", 24, 21),
-    (troop_set_slot, "trp_temp_array_b", 25, 22), (troop_set_slot, "trp_temp_array_b", 26, 23), (troop_set_slot, "trp_temp_array_b", 27, 24),
-    (troop_set_slot, "trp_temp_array_b", 28, 25), (troop_set_slot, "trp_temp_array_b", 29, 26), (troop_set_slot, "trp_temp_array_b", 30, 27),
-    (troop_set_slot, "trp_temp_array_b", 31, 33), (troop_set_slot, "trp_temp_array_b", 32, 34), (troop_set_slot, "trp_temp_array_b", 33, 35),
-    (troop_set_slot, "trp_temp_array_b", 34, 36),
+
 
     (assign, ":current_skill_total", 0),
     (try_for_range, ":i", 10, 35),
       (troop_get_slot, ":skl", "trp_temp_array_b", ":i"),
-      (store_skill_level, ":val", ":skl", ":template"),
+      (store_skill_level, ":val", ":skl", ":source_troop"),
       (store_add, ":val_slot", ":i", 30),
-      (troop_set_slot, "trp_temp_array_b", ":val_slot", ":val"), # virtual levels in slots 40-64
+      (troop_set_slot, "trp_temp_array_b", ":val_slot", ":val"), # virtual levels in slots 40-65
       (val_add, ":current_skill_total", ":val"),
     (try_end),
 
     (store_add, ":target_skill_points", ":source_level", ":v_int"),
-    (val_add, ":target_skill_points", 5),
+    (val_div, ":target_skill_points", 2), # Scale down target slightly so we don't overcap immediately
+    (val_add, ":target_skill_points", 15),
     (store_sub, ":points_remaining", ":target_skill_points", ":current_skill_total"),
     
     (try_for_range, ":unused", 0, 100),
       (gt, ":points_remaining", 0),
-      (assign, ":best_skill_idx", -1), (assign, ":max_pri", -100),
-      (try_for_range, ":i", 10, 35),
-        (troop_get_slot, ":skl", "trp_temp_array_b", ":i"),
-        (store_add, ":val_slot", ":i", 30),
-        (troop_get_slot, ":l_val", "trp_temp_array_b", ":val_slot"),
-        (lt, ":l_val", 10),
-        # Cap check using virtual attributes
-        (assign, ":base_attr_val", -1),
-        (try_begin), (this_or_next|eq, ":skl", 33), (this_or_next|eq, ":skl", 34), (this_or_next|eq, ":skl", 35), (eq, ":skl", 36), (assign, ":base_attr_val", ":v_str"),
-        (else_try), (this_or_next|ge, ":skl", 21), (assign, ":base_attr_val", ":v_agi"),
-        (else_try), (is_between, ":skl", 7, 18), (assign, ":base_attr_val", ":v_int"),
-        (else_try), (assign, ":base_attr_val", ":v_cha"), (try_end),
-        (store_div, ":cap", ":base_attr_val", 3),
-        (lt, ":l_val", ":cap"),
-        # Priority
-        (store_skill_level, ":s_val", ":skl", ":source_troop"),
-        (store_sub, ":priority", ":s_val", ":l_val"), (val_mul, ":priority", 2),
-        (try_begin), (eq, ":skl", 1), (val_add, ":priority", 15), (else_try), (this_or_next|ge, ":skl", 33), (is_between, ":skl", 21, 28), (val_add, ":priority", 5), (try_end),
-        (gt, ":priority", ":max_pri"), (assign, ":max_pri", ":priority"), (assign, ":best_skill_idx", ":i"),
+      (store_random_in_range, ":is_random", 0, 100),
+      (try_begin),
+        (lt, ":is_random", 20),
+        (assign, ":best_skill_idx", -1),
+        (assign, ":found", 0),
+        (try_for_range, ":unused_attempt", 0, 50),
+          (eq, ":found", 0),
+          (store_random_in_range, ":rand_idx", 10, 35),
+          (troop_get_slot, ":skl", "trp_temp_array_b", ":rand_idx"),
+          (store_add, ":val_slot", ":rand_idx", 30),
+          (troop_get_slot, ":l_val", "trp_temp_array_b", ":val_slot"),
+          (lt, ":l_val", 10),
+          # Cap check using virtual attributes
+          (assign, ":base_attr_val", ":v_cha"),
+          (try_begin), 
+            (this_or_next|eq, ":skl", skl_ironflesh), (this_or_next|eq, ":skl", skl_power_strike), (this_or_next|eq, ":skl", skl_power_throw), (eq, ":skl", skl_power_draw), 
+            (assign, ":base_attr_val", ":v_str"),
+          (else_try), 
+            (this_or_next|eq, ":skl", skl_riding), (this_or_next|eq, ":skl", skl_athletics), (this_or_next|eq, ":skl", skl_shield), (this_or_next|eq, ":skl", skl_weapon_master), 
+            (this_or_next|eq, ":skl", skl_looting), (this_or_next|eq, ":skl", skl_horse_archery), (eq, ":skl", skl_foraging),
+            (assign, ":base_attr_val", ":v_agi"),
+          (else_try), 
+            (this_or_next|eq, ":skl", skl_wound_treatment), (this_or_next|eq, ":skl", skl_surgery), (this_or_next|eq, ":skl", skl_first_aid), (this_or_next|eq, ":skl", skl_persuasion),
+            (this_or_next|eq, ":skl", skl_engineer), (this_or_next|eq, ":skl", skl_inventory_management), (this_or_next|eq, ":skl", skl_spotting), (this_or_next|eq, ":skl", skl_pathfinding),
+            (this_or_next|eq, ":skl", skl_tactics), (this_or_next|eq, ":skl", skl_tracking), (eq, ":skl", skl_trainer),
+            (assign, ":base_attr_val", ":v_int"),
+          (try_end),
+          (store_div, ":cap", ":base_attr_val", 3),
+          (lt, ":l_val", ":cap"),
+          (assign, ":best_skill_idx", ":rand_idx"),
+          (assign, ":found", 1),
+        (try_end),
+      (else_try),
+        # Best skill selection (priority-based)
+        (assign, ":best_skill_idx", -1), (assign, ":max_pri", -100),
+        (try_for_range, ":i", 10, 35),
+          (troop_get_slot, ":skl", "trp_temp_array_b", ":i"),
+          (store_add, ":val_slot", ":i", 30),
+          (troop_get_slot, ":l_val", "trp_temp_array_b", ":val_slot"),
+          (lt, ":l_val", 10),
+          # Cap check using virtual attributes
+          (assign, ":base_attr_val", ":v_cha"),
+          (try_begin), 
+            (this_or_next|eq, ":skl", skl_ironflesh), (this_or_next|eq, ":skl", skl_power_strike), (this_or_next|eq, ":skl", skl_power_throw), (eq, ":skl", skl_power_draw), 
+            (assign, ":base_attr_val", ":v_str"),
+          (else_try), 
+            (this_or_next|eq, ":skl", skl_riding), (this_or_next|eq, ":skl", skl_athletics), (this_or_next|eq, ":skl", skl_shield), (this_or_next|eq, ":skl", skl_weapon_master), 
+            (this_or_next|eq, ":skl", skl_looting), (this_or_next|eq, ":skl", skl_horse_archery), (eq, ":skl", skl_foraging),
+            (assign, ":base_attr_val", ":v_agi"),
+          (else_try), 
+            (this_or_next|eq, ":skl", skl_first_aid), (this_or_next|eq, ":skl", skl_surgery), (this_or_next|eq, ":skl", skl_wound_treatment), (this_or_next|eq, ":skl", skl_spotting), 
+            (this_or_next|eq, ":skl", skl_pathfinding), (this_or_next|eq, ":skl", skl_tactics), (this_or_next|eq, ":skl", skl_tracking), (this_or_next|eq, ":skl", skl_trainer),
+            (this_or_next|eq, ":skl", skl_engineer), (this_or_next|eq, ":skl", skl_inventory_management), (eq, ":skl", skl_persuasion),
+            (assign, ":base_attr_val", ":v_int"),
+          (try_end),
+          (store_div, ":cap", ":base_attr_val", 3),
+          (lt, ":l_val", ":cap"),
+          # Priority
+          (store_skill_level, ":s_val", ":skl", ":source_troop"),
+          (store_sub, ":priority", ":s_val", ":l_val"), (val_mul, ":priority", 2),
+          (try_begin), (eq, ":skl", skl_leadership), (val_add, ":priority", 25), (else_try), (eq, ":skl", skl_trainer), (val_add, ":priority", 15), (else_try), (this_or_next|ge, ":skl", skl_ironflesh), (is_between, ":skl", 9, 16), (val_add, ":priority", 5), (try_end),
+          (gt, ":priority", ":max_pri"), (assign, ":max_pri", ":priority"), (assign, ":best_skill_idx", ":i"),
+        (try_end),
       (try_end),
       (try_begin), (ge, ":best_skill_idx", 0),
         (store_add, ":val_slot", ":best_skill_idx", 30),
@@ -15024,15 +15141,98 @@ scripts_part5 = [
         (val_sub, ":points_remaining", 1),
       (else_try), (assign, ":unused", 100), (try_end),
     (try_end),
-
-    # Map to registers
-    (assign, reg10, ":v_str"), (assign, reg11, ":v_agi"), (assign, reg12, ":v_int"), (assign, reg13, ":v_cha"),
-    (try_for_range, ":i", 10, 35),
-      (troop_get_slot, ":skl", "trp_temp_array_b", ":i"), 
+    # Boost favored skills (combat + leadership)
+    (try_for_range, ":i", 10, 15),  # ironflesh to weapon_master
       (store_add, ":val_slot", ":i", 30),
       (troop_get_slot, ":val", "trp_temp_array_b", ":val_slot"),
-      (try_begin), (eq, ":skl", 36), (assign, reg14, ":val"), (else_try), (eq, ":skl", 35), (assign, reg15, ":val"), (else_try), (eq, ":skl", 34), (assign, reg16, ":val"), (else_try), (eq, ":skl", 33), (assign, reg17, ":val"), (else_try), (eq, ":skl", 27), (assign, reg18, ":val"), (else_try), (eq, ":skl", 26), (assign, reg19, ":val"), (else_try), (eq, ":skl", 25), (assign, reg20, ":val"), (else_try), (eq, ":skl", 24), (assign, reg21, ":val"), (else_try), (eq, ":skl", 16), (assign, reg22, ":val"), (else_try), (eq, ":skl", 15), (assign, reg23, ":val"), (else_try), (eq, ":skl", 14), (assign, reg24, ":val"), (else_try), (eq, ":skl", 13), (assign, reg25, ":val"), (else_try), (eq, ":skl", 1), (assign, reg26, ":val"), (try_end),
+      (lt, ":val", 10),
+      (val_add, ":val", 1),
+      (troop_set_slot, "trp_temp_array_b", ":val_slot", ":val"),
     (try_end),
+    # Leadership skill boost — guaranteed +1, capped at INT/3, safe in try_begin
+    (try_begin),
+      (troop_get_slot, ":val", "trp_temp_array_b", 56), # Leadership value slot (26+30)
+      (store_div, ":lead_cap", ":v_int", 3),
+      (lt, ":val", ":lead_cap"),
+      (val_add, ":val", 1),
+      (troop_set_slot, "trp_temp_array_b", 56, ":val"),
+    (try_end),
+
+    # 3. Proficiencies
+    (store_mul, ":base_prof", ":source_level", 6),
+    (val_add, ":base_prof", 40),
+    (try_for_range, ":prof", 0, 7),
+      (store_proficiency_level, ":val", ":source_troop", ":prof"),
+      (assign, ":final_prof", ":base_prof"),
+      (try_begin), (gt, ":val", ":final_prof"), (assign, ":final_prof", ":val"), (try_end),
+      (try_begin), (eq, ":prof", 0), (assign, reg41, ":final_prof"),
+      (else_try), (eq, ":prof", 1), (assign, reg42, ":final_prof"),
+      (else_try), (eq, ":prof", 2), (assign, reg43, ":final_prof"),
+      (else_try), (eq, ":prof", 3), (assign, reg44, ":final_prof"),
+      (else_try), (eq, ":prof", 4), (assign, reg45, ":final_prof"),
+      (else_try), (eq, ":prof", 5), (assign, reg46, ":final_prof"), (try_end),
+    (try_end),
+
+    # Cache if requested
+    (try_begin),
+      (gt, ":attr_cache_base", 0),
+      (troop_set_slot, "trp_temp_array_a", ":attr_cache_base", ":v_str"),
+      (store_add, ":idx", ":attr_cache_base", 1), (troop_set_slot, "trp_temp_array_a", ":idx", ":v_agi"),
+      (store_add, ":idx", ":attr_cache_base", 2), (troop_set_slot, "trp_temp_array_a", ":idx", ":v_int"),
+      (store_add, ":idx", ":attr_cache_base", 3), (troop_set_slot, "trp_temp_array_a", ":idx", ":v_cha"),
+      
+      (try_for_range, ":i", 0, 25),
+        (store_add, ":c_idx", ":skill_cache_base", ":i"),
+        (store_add, ":b_idx", 40, ":i"),
+        (troop_get_slot, ":val", "trp_temp_array_b", ":b_idx"),
+        (troop_set_slot, "trp_temp_array_a", ":c_idx", ":val"),
+      (try_end),
+      
+      (store_add, ":idx", ":prof_cache_base", 0), (troop_set_slot, "trp_temp_array_a", ":idx", reg41),
+      (store_add, ":idx", ":prof_cache_base", 1), (troop_set_slot, "trp_temp_array_a", ":idx", reg42),
+      (store_add, ":idx", ":prof_cache_base", 2), (troop_set_slot, "trp_temp_array_a", ":idx", reg43),
+      (store_add, ":idx", ":prof_cache_base", 3), (troop_set_slot, "trp_temp_array_a", ":idx", reg44),
+      (store_add, ":idx", ":prof_cache_base", 4), (troop_set_slot, "trp_temp_array_a", ":idx", reg45),
+      (store_add, ":idx", ":prof_cache_base", 5), (troop_set_slot, "trp_temp_array_a", ":idx", reg46),
+    (try_end),
+    
+    (try_end), # End of non-cached calculation block
+
+    (assign, reg13, ":candidate_idx"),
+    # Map to registers (ALWAYS)
+    (assign, reg10, ":v_str"), (assign, reg11, ":v_agi"), (assign, reg12, ":v_int"), (assign, reg13, ":v_cha"),
+    
+    # Skills mapped to reg14-reg38 in custom order (25 skills)
+    # Column 1: Combat (9 skills)
+    (troop_get_slot, reg14, "trp_temp_array_b", 40), # Ironflesh
+    (troop_get_slot, reg15, "trp_temp_array_b", 41), # Power Strike
+    (troop_get_slot, reg16, "trp_temp_array_b", 42), # Power Throw
+    (troop_get_slot, reg17, "trp_temp_array_b", 43), # Power Draw
+    (troop_get_slot, reg18, "trp_temp_array_b", 44), # Weapon Master
+    (troop_get_slot, reg19, "trp_temp_array_b", 45), # Shield
+    (troop_get_slot, reg20, "trp_temp_array_b", 46), # Athletics
+    (troop_get_slot, reg21, "trp_temp_array_b", 47), # Riding
+    (troop_get_slot, reg22, "trp_temp_array_b", 64), # Horse Archery
+    
+    # Column 2: Scouting/Action (8 skills)
+    (troop_get_slot, reg23, "trp_temp_array_b", 63), # Looting
+    (troop_get_slot, reg24, "trp_temp_array_b", 62), # Foraging
+    (troop_get_slot, reg25, "trp_temp_array_b", 61), # Trainer
+    (troop_get_slot, reg26, "trp_temp_array_b", 48), # Tracking
+    (troop_get_slot, reg27, "trp_temp_array_b", 49), # Tactics
+    (troop_get_slot, reg28, "trp_temp_array_b", 50), # Path-finding
+    (troop_get_slot, reg29, "trp_temp_array_b", 51), # Spotting
+    (troop_get_slot, reg30, "trp_temp_array_b", 60), # Inventory Management
+    
+    # Column 3: Medical/Admin (8 skills)
+    (troop_get_slot, reg31, "trp_temp_array_b", 52), # Wound Treatment
+    (troop_get_slot, reg32, "trp_temp_array_b", 53), # Surgery
+    (troop_get_slot, reg33, "trp_temp_array_b", 54), # First Aid
+    (troop_get_slot, reg34, "trp_temp_array_b", 59), # Engineer
+    (troop_get_slot, reg35, "trp_temp_array_b", 55), # Persuasion
+    (troop_get_slot, reg36, "trp_temp_array_b", 58), # Prisoner Management
+    (troop_get_slot, reg37, "trp_temp_array_b", 56), # Leadership
+    (troop_get_slot, reg38, "trp_temp_array_b", 57), # Trade
   ]),
 
   # Helper for starting the mission safely using the camp scene
@@ -15061,15 +15261,15 @@ scripts_part5 = [
 
     (set_jump_mission, "mt_lieutenant_sparring"),
     (set_jump_entry, 0),
-    (jump_to_scene, "$g_training_ground_training_scene"),
-    #(jump_to_scene, "scn_lieutenant_sparring"),
+    #(jump_to_scene, "$g_training_ground_training_scene"),
+    (jump_to_scene, "scn_lieutenant_sparring"),
     (change_screen_mission),
   ]),
 
-
-
   ("lieutenant_system_finish_promotion", [
-    (store_script_param, ":source_troop", 1),
+    (store_script_param_1, ":source_troop"),
+    (store_script_param, ":candidate_idx", 2),
+    
     (assign, ":lieutenant_troop", -1),
 
     # Count how many lieutenant slots are currently active (in party)
@@ -15085,10 +15285,10 @@ scripts_part5 = [
       (ge, ":active_count", 10),
       (display_message, "@You already have the maximum number of Lieutenants (10)!"),
     (else_try),
-      # Determine which level slot to pick (levels 14-42 = indices 0-20)
-      (store_character_level, ":source_level", ":source_troop"),
-      (val_clamp, ":source_level", 14, 42),
-      (store_sub, ":slot_idx", ":source_level", 14), # 0-28
+      # Determine template based on Source Level (l14 is the base)
+      (store_character_level, ":char_level", ":source_troop"),
+      (store_sub, ":slot_idx", ":char_level", 14),
+      (val_clamp, ":slot_idx", 0, 28), # Templates range from L14 to L42 (offset 0-28)
       (store_add, ":lieutenant_troop", lieutenants_begin, ":slot_idx"),
 
       # If that slot is already in use, scan from the same index upward then wrap around
@@ -15108,7 +15308,7 @@ scripts_part5 = [
         (try_end),
       (try_end),
 
-      (call_script, "script_lieutenant_system_promote", ":lieutenant_troop", ":source_troop"),
+      (call_script, "script_lieutenant_system_promote", ":lieutenant_troop", ":source_troop", ":candidate_idx"),
       
       # Set recovery penalty: Starting at 80 (-80% chance)
       (assign, "$g_lieutenant_recruitment_penalty", 80),
@@ -15120,167 +15320,64 @@ scripts_part5 = [
   ]),
 
 
-
   ("lieutenant_system_promote", [
     (store_script_param, ":lieutenant_troop", 1),
     (store_script_param, ":source_troop", 2),
+    (store_script_param, ":candidate_idx", 3),
 
-    # VERSION 9: DUMMY NPC - No XP injection needed; level is baked into the template.
     (party_remove_members, "p_main_party", ":lieutenant_troop", 1),
 
-    # Phase 0: Reset Identity & Type
+    # Phase 0: Identity
     (troop_get_type, ":type", ":source_troop"),
     (troop_set_type, ":lieutenant_troop", ":type"),
 
-    # Phase 1: Distribute Attributes (Target: Level + 32)
-    (store_character_level, ":source_level", ":source_troop"),
-    (store_add, ":target_attr_points", ":source_level", 32),
+    # Phase 1: Stats calculation & application
+    (call_script, "script_lieutenant_system_calculate_stats", ":source_troop", ":candidate_idx"),
     
-    # Calculate current attribute total (base engine stats for hero level)
-    (assign, ":current_attr_total", 0),
+    # Since we use DUMMY templates, we should just raise them to the target.
     (try_for_range, ":attr", 0, 4),
-      (store_attribute_level, ":val", ":lieutenant_troop", ":attr"),
-      (val_add, ":current_attr_total", ":val"),
-    (try_end),
-
-    (store_sub, ":attr_points_to_add", ":target_attr_points", ":current_attr_total"),
-    (try_for_range, ":unused", 0, ":attr_points_to_add"),
-      (assign, ":best_attr", -1),
-      (assign, ":max_diff", -100),
-      (try_for_range, ":attr", 0, 4),
-        (store_attribute_level, ":s_val", ":source_troop", ":attr"),
-        (store_attribute_level, ":l_val", ":lieutenant_troop", ":attr"),
-        (store_sub, ":diff", ":s_val", ":l_val"),
-        (try_begin),
-          (eq, ":attr", 3), # Favor Charisma (attribute index 3)
-          (val_add, ":diff", 2), # Slightly favoring as requested
-        (try_end),
-        (gt, ":diff", ":max_diff"),
-        (assign, ":max_diff", ":diff"),
-        (assign, ":best_attr", ":attr"),
-      (try_end),
-      (try_begin),
-        (ge, ":best_attr", 0),
-        (troop_raise_attribute, ":lieutenant_troop", ":best_attr", 1),
-      (try_end),
-    (try_end),
-
-    # Phase 2: Distribute Skills (Target: Level + Current_INT + 5)
-    (store_attribute_level, ":l_int", ":lieutenant_troop", 2),
-    (assign, ":target_skill_points", ":source_level"),
-    (val_add, ":target_skill_points", ":l_int"),
-    (val_add, ":target_skill_points", 5),
-    (assign, reg2, ":target_skill_points"),
-    
-    # Native Skill mapping (25 real skills)
-    (troop_set_slot, "trp_temp_array_a", 0, 0),        # Trade (CHA)
-    (troop_set_slot, "trp_temp_array_a", 1, 1),        # Leadership (CHA)
-    (troop_set_slot, "trp_temp_array_a", 2, 2),        # Prisoner Man. (CHA)
-    (troop_set_slot, "trp_temp_array_a", 3, 7),        # Persuasion (INT)
-    (troop_set_slot, "trp_temp_array_a", 4, 8),        # Engineer (INT)
-    (troop_set_slot, "trp_temp_array_a", 5, 9),        # First Aid (INT)
-    (troop_set_slot, "trp_temp_array_a", 6, 10),       # Surgery (INT)
-    (troop_set_slot, "trp_temp_array_a", 7, 11),       # Wound Treatment (INT)
-    (troop_set_slot, "trp_temp_array_a", 8, 12),       # Inventory Man. (INT)
-    (troop_set_slot, "trp_temp_array_a", 9, 13),       # Spotting (INT)
-    (troop_set_slot, "trp_temp_array_a", 10, 14),      # Pathfinding (INT)
-    (troop_set_slot, "trp_temp_array_a", 11, 15),      # Tactics (INT)
-    (troop_set_slot, "trp_temp_array_a", 12, 16),      # Tracking (INT)
-    (troop_set_slot, "trp_temp_array_a", 13, 17),      # Trainer (INT)
-    (troop_set_slot, "trp_temp_array_a", 14, 21),      # Foraging (AGI)
-    (troop_set_slot, "trp_temp_array_a", 15, 22),      # Looting (AGI)
-    (troop_set_slot, "trp_temp_array_a", 16, 23),      # Horse Archery (AGI)
-    (troop_set_slot, "trp_temp_array_a", 17, 24),      # Riding (AGI)
-    (troop_set_slot, "trp_temp_array_a", 18, 25),      # Athletics (AGI)
-    (troop_set_slot, "trp_temp_array_a", 19, 26),      # Shield (AGI)
-    (troop_set_slot, "trp_temp_array_a", 20, 27),      # Weapon Master (AGI)
-    (troop_set_slot, "trp_temp_array_a", 21, 33),      # Power Draw (STR)
-    (troop_set_slot, "trp_temp_array_a", 22, 34),      # Power Throw (STR)
-    (troop_set_slot, "trp_temp_array_a", 23, 35),      # Power Strike (STR)
-    (troop_set_slot, "trp_temp_array_a", 24, 36),      # Ironflesh (STR)
-
-    # Calculate current skill total
-    (assign, ":current_skill_total", 0),
-    (try_for_range, ":i_map", 0, 25),
-      (troop_get_slot, ":skl", "trp_temp_array_a", ":i_map"),
-      (store_skill_level, ":val", ":skl", ":lieutenant_troop"),
-      (val_add, ":current_skill_total", ":val"),
-    (try_end),
-
-    (store_sub, ":points_remaining", ":target_skill_points", ":current_skill_total"),
-    
-    # Allocation loop
-    (try_for_range, ":unused", 0, 100),
-      (gt, ":points_remaining", 0),
-      
-      (assign, ":best_skill", -1),
-      (assign, ":max_pri", -100),
-      
-      (try_for_range, ":i_map", 0, 25),
-        (troop_get_slot, ":skl", "trp_temp_array_a", ":i_map"),
-        (store_skill_level, ":l_val", ":skl", ":lieutenant_troop"),
-        (lt, ":l_val", 10), # Soft cap 10
-        
-        # Determine attribute cap
-        (assign, ":base_attr_idx", -1),
-        (try_begin),
-          (this_or_next|eq, ":skl", 33), # STR skills
-          (this_or_next|eq, ":skl", 34),
-          (this_or_next|eq, ":skl", 35),
-          (eq, ":skl", 36),
-          (assign, ":base_attr_idx", 0),
-        (else_try),
-          (is_between, ":skl", 21, 28), # AGI skills
-          (assign, ":base_attr_idx", 1),
-        (else_try),
-          (is_between, ":skl", 7, 18),  # INT skills
-          (assign, ":base_attr_idx", 2),
-        (else_try),
-          (assign, ":base_attr_idx", 3), # CHA skills
-        (try_end),
-        
-        (store_attribute_level, ":attr_val", ":lieutenant_troop", ":base_attr_idx"),
-        (store_div, ":cap", ":attr_val", 3),
-        (lt, ":l_val", ":cap"),
-        
-        # Calculate Priority
-        (store_skill_level, ":s_val", ":skl", ":source_troop"),
-        (store_sub, ":priority", ":s_val", ":l_val"),
-        (val_mul, ":priority", 2),
-        
-        # Priority weights: Focus on Leadership
-        (try_begin),
-          (eq, ":skl", 1), # Leadership
-          (val_add, ":priority", 15),
-        (else_try),
-          (this_or_next|ge, ":skl", 33), # Combat
-          (is_between, ":skl", 21, 28), # Athletic/Horse
-          (val_add, ":priority", 5),
-        (try_end),
-        
-        (gt, ":priority", ":max_pri"),
-        (assign, ":max_pri", ":priority"),
-        (assign, ":best_skill", ":skl"),
-      (try_end),
-      
-      (try_begin),
-        (ge, ":best_skill", 0),
-        (troop_raise_skill, ":lieutenant_troop", ":best_skill", 1),
-        (val_sub, ":points_remaining", 1),
-      (else_try),
-        (assign, ":unused", 100), # Break if no skill can be raised
-      (try_end),
-    (try_end),
-
-    # Phase 3: Mirror Proficiencies
-    (try_for_range, ":prof", 0, 7),
-      (store_proficiency_level, ":val", ":source_troop", ":prof"),
-      (store_proficiency_level, ":cur_val", ":lieutenant_troop", ":prof"),
-      (store_sub, ":diff", ":val", ":cur_val"),
+      (store_attribute_level, ":cur", ":lieutenant_troop", ":attr"),
+      (try_begin), (eq, ":attr", 0), (assign, ":target", reg10),
+      (else_try), (eq, ":attr", 1), (assign, ":target", reg11),
+      (else_try), (eq, ":attr", 2), (assign, ":target", reg12),
+      (else_try), (assign, ":target", reg13), (try_end),
+      (store_sub, ":diff", ":target", ":cur"),
       (try_begin),
         (gt, ":diff", 0),
-        (troop_raise_proficiency_linear, ":lieutenant_troop", ":prof", ":diff"),
+        # Target is higher — raise normally one step at a time
+        (try_for_range, ":unused", 0, ":diff"), (troop_raise_attribute, ":lieutenant_troop", ":attr", 1), (try_end),
+      (else_try),
+        (lt, ":diff", 0),
+        # Target is lower — reduce by applying the negative delta directly
+        (display_message, "@WARNING: Lt slot has inflated attr — reducing to target."),
+        (troop_raise_attribute, ":lieutenant_troop", ":attr", ":diff"),
       (try_end),
+    (try_end),
+
+    # Phase 2: Skills
+    (try_for_range, ":i", 10, 35),
+      (troop_get_slot, ":skl", "trp_temp_array_b", ":i"),
+      (store_add, ":val_slot", ":i", 30),
+      (troop_get_slot, ":target", "trp_temp_array_b", ":val_slot"),
+      (store_skill_level, ":cur", ":skl", ":lieutenant_troop"),
+      (store_sub, ":diff", ":target", ":cur"),
+      (try_begin), 
+        (gt, ":diff", 0), 
+        (try_for_range, ":unused", 0, ":diff"), (troop_raise_skill, ":lieutenant_troop", ":skl", 1), (try_end), 
+      (try_end),
+    (try_end),
+
+    # Phase 3: Proficiencies
+    (try_for_range, ":prof", 0, 6),
+      (try_begin), (eq, ":prof", 0), (assign, ":target", reg41),
+      (else_try), (eq, ":prof", 1), (assign, ":target", reg42),
+      (else_try), (eq, ":prof", 2), (assign, ":target", reg43),
+      (else_try), (eq, ":prof", 3), (assign, ":target", reg44),
+      (else_try), (eq, ":prof", 4), (assign, ":target", reg45),
+      (else_try), (assign, ":target", reg46), (try_end),
+      (store_proficiency_level, ":cur", ":lieutenant_troop", ":prof"),
+      (store_sub, ":diff", ":target", ":cur"),
+      (try_begin), (neq, ":diff", 0), (troop_raise_proficiency_linear, ":lieutenant_troop", ":prof", ":diff"), (try_end),
     (try_end),
 
     # Phase 4: Mirror Equipment
@@ -15294,56 +15391,27 @@ scripts_part5 = [
       (try_end),
     (try_end),
     (troop_equip_items, ":lieutenant_troop"),
+    (try_for_range, ":slot", 10, 96), (troop_set_inventory_slot, ":lieutenant_troop", ":slot", -1), (try_end),
 
-    # Clear excess items left in the inventory/backpack (slots 10-95)
-    # Warband equipment slots are 0-9.
-    (try_for_range, ":slot", 10, 96),
-      (troop_set_inventory_slot, ":lieutenant_troop", ":slot", -1),
-    (try_end),
-
-    # Phase 5: Identity Naming (Ordinal based on active lieutenants count)
+    # Phase 5: Naming
     (assign, ":active_count", 0),
-    (try_for_range, ":lt", lieutenants_begin, lieutenants_end),
-      (try_begin),
-        (main_party_has_troop, ":lt"),
-        (val_add, ":active_count", 1),
-      (try_end),
-    (try_end),
-    (val_add, ":active_count", 1), # This is the Nth lieutenant
-
+    (try_for_range, ":lt", lieutenants_begin, lieutenants_end), (main_party_has_troop, ":lt"), (val_add, ":active_count", 1), (try_end),
+    (val_add, ":active_count", 1),
     (try_begin),
       (eq, ":active_count", 1), (str_store_string, s5, "@Lt. I"),
-    (else_try),
-      (eq, ":active_count", 2), (str_store_string, s5, "@Lt. II"),
-    (else_try),
-      (eq, ":active_count", 3), (str_store_string, s5, "@Lt. III"),
-    (else_try),
-      (eq, ":active_count", 4), (str_store_string, s5, "@Lt. IV"),
-    (else_try),
-      (eq, ":active_count", 5), (str_store_string, s5, "@Lt. V"),
-    (else_try),
-      (eq, ":active_count", 6), (str_store_string, s5, "@Lt. VI"),
-    (else_try),
-      (eq, ":active_count", 7), (str_store_string, s5, "@Lt. VII"),
-    (else_try),
-      (eq, ":active_count", 8), (str_store_string, s5, "@Lt. VIII"),
-    (else_try),
-      (eq, ":active_count", 9), (str_store_string, s5, "@Lt. IX"),
-    (else_try),
-      (eq, ":active_count", 10), (str_store_string, s5, "@Lt. X"),
-    (else_try),
-      (str_store_string, s5, "@Lt. X+"), # Fallback so string isn't empty buffer
+      (else_try), (eq, ":active_count", 2), (str_store_string, s5, "@Lt. II"),
+      (else_try), (eq, ":active_count", 3), (str_store_string, s5, "@Lt. III"),
+      (else_try), (eq, ":active_count", 4), (str_store_string, s5, "@Lt. IV"),
+      (else_try), (eq, ":active_count", 5), (str_store_string, s5, "@Lt. V"),
+      (else_try), (eq, ":active_count", 6), (str_store_string, s5, "@Lt. VI"),
+      (else_try), (eq, ":active_count", 7), (str_store_string, s5, "@Lt. VII"),
+      (else_try), (eq, ":active_count", 8), (str_store_string, s5, "@Lt. VIII"),
+      (else_try), (eq, ":active_count", 9), (str_store_string, s5, "@Lt. IX"),
+      (else_try), (str_store_string, s5, "@Lt. X"),
     (try_end),
 
-    (try_begin),
-      (eq, ":type", 1), # female
-      (store_random_in_range, ":name_no", female_names_begin, female_names_end),
-    (else_try),
-      (store_random_in_range, ":name_no", names_begin, names_end),
-    (try_end),
-    (str_store_string, s1, ":name_no"),
-    (str_store_string, s1, "@{s5} {s1}"),
-    (troop_set_name, ":lieutenant_troop", s1),
+    (try_begin), (eq, ":type", 1), (store_random_in_range, ":name_no", female_names_begin, female_names_end), (else_try), (store_random_in_range, ":name_no", names_begin, names_end), (try_end),
+    (str_store_string, s1, ":name_no"), (str_store_string, s1, "@{s5} {s1}"), (troop_set_name, ":lieutenant_troop", s1),
 
     # Phase 6: Finalize Recruitment
     (party_remove_members, "p_main_party", ":source_troop", 1),
@@ -15353,6 +15421,7 @@ scripts_part5 = [
     (str_store_troop_name, s1, ":lieutenant_troop"),
     (display_message, "@{s1} has been promoted and joined your ranks!"),
   ]),
+
 
   
 ]

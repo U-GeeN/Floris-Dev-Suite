@@ -4609,7 +4609,7 @@ scripts_part2 = [
           
         (try_begin),
           # Lieutenant removal (requested by USER)
-          (is_between, ":stack_troop", "trp_lieutenant_l14", "trp_lieutenant_l42_end"),
+          (is_between, ":stack_troop", "trp_lieutenant_l14", "trp_lieutenant_end"),
           (party_remove_members, ":party", ":stack_troop", ":stack_size"),
           (troop_set_slot, ":stack_troop", slot_troop_occupation, slto_inactive),
           (troop_set_slot, ":stack_troop", slot_troop_cur_center, -1),

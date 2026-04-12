@@ -1123,7 +1123,7 @@ dplmc_slto_dead            = 15 #not normally set
 
 slto_lieutenant        = 20
 lieutenants_begin      = "trp_lieutenant_l14"
-lieutenants_end        = "trp_lieutenant_l42_end"
+lieutenants_end        = "trp_lieutenant_end"
 
 ########################################################
 ##  QUEST SLOTS            #############################
@@ -1193,7 +1193,7 @@ rel_ally    = 2
 
 #Talk contexts
 tc_town_talk                  = 0
-tc_court_talk   	      	  = 1
+tc_court_talk   	      	    = 1
 tc_party_encounter            = 2
 tc_castle_gate                = 3
 tc_siege_commander            = 4
@@ -1208,11 +1208,11 @@ tc_siege_won_seneschal        = 12
 tc_ally_thanks                = 13
 tc_tavern_talk                = 14
 tc_rebel_thanks               = 15
-tc_garden            		  = 16
-tc_courtship            	  = 16
-tc_after_duel            	  = 17
+tc_garden            		      = 16
+tc_courtship            	    = 16
+tc_after_duel            	    = 17
 tc_prison_break               = 18
-tc_escape               	  = 19
+tc_escape               	    = 19
 tc_give_center_to_fief        = 20
 tc_merchants_house            = 21
 tc_camp                       = 22 #Tempered added for camp talk with npc's and troops

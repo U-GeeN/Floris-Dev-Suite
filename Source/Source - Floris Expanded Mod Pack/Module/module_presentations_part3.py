@@ -7347,20 +7347,7 @@ reducing the overall operational cost."),
      (ti_on_presentation_load,
       [
 	    (presentation_set_duration, 999999),
-        (set_fixed_point_multiplier, 1000),
-		
-#		(str_clear, s0),
- #       (create_text_overlay, reg0, "@Hello, {s0}", tf_scrollable),
- #       (position_set_x, pos1, 50),
-  #      (position_set_y, pos1, 50),
- ###       (overlay_set_position, reg0, pos1),
- #       (position_set_x, pos1, 550),
- #       (position_set_y, pos1, 630),
-  #      (overlay_set_area_size, reg0, pos1),
- #       (set_container_overlay, reg0),
-		
-
-		
+      (set_fixed_point_multiplier, 1000),
 
 		###HEADLINES###
 		(assign, ":x_poshl", 155),
@@ -7429,11 +7416,10 @@ reducing the overall operational cost."),
 		(str_clear, s9),	
 		(str_clear, s8),
 		
-		
-        (assign, reg2, 0),#total_acres
-        (assign, reg3, 0),#player_acres
-        (assign, reg4, 0),#balance
-        (assign, reg5, 0),#assets
+    (assign, reg2, 0),#total_acres
+    (assign, reg3, 0),#player_acres
+    (assign, reg4, 0),#balance
+    (assign, reg5, 0),#assets
 		(assign, reg6, 0),#debt
 		(assign, reg7, 0),#deadline
 		
@@ -7644,13 +7630,12 @@ reducing the overall operational cost."),
           (troop_set_slot, "trp_temp_array_b", ":idx", ":troop_id"), # Store troop_id for event lookup
 
           # Col 2: Name over Level + Attributes
-          (str_store_troop_name, s1, ":troop_id"),
+          (store_add, ":idx_plus_1", ":idx", 1),
+          (call_script, "script_lieutenant_system_calculate_stats", ":troop_id", ":idx_plus_1"),
+
           (store_character_level, reg1, ":troop_id"),
-          (store_attribute_level, reg4, ":troop_id", ca_strength),
-          (store_attribute_level, reg5, ":troop_id", ca_intelligence),
-          (store_attribute_level, reg6, ":troop_id", ca_agility),
-          (store_attribute_level, reg7, ":troop_id", ca_charisma),
-          (str_store_string, s1, "@{s1}^Level:  {reg1}^^Attributes:^STR:  {reg4}^INT:  {reg5}^AGI:  {reg6}^CHA: {reg7}"),
+          (str_store_troop_name, s1, ":troop_id"),
+          (str_store_string, s1, "@{s1}^^Level:  {reg1}^^Attributes:^STR:  {reg10}^AGI:  {reg11}^INT:  {reg12}^CHA: {reg13}"),
           
           (create_text_overlay, reg0, "@{s1}", tf_left_align),
           (position_set_x, pos1, 750), # 75% scale
@@ -7661,14 +7646,8 @@ reducing the overall operational cost."),
           (position_set_y, pos1, ":text_y"),
           (overlay_set_position, reg0, pos1),
 
-          # Col 3: Combat Skills
-          (store_skill_level, reg1, skl_ironflesh, ":troop_id"),
-          (store_skill_level, reg2, skl_power_strike, ":troop_id"),
-          (store_skill_level, reg3, skl_power_throw, ":troop_id"),
-          (store_skill_level, reg4, skl_power_draw, ":troop_id"),
-          (store_skill_level, reg5, skl_weapon_master, ":troop_id"),
-          (store_skill_level, reg6, skl_shield, ":troop_id"),
-          (str_store_string, s2, "@Skills:^Ironflesh:    {reg1}^P. Strike:    {reg2}^P. Throw:   {reg3}^P. Draw:    {reg4}^W. Master: {reg5}^Shield:       {reg6}"),
+          # Col 3: Combat Skills (reg14-reg22) - 9 skills
+          (str_store_string, s2, "@^Ironflesh:    {reg14}^P. Strike:    {reg15}^P. Throw:     {reg16}^P. Draw:      {reg17}^W. Master:    {reg18}^Shield:       {reg19}^Athletics:    {reg20}"),
           
           (create_text_overlay, reg0, "@{s2}", tf_left_align),
           (position_set_x, pos1, 750),
@@ -7678,14 +7657,8 @@ reducing the overall operational cost."),
           (position_set_y, pos1, ":text_y"),
           (overlay_set_position, reg0, pos1),
 
-          # Col 4: Mobility
-          (store_skill_level, reg1, skl_athletics, ":troop_id"),
-          (store_skill_level, reg2, skl_riding, ":troop_id"),
-          (store_skill_level, reg3, skl_tracking, ":troop_id"),
-          (store_skill_level, reg4, skl_tactics, ":troop_id"),
-          (store_skill_level, reg5, skl_pathfinding, ":troop_id"),
-          (store_skill_level, reg6, skl_spotting, ":troop_id"),
-          (str_store_string, s3, "@Athletics:      {reg1}^Riding:         {reg2}^Tracking:      {reg3}^Tactics:        {reg4}^Path-finding: {reg5}^Spotting:      {reg6}"),
+          # Col 4: Action Skills (reg23-reg30) - 8 skills
+          (str_store_string, s3, "@^Riding:       {reg21}^H. Archery:   {reg22}^Looting:      {reg23}^Foraging:     {reg24}^Trainer:      {reg25}^Tracking:     {reg26}^Tactics:      {reg27}^Path-finding: {reg28}"),
           
           (create_text_overlay, reg0, "@{s3}", tf_left_align),
           (position_set_x, pos1, 750),
@@ -7695,14 +7668,8 @@ reducing the overall operational cost."),
           (position_set_y, pos1, ":text_y"),
           (overlay_set_position, reg0, pos1),
 
-          # Col 5: Tactical
-          (store_skill_level, reg1, skl_tactics, ":troop_id"),
-          (store_skill_level, reg2, skl_wound_treatment, ":troop_id"),
-          (store_skill_level, reg3, skl_surgery, ":troop_id"),
-          (store_skill_level, reg4, skl_first_aid, ":troop_id"),
-          (store_skill_level, reg5, skl_persuasion, ":troop_id"),
-          (store_skill_level, reg6, skl_leadership, ":troop_id"),
-          (str_store_string, s4, "@Tactics:     {reg1}^W. Treat.:  {reg2}^Surgery:     {reg3}^First Aid:   {reg4}^Persuasion: {reg5}^Leadership: {reg6}"),
+          # Col 5: Medical Skills (reg31-reg38) - 8 skills
+          (str_store_string, s4, "@^Spotting:     {reg29}^W. Treat.:    {reg31}^Surgery:       {reg32}^First Aid:    {reg33}^Persuasion:   {reg35}^Pris. Mgmt:   {reg36}^Leadership:   {reg37}"),
           
           (create_text_overlay, reg0, "@{s4}", tf_left_align),
           (position_set_x, pos1, 750),
@@ -7712,14 +7679,8 @@ reducing the overall operational cost."),
           (position_set_y, pos1, ":text_y"),
           (overlay_set_position, reg0, pos1),
 
-          # Col 6: Proficiencies
-          (store_proficiency_level, reg1, ":troop_id", wpt_one_handed_weapon),
-          (store_proficiency_level, reg2, ":troop_id", wpt_two_handed_weapon),
-          (store_proficiency_level, reg3, ":troop_id", wpt_polearm),
-          (store_proficiency_level, reg4, ":troop_id", wpt_archery),
-          (store_proficiency_level, reg5, ":troop_id", wpt_crossbow),
-          (store_proficiency_level, reg6, ":troop_id", wpt_throwing),
-          (str_store_string, s5, "@Proficiencies:^1H Weap: {reg1}^2H Weap: {reg2}^Polearm: {reg3}^Archery: {reg4}^Crossbow: {reg5}^Throwing: {reg6}"),
+          # Col 6: Proficiencies (reg41-reg46)
+          (str_store_string, s5, "@Proficiencies:^1H Weap: {reg41}^2H Weap: {reg42}^Polearm: {reg43}^Archery: {reg44}^Crossbow: {reg45}^Throwing: {reg46}"),
           
           (create_text_overlay, reg0, "@{s5}", tf_left_align),
           (position_set_x, pos1, 750),
@@ -7775,8 +7736,8 @@ reducing the overall operational cost."),
             
             (eq, ":object", ":btn_promote"), # No more avatar click to promote
 
-            
-            (call_script, "script_lieutenant_system_finish_promotion", ":troop_id"),
+            (store_add, ":idx_plus_1", ":idx", 1),
+          (call_script, "script_lieutenant_system_finish_promotion", ":troop_id", ":idx_plus_1"),
             (try_for_range, ":j", 0, 4),
               (troop_set_slot, "trp_temp_array_a", ":j", 0),
             (try_end),

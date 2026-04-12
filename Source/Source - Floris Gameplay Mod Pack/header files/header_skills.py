@@ -24,13 +24,10 @@ skl_pathfinding = 14
 skl_tactics = 15
 skl_tracking = 16
 skl_trainer = 17
-skl_comprehension = 18 ## CC
+skl_reserved_5 = 18
 skl_reserved_6 = 19
 skl_reserved_7 = 20
-## Jrider + FORAGING v1.0
-#skl_reserved_8 = 21
 skl_foraging = 21
-## Jrider -
 skl_looting = 22
 skl_horse_archery = 23
 skl_riding = 24

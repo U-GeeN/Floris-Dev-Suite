@@ -2610,7 +2610,7 @@ dialogs_part1 = [
       ], "Well. I'll be off, then. Look me up if you need me.", "close_window",
    [
      (try_begin),
-       (is_between, "$g_talk_troop", "trp_lieutenant_l14", "trp_lieutenant_l42_end"),
+       (is_between, "$g_talk_troop", "trp_lieutenant_l14", "trp_lieutenant_end"),
        (troop_set_slot, "$g_talk_troop", slot_troop_occupation, slto_inactive),
        (troop_set_slot, "$g_talk_troop", slot_troop_cur_center, -1),
        (remove_member_from_party, "$g_talk_troop"),
