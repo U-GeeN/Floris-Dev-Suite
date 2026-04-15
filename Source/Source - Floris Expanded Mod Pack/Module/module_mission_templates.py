@@ -16153,6 +16153,7 @@ damage_recalculation_hit = (
     (try_begin),
       (gt, ":damage", ":overkill_limit"),
       # Overkill! No blunt conversion, lethal damage remains.
+      (agent_set_slot, ":victim", slot_agent_is_overkilled, 1),
       (agent_set_slot, ":victim", slot_agent_pending_blunt_damage, 0),
       (assign, reg0, ":cur_hp"),
       (assign, reg1, ":overkill_limit"),
@@ -16192,10 +16193,35 @@ damage_recalculation_apply = (
       
       (agent_set_slot, ":agent", slot_agent_is_applying_blunt, 1),
       (agent_deliver_damage_to_agent, ":attacker", ":agent", ":pending", itm_practice_staff),
-      (agent_set_slot, ":agent", slot_agent_is_applying_blunt, 0),
-      
       (agent_set_slot, ":agent", slot_agent_pending_blunt_damage, 0),
       (agent_set_no_death_knock_down_only, ":agent", 0),
+    (try_end),
+  ])
+
+reset_overkill_on_spawn = (
+  ti_on_agent_spawn, 0, 0, [],
+  [
+    (store_trigger_param_1, ":agent_no"),
+    (agent_set_slot, ":agent_no", slot_agent_is_overkilled, 0),
+  ])
+
+lethal_overkill_death = (
+  ti_on_agent_killed_or_wounded, 0, 0, [],
+  [
+    (store_trigger_param_1, ":dead_agent_no"),
+    (try_begin),
+      (ge, ":dead_agent_no", 0),
+      (agent_is_human, ":dead_agent_no"),
+      (agent_slot_eq, ":dead_agent_no", slot_agent_is_overkilled, 1),
+      (agent_get_troop_id, ":troop_id", ":dead_agent_no"),
+      # Critical safeguard: ONLY delete if it's a Lieutenant. Companions and Lords are explicitly ignored.
+      (is_between, ":troop_id", lieutenants_begin, lieutenants_end),
+      (neg|is_between, ":troop_id", companions_begin, companions_end), 
+      
+      (main_party_has_troop, ":troop_id"),
+      (party_remove_members, "p_main_party", ":troop_id", 1),
+      (str_store_troop_name, s1, ":troop_id"),
+      (display_message, "@{s1} was overkilled and is gone forever!", 0xFF3333),
     (try_end),
   ])
 
@@ -16211,10 +16237,14 @@ for i_mt in range(len(mission_templates)):
     
   if is_combat:
     mt[5] = list(mt[5])
+    if not reset_overkill_on_spawn in mt[5]:
+      mt[5].append(reset_overkill_on_spawn)
     if not damage_recalculation_hit in mt[5]:
       mt[5].append(damage_recalculation_hit)
     if not damage_recalculation_apply in mt[5]:
       mt[5].append(damage_recalculation_apply)
+    if not lethal_overkill_death in mt[5]:
+      mt[5].append(lethal_overkill_death)
     mission_templates[i_mt] = tuple(mt)
 
 # modmerger_start version=201 type=4

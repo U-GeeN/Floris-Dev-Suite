@@ -2153,6 +2153,7 @@ slot_agent_cur_weapon_4           = 56
 slot_agent_pending_blunt_damage   = 57
 slot_agent_is_applying_blunt      = 58
 slot_agent_last_attacker         = 59
+slot_agent_is_overkilled         = 60
 
 
 
