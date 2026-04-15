@@ -7657,7 +7657,7 @@ reducing the overall operational cost."),
           (position_set_y, pos1, ":text_y"),
           (overlay_set_position, reg0, pos1),
 
-          # Col 4: Action Skills (reg23-reg30) - 8 skills
+          # Col 4: Action Skills (reg21-reg28) - 8 skills
           (str_store_string, s3, "@^Riding:       {reg21}^H. Archery:   {reg22}^Looting:      {reg23}^Foraging:     {reg24}^Trainer:      {reg25}^Tracking:     {reg26}^Tactics:      {reg27}^Path-finding: {reg28}"),
           
           (create_text_overlay, reg0, "@{s3}", tf_left_align),
@@ -7668,8 +7668,8 @@ reducing the overall operational cost."),
           (position_set_y, pos1, ":text_y"),
           (overlay_set_position, reg0, pos1),
 
-          # Col 5: Medical Skills (reg31-reg38) - 8 skills
-          (str_store_string, s4, "@^Spotting:     {reg29}^W. Treat.:    {reg31}^Surgery:       {reg32}^First Aid:    {reg33}^Persuasion:   {reg35}^Pris. Mgmt:   {reg36}^Leadership:   {reg37}"),
+          # Col 5: Medical Skills & Party Skills (reg29-reg38) - 10 skills
+          (str_store_string, s4, "@^Spotting:     {reg29}^Inv. Mgmt:    {reg30}^Wound Treat:  {reg31}^Surgery:      {reg32}^First Aid:    {reg33}^Engineer:     {reg34}^Persuasion:   {reg35}^Pris. Mgmt:   {reg36}^Leadership:   {reg37}^Trade:        {reg38}"),
           
           (create_text_overlay, reg0, "@{s4}", tf_left_align),
           (position_set_x, pos1, 750),
