@@ -11,6 +11,7 @@ from header_triggers import *
 from header_terrain_types import *
 from header_music import *
 from header_map_icons import *
+from header_troops import *
 from ID_animations import *
 ##diplomacy start+
 from module_factions import dplmc_factions_begin, dplmc_factions_end, dplmc_non_generic_factions_begin
@@ -1646,6 +1647,37 @@ scripts_part3 = [
           (val_clamp, "$g_player_party_morale_modifier_debt", 1, 31),
           (val_sub, ":new_morale", "$g_player_party_morale_modifier_debt"),
         (try_end),
+
+        (assign, "$g_player_party_morale_modifier_lieutenants", 0),
+        (try_for_range, ":lt", lieutenants_begin, lieutenants_end),
+          (main_party_has_troop, ":lt"),
+          (store_character_level, ":lt_level", ":lt"),
+          (assign, ":higher_stacks", 0),
+          (assign, ":lower_stacks", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":i_stack", 1, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":i_stack"),
+            (neg|troop_is_hero, ":stack_troop"), # Regular soldiers only
+            (store_character_level, ":stack_level", ":stack_troop"),
+            (try_begin), 
+              (gt, ":stack_level", ":lt_level"), (val_add, ":higher_stacks", 1),
+            (else_try), 
+              (lt, ":stack_level", ":lt_level"), (val_add, ":lower_stacks", 1),
+            (try_end),
+          (try_end),
+          (try_begin),
+            (gt, ":higher_stacks", ":lower_stacks"),
+            (val_sub, "$g_player_party_morale_modifier_lieutenants", 3), # Base penalty for leading betters
+            (store_sub, ":diff", ":higher_stacks", ":lower_stacks"),
+            (val_div, ":diff", 2),
+            (val_sub, "$g_player_party_morale_modifier_lieutenants", ":diff"),
+          (else_try),
+            (gt, ":lower_stacks", ":higher_stacks"),
+            (val_add, "$g_player_party_morale_modifier_lieutenants", 2), # Respect for veteran lead
+          (try_end),
+        (try_end),
+        (val_add, ":new_morale", "$g_player_party_morale_modifier_lieutenants"),
+
         ## CC
         (assign, reg1, ":new_morale"),
         ## CC

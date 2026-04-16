@@ -11,6 +11,7 @@ from header_triggers import *
 from header_terrain_types import *
 from header_music import *
 from header_map_icons import *
+from header_troops import *
 from ID_animations import *
 ##diplomacy start+
 from module_factions import dplmc_factions_begin, dplmc_factions_end, dplmc_non_generic_factions_begin
@@ -15429,8 +15430,16 @@ scripts_part5 = [
     (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, slto_lieutenant),
     (party_add_members, "p_main_party", ":lieutenant_troop", 1),
 
-    (str_store_troop_name, s1, ":lieutenant_troop"),
     (display_message, "@{s1} has been promoted and joined your ranks!"),
+
+    # Phase 7: Morale Impact - Leadership and Charisma of the recruit inspires the men
+    (store_attribute_level, ":char", ":lieutenant_troop", ca_charisma),
+    (store_skill_level, ":lead", skl_leadership, ":lieutenant_troop"),
+    (store_div, ":bonus", ":char", 2),
+    (store_mul, ":lead_bonus", ":lead", 2),
+    (val_add, ":bonus", ":lead_bonus"),
+    (val_max, ":bonus", 1), # At least some recognition
+    (call_script, "script_change_player_party_morale", ":bonus"),
   ]),
 
 ]

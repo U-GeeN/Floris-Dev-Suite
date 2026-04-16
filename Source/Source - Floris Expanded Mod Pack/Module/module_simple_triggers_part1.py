@@ -2018,4 +2018,39 @@ simple_triggers_part1 = [
     [
       (assign, "$g_recalculate_ais", 1),
     ]),
+
+  # Lieutenant System - Disputes and Misbehavior events (every 48 hours)
+  (48,
+   [
+     (assign, ":lt_with_dispute", -1),
+     (try_for_range, ":lt", lieutenants_begin, lieutenants_end),
+       (main_party_has_troop, ":lt"),
+       (store_random_in_range, ":roll", 0, 100),
+       
+       (store_attribute_level, ":int", ":lt", ca_intelligence),
+       (store_skill_level, ":pers", skl_persuasion, ":lt"),
+       (store_add, ":save_bonus", ":int", ":pers"),
+       (val_sub, ":roll", ":save_bonus"),
+       
+       (gt, ":roll", 85), # ~15% base chance, reduced by stats
+       (assign, ":lt_with_dispute", ":lt"),
+       (assign, ":lt", lieutenants_end), # Break: only one dispute per check
+     (try_end),
+     
+     (try_begin),
+       (gt, ":lt_with_dispute", 0),
+       (str_store_troop_name, s1, ":lt_with_dispute"),
+       (store_random_in_range, ":event", 0, 3),
+       (try_begin),
+         (eq, ":event", 0), (display_message, "@{s1} has misbehaved, causing unrest in the camp.", 0xFF3333),
+         (call_script, "script_change_player_party_morale", -5),
+       (else_try),
+         (eq, ":event", 1), (display_message, "@{s1} had a dispute with the men over rations.", 0xFF3333),
+         (call_script, "script_change_player_party_morale", -4),
+       (else_try),
+         (display_message, "@{s1} is being questioned by the troops about their competence.", 0xFF3333),
+         (call_script, "script_change_player_party_morale", -6),
+       (try_end),
+     (try_end),
+   ]),
 ]
