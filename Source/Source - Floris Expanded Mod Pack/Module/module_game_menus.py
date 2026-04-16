@@ -10515,7 +10515,7 @@ game_menus = [
 #               (set_visitor, ":cur_entry", ":companion_candidate"),
 #               (val_add, ":cur_entry", 1),
 #             (try_end),
-##
+             (call_script, "script_set_companion_visitors"),
              (change_screen_mission),
            (try_end),
         ],"Door to the tavern."),

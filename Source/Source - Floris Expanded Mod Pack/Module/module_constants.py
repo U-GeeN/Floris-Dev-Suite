@@ -1121,7 +1121,7 @@ dplmc_slto_exile           = 14 #Set for newly exiled lords.  In saved games, th
 dplmc_slto_dead            = 15 #not normally set
 ##diplomacy end+
 
-slto_lieutenant        = 20
+slot_lieutenant        = 20
 lieutenants_begin      = "trp_lieutenant_l14"
 lieutenants_end        = "trp_lieutenant_end"
 

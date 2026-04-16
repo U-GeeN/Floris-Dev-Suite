@@ -269,7 +269,8 @@ dialogs_part1 = [
   [anyone ,"member_chat", [
 					(store_conversation_troop, "$g_talk_troop"),
                     (try_begin),
-                        (is_between, "$g_talk_troop", companions_begin, companions_end),
+                        (this_or_next|is_between, "$g_talk_troop", companions_begin, companions_end),
+                        (is_between, "$g_talk_troop", lieutenants_begin, lieutenants_end),
                         (talk_info_show, 1),
                         (call_script, "script_setup_talk_info_companions"),
                     (else_try),
@@ -307,7 +308,8 @@ dialogs_part1 = [
 
   [anyone ,"event_triggered", [(store_conversation_troop, "$g_talk_troop"),
                            (try_begin),
-                               (is_between, "$g_talk_troop", companions_begin, companions_end),
+                               (this_or_next|is_between, "$g_talk_troop", companions_begin, companions_end),
+                               (is_between, "$g_talk_troop", lieutenants_begin, lieutenants_end),
                                (talk_info_show, 1),
                                (call_script, "script_setup_talk_info_companions"),
                            (try_end),
@@ -2245,6 +2247,17 @@ dialogs_part1 = [
   [anyone,"member_chat", 
   [
     (store_conversation_troop,"$g_talk_troop"),
+    (is_between, "$g_talk_troop", lieutenants_begin, lieutenants_end),
+    (troop_get_slot, ":honorific", "$g_talk_troop", slot_troop_honorific),
+    (str_store_string, s5, ":honorific"),
+  ], "Lieutenant reporting, {s5}. What are your orders?", "member_talk",
+  [
+    (unlock_achievement, ACHIEVEMENT_TALKING_HELPS),
+  ]],
+
+  [anyone,"member_chat", 
+  [
+    (store_conversation_troop,"$g_talk_troop"),
     (troop_is_hero,"$g_talk_troop"),
     (troop_get_slot, ":honorific", "$g_talk_troop", slot_troop_honorific),
     (str_store_string, s5, ":honorific"),
@@ -2610,11 +2623,11 @@ dialogs_part1 = [
       ], "Well. I'll be off, then. Look me up if you need me.", "close_window",
    [
      (try_begin),
-       (is_between, "$g_talk_troop", "trp_lieutenant_l14", "trp_lieutenant_end"),
-       (troop_set_slot, "$g_talk_troop", slot_troop_occupation, slto_inactive),
-       (troop_set_slot, "$g_talk_troop", slot_troop_cur_center, -1),
-       (remove_member_from_party, "$g_talk_troop"),
-     (else_try),
+        (is_between, "$g_talk_troop", lieutenants_begin, lieutenants_end),
+        (troop_set_slot, "$g_talk_troop", slot_troop_occupation, slto_inactive),
+        (troop_set_slot, "$g_talk_troop", slot_troop_cur_center, -1),
+        (remove_member_from_party, "$g_talk_troop"),
+      (else_try),
             (troop_set_slot, "$g_talk_troop", slot_troop_occupation, 0),
             (troop_set_slot, "$g_talk_troop", slot_troop_playerparty_history, pp_history_dismissed),
             (remove_member_from_party, "$g_talk_troop"),

@@ -15427,7 +15427,7 @@ scripts_part5 = [
 
     # Phase 6: Finalize Recruitment
     (party_remove_members, "p_main_party", ":source_troop", 1),
-    (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, slto_lieutenant),
+    (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, slot_lieutenant),
     (party_add_members, "p_main_party", ":lieutenant_troop", 1),
 
     (display_message, "@{s1} has been promoted and joined your ranks!"),
@@ -15441,5 +15441,23 @@ scripts_part5 = [
     (val_max, ":bonus", 1), # At least some recognition
     (call_script, "script_change_player_party_morale", ":bonus"),
   ]),
+
+  # script_set_companion_visitors
+  # Spawns companions and lieutenants in tavern/castle scenes
+  ("set_companion_visitors",
+   [
+     (assign, ":cur_visitor_slot", 11),
+     (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+     (try_for_range, ":i_stack", 1, ":num_stacks"),
+       (party_stack_get_troop_id, ":troop_no", "p_main_party", ":i_stack"),
+       (this_or_next|is_between, ":troop_no", companions_begin, companions_end),
+       (is_between, ":troop_no", lieutenants_begin, lieutenants_end),
+       
+       (set_visitor, ":cur_visitor_slot", ":troop_no"),
+       (val_add, ":cur_visitor_slot", 1),
+       (gt, ":cur_visitor_slot", 18), # Stay within limits
+       (assign, ":num_stacks", 0),
+     (try_end),
+   ]),
 
 ]
