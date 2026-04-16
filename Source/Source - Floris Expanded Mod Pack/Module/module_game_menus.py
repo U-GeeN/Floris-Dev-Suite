@@ -19893,7 +19893,7 @@ game_menus = [
      (try_begin),
        (gt, "$g_lieutenant_recruitment_penalty", 0),
        (assign, reg8, "$g_lieutenant_recruitment_penalty"),
-       (str_store_string, s11, "@^^(A recent recruitment attempt is reducing volunteer interest by {reg8}%%.)"),
+       (str_store_string, s11, "@^^(A recent recruitment attempt is reducing volunteer interest by {reg8}%.)"),
      (try_end),
      
      (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
@@ -20053,30 +20053,6 @@ game_menus = [
       ("continue", [], "Continue.",
        [(jump_to_menu, "mnu_camp")]
       ),
-    ]
-  ),
-
-  ("lieutenant_weapon_selection", 0,
-    "Choose a Weapon.",
-    "none",
-    [],
-    [
-       ("weapon_longsword", [], "Longsword.", [
-          (assign, "$g_lieutenant_sparring_weapon", 0),
-          (call_script, "script_lieutenant_system_start_sparring_mission", 4),
-       ]),
-       ("weapon_sword_shield", [], "Sword and shield.", [
-          (assign, "$g_lieutenant_sparring_weapon", 1),
-          (call_script, "script_lieutenant_system_start_sparring_mission", 4),
-       ]),
-       ("weapon_staff", [], "Staff.", [
-          (assign, "$g_lieutenant_sparring_weapon", 2),
-          (call_script, "script_lieutenant_system_start_sparring_mission", 4),
-       ]),
-       ("weapon_bow", [], "Bow and dagger.", [
-          (assign, "$g_lieutenant_sparring_weapon", 3),
-          (call_script, "script_lieutenant_system_start_sparring_mission", 4),
-       ]),
     ]
   ),
 

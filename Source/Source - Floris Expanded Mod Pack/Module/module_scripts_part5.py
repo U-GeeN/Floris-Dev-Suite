@@ -15261,22 +15261,36 @@ scripts_part5 = [
     (assign, "$g_training_ground_training_num_gourds_to_destroy", 0),
     (assign, "$g_mt_mode", 0), # melee
 
+    (modify_visitors_at_site, "scn_training_ground_ranged_melee_4"),
+    (reset_visitors),
     (set_visitor, 0, "trp_player"),
     (try_for_range, ":i", 0, ":num_enemies"),
       (troop_get_slot, ":opponent_troop", "trp_temp_array_a", ":i"),
       (try_begin),
         (gt, ":opponent_troop", 0),
+        (store_add, ":candidate_idx", ":i", 1),
+        (store_add, ":dummy_troop", tutorial_fighters_begin, ":i"),
+        
+        (call_script, "script_lieutenant_system_calculate_stats", ":opponent_troop", ":candidate_idx"),
+        (call_script, "script_lieutenant_system_apply_stats_to_troop", ":dummy_troop", ":opponent_troop"),
+        
+        (str_store_troop_name, s1, ":opponent_troop"),
+        (str_store_string, s11, "@Sparring Partner: {s1}"),
+        (troop_set_name, ":dummy_troop", s11),
+        (troop_get_type, ":type", ":opponent_troop"),
+        (troop_set_type, ":dummy_troop", ":type"),
+        
         (store_add, ":visitor_point", 1, ":i"),
-        (set_visitor, ":visitor_point", ":opponent_troop"),
-        (str_store_troop_name, s11, ":opponent_troop"),
+        (set_visitor, ":visitor_point", ":dummy_troop"),
+        (str_store_troop_name, s11, ":dummy_troop"),
         (assign, reg11, ":visitor_point"),
       (try_end),
     (try_end),
 
     (set_jump_mission, "mt_lieutenant_sparring"),
     (set_jump_entry, 0),
-    #(jump_to_scene, "$g_training_ground_training_scene"),
-    (jump_to_scene, "scn_lieutenant_sparring"),
+    
+    (jump_to_scene, "scn_training_ground_ranged_melee_4"), 
     (change_screen_mission),
   ]),
 
@@ -15333,6 +15347,67 @@ scripts_part5 = [
     (try_end),
   ]),
 
+  ("lieutenant_system_apply_stats_to_troop", [
+    (store_script_param, ":target_troop", 1),
+    (store_script_param, ":source_troop", 2),
+
+    # Phase 1: Stats
+    (try_for_range, ":attr", 0, 4),
+      (store_attribute_level, ":cur", ":target_troop", ":attr"),
+      (try_begin), (eq, ":attr", 0), (assign, ":target", reg10),
+      (else_try), (eq, ":attr", 1), (assign, ":target", reg11),
+      (else_try), (eq, ":attr", 2), (assign, ":target", reg12),
+      (else_try), (assign, ":target", reg13), (try_end),
+      (store_sub, ":diff", ":target", ":cur"),
+      (try_begin),
+        (gt, ":diff", 0),
+        # Target is higher — raise normally one step at a time
+        (try_for_range, ":unused", 0, ":diff"), (troop_raise_attribute, ":target_troop", ":attr", 1), (try_end),
+      (else_try),
+        (lt, ":diff", 0),
+        # Normal reduction for all attributes including intelligence
+        (troop_raise_attribute, ":target_troop", ":attr", ":diff"),
+      (try_end),
+    (try_end),
+
+    # Phase 2: Skills
+    (try_for_range, ":i", 10, 35),
+      (troop_get_slot, ":skl", "trp_temp_array_b", ":i"),
+      (store_add, ":val_slot", ":i", 30),
+      (troop_get_slot, ":target", "trp_temp_array_b", ":val_slot"),
+      (store_skill_level, ":cur", ":skl", ":target_troop"),
+      (store_sub, ":diff", ":target", ":cur"),
+      (neq, ":diff", 0), 
+      (troop_raise_skill, ":target_troop", ":skl", ":diff"),
+    (try_end),
+
+    # Phase 3: Proficiencies
+    (try_for_range, ":prof", 0, 6),
+      (try_begin), (eq, ":prof", 0), (assign, ":target", reg41),
+      (else_try), (eq, ":prof", 1), (assign, ":target", reg42),
+      (else_try), (eq, ":prof", 2), (assign, ":target", reg43),
+      (else_try), (eq, ":prof", 3), (assign, ":target", reg44),
+      (else_try), (eq, ":prof", 4), (assign, ":target", reg45),
+      (else_try), (assign, ":target", reg46), (try_end),
+      (store_proficiency_level, ":cur", ":target_troop", ":prof"),
+      (store_sub, ":diff", ":target", ":cur"),
+      (try_begin), (neq, ":diff", 0), (troop_raise_proficiency_linear, ":target_troop", ":prof", ":diff"), (try_end),
+    (try_end),
+
+    # Phase 4: Mirror Equipment
+    (troop_clear_inventory, ":target_troop"),
+    (try_for_range, ":slot", 0, 96),
+      (troop_get_inventory_slot, ":item", ":source_troop", ":slot"),
+      (try_begin),
+        (ge, ":item", 0),
+        (troop_get_inventory_slot_modifier, ":imod", ":source_troop", ":slot"),
+        (troop_add_item, ":target_troop", ":item", ":imod"),
+      (try_end),
+    (try_end),
+    (troop_equip_items, ":target_troop"),
+    (try_for_range, ":slot", 10, 96), (troop_set_inventory_slot, ":target_troop", ":slot", -1), (try_end),
+  ]),
+
   ("lieutenant_system_promote", [
     (store_script_param, ":lieutenant_troop", 1),
     (store_script_param, ":source_troop", 2),
@@ -15348,62 +15423,7 @@ scripts_part5 = [
     (call_script, "script_lieutenant_system_calculate_stats", ":source_troop", ":candidate_idx"),
 
     # Since we use DUMMY templates, we should just raise them to the target.
-    (try_for_range, ":attr", 0, 4),
-      (store_attribute_level, ":cur", ":lieutenant_troop", ":attr"),
-      (try_begin), (eq, ":attr", 0), (assign, ":target", reg10),
-      (else_try), (eq, ":attr", 1), (assign, ":target", reg11),
-      (else_try), (eq, ":attr", 2), (assign, ":target", reg12),
-      (else_try), (assign, ":target", reg13), (try_end),
-      (store_sub, ":diff", ":target", ":cur"),
-      (try_begin),
-        (gt, ":diff", 0),
-        # Target is higher — raise normally one step at a time
-        (try_for_range, ":unused", 0, ":diff"), (troop_raise_attribute, ":lieutenant_troop", ":attr", 1), (try_end),
-      (else_try),
-        (lt, ":diff", 0),
-        # Normal reduction for all attributes including intelligence
-        (troop_raise_attribute, ":lieutenant_troop", ":attr", ":diff"),
-      (try_end),
-    (try_end),
-
-
-
-    # Phase 2: Skills
-    (try_for_range, ":i", 10, 35),
-      (troop_get_slot, ":skl", "trp_temp_array_b", ":i"),
-      (store_add, ":val_slot", ":i", 30),
-      (troop_get_slot, ":target", "trp_temp_array_b", ":val_slot"),
-      (store_skill_level, ":cur", ":skl", ":lieutenant_troop"),
-      (store_sub, ":diff", ":target", ":cur"),
-      (neq, ":diff", 0), 
-      (troop_raise_skill, ":lieutenant_troop", ":skl", ":diff"),
-    (try_end),
-
-    # Phase 3: Proficiencies
-    (try_for_range, ":prof", 0, 6),
-      (try_begin), (eq, ":prof", 0), (assign, ":target", reg41),
-      (else_try), (eq, ":prof", 1), (assign, ":target", reg42),
-      (else_try), (eq, ":prof", 2), (assign, ":target", reg43),
-      (else_try), (eq, ":prof", 3), (assign, ":target", reg44),
-      (else_try), (eq, ":prof", 4), (assign, ":target", reg45),
-      (else_try), (assign, ":target", reg46), (try_end),
-      (store_proficiency_level, ":cur", ":lieutenant_troop", ":prof"),
-      (store_sub, ":diff", ":target", ":cur"),
-      (try_begin), (neq, ":diff", 0), (troop_raise_proficiency_linear, ":lieutenant_troop", ":prof", ":diff"), (try_end),
-    (try_end),
-
-    # Phase 4: Mirror Equipment
-    (troop_clear_inventory, ":lieutenant_troop"),
-    (try_for_range, ":slot", 0, 96),
-      (troop_get_inventory_slot, ":item", ":source_troop", ":slot"),
-      (try_begin),
-        (ge, ":item", 0),
-        (troop_get_inventory_slot_modifier, ":imod", ":source_troop", ":slot"),
-        (troop_add_item, ":lieutenant_troop", ":item", ":imod"),
-      (try_end),
-    (try_end),
-    (troop_equip_items, ":lieutenant_troop"),
-    (try_for_range, ":slot", 10, 96), (troop_set_inventory_slot, ":lieutenant_troop", ":slot", -1), (try_end),
+    (call_script, "script_lieutenant_system_apply_stats_to_troop", ":lieutenant_troop", ":source_troop"),
 
     # Phase 5: Naming
     (assign, ":active_count", 0),

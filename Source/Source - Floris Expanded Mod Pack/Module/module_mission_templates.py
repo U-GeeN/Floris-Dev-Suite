@@ -4327,7 +4327,7 @@ mission_templates = [
     ] + custom_commander_commom_triggers, ## CC
   ),
 
-
+# TODO: look here for training sparring Lieutenant system sparring_scene training
   (
     "training_ground_training", mtf_arena_fight, -1,
     "Training.",
@@ -4440,7 +4440,6 @@ mission_templates = [
              (position_get_z, ":pos_z", pos0),
              (try_begin),
                (lt, ":pos_z", -50000),
-#               (val_add, ":end_cond", 1), #removed already, try again
              (else_try),
                (position_set_z, pos0, -100000),
                (prop_instance_set_position, ":target_object", pos0),
@@ -15908,6 +15907,7 @@ mission_templates = [
       (2, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_boots]),
       (3, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_boots]),
       (4, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_boots]),
+      (5, mtef_visitor_source|mtef_team_1, af_override_all, aif_start_alarmed, 1, [itm_practice_boots]),
     ],
     [
       (ti_on_agent_spawn, 0, 0, [], [
@@ -15915,9 +15915,6 @@ mission_templates = [
          (agent_is_human, ":agent"),
          (agent_get_team, ":team", ":agent"),
          (agent_get_troop_id, ":troop_id", ":agent"),
-         (str_store_troop_name, s10, ":troop_id"),
-         (assign, reg10, ":team"),
-         (display_message, "@DEBUG: Spawned {s10} on team {reg10}"),
          (try_begin),
            (eq, ":team", 0), # Player
            (try_begin),
@@ -15936,7 +15933,7 @@ mission_templates = [
            (else_try),
              (eq, "$g_lieutenant_sparring_weapon", 3),
              (agent_equip_item, ":agent", "itm_practice_bow"),
-             (agent_equip_item, ":agent", "itm_practice_arrows_10_amount"),
+             (agent_equip_item, ":agent", "itm_practice_arrows_100_amount"),
              (agent_equip_item, ":agent", "itm_practice_dagger"),
              (agent_set_wielded_item, ":agent", "itm_practice_bow"),
            (try_end),
@@ -15979,6 +15976,7 @@ mission_templates = [
          (try_end),
       ]),
       (ti_before_mission_start, 0, 0, [], [
+         (set_visitors),
          (display_message, "@DEBUG: Sparring Mission Launched!"),
          (team_set_relation, 0, 1, -1),
          (call_script, "script_change_banners_and_chest"),
@@ -16037,10 +16035,6 @@ mission_templates = [
           (jump_to_menu, "mnu_training_ground_training_result"),
           (finish_mission),
         ]),
-
-      (ti_before_mission_start, 0, 0, [], [
-        (display_message, "@DEBUG: Mission Launched!"),
-      ]),
 
       # All opponents down -> victory (wait 3 seconds first)
       (3, 4, ti_once,

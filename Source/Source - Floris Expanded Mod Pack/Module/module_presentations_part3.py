@@ -7691,7 +7691,7 @@ reducing the overall operational cost."),
           (overlay_set_position, reg0, pos1),
 
           # Col 3: Combat Skills (reg14-reg22) - 9 skills
-          (str_store_string, s2, "@^Ironflesh:    {reg14}^P. Strike:    {reg15}^P. Throw:     {reg16}^P. Draw:      {reg17}^W. Master:    {reg18}^Shield:       {reg19}^Athletics:    {reg20}"),
+          (str_store_string, s2, "@^Ironflesh:     {reg14}^P. Strike:     {reg15}^P. Throw:    {reg16}^P. Draw:     {reg17}^W. Master:  {reg18}^Shield:        {reg19}^Athletics:    {reg20}"),
           
           (create_text_overlay, reg0, "@{s2}", tf_left_align),
           (position_set_x, pos1, 750),
@@ -7702,7 +7702,7 @@ reducing the overall operational cost."),
           (overlay_set_position, reg0, pos1),
 
           # Col 4: Action Skills (reg21-reg28) - 8 skills
-          (str_store_string, s3, "@^Riding:       {reg21}^H. Archery:   {reg22}^Looting:      {reg23}^Foraging:     {reg24}^Trainer:      {reg25}^Tracking:     {reg26}^Tactics:      {reg27}^Path-finding: {reg28}"),
+          (str_store_string, s3, "@^Riding:        {reg21}^H. Archery:  {reg22}^Looting:       {reg23}^Foraging:      {reg24}^Trainer:       {reg25}^Tracking:      {reg26}^Tactics:       {reg27}^Path-finding: {reg28}"),
           
           (create_text_overlay, reg0, "@{s3}", tf_left_align),
           (position_set_x, pos1, 750),
@@ -7713,7 +7713,7 @@ reducing the overall operational cost."),
           (overlay_set_position, reg0, pos1),
 
           # Col 5: Medical Skills & Party Skills (reg29-reg38) - 10 skills
-          (str_store_string, s4, "@^Spotting:     {reg29}^Inv. Mgmt:    {reg30}^Wound Treat:  {reg31}^Surgery:      {reg32}^First Aid:    {reg33}^Engineer:     {reg34}^Persuasion:   {reg35}^Pris. Mgmt:   {reg36}^Leadership:   {reg37}^Trade:        {reg38}"),
+          (str_store_string, s4, "@^Spotting:     {reg29}^Inv. Mgmt: {reg30}^W. Treat:    {reg31}^Surgery:     {reg32}^First Aid:   {reg33}^Engineer:    {reg34}^Persuasion:  {reg35}^Pris. Mgmt: {reg36}^Leadership: {reg37}^Trade:       {reg38}"),
           
           (create_text_overlay, reg0, "@{s4}", tf_left_align),
           (position_set_x, pos1, 750),
