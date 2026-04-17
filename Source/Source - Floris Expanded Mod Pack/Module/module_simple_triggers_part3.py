@@ -247,7 +247,7 @@ simple_triggers_part3 = [
               (neg|check_quest_concluded, "qst_move_cattle_herd"),
               (quest_slot_eq, "qst_move_cattle_herd", slot_quest_target_party, ":cur_party"),
               (call_script, "script_fail_quest", "qst_move_cattle_herd"),
-            (end_try),
+            (try_end),
           (else_try),
             (gt, ":dist", 10),
             (party_set_slot, ":cur_party", slot_cattle_driven_by_player, 0),

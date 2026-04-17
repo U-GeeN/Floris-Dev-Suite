@@ -5640,7 +5640,7 @@ scripts_part2 = [
               (assign, ":minimum_distance", ":dist"),
               (copy_position, pos63, pos3),
             (try_end),
-          (end_try),
+          (try_end),
           
           (party_set_position, ":routed_party", pos63),
           

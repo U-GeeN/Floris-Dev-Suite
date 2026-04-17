@@ -11415,7 +11415,7 @@ mission_templates = [
                    (player_get_gold, ":player_gold", ":latest_joined_player_no"),
                    (val_add, ":player_gold", ":old_items_value"),
                    (player_set_gold, ":latest_joined_player_no", ":player_gold", multi_max_gold_that_can_be_stored),
-                 (end_try),
+                 (try_end),
 
                  (player_set_troop_id, ":latest_joined_player_no", -1),
                  (player_set_team_no, ":latest_joined_player_no", ":team_with_less_players"),
@@ -12633,7 +12633,7 @@ mission_templates = [
                    (player_get_gold, ":player_gold", ":latest_joined_player_no"),
                    (val_add, ":player_gold", ":old_items_value"),
                    (player_set_gold, ":latest_joined_player_no", ":player_gold", multi_max_gold_that_can_be_stored),
-                 (end_try),
+                 (try_end),
 
                  (player_set_troop_id, ":latest_joined_player_no", -1),
                  (player_set_team_no, ":latest_joined_player_no", ":team_with_less_players"),
@@ -13675,7 +13675,7 @@ mission_templates = [
                    (player_get_gold, ":player_gold", ":latest_joined_player_no"),
                    (val_add, ":player_gold", ":old_items_value"),
                    (player_set_gold, ":latest_joined_player_no", ":player_gold", multi_max_gold_that_can_be_stored),
-                 (end_try),
+                 (try_end),
 
                  (player_set_troop_id, ":latest_joined_player_no", -1),
                  (player_set_team_no, ":latest_joined_player_no", ":team_with_less_players"),

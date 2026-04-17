@@ -391,7 +391,7 @@ simple_triggers_part2 = [
                   (party_add_members, ":center_no", ":mercenary_halberdier", ":random"),
                 (try_end),
 				##Floris MTT end
-              (end_try),     
+              (try_end),     
             (try_end),
             (call_script, "script_change_player_relation_with_center", ":center_no", ":tax_rate"),
           (try_end),

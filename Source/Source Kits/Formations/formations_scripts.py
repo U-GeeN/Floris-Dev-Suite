@@ -254,7 +254,7 @@ scripts = [
 		(store_character_level, ":troop_level", ":troop_id"),
 		(gt, ":troop_level", ":max_level"),
 		(assign, ":max_level", ":troop_level"),
-	(end_try),
+	(try_end),
 	(assign, ":column", 1),
 	(assign, ":rank_dimension", 1),
 	(store_mul, ":neg_y_distance", ":y_distance", -1),
@@ -294,8 +294,8 @@ scripts = [
 			(try_end),			
 			(assign, ":column", 1),
 			(val_add, ":rank_dimension", 1),
-		(end_try),
-	(end_try),
+		(try_end),
+	(try_end),
   ]),
 	   
   # script_form_archers by motomataru
@@ -419,7 +419,7 @@ scripts = [
 			(try_end),			
 			(assign, ":column", 1),		
 			(val_add, ":rank", 1),
-		(end_try),
+		(try_end),
 		
 	(else_try),
 		(eq, ":infantry_formation", formation_wedge),
@@ -430,7 +430,7 @@ scripts = [
 			(store_character_level, ":troop_level", ":troop_id"),
 			(gt, ":troop_level", ":max_level"),
 			(assign, ":max_level", ":troop_level"),
-		(end_try),
+		(try_end),
 
 		(assign, ":rank_dimension", 1),
 		(store_div, ":wedge_adj", ":distance", 2),
@@ -480,8 +480,8 @@ scripts = [
 				(try_end),			
 				(assign, ":column", 1),
 				(val_add, ":rank_dimension", 1),
-			(end_try),
-		(end_try),
+			(try_end),
+		(try_end),
 		
 	(else_try),
 		(eq, ":infantry_formation", formation_ranks),
@@ -494,7 +494,7 @@ scripts = [
 			(store_character_level, ":troop_level", ":troop_id"),
 			(gt, ":troop_level", ":max_level"),
 			(assign, ":max_level", ":troop_level"),
-		(end_try),
+		(try_end),
 
 
 		(val_add, ":max_level", 1),
@@ -542,8 +542,8 @@ scripts = [
 				(try_end),			
 				(assign, ":column", 1),
 				(val_add, ":rank", 1),
-			(end_try),
-		(end_try),
+			(try_end),
+		(try_end),
 		
 	(else_try),
 		(eq, ":infantry_formation", formation_shield),

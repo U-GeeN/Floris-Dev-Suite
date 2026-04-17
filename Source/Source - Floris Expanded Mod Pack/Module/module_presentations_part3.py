@@ -4030,7 +4030,7 @@ presentations_part3 = [
           (overlay_add_item, "$g_presentation_obj_1", s2),   
           (assign, "$demanded_castle", ":castle"),   
           (val_add, ":castle_count", 1),         
-        (end_try),       
+        (try_end),       
         (assign, "$diplomacy_var2", 0),                 
         (position_set_x, pos1, 300),
         (position_set_y, pos1, 250),
@@ -4803,8 +4803,9 @@ presentations_part3 = [
         # get extra information from storage
         (store_add, ":current_storage_index", "$g_base_character_presentation_storage_index", "$g_latest_character_relation_entry"),
         (troop_get_slot, "$character_info_id", "trp_temp_array_c", ":current_storage_index"),
-        (this_or_next|eq, "$character_info_id", "trp_player"), #CABA #Floris 2.52 bugfix --rather brute force, but I didn't see any real reason trp_temp_array_c would be giving a -1 from the scripts above
-		(is_between, "$character_info_id", heroes_begin, heroes_end), #CABA #Floris 2.52 bugfix
+        (this_or_next|eq, "$character_info_id", "trp_player"),
+        (this_or_next|is_between, "$character_info_id", heroes_begin, heroes_end),
+        (is_between, "$character_info_id", lieutenants_begin, lieutenants_end),
 		
         # Fill text information for current entry and update text information overlay
         (call_script, "script_generate_extended_troop_relation_information_string", "$character_info_id"),

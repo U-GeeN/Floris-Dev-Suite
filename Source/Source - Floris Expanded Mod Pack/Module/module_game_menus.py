@@ -3410,7 +3410,7 @@ game_menus = [
 					(jump_to_scene, "scn_sea_2"),
 				(else_try),
 					(jump_to_scene, "scn_sea_1"),
-				(end_try),
+				(try_end),
 			#Wulf end
            (try_end),
     (assign, "$g_next_menu", "mnu_simple_encounter"),
@@ -3926,7 +3926,7 @@ game_menus = [
           
            #add new party to map (routed_warriors)
           (call_script, "script_add_routed_party"),
-        (end_try),
+        (try_end),
         		
 		(try_begin),
 			(check_quest_active, "qst_track_down_bandits"),
@@ -4900,7 +4900,7 @@ game_menus = [
                                    (jump_to_scene, "scn_sea_2"),
                                  (else_try),
                                    (jump_to_scene, "scn_sea_1"),
-                                   (end_try),
+                                   (try_end),
                                 (assign, "$g_next_menu", "mnu_join_battle"),
                                 (jump_to_menu, "mnu_battle_debrief"),
                                 (change_screen_mission),

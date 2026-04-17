@@ -5689,7 +5689,7 @@ presentations_part2 = [
           (overlay_add_item, "$g_presentation_obj_1", s2),   
           (assign, "$demanded_castle", ":castle"),   
           (val_add, ":castle_count", 1),         
-        (end_try),       
+        (try_end),       
         (assign, "$diplomacy_var2", 0),                 
         (position_set_x, pos1, 300),
         (position_set_y, pos1, 250),

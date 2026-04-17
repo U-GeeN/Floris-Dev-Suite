@@ -1066,7 +1066,7 @@ simple_triggers_part4 = [
           (str_store_troop_name, s13, ":target_troop"),
         (else_try),
           (str_store_party_name, s13, ":target_party"),
-        (end_try),
+        (try_end),
         (display_log_message, "@Your caravan has brought {s12} to {s13}.", 0x00FF00),
 
         (assign, ":relation_boost", 0),

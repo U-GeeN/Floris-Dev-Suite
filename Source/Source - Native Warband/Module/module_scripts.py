@@ -2330,7 +2330,7 @@ scripts = [
        #getting val2 for some commands
        (eq, ":input", 2),
        (store_script_param, ":val2", 3),
-     (end_try),
+     (try_end),
      (try_begin),
        (eq, ":input", 1),
        (assign, reg0, ":val1"),
@@ -5211,7 +5211,7 @@ scripts = [
                  (player_get_gold, ":player_gold", ":latest_joined_player_no"),
                  (val_add, ":player_gold", ":old_items_value"),
                  (player_set_gold, ":latest_joined_player_no", ":player_gold", multi_max_gold_that_can_be_stored),
-               (end_try),
+               (try_end),
 
                (player_set_troop_id, ":latest_joined_player_no", -1),
                (player_set_team_no, ":latest_joined_player_no", ":team_with_less_players"),
@@ -15569,7 +15569,7 @@ scripts = [
            (assign, ":minimum_distance", ":dist"),
            (copy_position, pos63, pos3), 
          (try_end),
-       (end_try),
+       (try_end),
      
        (party_set_position, ":routed_party", pos63),
 
@@ -25780,10 +25780,10 @@ scripts = [
               (else_try),
                 (ge, ":agent_hit_points", 15),
                 (assign, ":agent_delta_courage_score", 1),
-              (end_try),
+              (try_end),
             (else_try),
               (assign, ":agent_delta_courage_score", 4),
-            (end_try),
+            (try_end),
           (else_try),
             #Normal Agent : if near agent (agent_no) is not running away his positive effect on centered agent (centered_agent_no) fighting at his side is effected by his hit points.
             (try_begin),      
@@ -25808,7 +25808,7 @@ scripts = [
               (try_end),
             (else_try),
               (assign, ":agent_delta_courage_score", 2),
-            (end_try),
+            (try_end),
           (try_end),
       
           (try_begin),
@@ -28337,7 +28337,7 @@ scripts = [
           (agent_set_animation, ":agent_no", "anim_stand_townguard"),
         (else_try),
           (agent_set_animation, ":agent_no", "anim_stand_townguard"),
-        (end_try),
+        (try_end),
       (else_try),
         (is_between, ":troop_no", kingdom_ladies_begin, kingdom_ladies_end),
         (assign, ":stand_animation", "anim_stand_lady"),
@@ -47448,7 +47448,7 @@ scripts = [
 	  (lt, reg6, 1000),
 	  (store_random_in_range, ":new_gold", 250, 500),
 	  (call_script, "script_troop_add_gold", ":cur_merchant", ":new_gold"),
-    (end_try),
+    (try_end),
   ]),
 
   # script_refresh_center_weaponsmiths

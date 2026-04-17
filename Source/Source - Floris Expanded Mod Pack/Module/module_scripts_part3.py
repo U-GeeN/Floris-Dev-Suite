@@ -988,8 +988,10 @@ scripts_part3 = [
     ("troop_get_player_relation",
       [
         (store_script_param_1, ":troop_no"),
-        (troop_get_slot, ":reputation", ":troop_no", slot_lord_reputation_type),
-        (troop_get_slot, ":effective_relation", ":troop_no", slot_troop_player_relation),
+        (try_begin),
+          (ge, ":troop_no", 0),
+          (troop_get_slot, ":reputation", ":troop_no", slot_lord_reputation_type),
+          (troop_get_slot, ":effective_relation", ":troop_no", slot_troop_player_relation),
         (assign, ":honor_bonus", 0),
         (try_begin),
           (eq,  ":reputation", lrep_quarrelsome),
@@ -1067,6 +1069,9 @@ scripts_part3 = [
         (val_add, ":effective_relation", ":honor_bonus"),
         (val_clamp, ":effective_relation", -100, 101),
         (assign, reg0, ":effective_relation"),
+      (else_try),
+        (assign, reg0, 0),
+      (try_end),
     ]),
     
     # script_change_troop_renown
@@ -6994,7 +6999,7 @@ scripts_part3 = [
                 (agent_set_animation, ":agent_no", "anim_stand_townguard"),
               (else_try),
                 (agent_set_animation, ":agent_no", "anim_stand_townguard"),
-              (end_try),
+              (try_end),
             (else_try),
               (is_between, ":troop_no", kingdom_ladies_begin, kingdom_ladies_end),
               (assign, ":stand_animation", "anim_stand_lady"),

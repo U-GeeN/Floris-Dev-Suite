@@ -1609,7 +1609,7 @@ scripts_part5 = [
 								(store_random_in_range,":new_gold",300,500),
 								(call_script, "script_troop_add_gold", ":cur_merchant", ":new_gold"),
 							(try_end),
- 					     (end_try),
+							(try_end),
  					   ]),
 
 					    # script_refresh_center_weaponsmiths																		#	1.143 Port // Script newly added
@@ -12575,7 +12575,7 @@ scripts_part5 = [
                                     (str_store_string, s1, "@{s1} (ambassy)"),
                                   (else_try),
                                     (eq, ":companion", "$g_player_minister"),
-                                    (str_store_string, s1, "@{s1} (minister"),
+                                    (str_store_string, s1, "@{s1} (minister)"),
                                     (else_try),
                                       (main_party_has_troop, ":companion"),
                                       (str_store_string, s1, "@{s1} (under arms)"),
@@ -12601,6 +12601,28 @@ scripts_part5 = [
                                     (val_add, "$num_charinfo_candidates", 1),
                                   (try_end),
                                   # END companions
+
+                                  # Lieutenants
+                                  (try_for_range, ":lieutenant", lieutenants_begin, lieutenants_end),
+                                    (main_party_has_troop, ":lieutenant"),
+
+                                    (str_store_troop_name, s1, ":lieutenant"),
+                                    (str_store_string, s1, "@{s1} (lieutenant)"),
+
+                                    # create custom listbox entry, set the container first
+                                    (store_mul, ":y_mult", "$num_charinfo_candidates", 16),
+                                    (store_add, ":line_y", ":base_candidates_y", ":y_mult"),
+
+                                    (call_script, "script_overlay_container_add_listbox_item", ":line_y", ":lieutenant"),
+
+                                    #store troop id for later use
+                                    (store_add, ":current_storage_index", "$g_base_character_presentation_storage_index", "$num_charinfo_candidates"),
+                                    (troop_set_slot, "trp_temp_array_c", ":current_storage_index", ":lieutenant"),
+
+                                    # update entry counter
+                                    (val_add, "$num_charinfo_candidates", 1),
+                                  (try_end),
+                                  # END Lieutenants
                                   
                                   # Wife/Betrothed
                                   # END Wife/Betrothed
@@ -12700,6 +12722,8 @@ scripts_part5 = [
                             ("generate_extended_troop_relation_information_string",
                               [
                                 (store_script_param, ":troop_no", 1),
+                                (try_begin),
+                                  (ge, ":troop_no", 0),
                                 
                                 # clear the strings and registers we'll use to prevent external interference
                                 (str_clear, s1),
@@ -12781,7 +12805,7 @@ scripts_part5 = [
                                     
                                     # Relation to liege
                                     (call_script, "script_get_troop_relation_to_player_string", s47, ":liege"),
-                                  (end_try),
+                                  (try_end),
                                   
                                   # Holdings
                                   (call_script, "script_get_troop_holdings", ":troop_no"),
@@ -12832,7 +12856,7 @@ scripts_part5 = [
                                     (val_sub, ":origin_faction", npc_kingdoms_begin),
                                     (val_add, ":origin_faction", "str_kingdom_1_adjective"),
                                     (str_store_string, s44, ":origin_faction"),
-                                  (end_try),
+                                  (try_end),
                                   (str_store_faction_name, s45, ":faction"),
                                   
                                   # Current liege - deduced from current faction
@@ -12846,7 +12870,7 @@ scripts_part5 = [
                                     # Relation to liege
                                     (call_script, "script_troop_get_relation_with_troop", ":troop_no", ":liege"),
                                     (assign, reg47, reg0),
-                                  (end_try),
+                                  (try_end),
                                   
                                   # Promised a fief ?
                                   (troop_get_slot, reg51, ":troop_no", slot_troop_promised_fief),
@@ -12943,7 +12967,7 @@ scripts_part5 = [
                                     (val_sub, ":origin_faction", npc_kingdoms_begin),
                                     (val_add, ":origin_faction", "str_kingdom_1_adjective"),
                                     (str_store_string, s44, ":origin_faction"),
-                                  (end_try),
+                                  (try_end),
                                   (str_store_faction_name, s45, ":faction"),
                                   
                                   # Father/Guardian
@@ -13097,6 +13121,7 @@ scripts_part5 = [
                                   #########################
                                   # END companions
                                 (try_end),
+                                (try_end), # End safety check ge 0
                             ]),
                             
                             # Script generate_known_poems_string
