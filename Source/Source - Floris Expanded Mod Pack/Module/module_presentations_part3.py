@@ -7665,7 +7665,7 @@ reducing the overall operational cost."),
           # Col 1: Avatar (Manual implementation to remove name line)
           (store_mul, ":cur_troop", ":troop_id", 2), # with weapons
           (create_mesh_overlay_with_tableau_material, reg0, -1, "tableau_game_party_window", ":cur_troop"),
-          (position_set_x, pos1, 400), # Scaled from 150
+          (position_set_x, pos1, 400),
           (position_set_y, pos1, 400),
           (overlay_set_size, reg0, pos1),
           (position_set_x, pos1, 50), 
@@ -7680,7 +7680,8 @@ reducing the overall operational cost."),
 
           (store_character_level, reg1, ":troop_id"),
           (str_store_troop_name, s1, ":troop_id"),
-          (str_store_string, s1, "@{s1}^^Level:  {reg1}^^Attributes:^STR:  {reg10}^AGI:  {reg11}^INT:  {reg12}^CHA: {reg13}"),
+          (store_troop_health, reg2, ":troop_id"),
+          (str_store_string, s1, "@{s1}^Level:  {reg1}^HP:   {reg2}^Attributes:^STR:  {reg10}^AGI:  {reg11}^INT:  {reg12}^CHA: {reg13}"),
           
           (create_text_overlay, reg0, "@{s1}", tf_left_align),
           (position_set_x, pos1, 750), # 75% scale

@@ -396,10 +396,18 @@ slot_town_arena_melee_cur_tier    = 86
 
 slot_center_npc_volunteer_troop_type   = 90
 slot_center_npc_volunteer_troop_amount = 91
-slot_center_mercenary_troop_type  = 90
-slot_center_mercenary_troop_amount= 91
-slot_center_volunteer_troop_type  = 92
-slot_center_volunteer_troop_amount= 93
+
+# Custom Multi-Tier Recruitment
+slot_center_volunteer_troop_type_1 = 480
+slot_center_volunteer_troop_amount_1 = 481
+slot_center_volunteer_troop_type_2 = 482
+slot_center_volunteer_troop_amount_2 = 483
+slot_center_volunteer_troop_type_3 = 484
+slot_center_volunteer_troop_amount_3 = 485
+slot_center_mercenary_troop_type   = 92
+slot_center_mercenary_troop_amount = 93
+slot_center_volunteer_troop_type  = 486
+slot_center_volunteer_troop_amount= 487
 
 #slot_center_companion_candidate   = 94
 slot_center_ransom_broker         = 95
@@ -1124,6 +1132,9 @@ dplmc_slto_dead            = 15 #not normally set
 slot_lieutenant        = 20
 lieutenants_begin      = "trp_lieutenant_l14"
 lieutenants_end        = "trp_lieutenant_end"
+
+slot_troop_lieutenant_morale     = 170
+slot_troop_lieutenant_clash_with = 171
 
 ########################################################
 ##  QUEST SLOTS            #############################

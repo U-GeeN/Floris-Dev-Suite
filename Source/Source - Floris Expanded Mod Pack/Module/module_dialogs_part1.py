@@ -2248,9 +2248,57 @@ dialogs_part1 = [
   [
     (store_conversation_troop,"$g_talk_troop"),
     (is_between, "$g_talk_troop", lieutenants_begin, lieutenants_end),
-    (troop_get_slot, ":honorific", "$g_talk_troop", slot_troop_honorific),
-    (str_store_string, s5, ":honorific"),
-  ], "Lieutenant reporting, {s5}. What are your orders?", "member_talk",
+    (troop_get_slot, ":clash_troop", "$g_talk_troop", slot_troop_lieutenant_clash_with),
+    (gt, ":clash_troop", 0),
+    (main_party_has_troop, ":clash_troop"),
+    (str_store_troop_name, s11, ":clash_troop"),
+  ], "Lieutenant reporting, {sire/my lady}. I must speak with you. My situation with {s11} has become intolerable. The men are starting to take sides.", "lt_dispute_start",
+  []],
+
+  [anyone,"lt_dispute_start", [], "What is the nature of this conflict?", "lt_dispute_choice", []],
+
+  [anyone|plyr,"lt_dispute_choice", [], "You must learn to work together for the good of the party.", "lt_dispute_resolve", [
+    (troop_get_slot, ":clash_troop", "$g_talk_troop", slot_troop_lieutenant_clash_with),
+    (troop_set_slot, "$g_talk_troop", slot_troop_lieutenant_clash_with, -1),
+    (troop_set_slot, ":clash_troop", slot_troop_lieutenant_clash_with, -1),
+    # Medium morale penalty to both, but conflict resolved
+    (troop_get_slot, ":m1", "$g_talk_troop", slot_troop_lieutenant_morale), (val_sub, ":m1", 5), (val_max, ":m1", 0), (troop_set_slot, "$g_talk_troop", slot_troop_lieutenant_morale, ":m1"),
+    (troop_get_slot, ":m2", ":clash_troop", slot_troop_lieutenant_morale), (val_sub, ":m2", 5), (val_max, ":m2", 0), (troop_set_slot, ":clash_troop", slot_troop_lieutenant_morale, ":m2"),
+    (display_message, "@You ordered the lieutenants to cooperate. Conflict resolved."),
+  ]],
+
+  [anyone|plyr,"lt_dispute_choice", [
+    (store_skill_level, ":pers", skl_persuasion, "trp_player"),
+    (ge, ":pers", 3),
+  ], "I have seen this before. Both of you are valuable, but this bickering must stop. (Persuasion)", "lt_dispute_resolve", [
+    (troop_get_slot, ":clash_troop", "$g_talk_troop", slot_troop_lieutenant_clash_with),
+    (troop_set_slot, "$g_talk_troop", slot_troop_lieutenant_clash_with, -1),
+    (troop_set_slot, ":clash_troop", slot_troop_lieutenant_clash_with, -1),
+    # Small morale boost for resolving it well
+    (troop_get_slot, ":m1", "$g_talk_troop", slot_troop_lieutenant_morale), (val_add, ":m1", 5), (val_min, ":m1", 100), (troop_set_slot, "$g_talk_troop", slot_troop_lieutenant_morale, ":m1"),
+    (troop_get_slot, ":m2", ":clash_troop", slot_troop_lieutenant_morale), (val_add, ":m2", 5), (val_min, ":m2", 100), (troop_set_slot, ":clash_troop", slot_troop_lieutenant_morale, ":m2"),
+    (call_script, "script_change_player_party_morale", 2),
+    (display_message, "@Your words calmed the tensions. Conflict resolved with honor."),
+  ]],
+
+  [anyone|plyr,"lt_dispute_choice", [], "I support you, Lieutenant. I will speak with the other.", "lt_dispute_resolve", [
+    (troop_get_slot, ":clash_troop", "$g_talk_troop", slot_troop_lieutenant_clash_with),
+    (troop_set_slot, "$g_talk_troop", slot_troop_lieutenant_clash_with, -1),
+    (troop_set_slot, ":clash_troop", slot_troop_lieutenant_clash_with, -1),
+    # Plus to speaker, minus to other
+    (call_script, "script_troop_change_relation_with_troop", "$g_talk_troop", "trp_player", 5),
+    (call_script, "script_troop_change_relation_with_troop", ":clash_troop", "trp_player", -10),
+    (display_message, "@You sided with one lieutenant over the other."),
+  ]],
+
+  [anyone,"lt_dispute_resolve", [], "As you command, {s5}. I shall return to my post.", "member_talk", []],
+
+  [anyone,"member_chat", 
+  [
+    (store_conversation_troop,"$g_talk_troop"),
+    (is_between, "$g_talk_troop", lieutenants_begin, lieutenants_end),
+    (str_store_troop_name, s11, "$g_talk_troop"),
+  ], "Lieutenant {s11} reporting, {sire/my lady}. What are your orders?", "member_talk",
   [
     (unlock_achievement, ACHIEVEMENT_TALKING_HELPS),
   ]],
@@ -2624,6 +2672,13 @@ dialogs_part1 = [
    [
      (try_begin),
         (is_between, "$g_talk_troop", lieutenants_begin, lieutenants_end),
+        # Clear clash for both parties if one leaves
+        (troop_get_slot, ":clash_troop", "$g_talk_troop", slot_troop_lieutenant_clash_with),
+        (try_begin),
+          (gt, ":clash_troop", 0),
+          (troop_set_slot, ":clash_troop", slot_troop_lieutenant_clash_with, -1),
+        (try_end),
+        (troop_set_slot, "$g_talk_troop", slot_troop_lieutenant_clash_with, -1),
         (troop_set_slot, "$g_talk_troop", slot_troop_occupation, slto_inactive),
         (troop_set_slot, "$g_talk_troop", slot_troop_cur_center, -1),
         (remove_member_from_party, "$g_talk_troop"),

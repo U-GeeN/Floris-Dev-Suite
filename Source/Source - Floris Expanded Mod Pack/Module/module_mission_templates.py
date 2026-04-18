@@ -16203,8 +16203,10 @@ lethal_overkill_death = (
   ti_on_agent_killed_or_wounded, 0, 0, [],
   [
     (store_trigger_param_1, ":dead_agent_no"),
+    (store_trigger_param_3, ":is_wounded"),
     (try_begin),
       (ge, ":dead_agent_no", 0),
+      (eq, ":is_wounded", 0), # If surgery saved them (is_wounded=1), skip permanent death
       (agent_is_human, ":dead_agent_no"),
       (agent_slot_eq, ":dead_agent_no", slot_agent_is_overkilled, 1),
       (agent_get_troop_id, ":troop_id", ":dead_agent_no"),

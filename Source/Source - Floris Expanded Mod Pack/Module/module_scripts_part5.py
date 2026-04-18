@@ -13047,6 +13047,38 @@ scripts_part5 = [
                                   # END kingdom lady, unmarried
                                 (else_try),
                                   #########################
+                                  # Lieutenants
+                                  (is_between, ":troop_no", lieutenants_begin, lieutenants_end),
+                                  (overlay_set_display, "$g_jrider_character_faction_filter", 0),
+                                  
+                                  (str_store_troop_name, s1, ":troop_no"),
+                                  
+                                  # relation to player
+                                  (str_clear, s2),
+                                  (str_clear, s60),
+                                  (call_script, "script_get_troop_relation_to_player_string", s2, ":troop_no"),
+                                  
+                                  # Morale
+                                  (troop_get_slot, ":morale", ":troop_no", slot_troop_lieutenant_morale),
+                                  (assign, reg40, ":morale"),
+
+                                  # Clash
+                                  (troop_get_slot, ":clash_troop", ":troop_no", slot_troop_lieutenant_clash_with),
+                                  (assign, reg41, 0),
+                                  (str_clear, s43),
+                                  (try_begin),
+                                    (gt, ":clash_troop", 0),
+                                    (str_store_troop_name, s43, ":clash_troop"),
+                                    (str_store_string, s43, "@ (Clashing with {s43})"),
+                                    (assign, reg41, 1),
+                                  (try_end),
+
+                                  #### Final Storage
+                                  (str_store_string, s1, "@{s1} (Lieutenant)^Relation: {s2} ({reg0}){s43}^Morale: {reg40}/100"),
+                                  #########################
+                                  # END Lieutenants
+                                (else_try),
+                                  #########################
                                   # companions
                                   (is_between, ":troop_no", companions_begin, companions_end),
                                   (overlay_set_display, "$g_jrider_character_faction_filter", 0),
@@ -13100,8 +13132,8 @@ scripts_part5 = [
                                     (troop_slot_ge, ":troop_no", slot_troop_current_mission, npc_mission_peace_request),
                                     (neg|troop_slot_ge, ":troop_no", slot_troop_current_mission, 8),
                                     
-                                    (troop_get_slot, ":troop_no", ":troop_no", slot_troop_mission_object),
-                                    (str_store_faction_name, s66, ":faction"),
+                                    (troop_get_slot, ":target_faction", ":troop_no", slot_troop_mission_object),
+                                    (str_store_faction_name, s66, ":target_faction"),
                                     
                                     (str_store_string, s50, "@Ambassy to {s66}"),
                                   (else_try), # Companion is serving as minister player has court
@@ -15473,6 +15505,8 @@ scripts_part5 = [
     # Phase 6: Finalize Recruitment
     (party_remove_members, "p_main_party", ":source_troop", 1),
     (troop_set_slot, ":lieutenant_troop", slot_troop_occupation, slot_lieutenant),
+    (troop_set_slot, ":lieutenant_troop", slot_troop_lieutenant_morale, 100),
+    (troop_set_slot, ":lieutenant_troop", slot_troop_lieutenant_clash_with, -1),
     (party_add_members, "p_main_party", ":lieutenant_troop", 1),
 
     (display_message, "@{s1} has been promoted and joined your ranks!"),
