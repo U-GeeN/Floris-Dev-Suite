@@ -8268,7 +8268,7 @@ game_menus = [
          (try_begin),
            (call_script, "script_cf_enter_center_location_bandit_check"),
          (else_try),
-           (jump_to_menu, "mnu_recruit_volunteers"),
+            (start_presentation, "prsnt_village_recruitment"),
          (try_end),
         ]),
 

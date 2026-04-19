@@ -571,9 +571,7 @@ scripts_part1 = [
         (party_set_slot,":village_no", slot_village_raided_by, -1),
         
         (call_script, "script_start_refresh_village_defenders", ":village_no"),
-        (call_script, "script_start_refresh_village_defenders", ":village_no"),
-        (call_script, "script_start_refresh_village_defenders", ":village_no"),
-        (call_script, "script_start_refresh_village_defenders", ":village_no"),
+        (call_script, "script_update_volunteer_troops_in_village", ":village_no"),
       (try_end),
       
       (try_for_range, ":center_no", centers_begin, centers_end),

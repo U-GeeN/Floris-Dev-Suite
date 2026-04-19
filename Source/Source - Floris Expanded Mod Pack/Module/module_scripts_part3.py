@@ -10016,39 +10016,59 @@ scripts_part3 = [
         #script_update_volunteer_troops_in_village
         # INPUT: arg1 = center_no
         # OUTPUT: none
+        # DESIGN:
+        #   Pool size  = native relation-based formula (upper_limit), unchanged from vanilla
+        #   Troop tier = f(slot_center_veteran_level):
+        #                  T1→T2 chance = min(50, veteran_level / 3)%
+        #                  T2→T3 chance = min(30, veteran_level / 10)%
+        #   veteran_level accumulates sqrt(max(0, prosperity - 30)) each 72h tick
+        #                  — high prosperity helps but with diminishing returns
+        #                  — cap 500, decays -2/tick when prosperity < 30
+        #   All 3 slots are independent — each can independently roll T1/T2/T3
         ("update_volunteer_troops_in_village",
           [
             (store_script_param, ":center_no", 1),
             (party_get_slot, ":player_relation", ":center_no", slot_center_player_relation),
-                   (party_get_slot, ":center_culture", ":center_no", slot_center_culture),
-            #(store_faction_of_party, ":center_culture", ":center_no"), #Player Faction
-            
-            
-            ##	   (try_begin),
-            ##		(eq, "$cheat_mode", 2),
-            ##	    (str_store_party_name, s4, ":center_no"),
-            ##	    (str_store_faction_name, s5, ":center_culture"),
-            ##	    (display_message, "str_updating_volunteers_for_s4_faction_is_s5"),
-            ##	   (try_end),
-            
-            (faction_get_slot, ":volunteer_troop", ":center_culture", slot_faction_tier_1_troop),
-            (assign, ":volunteer_troop_tier", 1),
-            (store_div, ":tier_upgrades", ":player_relation", 10),
-            (try_for_range, ":unused", 0, ":tier_upgrades"),
-              (store_random_in_range, ":random_no", 0, 100),
-              (lt, ":random_no", 10),
-              (store_random_in_range, ":random_no", 0, 2),
-              (troop_get_upgrade_troop, ":upgrade_troop_no", ":volunteer_troop", ":random_no"),
-              (try_begin),
-                (le, ":upgrade_troop_no", 0),
-                (troop_get_upgrade_troop, ":upgrade_troop_no", ":volunteer_troop", 0),
-              (try_end),
-              (gt, ":upgrade_troop_no", 0),
-              (val_add, ":volunteer_troop_tier", 1),
-              (assign, ":volunteer_troop", ":upgrade_troop_no"),
+            (party_get_slot, ":center_culture", ":center_no", slot_center_culture),
+            (party_get_slot, ":prosperity", ":center_no", slot_town_prosperity),
+
+            (faction_get_slot, ":t1_troop", ":center_culture", slot_faction_tier_1_troop),
+
+            # Clear legacy single-slot
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_type, -1),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_amount, 0),
+
+            # === Update veteran_level (prosperity-over-time tracker, 0..500) ===
+            # Accumulates sqrt(prosperity - 30) per 72h tick — diminishing returns at high prosperity
+            # Decays when prosperity is low, resets to 0 on raid (see village_set_state)
+            (party_get_slot, ":veteran_level", ":center_no", slot_center_veteran_level),
+            (try_begin),
+              (gt, ":prosperity", 30),
+              (assign, ":gain", ":prosperity"),
+              (val_sub, ":gain", 30),
+              (convert_to_fixed_point, ":gain"),
+              (store_sqrt, ":gain", ":gain"),
+              (convert_from_fixed_point, ":gain"),
+              (val_max, ":gain", 1),
+              (val_add, ":veteran_level", ":gain"),
+              (val_min, ":veteran_level", 500),
+            (else_try),
+              (lt, ":prosperity", 30),
+              (val_sub, ":veteran_level", 2),
+              (val_max, ":veteran_level", 0),
             (try_end),
-            
-            (assign, ":upper_limit", 8),							#	1.143 Port // Increased from 7
+            (party_set_slot, ":center_no", slot_center_veteran_level, ":veteran_level"),
+
+            # === Upgrade chances from veteran_level ===
+            # T1→T2: 0% at vet=0, 25% at vet=75 (~15 ticks @prosperity60), 50% cap
+            # T2→T3: 0% at vet=0, 15% at vet=150 (~30 ticks @prosperity60), 30% cap
+            (store_div, ":t2_chance", ":veteran_level", 3),
+            (val_min, ":t2_chance", 50),
+            (store_div, ":t3_chance", ":veteran_level", 10),
+            (val_min, ":t3_chance", 30),
+
+            # === Native pool size (relation-based, same as vanilla) ===
+            (assign, ":upper_limit", 8),
             (try_begin),
               (ge, ":player_relation", 4),							#	1.143 Port // Decreased from 5
               (assign, ":upper_limit", ":player_relation"),
@@ -10058,62 +10078,150 @@ scripts_part3 = [
               (lt, ":player_relation", 0),
               (assign, ":upper_limit", 0),
             (try_end),
-            
-            
+
             ##diplomacy begin
             (assign, ":percent", 100),
-            (try_begin), #-30% if not owner
+            (try_begin),
               (neg|party_slot_eq, ":center_no", slot_town_lord, "trp_player"),
               (val_sub, ":percent", 30),
             (try_end),
-            (try_begin), #1%/4 renown
+            (try_begin),
               (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
               (val_div, ":player_renown", 4),
               (val_add, ":percent", ":player_renown"),
             (try_end),
-            (try_begin), #1%/3 honour
+            (try_begin),
               (assign, ":player_honour", "$player_honor"),
               (val_div, ":player_honour", 3),
               (val_add, ":percent", ":player_honour"),
             (try_end),
-            (try_begin), #+5% if king
+            (try_begin),
               (faction_get_slot, ":faction_leader", "fac_player_supporters_faction", slot_faction_leader),
               (eq, ":faction_leader", "trp_player"),
               (val_add, ":percent", 5),
-              
-              (try_begin), #-5% for each point of serfdom
+              (try_begin),
                 (faction_get_slot, ":serfdom", "fac_player_supporters_faction", dplmc_slot_faction_serfdom),
                 (neq, ":serfdom", 0),
                 (val_mul, ":serfdom", 5),
                 (val_sub, ":percent", ":serfdom"),
               (try_end),
-              
-              (try_begin),  #+5% if king of village
+              (try_begin),
                 (store_faction_of_party, ":faction", ":center_no"),
                 (eq, ":faction", "fac_player_supporters_faction"),
                 (val_add, ":percent", 5),
               (try_end),
             (try_end),
-            
             (try_begin),
               (gt, ":upper_limit", 0),
               (val_clamp, ":percent", 0, 201),
               (val_mul, ":upper_limit", ":percent"),
               (val_div, ":upper_limit", 100),
             (try_end),
-            
             ##diplomacy end
-            
-            
+
             (val_mul, ":upper_limit", 3),
-            (store_add, ":amount_random_divider", 2, ":volunteer_troop_tier"),
-            (val_div, ":upper_limit", ":amount_random_divider"),
-            
-            (store_random_in_range, ":amount", 0, ":upper_limit"),
-            (party_set_slot, ":center_no", slot_center_volunteer_troop_type, ":volunteer_troop"),
-            (party_set_slot, ":center_no", slot_center_volunteer_troop_amount, ":amount"),
-        ]),
-        
+            (store_random_in_range, ":pool", 0, ":upper_limit"),
+            (val_max, ":pool", 1),
+
+            # Distribute pool across 3 slots
+            # Each slot gets a random share; total ≤ pool
+            (store_random_in_range, ":amt1", 0, ":pool"),
+            (val_add, ":amt1", 1),
+            (store_random_in_range, ":amt2", 0, ":pool"),
+            (val_add, ":amt2", 1),
+            (store_random_in_range, ":amt3", 0, ":pool"),
+            (val_add, ":amt3", 1),
+
+            # === Slot 1 — independent tier roll ===
+            (assign, ":cur_troop", ":t1_troop"),
+            (try_begin),
+              # T1 → T2
+              (store_random_in_range, ":rand", 0, 100),
+              (lt, ":rand", ":t2_chance"),
+              (store_random_in_range, ":branch", 0, 2),
+              (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+              (try_begin),
+                (le, ":upgrade", 0),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+              (try_end),
+              (gt, ":upgrade", 0),
+              (assign, ":cur_troop", ":upgrade"),
+              (try_begin),
+                # T2 → T3
+                (store_random_in_range, ":rand", 0, 100),
+                (lt, ":rand", ":t3_chance"),
+                (store_random_in_range, ":branch", 0, 2),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+                (try_begin),
+                  (le, ":upgrade", 0),
+                  (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+                (try_end),
+                (gt, ":upgrade", 0),
+                (assign, ":cur_troop", ":upgrade"),
+              (try_end),
+            (try_end),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_type_1, ":cur_troop"),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_amount_1, ":amt1"),
+
+            # === Slot 2 — independent tier roll ===
+            (assign, ":cur_troop", ":t1_troop"),
+            (try_begin),
+              (store_random_in_range, ":rand", 0, 100),
+              (lt, ":rand", ":t2_chance"),
+              (store_random_in_range, ":branch", 0, 2),
+              (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+              (try_begin),
+                (le, ":upgrade", 0),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+              (try_end),
+              (gt, ":upgrade", 0),
+              (assign, ":cur_troop", ":upgrade"),
+              (try_begin),
+                (store_random_in_range, ":rand", 0, 100),
+                (lt, ":rand", ":t3_chance"),
+                (store_random_in_range, ":branch", 0, 2),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+                (try_begin),
+                  (le, ":upgrade", 0),
+                  (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+                (try_end),
+                (gt, ":upgrade", 0),
+                (assign, ":cur_troop", ":upgrade"),
+              (try_end),
+            (try_end),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_type_2, ":cur_troop"),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_amount_2, ":amt2"),
+
+            # === Slot 3 — independent tier roll ===
+            (assign, ":cur_troop", ":t1_troop"),
+            (try_begin),
+              (store_random_in_range, ":rand", 0, 100),
+              (lt, ":rand", ":t2_chance"),
+              (store_random_in_range, ":branch", 0, 2),
+              (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+              (try_begin),
+                (le, ":upgrade", 0),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+              (try_end),
+              (gt, ":upgrade", 0),
+              (assign, ":cur_troop", ":upgrade"),
+              (try_begin),
+                (store_random_in_range, ":rand", 0, 100),
+                (lt, ":rand", ":t3_chance"),
+                (store_random_in_range, ":branch", 0, 2),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+                (try_begin),
+                  (le, ":upgrade", 0),
+                  (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+                (try_end),
+                (gt, ":upgrade", 0),
+                (assign, ":cur_troop", ":upgrade"),
+              (try_end),
+            (try_end),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_type_3, ":cur_troop"),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_amount_3, ":amt3"),
+          ]),
+
         #script_update_npc_volunteer_troops_in_village
         # INPUT: arg1 = center_no
         # OUTPUT: none
@@ -12604,10 +12712,7 @@ scripts_part3 = [
               (eq, "$cheat_mode", 1),
               (display_message, "str_center_relation_at_least_zero"),
             (try_end),
-            
-            
-            
-            
+
             (this_or_next|ge, ":center_relation", 5),
             (this_or_next|eq, ":village_faction", "$players_kingdom"),
             (this_or_next|ge, ":village_faction_relation", 0),
@@ -12619,9 +12724,16 @@ scripts_part3 = [
               (display_message, "str_relationfaction_conditions_met"),
             (try_end),
             
+            # Migration/First-time initialization for Tiered Recruitment
+            (try_begin),
+              (neg|party_slot_eq, "$current_town", slot_center_volunteer_troop_type, -1),
+              (call_script, "script_update_volunteer_troops_in_village", "$current_town"),
+            (try_end),
             
-            (party_slot_ge, "$current_town", slot_center_volunteer_troop_amount, 0),
-            (party_slot_ge, "$current_town", slot_center_volunteer_troop_type, 1),
+            
+            (this_or_next|party_slot_ge, "$current_town", slot_center_volunteer_troop_amount_1, 1),
+            (this_or_next|party_slot_ge, "$current_town", slot_center_volunteer_troop_amount_2, 1),
+            (party_slot_ge, "$current_town", slot_center_volunteer_troop_amount_3, 1),
             
             (try_begin),
               (eq, "$cheat_mode", 1),
@@ -14658,19 +14770,27 @@ scripts_part3 = [
           [
             (store_script_param_1, ":npc"),
             
-            (troop_get_slot, ":morality_grievances", ":npc", slot_troop_morality_penalties),
-            (troop_get_slot, ":personality_grievances", ":npc", slot_troop_personalityclash_penalties),
-            (party_get_morale, ":party_morale", "p_main_party"),
-            
-            (store_sub, ":troop_morale", ":party_morale", ":morality_grievances"),
-            (val_sub, ":troop_morale", ":personality_grievances"),
-            (val_add, ":troop_morale", 50),
-            
-            (assign, reg8, ":troop_morale"),
-            
-            (val_mul, ":troop_morale", 3),
-            (val_div, ":troop_morale", 4),
-            (val_clamp, ":troop_morale", 0, 100),
+            (try_begin),
+              (is_between, ":npc", lieutenants_begin, lieutenants_end),
+              (troop_get_slot, ":troop_morale", ":npc", slot_troop_lieutenant_morale),
+              (assign, ":morality_grievances", 0),
+              (assign, ":personality_grievances", 0),
+              (party_get_morale, ":party_morale", "p_main_party"),
+            (else_try),
+              (troop_get_slot, ":morality_grievances", ":npc", slot_troop_morality_penalties),
+              (troop_get_slot, ":personality_grievances", ":npc", slot_troop_personalityclash_penalties),
+              (party_get_morale, ":party_morale", "p_main_party"),
+              
+              (store_sub, ":troop_morale", ":party_morale", ":morality_grievances"),
+              (val_sub, ":troop_morale", ":personality_grievances"),
+              (val_add, ":troop_morale", 50),
+              
+              (assign, reg8, ":troop_morale"),
+              
+              (val_mul, ":troop_morale", 3),
+              (val_div, ":troop_morale", 4),
+              (val_clamp, ":troop_morale", 0, 100),
+            (try_end),
             
             (assign, reg5, ":party_morale"),
             (assign, reg6, ":morality_grievances"),
@@ -15063,5 +15183,49 @@ scripts_part3 = [
             (val_max, "$g_check_autos_at_hour", ":cur_hours"),
             (val_add, ":num_hours", 1),
             (rest_for_hours, ":num_hours", 0, 0),
-        ]),
+	  ]),
+
+    ("prsnt_village_recruitment_draw_tier",
+    [
+      (store_script_param, ":troop_no", 1),
+      (store_script_param, ":max_amount", 2),
+      (store_script_param, ":y_pos", 3),
+      (store_script_param, ":price", 4),
+
+      (try_begin),
+        (gt, ":troop_no", 0),
+        (gt, ":max_amount", 0),
+
+        # Troop Name and Available Amount
+        (str_store_troop_name, s1, ":troop_no"),
+        (assign, reg1, ":max_amount"),
+        (assign, reg2, ":price"),
+        (str_store_string, s1, "@{s1}^({reg1} available for {reg2} denars)"),
+        (create_text_overlay, ":name_label", s1),
+        (store_add, ":text_y", ":y_pos", 40),
+        (position_set_x, pos1, 260), (position_set_y, pos1, ":text_y"), (overlay_set_position, ":name_label", pos1),
+
+        # Troop Image (troop_no * 2 because party tableau encodes hide_weapons in the low bit)
+        (store_mul, ":troop_no_encoded", ":troop_no", 2),
+        (create_mesh_overlay_with_tableau_material, ":troop_image", -1, "tableau_game_party_window", ":troop_no_encoded"),
+        (position_set_x, pos1, 150), (position_set_y, pos1, ":y_pos"), (overlay_set_position, ":troop_image", pos1),
+        (position_set_x, pos1, 400), (position_set_y, pos1, 400), (overlay_set_size, ":troop_image", pos1),
+
+        # Slider
+        (create_slider_overlay, ":slider", 0, ":max_amount"),
+        (position_set_x, pos1, 400), (position_set_y, pos1, ":y_pos"), (overlay_set_position, ":slider", pos1),
+
+        # Selected Amount Text
+        (create_text_overlay, ":amount_label", "@0"),
+        (position_set_x, pos1, 550), (position_set_y, pos1, ":y_pos"), (overlay_set_position, ":amount_label", pos1),
+
+        # Return IDs in registers
+        (assign, reg0, ":slider"),
+        (assign, reg1, ":amount_label"),
+      (else_try),
+        (assign, reg0, -1),
+        (assign, reg1, -1),
+      (try_end),
+    ]),
 ]
+

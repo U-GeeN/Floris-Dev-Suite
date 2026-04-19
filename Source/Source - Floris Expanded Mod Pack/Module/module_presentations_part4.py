@@ -1029,5 +1029,205 @@ presentations_part4 = [
 	]),	  
 	#	Reports Over
 	  
- 
+  
+  ("village_recruitment", 0, mesh_load_window, [
+    (ti_on_presentation_load,
+    [
+      (set_fixed_point_multiplier, 1000),
+      
+      (party_get_slot, "$g_village_recruit_t1_troop", "$current_town", slot_center_volunteer_troop_type_1),
+      (party_get_slot, "$g_village_recruit_max_1", "$current_town", slot_center_volunteer_troop_amount_1),
+      
+      (party_get_slot, "$g_village_recruit_t2_troop", "$current_town", slot_center_volunteer_troop_type_2),
+      (party_get_slot, "$g_village_recruit_max_2", "$current_town", slot_center_volunteer_troop_amount_2),
+      
+      (party_get_slot, "$g_village_recruit_t3_troop", "$current_town", slot_center_volunteer_troop_type_3),
+      (party_get_slot, "$g_village_recruit_max_3", "$current_town", slot_center_volunteer_troop_amount_3),
+
+      # === Deduplication: collapse identical troop types into the lowest matching slot ===
+      # If T2 is the same troop as T1, fold its count into T1 and clear T2
+      (try_begin),
+        (gt, "$g_village_recruit_t2_troop", 0),
+        (eq, "$g_village_recruit_t2_troop", "$g_village_recruit_t1_troop"),
+        (val_add, "$g_village_recruit_max_1", "$g_village_recruit_max_2"),
+        (assign, "$g_village_recruit_t2_troop", 0),
+        (assign, "$g_village_recruit_max_2", 0),
+      (try_end),
+      # If T3 matches T1, fold into T1 and clear T3
+      (try_begin),
+        (gt, "$g_village_recruit_t3_troop", 0),
+        (eq, "$g_village_recruit_t3_troop", "$g_village_recruit_t1_troop"),
+        (val_add, "$g_village_recruit_max_1", "$g_village_recruit_max_3"),
+        (assign, "$g_village_recruit_t3_troop", 0),
+        (assign, "$g_village_recruit_max_3", 0),
+      (try_end),
+      # If T3 matches T2 (after T2 may have been cleared above), fold into T2 and clear T3
+      (try_begin),
+        (gt, "$g_village_recruit_t3_troop", 0),
+        (gt, "$g_village_recruit_t2_troop", 0),
+        (eq, "$g_village_recruit_t3_troop", "$g_village_recruit_t2_troop"),
+        (val_add, "$g_village_recruit_max_2", "$g_village_recruit_max_3"),
+        (assign, "$g_village_recruit_t3_troop", 0),
+        (assign, "$g_village_recruit_max_3", 0),
+      (try_end),
+
+      (assign, "$g_village_recruit_t1_amount", 0),
+      (assign, "$g_village_recruit_t2_amount", 0),
+      (assign, "$g_village_recruit_t3_amount", 0),
+
+      # UI Elements
+      (create_text_overlay, reg0, "@Village Recruitment", tf_center_justify|tf_with_outline),
+      (overlay_set_color, reg0, 0xFFFFFFFF),
+      (position_set_x, pos1, 1500), (position_set_y, pos1, 1500), (overlay_set_size, reg0, pos1),
+      (position_set_x, pos1, 500), (position_set_y, pos1, 680), (overlay_set_position, reg0, pos1),
+
+      (str_store_party_name, s1, "$current_town"),
+      (create_text_overlay, reg0, "@Recruiting from {s1}", tf_center_justify),
+      (position_set_x, pos1, 500), (position_set_y, pos1, 650), (overlay_set_position, reg0, pos1),
+
+      (assign, ":y_pos", 550),
+      
+      # Tier 1
+      (call_script, "script_prsnt_village_recruitment_draw_tier", "$g_village_recruit_t1_troop", "$g_village_recruit_max_1", ":y_pos", 10),
+      (assign, "$g_presentation_obj_1", reg0), # Slider
+      (assign, "$g_presentation_obj_4", reg1), # Amount label
+      (try_begin),
+        (gt, reg0, 0),
+        (val_sub, ":y_pos", 150),
+      (try_end),
+
+      # Tier 2
+      (call_script, "script_prsnt_village_recruitment_draw_tier", "$g_village_recruit_t2_troop", "$g_village_recruit_max_2", ":y_pos", 20),
+      (assign, "$g_presentation_obj_2", reg0), # Slider
+      (assign, "$g_presentation_obj_5", reg1), # Amount label
+      (try_begin),
+        (gt, reg0, 0),
+        (val_sub, ":y_pos", 150),
+      (try_end),
+
+      # Tier 3
+      (call_script, "script_prsnt_village_recruitment_draw_tier", "$g_village_recruit_t3_troop", "$g_village_recruit_max_3", ":y_pos", 40),
+      (assign, "$g_presentation_obj_3", reg0), # Slider
+      (assign, "$g_presentation_obj_6", reg1), # Amount label
+      (try_begin),
+        (gt, reg0, 0),
+        (val_sub, ":y_pos", 150),
+      (try_end),
+
+      (create_text_overlay, "$g_presentation_obj_7", "@Total Cost: 0 denars"),
+      (position_set_x, pos1, 430), (position_set_y, pos1, 150), (overlay_set_position, "$g_presentation_obj_7", pos1),
+
+      (create_game_button_overlay, "$g_presentation_obj_8", "@Recruit"),
+      (position_set_x, pos1, 400), (position_set_y, pos1, 50), (overlay_set_position, "$g_presentation_obj_8", pos1),
+
+      (create_game_button_overlay, "$g_presentation_obj_9", "@Cancel"),
+      (position_set_x, pos1, 600), (position_set_y, pos1, 50), (overlay_set_position, "$g_presentation_obj_9", pos1),
+
+      (presentation_set_duration, 999999),
+    ]),
+
+    (ti_on_presentation_event_state_change,
+    [
+      (store_trigger_param_1, ":object"),
+      (store_trigger_param_2, ":value"),
+
+      (try_begin),
+        (eq, ":object", "$g_presentation_obj_1"),
+        (assign, "$g_village_recruit_t1_amount", ":value"),
+        (assign, reg1, ":value"),
+        (overlay_set_text, "$g_presentation_obj_4", "@{reg1}"),
+      (else_try),
+        (eq, ":object", "$g_presentation_obj_2"),
+        (assign, "$g_village_recruit_t2_amount", ":value"),
+        (assign, reg1, ":value"),
+        (overlay_set_text, "$g_presentation_obj_5", "@{reg1}"),
+      (else_try),
+        (eq, ":object", "$g_presentation_obj_3"),
+        (assign, "$g_village_recruit_t3_amount", ":value"),
+        (assign, reg1, ":value"),
+        (overlay_set_text, "$g_presentation_obj_6", "@{reg1}"),
+      (try_end),
+
+      # Update Total Cost
+      (store_mul, ":cost1", "$g_village_recruit_t1_amount", 10),
+      (store_mul, ":cost2", "$g_village_recruit_t2_amount", 20),
+      (store_mul, ":cost3", "$g_village_recruit_t3_amount", 40),
+      (store_add, ":total_cost", ":cost1", ":cost2"),
+      (val_add, ":total_cost", ":cost3"),
+      (assign, reg1, ":total_cost"),
+      (overlay_set_text, "$g_presentation_obj_7", "@Total Cost: {reg1} denars"),
+
+      (try_begin),
+        (eq, ":object", "$g_presentation_obj_9"), # Cancel
+        (presentation_set_duration, 0),
+      (else_try),
+        (eq, ":object", "$g_presentation_obj_8"), # Recruit
+        
+        # Validation
+        (store_add, ":total_amount", "$g_village_recruit_t1_amount", "$g_village_recruit_t2_amount"),
+        (val_add, ":total_amount", "$g_village_recruit_t3_amount"),
+        
+        (try_begin),
+          (le, ":total_amount", 0),
+          (display_message, "@You haven't selected any troops."),
+        (else_try),
+          (store_troop_gold, ":gold", "trp_player"),
+          (lt, ":gold", ":total_cost"),
+          (display_message, "@You do not have enough denars."),
+        (else_try),
+          (party_get_free_companions_capacity, ":cap", "p_main_party"),
+          (lt, ":cap", ":total_amount"),
+          (display_message, "@You do not have enough room in your party."),
+        (else_try),
+          # All good, process
+          (try_begin),
+            (gt, "$g_village_recruit_t1_amount", 0),
+            (party_add_members, "p_main_party", "$g_village_recruit_t1_troop", "$g_village_recruit_t1_amount"),
+            (party_get_slot, ":val", "$current_town", slot_center_volunteer_troop_amount_1),
+            (val_sub, ":val", "$g_village_recruit_t1_amount"),
+            (party_set_slot, "$current_town", slot_center_volunteer_troop_amount_1, ":val"),
+          (try_end),
+          (try_begin),
+            (gt, "$g_village_recruit_t2_amount", 0),
+            (party_add_members, "p_main_party", "$g_village_recruit_t2_troop", "$g_village_recruit_t2_amount"),
+            (party_get_slot, ":val", "$current_town", slot_center_volunteer_troop_amount_2),
+            (val_sub, ":val", "$g_village_recruit_t2_amount"),
+            (party_set_slot, "$current_town", slot_center_volunteer_troop_amount_2, ":val"),
+          (try_end),
+          (try_begin),
+            (gt, "$g_village_recruit_t3_amount", 0),
+            (party_add_members, "p_main_party", "$g_village_recruit_t3_troop", "$g_village_recruit_t3_amount"),
+            (party_get_slot, ":val", "$current_town", slot_center_volunteer_troop_amount_3),
+            (val_sub, ":val", "$g_village_recruit_t3_amount"),
+            (party_set_slot, "$current_town", slot_center_volunteer_troop_amount_3, ":val"),
+          (try_end),
+
+          (troop_remove_gold, "trp_player", ":total_cost"),
+
+          # Deduct veteran_level for recruits hired: T1=1pt, T2=5pts, T3=10pts per troop
+          (party_get_slot, ":vet", "$current_town", slot_center_veteran_level),
+          (try_begin),
+            (gt, "$g_village_recruit_t1_amount", 0),
+            (store_mul, ":cost", "$g_village_recruit_t1_amount", 1),
+            (val_sub, ":vet", ":cost"),
+          (try_end),
+          (try_begin),
+            (gt, "$g_village_recruit_t2_amount", 0),
+            (store_mul, ":cost", "$g_village_recruit_t2_amount", 5),
+            (val_sub, ":vet", ":cost"),
+          (try_end),
+          (try_begin),
+            (gt, "$g_village_recruit_t3_amount", 0),
+            (store_mul, ":cost", "$g_village_recruit_t3_amount", 10),
+            (val_sub, ":vet", ":cost"),
+          (try_end),
+          (val_max, ":vet", 0),
+          (party_set_slot, "$current_town", slot_center_veteran_level, ":vet"),
+
+          (display_message, "@Volunteers joined your party."),
+          (presentation_set_duration, 0),
+        (try_end),
+      (try_end),
+    ]),
+  ]),
 ]
