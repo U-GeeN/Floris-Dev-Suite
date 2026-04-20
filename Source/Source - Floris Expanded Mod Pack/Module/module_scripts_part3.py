@@ -10119,18 +10119,17 @@ scripts_part3 = [
             (try_end),
             ##diplomacy end
 
-            (val_mul, ":upper_limit", 3),
+            #(val_mul, ":upper_limit", 3), # Removed Floris multiplier to return to Native-like scale
+            (val_add, ":upper_limit", 1),
             (store_random_in_range, ":pool", 0, ":upper_limit"),
             (val_max, ":pool", 1),
 
-            # Distribute pool across 3 slots
-            # Each slot gets a random share; total ≤ pool
+            # Distribute pool across 3 slots (Sum of slots correctly equals :pool)
             (store_random_in_range, ":amt1", 0, ":pool"),
-            (val_add, ":amt1", 1),
+            (val_sub, ":pool", ":amt1"),
             (store_random_in_range, ":amt2", 0, ":pool"),
-            (val_add, ":amt2", 1),
-            (store_random_in_range, ":amt3", 0, ":pool"),
-            (val_add, ":amt3", 1),
+            (val_sub, ":pool", ":amt2"),
+            (assign, ":amt3", ":pool"),
 
             # === Slot 1 — independent tier roll ===
             (assign, ":cur_troop", ":t1_troop"),
