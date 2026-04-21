@@ -66,6 +66,11 @@ mod_options = [
 		[(assign, reg1, "$g_fog"),],
 		[(assign, "$g_fog", reg1),
 		(try_begin),(neq, "$g_is_quick_battle", 1),(call_script, "script_initialize_fog"),(try_end),],),
+	("floris_visited_elders", xgm_ov_checkbox, [], "Village Elders and Guild Masters visited:", 0,
+		"Ticked, you can meet with village elders and guild masters through the menu even if you have not met them in person yet. Unticked, as in Native, you must meet them in person first.", 0,
+		[(assign, reg1, "$g_dplmc_visited_elders"),],
+		[(assign, "$g_dplmc_visited_elders", reg1),],),
+
 	   
 	
 	("display_title_bar", xgm_ov_title, [], "Display", tf_center_justify|tf_with_outline),

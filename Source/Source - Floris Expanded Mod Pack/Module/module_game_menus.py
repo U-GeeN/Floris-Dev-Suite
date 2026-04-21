@@ -8347,7 +8347,9 @@ game_menus = [
 		(party_get_slot, ":village_elder_troop", "$current_town",slot_town_elder),
 		(gt, ":village_elder_troop", 0),
 		(this_or_next|eq, "$cheat_mode", 1),#Always can jump to village elder in cheat mode
+		(this_or_next|eq, "$g_dplmc_visited_elders", 1),
 		    (troop_slot_ge,":village_elder_troop", slot_troop_met, 1),
+
 		##diplomacy end+
        ]
        ,"Meet the Village Elder.",
@@ -8380,7 +8382,9 @@ game_menus = [
 		(party_get_slot, ":village_elder_troop", "$current_town",slot_town_elder),
 		(gt, ":village_elder_troop", 0),
 		(eq, "$cheat_mode", 0),
+		(eq, "$g_dplmc_visited_elders", 0),
 		(troop_slot_eq, ":village_elder_troop", slot_troop_met, 0),
+
 		(disable_menu_option),
 		],
        "You have not met the village elder yet.",
@@ -11148,6 +11152,10 @@ game_menus = [
 			(neg|troop_slot_eq, ":guild_master_troop", slot_troop_met, 0),
 			(assign, ":can_meet_guild_master", 1),
 		(else_try),
+			(eq, "$g_dplmc_visited_elders", 1),
+			(assign, ":can_meet_guild_master", 1),
+		(else_try),
+
 			#Always enable this in Praven for the sake of playability, since
 			#the guild master there is weirdly hard to find.
 			(this_or_next|eq, "$current_town", "p_town_6"),
@@ -11194,6 +11202,8 @@ game_menus = [
 		(neq, "$g_starting_town", "$current_town"),
 		(neq, "$current_town", "p_town_6"),
 		(troop_slot_eq, ":guild_master_troop", slot_troop_met, 0),
+		(eq, "$g_dplmc_visited_elders", 0),
+
 		(disable_menu_option),
 		],
        "You have not met the Guild Master yet.",
