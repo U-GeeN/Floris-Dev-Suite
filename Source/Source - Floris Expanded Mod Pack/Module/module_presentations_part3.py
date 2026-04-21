@@ -7646,105 +7646,81 @@ reducing the overall operational cost."),
             "@You emerge victorious! Who will you promote to Lieutenant?",
             tf_center_justify|tf_vertical_align_center),
         (position_set_x, pos1, 500),
-        (position_set_y, pos1, 670),
+        (position_set_y, pos1, 680),
         (overlay_set_position, "$g_presentation_obj_1", pos1),
 
-        # ---- "Cancel" button (obj_3) ---------------------------
+        # ---- "Cancel" button (bottom right) ---------------------------
         (create_game_button_overlay, "$g_presentation_obj_3", "@None are worthy"),
-        (position_set_x, pos1, 800),
-        (position_set_y, pos1, 40),
+        (position_set_x, pos1, 500),
+        (position_set_y, pos1, 25),
         (overlay_set_position, "$g_presentation_obj_3", pos1),
 
-        # ---- Candidates List -----------------------------------
-        (assign, ":pos_y", 520), # Start Y
-        
+        # ---- Candidates 4-Column Layout -------------------
         (try_for_range, ":idx", 0, 4),
           (troop_get_slot, ":troop_id", "trp_temp_array_a", ":idx"),
           (gt, ":troop_id", 0),
 
-          # Col 1: Avatar (Manual implementation to remove name line)
-          (store_mul, ":cur_troop", ":troop_id", 2), # with weapons
-          (create_mesh_overlay_with_tableau_material, reg0, -1, "tableau_game_party_window", ":cur_troop"),
-          (position_set_x, pos1, 400),
-          (position_set_y, pos1, 400),
-          (overlay_set_size, reg0, pos1),
-          (position_set_x, pos1, 50), 
-          (store_add, ":avatar_y", ":pos_y", 10),
-          (position_set_y, pos1, ":avatar_y"),
-          (overlay_set_position, reg0, pos1),
-          (troop_set_slot, "trp_temp_array_b", ":idx", ":troop_id"), # Store troop_id for event lookup
+          # Columns for the candidates (4 total)
+          (store_mul, ":x_base", ":idx", 225),
+          (val_add, ":x_base", 50),
 
-          # Col 2: Name over Level + Attributes
+          # 2. Fetch Stats Details
           (store_add, ":idx_plus_1", ":idx", 1),
           (call_script, "script_lieutenant_system_calculate_stats", ":troop_id", ":idx_plus_1"),
 
-          (store_character_level, reg1, ":troop_id"),
+          # A. Candidate's Name
           (str_store_troop_name, s1, ":troop_id"),
-          (store_troop_health, reg2, ":troop_id"),
-          (str_store_string, s1, "@{s1}^Level:  {reg1}^HP:   {reg2}^Attributes:^STR:  {reg10}^AGI:  {reg11}^INT:  {reg12}^CHA: {reg13}"),
-          
-          (create_text_overlay, reg0, "@{s1}", tf_left_align),
-          (position_set_x, pos1, 750), # 75% scale
-          (position_set_y, pos1, 750),
-          (overlay_set_size, reg0, pos1),
-          (position_set_x, pos1, 170), 
-          (store_add, ":text_y", ":pos_y", 15),
-          (position_set_y, pos1, ":text_y"),
+          (create_text_overlay, reg0, s1, tf_left_align),
+          (position_set_x, pos1, 900), (position_set_y, pos1, 1000), (overlay_set_size, reg0, pos1),
+          (position_set_x, pos1, ":x_base"),
+          (position_set_y, pos1, 625),
           (overlay_set_position, reg0, pos1),
 
-          # Col 3: Combat Skills (reg14-reg22) - 9 skills
-          (str_store_string, s2, "@^Ironflesh:     {reg14}^P. Strike:     {reg15}^P. Throw:    {reg16}^P. Draw:     {reg17}^W. Master:  {reg18}^Shield:        {reg19}^Athletics:    {reg20}"),
+          # B. Avatar (Mesh)
+          (store_mul, ":cur_troop", ":troop_id", 2),
+          (create_mesh_overlay_with_tableau_material, reg0, -1, "tableau_game_party_window", ":cur_troop"),
+          (position_set_x, pos1, 500), (position_set_y, pos1, 500), (overlay_set_size, reg0, pos1), 
+          (store_add, ":attr_x", ":x_base", 60),
+          (position_set_x, pos1, ":attr_x"),
+          (position_set_y, pos1, 500),
+          (overlay_set_position, reg0, pos1),
+          (troop_set_slot, "trp_temp_array_b", ":idx", ":troop_id"),
+
+          # C. Level & Attributes (Right to image)
+          (store_character_level, reg1, ":troop_id"),
+          (store_troop_health, reg4, ":troop_id"),
+          (str_store_string, s1, "@Lvl: {reg1}^HP:  {reg4}^^STR:   {reg10}^AGI:   {reg11}^INT:   {reg12}^CHA: {reg13}"),
+          (create_text_overlay, reg0, s1, tf_left_align),
+          (position_set_x, pos1, 950), (position_set_y, pos1, 950), (overlay_set_size, reg0, pos1),
           
-          (create_text_overlay, reg0, "@{s2}", tf_left_align),
-          (position_set_x, pos1, 750),
-          (position_set_y, pos1, 750),
-          (overlay_set_size, reg0, pos1),
-          (position_set_x, pos1, 290),
-          (position_set_y, pos1, ":text_y"),
+          (position_set_x, pos1, ":x_base"),
+          (position_set_y, pos1, 495),
           (overlay_set_position, reg0, pos1),
 
-          # Col 4: Action Skills (reg21-reg28) - 8 skills
-          (str_store_string, s3, "@^Riding:        {reg21}^H. Archery:  {reg22}^Looting:       {reg23}^Foraging:      {reg24}^Trainer:       {reg25}^Tracking:      {reg26}^Tactics:       {reg27}^Path-finding: {reg28}"),
-          
-          (create_text_overlay, reg0, "@{s3}", tf_left_align),
-          (position_set_x, pos1, 750),
-          (position_set_y, pos1, 750),
-          (overlay_set_size, reg0, pos1),
-          (position_set_x, pos1, 410),
-          (position_set_y, pos1, ":text_y"),
+          # D. Skills & Proficiencies (Single merged column)
+          (str_store_string, s1, "@Combat:^Ironflesh:^P.Strike:^P.Throw:^P.Draw:^W.Master:^Shield:^Athletics:^^Support:^Trainer:^Tactics:^Path-find:^Spotting:^Surgery:^Leadership:^^Proficiencies:^1H/2H/Pol:^Rang/Throw:"),
+          (create_text_overlay, reg0, s1, tf_left_align),
+          (position_set_x, pos1, 950), (position_set_y, pos1, 950), (overlay_set_size, reg0, pos1),
+          (position_set_x, pos1, ":x_base"),
+          (position_set_y, pos1, 135),
           (overlay_set_position, reg0, pos1),
 
-          # Col 5: Medical Skills & Party Skills (reg29-reg38) - 10 skills
-          (str_store_string, s4, "@^Spotting:     {reg29}^Inv. Mgmt: {reg30}^W. Treat:    {reg31}^Surgery:     {reg32}^First Aid:   {reg33}^Engineer:    {reg34}^Persuasion:  {reg35}^Pris. Mgmt: {reg36}^Leadership: {reg37}^Trade:       {reg38}"),
-          
-          (create_text_overlay, reg0, "@{s4}", tf_left_align),
-          (position_set_x, pos1, 750),
-          (position_set_y, pos1, 750),
-          (overlay_set_size, reg0, pos1),
-          (position_set_x, pos1, 530),
-          (position_set_y, pos1, ":text_y"),
+          (str_store_string, s2, "@^{reg14}^{reg15}^{reg16}^{reg17}^{reg18}^{reg19}^{reg20}^^^{reg25}^{reg27}^{reg28}^{reg29}^{reg32}^{reg37}^^^{reg41}/ {reg42}/ {reg43}^{reg44}/ {reg46}"),
+          (create_text_overlay, reg0, s2, tf_left_align),
+          (position_set_x, pos1, 950), (position_set_y, pos1, 950), (overlay_set_size, reg0, pos1),
+          (store_add, ":attr_x", ":x_base", 105),
+          (position_set_x, pos1, ":attr_x"),
+          (position_set_y, pos1, 135),
           (overlay_set_position, reg0, pos1),
 
-          # Col 6: Proficiencies (reg41-reg46)
-          (str_store_string, s5, "@Proficiencies:^1H Weap: {reg41}^2H Weap: {reg42}^Polearm: {reg43}^Archery: {reg44}^Crossbow: {reg45}^Throwing: {reg46}"),
-          
-          (create_text_overlay, reg0, "@{s5}", tf_left_align),
-          (position_set_x, pos1, 750),
-          (position_set_y, pos1, 750),
-          (overlay_set_size, reg0, pos1),
-          (position_set_x, pos1, 650),
-          (position_set_y, pos1, ":text_y"),
-          (overlay_set_position, reg0, pos1),
-
-          # "Promote" Button
+          # E. "Promote" Button
           (create_game_button_overlay, reg0, "@Promote"),
-          (position_set_x, pos1, 850), # Move left 1/3 button length (from 960)
-          (store_add, ":btn_y", ":pos_y", 40),
-          (position_set_y, pos1, ":btn_y"),
+          (assign, ":temp_x", ":x_base"),
+          (val_add, ":temp_x", 80),
+          (position_set_x, pos1, ":temp_x"),
+          (position_set_y, pos1, 80),
           (overlay_set_position, reg0, pos1),
-          (troop_set_slot, "trp_temp_array_c", ":idx", reg0), # store promote btn
-
-          (val_sub, ":pos_y", 140),
+          (troop_set_slot, "trp_temp_array_c", ":idx", reg0),
         (try_end),
 #        ####### mouse fix pos system #######
 #        (call_script, "script_mouse_fix_pos_ready"),
