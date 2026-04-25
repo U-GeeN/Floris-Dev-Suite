@@ -10018,12 +10018,11 @@ scripts_part3 = [
         # OUTPUT: none
         # DESIGN:
         #   Pool size  = native relation-based formula (upper_limit), unchanged from vanilla
-        #   Troop tier = f(slot_center_veteran_level):
-        #                  T1→T2 chance = min(50, veteran_level / 3)%
-        #                  T2→T3 chance = min(30, veteran_level / 10)%
-        #   veteran_level accumulates sqrt(max(0, prosperity - 30)) each 72h tick
-        #                  — high prosperity helps but with diminishing returns
-        #                  — cap 500, decays -2/tick when prosperity < 30
+        #   Troop tier = f(slot_center_acc_prosp):
+        #                  T1→T2 chance = min(50, acc_prosp / 3)%
+        #                  T2→T3 chance = min(30, acc_prosp / 10)%
+        #   acc_prosp accumulates: prosp>30 = 17.143(prosp-30)/(prosp+20) | prosp<25 = 0.08*prosp - 2
+        #                  — cap 500, floor 0
         #   All 3 slots are independent — each can independently roll T1/T2/T3
         ("update_volunteer_troops_in_village",
           [
@@ -10038,33 +10037,35 @@ scripts_part3 = [
             (party_set_slot, ":center_no", slot_center_volunteer_troop_type, -1),
             (party_set_slot, ":center_no", slot_center_volunteer_troop_amount, 0),
 
-            # === Update veteran_level (prosperity-over-time tracker, 0..500) ===
-            # Accumulates sqrt(prosperity - 30) per 72h tick — diminishing returns at high prosperity
+            # === Update acc_prosp (prosperity-over-time tracker, 0..500) ===
             # Decays when prosperity is low, resets to 0 on raid (see village_set_state)
-            (party_get_slot, ":veteran_level", ":center_no", slot_center_veteran_level),
+            (party_get_slot, ":acc_prosp", ":center_no", slot_center_acc_prosp),
             (try_begin),
               (gt, ":prosperity", 30),
-              (assign, ":gain", ":prosperity"),
-              (val_sub, ":gain", 30),
-              (convert_to_fixed_point, ":gain"),
-              (store_sqrt, ":gain", ":gain"),
-              (convert_from_fixed_point, ":gain"),
+              (store_sub, ":gain", ":prosperity", 30),
+              (val_mul, ":gain", 8572),
+              (store_add, ":den", ":prosperity", 20),
+              (val_mul, ":den", 100),
+              (store_div, ":gain", ":gain", ":den"),
               (val_max, ":gain", 1),
-              (val_add, ":veteran_level", ":gain"),
-              (val_min, ":veteran_level", 500),
+              (val_add, ":acc_prosp", ":gain"),
+              (val_min, ":acc_prosp", 500),
             (else_try),
-              (lt, ":prosperity", 30),
-              (val_sub, ":veteran_level", 2),
-              (val_max, ":veteran_level", 0),
+              (lt, ":prosperity", 25),
+              (store_mul, ":gain", 8, ":prosperity"),
+              (val_div, ":gain", 100),
+              (val_sub, ":gain", 2),
+              (val_add, ":acc_prosp", ":gain"),
+              (val_max, ":acc_prosp", 0),
             (try_end),
-            (party_set_slot, ":center_no", slot_center_veteran_level, ":veteran_level"),
+            (party_set_slot, ":center_no", slot_center_acc_prosp, ":acc_prosp"),
 
-            # === Upgrade chances from veteran_level ===
-            # T1→T2: 0% at vet=0, 25% at vet=75 (~15 ticks @prosperity60), 50% cap
-            # T2→T3: 0% at vet=0, 15% at vet=150 (~30 ticks @prosperity60), 30% cap
-            (store_div, ":t2_chance", ":veteran_level", 3),
+            # === Upgrade chances from acc_prosp ===
+            # T1→T2: 0% at acc_prosp=0, 25% at acc_prosp=75, 50% cap
+            # T2→T3: 0% at acc_prosp=0, 15% at acc_prosp=150, 30% cap
+            (store_div, ":t2_chance", ":acc_prosp", 3),
             (val_min, ":t2_chance", 50),
-            (store_div, ":t3_chance", ":veteran_level", 10),
+            (store_div, ":t3_chance", ":acc_prosp", 10),
             (val_min, ":t3_chance", 30),
 
             # === Native pool size (relation-based, same as vanilla) ===
@@ -10132,92 +10133,123 @@ scripts_part3 = [
             (assign, ":amt3", ":pool"),
 
             # === Slot 1 — independent tier roll ===
-            (assign, ":cur_troop", ":t1_troop"),
+            (assign, ":cur_troop_1", ":t1_troop"),
+            (assign, ":tier1", 1),
             (try_begin),
-              # T1 → T2
               (store_random_in_range, ":rand", 0, 100),
               (lt, ":rand", ":t2_chance"),
               (store_random_in_range, ":branch", 0, 2),
-              (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+              (troop_get_upgrade_troop, ":upgrade", ":cur_troop_1", ":branch"),
               (try_begin),
                 (le, ":upgrade", 0),
-                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop_1", 0),
               (try_end),
               (gt, ":upgrade", 0),
-              (assign, ":cur_troop", ":upgrade"),
+              (assign, ":cur_troop_1", ":upgrade"),
+              (assign, ":tier1", 2),
               (try_begin),
-                # T2 → T3
                 (store_random_in_range, ":rand", 0, 100),
                 (lt, ":rand", ":t3_chance"),
                 (store_random_in_range, ":branch", 0, 2),
-                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop_1", ":branch"),
                 (try_begin),
                   (le, ":upgrade", 0),
-                  (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+                  (troop_get_upgrade_troop, ":upgrade", ":cur_troop_1", 0),
                 (try_end),
                 (gt, ":upgrade", 0),
-                (assign, ":cur_troop", ":upgrade"),
+                (assign, ":cur_troop_1", ":upgrade"),
+                (assign, ":tier1", 3),
               (try_end),
             (try_end),
-            (party_set_slot, ":center_no", slot_center_volunteer_troop_type_1, ":cur_troop"),
-            (party_set_slot, ":center_no", slot_center_volunteer_troop_amount_1, ":amt1"),
 
             # === Slot 2 — independent tier roll ===
-            (assign, ":cur_troop", ":t1_troop"),
+            (assign, ":cur_troop_2", ":t1_troop"),
+            (assign, ":tier2", 1),
             (try_begin),
               (store_random_in_range, ":rand", 0, 100),
               (lt, ":rand", ":t2_chance"),
               (store_random_in_range, ":branch", 0, 2),
-              (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+              (troop_get_upgrade_troop, ":upgrade", ":cur_troop_2", ":branch"),
               (try_begin),
                 (le, ":upgrade", 0),
-                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop_2", 0),
               (try_end),
               (gt, ":upgrade", 0),
-              (assign, ":cur_troop", ":upgrade"),
+              (assign, ":cur_troop_2", ":upgrade"),
+              (assign, ":tier2", 2),
               (try_begin),
                 (store_random_in_range, ":rand", 0, 100),
                 (lt, ":rand", ":t3_chance"),
                 (store_random_in_range, ":branch", 0, 2),
-                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop_2", ":branch"),
                 (try_begin),
                   (le, ":upgrade", 0),
-                  (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+                  (troop_get_upgrade_troop, ":upgrade", ":cur_troop_2", 0),
                 (try_end),
                 (gt, ":upgrade", 0),
-                (assign, ":cur_troop", ":upgrade"),
+                (assign, ":cur_troop_2", ":upgrade"),
+                (assign, ":tier2", 3),
               (try_end),
             (try_end),
-            (party_set_slot, ":center_no", slot_center_volunteer_troop_type_2, ":cur_troop"),
-            (party_set_slot, ":center_no", slot_center_volunteer_troop_amount_2, ":amt2"),
 
             # === Slot 3 — independent tier roll ===
-            (assign, ":cur_troop", ":t1_troop"),
+            (assign, ":cur_troop_3", ":t1_troop"),
+            (assign, ":tier3", 1),
             (try_begin),
               (store_random_in_range, ":rand", 0, 100),
               (lt, ":rand", ":t2_chance"),
               (store_random_in_range, ":branch", 0, 2),
-              (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+              (troop_get_upgrade_troop, ":upgrade", ":cur_troop_3", ":branch"),
               (try_begin),
                 (le, ":upgrade", 0),
-                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop_3", 0),
               (try_end),
               (gt, ":upgrade", 0),
-              (assign, ":cur_troop", ":upgrade"),
+              (assign, ":cur_troop_3", ":upgrade"),
+              (assign, ":tier3", 2),
               (try_begin),
                 (store_random_in_range, ":rand", 0, 100),
                 (lt, ":rand", ":t3_chance"),
                 (store_random_in_range, ":branch", 0, 2),
-                (troop_get_upgrade_troop, ":upgrade", ":cur_troop", ":branch"),
+                (troop_get_upgrade_troop, ":upgrade", ":cur_troop_3", ":branch"),
                 (try_begin),
                   (le, ":upgrade", 0),
-                  (troop_get_upgrade_troop, ":upgrade", ":cur_troop", 0),
+                  (troop_get_upgrade_troop, ":upgrade", ":cur_troop_3", 0),
                 (try_end),
                 (gt, ":upgrade", 0),
-                (assign, ":cur_troop", ":upgrade"),
+                (assign, ":cur_troop_3", ":upgrade"),
+                (assign, ":tier3", 3),
               (try_end),
             (try_end),
-            (party_set_slot, ":center_no", slot_center_volunteer_troop_type_3, ":cur_troop"),
+
+            # === Sort slots by tier (ascending) ===
+            (try_begin),
+              (gt, ":tier1", ":tier2"),
+              # Swap 1 & 2
+              (assign, ":temp_tier", ":tier1"), (assign, ":tier1", ":tier2"), (assign, ":tier2", ":temp_tier"),
+              (assign, ":temp_troop", ":cur_troop_1"), (assign, ":cur_troop_1", ":cur_troop_2"), (assign, ":cur_troop_2", ":temp_troop"),
+              (assign, ":temp_amt", ":amt1"), (assign, ":amt1", ":amt2"), (assign, ":amt2", ":temp_amt"),
+            (try_end),
+            (try_begin),
+              (gt, ":tier2", ":tier3"),
+              # Swap 2 & 3
+              (assign, ":temp_tier", ":tier2"), (assign, ":tier2", ":tier3"), (assign, ":tier3", ":temp_tier"),
+              (assign, ":temp_troop", ":cur_troop_2"), (assign, ":cur_troop_2", ":cur_troop_3"), (assign, ":cur_troop_3", ":temp_troop"),
+              (assign, ":temp_amt", ":amt2"), (assign, ":amt2", ":amt3"), (assign, ":amt3", ":temp_amt"),
+            (try_end),
+            (try_begin),
+              (gt, ":tier1", ":tier2"),
+              # Swap 1 & 2 again
+              (assign, ":temp_tier", ":tier1"), (assign, ":tier1", ":tier2"), (assign, ":tier2", ":temp_tier"),
+              (assign, ":temp_troop", ":cur_troop_1"), (assign, ":cur_troop_1", ":cur_troop_2"), (assign, ":cur_troop_2", ":temp_troop"),
+              (assign, ":temp_amt", ":amt1"), (assign, ":amt1", ":amt2"), (assign, ":amt2", ":temp_amt"),
+            (try_end),
+
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_type_1, ":cur_troop_1"),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_amount_1, ":amt1"),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_type_2, ":cur_troop_2"),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_amount_2, ":amt2"),
+            (party_set_slot, ":center_no", slot_center_volunteer_troop_type_3, ":cur_troop_3"),
             (party_set_slot, ":center_no", slot_center_volunteer_troop_amount_3, ":amt3"),
           ]),
 

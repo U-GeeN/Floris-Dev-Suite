@@ -408,7 +408,7 @@ slot_center_mercenary_troop_type   = 92
 slot_center_mercenary_troop_amount = 93
 slot_center_volunteer_troop_type  = 486
 slot_center_volunteer_troop_amount= 487
-slot_center_veteran_level         = 488  # Tracks consecutive prosperous cycles; drives volunteer tier quality
+slot_center_acc_prosp         = 488  # Tracks consecutive prosperous cycles; drives volunteer tier quality
 
 #slot_center_companion_candidate   = 94
 slot_center_ransom_broker         = 95

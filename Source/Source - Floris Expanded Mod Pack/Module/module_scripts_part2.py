@@ -13215,7 +13215,7 @@ scripts_part2 = [
         (call_script, "script_change_center_prosperity", ":village_no", -60), #reduced from 30
         (val_add, "$newglob_total_prosperity_from_villageloot", -60),
         # Reset veteran_level — raid destroys long-term village readiness
-        (party_set_slot, ":village_no", slot_center_veteran_level, 0),
+        (party_set_slot, ":village_no", slot_center_acc_prosp, 0),
 
 		(try_begin), #optional - lowers the relationship between a lord and his liege if his fief is looted
 			(eq, 5, 0),

@@ -1123,6 +1123,17 @@ presentations_part4 = [
       (create_game_button_overlay, "$g_presentation_obj_9", "@Cancel"),
       (position_set_x, pos1, 600), (position_set_y, pos1, 50), (overlay_set_position, "$g_presentation_obj_9", pos1),
 
+      # === Debug buttons (cheat_mode only) ===
+      (try_begin),
+        (ge, "$cheat_mode", 1),
+        (party_get_slot, reg20, "$current_town", slot_center_acc_prosp),
+        (party_get_slot, reg21, "$current_town", slot_center_player_relation),
+        (create_button_overlay, "$g_presentation_obj_10", "@[DBG] acc_prosp +50 ({reg20})"),
+        (position_set_x, pos1, 250), (position_set_y, pos1, 720), (overlay_set_position, "$g_presentation_obj_10", pos1),
+        (create_button_overlay, "$g_presentation_obj_11", "@[DBG] relation +10 ({reg21})"),
+        (position_set_x, pos1, 250), (position_set_y, pos1, 700), (overlay_set_position, "$g_presentation_obj_11", pos1),
+      (try_end),
+
       (presentation_set_duration, 999999),
     ]),
 
@@ -1158,6 +1169,30 @@ presentations_part4 = [
       (overlay_set_text, "$g_presentation_obj_7", "@Total Cost: {reg1} denars"),
 
       (try_begin),
+        (eq, ":object", "$g_presentation_obj_10"), # DBG: +50 acc_prosp
+        (ge, "$cheat_mode", 1),
+        (party_get_slot, ":ap", "$current_town", slot_center_acc_prosp),
+        (val_add, ":ap", 50),
+        (val_min, ":ap", 500),
+        (party_set_slot, "$current_town", slot_center_acc_prosp, ":ap"),
+        (call_script, "script_update_volunteer_troops_in_village", "$current_town"),
+        (assign, reg20, ":ap"),
+        (display_message, "@[DBG] acc_prosp set to {reg20}"),
+        (presentation_set_duration, 0),
+        (start_presentation, "prsnt_village_recruitment"),
+      (else_try),
+        (eq, ":object", "$g_presentation_obj_11"), # DBG: +10 relation
+        (ge, "$cheat_mode", 1),
+        (party_get_slot, ":rel", "$current_town", slot_center_player_relation),
+        (val_add, ":rel", 10),
+        (val_min, ":rel", 100),
+        (party_set_slot, "$current_town", slot_center_player_relation, ":rel"),
+        (call_script, "script_update_volunteer_troops_in_village", "$current_town"),
+        (assign, reg21, ":rel"),
+        (display_message, "@[DBG] relation set to {reg21}"),
+        (presentation_set_duration, 0),
+        (start_presentation, "prsnt_village_recruitment"),
+      (else_try),
         (eq, ":object", "$g_presentation_obj_9"), # Cancel
         (presentation_set_duration, 0),
       (else_try),
@@ -1205,7 +1240,7 @@ presentations_part4 = [
           (troop_remove_gold, "trp_player", ":total_cost"),
 
           # Deduct veteran_level for recruits hired: T1=1pt, T2=5pts, T3=10pts per troop
-          (party_get_slot, ":vet", "$current_town", slot_center_veteran_level),
+          (party_get_slot, ":vet", "$current_town", slot_center_acc_prosp),
           (try_begin),
             (gt, "$g_village_recruit_t1_amount", 0),
             (store_mul, ":cost", "$g_village_recruit_t1_amount", 1),
@@ -1222,7 +1257,7 @@ presentations_part4 = [
             (val_sub, ":vet", ":cost"),
           (try_end),
           (val_max, ":vet", 0),
-          (party_set_slot, "$current_town", slot_center_veteran_level, ":vet"),
+          (party_set_slot, "$current_town", slot_center_acc_prosp, ":vet"),
 
           (display_message, "@Volunteers joined your party."),
           (presentation_set_duration, 0),
