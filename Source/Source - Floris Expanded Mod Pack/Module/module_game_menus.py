@@ -2824,7 +2824,7 @@ game_menus = [
       ("cattle_drive_away",[],"Drive the cattle onward.",
        [
         (party_set_slot, "$g_encountered_party", slot_cattle_driven_by_player, 1),
-        (party_set_ai_behavior, "$g_encountered_party", ai_bhvr_driven_by_party),
+        (party_set_ai_behavior, "$g_encountered_party", ai_bhvr_escort_party),
         (party_set_ai_object,"$g_encountered_party", "p_main_party"),
         (change_screen_return),
         ]
