@@ -58,8 +58,40 @@ dialogs_part1 = [
 ####################################################################################################################################
   [anyone, "start", [(eq,"$g_lco_operation",lco_view_character)],"Here you are.","lco_conversation_end",[(change_screen_view_character)]],
 ####################################################################################################################################
-# LAV MODIFICATIONS END (COMPANIONS OVERSEER MOD)
-####################################################################################################################################
+# Detachment Dialogs Start
+  [anyone,"start", [
+    (party_slot_eq, "$g_encountered_party", slot_party_type, spt_player_detachment),
+  ], "Greetings, {sire/my lady}. What are your orders?", "detachment_talk_options", []],
+
+  [anyone|plyr,"detachment_talk_options", [], "What is your current mission?", "detachment_mission_report", []],
+  [anyone|plyr,"detachment_talk_options", [], "Rejoin the main party.", "detachment_rejoin", []],
+  [anyone|plyr,"detachment_talk_options", [], "Carry on.", "close_window", []],
+
+  [anyone,"detachment_mission_report", [], "{s0}", "detachment_talk_options", [
+    (party_get_slot, ":mission_type", "$g_encountered_party", slot_party_mission_type),
+    (party_get_slot, ":target", "$g_encountered_party", slot_party_mission_target),
+    (try_begin),
+      (eq, ":mission_type", 1), (str_store_string, s1, "@attacking {s2}"), (str_store_party_name, s2, ":target"),
+    (else_try),
+      (eq, ":mission_type", 2), (str_store_string, s1, "@patrolling around {s2}"), (str_store_party_name, s2, ":target"),
+    (else_try),
+      (eq, ":mission_type", 3), (str_store_string, s1, "@holding position at {s2}"), (str_store_party_name, s2, ":target"),
+    (else_try),
+      (eq, ":mission_type", 4), (str_store_string, s1, "@accompanying {s2}"), (str_store_party_name, s2, ":target"),
+    (else_try),
+      (str_store_string, s1, "@returning to you"),
+    (try_end),
+    (str_store_string, s0, "@We are currently {s1}. Do you have new orders?"),
+  ]],
+
+  [anyone,"detachment_rejoin", [], "As you wish. We'll merge back with your group immediately.", "close_window", [
+    (call_script, "script_party_add_party", "p_main_party", "$g_encountered_party"),
+    (party_get_slot, ":leader", "$g_encountered_party", slot_party_leader_troop),
+    (troop_set_slot, ":leader", slot_troop_leaded_party, -1),
+    (remove_party, "$g_encountered_party"),
+    (assign, "$g_leave_encounter", 1),
+  ]],
+# Detachment Dialogs End
   [anyone ,"start", [(store_conversation_troop, "$g_talk_troop"),
                      (store_conversation_agent, "$g_talk_agent"),
                      (store_troop_faction, "$g_talk_troop_faction", "$g_talk_troop"),
@@ -1301,7 +1333,9 @@ dialogs_part1 = [
    "Hey, I am trying to practice here. Go, talk with the archery trainer if you need guidance about ranged weapons.", "close_window", []],
 
 
-   #PRISON BREAK START
+
+
+
    [anyone,"start",
    [                    
      (eq, "$talk_context", tc_prison_break),                    
@@ -2770,6 +2804,9 @@ dialogs_part1 = [
       ], "Then shortly after, I joined up with you.", "do_member_trade",[]],
 
   [anyone,"do_member_view_char", [], "Anything else?", "member_talk",[]],
+
+  # Detachment Encounter Dialogue
+
 
   
   [anyone,"member_kingsupport_1", [

@@ -5289,6 +5289,9 @@ scripts_part1 = [
           (eq, "$g_encountered_party", "p_camp_bandits"),
           (jump_to_menu, "mnu_camp"),
         (else_try),
+          (party_slot_eq, "$g_encountered_party", slot_party_type, spt_player_detachment),
+          (jump_to_menu, "mnu_simple_encounter"),
+        (else_try),
           (jump_to_menu, "mnu_simple_encounter"),
         (try_end),
       (else_try), #Battle or siege
@@ -5598,7 +5601,14 @@ scripts_part1 = [
               (try_end),
               
               (try_begin),
-                (party_slot_eq,":root_defeated_party", slot_party_type, spt_scout),
+                (party_slot_eq, ":root_defeated_party", slot_party_type, spt_player_detachment),
+                (party_get_slot, ":leader", ":root_defeated_party", slot_party_leader_troop),
+                (str_store_troop_name, s13, ":leader"),
+                (display_log_message, "@The detachment led by {s13} has been defeated{s10}!", 0xFF0000),
+              (try_end),
+
+              (try_begin),
+                (party_slot_eq, ":root_defeated_party", slot_party_type, spt_scout),
                 (store_faction_of_party, ":party_faction", ":root_defeated_party"),
                 (eq, ":party_faction", "$players_kingdom"),
                 (party_get_slot, ":target_party", ":root_defeated_party", slot_party_orders_object),

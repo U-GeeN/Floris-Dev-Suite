@@ -12,6 +12,8 @@ from module_factions import dplmc_factions_end
 ##diplomacy end+
 
 from module_constants import *
+from ID_parties import *
+from ID_troops import *
 
 ####################################################################################################################
 # Simple triggers are the alternative to old style triggers. They do not preserve state, and thus simpler to maintain.
@@ -483,6 +485,211 @@ simple_triggers_part1 = [
      (try_end),
      (troop_set_slot, "trp_notification_menu_types", 79, 0),
     ]),
+
+  (0, # Detachment Finalizer
+   [
+      (gt, "$g_detachment_in_progress", 0),
+      (try_begin),
+        (eq, "$g_detachment_in_progress", 1),
+        (neg|map_free),
+        (assign, "$g_detachment_in_progress", 2), # User has successfully entered the screen
+      (else_try),
+        (eq, "$g_detachment_in_progress", 2),
+        (map_free),
+        (assign, "$g_detachment_in_progress", 0), # User has exited the screen
+        
+        # 2. Proceed with Dispatch Logic
+        (assign, "$g_move_heroes", 1),
+        (enable_party, "p_detachment_buffer_party"),
+        (party_get_num_companions, ":num_men", "p_detachment_buffer_party"),
+        
+        (assign, ":leader_present", 0),
+        (try_begin),
+           (main_party_has_troop, "$g_detachment_leader"),
+           # Leader was moved BACK to player party
+        (else_try),
+           (party_count_companions_of_type, ":count", "p_detachment_buffer_party", "$g_detachment_leader"),
+           (gt, ":count", 0),
+           (assign, ":leader_present", 1),
+        (try_end),
+        
+        (assign, reg1, ":num_men"),
+        (assign, reg2, ":leader_present"),
+        #(display_message, "@DEBUG: Detachment check - Men: {reg1}, Leader: {reg2}"), # Debugging
+        
+        (try_begin),
+           (eq, ":leader_present", 1),
+           (gt, ":num_men", 0),
+            (set_spawn_radius, 0),
+            (spawn_around_party, "p_main_party", "pt_none"),
+            (assign, ":new_party", reg0),
+            
+            (party_set_slot, ":new_party", slot_party_type, spt_player_detachment),
+            (party_set_slot, ":new_party", slot_party_mission_type, "$g_mission_type"),
+            (party_set_slot, ":new_party", slot_party_mission_target, "$g_mission_target_party"),
+            (party_set_slot, ":new_party", slot_party_mission_duration, "$g_detachment_duration"),
+            (party_set_slot, ":new_party", slot_party_leader_troop, "$g_detachment_leader"),
+            (party_set_slot, ":new_party", slot_party_commander_party, "p_main_party"),
+            (troop_set_slot, "$g_detachment_leader", slot_troop_leaded_party, ":new_party"),
+            (troop_set_slot, "$g_detachment_leader", slot_troop_occupation, slto_player_companion),
+            
+            (call_script, "script_party_add_party", ":new_party", "p_detachment_buffer_party"),
+            (party_clear, "p_detachment_buffer_party"),
+            
+            (store_faction_of_party, ":player_fac", "p_main_party"),
+            (party_set_faction, ":new_party", ":player_fac"),
+            (str_store_troop_name, s0, "$g_detachment_leader"),
+            (party_set_name, ":new_party", "@{s0}'s Detachment"),
+            
+            # Set AI
+            (try_begin),
+              (eq, "$g_mission_type", 1), # attack
+              (party_set_ai_behavior, ":new_party", ai_bhvr_attack_party),
+              (party_set_ai_object, ":new_party", "$g_mission_target_party"),
+            (else_try),
+              (eq, "$g_mission_type", 2), # patrol
+              (party_set_ai_behavior, ":new_party", ai_bhvr_patrol_location),
+              (party_set_ai_object, ":new_party", "$g_mission_target_party"),
+              (party_set_ai_patrol_radius, ":new_party", 5),
+            (else_try),
+              (eq, "$g_mission_type", 3), # hold
+              (party_set_ai_behavior, ":new_party", ai_bhvr_hold),
+            (else_try),
+              (eq, "$g_mission_type", 4), # accompany
+              (party_set_ai_behavior, ":new_party", ai_bhvr_escort_party),
+              (party_set_ai_object, ":new_party", "$g_mission_target_party"),
+            (try_end),
+            
+            (display_message, "@Detachment dispatched! Leader assigned: {s0}"),
+            (troop_get_slot, ":occ", "$g_detachment_leader", slot_troop_occupation),
+            (assign, reg1, ":occ"),
+            (display_message, "@DEBUG: {s0} occupation after detachment spawned: {reg1}"),
+            (store_troop_gold, reg2, "trp_player"),
+            (display_message, "@DEBUG: Player gold after detachment spawned: {reg2}"),
+        (else_try),
+           (eq, ":leader_present", 0),
+           (display_message, "@Failed to dispatch detachment: No leader assigned (Companion or Lieutenant required)."),
+           # Transfer troops back to player
+           (call_script, "script_party_add_party", "p_main_party", "p_detachment_buffer_party"),
+           (party_clear, "p_detachment_buffer_party"),
+        (else_try),
+           (display_message, "@Detachment aborted: No troops assigned."),
+           (call_script, "script_party_add_party", "p_main_party", "p_detachment_buffer_party"),
+           (party_clear, "p_detachment_buffer_party"),
+        (try_end),
+      (try_end),
+   ]),
+
+  (1,
+   [
+      (try_for_parties, ":party_no"),
+          (gt, ":party_no", "p_spawn_points_end"),
+          (party_slot_eq, ":party_no", slot_party_type, spt_player_detachment),
+          (party_get_slot, ":mission_type", ":party_no", slot_party_mission_type),
+          (party_get_slot, ":target", ":party_no", slot_party_mission_target),
+          (party_get_slot, ":leader", ":party_no", slot_party_leader_troop),
+          
+          (try_begin),
+              (neq, ":leader", -1),
+              (party_count_companions_of_type, ":count", ":party_no", ":leader"),
+              (eq, ":count", 0),
+              (party_set_slot, ":party_no", slot_party_mission_type, 0), # Leader lost, return
+          (try_end),
+          
+          (try_begin),
+              (party_get_slot, ":duration", ":party_no", slot_party_mission_duration),
+              (gt, ":duration", 0),
+              (val_sub, ":duration", 1),
+              (party_set_slot, ":party_no", slot_party_mission_duration, ":duration"),
+              (try_begin),
+                  (eq, ":duration", 0),
+                  (party_set_slot, ":party_no", slot_party_mission_type, 0), # Return
+                  (display_message, "@A detachment's mission duration has expired. It is returning to your party."),
+              (try_end),
+          (try_end),
+          
+          (try_begin),
+              (eq, ":mission_type", 0), # Returning
+              (store_distance_to_party_from_party, ":dist", "p_main_party", ":party_no"),
+              (try_begin),
+                  (lt, ":dist", 2),
+                  (str_store_troop_name, s1, ":leader"),
+                  (display_message, "@{s1}'s detachment has returned and joined your party!"),
+                  (assign, "$g_move_heroes", 1),
+                  (call_script, "script_party_add_party", "p_main_party", ":party_no"),
+                  (troop_set_slot, ":leader", slot_troop_leaded_party, -1),
+                  (remove_party, ":party_no"),
+              (else_try),
+                  (party_set_ai_behavior, ":party_no", ai_bhvr_travel_to_party),
+                  (party_set_ai_object, ":party_no", "p_main_party"),
+              (try_end),
+          (else_try),
+              (eq, ":mission_type", 1), # Attack
+              (try_begin),
+                  (neg|party_is_active, ":target"),
+                  (party_set_slot, ":party_no", slot_party_mission_type, 0), # target dead, return
+              (else_try),
+                  (party_set_ai_behavior, ":party_no", ai_bhvr_attack_party),
+                  (party_set_ai_object, ":party_no", ":target"),
+              (try_end),
+          (else_try),
+              (eq, ":mission_type", 2), # Patrol
+              (try_begin),
+                  (neg|party_is_active, ":target"),
+                  (party_set_slot, ":party_no", slot_party_mission_type, 0), # target dead/lost, return
+              (else_try),
+                  (get_party_ai_behavior, ":current_behavior", ":party_no"),
+                  (try_begin),
+                      (neq, ":current_behavior", ai_bhvr_attack_party),
+                      
+                      # Dynamic radius based on leader's spotting skill
+                      (party_get_slot, ":leader", ":party_no", slot_party_leader_troop),
+                      (store_skill_level, ":spotting", "skl_spotting", ":leader"),
+                      (store_add, ":radius", 10, ":spotting"), # Base 10 + spotting (up to 10) = 20 max
+                      
+                      # Explicitly scan for enemies to chase
+                      (assign, ":enemy_found", -1),
+                      (try_for_parties, ":potential_enemy"),
+                          (neq, ":potential_enemy", ":party_no"),
+                          (party_is_active, ":potential_enemy"),
+                          (store_faction_of_party, ":enemy_fac", ":potential_enemy"),
+                          (store_relation, ":rel", "fac_player_faction", ":enemy_fac"),
+                          (lt, ":rel", 0),
+                          (store_distance_to_party_from_party, ":dist", ":potential_enemy", ":party_no"),
+                          (lt, ":dist", ":radius"),
+                          (assign, ":enemy_found", ":potential_enemy"),
+                          (assign, ":potential_enemy", "p_main_party"), # break loop
+                      (try_end),
+                      
+                      (try_begin),
+                          (gt, ":enemy_found", 0),
+                          (party_set_ai_behavior, ":party_no", ai_bhvr_attack_party),
+                          (party_set_ai_object, ":party_no", ":enemy_found"),
+                      (else_try),
+                          (party_set_ai_behavior, ":party_no", ai_bhvr_patrol_location),
+                          (party_set_ai_object, ":party_no", ":target"),
+                          (party_set_ai_patrol_radius, ":party_no", ":radius"),
+                      (try_end),
+                  (try_end),
+              (try_end),
+          (else_try),
+              (eq, ":mission_type", 3), # Hold
+              (get_party_ai_behavior, ":current_behavior", ":party_no"),
+              (try_begin),
+                  (neq, ":current_behavior", ai_bhvr_attack_party),
+                  (party_set_ai_behavior, ":party_no", ai_bhvr_hold),
+              (try_end),
+          (else_try),
+              (eq, ":mission_type", 4), # Accompany
+              (get_party_ai_behavior, ":current_behavior", ":party_no"),
+              (try_begin),
+                  (neq, ":current_behavior", ai_bhvr_attack_party),
+                  (party_set_ai_behavior, ":party_no", ai_bhvr_escort_party),
+                  (party_set_ai_object, ":party_no", ":target"),
+              (try_end),
+          (try_end),
+      (try_end),
+   ]),
 
   #Music,
   (1,

@@ -12,6 +12,8 @@ from header_terrain_types import *
 from header_music import *
 from header_map_icons import *
 from ID_animations import *
+from ID_parties import *
+from ID_troops import *
 ##diplomacy start+
 from module_factions import dplmc_factions_begin, dplmc_factions_end, dplmc_non_generic_factions_begin
 ##diplomacy end+
@@ -2358,9 +2360,39 @@ scripts_part2 = [
           (party_slot_eq, ":party_no", slot_party_type, spt_kingdom_caravan),
           
           (neg|is_between, ":party_no", centers_begin, centers_end),
-          
+                    
           (context_menu_add_item, "@Accompany", cmenu_follow),
         (try_end),
+        
+        (try_begin),
+          (neq, ":party_no", "p_main_party"),
+          (try_begin),
+            (is_between, ":party_no", centers_begin, centers_end),
+            (context_menu_add_item, "@Send detachment to patrol", 21),
+            (context_menu_add_item, "@Send detachment to hold", 22),
+          (else_try),
+            (call_script, "script_get_relation_between_parties", "p_main_party", ":party_no"),
+            (try_begin),
+              (lt, reg0, 0),
+              (context_menu_add_item, "@Send detachment to attack", 20),
+            (else_try),
+              (context_menu_add_item, "@Send detachment to accompany", 23),
+            (try_end),
+          (try_end),
+        (try_end),
+    ]),
+
+    ("initialize_detachment_silent", [
+      (assign, "$g_move_heroes", 1),
+      (party_set_name, "p_detachment_buffer_party", "@Detachment Personnel"),
+      (enable_party, "p_detachment_buffer_party"),
+      (party_set_slot, "p_detachment_buffer_party", slot_party_type, spt_player_detachment),
+      (party_relocate_near_party, "p_detachment_buffer_party", "p_main_party", 0),
+      (party_clear, "p_detachment_buffer_party"),
+      (store_faction_of_party, ":player_fac", "p_main_party"),
+      (party_set_faction, "p_detachment_buffer_party", ":player_fac"),
+      (party_set_flags, "p_detachment_buffer_party", pf_show_faction|pf_default_behavior, 1),
+      (party_set_flags, "p_detachment_buffer_party", pf_disabled, 0),
     ]),
     
     #script_game_event_context_menu_button_clicked:
@@ -2377,6 +2409,28 @@ scripts_part2 = [
           (eq, ":button_value", 2),
           (party_stack_get_troop_id, ":troop_no", ":party_no", 0),
           (change_screen_notes, 1, ":troop_no"),
+        (else_try),
+          (try_begin),
+            (is_between, ":button_value", 20, 24),
+            (assign, "$g_mission_target_party", ":party_no"),
+            (try_begin),
+              (eq, ":button_value", 20),
+              (assign, "$g_mission_type", 1), # attack
+            (else_try),
+              (eq, ":button_value", 21),
+              (assign, "$g_mission_type", 2), # patrol
+            (else_try),
+              (eq, ":button_value", 22),
+              (assign, "$g_mission_type", 3), # hold
+            (else_try),
+              (eq, ":button_value", 23),
+              (assign, "$g_mission_type", 4), # accompany
+            (try_end),
+            
+            (assign, "$g_detachment_in_progress", 1),
+            (assign, "$g_detachment_finished", 0),
+            (jump_to_menu, "mnu_detachment_config"),
+          (try_end),
         (try_end),
     ]),
     

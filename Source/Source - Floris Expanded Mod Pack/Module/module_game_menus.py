@@ -6,6 +6,8 @@ from header_music import *
 from header_terrain_types import *
 
 from module_constants import *
+from ID_parties import *
+from ID_troops import *
 
 ####################################################################################################################
 #  (menu-id, menu-flags, menu_text, mesh-name, [<operations>], [<options>]),
@@ -644,6 +646,127 @@ game_menus = [
         ]
        ),
       ]
+  ),
+
+  ("detachment_config", 0,
+   "Configure the detachment parameters.^Objective: {s1}^Target: {s2}^Duration: {reg1} hours^Leader: {s3}^^Select a parameter to change or proceed to assign troops.",
+   "none",
+   [
+     (try_begin),
+       (eq, "$g_detachment_finished", 1),
+       (assign, "$g_detachment_finished", 0),
+       (change_screen_map),
+     (try_end),
+     
+     (try_begin),
+       (eq, "$g_mission_type", 1), (str_store_string, s1, "@Attack"),
+     (else_try),
+       (eq, "$g_mission_type", 2), (str_store_string, s1, "@Patrol"),
+     (else_try),
+       (eq, "$g_mission_type", 3), (str_store_string, s1, "@Hold Position"),
+     (else_try),
+       (eq, "$g_mission_type", 4), (str_store_string, s1, "@Accompany"),
+     (try_end),
+     
+     (str_store_party_name, s2, "$g_mission_target_party"),
+     (try_begin),
+       (lt, "$g_detachment_duration", 1),
+       (assign, "$g_detachment_duration", 24),
+     (try_end),
+     (assign, reg1, "$g_detachment_duration"),
+     
+     (try_begin),
+       (gt, "$g_detachment_leader", 0),
+       (str_store_troop_name, s3, "$g_detachment_leader"),
+     (else_try),
+       (str_store_string, s3, "@None selected"),
+     (try_end),
+   ],
+   [
+     ("detachment_config_obj_1", [], "Objective: Attack", [(assign, "$g_mission_type", 1), (jump_to_menu, "mnu_detachment_config")]),
+     ("detachment_config_obj_2", [], "Objective: Patrol", [(assign, "$g_mission_type", 2), (jump_to_menu, "mnu_detachment_config")]),
+     ("detachment_config_obj_3", [], "Objective: Hold", [(assign, "$g_mission_type", 3), (jump_to_menu, "mnu_detachment_config")]),
+     ("detachment_config_obj_4", [], "Objective: Accompany", [(assign, "$g_mission_type", 4), (jump_to_menu, "mnu_detachment_config")]),
+     
+     ("detachment_config_dur_12", [], "Duration: 12h", [(assign, "$g_detachment_duration", 12), (jump_to_menu, "mnu_detachment_config")]),
+     ("detachment_config_dur_24", [], "Duration: 24h", [(assign, "$g_detachment_duration", 24), (jump_to_menu, "mnu_detachment_config")]),
+     ("detachment_config_dur_0", [], "Duration: Unlimited", [(assign, "$g_detachment_duration", 0), (jump_to_menu, "mnu_detachment_config")]),
+     
+     ("detachment_config_leader", [], "Select Leader...", [(jump_to_menu, "mnu_detachment_select_leader")]),
+     
+     ("detachment_config_proceed", 
+      [(gt, "$g_detachment_leader", 0),
+       (main_party_has_troop, "$g_detachment_leader")], 
+      "Finalize Parameters and Assign Troops",
+      [
+        (troop_get_slot, ":occ", "$g_detachment_leader", slot_troop_occupation),
+        (assign, reg1, ":occ"),
+        (str_store_troop_name, s1, "$g_detachment_leader"),
+        (display_message, "@DEBUG: {s1} occupation before creation: {reg1}"),
+        (store_troop_gold, reg2, "trp_player"),
+        (display_message, "@DEBUG: Player gold before creation: {reg2}"),
+        (assign, "$g_detachment_finished", 1),
+        (call_script, "script_initialize_detachment_silent"),
+        (party_add_members, "p_detachment_buffer_party", "$g_detachment_leader", 1),
+        (party_remove_members, "p_main_party", "$g_detachment_leader", 1),
+        (change_screen_give_members, "p_detachment_buffer_party"),
+      ]),
+      
+     ("detachment_config_cancel", [], "Cancel", [
+        (assign, "$g_detachment_in_progress", 0),
+        (call_script, "script_party_add_party", "p_main_party", "p_detachment_buffer_party"),
+        (party_clear, "p_detachment_buffer_party"),
+        (change_screen_map),
+      ]),
+   ]
+  ),
+
+  ("detachment_encounter", 0,
+   "You encounter your detachment led by {s3}.",
+   "none",
+   [
+     (assign, "$g_encountered_party", "$g_encountered_party"),
+     (party_get_slot, ":leader", "$g_encountered_party", slot_party_leader_troop),
+     (str_store_troop_name, s3, ":leader"),
+   ],
+   [
+     ("detachment_encounter_talk", [], "Speak with the leader.",
+      [
+        (start_encounter, "$g_encountered_party"),
+      ]),
+     ("detachment_encounter_leave", [], "Leave.",
+      [
+        (change_screen_map),
+      ]),
+   ]
+  ),
+
+  ("detachment_select_leader", 0,
+   "Select a leader for the detachment from your available officers.",
+   "none",
+   [],
+   [
+     # Generate options for all companions
+   ] + [( "detachment_leader_c_%d"%i, 
+         [(store_add, ":troop_id", companions_begin, i), 
+          (main_party_has_troop, ":troop_id"),
+          (str_store_troop_name, s0, ":troop_id")],
+         "Select {s0}",
+         [(store_add, "$g_detachment_leader", companions_begin, i), (jump_to_menu, "mnu_detachment_config")]
+       ) for i in range(32)
+   ] + [
+     # Generate options for all lieutenants
+     ( "detachment_leader_l_%d"%i, 
+         [(store_add, ":troop_id", lieutenants_begin, i), 
+          (is_between, ":troop_id", lieutenants_begin, lieutenants_end),
+          (main_party_has_troop, ":troop_id"),
+          (str_store_troop_name, s0, ":troop_id")],
+         "Select {s0}",
+         [(store_add, "$g_detachment_leader", lieutenants_begin, i), (jump_to_menu, "mnu_detachment_config")]
+       ) for i in range(20)
+   ] + [
+     ("detachment_leader_back", [], "Go back.", [(jump_to_menu, "mnu_detachment_config")]),
+   ]
   ),
  
 ### REPORTS - REFERENCE MENU - BEGIN ###

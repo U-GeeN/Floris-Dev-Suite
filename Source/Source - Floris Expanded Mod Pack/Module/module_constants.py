@@ -614,6 +614,11 @@ slot_party_temp_slot_1			            = 248 #right now used only within a single 
 slot_party_under_player_suggestion			= 249 #move this up a bit
 slot_town_trade_good_prices_begin 			= 250
 
+slot_party_mission_type = 380
+slot_party_mission_target = 381
+slot_party_leader_troop = 382
+slot_party_mission_duration = 383
+
 slot_center_last_reconnoitered_by_faction_time 				= 350
 #slot_center_last_reconnoitered_by_faction_cached_strength 	= 360
 #slot_center_last_reconnoitered_by_faction_friend_strength 	= 370
@@ -643,7 +648,8 @@ spt_bandit_lair       = 18
 #spt_deserter           = 20    #19 is dplmc_spouse
 spt_entrenchment      = 22      #TEMPERED ADDED FOR ENTRENCHMENT PARTIES  #21 USED IN DIPLOMACY FOR "Gift Caravan"
 ## Zaitenko's Reinforcement Script
-spt_reinforcement_party 	   = 23 #was 14
+spt_reinforcement_party = 23 #was 14
+spt_player_detachment = 24
 ##
 
 kingdom_party_types_begin = spt_kingdom_caravan
