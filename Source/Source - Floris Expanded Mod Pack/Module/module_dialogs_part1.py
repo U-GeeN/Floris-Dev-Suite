@@ -52,20 +52,38 @@ from header_troops import *
 ####################################################################################################################
 
 dialogs_part1 = [
-
-####################################################################################################################################
-# LAV MODIFICATIONS START (COMPANIONS OVERSEER MOD)
-####################################################################################################################################
-  [anyone, "start", [(eq,"$g_lco_operation",lco_view_character)],"Here you are.","lco_conversation_end",[(change_screen_view_character)]],
-####################################################################################################################################
 # Detachment Dialogs Start
   [anyone,"start", [
-    (party_slot_eq, "$g_encountered_party", slot_party_type, spt_player_detachment),
+    (store_conversation_troop, ":troop_no"),
+    (gt, ":troop_no", 0),
+    (troop_get_slot, ":party_no", ":troop_no", slot_troop_leaded_party),
+    (gt, ":party_no", 0),
+    (party_is_active, ":party_no"),
+    (party_slot_eq, ":party_no", slot_party_type, spt_player_detachment),
+    (assign, "$g_encountered_party", ":party_no"),
+    (party_get_slot, ":mission_type", ":party_no", slot_party_mission_type),
+    (eq, ":mission_type", 0),
+  ], "Greetings, {sire/my lady}. We have completed our mission and returned. We are ready to rejoin your party.", "detachment_talk_options", []],
+
+  [anyone,"start", [
+    (store_conversation_troop, ":troop_no"),
+    (gt, ":troop_no", 0),
+    (troop_get_slot, ":party_no", ":troop_no", slot_troop_leaded_party),
+    (gt, ":party_no", 0),
+    (party_is_active, ":party_no"),
+    (party_slot_eq, ":party_no", slot_party_type, spt_player_detachment),
+    (assign, "$g_encountered_party", ":party_no"),
   ], "Greetings, {sire/my lady}. What are your orders?", "detachment_talk_options", []],
 
-  [anyone|plyr,"detachment_talk_options", [], "What is your current mission?", "detachment_mission_report", []],
+  [anyone|plyr,"detachment_talk_options", [
+      (neg|party_slot_eq, "$g_encountered_party", slot_party_mission_type, 0),
+  ], "What is your current mission?", "detachment_mission_report", []],
+  
   [anyone|plyr,"detachment_talk_options", [], "Rejoin the main party.", "detachment_rejoin", []],
-  [anyone|plyr,"detachment_talk_options", [], "Carry on.", "close_window", []],
+  
+  [anyone|plyr,"detachment_talk_options", [
+      (neg|party_slot_eq, "$g_encountered_party", slot_party_mission_type, 0),
+  ], "Carry on.", "close_window", []],
 
   [anyone,"detachment_mission_report", [], "{s0}", "detachment_talk_options", [
     (party_get_slot, ":mission_type", "$g_encountered_party", slot_party_mission_type),
@@ -85,13 +103,31 @@ dialogs_part1 = [
   ]],
 
   [anyone,"detachment_rejoin", [], "As you wish. We'll merge back with your group immediately.", "close_window", [
-    (call_script, "script_party_add_party", "p_main_party", "$g_encountered_party"),
+    (assign, "$g_move_heroes", 1),
     (party_get_slot, ":leader", "$g_encountered_party", slot_party_leader_troop),
-    (troop_set_slot, ":leader", slot_troop_leaded_party, -1),
+    
+    (try_begin),
+        (gt, ":leader", 0),
+        (troop_get_slot, ":wealth", ":leader", slot_troop_detachment_loot),
+        (try_begin),
+            (gt, ":wealth", 0),
+            (troop_add_gold, "trp_player", ":wealth"),
+            (troop_set_slot, ":leader", slot_troop_detachment_loot, 0),
+            (assign, reg1, ":wealth"),
+            (display_message, "@Your detachment has returned with {reg1} denars in loot.", 0x33FF33),
+        (try_end),
+        (troop_set_slot, ":leader", slot_troop_leaded_party, -1),
+    (try_end),
+    
+    (call_script, "script_party_add_party", "p_main_party", "$g_encountered_party"),
     (remove_party, "$g_encountered_party"),
     (assign, "$g_leave_encounter", 1),
   ]],
-# Detachment Dialogs End
+####################################################################################################################################
+# LAV MODIFICATIONS START (COMPANIONS OVERSEER MOD)
+####################################################################################################################################
+  [anyone, "start", [(eq,"$g_lco_operation",lco_view_character)],"Here you are.","lco_conversation_end",[(change_screen_view_character)]],
+####################################################################################################################################
   [anyone ,"start", [(store_conversation_troop, "$g_talk_troop"),
                      (store_conversation_agent, "$g_talk_agent"),
                      (store_troop_faction, "$g_talk_troop_faction", "$g_talk_troop"),

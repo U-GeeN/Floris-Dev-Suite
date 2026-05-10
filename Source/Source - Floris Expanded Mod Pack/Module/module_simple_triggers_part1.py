@@ -500,15 +500,14 @@ simple_triggers_part1 = [
         
         # 2. Proceed with Dispatch Logic
         (assign, "$g_move_heroes", 1),
-        (enable_party, "p_detachment_buffer_party"),
-        (party_get_num_companions, ":num_men", "p_detachment_buffer_party"),
+        (party_get_num_companions, ":num_men", "$g_detachment_buffer_party"),
         
         (assign, ":leader_present", 0),
         (try_begin),
            (main_party_has_troop, "$g_detachment_leader"),
            # Leader was moved BACK to player party
         (else_try),
-           (party_count_companions_of_type, ":count", "p_detachment_buffer_party", "$g_detachment_leader"),
+           (party_count_companions_of_type, ":count", "$g_detachment_buffer_party", "$g_detachment_leader"),
            (gt, ":count", 0),
            (assign, ":leader_present", 1),
         (try_end),
@@ -532,9 +531,10 @@ simple_triggers_part1 = [
             (party_set_slot, ":new_party", slot_party_commander_party, "p_main_party"),
             (troop_set_slot, "$g_detachment_leader", slot_troop_leaded_party, ":new_party"),
             (troop_set_slot, "$g_detachment_leader", slot_troop_occupation, slto_player_companion),
+            (troop_set_slot, "$g_detachment_leader", slot_troop_detachment_loot, 0),
             
-            (call_script, "script_party_add_party", ":new_party", "p_detachment_buffer_party"),
-            (party_clear, "p_detachment_buffer_party"),
+            (call_script, "script_party_add_party", ":new_party", "$g_detachment_buffer_party"),
+            (remove_party, "$g_detachment_buffer_party"),
             
             (store_faction_of_party, ":player_fac", "p_main_party"),
             (party_set_faction, ":new_party", ":player_fac"),
@@ -570,12 +570,12 @@ simple_triggers_part1 = [
            (eq, ":leader_present", 0),
            (display_message, "@Failed to dispatch detachment: No leader assigned (Companion or Lieutenant required)."),
            # Transfer troops back to player
-           (call_script, "script_party_add_party", "p_main_party", "p_detachment_buffer_party"),
-           (party_clear, "p_detachment_buffer_party"),
+           (call_script, "script_party_add_party", "p_main_party", "$g_detachment_buffer_party"),
+           (remove_party, "$g_detachment_buffer_party"),
         (else_try),
            (display_message, "@Detachment aborted: No troops assigned."),
-           (call_script, "script_party_add_party", "p_main_party", "p_detachment_buffer_party"),
-           (party_clear, "p_detachment_buffer_party"),
+           (call_script, "script_party_add_party", "p_main_party", "$g_detachment_buffer_party"),
+           (remove_party, "$g_detachment_buffer_party"),
         (try_end),
       (try_end),
    ]),
@@ -604,7 +604,7 @@ simple_triggers_part1 = [
               (try_begin),
                   (eq, ":duration", 0),
                   (party_set_slot, ":party_no", slot_party_mission_type, 0), # Return
-                  (display_message, "@A detachment's mission duration has expired. It is returning to your party."),
+                  (display_message, "@DEBUG: A detachment's mission duration ({reg1}h) has expired. Returning."),
               (try_end),
           (try_end),
           
@@ -613,12 +613,11 @@ simple_triggers_part1 = [
               (store_distance_to_party_from_party, ":dist", "p_main_party", ":party_no"),
               (try_begin),
                   (lt, ":dist", 2),
-                  (str_store_troop_name, s1, ":leader"),
-                  (display_message, "@{s1}'s detachment has returned and joined your party!"),
-                  (assign, "$g_move_heroes", 1),
-                  (call_script, "script_party_add_party", "p_main_party", ":party_no"),
-                  (troop_set_slot, ":leader", slot_troop_leaded_party, -1),
-                  (remove_party, ":party_no"),
+                  (try_begin),
+                      (map_free),
+                      (party_relocate_near_party, ":party_no", "p_main_party", 0),
+                      (start_map_conversation, ":leader", -1),
+                  (try_end),
               (else_try),
                   (party_set_ai_behavior, ":party_no", ai_bhvr_travel_to_party),
                   (party_set_ai_object, ":party_no", "p_main_party"),
@@ -628,6 +627,7 @@ simple_triggers_part1 = [
               (try_begin),
                   (neg|party_is_active, ":target"),
                   (party_set_slot, ":party_no", slot_party_mission_type, 0), # target dead, return
+                  (display_message, "@DEBUG: A detachment's target was lost. Returning."),
               (else_try),
                   (party_set_ai_behavior, ":party_no", ai_bhvr_attack_party),
                   (party_set_ai_object, ":party_no", ":target"),
@@ -637,6 +637,7 @@ simple_triggers_part1 = [
               (try_begin),
                   (neg|party_is_active, ":target"),
                   (party_set_slot, ":party_no", slot_party_mission_type, 0), # target dead/lost, return
+                  (display_message, "@DEBUG: A detachment's patrol target was lost. Returning."),
               (else_try),
                   (get_party_ai_behavior, ":current_behavior", ":party_no"),
                   (try_begin),

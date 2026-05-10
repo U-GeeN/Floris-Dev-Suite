@@ -618,6 +618,7 @@ slot_party_mission_type = 380
 slot_party_mission_target = 381
 slot_party_leader_troop = 382
 slot_party_mission_duration = 383
+slot_troop_detachment_loot = 555
 
 slot_center_last_reconnoitered_by_faction_time 				= 350
 #slot_center_last_reconnoitered_by_faction_cached_strength 	= 360
