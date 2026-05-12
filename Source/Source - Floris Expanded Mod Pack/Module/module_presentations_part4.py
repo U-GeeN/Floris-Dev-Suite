@@ -1129,9 +1129,9 @@ presentations_part4 = [
         (party_get_slot, reg20, "$current_town", slot_center_acc_prosp),
         (party_get_slot, reg21, "$current_town", slot_center_player_relation),
         (create_button_overlay, "$g_presentation_obj_10", "@[DBG] acc_prosp +50 ({reg20})"),
-        (position_set_x, pos1, 250), (position_set_y, pos1, 720), (overlay_set_position, "$g_presentation_obj_10", pos1),
+        (position_set_x, pos1, 250), (position_set_y, pos1, 700), (overlay_set_position, "$g_presentation_obj_10", pos1),
         (create_button_overlay, "$g_presentation_obj_11", "@[DBG] relation +10 ({reg21})"),
-        (position_set_x, pos1, 250), (position_set_y, pos1, 700), (overlay_set_position, "$g_presentation_obj_11", pos1),
+        (position_set_x, pos1, 250), (position_set_y, pos1, 680), (overlay_set_position, "$g_presentation_obj_11", pos1),
       (try_end),
 
       (presentation_set_duration, 999999),

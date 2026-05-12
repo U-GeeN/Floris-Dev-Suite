@@ -4946,17 +4946,6 @@ presentations_part2 = [
         (troop_set_slot, "trp_temp_array_c", ":sub_overlay_id", ":item_type"),
         (val_add, ":sub_overlay_id", 1),
       (try_end),
-
-## CC disabled in 1.324
-#      (troop_get_slot,":upgrade_wpn_set_sel", "$temp", slot_upgrade_wpn_set_sel),
-#      (store_sub, ":upgrade_wpn_set_sel_2", 1, ":upgrade_wpn_set_sel"),
-#      # settings 1
-#      (create_text_overlay, reg1, "@Plan <1> ", tf_center_justify|tf_vertical_align_center),
-#      (position_set_x, pos1, 270),
-#      (position_set_y, pos1, 500),
-#      (overlay_set_position, reg1, pos1),
-#      # set 1: wpn slot button
-##
       (position_set_x, pos1, 445), ##CC 1.324
       (position_set_y, pos1, 450),
       (create_combo_button_overlay, "$g_presentation_obj_1"),
