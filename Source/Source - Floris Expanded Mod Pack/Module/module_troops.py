@@ -874,38 +874,35 @@ upgrade(troops,"nord_r_hermadur","nord_r_heahgerefa")
 upgrade(troops,"nord_r_vigamadr","nord_r_skjadsveinn")
 #Tier 5-6
 upgrade(troops,"nord_r_skjadsveinn","nord_r_husbondi")
-##Expanded troop tree
-#Tier 1-2
+####Expanded troop tree
+#Tier 1-2  (Recruit -> Footman)
 upgrade(troops,"nord_e_bondi","nord_e_berserkr")
 upgrade(troops,"nord_e_extra1","nord_e_berserkr")
 upgrade(troops,"nord_e_extra2","nord_e_berserkr")
 upgrade(troops,"nord_e_extra3","nord_e_berserkr")
 upgrade(troops,"nord_e_extra4","nord_e_berserkr")
 upgrade(troops,"nord_e_extra5","nord_e_berserkr")
-#Tier 2-3
+#Tier 2-3  (Footman -> A3 Huntsman OR I3 Trained Footman)
 upgrade2(troops,"nord_e_berserkr","nord_e_bogmadur","nord_e_gridman")
-#upgrade2(troops,"nord_e_huskarl","nord_e_gesith","nord_e_gridman")
-#Tier 3-4
-#upgrade2(troops,"nord_e_kertilsveinr","nord_e_ascoman","nord_e_vikingr")
+#Tier 3-4  (Huntsman -> A4 Skirmisher OR A4 Archer)
 upgrade2(troops,"nord_e_bogmadur","nord_e_ascoman","nord_e_bogsveigir")
-#upgrade2(troops,"nord_e_gesith","nord_e_bogsveigir","nord_e_hermadur")
-upgrade2(troops,"nord_e_gridman","nord_e_innaesmaen","nord_e_vigamadr")
-#Tier 4-5
+#           (Trained Footman -> I4 Axeman OR C4 Scout; Dreng -> I4 Warrior OR C4 Scout)
+upgrade2(troops,"nord_e_gridman","nord_e_einhleyping","nord_e_innaesmaen")
+upgrade2(troops,"nord_e_kertilsveinr","nord_e_vigamadr","nord_e_innaesmaen")
+#Tier 4-5  (Skirmisher -> A5 Vet.Skirmisher; Archer -> A5 Vet.Archer)
 upgrade(troops,"nord_e_ascoman","nord_e_heimthegi")
-#upgrade(troops,"nord_e_vikingr","nord_e_hirdman")
-#upgrade(troops,"nord_e_einhleyping","nord_e_lausaman")
-#upgrade(troops,"nord_e_hermadur","nord_e_heahgerefa")
-#upgrade2(troops,"nord_e_innaesmaen","nord_e_himthige","nord_e_kappi")
-upgrade2(troops,"nord_e_vigamadr","nord_e_hirdman","nord_e_skjadsveinn")
-#Tier 5-6
+upgrade(troops,"nord_e_bogsveigir","nord_e_heahgerefa")
+#           (Axeman -> I5 Vikingr; Warrior -> I5 Champion OR I5 Vikingr)
+upgrade(troops,"nord_e_einhleyping","nord_e_hirdman")
+upgrade2(troops,"nord_e_vigamadr","nord_e_skjadsveinn","nord_e_hirdman")
+#Tier 5-6  (Vet.Skirmisher -> A6 Javelinier)
+upgrade(troops,"nord_e_heimthegi","nord_e_ealdorman")
+#           (Champion -> I6 Marauder OR I6 Huskarl; Vikingr -> I6 Marauder)
+upgrade2(troops,"nord_e_skjadsveinn","nord_e_skutilsveinr","nord_e_husbondi")
 upgrade(troops,"nord_e_hirdman","nord_e_skutilsveinr")
-#upgrade(troops,"nord_e_heahgerefa","nord_e_ealdorman")
-#upgrade(troops,"nord_e_himthige","nord_e_erfane_himthige")
-#upgrade(troops,"nord_e_kappi","nord_e_hetja")
-upgrade(troops,"nord_e_skjadsveinn","nord_e_husbondi")
-#Tier 6-7
+#Tier 6-7  (Marauder -> I7 Berserkr; Huskarl -> I7 Berserkr OR I7 Elite Huskarl)
 upgrade(troops,"nord_e_skutilsveinr","nord_e_aetheling")
-upgrade(troops,"nord_e_husbondi","nord_e_vaeringi")
+upgrade2(troops,"nord_e_husbondi","nord_e_aetheling","nord_e_vaeringi")
 ##
 
 ###Rhodok
