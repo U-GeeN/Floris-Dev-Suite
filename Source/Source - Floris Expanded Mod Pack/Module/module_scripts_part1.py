@@ -285,7 +285,7 @@ scripts_part1 = [
 		  (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_nord_e_light_footman"),
 		  (faction_set_slot, "fac_culture_4", slot_faction_tier_3_troop, "trp_nord_e_trained_footman"),
 		  (faction_set_slot, "fac_culture_4", slot_faction_tier_4_troop, "trp_nord_e_skirmisher"),
-		  (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_nord_e_vikingr_i5"),
+		  (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_nord_e_vikingr"),
 		  (faction_set_slot, "fac_culture_4", slot_faction_tier_6_troop, "trp_nord_e_marauder"),
 		  (faction_set_slot, "fac_culture_4", slot_faction_tier_7_troop, "trp_nord_e_berserkr"),
 		  
@@ -1955,7 +1955,7 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_nord_innaesmaen, "trp_nord_e_scout"),
 	(troop_set_slot, troop_trees_2, slot_nord_vigamadr, "trp_nord_e_warrior"),
 	#Tier 5
-	(troop_set_slot, troop_trees_2, slot_nord_hirdman, "trp_nord_e_vikingr_i5"),
+	(troop_set_slot, troop_trees_2, slot_nord_hirdman, "trp_nord_e_vikingr"),
 	(troop_set_slot, troop_trees_2, slot_nord_lausaman, "trp_nord_e_lausaman"),
 	(troop_set_slot, troop_trees_2, slot_nord_heahgerefa, "trp_nord_e_veteran_skirmisher"),
 	(troop_set_slot, troop_trees_2, slot_nord_himthige, "trp_nord_e_kappi"),

@@ -14865,6 +14865,7 @@ scripts_part5 = [
 	(assign, "$g_dplmc_gold_changes", DPLMC_GOLD_CHANGES_LOW),
 	(assign, "$g_dplmc_lord_recycling", DPLMC_LORD_RECYCLING_ENABLE),
 	(assign, "$g_dplmc_terrain_advantage", DPLMC_TERRAIN_ADVANTAGE_ENABLE),
+	(assign, "$g_dplmc_visited_elders", 1),
 	
 	(assign, "$g_hp_bar_dis_limit", 30),
     (assign, "$g_hp_bar_ally", 0),
