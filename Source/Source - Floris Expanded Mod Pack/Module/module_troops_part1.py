@@ -606,6 +606,7 @@ troops_part1 = [
   ["troop_tree_9","{!}extra7_troop_tree","{!}extra6_troop_tree", 0, 0, 0, fac_kingdom_1,																																														[], 0, 0, 0, 0, 0],
 
 #soldiers:
+
 ####################################################################################################################
 # About the distribution of items and skills among the troops:
 # Items: I distributed the armors according to the following rough guidelines:
@@ -651,33 +652,33 @@ troops_part1 = [
 #					All basic tier 1 soldiers of all troop trees are level 4. To calculate the skill sets they have, I did the following:
 #					- I first gave all troops 40 points in each proficiency.
 #					- Then I distributed proficiencies according to the following schedule:
-#						Faction:		1H		2H		Pole	Bow		XBow	Throw
-#						Swadia:			+20				+30		+10
-#						Vaegir:			+10				+20		+30
-#						Khergit:		+20		+10				+30
-#						Nord:			+10		+30								+20
-#						Rhodok:			+20				+10				+30
-#						Sarranid:		+30		+20				+10
-#						Mercenaries:	+10				+30				+20
-#						Sword Sisters:	+30		+10				+20
+#						Faction:      1H      2H      Pole    Bow     XBow    Throw
+#						Swadia:       +20             +30     +10
+#						Vaegir:       +10             +20     +30
+#						Khergit:      +20     +10             +30
+#						Nord:         +10     +30                             +20
+#						Rhodok:       +20             +10             +30
+#						Sarranid:     +30     +20             +10
+#						Mercenaries:  +10             +30             +20
+#						Sword Sisters:+30     +10             +20
 #					- This gave the basic proficiencies for the tier 1 units. Henceforth I looked for each unit with how many levels it increased, and adjusted the stats accoridingly. I gave a maximum of 8 points per level for the primary weapon.
 #			Skills: Skills increase too as a soldier advances along the tree. I used the following schedule:
 #						Starting skills:
-#						Faction:		IF		PS		PT		PD		SH		AL		RD		HA
-#						Swadia:					2		1				1
-#						Vaegir:					1				2								1
-#						Khergit:								1						1		2
-#						Nord:			1				2						1
-#						Rhodok:			1		1								2
-#						Sarranid:						1								2		1
-#						Mercenaries:	2								1		1
-#						Sword Sisters:							1		2				1
+#						Faction:      IF      PS      PT      PD      SH      AL      RD      HA
+#						Swadia:               2       1               1
+#						Vaegir:               1               2                               1
+#						Khergit:                              1                       1       2
+#						Nord:         1               2                       1
+#						Rhodok:       1       1                               2
+#						Sarranid:                     1                               2       1
+#						Mercenaries:  2                               1       1
+#						Sword Sisters:                1       2               1
 #						Increase per tier. On the left is the increase dependant on the weapons the soldiers have, on the right the increase per unit type.
 #										Bonuses per weapon type carried 			|	bonus movement		|	Bonuses for soldier type						|				Bonuses for faction (only if applicable)
 #						Tier:			melee		Bow		XBow	Throw	Shield	|	no horse	horse	|	Cav				Inf			Arch	HoArch		|	Sw		Va		Kh		No			Rh		Sa		Me		SS
-#						T1:															|						|													|							1AL, 1IF								
+#						T1:															|						|													|							1AL, 1IF
 #						T2:				1PS			1PD		1SH		1PT		1IF		|	1AL			1RD		|	1AL,1SH			1PS			-		1HA,1RD		|
-#						T3:				1IF			1PD		1IF		1PT		1SH		|	1AL			1RD		|	1RD,1IF,1PS		1IF,1SH		-		1HA,1AL		|							
+#						T3:				1IF			1PD		1IF		1PT		1SH		|	1AL			1RD		|	1RD,1IF,1PS		1IF,1SH		-		1HA,1AL		|
 #						T4:				1PS			1PD		1SH		1PT		1IF		|	1AL			1RD		|	1AL,1SH			1PS			-		1HA,1RD		|
 #						T5:				1IF			1PD		1IF		1PT		1SH		|	1AL			1RD		|	1RD,1IF,1PS		1IF,1SH		-		1HA,1AL		|
 #						T6:				1PS			1PD		1SH		1PT		1IF		|	1AL			1RD		|	1AL,1SH			1PS			-		1HA,1RD		|
@@ -1147,7 +1148,7 @@ troops_part1 = [
   ["nord_e_light_footman","I2 Nord Light Footman","I2 Nord Light Footmen",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_4,																																			[itm_bo_nor_t2_shoes,itm_we_nor_axe_jomsviking,itm_we_nor_axe_throw_light,itm_we_nor_sword_pict,itm_we_nor_sword_seax_long,itm_ar_nor_t2_vikinglamellar_c,itm_he_nor_t2_spangen_c,itm_he_nor_t2_spangen_d,itm_he_nor_t2_spangen_e],def_attrib|level(11),wp_one_handed(91)|wp_two_handed(71)|wp_polearm(61)|wp_archery(61)|wp_crossbow(40)|wp_throwing(81),knows_common|knows_ironflesh_2|knows_power_strike_2|knows_power_throw_3|knows_athletics_3,nord_man_face_younger_3,nord_man_face_middle_4],
 #Tier 3
   ["nord_e_dreng","I3 Nord Dreng","I3 Nord Drenger",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_4,																					[itm_bo_nor_t3_boots,itm_ga_nor_a2_leather,itm_sh_nor_rou_small_a,itm_we_nor_sword_angle,itm_we_nor_sword_pict,itm_sh_nor_rou_small_c,itm_ar_nor_t3_furcoat_c,itm_ar_nor_t3_furcoat_d,itm_he_nor_t3_valsgarde_a,itm_he_nor_t3_valsgarde_b,itm_he_nor_t3_valsgarde_c],def_attrib|level(18),wp_one_handed(115)|wp_two_handed(65)|wp_polearm(85)|wp_archery(55)|wp_crossbow(40)|wp_throwing(105),knows_common|knows_ironflesh_5|knows_power_strike_2|knows_power_throw_4|knows_shield_3|knows_athletics_4,nord_man_face_young_1,nord_man_face_old_2],
-  ["nord_e_huntsman","A3 Nord Huntsman","A3 Nord Huntsmen",tf_guarantee_ranged|tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_4,																			[itm_bo_nor_t2_shoes,itm_ga_nor_a2_leather,itm_sh_nor_rou_small_a,itm_we_nor_bow_hunting,itm_we_nor_sword_pict,itm_we_nor_arrow_bodkin,itm_sh_nor_rou_small_c,itm_we_nor_sword_seax_long,itm_ar_nor_t2_vikinglamellar_c,itm_he_nor_t2_spangen_c,itm_he_nor_t2_spangen_d,itm_he_nor_t2_spangen_e],def_attrib|level(16),wp_one_handed(120)|wp_two_handed(100)|wp_polearm(55)|wp_archery(120)|wp_crossbow(40)|wp_throwing(45),knows_common|knows_ironflesh_4|knows_power_strike_2|knows_power_throw_2|knows_power_draw_2|knows_shield_2|knows_athletics_4,nord_man_face_young_1,nord_man_face_old_4],
+  ["nord_e_huntsman","A3 Nord Huntsman","A3 Nord Huntsmen",tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_4,																			[itm_bo_nor_t2_shoes,itm_ga_nor_a2_leather,itm_sh_nor_rou_small_a,itm_we_nor_bow_hunting,itm_we_nor_sword_pict,itm_we_nor_arrow_bodkin,itm_sh_nor_rou_small_c,itm_we_nor_sword_seax_long,itm_ar_nor_t2_vikinglamellar_c,itm_he_nor_t2_spangen_c,itm_he_nor_t2_spangen_d,itm_he_nor_t2_spangen_e],def_attrib|level(16),wp_one_handed(120)|wp_two_handed(100)|wp_polearm(55)|wp_archery(120)|wp_crossbow(40)|wp_throwing(45),knows_common|knows_ironflesh_4|knows_power_strike_2|knows_power_throw_2|knows_power_draw_2|knows_shield_2|knows_athletics_4,nord_man_face_young_1,nord_man_face_old_4],
   ["nord_e_gesith","A3 Nord Gesith","A3 Nord Gesiths",tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_4,																															[itm_bo_nor_t3_boots,itm_we_nor_axe_throw_hedmarkrox,itm_we_nor_sword_angle,itm_ar_nor_t2_vikinglamellar_e,itm_ar_nor_t2_vikinglamellar_a,itm_ar_nor_t2_vikinglamellar_b,itm_he_nor_t2_spangen_e,itm_he_nor_t2_spangen_a,itm_he_nor_t2_spangen_b],def_attrib|level(16),wp_one_handed(116)|wp_two_handed(71)|wp_polearm(61)|wp_archery(86)|wp_crossbow(40)|wp_throwing(106),knows_common|knows_ironflesh_3|knows_power_strike_2|knows_power_throw_4|knows_shield_2|knows_athletics_4,nord_man_face_young_2,nord_man_face_old_4],
   ["nord_e_trained_footman","I3 Nord Trained Footman","I3 Nord Trained Footmen",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_4,																									[itm_bo_nor_t3_boots,itm_ga_nor_a2_leather,itm_sh_nor_rou_small_b,itm_we_nor_axe_danox,itm_sh_nor_rou_small_d,itm_ar_nor_t3_furcoat_b,itm_ar_nor_t3_furcoat_e,itm_he_nor_t3_valsgarde_b,itm_he_nor_t3_valsgarde_c,itm_he_nor_t3_valsgarde_d],def_attrib|level(17),wp_one_handed(114)|wp_two_handed(93)|wp_polearm(84)|wp_archery(61)|wp_crossbow(40)|wp_throwing(103),knows_common|knows_ironflesh_4|knows_power_strike_2|knows_power_throw_4|knows_shield_3|knows_athletics_4,nord_man_face_young_3,nord_man_face_old_4],
 #Tier 4
