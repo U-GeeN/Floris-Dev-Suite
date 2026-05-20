@@ -611,106 +611,85 @@ presentations_part3 = [
         (position_set_y, pos1, 500),
         (overlay_set_size, reg0, pos1),
 
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 0, "trp_swadian_e_peasant", 60, 340), #Tier 1
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 1, "trp_swadian_e_militia", 210, 490), #Tier 2
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 2, "trp_swadian_e_peasant_archer", 210, 190),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 3, "trp_swadian_e_vougier", 360, 550), #Tier 3
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 4, "trp_swadian_e_page", 360, 430),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 5, "trp_swadian_e_sergeant_at_arms", 360, 310),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_swadian_e_archer_militia", 360, 70),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_swadian_e_piquier", 500, 590), #Tier 4
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_swadian_e_ecuyer", 500, 510),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_swadian_e_jacobite", 500, 350),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_swadian_e_guard", 500, 230),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_swadian_e_longbowman", 500, 110),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_swadian_e_tracker", 500, 30),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_swadian_e_chevalier", 640, 510), #Tier 5
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_swadian_e_hobilar", 640, 430),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_swadian_e_jock", 640, 350),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_swadian_e_man_at_arms", 640, 270),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_swadian_e_sheriff", 640, 190),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_swadian_e_selfbow_archer", 640, 110),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_swadian_e_skirmisher", 640, 30),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 20, "trp_swadian_e_chevalier_banneret", 790, 510), #Tier 6
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_swadian_e_highlander", 790, 350),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 22, "trp_swadian_e_lancer", 790, 270),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 23, "trp_swadian_e_yeoman_archer", 790, 110),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 24, "trp_swadian_e_baron_mineures", 940, 510), #Tier 7
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 25, "trp_swadian_e_retinue_longbowman", 940, 110),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 0, "trp_swadian_e_peasant", 60, 342), #Tier 1
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 1, "trp_swadian_e_militia", 200, 342), #Tier 2
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 2, "trp_swadian_e_peasant_archer", 200, 431),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 3, "trp_swadian_e_vougier", 340, 342), #Tier 3
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 4, "trp_swadian_e_page", 340, 164),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 5, "trp_swadian_e_archer_militia", 340, 431),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_swadian_e_ecuyer", 480, 164), #Tier 4
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_swadian_e_jacobite", 480, 342),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_swadian_e_longbowman", 480, 431),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_swadian_e_hobilar", 480, 253),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_swadian_e_chevalier", 620, 164), #Tier 5
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_swadian_e_jock", 620, 342),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_swadian_e_selfbow_archer", 620, 431),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_swadian_e_man_at_arms", 620, 253),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_swadian_e_chevalier_banneret", 760, 164), #Tier 6
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_swadian_e_highlander", 760, 342),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_swadian_e_yeoman_archer", 760, 431),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_swadian_e_lancer", 760, 253),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_swadian_e_baron_mineures", 900, 164), #Tier 7
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_swadian_e_retinue_longbowman", 900, 431),
 		
         ## cost
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_peasant", 115, 395), #Tier 1-2
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_militia", 265, 545), #Tier 2-3
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_peasant_archer", 265, 245),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_vougier", 415, 605), #Tier 3-4
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_page", 415, 485),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_sergeant_at_arms", 415, 365),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_archer_militia", 415, 125),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_ecuyer", 545, 565), #Tier 4-5
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_jacobite", 545, 405),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_guard", 545, 285),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_longbowman", 545, 165),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_tracker", 545, 85),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_chevalier", 695, 565), #Tier 5-6
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_jock", 695, 405),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_man_at_arms", 695, 325),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_selfbow_archer", 695, 165),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_chevalier_banneret", 845, 565), #Tier 6-7
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_yeoman_archer", 845, 165), 
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_peasant", 115, 397), #Tier 1-2
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_militia", 255, 397), #Tier 2-3
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_peasant_archer", 255, 486),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_vougier", 395, 397), #Tier 3-4
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_page", 395, 219),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_archer_militia", 395, 486),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_ecuyer", 535, 219), #Tier 4-5
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_jacobite", 535, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_longbowman", 535, 486),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_hobilar", 535, 308),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_chevalier", 675, 219), #Tier 5-6
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_jock", 675, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_selfbow_archer", 675, 486),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_man_at_arms", 675, 308),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_chevalier_banneret", 815, 219), #Tier 6-7
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_yeoman_archer", 815, 486), 
         ## cost
 
         ##### - lines
-        (call_script, "script_prsnt_lines", 55, 4, 85, 380), #Tier 1-2
-        (call_script, "script_prsnt_lines", 55, 4, 140, 530),
-        (call_script, "script_prsnt_lines", 55, 4, 140, 230),
-        (call_script, "script_prsnt_lines", 55, 4, 235, 530), #Tier 2-3
-        (call_script, "script_prsnt_lines", 55, 4, 290, 590),
-        (call_script, "script_prsnt_lines", 55, 4, 290, 470),
-        (call_script, "script_prsnt_lines", 55, 4, 235, 230),
-        (call_script, "script_prsnt_lines", 55, 4, 290, 350),
-        (call_script, "script_prsnt_lines", 55, 4, 290, 110),
-        (call_script, "script_prsnt_lines", 55, 4, 385, 590), #Tier 3-4
-        (call_script, "script_prsnt_lines", 50, 4, 440, 630),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 555),
-        (call_script, "script_prsnt_lines", 55, 4, 385, 470),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 545),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 395),
-        (call_script, "script_prsnt_lines", 55, 4, 385, 350),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 385),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 270),
-        (call_script, "script_prsnt_lines", 55, 4, 385, 110),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 150),
-        (call_script, "script_prsnt_lines", 50, 4, 440, 70),
-        (call_script, "script_prsnt_lines", 110, 4, 520, 550), #Tier 4-5
-        (call_script, "script_prsnt_lines", 55, 4, 575, 470),
-        (call_script, "script_prsnt_lines", 110, 4, 520, 390),
-        (call_script, "script_prsnt_lines", 55, 4, 520, 270),
-        (call_script, "script_prsnt_lines", 55, 4, 575, 310),
-        (call_script, "script_prsnt_lines", 55, 4, 575, 230),
-        (call_script, "script_prsnt_lines", 110, 4, 520, 150),
-        (call_script, "script_prsnt_lines", 110, 4, 520, 70),
-        (call_script, "script_prsnt_lines", 110, 4, 665, 550), #Tier 5-6
-        (call_script, "script_prsnt_lines", 110, 4, 665, 390),
-        (call_script, "script_prsnt_lines", 110, 4, 665, 310),
-        (call_script, "script_prsnt_lines", 110, 4, 665, 150),
-        (call_script, "script_prsnt_lines", 110, 4, 815, 550), #Tier 6-7
-        (call_script, "script_prsnt_lines", 110, 4, 815, 150),
+        (call_script, "script_prsnt_lines", 54, 4, 83, 382), # T1 exit
+        (call_script, "script_prsnt_lines", 54, 4, 137, 382), # T2 militia entry
+        (call_script, "script_prsnt_lines", 54, 4, 137, 471), # T2 peasant archer entry
+        (call_script, "script_prsnt_lines", 108, 4, 223, 382), # militia -> vougier
+        (call_script, "script_prsnt_lines", 108, 4, 223, 471), # peasant archer -> archer militia
+        (call_script, "script_prsnt_lines", 54, 4, 363, 382), # vougier exit
+        (call_script, "script_prsnt_lines", 54, 4, 417, 382), # jacobite entry
+        (call_script, "script_prsnt_lines", 54, 4, 417, 297), # hobilar entry from vougier
+        (call_script, "script_prsnt_lines", 54, 4, 363, 204), # page exit
+        (call_script, "script_prsnt_lines", 54, 4, 417, 204), # ecuyer entry
+        (call_script, "script_prsnt_lines", 54, 4, 417, 289), # hobilar entry from page
+        (call_script, "script_prsnt_lines", 108, 4, 363, 471), # archer militia -> longbowman
+        (call_script, "script_prsnt_lines", 108, 4, 503, 382), # jacobite -> jock
+        (call_script, "script_prsnt_lines", 108, 4, 503, 471), # longbowman -> selfbow archer
+        (call_script, "script_prsnt_lines", 108, 4, 503, 293), # hobilar -> man_at_arms
+        (call_script, "script_prsnt_lines", 54, 4, 503, 204), # ecuyer exit
+        (call_script, "script_prsnt_lines", 54, 4, 557, 204), # chevalier entry
+        (call_script, "script_prsnt_lines", 54, 4, 557, 285), # man-at-arms entry from ecuyer
+        (call_script, "script_prsnt_lines", 108, 4, 643, 382), # jock -> highlander
+        (call_script, "script_prsnt_lines", 108, 4, 643, 471), # selfbow archer -> yeoman archer
+        (call_script, "script_prsnt_lines", 108, 4, 643, 293), # man-at-arms -> lancer
+        (call_script, "script_prsnt_lines", 54, 4, 643, 204), # chevalier exit
+        (call_script, "script_prsnt_lines", 54, 4, 697, 204), # chevalier banneret entry
+        (call_script, "script_prsnt_lines", 54, 4, 697, 285), # lancer entry from chevalier
+        (call_script, "script_prsnt_lines", 108, 4, 783, 471), # yeoman archer -> retinue longbowman
+        (call_script, "script_prsnt_lines", 108, 4, 783, 204), # chevalier banneret -> baron mineures
         ##### - lines
 
         ##### | lines
-        (call_script, "script_prsnt_lines", 4, 300, 140, 230), #Tier 1-2
-        (call_script, "script_prsnt_lines", 4, 120, 290, 470), #Tier 2-3
-        (call_script, "script_prsnt_lines", 4, 240, 290, 110), 
-        (call_script, "script_prsnt_lines", 4, 75, 440, 555), #Tier 3-4
-        (call_script, "script_prsnt_lines", 4, 150, 440, 395),
-        (call_script, "script_prsnt_lines", 4, 115, 440, 270),
-        (call_script, "script_prsnt_lines", 4, 80, 440, 70),
-        (call_script, "script_prsnt_lines", 4, 80, 575, 390), #Tier 4-5
-        (call_script, "script_prsnt_lines", 4, 80, 575, 230),
+        (call_script, "script_prsnt_lines", 4, 89, 137, 382), # T1 -> T2 split
+        (call_script, "script_prsnt_lines", 4, 85, 417, 297), # vougier -> hobilar/jacobite split
+        (call_script, "script_prsnt_lines", 4, 85, 417, 204), # page -> hobilar/ecuyer split
+        (call_script, "script_prsnt_lines", 4, 85, 557, 204), # ecuyer -> chevalier/man-at-arms split
+        (call_script, "script_prsnt_lines", 4, 85, 697, 204), # chevalier -> chevalier banneret/lancer split
         ##### | lines
 
         ####### mouse fix pos system #######
-        #(call_script, "script_mouse_fix_pos_ready"),
+        (call_script, "script_mouse_fix_pos_ready"),
         ####### mouse fix pos system #######
       ]),
 
@@ -727,7 +706,7 @@ presentations_part3 = [
         (store_trigger_param_2, ":value"),
         (call_script, "script_prsnt_upgrade_tree_switch", ":object", ":value"),
 
-        (try_for_range, ":slot_no", 0, 26),
+        (try_for_range, ":slot_no", 0, 20),
           (troop_slot_eq, "trp_temp_array_a", ":slot_no", ":object"),
           (troop_get_slot, "$temp", "trp_temp_array_b", ":slot_no"),
           (assign, "$g_presentation_next_presentation", "prsnt_upgrade_tree_21"),
