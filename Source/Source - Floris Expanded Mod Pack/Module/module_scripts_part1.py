@@ -50,7 +50,7 @@ scripts_part1 = [
 #	   #Floris: I used the tier 6 troops that don't upgrade to tier 7.
 		  		## Floris: Multiple troop trees
 		  		# Native
-      (troop_set_slot,"trp_swadian_n_hero1", slot_troop_occupation, "trp_swadian_n_jock"),
+      (troop_set_slot,"trp_swadian_n_hero1", slot_troop_occupation, "trp_swadian_n_infantry"),
       (troop_set_slot,"trp_swadian_n_hero2", slot_troop_occupation, "trp_swadian_n_selfbow_archer"),
       (troop_set_slot,"trp_vaegir_n_hero1", slot_troop_occupation, "trp_vaegir_n_pansirniy_kazan"),
       (troop_set_slot,"trp_vaegir_n_hero2", slot_troop_occupation, "trp_vaegir_n_druzhinnik_veteran"),
@@ -61,7 +61,7 @@ scripts_part1 = [
       (troop_set_slot,"trp_sarranid_n_hero1", slot_troop_occupation, "trp_sarranid_n_kapikula"),
       (troop_set_slot,"trp_sarranid_n_hero2", slot_troop_occupation, "trp_sarranid_n_uluteci"),
 		  		# Reworked
-      (troop_set_slot,"trp_swadian_r_hero1", slot_troop_occupation, "trp_swadian_r_jock"),
+      (troop_set_slot,"trp_swadian_r_hero1", slot_troop_occupation, "trp_swadian_r_infantry"),
       (troop_set_slot,"trp_swadian_r_hero2", slot_troop_occupation, "trp_swadian_r_selfbow_archer"),
       (troop_set_slot,"trp_vaegir_r_hero1", slot_troop_occupation, "trp_vaegir_r_ataman"),
       (troop_set_slot,"trp_vaegir_r_hero2", slot_troop_occupation, "trp_vaegir_r_druzhinnik_veteran"),
@@ -74,7 +74,7 @@ scripts_part1 = [
       (troop_set_slot,"trp_sarranid_r_hero1", slot_troop_occupation, "trp_sarranid_r_kapikula"),
       (troop_set_slot,"trp_sarranid_r_hero2", slot_troop_occupation, "trp_sarranid_r_uluteci"),
 		  		# Expanded
-      (troop_set_slot,"trp_swadian_e_hero1", slot_troop_occupation, "trp_swadian_e_highlander"),
+      (troop_set_slot,"trp_swadian_e_hero1", slot_troop_occupation, "trp_swadian_e_sergeant"),
       (troop_set_slot,"trp_swadian_e_hero2", slot_troop_occupation, "trp_swadian_e_lancer"),
       (troop_set_slot,"trp_vaegir_e_hero1", slot_troop_occupation, "trp_vaegir_e_legkoy_vityas"),
       (troop_set_slot,"trp_vaegir_e_hero2", slot_troop_occupation, "trp_vaegir_e_voevoda"),
@@ -1499,23 +1499,23 @@ scripts_part1 = [
 	#Tier 4
 	(troop_set_slot, troop_trees_0, slot_swadian_piquier, "trp_swadian_n_ecuyer"),
 	(troop_set_slot, troop_trees_0, slot_swadian_ecuyer, "trp_swadian_n_ecuyer"),
-	(troop_set_slot, troop_trees_0, slot_swadian_jacobite, "trp_swadian_n_jacobite"),
-	(troop_set_slot, troop_trees_0, slot_swadian_guard, "trp_swadian_n_jacobite"),
-	(troop_set_slot, troop_trees_0, slot_swadian_longbowman, "trp_swadian_n_longbowman"),
-	(troop_set_slot, troop_trees_0, slot_swadian_tracker, "trp_swadian_n_longbowman"),
+	(troop_set_slot, troop_trees_0, slot_swadian_foot_soldier, "trp_swadian_n_foot_soldier"),
+	(troop_set_slot, troop_trees_0, slot_swadian_guard, "trp_swadian_n_foot_soldier"),
+	(troop_set_slot, troop_trees_0, slot_swadian_longbowman, "trp_swadian_n_trained_archer"),
+	(troop_set_slot, troop_trees_0, slot_swadian_tracker, "trp_swadian_n_trained_archer"),
 	#Tier 5
 	(troop_set_slot, troop_trees_0, slot_swadian_chevalier, "trp_swadian_n_chevalier"),
 	(troop_set_slot, troop_trees_0, slot_swadian_hobilar, "trp_swadian_n_chevalier"),
-	(troop_set_slot, troop_trees_0, slot_swadian_jock, "trp_swadian_n_jock"),
-	(troop_set_slot, troop_trees_0, slot_swadian_man_at_arms, "trp_swadian_n_jock"),
-	(troop_set_slot, troop_trees_0, slot_swadian_sheriff, "trp_swadian_n_jock"),
+	(troop_set_slot, troop_trees_0, slot_swadian_infantry, "trp_swadian_n_infantry"),
+	(troop_set_slot, troop_trees_0, slot_swadian_man_at_arms, "trp_swadian_n_infantry"),
+	(troop_set_slot, troop_trees_0, slot_swadian_sheriff, "trp_swadian_n_infantry"),
 	(troop_set_slot, troop_trees_0, slot_swadian_selfbow_archer, "trp_swadian_n_selfbow_archer"),
 	(troop_set_slot, troop_trees_0, slot_swadian_skirmisher, "trp_swadian_n_selfbow_archer"),
 	#Tier 6
 	(troop_set_slot, troop_trees_0, slot_swadian_chevalier_banneret, "trp_swadian_n_chevalier"),
-	(troop_set_slot, troop_trees_0, slot_swadian_highlander, "trp_swadian_n_jock"),
+	(troop_set_slot, troop_trees_0, slot_swadian_sergeant, "trp_swadian_n_infantry"),
 	(troop_set_slot, troop_trees_0, slot_swadian_lancer, "trp_swadian_n_chevalier"),
-	(troop_set_slot, troop_trees_0, slot_swadian_yeoman_archer, "trp_swadian_n_selfbow_archer"),
+	(troop_set_slot, troop_trees_0, slot_swadian_longbowman, "trp_swadian_n_selfbow_archer"),
 	#Tier 7
 	(troop_set_slot, troop_trees_0, slot_swadian_baron_mineures, "trp_swadian_n_chevalier"),
 	(troop_set_slot, troop_trees_0, slot_swadian_retinue_longbowman, "trp_swadian_n_selfbow_archer"),
@@ -1539,23 +1539,23 @@ scripts_part1 = [
 	#Tier 4
 	(troop_set_slot, troop_trees_1, slot_swadian_piquier, "trp_swadian_r_piquier"),
 	(troop_set_slot, troop_trees_1, slot_swadian_ecuyer, "trp_swadian_r_ecuyer"),
-	(troop_set_slot, troop_trees_1, slot_swadian_jacobite, "trp_swadian_r_jacobite"),
+	(troop_set_slot, troop_trees_1, slot_swadian_foot_soldier, "trp_swadian_r_foot_soldier"),
 	(troop_set_slot, troop_trees_1, slot_swadian_guard, "trp_swadian_r_hobilar"),
-	(troop_set_slot, troop_trees_1, slot_swadian_longbowman, "trp_swadian_r_longbowman"),
-	(troop_set_slot, troop_trees_1, slot_swadian_tracker, "trp_swadian_r_longbowman"),
+	(troop_set_slot, troop_trees_1, slot_swadian_longbowman, "trp_swadian_r_trained_archer"),
+	(troop_set_slot, troop_trees_1, slot_swadian_tracker, "trp_swadian_r_trained_archer"),
 	#Tier 5
 	(troop_set_slot, troop_trees_1, slot_swadian_chevalier, "trp_swadian_r_chevalier"),
 	(troop_set_slot, troop_trees_1, slot_swadian_hobilar, "trp_swadian_r_chevalier"),
-	(troop_set_slot, troop_trees_1, slot_swadian_jock, "trp_swadian_r_jock"),
-	(troop_set_slot, troop_trees_1, slot_swadian_man_at_arms, "trp_swadian_r_jock"),
-	(troop_set_slot, troop_trees_1, slot_swadian_sheriff, "trp_swadian_r_jock"),
+	(troop_set_slot, troop_trees_1, slot_swadian_infantry, "trp_swadian_r_infantry"),
+	(troop_set_slot, troop_trees_1, slot_swadian_man_at_arms, "trp_swadian_r_infantry"),
+	(troop_set_slot, troop_trees_1, slot_swadian_sheriff, "trp_swadian_r_infantry"),
 	(troop_set_slot, troop_trees_1, slot_swadian_selfbow_archer, "trp_swadian_r_selfbow_archer"),
 	(troop_set_slot, troop_trees_1, slot_swadian_skirmisher, "trp_swadian_r_selfbow_archer"),
 	#Tier 6
 	(troop_set_slot, troop_trees_1, slot_swadian_chevalier_banneret, "trp_swadian_r_chevalier_banneret"),
-	(troop_set_slot, troop_trees_1, slot_swadian_highlander, "trp_swadian_r_jock"),
+	(troop_set_slot, troop_trees_1, slot_swadian_sergeant, "trp_swadian_r_infantry"),
 	(troop_set_slot, troop_trees_1, slot_swadian_lancer, "trp_swadian_r_chevalier_banneret"),
-	(troop_set_slot, troop_trees_1, slot_swadian_yeoman_archer, "trp_swadian_r_selfbow_archer"),
+	(troop_set_slot, troop_trees_1, slot_swadian_longbowman, "trp_swadian_r_selfbow_archer"),
 	#Tier 7
 	(troop_set_slot, troop_trees_1, slot_swadian_baron_mineures, "trp_swadian_r_chevalier_banneret"),
 	(troop_set_slot, troop_trees_1, slot_swadian_retinue_longbowman, "trp_swadian_r_selfbow_archer"),
@@ -1579,23 +1579,23 @@ scripts_part1 = [
 	#Tier 4
 	(troop_set_slot, troop_trees_2, slot_swadian_piquier, "trp_swadian_e_piquier"),
 	(troop_set_slot, troop_trees_2, slot_swadian_ecuyer, "trp_swadian_e_ecuyer"),
-	(troop_set_slot, troop_trees_2, slot_swadian_jacobite, "trp_swadian_e_jacobite"),
+	(troop_set_slot, troop_trees_2, slot_swadian_foot_soldier, "trp_swadian_e_foot_soldier"),
 	(troop_set_slot, troop_trees_2, slot_swadian_guard, "trp_swadian_e_guard"),
-	(troop_set_slot, troop_trees_2, slot_swadian_longbowman, "trp_swadian_e_longbowman"),
+	(troop_set_slot, troop_trees_2, slot_swadian_longbowman, "trp_swadian_e_trained_archer"),
 	(troop_set_slot, troop_trees_2, slot_swadian_tracker, "trp_swadian_e_tracker"),
 	#Tier 5
 	(troop_set_slot, troop_trees_2, slot_swadian_chevalier, "trp_swadian_e_chevalier"),
 	(troop_set_slot, troop_trees_2, slot_swadian_hobilar, "trp_swadian_e_hobilar"),
-	(troop_set_slot, troop_trees_2, slot_swadian_jock, "trp_swadian_e_jock"),
+	(troop_set_slot, troop_trees_2, slot_swadian_infantry, "trp_swadian_e_infantry"),
 	(troop_set_slot, troop_trees_2, slot_swadian_man_at_arms, "trp_swadian_e_man_at_arms"),
 	(troop_set_slot, troop_trees_2, slot_swadian_sheriff, "trp_swadian_e_sheriff"),
 	(troop_set_slot, troop_trees_2, slot_swadian_selfbow_archer, "trp_swadian_e_selfbow_archer"),
 	(troop_set_slot, troop_trees_2, slot_swadian_skirmisher, "trp_swadian_e_skirmisher"),
 	#Tier 6
 	(troop_set_slot, troop_trees_2, slot_swadian_chevalier_banneret, "trp_swadian_e_chevalier_banneret"),
-	(troop_set_slot, troop_trees_2, slot_swadian_highlander, "trp_swadian_e_highlander"),
+	(troop_set_slot, troop_trees_2, slot_swadian_sergeant, "trp_swadian_e_sergeant"),
 	(troop_set_slot, troop_trees_2, slot_swadian_lancer, "trp_swadian_e_lancer"),
-	(troop_set_slot, troop_trees_2, slot_swadian_yeoman_archer, "trp_swadian_e_yeoman_archer"),
+	(troop_set_slot, troop_trees_2, slot_swadian_longbowman, "trp_swadian_e_longbowman"),
 	#Tier 7
 	(troop_set_slot, troop_trees_2, slot_swadian_baron_mineures, "trp_swadian_e_baron_mineures"),
 	(troop_set_slot, troop_trees_2, slot_swadian_retinue_longbowman, "trp_swadian_e_retinue_longbowman"),
@@ -2703,7 +2703,7 @@ scripts_part1 = [
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_1"),
           
           (faction_set_slot, ":faction_no",  slot_faction_deserter_troop, "trp_swadian_deserter"),
-          (faction_set_slot, ":faction_no",  slot_faction_guard_troop, "trp_swadian_n_jacobite"),
+          (faction_set_slot, ":faction_no",  slot_faction_guard_troop, "trp_swadian_n_foot_soldier"),
           (faction_set_slot, ":faction_no",  slot_faction_messenger_troop, "trp_swadian_messenger"),
           (faction_set_slot, ":faction_no",  slot_faction_prison_guard_troop, "trp_swadian_prison_guard"),
           (faction_set_slot, ":faction_no",  slot_faction_castle_guard_troop, "trp_swadian_castle_guard"),
@@ -3134,7 +3134,7 @@ scripts_part1 = [
 		  (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_1_cavalry, "trp_bandit_e_steppe"),
 		  (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_2_cavalry, "trp_bandit_e_desert"),
 		  (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_infantry, "trp_swadian_e_vougier"),
-		  (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_swadian_e_jock"),
+		  (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_swadian_e_infantry"),
 		  (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_archer, "trp_swadian_e_archer_militia"),
 		  (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_archer, "trp_swadian_e_sheriff"),
 		  (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_swadian_e_man_at_arms"),
@@ -3618,7 +3618,7 @@ scripts_part1 = [
 
 
       #1-Swadian Warriors
-      #1a-Swadian Longbowman
+      #1a-Swadian Trained Archer
 		#Blunt
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_we_swa_blunt_club", "trp_swadian_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_we_swa_blunt_morningstar", "trp_swadian_crossbowman_multiplayer"),

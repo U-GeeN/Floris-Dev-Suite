@@ -323,8 +323,8 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_mercenary_r_reichslandser", 500, 510),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_rhodok_r_lanciere", 210, 430), #Bandit evolutions
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_rhodok_r_recluta_balestriere", 210, 350),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_swadian_r_longbowman", 210, 270),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_swadian_r_jacobite", 210, 190),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_swadian_r_trained_archer", 210, 270),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_swadian_r_foot_soldier", 210, 190),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_nord_r_vigamadr", 500, 430),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_nord_r_vikingr", 500, 350),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_khergit_r_kipchak", 500, 270),
@@ -618,16 +618,16 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 4, "trp_swadian_e_page", 340, 164),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 5, "trp_swadian_e_archer_militia", 340, 431),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_swadian_e_ecuyer", 480, 164), #Tier 4
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_swadian_e_jacobite", 480, 342),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_swadian_e_longbowman", 480, 431),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_swadian_e_foot_soldier", 480, 342),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_swadian_e_trained_archer", 480, 431),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_swadian_e_hobilar", 480, 253),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_swadian_e_chevalier", 620, 164), #Tier 5
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_swadian_e_jock", 620, 342),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_swadian_e_infantry", 620, 342),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_swadian_e_selfbow_archer", 620, 431),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_swadian_e_man_at_arms", 620, 253),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_swadian_e_chevalier_banneret", 760, 164), #Tier 6
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_swadian_e_highlander", 760, 342),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_swadian_e_yeoman_archer", 760, 431),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_swadian_e_sergeant", 760, 342),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_swadian_e_longbowman", 760, 431),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_swadian_e_lancer", 760, 253),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_swadian_e_baron_mineures", 900, 164), #Tier 7
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_swadian_e_retinue_longbowman", 900, 431),
@@ -640,15 +640,15 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_page", 395, 219),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_archer_militia", 395, 486),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_ecuyer", 535, 219), #Tier 4-5
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_jacobite", 535, 397),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_longbowman", 535, 486),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_foot_soldier", 535, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_trained_archer", 535, 486),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_hobilar", 535, 308),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_chevalier", 675, 219), #Tier 5-6
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_jock", 675, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_infantry", 675, 397),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_selfbow_archer", 675, 486),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_man_at_arms", 675, 308),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_chevalier_banneret", 815, 219), #Tier 6-7
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_yeoman_archer", 815, 486), 
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_longbowman", 815, 486), 
         ## cost
 
         ##### - lines
@@ -1503,8 +1503,8 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_mercenary_e_reichslandser", 500, 510),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_rhodok_e_milizia", 210, 430), #Bandit evolutions
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_rhodok_e_recluta_balestriere", 210, 350),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_swadian_e_longbowman", 210, 270),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_swadian_e_jacobite", 210, 190),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_swadian_e_trained_archer", 210, 270),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_swadian_e_foot_soldier", 210, 190),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_nord_e_warrior", 500, 430),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_nord_e_axeman", 500, 350),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_khergit_e_kipchak", 500, 270),

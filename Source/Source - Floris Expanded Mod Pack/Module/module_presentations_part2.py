@@ -6734,10 +6734,10 @@ presentations_part2 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 2, "trp_swadian_n_page", 360, 420), #Tier 3
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 3, "trp_swadian_n_archer_militia", 360, 300),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 4, "trp_swadian_n_ecuyer", 500, 460), #Tier 4
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 5, "trp_swadian_n_jacobite", 500, 380),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_swadian_n_longbowman", 500, 300),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 5, "trp_swadian_n_foot_soldier", 500, 380),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_swadian_n_trained_archer", 500, 300),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_swadian_n_chevalier", 640, 460), #Tier 5
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_swadian_n_jock", 640, 380),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_swadian_n_infantry", 640, 380),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_swadian_n_selfbow_archer", 640, 300),
 		
         ## cost
@@ -6746,8 +6746,8 @@ presentations_part2 = [
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_n_page", 415, 475), #Tier 3-4
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_n_archer_militia", 415, 355),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_n_ecuyer", 545, 515), #Tier 4-5
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_n_jacobite", 545, 435),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_n_longbowman", 545, 355),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_n_foot_soldier", 545, 435),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_n_trained_archer", 545, 355),
         ## cost
 
         ##### - lines
@@ -7461,10 +7461,10 @@ presentations_part2 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_swadian_r_hobilar", 500, 510), #Tier 4
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_swadian_r_ecuyer", 500, 430),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_swadian_r_piquier", 500, 350),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_swadian_r_jacobite", 500, 270),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_swadian_r_longbowman", 500, 190),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_swadian_r_foot_soldier", 500, 270),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_swadian_r_trained_archer", 500, 190),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_swadian_r_chevalier", 640, 430), #Tier 5
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_swadian_r_jock", 640, 270),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_swadian_r_infantry", 640, 270),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_swadian_r_selfbow_archer", 640, 190),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_swadian_r_chevalier_banneret", 790, 430), #Tier 6
 		
@@ -7476,8 +7476,8 @@ presentations_part2 = [
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_r_sergeant_at_arms", 415, 365),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_r_archer_militia", 415, 245),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_r_ecuyer", 545, 485), #Tier 4-5
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_r_jacobite", 545, 325),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_r_longbowman", 545, 245),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_r_foot_soldier", 545, 325),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_r_trained_archer", 545, 245),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_r_chevalier", 695, 485), #Tier 5-6
         ## cost
 

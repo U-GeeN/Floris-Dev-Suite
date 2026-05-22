@@ -635,12 +635,12 @@ upgrade(troops,"swadian_n_extra5","swadian_n_militia")
 #Tier 2-3
 upgrade2(troops,"swadian_n_militia","swadian_n_page","swadian_n_archer_militia")
 #Tier 3-4
-upgrade2(troops,"swadian_n_page","swadian_n_ecuyer","swadian_n_jacobite")
-upgrade(troops,"swadian_n_archer_militia","swadian_n_longbowman")
+upgrade2(troops,"swadian_n_page","swadian_n_ecuyer","swadian_n_foot_soldier")
+upgrade(troops,"swadian_n_archer_militia","swadian_n_trained_archer")
 #Tier 4-5
 upgrade(troops,"swadian_n_ecuyer","swadian_n_chevalier")
-upgrade(troops,"swadian_n_jacobite","swadian_n_jock")
-upgrade(troops,"swadian_n_longbowman","swadian_n_selfbow_archer")
+upgrade(troops,"swadian_n_foot_soldier","swadian_n_infantry")
+upgrade(troops,"swadian_n_trained_archer","swadian_n_selfbow_archer")
 ##Reworked troop tree
 #Tier 1-2
 upgrade2(troops,"swadian_r_peasant","swadian_r_militia","swadian_r_peasant_archer")
@@ -654,12 +654,12 @@ upgrade(troops,"swadian_r_militia","swadian_r_page")
 upgrade2(troops,"swadian_r_peasant_archer","swadian_r_sergeant_at_arms","swadian_r_archer_militia")
 #Tier 3-4
 upgrade2(troops,"swadian_r_page","swadian_r_hobilar","swadian_r_ecuyer")
-upgrade2(troops,"swadian_r_sergeant_at_arms","swadian_r_piquier","swadian_r_jacobite")
-upgrade(troops,"swadian_r_archer_militia","swadian_r_longbowman")
+upgrade2(troops,"swadian_r_sergeant_at_arms","swadian_r_piquier","swadian_r_foot_soldier")
+upgrade(troops,"swadian_r_archer_militia","swadian_r_trained_archer")
 #Tier 4-5
 upgrade(troops,"swadian_r_ecuyer","swadian_r_chevalier")
-upgrade(troops,"swadian_r_jacobite","swadian_r_jock")
-upgrade(troops,"swadian_r_longbowman","swadian_r_selfbow_archer")
+upgrade(troops,"swadian_r_foot_soldier","swadian_r_infantry")
+upgrade(troops,"swadian_r_trained_archer","swadian_r_selfbow_archer")
 #Tier 5-6
 upgrade(troops,"swadian_r_chevalier","swadian_r_chevalier_banneret")
 ##Expanded troop tree
@@ -674,22 +674,22 @@ upgrade2(troops,"swadian_e_extra5","swadian_e_militia","swadian_e_peasant_archer
 upgrade(troops,"swadian_e_militia","swadian_e_vougier")
 upgrade(troops,"swadian_e_peasant_archer","swadian_e_archer_militia")
 #Tier 3-4
-upgrade2(troops,"swadian_e_vougier","swadian_e_jacobite","swadian_e_hobilar")
+upgrade2(troops,"swadian_e_vougier","swadian_e_foot_soldier","swadian_e_hobilar")
 upgrade2(troops,"swadian_e_page","swadian_e_ecuyer","swadian_e_hobilar")
-upgrade(troops,"swadian_e_archer_militia","swadian_e_longbowman")
+upgrade(troops,"swadian_e_archer_militia","swadian_e_trained_archer")
 #Tier 4-5
 upgrade2(troops,"swadian_e_ecuyer","swadian_e_chevalier","swadian_e_man_at_arms")
-upgrade(troops,"swadian_e_jacobite","swadian_e_jock")
+upgrade(troops,"swadian_e_foot_soldier","swadian_e_infantry")
 upgrade(troops,"swadian_e_hobilar","swadian_e_man_at_arms")
-upgrade(troops,"swadian_e_longbowman","swadian_e_selfbow_archer")
+upgrade(troops,"swadian_e_trained_archer","swadian_e_selfbow_archer")
 #Tier 5-6
 upgrade2(troops,"swadian_e_chevalier","swadian_e_chevalier_banneret","swadian_e_lancer")
-upgrade(troops,"swadian_e_jock","swadian_e_highlander")
+upgrade(troops,"swadian_e_infantry","swadian_e_sergeant")
 upgrade(troops,"swadian_e_man_at_arms","swadian_e_lancer")
-upgrade(troops,"swadian_e_selfbow_archer","swadian_e_yeoman_archer")
+upgrade(troops,"swadian_e_selfbow_archer","swadian_e_longbowman")
 #Tier 6-7
 upgrade(troops,"swadian_e_chevalier_banneret","swadian_e_baron_mineures")
-upgrade(troops,"swadian_e_yeoman_archer","swadian_e_retinue_longbowman")
+upgrade(troops,"swadian_e_longbowman","swadian_e_retinue_longbowman")
 ##
 
 ###Vaegir
@@ -1072,7 +1072,7 @@ upgrade2(troops,"bandit_r_bandit","bandit_r_brigand","mercenary_r_halberdier")
 upgrade2(troops,"bandit_r_brigand","mercenary_r_ritter","mercenary_r_reichslandser")
 #Normal Bandits
 upgrade2(troops,"bandit_r_mountain","rhodok_r_lanciere","rhodok_r_recluta_balestriere")
-upgrade2(troops,"bandit_r_forest","swadian_r_longbowman","swadian_r_jacobite")
+upgrade2(troops,"bandit_r_forest","swadian_r_trained_archer","swadian_r_foot_soldier")
 upgrade2(troops,"bandit_r_sea_raider","nord_r_vigamadr","nord_r_vikingr")
 upgrade2(troops,"bandit_r_steppe","khergit_r_kipchak","khergit_r_qubuci")
 upgrade2(troops,"bandit_r_taiga","vaegir_r_yesaul","vaegir_r_zalstrelshik")
@@ -1089,7 +1089,7 @@ upgrade2(troops,"bandit_e_bandit","bandit_e_brigand","mercenary_e_halberdier")
 upgrade2(troops,"bandit_e_brigand","mercenary_e_ritter","mercenary_e_reichslandser")
 #Normal Bandits
 upgrade2(troops,"bandit_e_mountain","rhodok_e_milizia","rhodok_e_recluta_balestriere")
-upgrade2(troops,"bandit_e_forest","swadian_e_longbowman","swadian_e_jacobite")
+upgrade2(troops,"bandit_e_forest","swadian_e_trained_archer","swadian_e_foot_soldier")
 upgrade2(troops,"bandit_e_sea_raider","nord_e_warrior","nord_e_axeman")
 upgrade2(troops,"bandit_e_steppe","khergit_e_kipchak","khergit_e_qubuci")
 upgrade2(troops,"bandit_e_taiga","vaegir_e_yesaul","vaegir_e_zalstrelshik")
