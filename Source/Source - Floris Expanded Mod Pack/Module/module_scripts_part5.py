@@ -3779,6 +3779,11 @@ scripts_part5 = [
                         
                         ("prsnt_upgrade_tree_ready",
                           [
+                            (try_for_range, ":slot_no", 0, 106),
+                              (troop_set_slot, "trp_temp_array_a", ":slot_no", -1),
+                              (troop_set_slot, "trp_temp_array_b", ":slot_no", -1),
+                            (try_end),
+                            
                             ## next presentation
                             (assign, "$g_presentation_next_presentation", -1),
                             

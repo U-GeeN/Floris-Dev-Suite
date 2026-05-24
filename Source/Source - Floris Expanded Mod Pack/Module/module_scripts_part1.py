@@ -76,7 +76,7 @@ scripts_part1 = [
 		  		# Expanded
       (troop_set_slot,"trp_swadian_e_hero1", slot_troop_occupation, "trp_swadian_e_sergeant"),
       (troop_set_slot,"trp_swadian_e_hero2", slot_troop_occupation, "trp_swadian_e_lancer"),
-      (troop_set_slot,"trp_vaegir_e_hero1", slot_troop_occupation, "trp_vaegir_e_legkoy_vityas"),
+      (troop_set_slot,"trp_vaegir_e_hero1", slot_troop_occupation, "trp_vaegir_e_vityas"),
       (troop_set_slot,"trp_vaegir_e_hero2", slot_troop_occupation, "trp_vaegir_e_voevoda"),
       (troop_set_slot,"trp_vaegir_e_hero3", slot_troop_occupation, "trp_vaegir_e_elitniy_druzhinnik"),
       (troop_set_slot,"trp_khergit_e_hero1", slot_troop_occupation, "trp_khergit_e_keshig"),
@@ -269,8 +269,8 @@ scripts_part1 = [
 		  (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_vaegir_e_otrok"),
 		  (faction_set_slot, "fac_culture_2", slot_faction_tier_3_troop, "trp_vaegir_e_kazak"),
 		  (faction_set_slot, "fac_culture_2", slot_faction_tier_4_troop, "trp_vaegir_e_yesaul"),
-		  (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_vaegir_e_ataman"),
-		  (faction_set_slot, "fac_culture_2", slot_faction_tier_6_troop, "trp_vaegir_e_legkoy_vityas"),
+		  (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_vaegir_e_pansirniy_kazan"),
+		  (faction_set_slot, "fac_culture_2", slot_faction_tier_6_troop, "trp_vaegir_e_vityas"),
 		  (faction_set_slot, "fac_culture_2", slot_faction_tier_7_troop, "trp_vaegir_e_bogatyr"),
 		  
 		  (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_khergit_e_tariachin"),
@@ -1691,7 +1691,7 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_vaegir_kholop, "trp_vaegir_e_kholop"),
 	#Tier 2
 	(troop_set_slot, troop_trees_2, slot_vaegir_otrok, "trp_vaegir_e_otrok"),
-	(troop_set_slot, troop_trees_2, slot_vaegir_pasynok, "trp_vaegir_e_pasynok"),
+#	(troop_set_slot, troop_trees_2, slot_vaegir_pasynok, "trp_vaegir_e_pasynok"),
 	#Tier 3
 	(troop_set_slot, troop_trees_2, slot_vaegir_kazak, "trp_vaegir_e_kazak"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_kmet, "trp_vaegir_e_kmet"),
@@ -1702,17 +1702,17 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_vaegir_ratnik, "trp_vaegir_e_ratnik"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_zalstrelshik, "trp_vaegir_e_zalstrelshik"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_mladshiy_druzhinnik, "trp_vaegir_e_mladshiy_druzhinnik"),
-	(troop_set_slot, troop_trees_2, slot_vaegir_poztoma_druzhinaik, "trp_vaegir_e_poztoma_druzhinaik"),
+	#(troop_set_slot, troop_trees_2, slot_vaegir_poztoma_druzhinaik, "trp_vaegir_e_poztoma_druzhinaik"),
 	#Tier 5
-	(troop_set_slot, troop_trees_2, slot_vaegir_ataman, "trp_vaegir_e_ataman"),
+#	(troop_set_slot, troop_trees_2, slot_vaegir_ataman, "trp_vaegir_e_ataman"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_pansirniy_kazan, "trp_vaegir_e_pansirniy_kazan"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_posadnik, "trp_vaegir_e_posadnik"),
-	(troop_set_slot, troop_trees_2, slot_vaegir_golova, "trp_vaegir_e_golova"),
+#	(troop_set_slot, troop_trees_2, slot_vaegir_golova, "trp_vaegir_e_golova"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_luchnik, "trp_vaegir_e_luchnik"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_druzhinnik, "trp_vaegir_e_druzhinnik"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_druzhinnik_veteran, "trp_vaegir_e_druzhinnik_veteran"),
 	#Tier 6
-	(troop_set_slot, troop_trees_2, slot_vaegir_legkoy_vityas, "trp_vaegir_e_legkoy_vityas"),
+#	(troop_set_slot, troop_trees_2, slot_vaegir_legkoy_vityas, "trp_vaegir_e_legkoy_vityas"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_vityas, "trp_vaegir_e_vityas"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_voevoda, "trp_vaegir_e_voevoda"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_metkiy_luchnik, "trp_vaegir_e_metkiy_luchnik"),

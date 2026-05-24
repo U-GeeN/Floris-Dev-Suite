@@ -733,35 +733,30 @@ upgrade(troops,"vaegir_r_mladshiy_druzhinnik","vaegir_r_druzhinnik_veteran")
 upgrade(troops,"vaegir_r_luchnik","vaegir_r_metkiy_luchnik")
 ##Expanded troop tree
 #Tier 1-2
-upgrade2(troops,"vaegir_e_kholop","vaegir_e_otrok","vaegir_e_pasynok")
-upgrade2(troops,"vaegir_e_extra1","vaegir_e_otrok","vaegir_e_pasynok")
-upgrade2(troops,"vaegir_e_extra2","vaegir_e_otrok","vaegir_e_pasynok")
-upgrade2(troops,"vaegir_e_extra3","vaegir_e_otrok","vaegir_e_pasynok")
-upgrade2(troops,"vaegir_e_extra4","vaegir_e_otrok","vaegir_e_pasynok")
-upgrade2(troops,"vaegir_e_extra5","vaegir_e_otrok","vaegir_e_pasynok")
+upgrade(troops,"vaegir_e_kholop","vaegir_e_otrok")
 #Tier 2-3
-upgrade2(troops,"vaegir_e_otrok","vaegir_e_kazak","vaegir_e_kmet")
-upgrade2(troops,"vaegir_e_pasynok","vaegir_e_kmet","vaegir_e_grid")
+upgrade2(troops,"vaegir_e_otrok","vaegir_e_kmet","vaegir_e_grid")
 #Tier 3-4
-upgrade2(troops,"vaegir_e_kazak","vaegir_e_yesaul","vaegir_e_plastun")
-upgrade2(troops,"vaegir_e_kmet","vaegir_e_ratnik","vaegir_e_zalstrelshik")
-upgrade2(troops,"vaegir_e_grid","vaegir_e_mladshiy_druzhinnik","vaegir_e_poztoma_druzhinaik")
+upgrade2(troops,"vaegir_e_kmet","vaegir_e_zalstrelshik","vaegir_e_ratnik")
+upgrade2(troops,"vaegir_e_grid","vaegir_e_mladshiy_druzhinnik","vaegir_e_plastun")
+upgrade(troops,"vaegir_e_kazak","vaegir_e_yesaul")
 #Tier 4-5
-upgrade2(troops,"vaegir_e_yesaul","vaegir_e_ataman","vaegir_e_pansirniy_kazan")
-upgrade2(troops,"vaegir_e_ratnik","vaegir_e_posadnik","vaegir_e_golova")
+upgrade(troops,"vaegir_e_yesaul","vaegir_e_pansirniy_kazan")
+upgrade(troops,"vaegir_e_plastun","vaegir_e_druzhinnik")
+upgrade2(troops,"vaegir_e_mladshiy_druzhinnik","vaegir_e_druzhinnik_veteran","vaegir_e_druzhinnik")
+upgrade(troops,"vaegir_e_ratnik","vaegir_e_posadnik")
 upgrade(troops,"vaegir_e_zalstrelshik","vaegir_e_luchnik")
-upgrade(troops,"vaegir_e_mladshiy_druzhinnik","vaegir_e_druzhinnik")
-upgrade(troops,"vaegir_e_poztoma_druzhinaik","vaegir_e_druzhinnik_veteran")
 #Tier 5-6
-upgrade(troops,"vaegir_e_ataman","vaegir_e_legkoy_vityas")
 upgrade(troops,"vaegir_e_pansirniy_kazan","vaegir_e_vityas")
+upgrade(troops,"vaegir_e_druzhinnik_veteran","vaegir_e_extra1")
 upgrade(troops,"vaegir_e_posadnik","vaegir_e_voevoda")
 upgrade(troops,"vaegir_e_luchnik","vaegir_e_metkiy_luchnik")
-upgrade(troops,"vaegir_e_druzhinnik","vaegir_e_elitniy_druzhinnik")
+upgrade(troops,"vaegir_e_druzhinnik","vaegir_e_vityas")
 #Tier 6-7
 upgrade(troops,"vaegir_e_vityas","vaegir_e_bogatyr")
 upgrade(troops,"vaegir_e_metkiy_luchnik","vaegir_e_sokoliniy_glaz")
 ##
+
 
 ###Khergit
 ##Native troop tree
