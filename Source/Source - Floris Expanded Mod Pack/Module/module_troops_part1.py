@@ -1586,366 +1586,101 @@ troops_part1 = [
 ##Expanded troop tree - Expanded Items
 ##### Here are the Vaegir Troops from the Expanded Tree using the Expanded items #####
 #Tier 1
-  ["vaegir_e_kholop","I1 Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_he_vae_t1_common_b,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_1,vaegir_man_face_young_4
-  ],
+  ["vaegir_e_kholop","I1 Vaegir Peasant","I1 Vaegir Peasants",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,																																		[									itm_ar_vae_tun_red												,itm_bo_vae_t1_sandal											,itm_he_vae_t1_common_a																												,itm_we_vae_sword_sickle				,itm_we_vae_axe_onehanded														,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_he_vae_t1_common_b,itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,itm_we_vae_throw_snow],def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,vaegir_man_face_younger_1,vaegir_man_face_young_4],
 #Tier 2
-  ["vaegir_e_otrok","I2 Vaegir Otrok","I2 Vaegir Otroki",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t2_leather_a,itm_bo_vae_t2_shoes,itm_he_vae_t2_furcap_a,itm_ga_vae_a2_leather,
-      itm_sh_vae_kit_old,itm_we_vae_sword_lord,itm_we_vae_sword_cleaver,itm_ar_vae_t2_leather_c,
-      itm_sh_vae_kit_fur,itm_sh_vae_kit_plain
-    ],
-    def_attrib|level(10),wp_one_handed(72)|wp_two_handed(63)|wp_polearm(83)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_1|knows_power_strike_3|knows_power_draw_2|knows_athletics_1|knows_horse_archery_1,
-    vaegir_man_face_younger_1,vaegir_man_face_middle_2
-  ],
-  ["vaegir_e_pasynok","I2 Vaegir Pasynok","I2 Vaegir Pasynoki",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t2_leather_b,itm_bo_vae_t2_shoes,itm_he_vae_t2_furcap_b,itm_we_vae_blunt_hammer,
-      itm_we_vae_sword_throw_knives,itm_ar_vae_t2_leather_d,itm_we_vae_blunt_hammerfootman
-    ],
-    def_attrib|level(10),wp_one_handed(72)|wp_two_handed(63)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_power_strike_3|knows_power_throw_1|knows_power_draw_2|knows_athletics_1|knows_horse_archery_1,
-    vaegir_man_face_younger_3,vaegir_man_face_middle_4
-  ],
+  ["vaegir_e_otrok","I2 Vaegir Footman","I2 Vaegir Footmen",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																									[																	itm_ar_vae_t2_leather_a			,itm_bo_vae_t2_shoes																			,itm_he_vae_t2_furcap_a				,itm_ga_vae_a2_leather			,itm_sh_vae_kit_old				,itm_we_vae_sword_lord					,itm_we_vae_sword_cleaver														,itm_ar_vae_t2_leather_c,itm_sh_vae_kit_fur,itm_sh_vae_kit_plain],def_attrib|level(10),wp_one_handed(72)|wp_two_handed(63)|wp_polearm(83)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_1|knows_power_strike_3|knows_power_draw_2|knows_athletics_1|knows_horse_archery_1,vaegir_man_face_younger_1,vaegir_man_face_middle_2],
+#  ["vaegir_e_pasynok","I2 Vaegir Pasynok","I2 Vaegir Pasynoki",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,																																		[																	itm_ar_vae_t2_leather_b			,itm_bo_vae_t2_shoes																			,itm_he_vae_t2_furcap_b																				,itm_we_vae_blunt_hammer				,itm_we_vae_sword_throw_knives													,itm_ar_vae_t2_leather_d,itm_we_vae_blunt_hammerfootman],def_attrib|level(10),wp_one_handed(72)|wp_two_handed(63)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_power_strike_3|knows_power_throw_1|knows_power_draw_2|knows_athletics_1|knows_horse_archery_1,vaegir_man_face_younger_3,vaegir_man_face_middle_4],
 #Tier 3
-  ["vaegir_e_kazak","I3 Vaegir Kazak","I3 Vaegir Kazaki",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t3_padded_a,itm_bo_vae_t3_leather,itm_he_vae_t3_furcap_a,itm_ga_vae_a4_leather,
-      itm_sh_vae_kit_leather,itm_we_vae_sword_lord,itm_we_vae_sword_cleaver
-    ],
-    def_attrib|level(17),wp_one_handed(107)|wp_two_handed(98)|wp_polearm(128)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_2|knows_power_strike_3|knows_power_draw_2|knows_shield_1|knows_athletics_1|knows_horse_archery_1,
-    vaegir_man_face_young_1,vaegir_man_face_old_2
-  ],
-  ["vaegir_e_kmet","A3 Vaegir Kmet","A3 Vaegir Kmety",
-    tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t2_leather_e,itm_bo_vae_t2_shoes,itm_he_vae_t2_furcap_c,itm_ga_vae_a2_leather,
-      itm_sh_vae_kit_old,itm_we_vae_bow_white,itm_we_vae_sword_cleaver,itm_we_vae_arrow_sharp,
-      itm_he_vae_t2_furcap_d,itm_he_vae_t2_furcap_e,itm_sh_vae_kit_plain,itm_we_vae_blunt_hammer,
-      itm_we_vae_blunt_hammerfootman
-    ],
-    def_attrib|level(14),wp_one_handed(90)|wp_two_handed(63)|wp_polearm(83)|wp_archery(111)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_2|knows_power_strike_3|knows_power_draw_3|knows_shield_1|knows_athletics_1|knows_horse_archery_1,
-    vaegir_man_face_young_1,vaegir_man_face_old_4
-  ],
-  ["vaegir_e_grid","I3 Vaegir Grid'","I3 Vaegir Gridi",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t3_padded_c,itm_bo_vae_t3_leather,itm_he_vae_t3_furcap_b,itm_ga_vae_a2_leather,
-      itm_sh_vae_kit_leather,itm_we_vae_blunt_hammerthick,itm_we_vae_sword_throw_daggers,itm_ar_vae_t3_padded_d,
-      itm_we_vae_blunt_hammerempire,itm_we_vae_blunt_hammerwar,itm_we_vae_blunt_maul
-    ],
-    def_attrib|level(17),wp_one_handed(107)|wp_two_handed(98)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),
-    knows_common|knows_ironflesh_1|knows_power_strike_3|knows_power_throw_2|knows_power_draw_2|knows_shield_1|knows_athletics_1|knows_horse_archery_1,
-    vaegir_man_face_middle_3,vaegir_man_face_older_4
-  ],
+  ["vaegir_e_kazak","C3 Vaegir Noble Novice","C3 Vaegir Noble Novices",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																									[																	itm_ar_vae_t3_padded_a			,itm_bo_vae_t3_leather																			,itm_he_vae_t3_furcap_a				,itm_ga_vae_a4_leather			,itm_sh_vae_kit_leather			,itm_we_vae_sword_lord					,itm_we_vae_sword_cleaver														],def_attrib|level(17),wp_one_handed(107)|wp_two_handed(98)|wp_polearm(128)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_3|knows_power_draw_2|knows_shield_1|knows_athletics_1|knows_horse_archery_1,vaegir_man_face_young_1,vaegir_man_face_old_2],
+  ["vaegir_e_kmet","A3 Vaegir Luchnik Militia","A3 Vaegir Luchnik Militias",tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																					[																	itm_ar_vae_t2_leather_e			,itm_bo_vae_t2_shoes																			,itm_he_vae_t2_furcap_c				,itm_ga_vae_a2_leather			,itm_sh_vae_kit_old				,itm_we_vae_bow_white					,itm_we_vae_sword_cleaver				,itm_we_vae_arrow_sharp					,itm_he_vae_t2_furcap_d,itm_he_vae_t2_furcap_e,itm_sh_vae_kit_plain,itm_we_vae_blunt_hammer,itm_we_vae_blunt_hammerfootman],def_attrib|level(14),wp_one_handed(90)|wp_two_handed(63)|wp_polearm(83)|wp_archery(111)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_2|knows_power_strike_3|knows_power_draw_3|knows_shield_1|knows_athletics_1|knows_horse_archery_1,vaegir_man_face_young_1,vaegir_man_face_old_4],
+  ["vaegir_e_grid","I3 Vaegir Trained Footman","I3 Vaegir Trained Footmen",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																										[																	itm_ar_vae_t3_padded_c			,itm_bo_vae_t3_leather																			,itm_he_vae_t3_furcap_b				,itm_ga_vae_a2_leather			,itm_sh_vae_kit_leather			,itm_we_vae_blunt_hammerthick			,itm_we_vae_sword_throw_daggers													,itm_ar_vae_t3_padded_d,itm_we_vae_blunt_hammerempire,itm_we_vae_blunt_hammerwar,itm_we_vae_blunt_maul],def_attrib|level(17),wp_one_handed(107)|wp_two_handed(98)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),knows_common|knows_ironflesh_1|knows_power_strike_3|knows_power_throw_2|knows_power_draw_2|knows_shield_1|knows_athletics_1|knows_horse_archery_1,vaegir_man_face_middle_3,vaegir_man_face_older_4],
 #Tier 4
-  ["vaegir_e_yesaul","C4 Vaegir Yesaul","C4 Vaegir Yesauly",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_rus_brownlight,itm_ar_vae_t4_jerkin_c,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_a,
-      itm_ga_vae_a5_mail,itm_sh_vae_kit_heavy,itm_we_vae_spear_lance,itm_we_vae_sword_sickle_military,
-      itm_we_vae_sword_cleaverwar
-    ],
-    def_attrib|level(23),wp_one_handed(137)|wp_two_handed(128)|wp_polearm(158)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_2|knows_shield_2|knows_athletics_2|knows_riding_1|knows_horse_archery_1,
-    vaegir_man_face_young_1,vaegir_man_face_old_2
-  ],
-  ["vaegir_e_plastun","I4 Vaegir Plastun","I4 Vaegir Plastuny",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t4_jerkin_d,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_b,itm_ga_vae_a4_leather,
-      itm_sh_vae_kit_leather,itm_we_vae_sword_cleaverwar,itm_we_vae_sword_sickle_military
-    ],
-    def_attrib|level(24),wp_one_handed(156)|wp_two_handed(154)|wp_polearm(128)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_3|knows_power_strike_7|knows_power_draw_3|knows_shield_2|knows_athletics_3|knows_horse_archery_1,
-    vaegir_man_face_young_1,vaegir_man_face_old_2
-  ],
-  ["vaegir_e_ratnik","H4 Vaegir Ratnik","H4 Vaegir Ratniki",
-    tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_rus_redroan,itm_ar_vae_t3_padded_c,itm_bo_vae_t3_leather,itm_he_vae_t3_furcap_c,
-      itm_ga_vae_a2_leather,itm_sh_vae_hea_wood,itm_we_vae_bow_hunting,itm_we_vae_sword_cleaver,
-      itm_we_vae_arrow_sharp,itm_he_vae_t3_furcap_e
-    ],
-    def_attrib|level(20),wp_one_handed(132)|wp_two_handed(63)|wp_polearm(83)|wp_archery(159)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_4|knows_shield_1|knows_athletics_1|knows_riding_2|knows_horse_archery_2,
-    vaegir_man_face_young_1,vaegir_man_face_old_4
-  ],
-  ["vaegir_e_zalstrelshik","A4 Vaegir Zalstrelshik","A4 Vaegir Zalstrelshiki",
-    tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t3_padded_e,itm_bo_vae_t3_leather,itm_he_vae_t3_furcap_d,itm_ga_vae_a2_leather,
-      itm_we_vae_bow_hunting,itm_we_vae_blunt_hammerthick,itm_we_vae_arrow_sharp,itm_he_vae_t3_furcap_e,
-      itm_we_vae_blunt_hammerempire,itm_we_vae_blunt_hammerwar
-    ],
-    def_attrib|level(22),wp_one_handed(146)|wp_two_handed(63)|wp_polearm(83)|wp_archery(175)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_2|knows_power_strike_4|knows_power_draw_4|knows_shield_1|knows_athletics_2|knows_horse_archery_1,
-    vaegir_man_face_young_1,vaegir_man_face_old_4
-  ],
-  ["vaegir_e_mladshiy_druzhinnik","I4 Vaegir Mladshiy Druzhinnik","I4 Vaegir Mladshiy Druzhinniki",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t4_jerkin_b,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_c,itm_ga_vae_a4_leather,
-      itm_sh_vae_kit_leather,itm_we_vae_blunt_sledgehammer,itm_we_vae_blunt_hammersleek,itm_we_vae_blunt_hammerknight,
-      itm_we_vae_blunt_maul_magnus
-    ],
-    def_attrib|level(21),wp_one_handed(135)|wp_two_handed(130)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),
-    knows_common|knows_ironflesh_2|knows_power_strike_5|knows_power_throw_2|knows_power_draw_2|knows_shield_1|knows_athletics_2|knows_horse_archery_1,
-    vaegir_man_face_young_3,vaegir_man_face_old_4
-  ],
-  ["vaegir_e_poztoma_druzhinaik","I4 Vaegir Poztoma Druzhinaik","I4 Vaegir Poztoma Druzhinaiki",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t4_jerkin_e,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_d,itm_ga_vae_a4_leather,
-      itm_sh_vae_kit_leather,itm_we_vae_blunt_hammersleek,itm_we_vae_sword_throw_bollock,itm_we_vae_blunt_hammerknight
-    ],
-    def_attrib|level(22),wp_one_handed(142)|wp_two_handed(98)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(138),
-    knows_common|knows_ironflesh_2|knows_power_strike_5|knows_power_throw_3|knows_power_draw_2|knows_shield_1|knows_athletics_2|knows_horse_archery_1,
-    vaegir_man_face_young_3,vaegir_man_face_old_4
-  ],
+  ["vaegir_e_yesaul","C4 Vaegir Noble Cavalry","C4 Vaegir Noble Cavalry",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																	[itm_ho_vae_rus_brownlight											,itm_ar_vae_t4_jerkin_c											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_a				,itm_ga_vae_a5_mail				,itm_sh_vae_kit_heavy			,itm_we_vae_spear_lance					,itm_we_vae_sword_sickle_military												,itm_we_vae_sword_cleaverwar],def_attrib|level(23),wp_one_handed(137)|wp_two_handed(128)|wp_polearm(158)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_2|knows_shield_2|knows_athletics_2|knows_riding_1|knows_horse_archery_1,vaegir_man_face_young_1,vaegir_man_face_old_2],
+  ["vaegir_e_plastun","C4 Vaegir Early Druzhinnik","C4 Vaegir Early Druzhinniki",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																								[itm_ho_vae_rus_brownlight											,itm_ar_vae_t4_jerkin_d											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_b				,itm_ga_vae_a4_leather			,itm_sh_vae_kit_leather			,itm_we_vae_sword_cleaverwar			,itm_we_vae_sword_sickle_military												],def_attrib|level(24),wp_one_handed(156)|wp_two_handed(154)|wp_polearm(128)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_3|knows_power_strike_7|knows_power_draw_3|knows_shield_2|knows_athletics_3|knows_riding_2|knows_horse_archery_1,vaegir_man_face_young_1,vaegir_man_face_old_2],
+  ["vaegir_e_ratnik","H4 Vaegir Ratnik","H4 Vaegir Ratniki",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,												[itm_ho_vae_rus_redroan												,itm_ar_vae_t3_padded_c			,itm_bo_vae_t3_leather																			,itm_he_vae_t3_furcap_c				,itm_ga_vae_a2_leather			,itm_sh_vae_hea_wood			,itm_we_vae_bow_hunting					,itm_we_vae_sword_cleaver				,itm_we_vae_arrow_sharp					,itm_he_vae_t3_furcap_e],def_attrib|level(20),wp_one_handed(132)|wp_two_handed(63)|wp_polearm(83)|wp_archery(159)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_4|knows_shield_1|knows_athletics_1|knows_riding_2|knows_horse_archery_2,vaegir_man_face_young_1,vaegir_man_face_old_4],
+  ["vaegir_e_zalstrelshik","A4 Vaegir Zalstrelshik","A4 Vaegir Zalstrelshiki",tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,																				[																	itm_ar_vae_t3_padded_e			,itm_bo_vae_t3_leather																			,itm_he_vae_t3_furcap_d				,itm_ga_vae_a2_leather											,itm_we_vae_bow_hunting					,itm_we_vae_blunt_hammerthick			,itm_we_vae_arrow_sharp					,itm_he_vae_t3_furcap_e,itm_we_vae_blunt_hammerempire,itm_we_vae_blunt_hammerwar],def_attrib|level(22),wp_one_handed(146)|wp_two_handed(63)|wp_polearm(83)|wp_archery(175)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_2|knows_power_strike_4|knows_power_draw_4|knows_shield_1|knows_athletics_2|knows_horse_archery_1,vaegir_man_face_young_1,vaegir_man_face_old_4],
+  ["vaegir_e_mladshiy_druzhinnik","I4 Vaegir Foot Druzhinnik","I4 Vaegir Foot Druzhinniki",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,															[																	itm_ar_vae_t4_jerkin_b											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_c				,itm_ga_vae_a4_leather			,itm_sh_vae_kit_leather			,itm_we_vae_blunt_sledgehammer			,itm_we_vae_blunt_hammersleek													,itm_we_vae_blunt_hammerknight,itm_we_vae_blunt_maul_magnus],def_attrib|level(21),wp_one_handed(135)|wp_two_handed(130)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),knows_common|knows_ironflesh_2|knows_power_strike_5|knows_power_throw_2|knows_power_draw_2|knows_shield_1|knows_athletics_2|knows_horse_archery_1,vaegir_man_face_young_3,vaegir_man_face_old_4],
+#  ["vaegir_e_poztoma_druzhinaik","I4 Vaegir Poztoma Druzhinaik","I4 Vaegir Poztoma Druzhinaiki",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,															[																	itm_ar_vae_t4_jerkin_e											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_d				,itm_ga_vae_a4_leather			,itm_sh_vae_kit_leather			,itm_we_vae_blunt_hammersleek			,itm_we_vae_sword_throw_bollock													,itm_we_vae_blunt_hammerknight],def_attrib|level(22),wp_one_handed(142)|wp_two_handed(98)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(138),knows_common|knows_ironflesh_2|knows_power_strike_5|knows_power_throw_3|knows_power_draw_2|knows_shield_1|knows_athletics_2|knows_horse_archery_1,vaegir_man_face_young_3,vaegir_man_face_old_4],
 #Tier 5
-  ["vaegir_e_ataman","C5 Vaegir Ataman","C5 Vaegir Atamany",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_rus_palomino,itm_ar_vae_t5_lamellar_a,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_a,
-      itm_ga_vae_a6_black,itm_sh_vae_kit_vaegir_a,itm_we_vae_spear_lancedouble,itm_we_vae_sword_cleaverwar,
-      itm_ho_vae_rus_brownlight,itm_ar_vae_t5_lamellar_b,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c
-    ],
-    def_attrib|level(28),wp_one_handed(137)|wp_two_handed(168)|wp_polearm(193)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_5|knows_power_strike_5|knows_power_draw_2|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_1,
-    vaegir_man_face_middle_1,vaegir_man_face_older_2
-  ],
-  ["vaegir_e_pansirniy_kazan","C5 Vaegir Pansirniy Kazan","C5 Vaegir Pansirniy Kazany",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_sumpter_leathered,itm_ar_vae_t5_lamellar_c,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_b,
-      itm_ga_vae_a6_black,itm_sh_vae_kit_vaegir_a,itm_we_vae_spear_lancedouble,itm_we_vae_sword_jarl,
-      itm_ar_vae_t5_lamellar_d,itm_ar_vae_t5_lamellar_e,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c,
-      itm_we_vae_sword_cleaver_soldier
-    ],
-    def_attrib|level(30),wp_one_handed(193)|wp_two_handed(128)|wp_polearm(207)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_5|knows_power_strike_5|knows_power_draw_2|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_1,
-    vaegir_man_face_middle_1,vaegir_man_face_older_2
-  ],
-  ["vaegir_e_posadnik","H5 Vaegir Posadnik","H5 Vaegir Posadniki",
-    tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_war_eagleblack,itm_ar_vae_t4_jerkin_j,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_e,
-      itm_ga_vae_a4_leather,itm_sh_vae_hae_striped_a,itm_we_vae_bow_black,itm_we_vae_sword_sickle_military,
-      itm_we_vae_arrow_sharp
-    ],
-    def_attrib|level(27),wp_one_handed(181)|wp_two_handed(63)|wp_polearm(83)|wp_archery(215)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_4|knows_power_strike_4|knows_power_draw_5|knows_shield_2|knows_athletics_2|knows_riding_3|knows_horse_archery_3,
-    vaegir_man_face_middle_1,vaegir_man_face_older_4
-  ],
-  ["vaegir_e_golova","H5 Vaegir Golova","H5 Vaegir Golovy",
-    tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_rus_blueroan,itm_ar_vae_t4_jerkin_g,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_f,
-      itm_ga_vae_a4_leather,itm_sh_vae_hae_striped_b,itm_we_vae_bow_black,itm_we_vae_sword_sickle_military,
-      itm_we_vae_arrow_sharp,itm_ho_vae_rus_redroan
-    ],
-    def_attrib|level(29),wp_one_handed(195)|wp_two_handed(63)|wp_polearm(83)|wp_archery(231)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_7|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_4,
-    vaegir_man_face_middle_1,vaegir_man_face_older_4
-  ],
-  ["vaegir_e_luchnik","A5 Vaegir Luchnik","A5 Vaegir Luchniki",
-    tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t4_jerkin_a,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_g,itm_ga_vae_a2_leather,
-      itm_we_vae_bow_black,itm_we_vae_blunt_hammersleek,itm_we_vae_arrow_sharp,itm_we_vae_blunt_hammerknight
-    ],
-    def_attrib|level(28),wp_one_handed(188)|wp_two_handed(63)|wp_polearm(83)|wp_archery(223)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_4|knows_power_strike_4|knows_power_draw_5|knows_shield_2|knows_athletics_3|knows_horse_archery_1,
-    vaegir_man_face_middle_1,vaegir_man_face_older_4
-  ],
-  ["vaegir_e_druzhinnik","C5 Vaegir Druzhinnik","C5 Vaegir Druzhinniki",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_rus_chestnutmealy,itm_ar_vae_t5_studded_c,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_c,
-      itm_ga_vae_a4_leather,itm_sh_vae_kit_heavy,itm_we_vae_blunt_greathammer,itm_we_vae_blunt_hammerempirewar,
-      itm_we_vae_blunt_hammerbastard,itm_we_vae_blunt_maul_manhunter
-    ],
-    def_attrib|level(26),wp_one_handed(170)|wp_two_handed(170)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),
-    knows_common|knows_ironflesh_4|knows_power_strike_6|knows_power_throw_2|knows_power_draw_3|knows_shield_1|knows_athletics_2|knows_riding_2|knows_horse_archery_1,
-    vaegir_man_face_middle_3,vaegir_man_face_older_4
-  ],
-  ["vaegir_e_druzhinnik_veteran","I5 Vaegir Druzhinnik-Veteran","I5 Vaegir Druzhinniki-Veterany",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t5_studded_d,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_d,itm_ga_vae_a4_leather,
-      itm_sh_vae_kit_heavy,itm_we_vae_blunt_hammerempirewar,itm_we_vae_sword_throw_dirk,itm_we_vae_blunt_hammerbastard
-    ],
-    def_attrib|level(27),wp_one_handed(177)|wp_two_handed(98)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(178),
-    knows_common|knows_ironflesh_4|knows_power_strike_7|knows_power_throw_5|knows_power_draw_4|knows_shield_3|knows_athletics_4|knows_horse_archery_1,
-    vaegir_man_face_young_1,vaegir_man_face_old_3
-  ],
+#  ["vaegir_e_ataman","C5 Vaegir Ataman","C5 Vaegir Atamany",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																	[itm_ho_vae_rus_palomino											,itm_ar_vae_t5_lamellar_a										,itm_bo_vae_t5_chausses											,itm_he_vae_t5_helmet_a				,itm_ga_vae_a6_black			,itm_sh_vae_kit_vaegir_a		,itm_we_vae_spear_lancedouble			,itm_we_vae_sword_cleaverwar													,itm_ho_vae_rus_brownlight,itm_ar_vae_t5_lamellar_b,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c],def_attrib|level(28),wp_one_handed(137)|wp_two_handed(168)|wp_polearm(193)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_5|knows_power_strike_5|knows_power_draw_2|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_2],
+  ["vaegir_e_pansirniy_kazan","C5 Vaegir Boyar Son","C5 Vaegir Boyar Sons",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,										[itm_ho_vae_sumpter_leathered										,itm_ar_vae_t5_lamellar_c										,itm_bo_vae_t5_chausses											,itm_he_vae_t5_helmet_b				,itm_ga_vae_a6_black			,itm_sh_vae_kit_vaegir_a		,itm_we_vae_spear_lancedouble			,itm_we_vae_sword_jarl															,itm_ar_vae_t5_lamellar_d,itm_ar_vae_t5_lamellar_e,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c,itm_we_vae_sword_cleaver_soldier],def_attrib|level(30),wp_one_handed(193)|wp_two_handed(128)|wp_polearm(207)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_5|knows_power_strike_5|knows_power_draw_2|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_2],
+  ["vaegir_e_posadnik","H5 Vaegir Posadnik","H5 Vaegir Posadniki",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,										[itm_ho_vae_war_eagleblack											,itm_ar_vae_t4_jerkin_j											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_e				,itm_ga_vae_a4_leather			,itm_sh_vae_hae_striped_a		,itm_we_vae_bow_black					,itm_we_vae_sword_sickle_military		,itm_we_vae_arrow_sharp					],def_attrib|level(27),wp_one_handed(181)|wp_two_handed(63)|wp_polearm(83)|wp_archery(215)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_4|knows_power_strike_4|knows_power_draw_5|knows_shield_2|knows_athletics_2|knows_riding_3|knows_horse_archery_3,vaegir_man_face_middle_1,vaegir_man_face_older_4],
+#  ["vaegir_e_golova","H5 Vaegir Golova","H5 Vaegir Golovy",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,												[itm_ho_vae_rus_blueroan											,itm_ar_vae_t4_jerkin_g											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_f				,itm_ga_vae_a4_leather			,itm_sh_vae_hae_striped_b		,itm_we_vae_bow_black					,itm_we_vae_sword_sickle_military		,itm_we_vae_arrow_sharp					,itm_ho_vae_rus_redroan],def_attrib|level(29),wp_one_handed(195)|wp_two_handed(63)|wp_polearm(83)|wp_archery(231)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_7|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_4,vaegir_man_face_middle_1,vaegir_man_face_older_4],
+  ["vaegir_e_luchnik","A5 Vaegir Luchnik","A5 Vaegir Luchniki",tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,																								[																	itm_ar_vae_t4_jerkin_a											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_g				,itm_ga_vae_a2_leather											,itm_we_vae_bow_black					,itm_we_vae_blunt_hammersleek			,itm_we_vae_arrow_sharp					,itm_we_vae_blunt_hammerknight],def_attrib|level(28),wp_one_handed(188)|wp_two_handed(63)|wp_polearm(83)|wp_archery(223)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_4|knows_power_strike_4|knows_power_draw_5|knows_shield_2|knows_athletics_3|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_4],
+  ["vaegir_e_druzhinnik","C5 Vaegir Druzhinnik","C5 Vaegir Druzhinniki",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,														[itm_ho_vae_rus_chestnutmealy										,itm_ar_vae_t5_studded_c										,itm_bo_vae_t5_chausses											,itm_he_vae_t5_helmet_c				,itm_ga_vae_a4_leather			,itm_sh_vae_kit_heavy			,itm_we_vae_blunt_greathammer			,itm_we_vae_blunt_hammerempirewar												,itm_we_vae_blunt_hammerbastard,itm_we_vae_blunt_maul_manhunter],def_attrib|level(26),wp_one_handed(170)|wp_two_handed(170)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),knows_common|knows_ironflesh_4|knows_power_strike_6|knows_power_throw_2|knows_power_draw_3|knows_shield_1|knows_athletics_2|knows_riding_2|knows_horse_archery_1,vaegir_man_face_middle_3,vaegir_man_face_older_4],
+  ["vaegir_e_druzhinnik_veteran","I5 Vaegir Veteran Vanguard","I5 Vaegir Veteran Vanguards",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,															[																	itm_ar_vae_t5_studded_d											,itm_bo_vae_t5_chausses											,itm_he_vae_t5_helmet_d				,itm_ga_vae_a4_leather			,itm_sh_vae_kit_heavy			,itm_we_vae_blunt_hammerempirewar		,itm_we_vae_sword_throw_dirk													,itm_we_vae_blunt_hammerbastard],def_attrib|level(27),wp_one_handed(177)|wp_two_handed(98)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(178),knows_common|knows_ironflesh_4|knows_power_strike_7|knows_power_throw_5|knows_power_draw_4|knows_shield_3|knows_athletics_4|knows_horse_archery_1,vaegir_man_face_young_1,vaegir_man_face_old_3],
 #Tier 6
-  ["vaegir_e_legkoy_vityas","C6 Vaegir Legkoy Vityas","C6 Vaegir Legkoi Vityasy",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_rus_baybrindle,itm_ar_vae_t6_banded_a,itm_bo_vae_t6_leather,itm_he_vae_t6_warhelmet_a,
-      itm_ga_vae_a6_black,itm_sh_vae_kit_vaegir_a,itm_we_vae_spear_lancefootman,itm_we_vae_sword_cleaverwar,
-      itm_ho_vae_rus_palomino,itm_ho_vae_rus_brownlight,itm_he_vae_t6_warhelmet_b,itm_sh_vae_kit_vaegir_b,
-      itm_sh_vae_kit_vaegir_c
-    ],
-    def_attrib|level(36),wp_one_handed(137)|wp_two_handed(232)|wp_polearm(249)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_6|knows_power_strike_8|knows_power_draw_3|knows_shield_5|knows_athletics_3|knows_riding_5|knows_horse_archery_1,
-    vaegir_man_face_middle_1,vaegir_man_face_older_2
-  ],
-  ["vaegir_e_vityas","C6 Vaegir Vityas","C6 Vaegir Vityasy",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_war_eaglewhite,itm_ar_vae_t6_kuyak_a,itm_bo_vae_t6_leather,itm_he_vae_t6_warhelmet_c,
-      itm_ga_vae_a6_red,itm_sh_vae_kit_vaegir_a,itm_we_vae_spear_lancefootman,itm_we_vae_sword_cleaver_butcher,
-      itm_ho_vae_war_imperial,itm_ar_vae_t6_kuyak_b,itm_he_vae_t6_warhelmet_d,itm_sh_vae_kit_vaegir_b,
-      itm_sh_vae_kit_vaegir_c
-    ],
-    def_attrib|level(35),wp_one_handed(233)|wp_two_handed(128)|wp_polearm(242)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_6|knows_power_strike_6|knows_power_draw_2|knows_shield_4|knows_athletics_3|knows_riding_4|knows_horse_archery_1,
-    vaegir_man_face_middle_1,vaegir_man_face_older_2
-  ],
-  ["vaegir_e_voevoda","H6 Vaegir Voevoda","H6 Vaegir Voevody",
-    tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_long_eagleblack,itm_ar_vae_t5_studded_a,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_e,
-      itm_ga_vae_a5_mail,itm_sh_vae_hea_steel,itm_we_vae_bow_war,itm_we_vae_sword_jarl,
-      itm_we_vae_arrow_imperial,itm_we_vae_sword_cleaver_soldier
-    ],
-    def_attrib|level(32),wp_one_handed(216)|wp_two_handed(63)|wp_polearm(83)|wp_archery(255)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_5|knows_power_strike_7|knows_power_draw_8|knows_shield_3|knows_athletics_2|knows_riding_6|knows_horse_archery_4,
-    vaegir_man_face_middle_1,vaegir_man_face_older_4
-  ],
-  ["vaegir_e_metkiy_luchnik","A6 Vaegir Metkiy Luchnik","A6 Vaegir Metkiy Luchniki",
-    tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t4_jerkin_f,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_g,itm_ga_vae_a2_leather,
-      itm_we_vae_bow_war,itm_we_vae_blunt_hammersleek,itm_we_vae_arrow_imperial,itm_we_vae_blunt_hammerknight
-    ],
-    def_attrib|level(34),wp_one_handed(230)|wp_two_handed(63)|wp_polearm(83)|wp_archery(271)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_6|knows_shield_2|knows_athletics_4|knows_horse_archery_1,
-    vaegir_man_face_middle_1,vaegir_man_face_older_4
-  ],
-  ["vaegir_e_elitniy_druzhinnik","C6 Vaegir Elitniy Druzhinnik","C6 Vaegir Elitniy Druzhinniki",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_war_scaledbrown,itm_ar_vae_t6_cuirbouilli_a,itm_bo_vae_t6_leather,itm_he_vae_t6_warhelmet_e,
-      itm_ga_vae_a6_black,itm_sh_vae_kit_vaegir_d,itm_we_vae_blunt_mallet,itm_we_vae_blunt_hammermilitary,
-      itm_ho_vae_war_scaledgrey,itm_ho_vae_war_scaledorange,itm_ho_vae_war_scaledorangeleather,itm_ar_vae_t6_cuirbouilli_b,
-      itm_ar_vae_t6_cuirbouilli_c,itm_he_vae_t6_warhelmet_f,itm_sh_vae_kit_vaegir_e,itm_sh_vae_kit_vaegir_f,
-      itm_we_vae_blunt_hammerinquisition
-    ],
-    def_attrib|level(33),wp_one_handed(219)|wp_two_handed(226)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),
-    knows_common|knows_ironflesh_5|knows_power_strike_9|knows_power_throw_2|knows_power_draw_4|knows_shield_3|knows_athletics_3|knows_riding_4|knows_horse_archery_1,
-    vaegir_man_face_middle_3,vaegir_man_face_older_4
-  ],
+#  ["vaegir_e_legkoy_vityas","C6 Vaegir Legkoy Vityas","C6 Vaegir Legkoi Vityasy",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,												[itm_ho_vae_rus_baybrindle											,itm_ar_vae_t6_banded_a											,itm_bo_vae_t6_leather											,itm_he_vae_t6_warhelmet_a			,itm_ga_vae_a6_black			,itm_sh_vae_kit_vaegir_a		,itm_we_vae_spear_lancefootman			,itm_we_vae_sword_cleaverwar													,itm_ho_vae_rus_palomino,itm_ho_vae_rus_brownlight,itm_he_vae_t6_warhelmet_b,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c],def_attrib|level(36),wp_one_handed(137)|wp_two_handed(232)|wp_polearm(249)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_6|knows_power_strike_8|knows_power_draw_3|knows_shield_5|knows_athletics_3|knows_riding_5|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_2],
+  ["vaegir_e_vityas","C6 Vaegir Druzhinnik Veteran","C6 Vaegir Druzhinniki Veteran",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																	[itm_ho_vae_war_eaglewhite											,itm_ar_vae_t6_kuyak_a											,itm_bo_vae_t6_leather											,itm_he_vae_t6_warhelmet_c			,itm_ga_vae_a6_red				,itm_sh_vae_kit_vaegir_a		,itm_we_vae_spear_lancefootman			,itm_we_vae_sword_cleaver_butcher												,itm_ho_vae_war_imperial,itm_ar_vae_t6_kuyak_b,itm_he_vae_t6_warhelmet_d,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c],def_attrib|level(35),wp_one_handed(233)|wp_two_handed(128)|wp_polearm(242)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_6|knows_power_strike_6|knows_power_draw_2|knows_shield_4|knows_athletics_3|knows_riding_4|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_2],
+  ["vaegir_e_voevoda","H6 Vaegir Voevoda","H6 Vaegir Voevody",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,											[itm_ho_vae_long_eagleblack											,itm_ar_vae_t5_studded_a										,itm_bo_vae_t5_chausses											,itm_he_vae_t5_helmet_e				,itm_ga_vae_a5_mail				,itm_sh_vae_hea_steel			,itm_we_vae_bow_war						,itm_we_vae_sword_jarl					,itm_we_vae_arrow_imperial				,itm_we_vae_sword_cleaver_soldier],def_attrib|level(32),wp_one_handed(216)|wp_two_handed(63)|wp_polearm(83)|wp_archery(255)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_5|knows_power_strike_7|knows_power_draw_8|knows_shield_3|knows_athletics_2|knows_riding_6|knows_horse_archery_4,vaegir_man_face_middle_1,vaegir_man_face_older_4],
+  ["vaegir_e_metkiy_luchnik","A6 Vaegir Metkiy Luchnik","A6 Vaegir Metkiy Luchniki",tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,																		[																	itm_ar_vae_t4_jerkin_f											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_g				,itm_ga_vae_a2_leather											,itm_we_vae_bow_war						,itm_we_vae_blunt_hammersleek			,itm_we_vae_arrow_imperial				,itm_we_vae_blunt_hammerknight],def_attrib|level(34),wp_one_handed(230)|wp_two_handed(63)|wp_polearm(83)|wp_archery(271)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_6|knows_shield_2|knows_athletics_4|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_4],
+  ["vaegir_e_elitniy_druzhinnik","C6 Vaegir Elitniy Druzhinnik","C6 Vaegir Elitniy Druzhinniki",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,								[itm_ho_vae_war_scaledbrown											,itm_ar_vae_t6_cuirbouilli_a									,itm_bo_vae_t6_leather											,itm_he_vae_t6_warhelmet_e			,itm_ga_vae_a6_black			,itm_sh_vae_kit_vaegir_d		,itm_we_vae_blunt_mallet				,itm_we_vae_blunt_hammermilitary												,itm_ho_vae_war_scaledgrey,itm_ho_vae_war_scaledorange,itm_ho_vae_war_scaledorangeleather,itm_ar_vae_t6_cuirbouilli_b,itm_ar_vae_t6_cuirbouilli_c,itm_he_vae_t6_warhelmet_f,itm_sh_vae_kit_vaegir_e,itm_sh_vae_kit_vaegir_f,itm_we_vae_blunt_hammerinquisition],def_attrib|level(33),wp_one_handed(219)|wp_two_handed(226)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),knows_common|knows_ironflesh_5|knows_power_strike_9|knows_power_throw_2|knows_power_draw_4|knows_shield_3|knows_athletics_3|knows_riding_4|knows_horse_archery_1,vaegir_man_face_middle_3,vaegir_man_face_older_4],
 #Tier 7
-  ["vaegir_e_bogatyr","C7 Vaegir Bogatyr","C7 Vaegir Bogatyry",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_long_royalred,itm_ar_vae_t7_elite_a,itm_bo_vae_t7_greaves,itm_he_vae_t7_warmask_a,
-      itm_ga_vae_a6_red,itm_sh_vae_kit_steel,itm_we_vae_spear_lancefootman,itm_we_vae_sword_cleaver_military,
-      itm_ho_vae_long_eaglewhite,itm_ar_vae_t7_elite_b,itm_ar_vae_t7_elite_c,itm_ar_vae_t7_elite_d,
-      itm_ar_vae_t7_elite_e,itm_ar_vae_t7_elite_f,itm_he_vae_t7_warmask_b
-    ],
-    def_attrib|level(40),wp_one_handed(268)|wp_two_handed(128)|wp_polearm(282)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_8|knows_power_strike_9|knows_power_draw_3|knows_shield_6|knows_athletics_3|knows_riding_7|knows_horse_archery_1,
-    vaegir_man_face_middle_1,vaegir_man_face_older_2
-  ],
-  ["vaegir_e_sokoliniy_glaz","A7 Vaegir Sokoliniy Glaz","A7 Vaegir Sokoliniy Glazy",
-    tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_t5_studded_b,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_f,itm_ga_vae_a4_leather,
-      itm_we_vae_bow_imperial,itm_we_vae_blunt_hammerempirewar,itm_we_vae_arrow_imperial,itm_he_vae_t5_helmet_g,
-      itm_we_vae_blunt_hammerbastard
-    ],
-    def_attrib|level(40),wp_one_handed(272)|wp_two_handed(63)|wp_polearm(83)|wp_archery(319)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_5|knows_power_strike_6|knows_power_draw_9|knows_shield_2|knows_athletics_6|knows_horse_archery_1,
-    vaegir_man_face_middle_1,vaegir_man_face_older_4
-  ],
+  ["vaegir_e_bogatyr","C7 Vaegir Cataphract","C7 Vaegir Cataphracts",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																[itm_ho_vae_long_royalred											,itm_ar_vae_t7_elite_a											,itm_bo_vae_t7_greaves											,itm_he_vae_t7_warmask_a			,itm_ga_vae_a6_red				,itm_sh_vae_kit_steel			,itm_we_vae_spear_lancefootman			,itm_we_vae_sword_cleaver_military												,itm_ho_vae_long_eaglewhite,itm_ar_vae_t7_elite_b,itm_ar_vae_t7_elite_c,itm_ar_vae_t7_elite_d,itm_ar_vae_t7_elite_e,itm_ar_vae_t7_elite_f,itm_he_vae_t7_warmask_b],def_attrib|level(40),wp_one_handed(268)|wp_two_handed(128)|wp_polearm(282)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_8|knows_power_strike_9|knows_power_draw_3|knows_shield_6|knows_athletics_3|knows_riding_7|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_2],
+  ["vaegir_e_sokoliniy_glaz","A7 Vaegir Sokoliniy Glaz","A7 Vaegir Sokoliniy Glazy",tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,																		[																	itm_ar_vae_t5_studded_b											,itm_bo_vae_t5_chausses											,itm_he_vae_t5_helmet_f				,itm_ga_vae_a4_leather											,itm_we_vae_bow_imperial				,itm_we_vae_blunt_hammerempirewar		,itm_we_vae_arrow_imperial				,itm_he_vae_t5_helmet_g,itm_we_vae_blunt_hammerbastard],def_attrib|level(40),wp_one_handed(272)|wp_two_handed(63)|wp_polearm(83)|wp_archery(319)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_5|knows_power_strike_6|knows_power_draw_9|knows_shield_2|knows_athletics_6|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_4],
 #Extra units. Not used in the mod, but are present for if you want to add a few new troops.
-  ["vaegir_e_extra1","I1 Rebelous Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_1,vaegir_man_face_young_2
-  ],
-  ["vaegir_e_extra2","I1 Adventurous Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_3,vaegir_man_face_young_4
-  ],
-  ["vaegir_e_extra3","I1 Begrudged Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_1,vaegir_man_face_young_4
-  ],
-  ["vaegir_e_extra4","I1 Travelling Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_2,vaegir_man_face_young_3
-  ],
-  ["vaegir_e_extra5","I1 Docile Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_1,vaegir_man_face_young_4
-  ],
+  ["vaegir_e_extra1","I6 Varangian Guard","I6 Varangian Guards",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																								[																	itm_ar_vae_t6_cuirbouilli_a										,itm_bo_vae_t6_leather											,itm_he_vae_t6_warhelmet_e			,itm_ga_vae_a6_black			,itm_sh_vae_kit_vaegir_a		,itm_we_vae_spear_lancefootman			,itm_we_vae_sword_cleaver_butcher												,itm_ar_vae_t6_cuirbouilli_b,itm_ar_vae_t6_cuirbouilli_c,itm_he_vae_t6_warhelmet_f,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c,itm_we_vae_blunt_mallet,itm_we_vae_blunt_hammermilitary],def_attrib|level(36),wp_one_handed(240)|wp_two_handed(235)|wp_polearm(252)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_7|knows_power_strike_9|knows_power_draw_3|knows_shield_5|knows_athletics_4|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_2],
+  ["vaegir_e_extra2","I1 Adventurous Vaegir Kholop","I1 Vaegir Kholopy",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,																															[									itm_ar_vae_tun_red												,itm_bo_vae_t1_sandal											,itm_he_vae_t1_common_a																												,itm_we_vae_sword_sickle				,itm_we_vae_axe_onehanded														,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,itm_we_vae_throw_snow],def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,vaegir_man_face_younger_3,vaegir_man_face_young_4],
+  ["vaegir_e_extra3","I1 Begrudged Vaegir Kholop","I1 Vaegir Kholopy",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,																																[									itm_ar_vae_tun_red												,itm_bo_vae_t1_sandal											,itm_he_vae_t1_common_a																												,itm_we_vae_sword_sickle				,itm_we_vae_axe_onehanded														,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,itm_we_vae_throw_snow],def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,vaegir_man_face_younger_1,vaegir_man_face_young_4],
+  ["vaegir_e_extra4","I1 Travelling Vaegir Kholop","I1 Vaegir Kholopy",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,																																[									itm_ar_vae_tun_red												,itm_bo_vae_t1_sandal											,itm_he_vae_t1_common_a																												,itm_we_vae_sword_sickle				,itm_we_vae_axe_onehanded														,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,itm_we_vae_throw_snow],def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,vaegir_man_face_younger_2,vaegir_man_face_young_3],
+  ["vaegir_e_extra5","I1 Docile Vaegir Kholop","I1 Vaegir Kholopy",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,																																	[									itm_ar_vae_tun_red												,itm_bo_vae_t1_sandal											,itm_he_vae_t1_common_a																												,itm_we_vae_sword_sickle				,itm_we_vae_axe_onehanded														,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,itm_we_vae_throw_snow],def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,vaegir_man_face_younger_1,vaegir_man_face_young_4],
+##General Units
+##### Here are the Vaegir Guards using the Minimal items #####
+  ["vaegir_messenger","Vaegir Messenger","Vaegir Messengers",tf_mounted|tf_guarantee_horse|tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,												[itm_ho_vae_rus_brown												,itm_ar_vae_t3_padded_a			,itm_bo_vae_t3_leather																												,itm_ga_vae_a2_leather											,itm_we_vae_sword_jarl																									],str_7 | agi_21 | int_4 | cha_4|level(25),wp(130),knows_common|knows_riding_7|knows_horse_archery_5|knows_power_draw_5,vaegir_man_face_young_1,vaegir_man_face_older_2],
+  ["vaegir_deserter","Vaegir Deserter","Vaegir Deserters",tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_deserters,																				[																	itm_ar_vae_t3_padded_a			,itm_bo_vae_t3_leather																			,itm_he_vae_t2_furcap_a																				,itm_we_vae_bow_war						,itm_we_vae_sword_jarl					,itm_we_vae_arrow_imperial				,itm_we_vae_blunt_hammerthick,itm_we_vae_blunt_sledgehammer,itm_we_vae_blunt_hammerempirewar],str_10 | agi_5 | int_4 | cha_4|level(14),wp(80),knows_ironflesh_1|knows_power_draw_1,vaegir_man_face_young_3,vaegir_man_face_older_4],
+  ["vaegir_prison_guard","Prison Guard","Prison Guards", tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																									[																	itm_ar_vae_t6_cuirbouilli_a										,itm_bo_vae_t7_greaves											,itm_he_vae_t5_helmet_a				,itm_ga_vae_a2_leather			,itm_sh_vae_kit_leather			,itm_we_vae_sword_jarl					,itm_we_vae_spear_scythe_shortened												,itm_ar_vae_t7_elite_b,itm_we_vae_blunt_sledgehammer,itm_we_vae_blunt_hammerempirewar],def_attrib|level(24),wp(130),knows_athletics_3|knows_shield_2|knows_ironflesh_3,vaegir_man_face_middle_1,vaegir_man_face_older_3],
+  ["vaegir_castle_guard","Castle Guard","Castle Guards", tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,																									[																	itm_ar_vae_t6_cuirbouilli_a										,itm_bo_vae_t7_greaves											,itm_he_vae_t5_helmet_a				,itm_ga_vae_a2_leather			,itm_sh_vae_kit_vaegir_a		,itm_we_vae_sword_jarl					,itm_we_vae_spear_scythe_shortened												,itm_ar_vae_t7_elite_b,itm_we_vae_blunt_sledgehammer,itm_we_vae_blunt_hammerempirewar],def_attrib|level(24),wp(130),knows_athletics_3|knows_shield_2|knows_ironflesh_3,vaegir_man_face_middle_1,vaegir_man_face_older_4],
+##
+
+###Khergit
+##Native troop tree - Minimal Items (approximately the same stats as in Native)
+##### Here are the Khergit Troops from the Native Tree using the Minimal items #####
+#Tier 1
+  ["khergit_n_tariachin","Khergit Tribesman","Khergit Tribesmen",tf_guarantee_boots|tf_guarantee_armor,0,0,fac_kingdom_3,																																						[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(5),wp(50),knows_common|knows_riding_3|knows_power_draw_2|knows_horse_archery_2,khergit_man_face_younger_1,khergit_man_face_young_4],
+#Tier 2
+  ["khergit_n_qarbughaci","Khergit Skirmisher","Khergit Skirmishers",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_horse|tf_guarantee_ranged,0,0,fac_kingdom_3,																									[																	itm_ar_khe_t3_steppe_a			,itm_bo_khe_t3_boots																			,itm_he_khe_t2_steppe_a												,itm_sh_khe_rou_plain			,itm_we_khe_bow_red						,itm_we_khe_sword_nomad					,itm_we_khe_arrow_khergit				,itm_we_khe_axe_steppe,itm_we_khe_spear_viper],def_attrib|level(10),wp_one_handed (60) | wp_two_handed (60) | wp_polearm (60) | wp_archery (80) | wp_crossbow (60) | wp_throwing (80),knows_common|knows_riding_4|knows_power_draw_3|knows_power_throw_1|knows_horse_archery_3,khergit_man_face_younger_3,khergit_man_face_middle_4],
+#Tier 3
+  ["khergit_n_morici","Khergit Horseman","Khergit Horsemen",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_horse,0,0,fac_kingdom_3,																											[itm_ho_khe_steppe_brownpainted										,itm_ar_khe_t3_steppe_a			,itm_bo_khe_t3_boots																			,itm_he_khe_t3_steppe_a												,itm_sh_khe_rou_plain			,itm_we_khe_bow_red						,itm_we_khe_sword_khergit				,itm_we_khe_arrow_khergit				,itm_sh_khe_rou_round,itm_we_khe_spear_lance,itm_we_khe_spear_viper],def_attrib|level(14),wp(80),knows_common|knows_riding_5|knows_power_draw_4|knows_ironflesh_2|knows_power_throw_2|knows_horse_archery_3|knows_shield_1,khergit_man_face_young_1,khergit_man_face_old_2],
+#Tier 4
+  ["khergit_n_kipchak","Khergit Lancer","Khergit Lancers",tf_mounted|tf_guarantee_all_wo_ranged,0,0,fac_kingdom_3,																																								[itm_ho_khe_war_brass												,itm_ar_khe_t5_guard_a											,itm_bo_khe_t5_mail												,itm_he_khe_t4_war_a				,itm_ga_khe_a2_leather			,itm_sh_khe_rou_round			,itm_we_khe_spear_lancehook				,itm_we_khe_sword_broad															,itm_ho_khe_saddle_coloured,itm_sh_khe_rou_steel_c,itm_we_khe_axe_khergit,itm_we_khe_spear_haftedblade,itm_we_khe_spear_lanceflag_a],def_attrib|level(23),wp_one_handed (110) | wp_two_handed (110) | wp_polearm (150) | wp_archery (110) | wp_crossbow (110) | wp_throwing (110),knows_riding_7|knows_power_strike_4|knows_power_draw_4|knows_power_throw_2|knows_ironflesh_4|knows_horse_archery_1|knows_shield_2,khergit_man_face_young_1,khergit_man_face_old_2],
+  ["khergit_n_qubuci","Khergit Horse Archer","Khergit Horse Archers",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_horse,0,0,fac_kingdom_3,																									[itm_ho_khe_steppe_brownpainted										,itm_ar_khe_t4_lamellar_a										,itm_bo_khe_t4_sandal											,itm_he_khe_t3_steppe_a												,itm_sh_khe_rou_plain			,itm_we_khe_bow_strong					,itm_we_khe_sword_khergit				,itm_we_khe_arrow_khergit				,itm_ho_khe_saddle_coloured,itm_ar_khe_t4_lamellar_b,itm_sh_khe_rou_round,itm_we_khe_axe_steppe,itm_we_khe_spear_viper],def_attrib|level(14),wp_one_handed (80) | wp_two_handed (80) | wp_polearm (80) | wp_archery (110) | wp_crossbow (80) | wp_throwing (110),knows_riding_5|knows_power_draw_3|knows_ironflesh_1|knows_horse_archery_4|knows_power_throw_3,khergit_man_face_middle_3,khergit_man_face_older_4],
+#Tier 5
+  ["khergit_n_borjigin","Khergit Veteran Horse Archer","Khergit Veteran Horse Archers",tf_mounted|tf_guarantee_all,0,0,fac_kingdom_3,																																			[itm_ho_khe_saddle_coloured											,itm_ar_khe_t5_guard_a											,itm_bo_khe_t4_sandal											,itm_he_khe_t5_neck_a				,itm_ga_khe_a2_leather			,itm_sh_khe_rou_round			,itm_we_khe_bow_strong					,itm_we_khe_sword_steppe				,itm_we_khe_arrow_mongol				,itm_sh_khe_rou_heavy,itm_we_khe_axe_steppe,itm_we_khe_spear_viper,itm_we_khe_bow_red],def_attrib|level(21),wp_one_handed (90) | wp_two_handed (90) | wp_polearm (90) | wp_archery (130) | wp_crossbow (90) | wp_throwing (130),knows_riding_7|knows_power_draw_5|knows_ironflesh_3|knows_horse_archery_7|knows_power_throw_4|knows_shield_1,khergit_man_face_middle_3,khergit_man_face_older_4],
+#Extra units. Not used in the mod, but are present for if you want to add a few new troops.
+  ["khergit_n_extra1","Rebelous Khergit Tribesman","Rebelous Khergit Tribesmen",tf_guarantee_boots|tf_guarantee_armor,0,0,fac_kingdom_3,																																		[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(5),wp(50),knows_common|knows_riding_3|knows_power_draw_2|knows_horse_archery_2,khergit_man_face_younger_1,khergit_man_face_young_2],
+  ["khergit_n_extra2","Adventurous Khergit Tribesman","Adventurous Khergit Tribesmen",tf_guarantee_boots|tf_guarantee_armor,0,0,fac_kingdom_3,																																	[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(5),wp(50),knows_common|knows_riding_3|knows_power_draw_2|knows_horse_archery_2,khergit_man_face_younger_3,khergit_man_face_young_4],
+  ["khergit_n_extra3","Begrudged Khergit Tribesman","Begrudged Khergit Tribesmen",tf_guarantee_boots|tf_guarantee_armor,0,0,fac_kingdom_3,																																		[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(5),wp(50),knows_common|knows_riding_3|knows_power_draw_2|knows_horse_archery_2,khergit_man_face_younger_1,khergit_man_face_young_4],
+  ["khergit_n_extra4","Travelling Khergit Tribesman","Travelling Khergit Tribesmen",tf_guarantee_boots|tf_guarantee_armor,0,0,fac_kingdom_3,																																	[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(5),wp(50),knows_common|knows_riding_3|knows_power_draw_2|knows_horse_archery_2,khergit_man_face_younger_2,khergit_man_face_young_3],
+  ["khergit_n_extra5","Docile Khergit Tribesman","Docile Khergit Tribesmen",tf_guarantee_boots|tf_guarantee_armor,0,0,fac_kingdom_3,																																			[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(5),wp(50),knows_common|knows_riding_3|knows_power_draw_2|knows_horse_archery_2,khergit_man_face_younger_3,khergit_man_face_young_4],
+##Reworked troop tree - Expanded Items
+##### Here are the Khergit Troops from the Reworked Tree using the Expanded items #####
+#Tier 1
+  ["khergit_r_tariachin","I1 Khergit Tariachin","I1 Khergit Tariachinuud",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,																															[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,khergit_man_face_younger_1,khergit_man_face_young_4],
+#Tier 2
+  ["khergit_r_tsereg","I2 Khergit Tsereg","I2 Khergit Tseregnuud",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_3,																												[																	itm_ar_khe_t2_armor_a			,itm_bo_khe_t2_boots																			,itm_he_khe_t2_steppe_d				,itm_ga_khe_a2_leather											,itm_we_khe_spear_nagita				,itm_we_khe_sword_executionerone												,itm_ar_khe_t2_armor_b,itm_he_khe_t2_steppe_e,itm_we_khe_spear_khergit,itm_we_khe_spear_short,itm_we_khe_sword_ringed],def_attrib|level(8),wp_one_handed(88)|wp_two_handed(50)|wp_polearm(72)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_strike_2|knows_power_draw_1|knows_athletics_1|knows_riding_1|knows_horse_archery_2,khergit_man_face_younger_1,khergit_man_face_middle_2],
+  ["khergit_r_qarbughaci","A2 Khergit Qarbughaci","A2 Khergit Qarbughacinuud",tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_shield,0,0,fac_kingdom_3,																									[																	itm_ar_khe_t2_armor_c			,itm_bo_khe_t2_boots																			,itm_he_khe_t2_steppe_a												,itm_sh_khe_rou_old				,itm_we_khe_bow_light					,itm_we_khe_sword_executionerone		,itm_we_khe_arrow_khergit				,itm_ar_khe_t2_armor_d,itm_ar_khe_t2_armor_e,itm_he_khe_t2_steppe_b,itm_he_khe_t2_steppe_c,itm_we_khe_sword_ringed],def_attrib|level(12),wp_one_handed(90)|wp_two_handed(80)|wp_polearm(70)|wp_archery(100)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_strike_1|knows_power_draw_2|knows_shield_1|knows_athletics_1|knows_riding_1|knows_horse_archery_2,khergit_man_face_younger_3,khergit_man_face_middle_4],
+#Tier 3
+  ["khergit_r_asud","I3 Khergit Asud","I3 Khergit Asudnuud",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_3,																													[																	itm_ar_khe_t3_vest_b			,itm_bo_khe_t3_boots																			,itm_he_khe_t3_steppe_d				,itm_ga_khe_a2_leather											,itm_we_khe_spear_viper					,itm_we_khe_sword_nomad															,itm_he_khe_t3_steppe_e,itm_we_khe_spear_hookpointy,itm_we_khe_spear_hook,itm_we_khe_sword_red],def_attrib|level(14),wp_one_handed(130)|wp_two_handed(50)|wp_polearm(120)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_1|knows_power_strike_3|knows_power_draw_1|knows_shield_1|knows_athletics_2|knows_riding_1|knows_horse_archery_2,khergit_man_face_young_1,khergit_man_face_old_2],
+  ["khergit_r_morici","C3 Khergit Morici","C3 Khergit Moricinuud",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_3,															[itm_ho_khe_steppe_dunpaint											,itm_ar_khe_t3_vest_c			,itm_bo_khe_t3_boots																			,itm_he_khe_t3_steppe_a				,itm_ga_khe_a2_leather			,itm_sh_khe_rou_old				,itm_we_khe_spear_lance					,itm_we_khe_sword_nomad															,itm_he_khe_t3_steppe_b,itm_we_khe_sword_sabre,itm_we_khe_sword_red],def_attrib|level(16),wp_one_handed(110)|wp_two_handed(100)|wp_polearm(90)|wp_archery(100)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_2|knows_power_draw_2|knows_shield_2|knows_athletics_1|knows_riding_3|knows_horse_archery_2,khergit_man_face_young_1,khergit_man_face_old_2],
+  ["khergit_r_abaci","H3 Khergit Abaci","H3 Khergit Abacinuud",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_3,											[itm_ho_khe_steppe_chestnutspot										,itm_ar_khe_t3_steppe_a			,itm_bo_khe_t3_boots																			,itm_he_khe_t3_steppe_c				,itm_ga_khe_a4_lamellar			,itm_sh_khe_rou_old				,itm_we_khe_bow_red						,itm_we_khe_sword_nomad					,itm_we_khe_arrow_khergit				,itm_we_khe_sword_sabre,itm_we_khe_sword_red],def_attrib|level(18),wp_one_handed(155)|wp_two_handed(110)|wp_polearm(70)|wp_archery(170)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_2|knows_power_draw_4|knows_shield_2|knows_athletics_2|knows_riding_4|knows_horse_archery_4,khergit_man_face_young_3,khergit_man_face_old_4],
+#Tier 4
+  ["khergit_r_aqala_asud","I4 Khergit Aqala Asud","I4 Khergit Aqala Asudnuud",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_3,																				[																	itm_ar_khe_t5_armor_b											,itm_bo_khe_t5_mail												,itm_he_khe_t5_neck_a				,itm_ga_khe_a2_leather											,itm_we_khe_spear_haftedblade			,itm_we_khe_sword_khergit														,itm_we_khe_spear_nagitablack,itm_we_khe_spear_dragon,itm_we_khe_sword_horse],def_attrib|level(21),wp_one_handed(179)|wp_two_handed(50)|wp_polearm(176)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_1|knows_power_strike_7|knows_power_draw_1|knows_shield_2|knows_athletics_4|knows_riding_1|knows_horse_archery_3,khergit_man_face_young_1,khergit_man_face_old_2],
+  ["khergit_r_quaqli","C4 Khergit Quaqli","C4 Khergit Quaqlinuud",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_3,															[itm_ho_khe_steppe_chestnutappy										,itm_ar_khe_t4_lamellar_i										,itm_bo_khe_t4_sandal											,itm_he_khe_t4_war_a				,itm_ga_khe_a4_lamellar			,itm_sh_khe_rou_old				,itm_we_khe_spear_lance					,itm_we_khe_sword_executionerlord												],def_attrib|level(21),wp_one_handed(110)|wp_two_handed(135)|wp_polearm(130)|wp_archery(100)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_3|knows_power_strike_3|knows_power_draw_2|knows_shield_3|knows_athletics_2|knows_riding_4|knows_horse_archery_2,khergit_man_face_young_1,khergit_man_face_old_2],
+  ["khergit_r_kipchak","C4 Khergit Kipchak","C4 Khergit Kipchakuud",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_3,															[itm_ho_khe_cata_yellow												,itm_ar_khe_t4_lamellar_a										,itm_bo_khe_t4_sandal											,itm_he_khe_t4_war_b				,itm_ga_khe_a5_armor			,itm_sh_khe_rou_old				,itm_we_khe_spear_lanceflag_b			,itm_we_khe_sword_khergit														,itm_we_khe_sword_horse],def_attrib|level(24),wp_one_handed(166)|wp_two_handed(100)|wp_polearm(154)|wp_archery(100)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_3|knows_power_strike_5|knows_power_draw_2|knows_shield_4|knows_athletics_2|knows_riding_5|knows_horse_archery_3,khergit_man_face_young_1,khergit_man_face_old_2],
+  ["khergit_r_teriguci","H4 Khergit Teriguci","H4 Khergit Terigucinuud",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_3,									[itm_ho_khe_steppe_buckskinspotted									,itm_ar_khe_t4_lamellar_b										,itm_bo_khe_t4_sandal											,itm_he_khe_t4_war_c				,itm_ga_khe_a5_armor			,itm_sh_khe_rou_plain			,itm_we_khe_bow_strong					,itm_we_khe_sword_executionerlord		,itm_we_khe_arrow_mongol				,itm_ho_khe_steppe_chestnutspot],def_attrib|level(22),wp_one_handed(120)|wp_two_handed(138)|wp_polearm(70)|wp_archery(162)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_2|knows_power_draw_4|knows_shield_2|knows_athletics_2|knows_riding_4|knows_horse_archery_4,khergit_man_face_young_3,khergit_man_face_old_4],
+  ["khergit_r_qubuci","H4 Khergit Qubuci","H4 Khergit Qubucinuud",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_3,															[itm_ho_khe_cata_black												,itm_ar_khe_t4_lamellar_c										,itm_bo_khe_t4_sandal											,itm_he_khe_t4_war_d				,itm_ga_khe_a2_leather			,itm_sh_khe_rou_old				,itm_we_khe_bow							,itm_we_khe_sword_khergit				,itm_we_khe_arrow_mongol				,itm_ar_khe_t4_lamellar_f,itm_we_khe_sword_horse],def_attrib|level(23),wp_one_handed(155)|wp_two_handed(110)|wp_polearm(70)|wp_archery(170)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_2|knows_power_draw_4|knows_shield_2|knows_athletics_2|knows_riding_4|knows_horse_archery_4,khergit_man_face_middle_3,khergit_man_face_older_4],
+#Tier 5
+  ["khergit_r_khevtuul","C5 Khergit Khevtuul","C5 Khergit Khevtuulcuud",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_3,														[itm_ho_khe_steppe_blackspotted										,itm_ar_khe_t5_armor_d											,itm_bo_khe_t5_mail												,itm_he_khe_t5_neck_b				,itm_ga_khe_a6_lamellar			,itm_sh_khe_rou_round			,itm_we_khe_spear_lanceflag_c			,itm_we_khe_sword_sabredark														,itm_ho_khe_steppe_chestnutappy,itm_he_khe_t5_neck_g],def_attrib|level(28),wp_one_handed(110)|wp_two_handed(184)|wp_polearm(186)|wp_archery(100)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_3|knows_power_strike_6|knows_power_draw_2|knows_shield_6|knows_athletics_3|knows_riding_6|knows_horse_archery_3,khergit_man_face_middle_1,khergit_man_face_older_2],
+  ["khergit_r_aqala_teriguci","H5 Khergit Aqala Teriguci","H5 Khergit Aqala Terigucinuud",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_3,									[itm_ho_khe_steppe_brownspotted										,itm_ar_khe_t4_lamellar_e										,itm_bo_khe_t4_sandal											,itm_he_khe_t4_war_e				,itm_ga_khe_a4_lamellar											,itm_we_khe_bow_heavy					,itm_we_khe_sword_sabredark				,itm_we_khe_arrow_mongol				,itm_ho_khe_steppe_buckskinspotted,itm_ho_khe_steppe_chestnutspot,itm_ar_khe_t4_lamellar_j,itm_he_khe_t4_war_f,itm_he_khe_t4_war_g],def_attrib|level(28),wp_one_handed(120)|wp_two_handed(180)|wp_polearm(70)|wp_archery(210)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_3|knows_power_draw_5|knows_shield_2|knows_athletics_2|knows_riding_6|knows_horse_archery_5,khergit_man_face_younger_3,khergit_man_face_old_4],
+  ["khergit_r_borjigin","H5 Khergit Borjigin","H5 Khergit Borjiginuud",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_3,									[itm_ho_khe_war_khergit												,itm_ar_khe_t5_guard_e											,itm_bo_khe_t5_mail												,itm_he_khe_t5_neck_c				,itm_ga_khe_a4_lamellar			,itm_sh_khe_rou_plain			,itm_we_khe_bow_strong					,itm_we_khe_sword_steppe				,itm_we_khe_arrow_mongol				,itm_ho_khe_war_redlamellar,itm_ho_khe_war_ironlamellar,itm_he_khe_t5_neck_f,itm_we_khe_sword_mountain],def_attrib|level(30),wp_one_handed(204)|wp_two_handed(110)|wp_polearm(70)|wp_archery(226)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_4|knows_power_draw_6|knows_shield_4|knows_athletics_2|knows_riding_7|knows_horse_archery_7,khergit_man_face_middle_3,khergit_man_face_older_4],
+#Tier 6
+  ["khergit_r_keshig","H6 Khergit Keshig","H6 Khergit Keshignuud",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_3,															[itm_ho_khe_steppe_blackpainted										,itm_ar_khe_t5_armor_e											,itm_bo_khe_t5_mail												,itm_he_khe_t5_neck_d				,itm_ga_khe_a5_armor											,itm_we_khe_bow_heavy					,itm_we_khe_sword_executionertwo		,itm_we_khe_arrow_mongol_piercing		,itm_ho_khe_steppe_blackspotted,itm_ho_khe_steppe_chestnutappy,itm_he_khe_t5_neck_e],def_attrib|level(33),wp_one_handed(120)|wp_two_handed(215)|wp_polearm(70)|wp_archery(250)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_2|knows_power_strike_5|knows_power_draw_7|knows_shield_2|knows_athletics_2|knows_riding_9|knows_horse_archery_8,khergit_man_face_middle_1,khergit_man_face_older_2],
+#Extra units. Not used in the mod, but are present for if you want to add a few new troops.
+  ["khergit_r_extra1","I1 Rebelous Khergit Tariachin","I1 Rebelous Khergit Tariachinuud",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,																											[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,khergit_man_face_younger_1,khergit_man_face_young_2],
+  ["khergit_r_extra2","I1 Adventurous Khergit Tariachin","I1 Adventurous Khergit Tariachinuud",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,																										[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,khergit_man_face_younger_3,khergit_man_face_young_4],
+  ["khergit_r_extra3","I1 Begrudged Khergit Tariachin","I1 Begrudged Khergit Tariachinuud",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,																											[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,khergit_man_face_younger_1,khergit_man_face_young_4],
+  ["khergit_r_extra4","I1 Travelling Khergit Tariachin","I1 Travelling Khergit Tariachinuud",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,																										[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,khergit_man_face_younger_2,khergit_man_face_young_3],
+  ["khergit_r_extra5","I1 Docile Khergit Tariachin","I1 Docile Khergit Tariachinuud",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,																												[									itm_ar_khe_tun_furcoat											,itm_bo_khe_t1_sandal											,itm_he_khe_t1_common_a																												,itm_we_khe_bow_practice				,itm_we_khe_sword_dagger				,itm_we_khe_arrow_khergit				,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone],def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,khergit_man_face_younger_1,khergit_man_face_young_4],
 ##Expanded troop tree - Expanded Items
 ##### Here are the Khergit Troops from the Expanded Tree using the Expanded items #####
 #Tier 1
