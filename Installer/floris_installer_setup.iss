@@ -9275,6 +9275,9 @@ Source: ..\Files\Textures\ext_itm_horse_swa_long_lilylionenglish_spec.dds; DestD
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyred.dds; DestDir: {app}\Floris Basic Mod Pack 2.54\Textures\; Components: basic
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyred_normal.dds; DestDir: {app}\Floris Basic Mod Pack 2.54\Textures\; Components: basic
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyred_spec.dds; DestDir: {app}\Floris Basic Mod Pack 2.54\Textures\; Components: basic
+Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyredblack.dds; DestDir: {app}\Floris Basic Mod Pack 2.54\Textures\; Components: basic
+Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyredblack_normal.dds; DestDir: {app}\Floris Basic Mod Pack 2.54\Textures\; Components: basic
+Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyredblack_spec.dds; DestDir: {app}\Floris Basic Mod Pack 2.54\Textures\; Components: basic
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lionblue.dds; DestDir: {app}\Floris Basic Mod Pack 2.54\Textures\; Components: basic
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lionblue_normal.dds; DestDir: {app}\Floris Basic Mod Pack 2.54\Textures\; Components: basic
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lionblue_spec.dds; DestDir: {app}\Floris Basic Mod Pack 2.54\Textures\; Components: basic
@@ -12083,6 +12086,9 @@ Source: ..\Files\Textures\ext_itm_horse_swa_long_lilylionenglish_spec.dds; DestD
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyred.dds; DestDir: {app}\Floris Expanded Mod Pack 2.54\Textures\; Components: expanded
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyred_normal.dds; DestDir: {app}\Floris Expanded Mod Pack 2.54\Textures\; Components: expanded
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyred_spec.dds; DestDir: {app}\Floris Expanded Mod Pack 2.54\Textures\; Components: expanded
+Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyredblack.dds; DestDir: {app}\Floris Expanded Mod Pack 2.54\Textures\; Components: expanded
+Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyredblack_normal.dds; DestDir: {app}\Floris Expanded Mod Pack 2.54\Textures\; Components: expanded
+Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyredblack_spec.dds; DestDir: {app}\Floris Expanded Mod Pack 2.54\Textures\; Components: expanded
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lionblue.dds; DestDir: {app}\Floris Expanded Mod Pack 2.54\Textures\; Components: expanded
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lionblue_normal.dds; DestDir: {app}\Floris Expanded Mod Pack 2.54\Textures\; Components: expanded
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lionblue_spec.dds; DestDir: {app}\Floris Expanded Mod Pack 2.54\Textures\; Components: expanded
@@ -16388,6 +16394,9 @@ Source: ..\Files\Textures\ext_itm_horse_swa_long_lilylionenglish_spec.dds; DestD
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyred.dds; DestDir: {app}\Floris Dev Suite 2.54\Files\Textures\; Components: dev
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyred_normal.dds; DestDir: {app}\Floris Dev Suite 2.54\Files\Textures\; Components: dev
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyred_spec.dds; DestDir: {app}\Floris Dev Suite 2.54\Files\Textures\; Components: dev
+Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyredblack.dds; DestDir: {app}\Floris Dev Suite 2.54\Files\Textures\; Components: dev
+Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyredblack_normal.dds; DestDir: {app}\Floris Dev Suite 2.54\Files\Textures\; Components: dev
+Source: ..\Files\Textures\ext_itm_horse_swa_long_lilyredblack_spec.dds; DestDir: {app}\Floris Dev Suite 2.54\Files\Textures\; Components: dev
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lionblue.dds; DestDir: {app}\Floris Dev Suite 2.54\Files\Textures\; Components: dev
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lionblue_normal.dds; DestDir: {app}\Floris Dev Suite 2.54\Files\Textures\; Components: dev
 Source: ..\Files\Textures\ext_itm_horse_swa_long_lionblue_spec.dds; DestDir: {app}\Floris Dev Suite 2.54\Files\Textures\; Components: dev
