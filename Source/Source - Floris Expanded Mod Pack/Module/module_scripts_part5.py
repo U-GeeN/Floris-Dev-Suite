@@ -14846,12 +14846,10 @@ scripts_part5 = [
     (store_script_param_1, ":skip_select_prefs"),
 	
 	(assign, "$drowning", 1),
-	(assign, "$g_encumbrance_penalty", 1),
+	(assign, "$g_encumbrance_penalty", 0),
 	(assign, "$g_dplmc_horse_speed", 0),
 	(assign, "$cheat_mode", 0),
 	(assign, "$disable_npc_complaints", 0),
-	# (assign, "$g_player_carry_banner", 0),
-	# (assign, "$g_others_carry_banner", 0),
 	(assign, "$g_date", 0),
 	(try_begin), #skip those set in the game-setup screens
 		(eq, ":skip_select_prefs", 0),
@@ -14882,7 +14880,7 @@ scripts_part5 = [
 	(call_script, "script_prebattle_set_default_prefs"),
 	## WINDYPLAINS+ ## - 2.55 - Defaults for new mod options.
 	(assign, "$enable_bandit_heroes", 1), # Enable Bandit Heroes
-	(assign, "$bandit_hero_limiter", 8), # Set initial bandit hero limiter to 8.
+	(assign, "$bandit_hero_limiter", 5), # Set initial bandit hero limiter to 5.
 	(assign, "$g_ft_force_pause", 2), # Set fast travel auto-pause to actual threats.
 	## WINDYPLAINS- ##
    ]),   
