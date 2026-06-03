@@ -15987,13 +15987,41 @@ damage_recalculation_hit = (
       (val_add, ":relevant_armor", ":val"),
     (try_end),
     
-    # Check for piercing damage to reduce blunt portion
+    # Check for piercing damage to reduce blunt portion.
     (assign, ":modifier", 100),
+    (assign, ":is_blunt_weapon", 0),
     (try_begin),
       (gt, ":attacker", -1),
       (agent_get_wielded_item, ":item_id", ":attacker", 0),
       (gt, ":item_id", -1),
       (item_get_type, ":itp", ":item_id"),
+      (item_get_slot, ":swing_damage", ":item_id", slot_item_swing_damage),
+      (item_get_slot, ":thrust_damage", ":item_id", slot_item_thrust_damage),
+      (store_mod, ":swing_amount", ":swing_damage", 256),
+      (store_mod, ":thrust_amount", ":thrust_damage", 256),
+      (assign, ":swing_type", ":swing_damage"),
+      (val_div, ":swing_type", 256),
+      (assign, ":thrust_type", ":thrust_damage"),
+      (val_div, ":thrust_type", 256),
+      (assign, ":blunt_weapon_damage", 0),
+      (assign, ":sharp_weapon_damage", 0),
+      (try_begin),
+        (eq, ":swing_type", blunt),
+        (assign, ":blunt_weapon_damage", ":swing_amount"),
+      (else_try),
+        (assign, ":sharp_weapon_damage", ":swing_amount"),
+      (try_end),
+      (try_begin),
+        (eq, ":thrust_type", blunt),
+        (val_max, ":blunt_weapon_damage", ":thrust_amount"),
+      (else_try),
+        (val_max, ":sharp_weapon_damage", ":thrust_amount"),
+      (try_end),
+      (try_begin),
+        (gt, ":blunt_weapon_damage", 0),
+        (ge, ":blunt_weapon_damage", ":sharp_weapon_damage"),
+        (assign, ":is_blunt_weapon", 1),
+      (try_end),
       (try_begin), # Piercing-oriented weapons
         (this_or_next|eq, ":itp", itp_type_bow),
         (this_or_next|eq, ":itp", itp_type_crossbow),
@@ -16013,71 +16041,109 @@ damage_recalculation_hit = (
     (val_mul, ":blunt_damage", ":modifier"),
     (val_div, ":blunt_damage", 100),
     (store_sub, ":reduced_damage", ":damage", ":blunt_damage"),
+    (try_begin),
+      (eq, ":is_blunt_weapon", 1),
+      (assign, ":blunt_damage", ":damage"),
+      (assign, ":reduced_damage", 0),
+    (try_end),
     
     (store_agent_hit_points, ":cur_hp", ":victim", 1),
     (store_mul, ":overkill_limit", ":cur_hp", 4), # Increased to 4x for better balance
     
     (try_begin),
+      (gt, ":cur_hp", 1),
       (gt, ":damage", ":overkill_limit"),
       # 1. Overkill: Lethal death.
+      (agent_set_slot, ":victim", slot_agent_pending_blunt_damage, 0),
       (agent_set_slot, ":victim", slot_agent_is_overkilled, 1),
       (agent_set_no_death_knock_down_only, ":victim", 0), # Ensure they CAN die
       
       (assign, reg2, ":damage"),
-      (display_message, "@Overkill! {s10} killed {s11} with {reg2} damage to the {s7}!", 0xFF4400),
+      (assign, reg3, ":cur_hp"),
+      (display_message, "@Overkill! {s10} killed {s11} with {reg2} damage to the {s7}! Remaining HP: {reg3}", 0xFF4400),
     (else_try),
-      # 2. Potential Knockout or Normal Hit: Convert to Blunt.
+      # 2. Potential Knockout or Normal Hit: apply recalculated damage.
       (agent_get_troop_id, ":vtrp", ":victim"),
       (str_store_troop_name, s11, ":vtrp"),
       (store_add, ":total_impact", ":reduced_damage", ":blunt_damage"),
-      (store_agent_hit_points, ":victim_hp", ":victim", 1),
-      (assign, ":will_knockout", 0),
+      (assign, ":should_wound", 0),
       (try_begin),
-        (ge, ":total_impact", ":victim_hp"),
-        (assign, ":will_knockout", 1),
+        (gt, ":blunt_damage", 0),
+        (gt, ":cur_hp", ":reduced_damage"),
+        (ge, ":total_impact", ":cur_hp"),
+        (assign, ":should_wound", 1),
       (try_end),
 
       (try_begin),
-        (eq, ":will_knockout", 1),
-        
-        (assign, ":force_blunt_ko", 0),
+        (gt, ":reduced_damage", ":cur_hp"),
+        (agent_set_slot, ":victim", slot_agent_pending_blunt_damage, 0),
+        (agent_set_no_death_knock_down_only, ":victim", 0),
+        (set_trigger_result, ":reduced_damage"),
+      (else_try),
+        (eq, ":should_wound", 1),
+        (assign, ":force_wound", 0),
         (try_begin),
           # 1. Lieutenants have a Hard Override: always captured/wounded if hit is lethal (not overkill)
           (is_between, ":vtrp", lieutenants_begin, lieutenants_end),
-          (assign, ":force_blunt_ko", 1),
-          (agent_set_no_death_knock_down_only, ":victim", 1),
+          (assign, ":force_wound", 1),
           (display_message, "@Lieutenant {s11} has been wounded by a hit to the {s7}!", 0xFF8844),
         (else_try),
           # 2. Regular Troops: Only converted to prisoners if armor blunted the hit (or if weapon was blunt)
           # If blunt_damage > 0, it means armor blunted a sharp hit.
           (gt, ":blunt_damage", 0),
-          (assign, ":force_blunt_ko", 1),
-          (agent_set_no_death_knock_down_only, ":victim", 0), # Regular troops MUST have this at 0 for prisoner logic
+          (assign, ":force_wound", 1),
         (try_end),
 
         (try_begin),
-          (eq, ":force_blunt_ko", 1),
-          # Deliver manual blunt damage to force a capture-able casualty
-          (agent_set_slot, ":victim", slot_agent_is_applying_blunt, 1),
-          (agent_deliver_damage_to_agent, ":attacker", ":victim", ":total_impact", itm_practice_staff),
-          (agent_set_slot, ":victim", slot_agent_is_applying_blunt, 0),
-          (set_trigger_result, 0), # Negation of original sharp hit
+          (eq, ":force_wound", 1),
+          (agent_set_no_death_knock_down_only, ":victim", 0),
+          (agent_set_slot, ":victim", slot_agent_pending_blunt_damage, 1),
+          (store_sub, ":reduced_to_one_hp", ":cur_hp", 1),
+          (val_max, ":reduced_to_one_hp", 0),
+          (set_trigger_result, ":reduced_to_one_hp"),
           
           (assign, reg1, ":total_impact"),
           (display_message, "@Downed: {s11} (Hit: {s7}, Impact: {reg1})", 0xFFFF00),
         (else_try),
           # Lethal hit on unarmored regular troop with sharp weapon -> Normal Death
+          (agent_set_slot, ":victim", slot_agent_pending_blunt_damage, 0),
+          (agent_set_no_death_knock_down_only, ":victim", 0),
           (set_trigger_result, ":total_impact"),
         (try_end),
       (else_try),
-        # Normal hit (not lethal yet): Apply blunt portion via script, let engine apply sharp portion.
-        (try_begin),
-          (gt, ":blunt_damage", 0),
-          (agent_set_slot, ":victim", slot_agent_is_applying_blunt, 1),
-          (agent_deliver_damage_to_agent, ":attacker", ":victim", ":blunt_damage", itm_practice_staff),
-          (agent_set_slot, ":victim", slot_agent_is_applying_blunt, 0),
-        (try_end),
-        (set_trigger_result, ":reduced_damage"),
+        (agent_set_no_death_knock_down_only, ":victim", 0),
+        (set_trigger_result, ":total_impact"),
+      (try_end),
+    (try_end),
+  ])
+
+damage_recalculation_apply_blunt = (
+  0, 0, 0, [],
+  [
+    (try_for_agents, ":victim"),
+      (agent_slot_eq, ":victim", slot_agent_pending_blunt_damage, 1),
+      (agent_is_alive, ":victim"),
+      (store_agent_hit_points, ":victim_hp", ":victim", 1),
+      (le, ":victim_hp", 1),
+      (agent_get_slot, ":attacker", ":victim", slot_agent_last_attacker),
+      (try_begin),
+        (lt, ":attacker", 0),
+        (assign, ":attacker", ":victim"),
+      (try_end),
+      (agent_get_wielded_item, ":original_wielded_item", ":attacker", 0),
+      (try_begin),
+        (neq, ":original_wielded_item", "itm_practice_sword"),
+        (agent_equip_item, ":attacker", "itm_practice_sword"),
+        (agent_set_wielded_item, ":attacker", "itm_practice_sword"),
+      (try_end),
+      (agent_set_slot, ":victim", slot_agent_pending_blunt_damage, 2),
+      (agent_set_slot, ":victim", slot_agent_is_applying_blunt, 1),
+      (agent_deliver_damage_to_agent, ":attacker", ":victim", 0, "itm_practice_sword"),
+      (agent_set_slot, ":victim", slot_agent_is_applying_blunt, 0),
+      (try_begin),
+        (gt, ":original_wielded_item", -1),
+        (neq, ":original_wielded_item", "itm_practice_sword"),
+        (agent_set_wielded_item, ":attacker", ":original_wielded_item"),
       (try_end),
     (try_end),
   ])
@@ -16086,6 +16152,7 @@ reset_overkill_on_spawn = (
   ti_on_agent_spawn, 0, 0, [],
   [
     (store_trigger_param_1, ":agent_no"),
+    (agent_set_slot, ":agent_no", slot_agent_pending_blunt_damage, 0),
     (agent_set_slot, ":agent_no", slot_agent_is_overkilled, 0),
   ])
 
@@ -16093,7 +16160,41 @@ lethal_overkill_death = (
   ti_on_agent_killed_or_wounded, 0, 0, [],
   [
     (store_trigger_param_1, ":dead_agent_no"),
+    (store_trigger_param_2, ":killer_agent_no"),
     (store_trigger_param_3, ":is_wounded"),
+    (try_begin),
+      (ge, ":dead_agent_no", 0),
+      (eq, ":is_wounded", 1),
+      (agent_is_human, ":dead_agent_no"),
+      (agent_get_troop_id, ":troop_id", ":dead_agent_no"),
+      (str_store_troop_name, s11, ":troop_id"),
+      (try_begin),
+        (ge, ":killer_agent_no", 0),
+        (agent_get_troop_id, ":killer_troop_id", ":killer_agent_no"),
+        (str_store_troop_name, s10, ":killer_troop_id"),
+      (else_try),
+        (str_store_string, s10, "@Unknown"),
+      (try_end),
+      (display_message, "@DEBUG Wounded/prisoner: {s11}, attacker {s10}", 0x66FF66),
+    (try_end),
+    (try_begin),
+      (ge, ":dead_agent_no", 0),
+      (agent_is_human, ":dead_agent_no"),
+      (neg|agent_slot_eq, ":dead_agent_no", slot_agent_pending_blunt_damage, 0),
+      (agent_get_troop_id, ":troop_id", ":dead_agent_no"),
+      (str_store_troop_name, s11, ":troop_id"),
+      (try_begin),
+        (ge, ":killer_agent_no", 0),
+        (agent_get_troop_id, ":killer_troop_id", ":killer_agent_no"),
+        (str_store_troop_name, s10, ":killer_troop_id"),
+      (else_try),
+        (str_store_string, s10, "@Unknown"),
+      (try_end),
+      (assign, reg1, ":is_wounded"),
+      (display_message, "@DEBUG Downed resolved: {s11}, killer {s10}, is_wounded={reg1}", 0x66CCFF),
+      (agent_set_slot, ":dead_agent_no", slot_agent_pending_blunt_damage, 0),
+      (agent_set_slot, ":dead_agent_no", slot_agent_is_applying_blunt, 0),
+    (try_end),
     (try_begin),
       (ge, ":dead_agent_no", 0),
       (eq, ":is_wounded", 0), # If surgery saved them (is_wounded=1), skip permanent death
@@ -16126,7 +16227,7 @@ for i_mt in range(len(mission_templates)):
     mt_triggers = list(mt[5])
     mt_triggers.append(reset_overkill_on_spawn)
     mt_triggers.append(damage_recalculation_hit)
-    # mt_triggers.append(damage_recalculation_apply) # Removed: logic merged into hit trigger
+    mt_triggers.append(damage_recalculation_apply_blunt)
     mt_triggers.append(lethal_overkill_death)
     mt[5] = mt_triggers
     mission_templates[i_mt] = tuple(mt)
