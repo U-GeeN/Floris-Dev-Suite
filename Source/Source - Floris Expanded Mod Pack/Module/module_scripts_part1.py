@@ -7060,8 +7060,20 @@ scripts_part1 = [
         (lt, ":troop_id", bandits_end),
         (val_mul, reg0, 2),
       (try_end),
+
+      (assign, ":result_xp", reg0),
+      (try_begin),
+        (call_script, "script_stack_econ_find_stack_by_troop", "p_main_party", ":troop_id"),
+        (assign, ":stack_no", reg0),
+        (ge, ":stack_no", 0),
+        (call_script, "script_stack_econ_initialize_stack", "p_main_party", ":stack_no"),
+        (call_script, "script_stack_econ_stack_ready_for_upgrade", "p_main_party", ":stack_no"),
+        (eq, reg0, 0),
+        (assign, ":result_xp", 100000000),
+      (try_end),
       
-      (set_trigger_result, reg0),
+      (assign, reg0, ":result_xp"),
+      (set_trigger_result, ":result_xp"),
   ]),
   ##
   

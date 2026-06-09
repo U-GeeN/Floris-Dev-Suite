@@ -1618,6 +1618,18 @@ stack_econ_field_weapon_3_count = 22
 stack_econ_field_weapon_4_count = 23
 stack_econ_field_base_gear_tier = 24
 stack_econ_field_base_gear_troop = 25
+stack_econ_field_horse_item = 26         # item_id of a looted horse given to infantry (-1 = none)
+stack_econ_field_is_mounted_infantry = 27 # 1 = infantry with looted horse, 0 = normal
+stack_econ_field_loot_value = 28          # abstract value of unsold loot carried by this stack
+
+stack_econ_cost_armor = 90       # tier 4 ~= 360 denars; Floris armor median ~= 349
+stack_econ_cost_helmet = 40      # tier 4 ~= 160 denars; Floris helmet median ~= 153
+stack_econ_cost_boots = 30       # tier 4 ~= 120 denars; Floris boots median ~= 119
+stack_econ_cost_gauntlets = 190  # tier 4 ~= 760 denars; Floris gauntlets median ~= 750
+stack_econ_cost_horse = 300      # tier 4 ~= 1200 denars; Floris horse median ~= 1182
+stack_econ_cost_weapon = 75      # tier 4 ~= 300 denars; Floris melee weapon median ~= 305
+stack_econ_cost_ranged = 80      # tier 4 ~= 320 denars; Floris ranged weapon median ~= 324
+stack_econ_cost_ammo = 40        # tier 4 ~= 160 denars; Floris ammo median ~= 170
 
 stack_econ_gear_armor = 0
 stack_econ_gear_helmet = 1

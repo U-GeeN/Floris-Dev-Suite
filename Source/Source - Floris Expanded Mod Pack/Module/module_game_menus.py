@@ -53,14 +53,27 @@ game_menus = [
 				# (jump_to_menu, "mnu_choose_options_1"),
 			]),
 		
-		("start_mod",[(eq, 1, 0),],"Quick Character (for mod testing)",
+		("start_mod",[],"Create Debug Character",
 			[
 				(call_script, "script_ccp_default_settings"),
 				(call_script, "script_ccp_end_presentation_begin_game"),
 				(set_show_messages, 0),
-				(troop_add_gold, "trp_player", 80000),
-				(troop_set_name, "trp_player", "@Tester"),
-				(party_set_name, "p_main_party", "@Tester"),
+				(assign, "$g_debug_character_start", 1),
+				(assign, "$cheat_mode", 1),
+				(assign, "$g_skip_tutorial", 1),
+				(assign, "$current_startup_quest_phase", 4),
+				(assign, "$g_do_one_more_meeting_with_merchant", 2),
+				(assign, "$dialog_with_merchant_ended", 1),
+				(assign, "$g_tutorial_entered", 1),
+				(assign, "$g_killed_first_bandit", 1),
+				(assign, "$g_starting_town", "p_town_6"),
+				(assign, "$current_town", "$g_starting_town"),
+				(set_encountered_party, "$g_starting_town"),
+				(call_script, "script_player_arrived"),
+				(party_set_morale, "p_main_party", 100),
+				(troop_add_gold, "trp_player", 100000),
+				(troop_set_name, "trp_player", "@Debug Character"),
+				(party_set_name, "p_main_party", "@Debug Character"),
 				# (troop_add_item, "trp_player","itm_leather_jerkin",0),
 				# (troop_add_item, "trp_player","itm_leather_boots",0),
 				# (troop_add_item, "trp_player","itm_sword_medieval_a", 0),
@@ -75,13 +88,22 @@ game_menus = [
 				# (troop_raise_skill, "trp_player","skl_spotting",10),
 				# (troop_raise_skill, "trp_player","skl_athletics",10),      
 				(troop_equip_items,"trp_player"),   
+				(party_relocate_near_party, "p_main_party", "$g_starting_town", 2),
 				(set_show_messages, 1),
-				(change_screen_map),
+				(jump_to_menu, "mnu_debug_character_start_to_map"),
 			]),
 	  
 		("go_back", [], "Go back", [(change_screen_quit)]),
     ]),
 ## CC
+
+("debug_character_start_to_map", mnf_disable_all_keys,
+	"Preparing the world map...",
+	"mesh_load_window",
+	[
+		(change_screen_map),
+	],
+	[]),
 
 ("start_phase_2",mnf_disable_all_keys,   # start_phase_2_5
     "{!}{s16}",
@@ -4153,30 +4175,16 @@ game_menus = [
 
           (store_add, ":total_capture_size", ":num_rescued_prisoners", ":num_captured_enemies"),
           #(neq, "$freelancer_state", 1), #+freelancer	
-          (gt, ":total_capture_size", 0),          
-          (change_screen_exchange_with_party, "p_temp_party"),
+          #(gt, ":total_capture_size", 0),          
+          #(change_screen_exchange_with_party, "p_temp_party"),
+          (jump_to_menu, "mnu_total_victory"),
         (else_try),          
           (eq, "$loot_screen_shown", 0),
           (assign, "$loot_screen_shown", 1),
-          (try_begin),
-            (gt, "$g_ally_party", 0),
-            (call_script, "script_party_add_party", "$g_ally_party", "p_temp_party"), #Add remaining prisoners to ally TODO: FIX it.
-          (else_try),
-            (party_get_num_attached_parties, ":num_quick_attachments", "p_main_party"),
-            (gt, ":num_quick_attachments", 0),
-            (party_get_attached_party_with_rank, ":helper_party", "p_main_party", 0),
-            (call_script, "script_party_add_party", ":helper_party", "p_temp_party"), #Add remaining prisoners to our reinforcements
-          ## CC
-          #(else_try),
-            #(assign, "$add_1000", 1),
-            #(call_script, "script_party_prisoners_add_party_prisoners", "p_main_party", "p_temp_party"),
-            #(assign, "$add_1000", 0),
-          ## CC
-          (try_end),          
+
           (troop_clear_inventory, "trp_temp_troop"),
           (call_script, "script_party_calculate_loot", "p_total_enemy_casualties"), #p_encountered_party_backup changed to total_enemy_casualties
-          (store_mul, ":stack_econ_loot_value", reg0, 10),
-          (call_script, "script_stack_econ_distribute_loot_value", "p_main_party", ":stack_econ_loot_value"),
+          (store_mul, "$g_stack_econ_loot_value", reg0, 10),
           (gt, reg0, 0),          
           (troop_sort_inventory, "trp_temp_troop"),
           ## CC
@@ -4188,17 +4196,21 @@ game_menus = [
             (is_between, ":stack_troop", companions_begin, companions_end),
             (val_add, ":num_companions", 1),
           (try_end),
-          (try_begin),
-            (gt, ":num_companions", 0),
-            (assign, "$return_menu", "mnu_total_victory"),
-            (jump_to_menu, "mnu_manage_loot_pool"),
-          (else_try),
-            (change_screen_loot, "trp_temp_troop"),
-          (try_end),
+          (assign, "$return_menu", "mnu_total_victory"),
+          (jump_to_menu, "mnu_post_battle_loot_menu"),
           #end Autoloot
           ## CC
         (else_try),
           #finished all
+          (try_begin),
+            (gt, "$g_ally_party", 0),
+            (call_script, "script_party_add_party", "$g_ally_party", "p_temp_party"), #Add remaining prisoners to ally TODO: FIX it.
+          (else_try),
+            (party_get_num_attached_parties, ":num_quick_attachments", "p_main_party"),
+            (gt, ":num_quick_attachments", 0),
+            (party_get_attached_party_with_rank, ":helper_party", "p_main_party", 0),
+            (call_script, "script_party_add_party", ":helper_party", "p_temp_party"), #Add remaining prisoners to our reinforcements
+          (try_end),          
           (try_begin),
             (le, "$g_ally_party", 0),
             (end_current_battle),
@@ -17026,8 +17038,7 @@ game_menus = [
           (try_end),
                     
           (call_script, "script_party_calculate_loot", "p_total_enemy_casualties"), #p_encountered_party_backup changed to total_enemy_casualties          
-          (store_mul, ":stack_econ_loot_value", reg0, 10),
-          (call_script, "script_stack_econ_distribute_loot_value", "p_main_party", ":stack_econ_loot_value"),
+          (store_mul, "$g_stack_econ_loot_value", reg0, 10),
           (gt, reg0, 0),          
           (troop_sort_inventory, "trp_temp_troop"),
           ## CC
@@ -17497,6 +17508,11 @@ game_menus = [
         # reg20 now contains number of items in loot pool
         (try_begin),
           (eq, reg20, 0),
+          (eq, reg50, 1),
+          (str_clear, s10),
+          (str_store_string, 20, "str_item_pool_leave"),
+        (else_try),
+          (eq, reg20, 0),
           (str_store_string, 10, "str_item_pool_no_items"),
           (str_store_string, 20, "str_item_pool_leave"),
         (else_try),
@@ -17612,6 +17628,194 @@ game_menus = [
       ),
     ]
   ),
+
+  ("post_battle_loot_menu",
+    0,
+    "{s10}{s50}",
+    "none",
+    [
+      (assign, "$pool_troop", "trp_temp_troop"),
+      (assign, reg20,0),
+      (troop_get_inventory_capacity, ":inv_cap", "$pool_troop"),
+        (try_for_range, ":i_slot", 0, ":inv_cap"),
+          (troop_get_inventory_slot, ":item_id", "$pool_troop", ":i_slot"),
+          (ge, ":item_id", 0),
+          (val_add, reg20,1),
+        (try_end),
+        # reg20 now contains number of items in loot pool
+        (try_begin),
+          (eq, reg20, 0),
+          (str_store_string, 10, "str_item_pool_no_items"),
+          (str_store_string, 20, "str_item_pool_leave"),
+        (else_try),
+          (eq, reg20, 1),
+          (str_store_string, 10, "str_item_pool_one_item"),
+          (str_store_string, 20, "str_item_pool_abandon"),
+        (else_try),
+          (str_store_string, 10, "str_item_pool_many_items"),
+          (str_store_string, 20, "str_item_pool_abandon"),
+        (try_end),
+		(try_begin),
+			(neq, reg50, 1),
+			(str_clear, s50),
+		(else_try),
+			(assign, reg50, 0), # We let s50 pass this time, but again unless appropriate.
+			(str_store_string, s50, "@^^{s50}"),
+		(try_end),
+    ],
+    [
+      ("auto_loot",
+        [
+          (eq, "$inventory_menu_offset",0),
+          (store_free_inventory_capacity, ":space", "$pool_troop"),
+          (ge, ":space", 10)
+        ],
+        "Let your heroes select gear from the item pool.", [(jump_to_menu, "mnu_auto_loot")]
+      ),
+      ("auto_loot_no",
+        [
+          (eq, "$inventory_menu_offset",0),
+          (store_free_inventory_capacity, ":space", "$pool_troop"),
+          (lt, ":space", 10),
+          (disable_menu_option)
+        ],
+        "Insufficient item pool space for auto-upgrade.", []
+      ),
+      ("loot", [],
+        "Access the item pool.", [(change_screen_loot, "$pool_troop")]
+      ),
+      ("distribute_troops", [],
+        "Distribute Loot to Troops.",
+        [
+          (call_script, "script_stack_econ_distribute_loot", "p_main_party", "$g_stack_econ_loot_value"),
+          (jump_to_menu, "mnu_post_battle_loot_menu"),
+        ]
+      ),
+      ("handle_prisoners", [],
+        "Handle prisoners.",
+        [
+          (change_screen_exchange_with_party, "p_temp_party"),
+        ]
+      ),
+      ("auto_loot_upgrade_management", [],
+        "Manage the upgrading of companion equipment.",
+        [
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id,   ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (assign, "$temp", ":stack_troop"),
+            (assign, ":num_stacks", 0),
+          (try_end),
+          (start_presentation, "prsnt_autoloot_upgrade_management"),
+        ]
+      ),
+      ("auto_loot_leave_with_nothing", 
+        [
+          (gt, reg20, 0),
+          (assign, reg1, "$g_price_threshold_for_picking"),
+          (gt, reg1, 0),
+        ],
+        "Pick the items which price higher than {reg1} denars and continue.",
+        [
+          (party_get_num_companion_stacks, ":num_stacks","p_main_party"),
+          (try_for_range, ":i_stack", 0, ":num_stacks"),
+            (party_stack_get_troop_id,":stack_troop","p_main_party",":i_stack"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (call_script, "script_transfer_special_inventory", "$pool_troop", ":stack_troop"), #special items
+          (try_end),
+          (call_script, "script_sort_food", "trp_player"),
+		  (str_clear, s50),
+		  (jump_to_menu, "$return_menu"),
+        ]
+      ),
+      ("auto_loot_leave", [],
+        "{s20}",
+        [
+          (party_get_num_companion_stacks, ":num_stacks","p_main_party"),
+          (try_for_range, ":i_stack", 0, ":num_stacks"),
+            (party_stack_get_troop_id,":stack_troop","p_main_party",":i_stack"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (call_script, "script_transfer_inventory", "$pool_troop", ":stack_troop", 1), #include book
+          (try_end),
+          (call_script, "script_sort_food", "trp_player"),
+		  (str_clear, s50),
+		  (jump_to_menu, "$return_menu"),
+        ]
+      ),
+    ]
+  ),
+
+  ("distribute_horses",
+    0,
+    "You have {reg5} horse(s) available to distribute. Move horses from your inventory into the selection pool, then confirm distribution.{s10}",
+    "none",
+    [
+      # Mode 1: first entry - copy player horses to temp pool
+      (try_begin),
+        (eq, "$g_horse_distribute_mode", 1),
+        (assign, "$g_horse_distribute_mode", 2),
+        (troop_clear_inventory, "trp_temp_troop"),
+        (troop_get_inventory_capacity, ":cap", "trp_player"),
+        (try_for_range, ":slot", 0, ":cap"),
+          (troop_get_inventory_slot, ":item", "trp_player", ":slot"),
+          (ge, ":item", 0),
+          (item_get_type, ":type", ":item"),
+          (eq, ":type", itp_type_horse),
+          (store_free_inventory_capacity, ":free", "trp_temp_troop"),
+          (gt, ":free", 0),
+          (troop_add_item, "trp_temp_troop", ":item"),
+          (troop_remove_item, "trp_player", ":item"),
+        (try_end),
+      (try_end),
+
+      # Count horses currently in the pool
+      (assign, reg5, 0),
+      (troop_get_inventory_capacity, ":cap", "trp_temp_troop"),
+      (try_for_range, ":slot", 0, ":cap"),
+        (troop_get_inventory_slot, ":item", "trp_temp_troop", ":slot"),
+        (ge, ":item", 0),
+        (item_get_type, ":type", ":item"),
+        (eq, ":type", itp_type_horse),
+        (val_add, reg5, 1),
+      (try_end),
+      (assign, "$g_horse_pool_count", reg5),
+      (str_clear, s10),
+    ],
+    [
+      ("horse_distribute_select",
+        [(gt, "$g_horse_pool_count", 0)],
+        "Select horses from your inventory to distribute ({reg5} in pool).",
+        [(assign, reg5, "$g_horse_pool_count"), (change_screen_loot, "trp_temp_troop")]
+      ),
+      ("horse_distribute_confirm",
+        [(gt, "$g_horse_pool_count", 0)],
+        "Confirm: assign horses in the pool to eligible infantry.",
+        [
+          (call_script, "script_assign_horses_to_infantry", "p_main_party"),
+          (assign, "$g_horse_distribute_mode", 0),
+          (jump_to_menu, "$return_menu"),
+        ]
+      ),
+      ("horse_distribute_cancel", [],
+        "Cancel - return all pooled horses to inventory.",
+        [
+          (troop_get_inventory_capacity, ":cap", "trp_temp_troop"),
+          (try_for_range, ":slot", 0, ":cap"),
+            (troop_get_inventory_slot, ":item", "trp_temp_troop", ":slot"),
+            (ge, ":item", 0),
+            (item_get_type, ":type", ":item"),
+            (eq, ":type", itp_type_horse),
+            (troop_add_item, "trp_player", ":item"),
+            (troop_remove_item, "trp_temp_troop", ":item"),
+          (try_end),
+          (assign, "$g_horse_distribute_mode", 0),
+          (jump_to_menu, "$return_menu"),
+        ]
+      ),
+    ]
+  ),
+
 ########################################################
 # Autoloot Game Menus end
 ########################################################

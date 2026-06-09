@@ -11831,6 +11831,24 @@ dialogs_part3 = [
 ## CC view regular's equipment
 ##diplomacy end+
 
+  [anyone|plyr,"regular_member_talk", [], "How is your equipment holding up?", "regular_member_stack_econ_report",[
+    (assign, ":stack", -1),
+    (party_get_num_companion_stacks, ":num_of_stacks", "p_main_party"),
+    (try_for_range, ":i", 0, ":num_of_stacks"),
+        (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":i"),
+        (eq, ":stack_troop", "$g_talk_troop"),
+        (assign, ":stack", ":i"),
+        (assign, ":num_of_stacks", 0),
+    (try_end),
+    (try_begin),
+        (neq, ":stack", -1),
+        (call_script, "script_stack_econ_debug_report_stack", "p_main_party", ":stack"),
+    (else_try),
+        (str_store_string, s2, "@I do not have a separate equipment record for this stack."),
+    (try_end),
+   ]],
+  [anyone,"regular_member_stack_econ_report", [], "{s2}", "do_regular_member_view_char",[]],
+
   [anyone|plyr,"regular_member_talk", [], "Nothing. Keep moving.", "close_window",[]],
 
 
@@ -13215,8 +13233,14 @@ dialogs_part3 = [
         (assign, ":num_of_stacks", 0),
     (try_end),
     (neq, ":stack", -1),
-    (call_script, "script_game_get_upgrade_xp", "$g_talk_troop"),
-    (party_add_xp_to_stack, "p_main_party", ":stack", reg0),
+    (call_script, "script_stack_econ_stack_count_ready_for_upgrade", "p_main_party", ":stack", 1),
+    (try_begin),
+        (eq, reg0, 1),
+        (call_script, "script_game_get_upgrade_xp", "$g_talk_troop"),
+        (party_add_xp_to_stack, "p_main_party", ":stack", reg0),
+    (else_try),
+        (display_message, "@CHEAT: The best soldier in this stack still has low-tier equipment and cannot upgrade yet.", 0xFFFF6666),
+    (try_end),
    ]],
   [anyone|plyr,"regular_member_talk", [(ge, "$cheat_mode", 1)], "CHEAT: Upgrade Full Stack", "do_regular_member_view_char",[
     (assign, ":stack", -1),
@@ -13228,10 +13252,17 @@ dialogs_part3 = [
         (assign, ":num_of_stacks", 0),
     (try_end),
     (neq, ":stack", -1),
-    (call_script, "script_game_get_upgrade_xp", "$g_talk_troop"),
     (party_stack_get_size, reg1, "p_main_party", ":stack"),
-    (val_mul, reg0, reg1),
-    (party_add_xp_to_stack, "p_main_party", ":stack", reg0),
+    (call_script, "script_stack_econ_stack_count_ready_for_upgrade", "p_main_party", ":stack", reg1),
+    (try_begin),
+        (eq, reg0, 1),
+        (call_script, "script_game_get_upgrade_xp", "$g_talk_troop"),
+        (party_stack_get_size, reg1, "p_main_party", ":stack"),
+        (val_mul, reg0, reg1),
+        (party_add_xp_to_stack, "p_main_party", ":stack", reg0),
+    (else_try),
+        (display_message, "@CHEAT: The full stack cannot upgrade while any selected soldier has low-tier equipment.", 0xFFFF6666),
+    (try_end),
    ]],
   [anyone|plyr,"regular_member_talk", [(ge, "$cheat_mode", 1)], "CHEAT: Equip One Member for Next Upgrade", "do_regular_member_view_char",[
     (assign, ":stack", -1),
@@ -13259,18 +13290,6 @@ dialogs_part3 = [
     (party_stack_get_size, ":stack_size", "p_main_party", ":stack"),
     (call_script, "script_stack_econ_cheat_equip_stack_for_next_upgrade", "p_main_party", ":stack", ":stack_size"),
     (call_script, "script_stack_econ_refresh_visible_troop_agents", "$g_talk_troop"),
-   ]],
-  [anyone|plyr,"regular_member_talk", [(ge, "$cheat_mode", 1)], "CHEAT: Check Stack Economy", "do_regular_member_view_char",[
-    (assign, ":stack", -1),
-    (party_get_num_companion_stacks, ":num_of_stacks", "p_main_party"),
-    (try_for_range, ":i", 0, ":num_of_stacks"),
-        (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":i"),
-        (eq, ":stack_troop", "$g_talk_troop"),
-        (assign, ":stack", ":i"),
-        (assign, ":num_of_stacks", 0),
-    (try_end),
-    (neq, ":stack", -1),
-    (call_script, "script_stack_econ_debug_report_stack", "p_main_party", ":stack"),
    ]],
   ##Caba new cheats end
 

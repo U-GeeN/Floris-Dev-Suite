@@ -487,11 +487,15 @@ simple_triggers_part5 = [
     (neq, "$g_mod_version", floris_version),
 	#(try_begin), #Version 2.41 Fixes (25)
 	
-    #(try_begin), #Version 2.4 Fixes (24)
+	#(try_begin), #Version 2.4 Fixes (24)
     #    (lt, "$g_mod_version", 24),
 	(call_script, "script_init_item_score"), ##just in case
 	(call_script, "script_init_all_keys"),
 	(call_script, "script_floris_set_default_prefs", 1),
+	(try_begin),
+		(eq, "$g_debug_character_start", 1),
+		(assign, "$cheat_mode", 1),
+	(try_end),
 	(try_begin),
 		(neg|party_slot_eq, "p_town_1", slot_town_is_coastal, 4),
 		(call_script, "script_initialize_sea_trade_routes"),

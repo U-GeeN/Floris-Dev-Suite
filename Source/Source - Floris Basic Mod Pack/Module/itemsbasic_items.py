@@ -45,7 +45,6 @@ imodbits_thrown_minus_heavy = imodbit_bent | imodbit_balanced| imodbit_large_bag
 imodbits_horse_good = imodbit_spirited|imodbit_heavy
 imodbits_good   = imodbit_sturdy | imodbit_thick | imodbit_hardened | imodbit_reinforced
 imodbits_bad    = imodbit_rusty | imodbit_chipped | imodbit_tattered | imodbit_ragged | imodbit_cracked | imodbit_bent
-# Replace winged mace/spiked mace with: Flanged mace / Knobbed mace?
 # Fauchard (majowski glaive) 
 ## CC
 missile_distance_trigger	= [

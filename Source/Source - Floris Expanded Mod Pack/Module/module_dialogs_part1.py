@@ -2618,6 +2618,60 @@ dialogs_part1 = [
       ]],
       
   [anyone|plyr,"member_personal_action", [], "Never mind.", "member_chat",[]],
+
+  ## Distribute Horses to Infantry
+  [anyone|plyr,"member_personal_action",
+  [
+    (assign, ":horse_count", 0),
+    (troop_get_inventory_capacity, ":cap", "trp_player"),
+    (try_for_range, ":slot", 0, ":cap"),
+      (troop_get_inventory_slot, ":item", "trp_player", ":slot"),
+      (ge, ":item", 0),
+      (item_get_type, ":type", ":item"),
+      (eq, ":type", itp_type_horse),
+      (val_add, ":horse_count", 1),
+    (try_end),
+    (gt, ":horse_count", 0),
+    (assign, reg0, ":horse_count"),
+  ],
+  "Distribute horses to the infantry. ({reg0} available)","close_window",
+  [
+    (assign, "$g_horse_distribute_mode", 1),
+    (assign, "$return_menu", "mnu_camp"),
+    (jump_to_menu, "mnu_distribute_horses"),
+  ]],
+
+  ## Dismount Infantry
+  [anyone|plyr,"member_personal_action",
+  [
+    (assign, ":mounted_count", 0),
+    (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+    (val_min, ":num_stacks", slot_party_stack_econ_max_stacks),
+    (try_for_range, ":stack_no", 0, ":num_stacks"),
+      (call_script, "script_stack_econ_get_field", "p_main_party", ":stack_no", stack_econ_field_is_mounted_infantry),
+      (eq, reg1, 1),
+      (val_add, ":mounted_count", 1),
+    (try_end),
+    (gt, ":mounted_count", 0),
+  ],
+  "Dismount infantry and return their horses to inventory.","do_member_personal_action",
+  [
+    (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+    (val_min, ":num_stacks", slot_party_stack_econ_max_stacks),
+    (try_for_range, ":stack_no", 0, ":num_stacks"),
+      (call_script, "script_stack_econ_get_field", "p_main_party", ":stack_no", stack_econ_field_is_mounted_infantry),
+      (eq, reg1, 1),
+      (call_script, "script_stack_econ_get_field", "p_main_party", ":stack_no", stack_econ_field_horse_item),
+      (ge, reg1, 0),
+      (troop_add_item, "trp_player", reg1),
+      (call_script, "script_stack_econ_set_field", "p_main_party", ":stack_no", stack_econ_field_horse_item, -1),
+      (call_script, "script_stack_econ_set_field", "p_main_party", ":stack_no", stack_econ_field_horse_tier, 0),
+      (call_script, "script_stack_econ_set_field", "p_main_party", ":stack_no", stack_econ_field_horse_count, 0),
+      (call_script, "script_stack_econ_set_field", "p_main_party", ":stack_no", stack_econ_field_is_mounted_infantry, 0),
+    (try_end),
+    (display_message, "@Horses returned to your inventory."),
+  ]],
+
   [anyone,"do_member_personal_action", [], "Anything else?", "member_personal_action",[]],
 ## CC
   [anyone,"do_member_trade", [], "Anything else?", "member_talk",[]],
