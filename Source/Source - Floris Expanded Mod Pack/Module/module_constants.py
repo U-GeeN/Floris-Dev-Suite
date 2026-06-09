@@ -1583,6 +1583,58 @@ slot_town_bank_deadline = 464
 #Floris Custom Troops
 slot_custom_army = 465   ###CAN REMOVE IN 2.6 - use slot_troop_state & slot_troop_cur_center
 
+## Floris stack equipment economy
+## Native Warband does not expose real party-stack slots in this header set.
+## These party slots emulate per-stack storage as:
+##   slot_party_stack_econ_base + stack_no * slot_party_stack_econ_stride + field
+slot_party_stack_econ_base = 520
+slot_party_stack_econ_stride = 32
+slot_party_stack_econ_max_stacks = 40
+stack_econ_debug_messages = 1
+
+stack_econ_field_initialized = 0
+stack_econ_field_troop = 1
+stack_econ_field_gold = 2
+stack_econ_field_armor_tier = 3
+stack_econ_field_helmet_tier = 4
+stack_econ_field_boots_tier = 5
+stack_econ_field_gauntlets_tier = 6
+stack_econ_field_horse_tier = 7
+stack_econ_field_weapon_1_tier = 8
+stack_econ_field_weapon_2_tier = 9
+stack_econ_field_weapon_3_tier = 10
+stack_econ_field_weapon_4_tier = 11
+stack_econ_field_quality_seed = 12
+stack_econ_field_last_size = 13
+stack_econ_field_spawn_index = 14
+stack_econ_field_armor_count = 15
+stack_econ_field_helmet_count = 16
+stack_econ_field_boots_count = 17
+stack_econ_field_gauntlets_count = 18
+stack_econ_field_horse_count = 19
+stack_econ_field_weapon_1_count = 20
+stack_econ_field_weapon_2_count = 21
+stack_econ_field_weapon_3_count = 22
+stack_econ_field_weapon_4_count = 23
+stack_econ_field_base_gear_tier = 24
+stack_econ_field_base_gear_troop = 25
+
+stack_econ_gear_armor = 0
+stack_econ_gear_helmet = 1
+stack_econ_gear_boots = 2
+stack_econ_gear_gauntlets = 3
+stack_econ_gear_horse = 4
+stack_econ_gear_weapon = 5
+stack_econ_gear_ranged = 6
+stack_econ_gear_ammo = 7
+
+slot_agent_stack_econ_applied = 180
+slot_agent_stack_econ_party = 181
+slot_agent_stack_econ_stack = 182
+
+slot_troop_stack_econ_base_tier = 500
+slot_troop_stack_econ_role = 501
+
 ## CC
 
 tavern_booksellers_begin = "trp_tavern_bookseller_1"

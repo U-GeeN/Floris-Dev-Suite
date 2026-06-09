@@ -3106,6 +3106,7 @@ mission_templates = [
        [
          (store_trigger_param_1, ":agent_no"),
          (call_script, "script_agent_reassign_team", ":agent_no"),
+         (call_script, "script_stack_econ_apply_to_agent", ":agent_no"),
 
          (assign, ":initial_courage_score", 5000),
                   

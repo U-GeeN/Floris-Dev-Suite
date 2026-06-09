@@ -4175,6 +4175,8 @@ game_menus = [
           (try_end),          
           (troop_clear_inventory, "trp_temp_troop"),
           (call_script, "script_party_calculate_loot", "p_total_enemy_casualties"), #p_encountered_party_backup changed to total_enemy_casualties
+          (store_mul, ":stack_econ_loot_value", reg0, 10),
+          (call_script, "script_stack_econ_distribute_loot_value", "p_main_party", ":stack_econ_loot_value"),
           (gt, reg0, 0),          
           (troop_sort_inventory, "trp_temp_troop"),
           ## CC
@@ -13011,6 +13013,7 @@ game_menus = [
     "You head towards the marketplace.",
     "none",
     [
+        (call_script, "script_stack_econ_process_party_equipment", "p_main_party"),
 ## Companions Overview, by Jedediah Q, modified by lazeras
 	(try_begin),
 	(eq, "$jq_just_visited_CO", 1),
@@ -17023,6 +17026,8 @@ game_menus = [
           (try_end),
                     
           (call_script, "script_party_calculate_loot", "p_total_enemy_casualties"), #p_encountered_party_backup changed to total_enemy_casualties          
+          (store_mul, ":stack_econ_loot_value", reg0, 10),
+          (call_script, "script_stack_econ_distribute_loot_value", "p_main_party", ":stack_econ_loot_value"),
           (gt, reg0, 0),          
           (troop_sort_inventory, "trp_temp_troop"),
           ## CC
