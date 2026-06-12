@@ -14,7 +14,7 @@ from module_items import *
 
 ####################################################################################################################
 # scripts is a list of script records.
-# Each script record contns the following two fields:
+# Each script record contains the following two fields:
 # 1) Script id: The prefix "script_" will be inserted when referencing scripts.
 # 2) Operation block: This must be a valid operation block. See header_operations.py for reference.
 ####################################################################################################################

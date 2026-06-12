@@ -1,8 +1,8 @@
 from module_troops_part1 import *
 from module_troops_part2 import *
+from module_troops_native_reworked import *
 
-troops = troops_part1 + troops_part2
-
+troops = troops_part1 + troops_part2 + troops_native_reworked
 
 ####Troop upgrade declarations
 ## Floris: Multiple troop trees
