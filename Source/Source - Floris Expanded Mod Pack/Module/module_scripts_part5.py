@@ -14848,7 +14848,11 @@ scripts_part5 = [
 	(assign, "$drowning", 1),
 	(assign, "$g_encumbrance_penalty", 0),
 	(assign, "$g_dplmc_horse_speed", 0),
-	(assign, "$cheat_mode", 0),
+	(assign, "$cheat_mode", 1),
+	(try_begin),
+		(eq, "$g_debug_character_start", 1),
+		(assign, "$cheat_mode", 1),
+	(try_end),
 	(assign, "$disable_npc_complaints", 0),
 	(assign, "$g_date", 0),
 	(try_begin), #skip those set in the game-setup screens

@@ -30,12 +30,12 @@ num_merchandise_goods = 36
 
 triggers = [
 # Tutorial:
-  (0.1, 0, ti_once, [(map_free,0)], [(dialog_box,"str_tutorial_map1")]),
+  (0.1, 0, ti_once, [(map_free,0), (neq, "$g_debug_character_start", 1), (neq, "$g_skip_tutorial", 1), (neq, "$g_tutorial_entered", 1)], [(dialog_box,"str_tutorial_map1")]),
 
 #  (1.0, 0, ti_once, [(map_free,0)], [(start_map_conversation, "trp_guide", -1)]),
 
 ## CC
-  (0.0, 0, 0, 
+  (0.0, 0, 0,
     [
       (map_free),
       (neq, "$g_player_troop", "trp_player"),
@@ -43,6 +43,16 @@ triggers = [
     [
       (assign, "$g_player_troop", "trp_player"),
       (set_player_troop, "$g_player_troop"),
+    ]),
+
+  (0.0, 0, 0,
+    [
+      (map_free),
+      (eq, "$g_debug_character_start", 1),
+      (lt, "$cheat_mode", 1),
+    ],
+    [
+      (assign, "$cheat_mode", 1),
     ]),
 
   (24, 0, 0, [], []),

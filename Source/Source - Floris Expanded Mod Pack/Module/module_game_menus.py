@@ -53,62 +53,22 @@ game_menus = [
 				# (jump_to_menu, "mnu_choose_options_1"),
 			]),
 		
-		("start_mod",[],"Create Debug Character",
-			[
-				(call_script, "script_ccp_default_settings"),
-				(call_script, "script_ccp_end_presentation_begin_game"),
-				(set_show_messages, 0),
-				(assign, "$g_debug_character_start", 1),
-				(assign, "$cheat_mode", 1),
-				(assign, "$g_skip_tutorial", 1),
-				(assign, "$current_startup_quest_phase", 4),
-				(assign, "$g_do_one_more_meeting_with_merchant", 2),
-				(assign, "$dialog_with_merchant_ended", 1),
-				(assign, "$g_tutorial_entered", 1),
-				(assign, "$g_killed_first_bandit", 1),
-				(assign, "$g_starting_town", "p_town_6"),
-				(assign, "$current_town", "$g_starting_town"),
-				(set_encountered_party, "$g_starting_town"),
-				(call_script, "script_player_arrived"),
-				(party_set_morale, "p_main_party", 100),
-				(troop_add_gold, "trp_player", 100000),
-				(troop_set_name, "trp_player", "@Debug Character"),
-				(party_set_name, "p_main_party", "@Debug Character"),
-				# (troop_add_item, "trp_player","itm_leather_jerkin",0),
-				# (troop_add_item, "trp_player","itm_leather_boots",0),
-				# (troop_add_item, "trp_player","itm_sword_medieval_a", 0),
-				# (troop_add_item, "trp_player","itm_saddle_horse",0),
-				# (troop_add_item, "trp_player","itm_smoked_fish",0),         
-
-				# (troop_raise_attribute, "trp_player",ca_strength,100),
-				# (troop_raise_attribute, "trp_player",ca_agility,100),
-				# (troop_raise_skill, "trp_player","skl_power_strike",10),
-				# (troop_raise_skill, "trp_player","skl_riding",10),
-				# (troop_raise_skill, "trp_player","skl_pathfinding",10),
-				# (troop_raise_skill, "trp_player","skl_spotting",10),
-				# (troop_raise_skill, "trp_player","skl_athletics",10),      
-				(troop_equip_items,"trp_player"),   
-				(party_relocate_near_party, "p_main_party", "$g_starting_town", 2),
-				(set_show_messages, 1),
-				(jump_to_menu, "mnu_debug_character_start_to_map"),
-			]),
-	  
 		("go_back", [], "Go back", [(change_screen_quit)]),
     ]),
 ## CC
-
-("debug_character_start_to_map", mnf_disable_all_keys,
-	"Preparing the world map...",
-	"mesh_load_window",
-	[
-		(change_screen_map),
-	],
-	[]),
 
 ("start_phase_2",mnf_disable_all_keys,   # start_phase_2_5
     "{!}{s16}",
     "none",
     [
+		(try_begin),
+			(eq, "$g_debug_character_start", 1),
+			(assign, "$g_skip_tutorial", 1),
+			(assign, "$cheat_mode", 1),
+			(assign, "$current_startup_quest_phase", 4),
+			(party_relocate_near_party, "p_main_party", "$g_starting_town", 2),
+			(change_screen_map),
+		(try_end),
 		(str_store_party_name, s1, "$g_starting_town"),
 		(str_store_string, s16, "$g_journey_string"),
     ],
@@ -983,16 +943,6 @@ game_menus = [
  Still, these long years made you streetwise and sharp to the secrets of cities and shadowy backways."),
 	(jump_to_menu,"mnu_start_character_2"),
     ]),
-##    ("start_priest",[],"Priests.",[
-##      (assign,"$background_type",cb_priest),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s10,"@A {reg3?daughter:son} that nobody wanted, you were left to the church as a baby,\
-## a foundling raised by the priests and nuns to their own traditions.\
-## You were only one of many other foundlings and orphans, but you nonetheless received a lot of attention\
-## as well as many years of study in the church library and before the altar. They taught you many things.\
-## Gradually, faith became such a part of your life that it was no different from the blood coursing through your veins."),
-##	(jump_to_menu,"mnu_start_character_2"),
-##    ]),
     ("go_back",[],"Go back",
      [(jump_to_menu,"mnu_start_game_1"),
     ]),
@@ -1057,60 +1007,6 @@ game_menus = [
 	(jump_to_menu,"mnu_start_character_3"),
     ]),
       
-##      ("mummer",[],"Mummer.",[
-##      (assign,"$background_answer_2",5),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s13,"@{reg3?woman:man}"),
-##      (str_store_string,s12,"@{reg3?girl:boy}"),
-##      (str_store_string,s11,"@As a {s12} growing out of childhood,\
-## you attached yourself to a troupe of wandering entertainers, going from town to town setting up mummer's\
-## shows. It was a life of hard work, selling, begging and stealing your living from the punters who flocked\
-## to watch your antics. Over time you became a performer well capable of attracting a crowd."),
-##	(jump_to_menu,"mnu_start_character_3"),
-##    ]),
-##      ("courtier",[],"Courtier.",[
-##      (assign,"$background_answer_2",6),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s13,"@{reg3?woman:man}"),
-##      (str_store_string,s12,"@{reg3?girl:boy}"),
-##      (str_store_string,s11,"@As a {s12} growing out of childhood,\
-## you spent much of your life at court, inserting yourself into the tightly-knit circles of nobility.\
-## With the years you became more and more involved with the politics and intrigue demanded of a high-born {s13}.\
-## You could not afford to remain a stranger to backstabbing and political violence, even if you wanted to."),
-##	(jump_to_menu,"mnu_start_character_3"),
-##    ]),
-##      ("noble",[],"Noble in training.",[
-##      (assign,"$background_answer_2",7),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s13,"@{reg3?woman:man}"),
-##      (str_store_string,s12,"@{reg3?girl:boy}"),
-##      (try_begin),
-##      (eq,"$character_gender",tf_male),
-##      (str_store_string,s11,"@As a {s12} growing out of childhood,\
-## you were trained and educated to perform the duties and wield the rights of a noble landowner.\
-## The managing of taxes and rents were equally important in your education as diplomacy and even\
-## personal defence. You learned everything you needed to become a lord of your own hall."),
-##      (else_try),
-##      (str_store_string,s11,"@As a {s12} growing out of childhood,\
-## you were trained and educated to the duties of a noble {s13}. You learned much about the household arts,\
-## but even more about diplomacy and decorum, and all the things that a future husband might choose to speak of.\
-## Truly, you became every inch as shrewd as any lord, though it would be rude to admit it aloud."),
-##      (try_end),
-##	(jump_to_menu,"mnu_start_character_3"),
-##    ]),
-##      ("acolyte",[],"Cleric acolyte.",[
-##    (assign,"$background_answer_2",8),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s13,"@{reg3?woman:man}"),
-##      (str_store_string,s12,"@{reg3?girl:boy}"),
-##      (str_store_string,s11,"@As a {s12} growing out of childhood,\
-## you became an acolyte in the church, the lowest rank on the way to priesthood.\
-## Years of rigorous learning and hard work followed. You were one of several acolytes,\
-## performing most of the menial labour in the church in addition to being trained for more holy tasks.\
-## On the night of your adulthood you were allowed to conduct your first service.\
-## After that you were no longer an acolyte {s12}, but a {s13} waiting to take your vows into the service of God."),
-##	(jump_to_menu,"mnu_start_character_3"),
-##    ]),
       ("go_back",[],"Go back.",
      [(jump_to_menu,"mnu_start_character_1"),
     ]),
@@ -1122,30 +1018,6 @@ game_menus = [
     "none",
     [(assign, reg3, "$character_gender"),],
     [
-##      ("bravo",[],"A travelling bravo.",[
-##        (assign,"$background_answer_3",1),
-##      (str_store_string,s14,"@{reg3?daughter:man}"),
-##      (str_store_string,s13,"@{reg3?woman:man}"),
-##      (str_store_string,s12,"@Though the distinction felt sudden to you,\
-## somewhere along the way you had become a {s13}, and the whole world seemed to change around you.\
-## You left your old life behind to travel the roads as a mercenary, a bravo, guarding caravans for coppers\
-## or bashing in heads for silvers. You became a {s14} of the open road, working with bandits as often as against.\
-## Going from fight to fight, you grew experienced at battle, and you learned what it was to kill."),
-##	(jump_to_menu,"mnu_start_character_4"),
-##        ]),
-##      ("merc",[],"A sellsword in foreign lands.",[
-##        (assign,"$background_answer_3",2),
-##      (str_store_string,s14,"@{reg3?daughter:man}"),
-##      (str_store_string,s13,"@{reg3?woman:man}"),
-##      (str_store_string,s12,"@Though the distinction felt sudden to you,\
-## somewhere along the way you had become a {s13}, and the whole world seemed to change around you.\
-## You signed on with a mercenary company and travelled far from your home. The life you found was rough and\
-## ready, marching to the beat of strange drums and learning unusual ways of fighting.\
-## There were men who taught you how to wield any weapon you desired, and plenty of battles to hone your skills.\
-## You were one of the charmed few who survived through every campaign in which you marched."),
-##	(jump_to_menu,"mnu_start_character_4"),
-##        ]),
-
       ("squire",[(eq,"$character_gender",tf_male)],"A squire.",[
         (assign,"$background_answer_3",cb3_squire),
       (str_store_string,s14,"@{reg3?daughter:man}"),
@@ -1233,18 +1105,6 @@ game_menus = [
  firewood that warmed many freezing homes during winter. All for a few silvers, of course."),
 	(jump_to_menu,"mnu_start_character_4"),
         ]),
-##      ("preacher",[],"Itinerant preacher.",[
-##        (assign,"$background_answer_3",6),
-##      (str_store_string,s14,"@{reg3?daughter:man}"),
-##      (str_store_string,s13,"@{reg3?woman:man}"),
-##      (str_store_string,s12,"@Though the distinction felt sudden to you,\
-## somewhere along the way you had become a {s13}, and the whole world seemed to change around you.\
-## You packed your few belongings and went out into the world to spread the word of God. You preached to\
-## anyone who would listen, and impressed many with the passion of your sermons. Though you had taken a vow\
-## to remain in poverty through your itinerant years, you never lacked for food, drink or shelter; the\
-## hospitality of the peasantry was always generous to a rising {s13} of God."),
-##	(jump_to_menu,"mnu_start_character_4"),
-##        ]),
       ("go_back",[],"Go back.",
        [(jump_to_menu,"mnu_start_character_2"),
         ]
@@ -1283,15 +1143,6 @@ game_menus = [
  freedom to travel, you could no longer bear to stay in the same place. You simply went and never looked back..."),
         (jump_to_menu,"mnu_choose_skill"),
         ]),
-##      ("fervor",[],"Religious fervor.",[
-##        (assign,"$background_answer_4",4),
-##      (str_store_string,s13,"@Only you know exactly what caused you to give up your old life and become an adventurer.\
-## Regardless, the intense faith burning in your soul would not let you find peace in any single place.\
-## There were others in the world, souls to be washed in the light of God. Now you preach wherever you go,\
-## seeking to bring salvation and revelation to the masses, be they faithful or pagan. They will all know the\
-## glory of God by the time you're done..."),
-##        (jump_to_menu,"mnu_choose_skill"),
-##        ]),
       ("disown",[],"Being forced out of your home.",[
         (assign,"$background_answer_4",cb4_disown),
       (str_store_string,s13,"@Only you know exactly what caused you to give up your old life and become an adventurer.\
@@ -16749,7 +16600,13 @@ game_menus = [
     "auto_return_to_map",0,
     "stub",
     "none",
-    [(change_screen_map)],
+    [
+      (try_begin),
+        (eq, "$g_debug_character_start", 1),
+        (assign, "$cheat_mode", 1),
+      (try_end),
+      (change_screen_map),
+    ],
     []
   ),
 
@@ -17263,6 +17120,15 @@ game_menus = [
     [      
       (assign, ":continue", 1),
       (try_begin),
+        (eq, "$g_debug_character_start", 1),
+        (assign, "$g_skip_tutorial", 1),
+        (assign, "$cheat_mode", 1),
+        (assign, "$current_startup_quest_phase", 4),
+        (party_relocate_near_party, "p_main_party", "$g_starting_town", 2),
+        (change_screen_map),
+        (assign, ":continue", 0),
+      (try_end),
+      (try_begin),
         (eq, "$current_startup_quest_phase", 1),
         (try_begin),
           (eq, "$g_killed_first_bandit", 1),
@@ -17298,6 +17164,18 @@ game_menus = [
          (try_begin),
            (eq, "$g_skip_tutorial", 1),
            (assign, "$current_startup_quest_phase", 4),
+           (try_begin),
+             (eq, "$g_debug_character_start", 1),
+             (assign, "$cheat_mode", 1),
+             (assign, "$g_do_one_more_meeting_with_merchant", 2),
+             (assign, "$dialog_with_merchant_ended", 1),
+             (assign, "$g_tutorial_entered", 1),
+             (assign, "$g_killed_first_bandit", 1),
+             (troop_add_gold, "trp_player", 100000),
+             (troop_set_name, "trp_player", "@Debug Character"),
+             (party_set_name, "p_main_party", "@Debug Character"),
+             (troop_equip_items,"trp_player"),
+           (try_end),
            (party_relocate_near_party, "p_main_party", "$g_starting_town", 2),
            (change_screen_map),
          (else_try),

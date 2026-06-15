@@ -120,6 +120,8 @@ ccp_obj_stat_container                 = 43
 ccp_obj_button_back                    = 44
 ccp_obj_checkbox_skip_tutorial         = 45
 ccp_val_checkbox_skip_tutorial         = 46
+ccp_obj_checkbox_debug_character       = 47
+ccp_val_checkbox_debug_character       = 48
 
 # Slots of CCP_DATA
 # Slots 0-99 reserved.

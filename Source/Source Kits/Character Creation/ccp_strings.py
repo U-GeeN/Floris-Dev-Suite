@@ -20,6 +20,7 @@ strings = [
 	("ccp_label_gather_npcs", "Gather Companions"),
 	("ccp_label_region", "Starting Region"),
 	("ccp_label_skip_tutorial", "Skip Tutorial"),
+	("ccp_label_debug_character", "Debug Character"),
 	("ccp_empty", "{s31}"),
 	("ccp_str", "STR"),
 	("ccp_agi", "AGI"),

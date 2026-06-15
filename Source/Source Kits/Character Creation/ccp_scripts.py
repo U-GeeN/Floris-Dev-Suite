@@ -34,6 +34,7 @@ scripts = [
 		#(assign, "$g_fog", 0),
 		(assign, "$g_gether_npcs", 0),
 		(assign, "$g_skip_tutorial", 0),
+		(assign, "$g_debug_character_start", 0),
 		(assign, "$troop_trees", troop_trees_2),
 		(troop_set_slot, ccp_objects, ccp_val_menu_trooptrees, troop_trees_2),
 	]),
@@ -1706,7 +1707,7 @@ scripts = [
 			(troop_set_slot, "trp_player", slot_troop_renown, ":renown"),
 			(call_script, "script_change_player_honor", ":honor"),
 			(troop_add_gold, "trp_player", ":gold"),
-			
+
 			# Give the player his equipment.
 			(try_for_range, ":slot", ccp_item_storage_begin, ccp_item_storage_end),
 				(troop_slot_ge, ccp_data, ":slot", 1), # Prevent invalid items.

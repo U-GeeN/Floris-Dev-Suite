@@ -10,6 +10,7 @@ from header_operations import *
 from header_triggers import *
 from module_constants import *
 from header_items import *   # Added for Show all Items presentation.
+from header_parties import *
 from module_items import *   # Added for Show all Items presentation.
 import string
 
@@ -45,8 +46,9 @@ presentations = [
 		
 		(call_script, "script_gpu_create_mesh", "mesh_character_creator", 0, 0, 1000, 1325),
 		(overlay_set_alpha, reg1, 0x00),
-		
+
 		(assign, "$gpu_storage", "trp_tpe_presobj"),
+		(assign, "$gpu_data", ccp_objects),
 		
 		# Bottom Buttons
 		(call_script, "script_gpu_create_game_button", "str_ccp_label_done", 890, 15, ccp_obj_button_done),
@@ -228,6 +230,10 @@ presentations = [
 		# Skip Tutorial
 		(troop_set_slot, ccp_objects, ccp_val_checkbox_skip_tutorial, "$g_skip_tutorial"),
 		(call_script, "script_gpu_create_checkbox_white", 755, 425, "str_ccp_label_skip_tutorial", ccp_obj_checkbox_skip_tutorial, ccp_val_checkbox_skip_tutorial),
+
+		# Debug Character
+		(troop_set_slot, ccp_objects, ccp_val_checkbox_debug_character, "$g_debug_character_start"),
+		(call_script, "script_gpu_create_checkbox_white", 755, 390, "str_ccp_label_debug_character", ccp_obj_checkbox_debug_character, ccp_val_checkbox_debug_character),
 		
 		# Initialize the equipment list
 		(call_script, "script_ccp_initialize_faction_items"),
@@ -398,16 +404,47 @@ presentations = [
 		(try_begin), ####### DONE BUTTON #######
 			(troop_slot_eq, ccp_objects, ccp_obj_button_done, ":object"),
 			(call_script, "script_ccp_end_presentation_begin_game"),
-			# Decide on whether to use a banner or not
 			(try_begin),
-			## CCP 1.1+ ## - Workaround for the Warband 1.151 broken banner presentation.
-				# (eq, "$background_type", cb_noble),
-				# (jump_to_menu, "mnu_auto_return"),
-				# (start_presentation, "prsnt_banner_selection"),
-			# (else_try),
-			## CCP 1.1- ##
+				(eq, "$g_debug_character_start", 1),
+				(set_show_messages, 0),
+				(assign, "$g_skip_tutorial", 1),
+				(assign, "$cheat_mode", 1),
+				(assign, "$current_startup_quest_phase", 4),
+				(assign, "$g_do_one_more_meeting_with_merchant", 2),
+				(assign, "$dialog_with_merchant_ended", 1),
+				(assign, "$g_tutorial_entered", 1),
+				(assign, "$g_killed_first_bandit", 1),
+				(assign, "$g_starting_town", "$current_town"),
+				(set_encountered_party, "$current_town"),
+				(call_script, "script_player_arrived"),
+				(party_set_morale, "p_main_party", 100),
+				(try_begin),
+					(eq, "$g_gether_npcs", 1),
+					(try_for_range, ":troop_no", companions_begin, companions_end),
+						(troop_set_slot, ":troop_no", slot_troop_cur_center, "$g_starting_town"),
+					(try_end),
+				(try_end),
+				(party_set_flags, "$current_town", pf_no_label, 0),
+				(troop_add_gold, "trp_player", 100000),
+				(troop_set_name, "trp_player", "@Debug Character"),
+				(party_set_name, "p_main_party", "@Debug Character"),
+				(troop_equip_items,"trp_player"),
+				(party_relocate_near_party, "p_main_party", "$g_starting_town", 2),
+				(set_show_messages, 1),
 				(presentation_set_duration, 0),
-				(jump_to_menu, "mnu_auto_return"),
+				(jump_to_menu, "mnu_auto_return_to_map"),
+			(else_try),
+				# Decide on whether to use a banner or not
+				(try_begin),
+				## CCP 1.1+ ## - Workaround for the Warband 1.151 broken banner presentation.
+					# (eq, "$background_type", cb_noble),
+					# (jump_to_menu, "mnu_auto_return"),
+					# (start_presentation, "prsnt_banner_selection"),
+				# (else_try),
+				## CCP 1.1- ##
+					(presentation_set_duration, 0),
+					(jump_to_menu, "mnu_auto_return"),
+				(try_end),
 			(try_end),
 
 			#(jump_to_menu, "mnu_start_phase_2_5"),
@@ -514,11 +551,33 @@ presentations = [
 		(else_try), ####### SKIP TUTORIAL CHECKBOX #######
 			(troop_slot_eq, ccp_objects, ccp_obj_checkbox_skip_tutorial, ":object"),
 			(assign, "$g_skip_tutorial", ":value"),
+			(try_begin),
+				(eq, "$g_debug_character_start", 1),
+				(assign, "$g_skip_tutorial", 1),
+				(assign, ":value", 1),
+				(overlay_set_val, ":object", 1),
+			(try_end),
 			(troop_set_slot, ccp_objects, ccp_val_checkbox_skip_tutorial, ":value"),
 			(ge, DEBUG_CCP_general, 1),
 			(assign, reg1, ":value"),
 			(display_message, "@Option: Skip Tutorial has been {reg1?ENABLED:turned off} [ {reg1} ]."),
-		
+
+		(else_try), ####### DEBUG CHARACTER CHECKBOX #######
+			(troop_slot_eq, ccp_objects, ccp_obj_checkbox_debug_character, ":object"),
+			(assign, "$g_debug_character_start", ":value"),
+			(troop_set_slot, ccp_objects, ccp_val_checkbox_debug_character, ":value"),
+			(try_begin),
+				(eq, ":value", 1),
+				(assign, "$cheat_mode", 1),
+				(assign, "$g_skip_tutorial", 1),
+				(troop_set_slot, ccp_objects, ccp_val_checkbox_skip_tutorial, 1),
+				(troop_get_slot, ":skip_tutorial_object", ccp_objects, ccp_obj_checkbox_skip_tutorial),
+				(overlay_set_val, ":skip_tutorial_object", 1),
+			(try_end),
+			(ge, DEBUG_CCP_general, 1),
+			(assign, reg1, ":value"),
+			(display_message, "@Option: Debug Character has been {reg1?ENABLED:turned off} [ {reg1} ]."),
+
 		(else_try), ####### STARTING REGION MENU #######
 			(troop_slot_eq, ccp_objects, ccp_obj_menu_initial_region, ":object"),
 			(troop_set_slot, ccp_objects, ccp_val_menu_initial_region, ":value"),
