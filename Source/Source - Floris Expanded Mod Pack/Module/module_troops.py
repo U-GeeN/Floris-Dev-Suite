@@ -677,6 +677,23 @@ upgrade(troops,"custom_e_knight","custom_e_heavy_knight")
 upgrade(troops,"custom_e_horse_archer","custom_e_heavy_horse_archer")
 ##
 
+## Improvised cavalry variants
+## These are generated after normal upgrade declarations so copied troops keep
+## the same stats, proficiencies, skills, inventory, faces, and upgrade paths.
+_improvised_cavalry_source_begin = find_troop(troops, "novice_fighter")
+_improvised_cavalry_source_end = find_troop(troops, "tournament_master")
+for _troop_no in range(_improvised_cavalry_source_begin, _improvised_cavalry_source_end):
+    _src = troops[_troop_no]
+    _mounted = list(_src)
+    _mounted[0] = _src[0] + "_improvised_cavalry"
+    _mounted[1] = _src[1][:3] + " Mounted " + _src[1][3:]
+    _mounted[2] = _src[2][:3] + " Mounted " + _src[2][3:]
+    _mounted[3] = (_mounted[3] | tf_mounted | tf_guarantee_horse) & ~tf_unmoveable_in_party_window & ~tf_inactive & ~tf_hero
+    _mounted[7] = list(_mounted[7])
+    _mounted[7].append(itm_ho_pla_sumpter_white)
+    troops.append(_mounted)
+troops.append(["improvised_cavalry_end","{!}improvised_cavalry_end","{!}improvised_cavalry_end",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
+
 # modmerger_start version=201 type=2
 try:
     component_name = "troops"

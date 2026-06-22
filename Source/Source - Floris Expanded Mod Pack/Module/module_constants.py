@@ -1618,8 +1618,8 @@ stack_econ_field_weapon_3_count = 22
 stack_econ_field_weapon_4_count = 23
 stack_econ_field_base_gear_tier = 24
 stack_econ_field_base_gear_troop = 25
-stack_econ_field_horse_item = 26         # item_id of a looted horse given to infantry (-1 = none)
-stack_econ_field_is_mounted_infantry = 27 # 1 = infantry with looted horse, 0 = normal
+stack_econ_field_horse_item = 26         # deprecated: horses are tracked by improvised cavalry records
+stack_econ_field_is_mounted_infantry = 27 # deprecated: horses are tracked by improvised cavalry records
 stack_econ_field_loot_value = 28          # abstract value of unsold loot carried by this stack
 
 stack_econ_cost_armor = 90       # tier 4 ~= 360 denars; Floris armor median ~= 349
@@ -1646,6 +1646,20 @@ slot_agent_stack_econ_stack = 182
 
 slot_troop_stack_econ_base_tier = 500
 slot_troop_stack_econ_role = 501
+
+improvised_cavalry_begin = "trp_novice_fighter_improvised_cavalry"
+improvised_cavalry_end = "trp_improvised_cavalry_end"
+
+slot_party_horse_assignment_base = 3400
+slot_party_horse_assignment_stride = 5
+slot_party_horse_assignment_max = 160
+horse_assignment_field_active = 0
+horse_assignment_field_original_troop = 1
+horse_assignment_field_mounted_troop = 2
+horse_assignment_field_item = 3
+horse_assignment_field_imod = 4
+
+g_horse_manage_count = "$g_horse_manage_count"
 
 ## CC
 
@@ -2210,6 +2224,7 @@ slot_item_swing_damage       = slot_item_body_armor
 slot_item_horse_speed        = slot_item_head_armor
 slot_item_horse_armor        = slot_item_body_armor
 slot_item_horse_charge       = slot_item_length
+slot_item_horse_maneuver     = slot_item_speed
   #### Autoloot improved by rubik end
   
   

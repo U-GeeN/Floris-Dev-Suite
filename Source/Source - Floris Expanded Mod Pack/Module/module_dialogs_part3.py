@@ -11831,6 +11831,55 @@ dialogs_part3 = [
 ## CC view regular's equipment
 ##diplomacy end+
 
+  [anyone|plyr,"regular_member_talk", [
+    (assign, ":original_troop", "$g_talk_troop"),
+    (assign, ":is_improvised_cavalry", 0),
+    (call_script, "script_improvised_cavalry_get_original_troop", "$g_talk_troop"),
+    (try_begin),
+      (ge, reg0, 0),
+      (assign, ":original_troop", reg0),
+      (assign, ":is_improvised_cavalry", 1),
+    (try_end),
+    (is_between, ":original_troop", regular_troops_begin, regular_troops_end),
+    (store_skill_level, ":riding", skl_riding, ":original_troop"),
+    (ge, ":riding", 1),
+    (this_or_next|eq, ":is_improvised_cavalry", 1),
+    (neg|troop_is_mounted, ":original_troop"),
+  ], "Manage horses.", "horse_manage_inventory",[]],
+  [anyone,"horse_manage_inventory", [
+    (assign, "$g_horse_manage_original_troop", "$g_talk_troop"),
+    (assign, "$g_horse_manage_mounted_mode", 0),
+    (call_script, "script_improvised_cavalry_get_original_troop", "$g_talk_troop"),
+    (try_begin),
+      (ge, reg0, 0),
+      (assign, "$g_horse_manage_original_troop", reg0),
+      (assign, "$g_horse_manage_mounted_mode", 1),
+    (try_end),
+    (call_script, "script_horse_assignment_store_management_status", "p_main_party", "$g_horse_manage_original_troop"),
+  ], "{s2}", "horse_manage_select", []],
+] + [
+  [anyone|plyr,"horse_manage_select", [
+    (call_script, "script_horse_assignment_find_management_option", "p_main_party", "$g_horse_manage_original_troop", horse_index),
+    (ge, reg0, 0),
+   ], "{s11}: {s1}.", "horse_manage_refresh", [
+    (call_script, "script_horse_assignment_apply_management_option", "p_main_party", "$g_horse_manage_original_troop", horse_index),
+   ]] for horse_index in range(0, 15)
+] + [
+  [anyone,"horse_manage_refresh", [
+    (call_script, "script_horse_assignment_store_management_status", "p_main_party", "$g_horse_manage_original_troop"),
+  ], "{s2}", "horse_manage_select", []],
+  [anyone|plyr,"horse_manage_select", [
+    (neq, "$g_horse_manage_mounted_mode", 1),
+    (call_script, "script_horse_assignment_find_management_option", "p_main_party", "$g_horse_manage_original_troop", 0),
+    (lt, reg0, 0),
+   ], "I have no suitable horses for you right now.", "horse_manage_done", [
+    (call_script, "script_horse_assignment_finalize_management", "p_main_party", "$g_horse_manage_original_troop"),
+   ]],
+  [anyone|plyr,"horse_manage_select", [], "That is all for now.", "horse_manage_done", [
+    (call_script, "script_horse_assignment_finalize_management", "p_main_party", "$g_horse_manage_original_troop"),
+  ]],
+  [anyone,"horse_manage_done", [], "{s2}", "do_regular_member_view_char", []],
+
   [anyone|plyr,"regular_member_talk", [], "How is your equipment holding up?", "regular_member_stack_econ_report",[
     (assign, ":stack", -1),
     (party_get_num_companion_stacks, ":num_of_stacks", "p_main_party"),

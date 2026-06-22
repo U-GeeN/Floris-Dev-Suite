@@ -72,6 +72,7 @@ def set_item_score():
       item_score.append((item_set_slot, i_item, slot_item_horse_speed, get_missile_speed(items[i_item][6])))
       item_score.append((item_set_slot, i_item, slot_item_horse_armor, get_body_armor(items[i_item][6])))
       item_score.append((item_set_slot, i_item, slot_item_horse_charge, get_thrust_damage(items[i_item][6])))
+      item_score.append((item_set_slot, i_item, slot_item_horse_maneuver, get_speed_rating(items[i_item][6])))
 	  
     
 	## pike definition - CABA addition
