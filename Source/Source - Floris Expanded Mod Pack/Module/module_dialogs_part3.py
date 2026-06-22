@@ -11868,13 +11868,6 @@ dialogs_part3 = [
   [anyone,"horse_manage_refresh", [
     (call_script, "script_horse_assignment_store_management_status", "p_main_party", "$g_horse_manage_original_troop"),
   ], "{s2}", "horse_manage_select", []],
-  [anyone|plyr,"horse_manage_select", [
-    (neq, "$g_horse_manage_mounted_mode", 1),
-    (call_script, "script_horse_assignment_find_management_option", "p_main_party", "$g_horse_manage_original_troop", 0),
-    (lt, reg0, 0),
-   ], "I have no suitable horses for you right now.", "horse_manage_done", [
-    (call_script, "script_horse_assignment_finalize_management", "p_main_party", "$g_horse_manage_original_troop"),
-   ]],
   [anyone|plyr,"horse_manage_select", [], "That is all for now.", "horse_manage_done", [
     (call_script, "script_horse_assignment_finalize_management", "p_main_party", "$g_horse_manage_original_troop"),
   ]],

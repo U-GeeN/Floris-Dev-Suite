@@ -105,7 +105,7 @@ def wp_melee(x):
   return n
 
 #Skills
-knows_common = knows_riding_1|knows_trade_2|knows_inventory_management_2|knows_prisoner_management_1|knows_leadership_1
+knows_common = knows_trade_2|knows_inventory_management_2|knows_prisoner_management_1
 def_attrib = str_7 | agi_5 | int_4 | cha_4
 def_attrib_multiplayer = str_14 | agi_14 | int_4 | cha_4
 
