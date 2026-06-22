@@ -5388,7 +5388,7 @@ dialogs_part3 = [
 		(str_store_troop_name_plural, s1, ":ranger_recruit"),
 		(assign, "$temp", ":ranger_recruit"),	   
      ],
-     "I have {reg1?{reg1}:no} freelancer {s1} available for hire at the moment. {reg1?Each recruit costs 50 dinars to hire. How many do you want to hire?:}",
+     "I have {reg1?{reg1}:no} freelancer {s1} available for hire at the moment. {reg1?Each recruit costs 250 dinars to hire. How many do you want to hire?:}",
      "ranger_master_hire", []],
 
    [trp_custom_master|plyr|repeat_for_100, "ranger_master_hire",
@@ -5400,7 +5400,7 @@ dialogs_part3 = [
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
        (val_min, ":rangers_amount", ":free_capacity"),
        (store_troop_gold, ":cur_gold", "trp_player"),
-       (val_div, ":cur_gold", 50),
+       (val_div, ":cur_gold", 250),
        (val_min, ":rangers_amount", ":cur_gold"),
        (le, ":num", ":rangers_amount"),
        (assign, reg0, ":num"),
@@ -5412,7 +5412,7 @@ dialogs_part3 = [
            (party_add_members, "p_main_party", "$temp", ":num"),
            (val_sub, "$g_num_ranger_recruits", ":num"),
          (try_end),
-         (store_mul, ":cost", ":num", 50),
+         (store_mul, ":cost", ":num", 250),
          (troop_remove_gold, "trp_player", ":cost")
        ]
      ],
@@ -9880,7 +9880,7 @@ dialogs_part3 = [
                                            (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
                                            (val_min, ":num_volunteers", ":free_capacity"),
                                            (store_troop_gold, ":gold", "trp_player"),
-                                           (store_div, ":gold_capacity", ":gold", 10),#10 denars per man
+                                           (store_div, ":gold_capacity", ":gold", 50),#50 denars per man
                                            (val_min, ":num_volunteers", ":gold_capacity"),
                                            (le, ":num_volunteers", 0),
                                            ],
@@ -9890,13 +9890,13 @@ dialogs_part3 = [
                                            (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
                                            (val_min, ":num_volunteers", ":free_capacity"),
                                            (store_troop_gold, ":gold", "trp_player"),
-                                           (store_div, ":gold_capacity", ":gold", 10),#10 denars per man
+                                           (store_div, ":gold_capacity", ":gold", 50),#50 denars per man
                                            (val_min, ":num_volunteers", ":gold_capacity"),
                                            (assign, "$temp",  ":num_volunteers"),
                                            (assign, reg5, ":num_volunteers"),
                                            (store_add, reg7, ":num_volunteers", -1),
                                            ],
-   "I can think of {reg5} whom I suspect would jump at the chance. If you could pay 10 denars {reg7?each for their equipment:for his equipment}.\
+   "I can think of {reg5} whom I suspect would jump at the chance. If you could pay 50 denars {reg7?each for their equipment:for his equipment}.\
  Does that suit you?", "village_elder_recruit_decision",[]],
 
 #not used:
@@ -11873,7 +11873,7 @@ dialogs_part3 = [
   ]],
   [anyone,"horse_manage_done", [], "{s2}", "do_regular_member_view_char", []],
 
-  [anyone|plyr,"regular_member_talk", [], "How is your equipment holding up?", "regular_member_stack_econ_report",[
+  [anyone|plyr,"regular_member_talk", [], "What equipment has your unit collected?", "regular_member_stack_econ_report",[
     (assign, ":stack", -1),
     (party_get_num_companion_stacks, ":num_of_stacks", "p_main_party"),
     (try_for_range, ":i", 0, ":num_of_stacks"),

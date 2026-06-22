@@ -12792,7 +12792,7 @@ scripts_part3 = [
             (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
             (val_min, ":volunteer_amount", ":free_capacity"),
             (store_troop_gold, ":gold", "trp_player"),
-            (store_div, ":gold_capacity", ":gold", 10),#10 denars per man
+            (store_div, ":gold_capacity", ":gold", 50),#50 denars per man
             (val_min, ":volunteer_amount", ":gold_capacity"),
             #Lazeras MODIFIED (Training Yard)
             (assign, ":volunteer_amount_new", 0),
@@ -12817,7 +12817,7 @@ scripts_part3 = [
             #Lazeras MODIFIED (Training Yard)
             (party_add_members, "p_main_party", ":volunteer_troop", ":volunteer_amount"),
             (party_set_slot, "$current_town", slot_center_volunteer_troop_amount, -1),
-            (store_mul, ":cost", ":volunteer_amount", 10),#10 denars per man
+            (store_mul, ":cost", ":volunteer_amount", 50),#50 denars per man
             (troop_remove_gold, "trp_player", ":cost"),
         ]),
         
@@ -15259,4 +15259,3 @@ scripts_part3 = [
       (try_end),
     ]),
 ]
-

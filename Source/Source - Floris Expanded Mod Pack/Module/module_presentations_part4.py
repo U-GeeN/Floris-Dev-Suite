@@ -1160,9 +1160,9 @@ presentations_part4 = [
       (try_end),
 
       # Update Total Cost
-      (store_mul, ":cost1", "$g_village_recruit_t1_amount", 10),
-      (store_mul, ":cost2", "$g_village_recruit_t2_amount", 20),
-      (store_mul, ":cost3", "$g_village_recruit_t3_amount", 40),
+      (store_mul, ":cost1", "$g_village_recruit_t1_amount", 50),
+      (store_mul, ":cost2", "$g_village_recruit_t2_amount", 100),
+      (store_mul, ":cost3", "$g_village_recruit_t3_amount", 200),
       (store_add, ":total_cost", ":cost1", ":cost2"),
       (val_add, ":total_cost", ":cost3"),
       (assign, reg1, ":total_cost"),

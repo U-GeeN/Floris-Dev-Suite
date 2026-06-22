@@ -8522,7 +8522,7 @@ game_menus = [
      (party_get_slot, ":volunteer_amount", "$current_town", slot_center_volunteer_troop_amount),
      (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
      (store_troop_gold, ":gold", "trp_player"),
-     (store_div, ":gold_capacity", ":gold", 10),#10 denars per man
+     (store_div, ":gold_capacity", ":gold", 50),#50 denars per man
      (assign, ":party_capacity", ":free_capacity"),
      (val_min, ":party_capacity", ":gold_capacity"),
      (try_begin),
@@ -8539,7 +8539,7 @@ game_menus = [
        (eq, ":volunteer_amount", 0),
        (str_store_string, s18, "@No one here seems to be willing to join you."),
      (else_try),
-        (store_mul, reg6, ":volunteer_amount", 10),#10 denars per man
+        (store_mul, reg6, ":volunteer_amount", 50),#50 denars per man
    #Lazeras MODIFIED (Training Yard)
         (assign, ":volunteer_amount_new", 0),
 	    (try_begin),

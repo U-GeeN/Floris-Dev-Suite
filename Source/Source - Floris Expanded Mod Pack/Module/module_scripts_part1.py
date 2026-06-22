@@ -7028,6 +7028,7 @@ scripts_part1 = [
           (troop_is_mounted, ":troop_id"),
           (val_mul, ":join_cost", 2),
         (try_end),
+        (val_mul, ":join_cost", 5),
       (try_end),
       (assign, reg0, ":join_cost"),
       (set_trigger_result, reg0),
@@ -7120,6 +7121,7 @@ scripts_part1 = [
         (val_mul, ":cost", 3),
         (val_div, ":cost", 2),
       (try_end),
+      (val_mul, ":cost", 5),
       (assign, reg0, ":cost"),
       ## CC
       (set_trigger_result, reg0),
