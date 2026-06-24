@@ -1088,7 +1088,7 @@ presentations_part4 = [
       (assign, ":y_pos", 550),
       
       # Tier 1
-      (call_script, "script_prsnt_village_recruitment_draw_tier", "$g_village_recruit_t1_troop", "$g_village_recruit_max_1", ":y_pos", 10),
+      (call_script, "script_prsnt_village_recruitment_draw_tier", "$g_village_recruit_t1_troop", "$g_village_recruit_max_1", ":y_pos", 50),
       (assign, "$g_presentation_obj_1", reg0), # Slider
       (assign, "$g_presentation_obj_4", reg1), # Amount label
       (try_begin),
@@ -1097,7 +1097,7 @@ presentations_part4 = [
       (try_end),
 
       # Tier 2
-      (call_script, "script_prsnt_village_recruitment_draw_tier", "$g_village_recruit_t2_troop", "$g_village_recruit_max_2", ":y_pos", 20),
+      (call_script, "script_prsnt_village_recruitment_draw_tier", "$g_village_recruit_t2_troop", "$g_village_recruit_max_2", ":y_pos", 100),
       (assign, "$g_presentation_obj_2", reg0), # Slider
       (assign, "$g_presentation_obj_5", reg1), # Amount label
       (try_begin),
@@ -1106,7 +1106,7 @@ presentations_part4 = [
       (try_end),
 
       # Tier 3
-      (call_script, "script_prsnt_village_recruitment_draw_tier", "$g_village_recruit_t3_troop", "$g_village_recruit_max_3", ":y_pos", 40),
+      (call_script, "script_prsnt_village_recruitment_draw_tier", "$g_village_recruit_t3_troop", "$g_village_recruit_max_3", ":y_pos", 200),
       (assign, "$g_presentation_obj_3", reg0), # Slider
       (assign, "$g_presentation_obj_6", reg1), # Amount label
       (try_begin),

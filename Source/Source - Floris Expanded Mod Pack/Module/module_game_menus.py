@@ -1867,17 +1867,8 @@ game_menus = [
      ),
     # autoloot
     ("camp_manage_inventory",
-      [
-        (assign, ":num_companions", 0),
-        (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
-        (try_for_range, ":stack_no", 0, ":num_stacks"),
-          (party_stack_get_troop_id,   ":stack_troop", "p_main_party", ":stack_no"),
-          (is_between, ":stack_troop", companions_begin, companions_end),
-          (val_add, ":num_companions", 1),
-        (try_end),
-        (gt, ":num_companions", 0),
-      ],
-      "Manage your companions' inventory.",
+      [],
+      "Manage your company's inventory.",
       [
         (troop_clear_inventory, "trp_temp_troop"),
         (assign, "$return_menu", "mnu_camp"),
@@ -4021,12 +4012,7 @@ game_menus = [
             (try_end),
             #next if there's anything left, we'll open up the party exchange screen and offer them to the player.
           (try_end),
-          (party_get_num_companions, ":num_rescued_prisoners", "p_temp_party"),
-          (party_get_num_prisoners,  ":num_captured_enemies", "p_temp_party"),
-
-          (store_add, ":total_capture_size", ":num_rescued_prisoners", ":num_captured_enemies"),
           #(neq, "$freelancer_state", 1), #+freelancer	
-          #(gt, ":total_capture_size", 0),          
           #(change_screen_exchange_with_party, "p_temp_party"),
           (jump_to_menu, "mnu_total_victory"),
         (else_try),          
@@ -17415,6 +17401,14 @@ game_menus = [
       ("auto_loot",
         [
           (eq, "$inventory_menu_offset",0),
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
           (store_free_inventory_capacity, ":space", "$pool_troop"),
           (ge, ":space", 10)
         ],
@@ -17423,6 +17417,14 @@ game_menus = [
       ("auto_loot_no",
         [
           (eq, "$inventory_menu_offset",0),
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
           (store_free_inventory_capacity, ":space", "$pool_troop"),
           (lt, ":space", 10),
           (disable_menu_option)
@@ -17432,8 +17434,24 @@ game_menus = [
       ("loot", [],
         "Access the item pool.", [(change_screen_loot, "$pool_troop")]
       ),
+      ("distribute_troops", [],
+        "Distribute Loot to Troops.",
+        [
+          (call_script, "script_stack_econ_distribute_loot", "p_main_party", "$g_stack_econ_loot_value"),
+          (jump_to_menu, "mnu_manage_loot_pool"),
+        ]
+      ),
       ## CC
-      ("auto_loot_upgrade_management", [],
+      ("auto_loot_upgrade_management", [
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
+        ],
         "Manage the upgrading of companion equipment.",
         [
           (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
@@ -17448,6 +17466,14 @@ game_menus = [
       ),
       ("auto_loot_leave_with_nothing", 
         [
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
           (gt, reg20, 0),
           (assign, reg1, "$g_price_threshold_for_picking"),
           (gt, reg1, 0),
@@ -17467,7 +17493,16 @@ game_menus = [
 		  (jump_to_menu, "$return_menu"),
         ]
       ),
-      ("auto_loot_leave", [],
+      ("auto_loot_leave", [
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
+        ],
         "{s20}",
         [
           (party_get_num_companion_stacks, ":num_stacks","p_main_party"),
@@ -17480,6 +17515,24 @@ game_menus = [
 		  ## Floris 2.52+ ## "Show us what they took" - by Windyplains
 		  (str_clear, s50),
           ## Floris 2.52- ##
+		  (jump_to_menu, "$return_menu"),
+        ]
+      ),
+      ("take_loot_and_leave", [
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (eq, ":companion_count", 0),
+        ],
+        "Take remaining loot and leave.",
+        [
+          (call_script, "script_transfer_inventory", "$pool_troop", "trp_player", 1),
+          (call_script, "script_sort_food", "trp_player"),
+		  (str_clear, s50),
 		  (jump_to_menu, "$return_menu"),
         ]
       ),
@@ -17545,6 +17598,14 @@ game_menus = [
       ("auto_loot",
         [
           (eq, "$inventory_menu_offset",0),
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
           (store_free_inventory_capacity, ":space", "$pool_troop"),
           (ge, ":space", 10)
         ],
@@ -17553,6 +17614,14 @@ game_menus = [
       ("auto_loot_no",
         [
           (eq, "$inventory_menu_offset",0),
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
           (store_free_inventory_capacity, ":space", "$pool_troop"),
           (lt, ":space", 10),
           (disable_menu_option)
@@ -17575,7 +17644,16 @@ game_menus = [
           (change_screen_exchange_with_party, "p_temp_party"),
         ]
       ),
-      ("auto_loot_upgrade_management", [],
+      ("auto_loot_upgrade_management", [
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
+        ],
         "Manage the upgrading of companion equipment.",
         [
           (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
@@ -17590,6 +17668,14 @@ game_menus = [
       ),
       ("auto_loot_leave_with_nothing", 
         [
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
           (gt, reg20, 0),
           (assign, reg1, "$g_price_threshold_for_picking"),
           (gt, reg1, 0),
@@ -17607,7 +17693,16 @@ game_menus = [
 		  (jump_to_menu, "$return_menu"),
         ]
       ),
-      ("auto_loot_leave", [],
+      ("auto_loot_leave", [
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (gt, ":companion_count", 0),
+        ],
         "{s20}",
         [
           (party_get_num_companion_stacks, ":num_stacks","p_main_party"),
@@ -17616,6 +17711,24 @@ game_menus = [
             (is_between, ":stack_troop", companions_begin, companions_end),
             (call_script, "script_transfer_inventory", "$pool_troop", ":stack_troop", 1), #include book
           (try_end),
+          (call_script, "script_sort_food", "trp_player"),
+		  (str_clear, s50),
+		  (jump_to_menu, "$return_menu"),
+        ]
+      ),
+      ("take_loot_and_leave", [
+          (assign, ":companion_count", 0),
+          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+          (try_for_range, ":stack_no", 0, ":num_stacks"),
+            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
+            (is_between, ":stack_troop", companions_begin, companions_end),
+            (val_add, ":companion_count", 1),
+          (try_end),
+          (eq, ":companion_count", 0),
+        ],
+        "Take remaining loot and leave.",
+        [
+          (call_script, "script_transfer_inventory", "$pool_troop", "trp_player", 1),
           (call_script, "script_sort_food", "trp_player"),
 		  (str_clear, s50),
 		  (jump_to_menu, "$return_menu"),
