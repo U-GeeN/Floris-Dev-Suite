@@ -7121,7 +7121,7 @@ scripts_part1 = [
         (val_mul, ":cost", 3),
         (val_div, ":cost", 2),
       (try_end),
-      (val_mul, ":cost", 5),
+      (val_mul, ":cost", 2),
       (assign, reg0, ":cost"),
       ## CC
       (set_trigger_result, reg0),
