@@ -11781,8 +11781,7 @@ dialogs_part3 = [
 ##diplomacy start+ replace instances of {sir/madam} with {my lord/my lady} or {your highness} if appropriate,
 #using s0 and script_dplmc_print_subordinate_says_sir_madame_to_s0"
   [anyone,"member_chat", [(call_script, "script_dplmc_print_subordinate_says_sir_madame_to_s0"),], "Your orders {s0}?", "regular_member_talk",[]],
-  [anyone|plyr,"regular_member_talk", [], "Tell me about yourself", "view_regular_char_requested",[]],
-  [anyone,"view_regular_char_requested", [(call_script, "script_dplmc_print_subordinate_says_sir_madame_to_s0"),], "Aye {s0}. Let me tell you all there is to know about me.", "do_regular_member_view_char",[[change_screen_view_character]]],
+  [anyone|plyr,"regular_member_talk", [], "Tell me about yourself", "do_regular_member_view_char",[[change_screen_view_character]]],
 ##diplomacy end+
   [anyone,"do_regular_member_view_char", [], "Anything else?", "regular_member_talk",[]],
 
@@ -11801,11 +11800,7 @@ dialogs_part3 = [
 #Code credit to rubik's Custom Commander, with minor string changes.
 ## CC view regular's equipment
   [anyone|plyr,"regular_member_talk", [],
-   "Let me see your equipment.", "dplmc_view_regular_inventory", []
-  ],
-  [anyone,"dplmc_view_regular_inventory",
-    [(call_script, "script_dplmc_print_subordinate_says_sir_madame_to_s0"),], "Very well {s0}, here is what I am using...", "dplmc_do_view_regular_inventory",#Use {s0} instead of {sir/madam}
-    [
+   "Let me see your equipment.", "dplmc_do_view_regular_inventory", [
       (call_script, "script_dplmc_copy_inventory", "$g_player_troop", "trp_temp_array_a"),
       (call_script, "script_dplmc_copy_inventory", "$g_talk_troop", "trp_temp_array_b"),
 
@@ -11818,15 +11813,10 @@ dialogs_part3 = [
       (try_end),
 
       (change_screen_loot, "trp_temp_array_b"),
-    ]],
-  [anyone,"dplmc_do_view_regular_inventory", [(call_script, "script_dplmc_print_subordinate_says_sir_madame_to_s0"),],
-   "Is that satisfactory, {s0}?", "dplmc_do_view_regular_inventory_2", []#Use {s0} instead of {sir/madam}
+    ]
   ],
-  [anyone|plyr,"dplmc_do_view_regular_inventory_2", 
-    [
-      (call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "$g_player_troop"),
-    ],
-   "Indeed.", "do_regular_member_view_char", []
+  [anyone,"dplmc_do_view_regular_inventory", [(call_script, "script_dplmc_print_subordinate_says_sir_madame_to_s0"),],
+   "Anything else?", "regular_member_talk", []
   ],
 ## CC view regular's equipment
 ##diplomacy end+
@@ -11893,10 +11883,6 @@ dialogs_part3 = [
 
   [anyone|plyr,"regular_member_talk", [], "Nothing. Keep moving.", "close_window",[]],
 
-
-
-
-
 ######################################
 # GENERIC PARTY ENCOUNTER
 ######################################
@@ -11958,12 +11944,6 @@ dialogs_part3 = [
 
   [anyone|plyr,"party_encounter_hostile_defender", [],
    "Nothing. We'll leave you in peace.", "close_window", [(assign, "$g_leave_encounter",1)]],
-
-
-
-
-
-
 
 
   [anyone|auto_proceed, "start",
@@ -12068,16 +12048,6 @@ dialogs_part3 = [
   [
     (assign, "$dialog_with_merchant_ended", 1),
   ]],
-
-  #[anyone|auto_proceed, "start",
-  #[
-  #  (is_between, "$g_talk_troop", "trp_swadian_merchant", "trp_startup_merchants_end"),
-  #  (eq, "$talk_context", tc_merchants_house),
-  #  (check_quest_finished, "qst_save_town_from_bandits"),
-  #],
-  #"{!}.", "merchant_all_quest_completed",
-  #[
-  #]],
 
 
   [anyone|plyr,"merchant_quest_4e",
@@ -12378,27 +12348,13 @@ dialogs_part3 = [
   [anyone|plyr,"battle_reason_stated", [], "I am not afraid of you. I will fight.", "close_window",[[encounter_attack]]],
 
   [anyone,"start", [], "Hello. What can I do for you?", "free",[]],
-  [anyone|plyr,"free", [[neg|in_meta_mission]], "Tell me about yourself", "view_char_requested",[]],
-  [anyone,"view_char_requested", [], "Very well, listen to this...", "view_char",[[change_screen_view_character]]],
+  [anyone|plyr,"free", [[neg|in_meta_mission]], "Tell me about yourself", "view_char",[[change_screen_view_character]]],
   [anyone,"view_char", [], "Anything else?", "free",[]],
 
   [anyone|plyr,"end", [], "[Done]", "close_window",[]],
 
   [anyone|plyr,"start", [], "Drop your weapons and surrender if you want to live", "threaten_1",[]],
   [anyone,"threaten_1", [], "We will fight you first", "end",[[encounter_attack]]],
-
-#  [anyone|plyr,"free", [[partner_is_mercmaster]], "I need to hire some mercenaries.", "mercenaries_requested",[]],
-#  [anyone,"mercenaries_requested", [], "I have the toughest fighters in all Calradia.", "buy_mercenaries",[[change_screen_buy_mercenaries]]],
-#  [anyone,"buy_mercenaries", [], "Anything else?", "free",[]],
-
-#  [anyone|plyr,"free", [[partner_is_recruitable]], "I need a capable sergeant like yourself. How much do you ask to work for me?", "employ_mercenary_requested",[]],
-#  [anyone,"employ_mercenary_requested", [[store_mercenary_price,0],[store_mercenary_wage,1]], "I want {reg0} denars now and {reg1} denars as monthly payment.", "employ_mercenary_2",[]],
-#  [anyone|plyr,"employ_mercenary_2", [], "I see I need to think of this.", "employ_mercenary_giveup",[]],
-#  [anyone|plyr,"employ_mercenary_2", [[neg|hero_can_join]], "I don't have any more room in my party right now. I will talk to you again later.", "employ_mercenary_giveup",[]],
-#  [anyone|plyr,"employ_mercenary_2", [[player_gold_ge,reg(0)],[hero_can_join]], "That's fine. Here's the {reg0} denars. From now on you work for me.", "employ_mercenary_commit",[[troop_remove_gold, "trp_player",reg(0)],[recruit_mercenary]]],
-#  [anyone,"employ_mercenary_giveup", [], "Suits me.", "free",[]],
-#  [anyone,"employ_mercenary_commit", [], "You got yourself the best fighter in the land.", "end",[]],
-
 
   [anyone,"member_direct_campaign", [], "Yes, {my lord/my lady}. Which message do you wish to send to the vassals?", "member_direct_campaign_choice",
   []],
@@ -12407,7 +12363,6 @@ dialogs_part3 = [
 
   [anyone|plyr,"member_direct_campaign_choice",
    [
-#     (eq, "$g_talk_troop_faction", "$players_kingdom"),
 	 (this_or_next|neg|faction_slot_ge, "$players_kingdom", slot_faction_marshall, active_npcs_begin),
 		(eq, "$players_kingdom", "fac_player_supporters_faction"),
      (this_or_next|faction_slot_eq, "$players_kingdom", slot_faction_ai_state, sfai_default),
@@ -12428,7 +12383,6 @@ dialogs_part3 = [
 
   [anyone|plyr,"member_direct_campaign_choice",
    [
-#     (eq, "$g_talk_troop_faction", "$players_kingdom"),
      (faction_slot_eq, "$players_kingdom", slot_faction_marshall, "trp_player"),
      (neg|faction_slot_eq, "$players_kingdom", slot_faction_ai_state, sfai_default),
      (neg|faction_slot_eq, "$players_kingdom", slot_faction_ai_state, sfai_feast),
@@ -12437,7 +12391,6 @@ dialogs_part3 = [
 
   [anyone|plyr,"member_direct_campaign_choice",
    [
-#     (eq, "$g_talk_troop_faction", "$players_kingdom"),
      (faction_slot_eq, "$players_kingdom", slot_faction_marshall, "trp_player"),
      (neg|faction_slot_eq, "$players_kingdom", slot_faction_ai_state, sfai_feast),
 	 (check_quest_active, "qst_organize_feast"),
@@ -12448,18 +12401,11 @@ dialogs_part3 = [
      ],
    "I wish to invite the vassals of the realm to a feast at {s4}.", "member_give_order_invite_feast_verify", []],
 
-
-
-
   [anyone|plyr,"member_direct_campaign_choice",
    [
      ],
    "Never mind", "member_pretalk",
    []],
-
-
-
-
   [anyone,"member_give_order_invite_feast_verify", [],
    "You wish to invite the lords of the realm to a feast?", "member_give_order_invite_feast_verify_2",[]],
 
@@ -12473,19 +12419,14 @@ dialogs_part3 = [
    ],
    "All right then. I shall dispatch messengers informing the lords of the realm of your feast at {s4}.", "member_pretalk",
    [
-	 (quest_get_slot, ":venue", "qst_organize_feast", slot_quest_target_center),
+    (quest_get_slot, ":venue", "qst_organize_feast", slot_quest_target_center),
 
-	 (assign, "$player_marshal_ai_state", sfai_feast),
-	 (assign, "$player_marshal_ai_object", ":venue"),
-     (call_script, "script_decide_faction_ai", "$players_kingdom"),
-	 (assign, "$g_recalculate_ais", 1),
-	 (str_store_party_name, s4, ":venue"),
-
-     ]],
-
-
-
-
+    (assign, "$player_marshal_ai_state", sfai_feast),
+    (assign, "$player_marshal_ai_object", ":venue"),
+      (call_script, "script_decide_faction_ai", "$players_kingdom"),
+    (assign, "$g_recalculate_ais", 1),
+    (str_store_party_name, s4, ":venue"),
+   ]],
 
   [anyone,"member_direct_campaign_call_to_arms_verify", [],
    "You wish to summon all lords for a new campaign?", "member_give_order_call_to_arms_verify_2",[]],

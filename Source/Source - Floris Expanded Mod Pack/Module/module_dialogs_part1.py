@@ -2604,12 +2604,10 @@ dialogs_part1 = [
   ]],
 
   [anyone|plyr,"member_personal_action", [],
-   "Let me see your equipment.", "member_equipment",[]],
-  [anyone,"member_equipment", [], "Very well, it's all here...", "do_member_personal_action",[
+   "Let me see your equipment.", "do_member_personal_action",[
       #(change_screen_loot),
       (change_screen_equip_other),
       ]],
-
   [anyone|plyr,"member_personal_action", [],
    "Let me see your inventory.", "member_inventory",[]],
   [anyone,"member_inventory", [], "Very well, it's all here...", "do_member_personal_action",[
