@@ -12997,49 +12997,7 @@ game_menus = [
   [
     ("continue",[],"Continue...",
     [
-      (call_script, "script_auto_sell_all"), ## CC 1.322: this line replaces the lines below
-#      (try_begin),
-#        (is_between, "$current_town", towns_begin, towns_end),
-#        (party_get_slot, ":town_weaponsmith", "$current_town", slot_town_weaponsmith),
-#        (party_get_slot, ":town_armorer", "$current_town", slot_town_armorer),
-#        (party_get_slot, ":town_horse_merchant", "$current_town", slot_town_horse_merchant),
-#        (party_get_slot, ":town_merchant", "$current_town", slot_town_merchant),
-#      (else_try),
-#        (is_between, "$current_town", villages_begin, villages_end),
-#        (party_get_slot, ":merchant_troop", "$current_town", slot_town_elder),
-#      (try_end),
-#
-#      (party_get_num_companion_stacks, ":num_stacks","p_main_party"),
-#      (try_for_range_backwards, ":i_stack", 0, ":num_stacks"),
-#        (party_stack_get_troop_id,":stack_troop","p_main_party",":i_stack"),
-#        (is_between, ":stack_troop", companions_begin, companions_end),
-#        (store_free_inventory_capacity, ":begin_space", ":stack_troop"),
-#        (store_troop_gold, ":begin_gold", ":stack_troop"),
-#        (try_begin),
-#          (is_between, "$current_town", towns_begin, towns_end),
-#          (call_script, "script_auto_sell", ":stack_troop", ":town_weaponsmith"),
-#          (call_script, "script_auto_sell", ":stack_troop", ":town_armorer"),
-#          (call_script, "script_auto_sell", ":stack_troop", ":town_horse_merchant"),
-#          (call_script, "script_auto_sell", ":stack_troop", ":town_merchant"),
-#        (else_try),
-#          (is_between, "$current_town", villages_begin, villages_end),
-#          (call_script, "script_auto_sell", ":stack_troop", ":merchant_troop"),
-#        (try_end),
-#        (store_free_inventory_capacity, ":end_space", ":stack_troop"),
-#        (store_troop_gold, ":end_gold", ":stack_troop"),
-#        (neq, ":end_gold", ":begin_gold"),
-#        (store_sub, ":gained_gold", ":end_gold", ":begin_gold"),
-#        (set_show_messages, 0),
-#        (troop_remove_gold, ":stack_troop", ":gained_gold"),
-#        (troop_add_gold, "trp_player", ":gained_gold"),
-#        (set_show_messages, 1),
-#        (store_sub, reg1, ":end_space", ":begin_space"),
-#        (assign, reg2, ":gained_gold"),
-#        (store_sub, reg3, reg1, 1),
-#        (store_sub, reg4, reg2, 1),
-#        (str_store_troop_name, s1, ":stack_troop"),
-#        (display_message, "@{s1} have sold {reg1} {reg3?items:item} and you gained {reg2} {reg4?denars:denar}."),
-#      (try_end),
+      (call_script, "script_auto_sell_all"), 
       (jump_to_menu, "$g_next_menu"),
       ]),
     ("change_settings",[],"Change settings.",[(start_presentation, "prsnt_auto_sell_options"),]),
@@ -13054,16 +13012,7 @@ game_menus = [
   [
     ("continue",[],"Continue...",
     [
-      (call_script, "script_auto_buy_food"), ## CC 1.322: this line replaces the following lines.
-#      (try_begin),
-#        (is_between, "$current_town", towns_begin, towns_end),
-#        (party_get_slot, ":merchant_troop", "$current_town", slot_town_merchant),
-#      (else_try),
-#        (is_between, "$current_town", villages_begin, villages_end),
-#        (party_get_slot, ":merchant_troop", "$current_town", slot_town_elder),
-#      (try_end),
-#      (call_script, "script_auto_buy_food", ":merchant_troop"),
-
+      (call_script, "script_auto_buy_food"), 
       (jump_to_menu, "$g_next_menu"),
       ]),
       
@@ -14316,7 +14265,7 @@ game_menus = [
  Many hours later you regain your conciousness and find yourself at the spot you fell.\
  Your enemies must have taken you up for dead and left you there.\
  However, it seems that none of your wound were lethal,\
- and altough you feel awful, you find out that can still walk.\
+ and altough you feel awful, you find out that you can still walk.\
  You get up and try to look for any other survivors from your party.",
     "none",
     [
@@ -19977,68 +19926,7 @@ game_menus = [
       ),
     ]
   ),
-##LAZERAS MODIFIED  {Top Tier Troops Recruit}
 
-#Tempered entrenchment remastered menus begin
-#	("options",mnf_scale_picture,
-#	"   ADJUST OPTIONS   ",
-#	"none",
-#		[	
-#			(set_background_mesh, "mesh_pic_camp"),
-#		],
-#		[
-#			("toggle_no_drowning",[(eq, "$drowning", 1)],"_Disable drowning in missions.",
-#				[
-#					(assign,"$drowning",0),
-#					(jump_to_menu,"mnu_options"),
-#				]),
-#		   
-#			("toggle_drowning",[(eq, "$drowning", 0)],"_Enable drowning in missions.",
-#				[
-#					(assign,"$drowning",1),
-#					(jump_to_menu,"mnu_options"),
-#				]),
-#			
-#			("jump_to_scene",[(eq,"$cheat_mode",1)],"debug: test scene menu",
-#				[
-#					(jump_to_menu,"mnu_test_scene"),
-#				]),
-#				
-#			("toggle_cheat_on",[(eq, "$cheat_mode", 0)],"_Toggle cheat menu on.",
-#				[
-#					(assign,"$cheat_mode",1),
-#					(jump_to_menu,"mnu_options"),
-#				]),
-#		   
-#			("toggle_cheat_off",[(eq, "$cheat_mode",1)],"_Toggle cheat menu off.",
-#				[
-#					(assign,"$cheat_mode",0),
-#					(jump_to_menu,"mnu_options"),
-#				]),
-#
-#			("toggle_companion_complaint_off",[(eq, "$disable_npc_complaints", 0)],"_Toggle companion complaints off.",
-#				[
-#					(assign, "$disable_npc_complaints", 1),
-#					(jump_to_menu,"mnu_options"),
-#				]),
-#			
-#			("toggle_companion_complaint_on",[(eq, "$disable_npc_complaints", 1)],"_Toggle companion complaints on.",
-#				[
-#					(assign, "$disable_npc_complaints", 0),
-#					(jump_to_menu,"mnu_options"),
-#				]),
-#			
-#			("camp_cheat",[(ge, "$cheat_mode", 1)], "CHEAT MENU!",
-#				[
-#					(jump_to_menu, "mnu_camp_cheat"),
-#				]),
-#		
-#			("continue",[],"Back to camp menu",
-#				[         
-#					(jump_to_menu,"mnu_camp"),         
-#				]),		
-#		]
-#	),
 #Tempered entrenched camp menu not currently used
 	("entrenched_camp",mnf_scale_picture,
 	"  Your fortifications are complete.    ",
