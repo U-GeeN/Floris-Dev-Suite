@@ -3231,6 +3231,7 @@ game_menus = [
         (try_end),
         (assign, "$g_next_menu", "mnu_simple_encounter"),
         (jump_to_menu, "mnu_battle_debrief"),
+        (call_script, "script_horse_assignment_prepare_battle_horses", "p_main_party"),
         (change_screen_mission),
       ]),
 	  
@@ -3279,6 +3280,7 @@ game_menus = [
            (try_end),
     (assign, "$g_next_menu", "mnu_simple_encounter"),
     (jump_to_menu, "mnu_battle_debrief"),
+    (call_script, "script_horse_assignment_prepare_battle_horses", "p_main_party"),
     (change_screen_mission),
     ]),
       
@@ -3606,6 +3608,7 @@ game_menus = [
     "{s11}^^Your Casualties:{s8}{s10}^^Enemy Casualties:{s9}^^Kill count:{s12}", ## CC
     "none",
     [
+     (call_script, "script_horse_assignment_restore_battle_horses"),
      (try_begin),
        (eq, "$g_battle_result", 1),
        (call_script, "script_change_troop_renown", "trp_player", "$battle_renown_value"),
@@ -9398,6 +9401,10 @@ game_menus = [
           (call_script, "script_music_set_situation_with_culture", mtf_sit_travel),
         (try_end),
         (store_encountered_party, "$current_town"),
+        (try_begin),
+          (is_between, "$current_town", towns_begin, towns_end),
+          (call_script, "script_stack_econ_process_party_equipment", "p_main_party"),
+        (try_end),
       ## CC
         (try_begin),
           (party_get_slot, ":center_lord", "$current_town", slot_town_lord),
@@ -12862,9 +12869,8 @@ game_menus = [
     "You head towards the marketplace.",
     "none",
     [
-        (call_script, "script_stack_econ_process_party_equipment", "p_main_party"),
 ## Companions Overview, by Jedediah Q, modified by lazeras
-	(try_begin),
+		(try_begin),
 	(eq, "$jq_just_visited_CO", 1),
 	(assign, "$jq_just_visited_CO", 0),
 	(assign, ":merchant_troop", "$jq_current_shop"),

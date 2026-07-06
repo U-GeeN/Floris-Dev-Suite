@@ -1618,8 +1618,8 @@ stack_econ_field_weapon_3_count = 22
 stack_econ_field_weapon_4_count = 23
 stack_econ_field_base_gear_tier = 24
 stack_econ_field_base_gear_troop = 25
-stack_econ_field_horse_item = 26         # deprecated: horses are tracked by improvised cavalry records
-stack_econ_field_is_mounted_infantry = 27 # deprecated: horses are tracked by improvised cavalry records
+stack_econ_field_shield_tier = 26
+stack_econ_field_shield_count = 27
 stack_econ_field_loot_value = 28          # abstract value of unsold loot carried by this stack
 
 stack_econ_cost_armor = 90       # tier 4 ~= 360 denars; Floris armor median ~= 349
@@ -1630,6 +1630,7 @@ stack_econ_cost_horse = 300      # tier 4 ~= 1200 denars; Floris horse median ~=
 stack_econ_cost_weapon = 75      # tier 4 ~= 300 denars; Floris melee weapon median ~= 305
 stack_econ_cost_ranged = 80      # tier 4 ~= 320 denars; Floris ranged weapon median ~= 324
 stack_econ_cost_ammo = 40        # tier 4 ~= 160 denars; Floris ammo median ~= 170
+stack_econ_cost_shield = 70      # tier 4 ~= 280 denars
 
 stack_econ_gear_armor = 0
 stack_econ_gear_helmet = 1
@@ -1639,6 +1640,7 @@ stack_econ_gear_horse = 4
 stack_econ_gear_weapon = 5
 stack_econ_gear_ranged = 6
 stack_econ_gear_ammo = 7
+stack_econ_gear_shield = 8
 
 slot_agent_stack_econ_applied = 180
 slot_agent_stack_econ_party = 181
@@ -1646,8 +1648,16 @@ slot_agent_stack_econ_stack = 182
 
 slot_troop_stack_econ_base_tier = 500
 slot_troop_stack_econ_role = 501
+slot_troop_improvised_cavalry_variant = 502
+slot_troop_improvised_cavalry_original = 503
+slot_troop_improvised_cavalry_battle_horse_active = 504
+slot_troop_improvised_cavalry_battle_horse_item = 505
+slot_troop_improvised_cavalry_battle_horse_imod = 506
+slot_troop_improvised_cavalry_battle_horse_record = 507
 
-improvised_cavalry_begin = "trp_novice_fighter_improvised_cavalry"
+troop_cost_horse_value_percent = 50
+
+improvised_cavalry_begin = "trp_improvised_cavalry_begin"
 improvised_cavalry_end = "trp_improvised_cavalry_end"
 
 slot_party_horse_assignment_base = 3400
