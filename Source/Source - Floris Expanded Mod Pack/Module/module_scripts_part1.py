@@ -44,6 +44,7 @@ scripts_part1 = [
 ####Floris MTT (Multiple Troop Trees): Here are the slots for all the troops that have multiple tree iterations.
 	(assign, "$troop_trees", troop_trees_2), #Default on Expanded
 	(call_script, "script_mtt_troop_slots"),
+	(call_script, "script_initialize_improvised_cavalry_slots"),
 ###
 
       #LAZERAS MODIFIED  {Top Tier Troops Recruit}

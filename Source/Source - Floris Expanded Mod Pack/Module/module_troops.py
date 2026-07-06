@@ -2,7 +2,7 @@ from module_troops_part1 import *
 from module_troops_part2 import *
 from module_troops_native_reworked import *
 
-troops = troops_part1 + troops_part2 + troops_native_reworked
+troops = troops_part1 + troops_native_reworked + troops_part2 
 
 ####Troop upgrade declarations
 ## Floris: Multiple troop trees
@@ -680,18 +680,62 @@ upgrade(troops,"custom_e_horse_archer","custom_e_heavy_horse_archer")
 ## Improvised cavalry variants
 ## These are generated after normal upgrade declarations so copied troops keep
 ## the same stats, proficiencies, skills, inventory, faces, and upgrade paths.
-_improvised_cavalry_source_begin = find_troop(troops, "novice_fighter")
-_improvised_cavalry_source_end = find_troop(troops, "tournament_master")
+def _troop_skill_level(_skills, _skill_no):
+    return (_skills >> (_skill_no * 4)) & 0xF
+
+def _is_improvised_cavalry_source(_troop):
+    _flags = _troop[3]
+    return (
+        _troop_skill_level(_troop[10], skl_riding) > 0
+        and not (_flags & tf_mounted)
+        and not (_flags & tf_guarantee_horse)
+        and not (_flags & tf_inactive)
+        and not (_flags & tf_hero)
+    )
+
+def _improvised_cavalry_name(_name):
+    _first_space = _name.find(" ")
+    if _first_space < 0:
+        return "Mounted " + _name
+    _second_space = _name.find(" ", _first_space + 1)
+    if _second_space < 0:
+        return _name[:_first_space + 1] + "Mounted " + _name[_first_space + 1:]
+    return _name[:_second_space + 1] + "Mounted " + _name[_second_space + 1:]
+
+improvised_cavalry_pairs = []
+_improvised_cavalry_index_pairs = []
+troops.append(["improvised_cavalry_begin","{!}improvised_cavalry_begin","{!}improvised_cavalry_begin",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
+_improvised_cavalry_source_begin = find_troop(troops, "mercenary_e_townsman")
+_improvised_cavalry_source_end = find_troop(troops, "woman_r_extra5") + 1
 for _troop_no in range(_improvised_cavalry_source_begin, _improvised_cavalry_source_end):
     _src = troops[_troop_no]
+    if not _is_improvised_cavalry_source(_src):
+        continue
     _mounted = list(_src)
     _mounted[0] = _src[0] + "_improvised_cavalry"
-    _mounted[1] = _src[1][:3] + " Mounted " + _src[1][3:]
-    _mounted[2] = _src[2][:3] + " Mounted " + _src[2][3:]
-    _mounted[3] = (_mounted[3] | tf_mounted | tf_guarantee_horse) & ~tf_unmoveable_in_party_window & ~tf_inactive & ~tf_hero
+    _mounted[1] = _improvised_cavalry_name(_src[1])
+    _mounted[2] = _improvised_cavalry_name(_src[2])
+    _mounted[3] = (_mounted[3] | tf_guarantee_horse) & ~tf_mounted & ~tf_unmoveable_in_party_window & ~tf_inactive & ~tf_hero
+    _mounted[8] = _src[8]   # attributes and level
+    _mounted[9] = _src[9]   # weapon proficiencies
+    _mounted[10] = _src[10] # skills
     _mounted[7] = list(_mounted[7])
     _mounted[7].append(itm_ho_pla_sumpter_white)
+    _mounted_no = len(troops)
     troops.append(_mounted)
+    _improvised_cavalry_index_pairs.append((_troop_no, _mounted_no))
+    improvised_cavalry_pairs.append(("trp_%s" % _src[0], "trp_%s" % _mounted[0]))
+
+_improvised_cavalry_index_map = dict(_improvised_cavalry_index_pairs)
+for _original_no, _mounted_no in _improvised_cavalry_index_pairs:
+    _mounted = troops[_mounted_no]
+    for _upgrade_slot in (14, 15):
+        if len(_mounted) <= _upgrade_slot:
+            continue
+        _upgrade_no = _mounted[_upgrade_slot]
+        if _upgrade_no > 0 and _upgrade_no < len(troops):
+            if _upgrade_no in _improvised_cavalry_index_map:
+                _mounted[_upgrade_slot] = _improvised_cavalry_index_map[_upgrade_no]
 troops.append(["improvised_cavalry_end","{!}improvised_cavalry_end","{!}improvised_cavalry_end",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
 
 # modmerger_start version=201 type=2
