@@ -689,7 +689,7 @@ presentations_part3 = [
         ##### | lines
 
         ####### mouse fix pos system #######
-        (call_script, "script_mouse_fix_pos_ready"),
+        #(call_script, "script_mouse_fix_pos_ready"),
         ####### mouse fix pos system #######
       ]),
 
@@ -952,7 +952,16 @@ presentations_part3 = [
         (call_script, "script_prsnt_lines", 4, 80, 440, 150),
         (call_script, "script_prsnt_lines", 4, 80, 575, 310), #Tier 4-5
         ##### | lines
+        ####### mouse fix pos system #######
+        #(call_script, "script_mouse_fix_pos_ready"),
+        ####### mouse fix pos system #######
       ]),
+      (ti_on_presentation_run,
+      [
+        ####### mouse fix pos system #######
+        #(call_script, "script_mouse_fix_pos_run"),
+        ####### mouse fix pos system #######
+    ]),
 
     (ti_on_presentation_event_state_change,
       [
@@ -1065,14 +1074,14 @@ presentations_part3 = [
         (call_script, "script_prsnt_lines", 4, 170, 830, 204), # T6 Huskarl -> T7 Berserkr (up to 374)
         ##### | lines
         ####### mouse fix pos system #######
-        (call_script, "script_mouse_fix_pos_ready"),
+        #(call_script, "script_mouse_fix_pos_ready"),
         ####### mouse fix pos system #######
       ]),
 
     (ti_on_presentation_run,
       [
         ####### mouse fix pos system #######
-        (call_script, "script_mouse_fix_pos_run"),
+        #(call_script, "script_mouse_fix_pos_run"),
         ####### mouse fix pos system #######
     ]),
 

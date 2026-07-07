@@ -6945,7 +6945,7 @@ scripts_part1 = [
           (troop_is_mounted, ":troop_id"),
           (val_mul, ":join_cost", 2),
         (try_end),
-        (val_mul, ":join_cost", 5),
+        (val_mul, ":join_cost", 2),
       (try_end),
       (assign, reg0, ":join_cost"),
       (set_trigger_result, reg0),
@@ -6959,6 +6959,7 @@ scripts_part1 = [
   ("game_get_upgrade_xp",
     [
       (store_script_param_1, ":troop_id"),
+      (call_script, "script_stack_econ_process_party", "p_main_party"),
       
       ##Floris: Updated from CC 1.321
       (assign, ":needed_upgrade_xp", 0),
@@ -6996,7 +6997,7 @@ scripts_part1 = [
   ##
   
   # script_game_get_upgrade_cost
-  # This script is called from game engine for calculating needed troop upgrade exp
+  # This script is called from game engine for calculating needed troop upgrade money
   # Input:
   # param1: troop_id,
   # Output: reg0 = needed cost for upgrade
@@ -7006,27 +7007,6 @@ scripts_part1 = [
       (call_script, "script_stack_econ_process_party", "p_main_party"),
       
       (store_character_level, ":troop_level", ":troop_id"),
-      #(try_begin),
-      #(is_between, ":troop_level", 0, 6),
-      #(assign, reg0, 10),
-      #(else_try),
-      #(is_between, ":troop_level", 6, 11),
-      #(assign, reg0, 20),
-      #(else_try),
-      #(is_between, ":troop_level", 11, 16),
-      #(assign, reg0, 40),
-      #(else_try),
-      #(is_between, ":troop_level", 16, 21),
-      #(assign, reg0, 80),
-      #(else_try),
-      #(is_between, ":troop_level", 21, 26),
-      #(assign, reg0, 120),
-      #(else_try),
-      #(is_between, ":troop_level", 26, 31),
-      #(assign, reg0, 160),
-      #(else_try),
-      #(assign, reg0, 200),
-      #(try_end),
       
       ## CC
       (assign, ":cost", ":troop_level"),
