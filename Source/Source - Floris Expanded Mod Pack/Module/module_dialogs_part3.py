@@ -11781,8 +11781,14 @@ dialogs_part3 = [
 ##diplomacy start+ replace instances of {sir/madam} with {my lord/my lady} or {your highness} if appropriate,
 #using s0 and script_dplmc_print_subordinate_says_sir_madame_to_s0"
   [anyone,"member_chat", [(call_script, "script_dplmc_print_subordinate_says_sir_madame_to_s0"),], "Your orders {s0}?", "regular_member_talk",[]],
-  [anyone|plyr,"regular_member_talk", [], "Tell me about yourself", "do_regular_member_view_char",[[change_screen_view_character]]],
+  [anyone|plyr,"regular_member_talk", [], "Tell me about yourself", "do_regular_member_view_char_xp",[[change_screen_view_character]]],
 ##diplomacy end+
+  [anyone,"do_regular_member_view_char_xp", [
+	(store_character_level, ":troop_level", "$g_talk_troop"),
+	(is_between, ":troop_level", 31, 43), # tier 6 and 7
+	(troop_get_xp, reg1, "$g_talk_troop"),
+	], "This Troop has collectively {reg1} experience.^Anything else?", "regular_member_talk",[]],
+  [anyone,"do_regular_member_view_char_xp", [], "Anything else?", "regular_member_talk",[]],
   [anyone,"do_regular_member_view_char", [], "Anything else?", "regular_member_talk",[]],
 
 
