@@ -799,6 +799,12 @@ simple_triggers_part5 = [
    ]),
 
   # Floris stack equipment economy: gradual stack wealth and gear progression.
+  (0.25,
+   [
+      (party_is_active, "p_main_party"),
+      (call_script, "script_stack_econ_process_party", "p_main_party"),
+   ]),
+
   (24,
    [
       (try_for_parties, ":party_no"),

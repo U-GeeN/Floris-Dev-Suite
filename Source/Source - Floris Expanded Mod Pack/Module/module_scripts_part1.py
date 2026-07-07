@@ -7003,6 +7003,7 @@ scripts_part1 = [
   ("game_get_upgrade_cost",
     [
       (store_script_param_1, ":troop_id"),
+      (call_script, "script_stack_econ_process_party", "p_main_party"),
       
       (store_character_level, ":troop_level", ":troop_id"),
       #(try_begin),
