@@ -13206,6 +13206,18 @@ dialogs_part3 = [
 # LAV MODIFICATIONS END (COMPANIONS OVERSEER MOD)
 ####################################################################################################################################
  ##Caba - new cheats
+  [anyone|plyr,"regular_member_talk", [(ge, "$cheat_mode", 1)], "CHEAT: Add 100 Denars to Stack", "do_regular_member_view_char",[
+    (call_script, "script_stack_econ_find_stack_by_troop", "p_main_party", "$g_talk_troop"),
+    (assign, ":stack", reg0),
+    (neq, ":stack", -1),
+    (call_script, "script_stack_econ_initialize_stack", "p_main_party", ":stack"),
+    (call_script, "script_stack_econ_get_field", "p_main_party", ":stack", stack_econ_field_gold),
+    (assign, ":stack_gold", reg1),
+    (val_add, ":stack_gold", 100),
+    (call_script, "script_stack_econ_set_field", "p_main_party", ":stack", stack_econ_field_gold, ":stack_gold"),
+    (assign, reg0, ":stack_gold"),
+    (display_message, "@CHEAT: Added 100 denars to this stack. Stack funds: {reg0}.", 0xFF66FF66),
+   ]],
   [anyone|plyr,"regular_member_talk", [(ge, "$cheat_mode", 1)], "CHEAT: Upgrade One Member", "do_regular_member_view_char",[
     (assign, ":stack", -1),
     (party_get_num_companion_stacks, ":num_of_stacks", "p_main_party"),
