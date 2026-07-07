@@ -4332,6 +4332,11 @@ scripts_part2 = [
         (val_mul, ":loot_probability", ":player_party_looting"),
         (val_div, ":loot_probability", 10),
         (val_div, ":loot_probability", ":num_player_party_shares"),
+        # troop_loot_troop samples from the whole troop template, including alternate gear
+        # that the spawned agent may not have used. Keep that template loot conservative.
+        (val_mul, ":loot_probability", 35),
+        (val_div, ":loot_probability", 100),
+        (val_max, ":loot_probability", 1),
         
         ## CC
         (store_add, ":temp_array_c_plus_one", "trp_temp_array_c", 1),
