@@ -1,3 +1,5 @@
+from module_constants import *
+from module_items import items
 from module_troops_part1 import *
 from module_troops_part2 import *
 from module_troops_native_reworked import *
@@ -350,11 +352,11 @@ upgrade2(troops,"nord_e_warrior","nord_e_champion","nord_e_vikingr")
 #Tier 5-6  (Vet.Skirmisher -> A6 Javelinier)
 upgrade(troops,"nord_e_veteran_skirmisher","nord_e_javelinier")
 #           (Champion -> I6 Marauder OR I6 Huskarl; Vikingr -> I6 Marauder)
-upgrade2(troops,"nord_e_champion","nord_e_marauder","nord_e_huskarl")
+upgrade2(troops,"nord_e_champion","nord_e_huskarl","nord_e_marauder")
 upgrade(troops,"nord_e_vikingr","nord_e_marauder")
 #Tier 6-7  (Marauder -> I7 Berserkr; Huskarl -> I7 Berserkr OR I7 Elite Huskarl)
 upgrade(troops,"nord_e_marauder","nord_e_berserkr")
-upgrade2(troops,"nord_e_huskarl","nord_e_berserkr","nord_e_elite_huskarl")
+upgrade2(troops,"nord_e_huskarl","nord_e_elite_huskarl","nord_e_berserkr")
 ##
 
 ###Rhodok
@@ -677,11 +679,177 @@ upgrade(troops,"custom_e_knight","custom_e_heavy_knight")
 upgrade(troops,"custom_e_horse_archer","custom_e_heavy_horse_archer")
 ##
 
-## Improvised cavalry variants
+## Dismounted cavalry entry variants and improvised cavalry variants
 ## These are generated after normal upgrade declarations so copied troops keep
 ## the same stats, proficiencies, skills, inventory, faces, and upgrade paths.
 def _troop_skill_level(_skills, _skill_no):
     return (_skills >> (_skill_no * 4)) & 0xF
+
+def _is_horse_item_no(_item_no):
+    return _item_no >= 0 and _item_no < len(items) and ((items[_item_no][3] & 0xff) == itp_type_horse)
+
+def _troop_has_template_horse(_troop):
+    for _item_no in _troop[7]:
+        if _is_horse_item_no(_item_no):
+            return True
+    return False
+
+def _is_real_cavalry_troop(_troop):
+    _flags = _troop[3]
+    return (
+        not (_flags & tf_inactive)
+        and not (_flags & tf_hero)
+        and (
+            (_flags & tf_guarantee_horse)
+            or ((_flags & tf_mounted) and _troop_has_template_horse(_troop))
+        )
+    )
+
+def _dismounted_cavalry_name(_name):
+    _first_space = _name.find(" ")
+    if _first_space < 0:
+        return "Dismounted " + _name
+    _second_space = _name.find(" ", _first_space + 1)
+    if _second_space < 0:
+        return _name[:_first_space + 1] + "Dismounted " + _name[_first_space + 1:]
+    return _name[:_second_space + 1] + "Dismounted " + _name[_second_space + 1:]
+
+def _troop_horse_faction_mask(_troop):
+    _faction = _troop[6]
+    if _faction == fac_kingdom_1:
+        return horse_faction_swadia | horse_faction_player
+    if _faction == fac_kingdom_2:
+        return horse_faction_vaegir | horse_faction_player
+    if _faction == fac_kingdom_3:
+        return horse_faction_khergit | horse_faction_player
+    if _faction == fac_kingdom_4:
+        return horse_faction_nord | horse_faction_player
+    if _faction == fac_kingdom_5:
+        return horse_faction_rhodok | horse_faction_player
+    if _faction == fac_kingdom_6:
+        return horse_faction_sarranid | horse_faction_player
+    return horse_faction_common | horse_faction_player
+
+_noble_branch_start_ids = set([
+    "swadian_e_page",
+    "nord_e_dreng",
+])
+_noble_branch_troop_ids = set()
+for _noble_start_id in _noble_branch_start_ids:
+    try:
+        _noble_troop_no = find_troop(troops, _noble_start_id)
+    except:
+        _noble_troop_no = -1
+    while _noble_troop_no >= 0 and _noble_troop_no < len(troops):
+        _noble_troop = troops[_noble_troop_no]
+        if _noble_troop[0] in _noble_branch_troop_ids:
+            break
+        _noble_branch_troop_ids.add(_noble_troop[0])
+        if len(_noble_troop) <= 14:
+            break
+        _next_noble_troop_no = _noble_troop[14]
+        if _next_noble_troop_no <= 0 or _next_noble_troop_no >= len(troops):
+            break
+        _noble_troop_no = _next_noble_troop_no
+
+def _troop_horse_status(_troop):
+    _troop_id = _troop[0]
+    if _troop[6] == fac_commoners:
+        return horse_status_common
+    if _troop_id.endswith("_dismounted_cavalry"):
+        _troop_id = _troop_id[:-len("_dismounted_cavalry")]
+    elif _troop_id.endswith("_assigned_cavalry"):
+        _troop_id = _troop_id[:-len("_assigned_cavalry")]
+    if _troop_id in _noble_branch_troop_ids:
+        return horse_status_noble
+    return horse_status_common
+
+_dismounted_cavalry_index_pairs = []
+_dismounted_cavalry_index_map = {}
+_dismounted_cavalry_pending = []
+_dismounted_cavalry_source_begin = find_troop(troops, "mercenary_e_townsman")
+_dismounted_cavalry_source_end = find_troop(troops, "woman_r_extra5") + 1
+
+def _get_dismounted_cavalry_no(_mounted_no):
+    if _mounted_no in _dismounted_cavalry_index_map:
+        return _dismounted_cavalry_index_map[_mounted_no]
+    _mounted = troops[_mounted_no]
+    _dismounted = list(_mounted)
+    _dismounted[0] = _mounted[0] + "_dismounted_cavalry"
+    _dismounted[1] = _dismounted_cavalry_name(_mounted[1])
+    _dismounted[2] = _dismounted_cavalry_name(_mounted[2])
+    _dismounted[3] = _dismounted[3] & ~tf_mounted & ~tf_guarantee_horse & ~tf_unmoveable_in_party_window & ~tf_inactive & ~tf_hero
+    _dismounted[7] = [_item_no for _item_no in _mounted[7] if not _is_horse_item_no(_item_no)]
+    while len(_dismounted) <= 15:
+        _dismounted.append(0)
+    _dismounted[14] = 0
+    _dismounted[15] = 0
+    _dismounted_no = len(troops)
+    troops.append(_dismounted)
+    _dismounted_cavalry_index_map[_mounted_no] = _dismounted_no
+    _dismounted_cavalry_index_pairs.append((_mounted_no, _dismounted_no))
+    _dismounted_cavalry_pending.append(_mounted_no)
+    return _dismounted_no
+
+troops.append(["dismounted_cavalry_begin","{!}dismounted_cavalry_begin","{!}dismounted_cavalry_begin",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
+for _source_no in range(_dismounted_cavalry_source_begin, _dismounted_cavalry_source_end):
+    _source = troops[_source_no]
+    if _is_real_cavalry_troop(_source):
+        continue
+    for _upgrade_slot in (14, 15):
+        if len(_source) <= _upgrade_slot:
+            continue
+        _upgrade_no = _source[_upgrade_slot]
+        if _upgrade_no <= 0 or _upgrade_no >= len(troops):
+            continue
+        _mounted = troops[_upgrade_no]
+        if not _is_real_cavalry_troop(_mounted):
+            continue
+        _source[_upgrade_slot] = _get_dismounted_cavalry_no(_upgrade_no)
+
+_dismounted_cavalry_pending_index = 0
+while _dismounted_cavalry_pending_index < len(_dismounted_cavalry_pending):
+    _mounted_no = _dismounted_cavalry_pending[_dismounted_cavalry_pending_index]
+    _dismounted_no = _dismounted_cavalry_index_map[_mounted_no]
+    _mounted = troops[_mounted_no]
+    _dismounted = troops[_dismounted_no]
+    for _upgrade_slot in (14, 15):
+        if len(_mounted) <= _upgrade_slot:
+            continue
+        _upgrade_no = _mounted[_upgrade_slot]
+        if _upgrade_no <= 0 or _upgrade_no >= len(troops):
+            continue
+        if not _is_real_cavalry_troop(troops[_upgrade_no]):
+            continue
+        _dismounted[_upgrade_slot] = _get_dismounted_cavalry_no(_upgrade_no)
+    _dismounted_cavalry_pending_index += 1
+troops.append(["dismounted_cavalry_end","{!}dismounted_cavalry_end","{!}dismounted_cavalry_end",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
+
+assigned_cavalry_pairs = []
+_assigned_cavalry_index_pairs = []
+troops.append(["assigned_cavalry_begin","{!}assigned_cavalry_begin","{!}assigned_cavalry_begin",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
+for _mounted_no, _dismounted_no in _dismounted_cavalry_index_pairs:
+    _mounted = troops[_mounted_no]
+    _assigned = list(_mounted)
+    _assigned[0] = _mounted[0] + "_assigned_cavalry"
+    _assigned[1] = _mounted[1]
+    _assigned[2] = _mounted[2]
+    _assigned[3] = (_assigned[3] | tf_guarantee_horse) & ~tf_unmoveable_in_party_window & ~tf_inactive & ~tf_hero
+    _assigned[7] = list(_assigned[7])
+    _assigned_no = len(troops)
+    troops.append(_assigned)
+    _assigned_cavalry_index_pairs.append((_mounted_no, _assigned_no, _dismounted_no))
+    assigned_cavalry_pairs.append(("trp_%s" % _mounted[0], "trp_%s" % _assigned[0], "trp_%s" % troops[_dismounted_no][0]))
+_mounted_cavalry_assigned_index_map = dict([(mounted_no, assigned_no) for mounted_no, assigned_no, dismounted_no in _assigned_cavalry_index_pairs])
+for _mounted_no, _assigned_no, _dismounted_no in _assigned_cavalry_index_pairs:
+    _assigned = troops[_assigned_no]
+    for _upgrade_slot in (14, 15):
+        if len(_assigned) <= _upgrade_slot:
+            continue
+        _upgrade_no = _assigned[_upgrade_slot]
+        if _upgrade_no in _mounted_cavalry_assigned_index_map:
+            _assigned[_upgrade_slot] = _mounted_cavalry_assigned_index_map[_upgrade_no]
+troops.append(["assigned_cavalry_end","{!}assigned_cavalry_end","{!}assigned_cavalry_end",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
 
 def _is_improvised_cavalry_source(_troop):
     _flags = _troop[3]
@@ -727,6 +895,7 @@ for _troop_no in range(_improvised_cavalry_source_begin, _improvised_cavalry_sou
     improvised_cavalry_pairs.append(("trp_%s" % _src[0], "trp_%s" % _mounted[0]))
 
 _improvised_cavalry_index_map = dict(_improvised_cavalry_index_pairs)
+_dismounted_cavalry_assigned_index_map = dict([(dismounted_no, assigned_no) for mounted_no, assigned_no, dismounted_no in _assigned_cavalry_index_pairs])
 for _original_no, _mounted_no in _improvised_cavalry_index_pairs:
     _mounted = troops[_mounted_no]
     for _upgrade_slot in (14, 15):
@@ -736,6 +905,8 @@ for _original_no, _mounted_no in _improvised_cavalry_index_pairs:
         if _upgrade_no > 0 and _upgrade_no < len(troops):
             if _upgrade_no in _improvised_cavalry_index_map:
                 _mounted[_upgrade_slot] = _improvised_cavalry_index_map[_upgrade_no]
+            elif _upgrade_no in _dismounted_cavalry_assigned_index_map:
+                _mounted[_upgrade_slot] = _dismounted_cavalry_assigned_index_map[_upgrade_no]
 troops.append(["improvised_cavalry_end","{!}improvised_cavalry_end","{!}improvised_cavalry_end",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
 
 # modmerger_start version=201 type=2

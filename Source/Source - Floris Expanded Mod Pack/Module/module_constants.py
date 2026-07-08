@@ -1651,23 +1651,52 @@ slot_troop_stack_econ_role = 501
 slot_troop_improvised_cavalry_variant = 502
 slot_troop_improvised_cavalry_original = 503
 slot_troop_improvised_cavalry_battle_horse_active = 504
-slot_troop_improvised_cavalry_battle_horse_item = 505
-slot_troop_improvised_cavalry_battle_horse_imod = 506
 slot_troop_improvised_cavalry_battle_horse_record = 507
+slot_troop_dismounted_cavalry_variant = 508
+slot_troop_mounted_cavalry_variant = 509
+slot_troop_horse_faction_mask = 510
+slot_troop_horse_status = 511
+slot_troop_battle_horse_inventory_count = 512
+slot_troop_battle_horse_inventory_slot_base = 513
+slot_troop_battle_horse_inventory_item_base = 521
+slot_troop_battle_horse_inventory_imod_base = 529
+slot_troop_battle_horse_inventory_max = 8
+
+slot_item_horse_faction_mask = 601
+slot_item_horse_status = 602
+
+horse_status_common = 1
+horse_status_noble = 2
+
+horse_faction_common = 1
+horse_faction_swadia = 2
+horse_faction_vaegir = 4
+horse_faction_khergit = 8
+horse_faction_nord = 16
+horse_faction_rhodok = 32
+horse_faction_sarranid = 64
+horse_faction_player = 128
 
 troop_cost_horse_value_percent = 50
 
 improvised_cavalry_begin = "trp_improvised_cavalry_begin"
 improvised_cavalry_end = "trp_improvised_cavalry_end"
+dismounted_cavalry_begin = "trp_dismounted_cavalry_begin"
+dismounted_cavalry_end = "trp_dismounted_cavalry_end"
+assigned_cavalry_begin = "trp_assigned_cavalry_begin"
+assigned_cavalry_end = "trp_assigned_cavalry_end"
 
 slot_party_horse_assignment_base = 3400
-slot_party_horse_assignment_stride = 5
+slot_party_horse_assignment_stride = 6
 slot_party_horse_assignment_max = 160
 horse_assignment_field_active = 0
 horse_assignment_field_original_troop = 1
 horse_assignment_field_mounted_troop = 2
 horse_assignment_field_item = 3
 horse_assignment_field_imod = 4
+horse_assignment_field_source = 5
+horse_assignment_source_given = 1
+horse_assignment_source_bought = 2
 
 g_horse_manage_count = "$g_horse_manage_count"
 

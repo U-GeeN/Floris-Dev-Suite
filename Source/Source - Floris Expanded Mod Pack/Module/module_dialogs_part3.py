@@ -11836,7 +11836,29 @@ dialogs_part3 = [
     (try_end),
     (call_script, "script_improvised_cavalry_is_eligible_original_troop", ":original_troop"),
     (eq, reg0, 1),
-  ], "Manage horses.", "horse_manage_inventory",[]],
+  ], "Lend horses.", "horse_manage_inventory",[]],
+  [anyone|plyr,"regular_member_talk", [
+    (call_script, "script_troop_get_mounted_cavalry_variant", "$g_talk_troop"),
+    (gt, reg0, 0),
+  ], "Lend horses.", "horse_lend_inventory",[]],
+  [anyone|plyr,"regular_member_talk", [
+    (call_script, "script_troop_get_dismounted_cavalry_variant", "$g_talk_troop"),
+    (assign, ":dismounted_troop", reg0),
+    (gt, ":dismounted_troop", 0),
+    (call_script, "script_horse_assignment_find_nth_assigned_horse", "p_main_party", ":dismounted_troop", 0),
+    (ge, reg0, 0),
+  ], "Retrieve horses.", "horse_retrieve_inventory",[]],
+  [anyone,"horse_lend_inventory", [
+    (assign, "$g_horse_manage_original_troop", "$g_talk_troop"),
+    (assign, "$g_horse_manage_mounted_mode", 2),
+    (call_script, "script_horse_assignment_store_management_status", "p_main_party", "$g_horse_manage_original_troop"),
+  ], "{s2}", "horse_manage_select", []],
+  [anyone,"horse_retrieve_inventory", [
+    (call_script, "script_troop_get_dismounted_cavalry_variant", "$g_talk_troop"),
+    (assign, "$g_horse_manage_original_troop", reg0),
+    (assign, "$g_horse_manage_mounted_mode", 3),
+    (call_script, "script_horse_assignment_store_management_status", "p_main_party", "$g_horse_manage_original_troop"),
+  ], "{s2}", "horse_manage_select", []],
   [anyone,"horse_manage_inventory", [
     (assign, "$g_horse_manage_original_troop", "$g_talk_troop"),
     (assign, "$g_horse_manage_mounted_mode", 0),
