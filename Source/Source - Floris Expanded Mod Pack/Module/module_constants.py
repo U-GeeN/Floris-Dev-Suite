@@ -1621,6 +1621,7 @@ stack_econ_field_base_gear_troop = 25
 stack_econ_field_shield_tier = 26
 stack_econ_field_shield_count = 27
 stack_econ_field_loot_value = 28          # abstract value of unsold loot carried by this stack
+stack_econ_field_tracked_xp = 29          # XP added through scripts that can be safely split on stack conversion
 
 stack_econ_cost_armor = 90       # tier 4 ~= 360 denars; Floris armor median ~= 349
 stack_econ_cost_helmet = 40      # tier 4 ~= 160 denars; Floris helmet median ~= 153
