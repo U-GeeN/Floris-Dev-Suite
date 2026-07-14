@@ -4332,10 +4332,6 @@ scripts_part2 = [
         (val_mul, ":loot_probability", ":player_party_looting"),
         (val_div, ":loot_probability", 10),
         (val_div, ":loot_probability", ":num_player_party_shares"),
-        # troop_loot_troop samples from the whole troop template, including alternate gear
-        # that the spawned agent may not have used. Keep that template loot conservative.
-        (val_mul, ":loot_probability", 35),
-        (val_div, ":loot_probability", 100),
         (val_max, ":loot_probability", 1),
         
         ## CC
@@ -4349,6 +4345,7 @@ scripts_part2 = [
         (try_end),
         
         (call_script, "script_copy_inventory", "trp_temp_troop", "trp_temp_array_a"),
+        (troop_clear_inventory, "trp_temp_troop"),
         
         (party_get_num_companion_stacks, ":num_stacks", ":enemy_party"),
         (try_for_range, ":i_stack", 0, ":num_stacks"),
@@ -4358,14 +4355,14 @@ scripts_part2 = [
           (try_for_range, ":unused", 0, ":stack_size"),
             (try_begin),
               (store_free_inventory_capacity, ":inv_cap_a", "trp_temp_array_a"),
-              (gt, ":inv_cap_a", 0),
-              (troop_loot_troop, "trp_temp_array_a", ":stack_troop", ":loot_probability"),
-            (else_try),
               (store_free_inventory_capacity, ":inv_cap_b", "trp_temp_array_b"),
-              (gt, ":inv_cap_b", 0),
-              (troop_loot_troop, "trp_temp_array_b", ":stack_troop", ":loot_probability"),
-            (else_try),
-              (troop_loot_troop, "trp_temp_array_c", ":stack_troop", ":loot_probability"),
+              (store_free_inventory_capacity, ":inv_cap_c", "trp_temp_array_c"),
+              (store_add, ":total_inv_cap", ":inv_cap_a", ":inv_cap_b"),
+              (val_add, ":total_inv_cap", ":inv_cap_c"),
+              (gt, ":total_inv_cap", 0),
+              (troop_clear_inventory, "trp_temp_troop"),
+              (troop_loot_troop, "trp_temp_troop", ":stack_troop", ":loot_probability"),
+              (call_script, "script_stack_econ_filter_casualty_loot", ":stack_troop"),
             (try_end),
           (try_end),
         (try_end),

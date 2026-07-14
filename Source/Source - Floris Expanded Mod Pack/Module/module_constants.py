@@ -1663,6 +1663,15 @@ slot_troop_battle_horse_inventory_item_base = 521
 slot_troop_battle_horse_inventory_imod_base = 529
 slot_troop_battle_horse_inventory_max = 8
 
+slot_troop_stack_econ_guarantee_mask = 537
+stack_econ_guarantee_armor = 1
+stack_econ_guarantee_helmet = 2
+stack_econ_guarantee_boots = 4
+stack_econ_guarantee_gauntlets = 8
+stack_econ_guarantee_horse = 16
+stack_econ_guarantee_shield = 32
+stack_econ_guarantee_ranged = 64
+
 slot_item_horse_faction_mask = 601
 slot_item_horse_status = 602
 
