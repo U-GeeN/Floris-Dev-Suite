@@ -1252,6 +1252,16 @@ scripts = [
 			(eq, "$background_answer_2", dplmc_cb2_noble),
 			(val_add, ":lands", 2),
 		(try_end),
+
+		(try_begin),
+			(eq, "$g_debug_character_start", 1),
+			(assign, ":skill_surgery", 10),
+			(assign, ":skill_firstaid", 10),
+			(assign, ":skill_woundtreatment", 10),
+			(assign, ":skill_pathfinding", 10),
+			(assign, ":skill_tactics", 10),
+			(assign, ":skill_inventorymanagement", 10),
+		(try_end),
 		
 		##### DEVELOP STAT REPORT #####
 		(try_begin),
