@@ -17529,6 +17529,9 @@ game_menus = [
           (val_add, reg20,1),
         (try_end),
         # reg20 now contains number of items in loot pool
+        (assign, "$g_post_battle_loot_count", reg20),
+        (party_get_num_companions, "$g_post_battle_recruit_count", "p_temp_party"),
+        (party_get_num_prisoners, "$g_post_battle_prisoner_count", "p_temp_party"),
         (try_begin),
           (eq, reg20, 0),
           (str_store_string, 10, "str_item_pool_no_items"),
@@ -17548,11 +17551,41 @@ game_menus = [
 			(assign, reg50, 0), # We let s50 pass this time, but again unless appropriate.
 			(str_store_string, s50, "@^^{s50}"),
 		(try_end),
+        (try_begin),
+          (gt, "$g_post_battle_loot_count", 0),
+          (gt, "$g_post_battle_recruit_count", 0),
+          (gt, "$g_post_battle_prisoner_count", 0),
+          (str_store_string, s21, "@Take loot, recruits, prisoners and leave."),
+        (else_try),
+          (gt, "$g_post_battle_loot_count", 0),
+          (gt, "$g_post_battle_recruit_count", 0),
+          (str_store_string, s21, "@Take loot, recruits and leave."),
+        (else_try),
+          (gt, "$g_post_battle_loot_count", 0),
+          (gt, "$g_post_battle_prisoner_count", 0),
+          (str_store_string, s21, "@Take loot, prisoners and leave."),
+        (else_try),
+          (gt, "$g_post_battle_recruit_count", 0),
+          (gt, "$g_post_battle_prisoner_count", 0),
+          (str_store_string, s21, "@Take recruits, prisoners and leave."),
+        (else_try),
+          (gt, "$g_post_battle_loot_count", 0),
+          (str_store_string, s21, "@Take loot and leave."),
+        (else_try),
+          (gt, "$g_post_battle_recruit_count", 0),
+          (str_store_string, s21, "@Take recruits and leave."),
+        (else_try),
+          (gt, "$g_post_battle_prisoner_count", 0),
+          (str_store_string, s21, "@Take prisoners and leave."),
+        (else_try),
+          (str_store_string, s21, "@Leave."),
+        (try_end),
     ],
     [
       ("auto_loot",
         [
           (eq, "$inventory_menu_offset",0),
+          (gt, "$g_post_battle_loot_count", 0),
           (assign, ":companion_count", 0),
           (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
           (try_for_range, ":stack_no", 0, ":num_stacks"),
@@ -17569,6 +17602,7 @@ game_menus = [
       ("auto_loot_no",
         [
           (eq, "$inventory_menu_offset",0),
+          (gt, "$g_post_battle_loot_count", 0),
           (assign, ":companion_count", 0),
           (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
           (try_for_range, ":stack_no", 0, ":num_stacks"),
@@ -17583,18 +17617,29 @@ game_menus = [
         ],
         "Insufficient item pool space for auto-upgrade.", []
       ),
-      ("loot", [],
-        "Access the item pool.", [(change_screen_loot, "$pool_troop")]
+      ("loot", [
+          (assign, reg21, "$g_post_battle_loot_count"),
+          (gt, reg21, 0),
+        ],
+        "Access the item pool ({reg21}).", [(change_screen_loot, "$pool_troop")]
       ),
-      ("distribute_troops", [],
+      ("distribute_troops", [
+          (assign, reg21, "$g_post_battle_loot_count"),
+          (gt, reg21, 0),
+        ],
         "Distribute Loot to Troops.",
         [
           (call_script, "script_stack_econ_distribute_loot", "p_main_party", "$g_stack_econ_loot_value"),
           (jump_to_menu, "mnu_post_battle_loot_menu"),
         ]
       ),
-      ("handle_prisoners", [],
-        "Handle prisoners.",
+      ("handle_prisoners", [
+          (assign, reg22, "$g_post_battle_recruit_count"),
+          (assign, reg23, "$g_post_battle_prisoner_count"),
+          (store_add, ":available_troops", reg22, reg23),
+          (gt, ":available_troops", 0),
+        ],
+        "Handle recruits/prisoners ({reg22}/{reg23}).",
         [
           (change_screen_exchange_with_party, "p_temp_party"),
         ]
@@ -17631,7 +17676,7 @@ game_menus = [
             (val_add, ":companion_count", 1),
           (try_end),
           (gt, ":companion_count", 0),
-          (gt, reg20, 0),
+          (gt, "$g_post_battle_loot_count", 0),
           (assign, reg1, "$g_price_threshold_for_picking"),
           (gt, reg1, 0),
         ],
@@ -17649,6 +17694,7 @@ game_menus = [
         ]
       ),
       ("auto_loot_leave", [
+          (gt, "$g_post_battle_loot_count", 0),
           (assign, ":companion_count", 0),
           (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
           (try_for_range, ":stack_no", 0, ":num_stacks"),
@@ -17671,20 +17717,10 @@ game_menus = [
 		  (jump_to_menu, "$return_menu"),
         ]
       ),
-      ("take_loot_and_leave", [
-          (assign, ":companion_count", 0),
-          (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
-          (try_for_range, ":stack_no", 0, ":num_stacks"),
-            (party_stack_get_troop_id, ":stack_troop", "p_main_party", ":stack_no"),
-            (is_between, ":stack_troop", companions_begin, companions_end),
-            (val_add, ":companion_count", 1),
-          (try_end),
-          (eq, ":companion_count", 0),
-        ],
-        "Take remaining loot and leave.",
+      ("take_loot_and_leave", [],
+        "{s21}",
         [
-          (call_script, "script_transfer_inventory", "$pool_troop", "trp_player", 1),
-          (call_script, "script_sort_food", "trp_player"),
+          (call_script, "script_post_battle_take_all_rewards"),
 		  (str_clear, s50),
 		  (jump_to_menu, "$return_menu"),
         ]

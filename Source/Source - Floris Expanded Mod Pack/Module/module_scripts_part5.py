@@ -19611,6 +19611,42 @@ scripts_part5 = [
      (try_end),
    ]),
 
+  ("post_battle_take_all_rewards",
+   [
+     (try_begin),
+       (gt, "$g_post_battle_loot_count", 0),
+       (call_script, "script_transfer_inventory", "$pool_troop", "trp_player", 1),
+       (call_script, "script_sort_food", "trp_player"),
+     (try_end),
+
+     (party_get_num_companion_stacks, ":num_stacks", "p_temp_party"),
+     (try_for_range_backwards, ":stack_no", 0, ":num_stacks"),
+       (party_stack_get_troop_id, ":troop_no", "p_temp_party", ":stack_no"),
+       (party_stack_get_size, ":stack_size", "p_temp_party", ":stack_no"),
+       (gt, ":stack_size", 0),
+       (party_stack_get_num_wounded, ":num_wounded", "p_temp_party", ":stack_no"),
+       (party_add_members, "p_main_party", ":troop_no", ":stack_size"),
+       (try_begin),
+         (gt, ":num_wounded", 0),
+         (party_wound_members, "p_main_party", ":troop_no", ":num_wounded"),
+       (try_end),
+       (party_remove_members, "p_temp_party", ":troop_no", ":stack_size"),
+     (try_end),
+
+     (party_get_num_prisoner_stacks, ":num_prisoner_stacks", "p_temp_party"),
+     (try_for_range_backwards, ":stack_no", 0, ":num_prisoner_stacks"),
+       (party_prisoner_stack_get_troop_id, ":troop_no", "p_temp_party", ":stack_no"),
+       (party_prisoner_stack_get_size, ":stack_size", "p_temp_party", ":stack_no"),
+       (gt, ":stack_size", 0),
+       (party_add_prisoners, "p_main_party", ":troop_no", ":stack_size"),
+       (party_remove_prisoners, "p_temp_party", ":troop_no", ":stack_size"),
+     (try_end),
+
+     (assign, "$g_post_battle_loot_count", 0),
+     (assign, "$g_post_battle_recruit_count", 0),
+     (assign, "$g_post_battle_prisoner_count", 0),
+   ]),
+
   ("assign_horses_to_infantry",
    [
      (store_script_param, ":party_no", 1),
