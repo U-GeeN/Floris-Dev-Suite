@@ -1646,6 +1646,7 @@ stack_econ_gear_shield = 8
 slot_agent_stack_econ_applied = 180
 slot_agent_stack_econ_party = 181
 slot_agent_stack_econ_stack = 182
+slot_agent_stack_econ_dismount_checked = 183
 
 slot_troop_stack_econ_base_tier = 500
 slot_troop_stack_econ_role = 501
