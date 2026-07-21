@@ -9403,7 +9403,9 @@ game_menus = [
         (store_encountered_party, "$current_town"),
         (try_begin),
           (is_between, "$current_town", towns_begin, towns_end),
+          (assign, "$g_stack_econ_force_town_access", 1),
           (call_script, "script_stack_econ_process_party_equipment", "p_main_party"),
+          (assign, "$g_stack_econ_force_town_access", 0),
         (try_end),
       ## CC
         (try_begin),

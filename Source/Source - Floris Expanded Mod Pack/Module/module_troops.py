@@ -134,14 +134,14 @@ upgrade2(troops,"swadian_e_vougier","swadian_e_foot_soldier","swadian_e_hobilar"
 upgrade2(troops,"swadian_e_page","swadian_e_ecuyer","swadian_e_hobilar")
 upgrade(troops,"swadian_e_archer_militia","swadian_e_trained_archer")
 #Tier 4-5
-upgrade2(troops,"swadian_e_ecuyer","swadian_e_chevalier","swadian_e_man_at_arms")
+upgrade2(troops,"swadian_e_ecuyer","swadian_e_chevalier","swadian_e_lancer")
 upgrade(troops,"swadian_e_foot_soldier","swadian_e_infantry")
-upgrade(troops,"swadian_e_hobilar","swadian_e_man_at_arms")
+upgrade(troops,"swadian_e_hobilar","swadian_e_lancer")
 upgrade(troops,"swadian_e_trained_archer","swadian_e_selfbow_archer")
 #Tier 5-6
-upgrade2(troops,"swadian_e_chevalier","swadian_e_chevalier_banneret","swadian_e_lancer")
+upgrade2(troops,"swadian_e_chevalier","swadian_e_chevalier_banneret","swadian_e_man_at_arms")
 upgrade(troops,"swadian_e_infantry","swadian_e_sergeant")
-upgrade(troops,"swadian_e_man_at_arms","swadian_e_lancer")
+upgrade(troops,"swadian_e_lancer","swadian_e_man_at_arms")
 upgrade(troops,"swadian_e_selfbow_archer","swadian_e_longbowman")
 #Tier 6-7
 upgrade(troops,"swadian_e_chevalier_banneret","swadian_e_baron_mineures")
@@ -730,45 +730,80 @@ def _troop_horse_faction_mask(_troop):
         return horse_faction_sarranid | horse_faction_player
     return horse_faction_common | horse_faction_player
 
-_noble_branch_start_ids = set([
+_noble_troop_ids = set([
     "swadian_e_page",
+    "swadian_e_ecuyer",
+    "swadian_e_chevalier",
+    "swadian_e_chevalier_banneret",
+    "swadian_e_baron_mineures",
     "nord_e_dreng",
+    "nord_e_warrior",
+    "nord_e_champion",
+    "nord_e_huskarl",
+    "nord_e_elite_huskarl",
 ])
-_noble_branch_troop_ids = set()
-for _noble_start_id in _noble_branch_start_ids:
-    try:
-        _noble_troop_no = find_troop(troops, _noble_start_id)
-    except:
-        _noble_troop_no = -1
-    while _noble_troop_no >= 0 and _noble_troop_no < len(troops):
-        _noble_troop = troops[_noble_troop_no]
-        if _noble_troop[0] in _noble_branch_troop_ids:
-            break
-        _noble_branch_troop_ids.add(_noble_troop[0])
-        if len(_noble_troop) <= 14:
-            break
-        _next_noble_troop_no = _noble_troop[14]
-        if _next_noble_troop_no <= 0 or _next_noble_troop_no >= len(troops):
-            break
-        _noble_troop_no = _next_noble_troop_no
 
-def _troop_horse_status(_troop):
+def _troop_is_noble(_troop):
     _troop_id = _troop[0]
     if _troop[6] == fac_commoners:
-        return horse_status_common
-    if _troop_id.endswith("_dismounted_cavalry"):
-        _troop_id = _troop_id[:-len("_dismounted_cavalry")]
-    elif _troop_id.endswith("_assigned_cavalry"):
-        _troop_id = _troop_id[:-len("_assigned_cavalry")]
-    if _troop_id in _noble_branch_troop_ids:
-        return horse_status_noble
-    return horse_status_common
+        return 0
+    for _variant_suffix in ("_dismounted_cavalry", "_assigned_cavalry", "_improvised_cavalry"):
+        if _troop_id.endswith(_variant_suffix):
+            _troop_id = _troop_id[:-len(_variant_suffix)]
+            break
+    if _troop_id in _noble_troop_ids:
+        return 1
+    return 0
+
+_swadian_troop_tree_root_ids = set([
+    "swadian_n_peasant",
+    "swadian_r_peasant",
+    "swadian_e_peasant",
+    "swadian_e_page",
+])
+for _swadian_tree_prefix in ("swadian_n", "swadian_r", "swadian_e"):
+    for _swadian_extra_no in range(1, 6):
+        _swadian_troop_tree_root_ids.add("%s_extra%d" % (_swadian_tree_prefix, _swadian_extra_no))
+
+_swadian_troop_tree_ids = set()
+_swadian_troop_tree_pending = []
+for _swadian_root_id in _swadian_troop_tree_root_ids:
+    try:
+        _swadian_root_no = find_troop(troops, _swadian_root_id)
+    except:
+        _swadian_root_no = -1
+    if _swadian_root_no >= 0:
+        _swadian_troop_tree_pending.append(_swadian_root_no)
+
+while len(_swadian_troop_tree_pending) > 0:
+    _swadian_troop_no = _swadian_troop_tree_pending.pop()
+    if _swadian_troop_no < 0 or _swadian_troop_no >= len(troops):
+        continue
+    _swadian_troop = troops[_swadian_troop_no]
+    if _swadian_troop[0] in _swadian_troop_tree_ids:
+        continue
+    _swadian_troop_tree_ids.add(_swadian_troop[0])
+    for _swadian_upgrade_slot in (14, 15):
+        if len(_swadian_troop) <= _swadian_upgrade_slot:
+            continue
+        _swadian_upgrade_no = _swadian_troop[_swadian_upgrade_slot]
+        if _swadian_upgrade_no > 0 and _swadian_upgrade_no < len(troops):
+            _swadian_troop_tree_pending.append(_swadian_upgrade_no)
+
+def _is_swadian_troop_tree_id(_troop_id):
+    return _troop_id in _swadian_troop_tree_ids
+
+def _is_swadian_troop_tree_no(_troop_no):
+    return (
+        _troop_no >= 0
+        and _troop_no < len(troops)
+        and _is_swadian_troop_tree_id(troops[_troop_no][0])
+    )
 
 _dismounted_cavalry_index_pairs = []
 _dismounted_cavalry_index_map = {}
 _dismounted_cavalry_pending = []
-_dismounted_cavalry_source_begin = find_troop(troops, "mercenary_e_townsman")
-_dismounted_cavalry_source_end = find_troop(troops, "woman_r_extra5") + 1
+_cavalry_variant_source_end = len(troops)
 
 def _get_dismounted_cavalry_no(_mounted_no):
     if _mounted_no in _dismounted_cavalry_index_map:
@@ -792,7 +827,9 @@ def _get_dismounted_cavalry_no(_mounted_no):
     return _dismounted_no
 
 troops.append(["dismounted_cavalry_begin","{!}dismounted_cavalry_begin","{!}dismounted_cavalry_begin",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
-for _source_no in range(_dismounted_cavalry_source_begin, _dismounted_cavalry_source_end):
+for _source_no in range(_cavalry_variant_source_end):
+    if not _is_swadian_troop_tree_no(_source_no):
+        continue
     _source = troops[_source_no]
     if _is_real_cavalry_troop(_source):
         continue
@@ -801,6 +838,8 @@ for _source_no in range(_dismounted_cavalry_source_begin, _dismounted_cavalry_so
             continue
         _upgrade_no = _source[_upgrade_slot]
         if _upgrade_no <= 0 or _upgrade_no >= len(troops):
+            continue
+        if not _is_swadian_troop_tree_no(_upgrade_no):
             continue
         _mounted = troops[_upgrade_no]
         if not _is_real_cavalry_troop(_mounted):
@@ -818,6 +857,8 @@ while _dismounted_cavalry_pending_index < len(_dismounted_cavalry_pending):
             continue
         _upgrade_no = _mounted[_upgrade_slot]
         if _upgrade_no <= 0 or _upgrade_no >= len(troops):
+            continue
+        if not _is_swadian_troop_tree_no(_upgrade_no):
             continue
         if not _is_real_cavalry_troop(troops[_upgrade_no]):
             continue
@@ -873,9 +914,9 @@ def _improvised_cavalry_name(_name):
 improvised_cavalry_pairs = []
 _improvised_cavalry_index_pairs = []
 troops.append(["improvised_cavalry_begin","{!}improvised_cavalry_begin","{!}improvised_cavalry_begin",tf_inactive,0,0,fac_neutral,[],def_attrib|level(1),wp(60),knows_common,0])
-_improvised_cavalry_source_begin = find_troop(troops, "mercenary_e_townsman")
-_improvised_cavalry_source_end = find_troop(troops, "woman_r_extra5") + 1
-for _troop_no in range(_improvised_cavalry_source_begin, _improvised_cavalry_source_end):
+for _troop_no in range(_cavalry_variant_source_end):
+    if not _is_swadian_troop_tree_no(_troop_no):
+        continue
     _src = troops[_troop_no]
     if not _is_improvised_cavalry_source(_src):
         continue
@@ -918,3 +959,8 @@ try:
 except:
     raise
 # modmerger_end
+# vo 47/1061
+# mo vo 36/89
+# d hob 203/41
+# hob 215/41
+# mo fSol 203/41

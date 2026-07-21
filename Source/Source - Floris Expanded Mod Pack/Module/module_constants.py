@@ -1657,7 +1657,7 @@ slot_troop_improvised_cavalry_battle_horse_record = 507
 slot_troop_dismounted_cavalry_variant = 508
 slot_troop_mounted_cavalry_variant = 509
 slot_troop_horse_faction_mask = 510
-slot_troop_horse_status = 511
+slot_troop_is_noble = 511
 slot_troop_battle_horse_inventory_count = 512
 slot_troop_battle_horse_inventory_slot_base = 513
 slot_troop_battle_horse_inventory_item_base = 521
@@ -1674,10 +1674,6 @@ stack_econ_guarantee_shield = 32
 stack_econ_guarantee_ranged = 64
 
 slot_item_horse_faction_mask = 601
-slot_item_horse_status = 602
-
-horse_status_common = 1
-horse_status_noble = 2
 
 horse_faction_common = 1
 horse_faction_swadia = 2
