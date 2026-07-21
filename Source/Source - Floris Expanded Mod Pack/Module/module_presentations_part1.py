@@ -433,7 +433,7 @@ presentations_part1 = [
 					(troop_get_slot,":cur_troop","$troop_trees",slot_khergit_torguu),
 				(else_try),
 					(eq, "$g_quick_battle_team_2_faction", "fac_kingdom_4"),
-					(troop_get_slot,":cur_troop","$troop_trees",slot_nord_hirdman),
+					(troop_get_slot,":cur_troop","$troop_trees",slot_nord_lausaman),
 				(else_try),
 					(eq, "$g_quick_battle_team_2_faction", "fac_kingdom_5"),
 					(troop_get_slot,":cur_troop","$troop_trees",slot_rhodok_veterano),

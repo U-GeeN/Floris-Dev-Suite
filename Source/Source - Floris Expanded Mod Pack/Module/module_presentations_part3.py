@@ -624,11 +624,11 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_swadian_e_chevalier", 620, 164), #Tier 5
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_swadian_e_infantry", 620, 342),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_swadian_e_selfbow_archer", 620, 431),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_swadian_e_man_at_arms", 620, 253),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_swadian_e_lancer", 620, 253),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_swadian_e_chevalier_banneret", 760, 164), #Tier 6
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_swadian_e_sergeant", 760, 342),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_swadian_e_longbowman", 760, 431),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_swadian_e_lancer", 760, 253),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_swadian_e_man_at_arms", 760, 253),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_swadian_e_baron_mineures", 900, 164), #Tier 7
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_swadian_e_retinue_longbowman", 900, 431),
 		
@@ -646,7 +646,7 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_chevalier", 675, 219), #Tier 5-6
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_infantry", 675, 397),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_selfbow_archer", 675, 486),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_man_at_arms", 675, 308),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_lancer", 675, 308),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_chevalier_banneret", 815, 219), #Tier 6-7
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_swadian_e_longbowman", 815, 486), 
         ## cost
