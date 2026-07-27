@@ -3653,6 +3653,7 @@ presentations_part1 = [
       (store_add, "$g_presentation_obj_item_select_next", "$g_presentation_obj_item_select_12", 1),
 
       (player_get_troop_id, ":my_troop_no", ":my_player_no"),
+      (assign, "$g_presentation_selected_troop_for_reset", ":my_troop_no"),
       (try_begin),
         (eq, "$g_presentation_state", 1),
         (call_script, "script_multiplayer_display_available_items_for_troop_and_item_classes", ":my_troop_no", multi_item_class_type_weapons_begin, multi_item_class_type_weapons_end, 781, 474),
@@ -4028,7 +4029,7 @@ presentations_part1 = [
         (try_end),
         (try_begin),
           (eq, ":object", "$g_presentation_obj_item_select_10"),
-          (call_script, "script_multiplayer_set_default_item_selections_for_troop", ":my_troop_no"),
+            (call_script, "script_multiplayer_set_default_item_selections_for_troop", "$g_presentation_selected_troop_for_reset"),
           (presentation_set_duration, 0),
           (assign, "$g_presentation_state", 0),
           (start_presentation, "prsnt_multiplayer_item_select"),

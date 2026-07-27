@@ -801,12 +801,19 @@ simple_triggers_part5 = [
   # Floris stack equipment economy: gradual stack wealth and gear progression.
   (0.25,
    [
+      (map_free, 0),
+      (try_begin),
+        (eq, "$g_improvised_cavalry_slots_initialized", 0),
+        (call_script, "script_initialize_improvised_cavalry_slots"),
+        (assign, "$g_improvised_cavalry_slots_initialized", 1),
+      (try_end),
       (party_is_active, "p_main_party"),
       (call_script, "script_stack_econ_process_party", "p_main_party"),
    ]),
 
   (24,
    [
+      (map_free, 0),
       (try_for_parties, ":party_no"),
           (party_is_active, ":party_no"),
           (party_get_num_companions, ":num_companions", ":party_no"),

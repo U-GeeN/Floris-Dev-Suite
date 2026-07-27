@@ -45,6 +45,7 @@ scripts_part1 = [
 	(assign, "$troop_trees", troop_trees_2), #Default on Expanded
 	(call_script, "script_mtt_troop_slots"),
 	(call_script, "script_initialize_improvised_cavalry_slots"),
+	(assign, "$g_improvised_cavalry_slots_initialized", 1),
 ###
 
       #LAZERAS MODIFIED  {Top Tier Troops Recruit}
@@ -6955,7 +6956,6 @@ scripts_part1 = [
   ("game_get_upgrade_xp",
     [
       (store_script_param_1, ":troop_id"),
-      (call_script, "script_stack_econ_process_party", "p_main_party"),
       
       ##Floris: Updated from CC 1.321
       (assign, ":needed_upgrade_xp", 0),
@@ -7000,7 +7000,6 @@ scripts_part1 = [
   ("game_get_upgrade_cost",
     [
       (store_script_param_1, ":troop_id"),
-      (call_script, "script_stack_econ_process_party", "p_main_party"),
       
       (store_character_level, ":troop_level", ":troop_id"),
       

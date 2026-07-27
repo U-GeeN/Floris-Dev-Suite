@@ -7924,6 +7924,7 @@ reducing the overall operational cost."),
         # Fixed Buttons
         (try_begin),
           (eq, ":object", "$g_presentation_obj_2"), # Reset
+          (call_script, "script_horse_assignment_reset_managed_troops", "p_main_party"),
           (try_for_range, ":i", 0, 4),
             (troop_get_slot, ":t", "trp_temp_array_a", ":i"),
             (gt, ":t", 0),

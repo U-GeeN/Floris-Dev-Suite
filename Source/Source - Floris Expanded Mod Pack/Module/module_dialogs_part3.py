@@ -11884,7 +11884,12 @@ dialogs_part3 = [
   [anyone|plyr,"horse_manage_select", [], "That is all for now.", "horse_manage_done", [
     (call_script, "script_horse_assignment_finalize_management", "p_main_party", "$g_horse_manage_original_troop"),
   ]],
-  [anyone,"horse_manage_done", [], "{s2}", "do_regular_member_view_char", []],
+  [anyone,"horse_manage_done", [], "{s2}", "do_regular_member_view_char", [
+    (try_begin),
+      (neq, "$g_horse_manage_original_troop", 0),
+      (assign, "$g_talk_troop", "$g_horse_manage_original_troop"),
+    (try_end),
+  ]],
 
   [anyone|plyr,"regular_member_talk", [], "What equipment has your unit collected?", "regular_member_stack_econ_report",[
     (assign, ":stack", -1),
