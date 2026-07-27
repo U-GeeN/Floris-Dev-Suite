@@ -1324,7 +1324,7 @@ troops_part1 = [
       itm_ga_swa_a2_leather,itm_we_swa_spear_glaive,itm_we_swa_spear_glaive_small,
       itm_we_swa_sword_senlac,itm_sh_swa_hea_english_c,itm_sh_swa_hea_english_d
     ],
-    str_9|agi_6|int_10|cha_10|level(15),wp_one_handed(121)|wp_two_handed(59)|wp_polearm(137)|wp_archery(50)|wp_crossbow(40)|wp_throwing(58),
+    str_9|agi_6|int_10|cha_10|level(15),wp_one_handed(130)|wp_two_handed(40)|wp_polearm(147)|wp_archery(50)|wp_crossbow(40)|wp_throwing(58),
     knows_common|knows_riding_1|knows_ironflesh_2|knows_power_strike_4|knows_power_throw_2|knows_shield_4|knows_athletics_2,
     swadian_man_face_young_1,swadian_man_face_old_2
   ],
@@ -1335,7 +1335,7 @@ troops_part1 = [
       itm_he_swa_t3_helmet_c,itm_he_swa_t3_helmet_e,itm_ga_swa_a4_plate,
       itm_we_swa_sword_senlac,itm_we_swa_throw_darts_war,itm_sh_swa_hea_english_a,itm_sh_swa_hea_english_b
     ],
-    str_9|agi_6|int_11|cha_10|level(16),wp_one_handed(105)|wp_two_handed(85)|wp_polearm(116)|wp_archery(50)|wp_crossbow(40)|wp_throwing(84),
+    str_9|agi_6|int_11|cha_10|level(16),wp_one_handed(132)|wp_two_handed(88)|wp_polearm(130)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
     knows_common|knows_riding_2|knows_ironflesh_2|knows_power_strike_4|knows_power_throw_3|knows_shield_4|knows_athletics_2,
     swadian_man_face_young_1,swadian_man_face_old_3
   ],
@@ -1361,7 +1361,7 @@ troops_part1 = [
       itm_sh_swa_hea_plain,itm_sh_swa_hea_french_a
       
     ],
-    str_14|agi_6|int_11|cha_11|level(22),wp_one_handed(140)|wp_two_handed(85)|wp_polearm(156)|wp_archery(50)|wp_crossbow(40)|wp_throwing(84),
+    str_14|agi_6|int_11|cha_11|level(22),wp_one_handed(168)|wp_two_handed(112)|wp_polearm(160)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
     knows_common|knows_ironflesh_3|knows_power_strike_5|knows_power_throw_3|knows_shield_5|knows_athletics_3|knows_riding_3,
     swadian_man_face_young_1,swadian_man_face_old_2
   ],
@@ -1373,7 +1373,7 @@ troops_part1 = [
       itm_ga_swa_a4_plate,itm_sh_swa_hea_french_c,itm_sh_swa_hea_french_d,itm_we_swa_throw_darts_piercing,
       itm_we_swa_sword_albion,itm_we_swa_sword_crusader,itm_we_swa_spear_bill
     ],
-    str_11|agi_10|int_12|cha_9|level(22),wp_one_handed(135)|wp_two_handed(115)|wp_polearm(116)|wp_archery(95)|wp_crossbow(40)|wp_throwing(114),
+    str_11|agi_10|int_12|cha_9|level(22),wp_one_handed(172)|wp_two_handed(40)|wp_polearm(154)|wp_archery(95)|wp_crossbow(40)|wp_throwing(114),
     knows_common|knows_ironflesh_3|knows_power_strike_6|knows_power_throw_4|knows_shield_4|knows_athletics_3|knows_riding_1,
     swadian_man_face_young_1,swadian_man_face_old_4
   ],
@@ -1385,8 +1385,8 @@ troops_part1 = [
       itm_ho_swa_rouncy_black,itm_ho_swa_destrier_blackpainted,itm_ho_swa_destrier_bay,itm_ho_swa_destrier_shadowrunner,
       itm_we_swa_axe_swadian,itm_sh_swa_hea_french_c,itm_sh_swa_hea_french_d,itm_sh_swa_hea_swadian
     ],
-    str_9|agi_12|int_13|cha_8|level(22),wp_one_handed(191)|wp_two_handed(115)|wp_polearm(116)|wp_archery(95)|wp_crossbow(40)|wp_throwing(178),
-    knows_common|knows_ironflesh_5|knows_power_strike_4|knows_power_throw_4|knows_power_draw_1|knows_shield_3|knows_athletics_3|knows_riding_3,
+    str_9|agi_12|int_13|cha_8|level(22),wp_one_handed(200)|wp_two_handed(70)|wp_polearm(170)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
+    knows_common|knows_ironflesh_4|knows_power_strike_4|knows_power_throw_1|knows_shield_3|knows_athletics_3|knows_riding_3,
     swadian_man_face_middle_1,swadian_man_face_older_4
   ],
   ["swadian_e_trained_archer","A4 Swadian Trained Archer","A4 Swadian Trained Archers",
@@ -1409,7 +1409,7 @@ troops_part1 = [
       itm_sh_swa_kit_horseman,itm_sh_swa_kit_swadian_a
       
     ],
-    str_12|agi_15|int_8|cha_13|level(28),wp_one_handed(182)|wp_two_handed(85)|wp_polearm(204)|wp_archery(50)|wp_crossbow(40)|wp_throwing(84),
+    str_12|agi_15|int_8|cha_13|level(28),wp_one_handed(204)|wp_two_handed(136)|wp_polearm(190)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
     knows_common|knows_ironflesh_5|knows_power_strike_6|knows_power_throw_3|knows_shield_6|knows_athletics_3|knows_riding_4,
     swadian_man_face_middle_1,swadian_man_face_older_2
   ],
@@ -1420,7 +1420,7 @@ troops_part1 = [
       itm_he_swa_t5_flat_d,itm_he_swa_t5_flat_e,itm_he_swa_t5_flat_f,itm_ga_swa_a5_churburg,itm_sh_swa_hea_swadian,itm_sh_swa_hea_french_c,
       itm_we_swa_sword_albionlong,itm_we_swa_spear_bill_english,itm_we_swa_spear_bill
     ],
-    str_17|agi_9|int_9|cha_13|level(28),wp_one_handed(177)|wp_two_handed(113)|wp_polearm(166)|wp_archery(95)|wp_crossbow(40)|wp_throwing(114),
+    str_17|agi_9|int_9|cha_13|level(28),wp_one_handed(213)|wp_two_handed(40)|wp_polearm(203)|wp_archery(95)|wp_crossbow(40)|wp_throwing(114),
     knows_common|knows_ironflesh_5|knows_power_strike_6|knows_power_throw_4|knows_shield_5|knows_athletics_4|knows_riding_2,
     swadian_man_face_middle_1,swadian_man_face_older_4
   ],
@@ -1455,7 +1455,7 @@ troops_part1 = [
       itm_we_swa_spear_lance_colouredrb,itm_we_swa_sword_knight,itm_we_swa_blunt_morningstar,itm_ho_swa_war_lilyred,
       itm_he_swa_t6_full_e,itm_we_swa_spear_lance_colouredry,itm_we_swa_spear_lance_colouredwr
     ],
-    str_17|agi_11|int_13|cha_13|level(34),wp_one_handed(224)|wp_two_handed(155)|wp_polearm(232)|wp_archery(50)|wp_crossbow(40)|wp_throwing(54),
+    str_17|agi_11|int_13|cha_13|level(34),wp_one_handed(240)|wp_two_handed(160)|wp_polearm(220)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
     knows_common|knows_ironflesh_6|knows_power_strike_7|knows_power_throw_3|knows_shield_7|knows_athletics_4|knows_riding_5,
     swadian_man_face_middle_1,swadian_man_face_older_2
   ],
@@ -1467,7 +1467,7 @@ troops_part1 = [
       itm_we_swa_sword_albionlong,itm_we_swa_spear_glaive_hooked,itm_we_swa_spear_glaive_long,
       itm_sh_swa_kit_swadian_a,itm_sh_swa_kit_swadian_c
     ],
-    str_15|agi_11|int_15|cha_12|level(33),wp_one_handed(212)|wp_two_handed(116)|wp_polearm(203)|wp_archery(95)|wp_crossbow(40)|wp_throwing(114),
+    str_15|agi_11|int_15|cha_12|level(33),wp_one_handed(250)|wp_two_handed(40)|wp_polearm(241)|wp_archery(95)|wp_crossbow(40)|wp_throwing(114),
     knows_common|knows_ironflesh_6|knows_power_strike_10|knows_power_throw_4|knows_power_draw_1|knows_shield_6|knows_athletics_5|knows_riding_3,
     swadian_man_face_middle_1,swadian_man_face_older_4
   ],
@@ -1507,8 +1507,8 @@ troops_part1 = [
       itm_he_swa_t7_great_d,itm_he_swa_t7_great_e,itm_he_swa_t7_great_f,itm_sh_swa_hea_french_e,itm_we_swa_sword_clamshell_claymorelong
 
     ],
-    str_14|agi_17|int_17|cha_14|level(42),wp_one_handed(280)|wp_two_handed(185)|wp_polearm(266)|wp_archery(50)|wp_crossbow(40)|wp_throwing(54),
-    knows_common|knows_ironflesh_8|knows_power_strike_10|knows_power_throw_3|knows_shield_9|knows_athletics_4|knows_riding_7,
+    str_14|agi_16|int_16|cha_14|level(40),wp_one_handed(276)|wp_two_handed(184)|wp_polearm(250)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
+    knows_common|knows_ironflesh_8|knows_power_strike_9|knows_power_throw_3|knows_shield_8|knows_athletics_4|knows_riding_7,
     swadian_man_face_middle_1,swadian_man_face_older_2
   ],
   ["swadian_e_retinue_longbowman","A7 Swadian Retinue Longbowman","A7 Swadian Retinue Longbowmen",

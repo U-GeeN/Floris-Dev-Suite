@@ -208,6 +208,36 @@ def format_inline_list(value: str, base_indent: str) -> list[str]:
     return lines
 
 
+def comma_join(parts: list[str]) -> str:
+    return ",".join(parts)
+
+
+def chunked(parts: list[str], size: int) -> Iterable[list[str]]:
+    for index in range(0, len(parts), size):
+        yield parts[index : index + size]
+
+
+def format_troop_inventory(value: str, base_indent: str, items_per_line: int = 4) -> list[str]:
+    outer = strip_outer_record(value)
+    if not outer:
+        return [base_indent + value]
+
+    opener, inner, closer = outer
+    parts = split_top_level(inner)
+    if parts is None:
+        return [base_indent + value]
+    if not parts:
+        return [base_indent + opener + closer]
+
+    lines = [base_indent + opener]
+    item_indent = base_indent + INDENT
+    for row_index, row in enumerate(chunked(parts, items_per_line)):
+        comma = "," if row_index < (len(parts) - 1) // items_per_line else ""
+        lines.append(item_indent + comma_join(row) + comma)
+    lines.append(base_indent + closer)
+    return lines
+
+
 def split_trailing_comment(text: str) -> tuple[str, str]:
     i = 0
     quote = ""
@@ -418,17 +448,26 @@ def format_troop_record(record: str) -> str:
     if not (parts[0].startswith('"') or parts[0].startswith("'")):
         return record
 
-    lines = ["  " + opener]
+    lines = ["  " + opener + comma_join(parts[:3]) + ","]
     field_indent = INDENT * 2
-    for index, part in enumerate(parts):
-        comma = "," if index < len(parts) - 1 else ""
-        if index == 7 and part.startswith("["):
-            item_lines = format_inline_list(part, field_indent)
-            if comma:
-                item_lines[-1] += comma
-            lines.extend(item_lines)
-        else:
-            lines.append(field_indent + part + comma)
+    lines.append(field_indent + comma_join(parts[3:7]) + ",")
+
+    if parts[7].startswith("["):
+        item_lines = format_troop_inventory(parts[7], field_indent)
+        item_lines[-1] += ","
+        lines.extend(item_lines)
+    else:
+        lines.append(field_indent + parts[7] + ",")
+
+    if len(parts) >= 10:
+        lines.append(field_indent + comma_join(parts[8:10]) + ",")
+    if len(parts) >= 11:
+        lines.append(field_indent + parts[10] + ",")
+
+    remaining = parts[11:]
+    for row_index, row in enumerate(chunked(remaining, 2)):
+        comma = "," if row_index < (len(remaining) - 1) // 2 else ""
+        lines.append(field_indent + comma_join(row) + comma)
     lines.append("  " + closer)
     return "\n".join(lines)
 

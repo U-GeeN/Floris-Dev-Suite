@@ -76,8 +76,9 @@ records that can be parsed confidently at top-level commas.
 The `--fix-operation-indent` flag is also opt-in. It adjusts mixed tab/space
 indentation inside nested Warband operation blocks, using `try_begin`,
 `try_for_*`, `else_try`, and `try_end` as the structure markers. The older
-`--troops` flag is still available, but it is broad and should only be used
-after reviewing a diff.
+`--troops` flag formats literal troop records into grouped header/stat lines
+with expanded inventory rows, but it is broad and should only be used after
+reviewing a diff.
 
 Avoid generic Python formatters on these files. They usually destroy the
 long table-style troop and item definitions.
