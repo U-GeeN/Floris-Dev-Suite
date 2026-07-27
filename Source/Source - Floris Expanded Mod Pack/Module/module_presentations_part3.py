@@ -659,33 +659,27 @@ presentations_part3 = [
         (call_script, "script_prsnt_lines", 108, 4, 223, 471), # peasant archer -> archer militia
         (call_script, "script_prsnt_lines", 54, 4, 363, 382), # vougier exit
         (call_script, "script_prsnt_lines", 54, 4, 417, 382), # jacobite entry
-        (call_script, "script_prsnt_lines", 54, 4, 417, 297), # hobilar entry from vougier
+        (call_script, "script_prsnt_lines", 54, 4, 417, 293), # hobilar entry from vougier
         (call_script, "script_prsnt_lines", 54, 4, 363, 204), # page exit
         (call_script, "script_prsnt_lines", 54, 4, 417, 204), # ecuyer entry
-        (call_script, "script_prsnt_lines", 54, 4, 417, 289), # hobilar entry from page
         (call_script, "script_prsnt_lines", 108, 4, 363, 471), # archer militia -> longbowman
         (call_script, "script_prsnt_lines", 108, 4, 503, 382), # jacobite -> jock
         (call_script, "script_prsnt_lines", 108, 4, 503, 471), # longbowman -> selfbow archer
         (call_script, "script_prsnt_lines", 108, 4, 503, 293), # hobilar -> man_at_arms
         (call_script, "script_prsnt_lines", 54, 4, 503, 204), # ecuyer exit
         (call_script, "script_prsnt_lines", 54, 4, 557, 204), # chevalier entry
-        (call_script, "script_prsnt_lines", 54, 4, 557, 285), # man-at-arms entry from ecuyer
         (call_script, "script_prsnt_lines", 108, 4, 643, 382), # jock -> highlander
         (call_script, "script_prsnt_lines", 108, 4, 643, 471), # selfbow archer -> yeoman archer
         (call_script, "script_prsnt_lines", 108, 4, 643, 293), # man-at-arms -> lancer
         (call_script, "script_prsnt_lines", 54, 4, 643, 204), # chevalier exit
         (call_script, "script_prsnt_lines", 54, 4, 697, 204), # chevalier banneret entry
-        (call_script, "script_prsnt_lines", 54, 4, 697, 285), # lancer entry from chevalier
         (call_script, "script_prsnt_lines", 108, 4, 783, 471), # yeoman archer -> retinue longbowman
         (call_script, "script_prsnt_lines", 108, 4, 783, 204), # chevalier banneret -> baron mineures
         ##### - lines
 
         ##### | lines
         (call_script, "script_prsnt_lines", 4, 89, 137, 382), # T1 -> T2 split
-        (call_script, "script_prsnt_lines", 4, 85, 417, 297), # vougier -> hobilar/jacobite split
-        (call_script, "script_prsnt_lines", 4, 85, 417, 204), # page -> hobilar/ecuyer split
-        (call_script, "script_prsnt_lines", 4, 85, 557, 204), # ecuyer -> chevalier/man-at-arms split
-        (call_script, "script_prsnt_lines", 4, 85, 697, 204), # chevalier -> chevalier banneret/lancer split
+        (call_script, "script_prsnt_lines", 4, 89, 417, 297), # vougier -> hobilar/jacobite split
         ##### | lines
 
         ####### mouse fix pos system #######

@@ -1911,7 +1911,7 @@ books_begin = readable_books_begin
 books_end = reference_books_end
 
 horses_normal_begin = "itm_ho_swa_saddle_black"
-horses_normal_end = "itm_ho_swa_war_royal"
+horses_normal_end = "itm_ho_swa_war_white"
 horses_war_begin = horses_normal_end
 horses_war_end = "itm_we_swa_axe_hatchet"
 horses_begin = horses_normal_begin

@@ -131,15 +131,15 @@ upgrade(troops,"swadian_e_militia","swadian_e_vougier")
 upgrade(troops,"swadian_e_peasant_archer","swadian_e_archer_militia")
 #Tier 3-4
 upgrade2(troops,"swadian_e_vougier","swadian_e_foot_soldier","swadian_e_hobilar")
-upgrade2(troops,"swadian_e_page","swadian_e_ecuyer","swadian_e_hobilar")
+upgrade(troops,"swadian_e_page","swadian_e_ecuyer")
 upgrade(troops,"swadian_e_archer_militia","swadian_e_trained_archer")
 #Tier 4-5
-upgrade2(troops,"swadian_e_ecuyer","swadian_e_chevalier","swadian_e_lancer")
+upgrade(troops,"swadian_e_ecuyer","swadian_e_chevalier")
 upgrade(troops,"swadian_e_foot_soldier","swadian_e_infantry")
 upgrade(troops,"swadian_e_hobilar","swadian_e_lancer")
 upgrade(troops,"swadian_e_trained_archer","swadian_e_selfbow_archer")
 #Tier 5-6
-upgrade2(troops,"swadian_e_chevalier","swadian_e_chevalier_banneret","swadian_e_man_at_arms")
+upgrade(troops,"swadian_e_chevalier","swadian_e_chevalier_banneret")
 upgrade(troops,"swadian_e_infantry","swadian_e_sergeant")
 upgrade(troops,"swadian_e_lancer","swadian_e_man_at_arms")
 upgrade(troops,"swadian_e_selfbow_archer","swadian_e_longbowman")
