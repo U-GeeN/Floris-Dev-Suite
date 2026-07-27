@@ -213,7 +213,7 @@ items = [
 ##War Horses - 105
 #Swadia - 16
 #Minimal - 2
-["ho_swa_war_royal","Royal Warhorse", [("ho_swa_war_royal",0)], itp_merchandise|itp_type_horse, 0, 1230,abundance(50)|hit_points(155)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_war_white","White Warhorse", [("ho_swa_war_white",0)], itp_merchandise|itp_type_horse, 0, 1230,abundance(50)|hit_points(155)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 #Expanded - 14
 ["ho_swa_cata_brownie","Brownie Half Cataphract", [("ho_swa_cata_brownie",0)], itp_merchandise|itp_type_horse, 0, 1024,abundance(55)|hit_points(165)|body_armor(29)|difficulty(3)|horse_speed(44)|horse_maneuver(41)|horse_charge(26)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 ["ho_swa_long_lilyblue","Long Barded Blue Lily Warhorse", [("ho_swa_long_lilyblue",0)], itp_merchandise|itp_type_horse, 0, 1337,abundance(45)|hit_points(165)|body_armor(45)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
@@ -228,7 +228,7 @@ items = [
 ["ho_swa_war_lilycrossed","Crossed Lily Warhorse", [("ho_swa_war_lilycrossed",0)], itp_merchandise|itp_type_horse,0,1293,abundance(50)|hit_points(175)|body_armor(40)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion,[],[fac_kingdom_1]],
 ["ho_swa_war_lilylion","Lily Lion Warhorse", [("ho_swa_war_lilylion",0)], itp_merchandise|itp_type_horse, 0, 1215,abundance(50)|hit_points(165)|body_armor(39)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 ["ho_swa_war_lilyred","Yellow Lilies Red Warhorse", [("ho_swa_war_lilyred",0)], itp_merchandise|itp_type_horse, 0, 1252,abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_war_lilyroyal","Royal Lily Warhorse", [("ho_swa_war_lilyroyal",0)], itp_merchandise|itp_type_horse, 0, 1237,abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_war_lilywhite","Yellow Lily White Warhorse", [("ho_swa_war_lilywhite",0)], itp_merchandise|itp_type_horse, 0, 1237,abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 ["ho_swa_war_lionyellowblack","Yellow Lion Black Warhorse", [("ho_swa_war_lionyellowblack",0)], itp_merchandise|itp_type_horse, 0, 1255,abundance(50)|hit_points(175)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 #Vaegir - 15
 #Minimal - 2

@@ -400,7 +400,7 @@ items = [
 ##War Horses - 105
 #Swadia - 16
 #Minimal - 2
-["ho_swa_war_royal","Royal Warhorse", [("ho_swa_war_royal",0)], itp_merchandise|itp_type_horse, 0, 1230,abundance(50)|hit_points(155)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_war_white","White Warhorse", [("ho_swa_war_white",0)], itp_merchandise|itp_type_horse, 0, 1230,abundance(50)|hit_points(155)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 ["ho_swa_charger_long","Long Barded Charger", [("ho_swa_charger_long",0)], itp_merchandise|itp_type_horse, 0, 1951,abundance(40)|hit_points(165)|body_armor(60)|difficulty(4)|horse_speed(37)|horse_maneuver(43)|horse_charge(34)|horse_scale(112),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 #Vaegir - 15
 #Minimal - 2

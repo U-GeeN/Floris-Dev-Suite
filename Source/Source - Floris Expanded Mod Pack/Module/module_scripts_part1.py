@@ -3261,7 +3261,7 @@ scripts_part1 = [
       (item_set_slot, "itm_ho_sar_camel_bactrian", slot_item_multiplayer_item_class, multi_item_class_type_horse),
       (item_set_slot, "itm_ho_sar_arab_dun", slot_item_multiplayer_item_class, multi_item_class_type_horse),
       (item_set_slot, "itm_ho_pla_sumpter_white", slot_item_multiplayer_item_class, multi_item_class_type_horse),
-      (item_set_slot, "itm_ho_swa_war_royal", slot_item_multiplayer_item_class, multi_item_class_type_horse),
+      (item_set_slot, "itm_ho_swa_war_white", slot_item_multiplayer_item_class, multi_item_class_type_horse),
       (item_set_slot, "itm_ho_swa_charger_long", slot_item_multiplayer_item_class, multi_item_class_type_horse),
       (item_set_slot, "itm_ho_vae_war_leathered", slot_item_multiplayer_item_class, multi_item_class_type_horse),
       (item_set_slot, "itm_ho_vae_charger_leathered", slot_item_multiplayer_item_class, multi_item_class_type_horse),
@@ -3707,7 +3707,7 @@ scripts_part1 = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_ho_pla_sumpter_white", "trp_swadian_man_at_arms_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_ho_swa_saddle_black", "trp_swadian_man_at_arms_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_ho_swa_destrier_black", "trp_swadian_man_at_arms_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_ho_swa_war_royal", "trp_swadian_man_at_arms_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_ho_swa_war_white", "trp_swadian_man_at_arms_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_ho_swa_charger_long", "trp_swadian_man_at_arms_multiplayer"),
 		#Lances
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_we_swa_spear_lance_jousting", "trp_swadian_man_at_arms_multiplayer"),
