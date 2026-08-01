@@ -1333,7 +1333,7 @@ troops_part1 = [
     [
       itm_ar_swa_t3_lightarmor_b,itm_ar_swa_t3_hauberk_a,itm_ar_swa_t3_hauberk_b,itm_bo_swa_t3_wrapping,
       itm_he_swa_t3_helmet_c,itm_he_swa_t3_helmet_e,itm_ga_swa_a4_plate,
-      itm_we_swa_sword_senlac,itm_we_swa_throw_darts_war,itm_sh_swa_hea_english_a,itm_sh_swa_hea_english_b
+      itm_we_swa_sword_senlac,itm_we_swa_throw_darts_war,itm_sh_swa_hea_english_a,itm_sh_swa_hea_english_b,itm_we_swa_sword_crusader
     ],
     str_9|agi_6|int_11|cha_10|level(16),wp_one_handed(132)|wp_two_handed(88)|wp_polearm(130)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
     knows_common|knows_riding_2|knows_ironflesh_2|knows_power_strike_4|knows_power_throw_3|knows_shield_4|knows_athletics_2,
@@ -1356,7 +1356,7 @@ troops_part1 = [
       itm_ho_swa_destrier_baydark,itm_ar_swa_t4_captain_a,itm_ar_swa_t4_captain_b,itm_ar_swa_t4_captain_c,
       itm_ar_swa_t4_tabardmail_a,itm_ar_swa_t4_tabardmail_c,itm_ar_swa_t4_tabardmail_e,itm_bo_swa_t4_sandal,
       itm_he_swa_t4_bascinet_a,itm_he_swa_t4_bascinet_b,itm_he_swa_t4_bascinet_c,itm_he_swa_t4_bascinet_g,itm_ga_swa_a5_churburg,itm_we_swa_spear_lance_light,
-      itm_we_swa_sword_albion,itm_ho_swa_destrier_blacksnowflake,itm_ho_swa_destrier_chestnutdark,itm_ho_swa_destrier_pinto,
+      itm_we_swa_sword_albion,itm_we_swa_sword_longenglish,itm_we_swa_sword_empire,itm_ho_swa_destrier_blacksnowflake,itm_ho_swa_destrier_chestnutdark,itm_ho_swa_destrier_pinto,
       itm_ho_swa_destrier_shadowrunner,itm_ar_swa_t4_captain_b,
       itm_sh_swa_hea_plain,itm_sh_swa_hea_french_a
       
@@ -1405,7 +1405,7 @@ troops_part1 = [
     [
       itm_ho_swa_war_lilylion,itm_ho_swa_war_lilyred,itm_ar_swa_t5_lightmail_a,itm_ar_swa_t5_mailsurcoat_a,
       itm_ar_swa_t5_mailsurcoat_b,itm_bo_swa_t5_hose,itm_ga_swa_a6_plate,itm_he_swa_t5_flat_a,itm_he_swa_t5_flat_c,itm_he_swa_t5_flat_g,
-      itm_we_swa_spear_lance_great,itm_we_swa_sword_clamshell,
+      itm_we_swa_spear_lance_great,itm_we_swa_sword_clamshell_claymore,
       itm_sh_swa_kit_horseman,itm_sh_swa_kit_swadian_a
       
     ],
@@ -1453,7 +1453,7 @@ troops_part1 = [
       itm_ho_swa_long_lilyred,itm_ar_swa_t6_churburg_b,itm_ar_swa_t6_churburg_c,itm_ar_swa_t6_coatplate_b,
       itm_bo_swa_t6_mail,itm_he_swa_t6_full_f,itm_ga_swa_a6_plate,itm_sh_swa_hea_horseman,
       itm_we_swa_spear_lance_colouredrb,itm_we_swa_sword_knight,itm_we_swa_blunt_morningstar,itm_ho_swa_war_lilyred,
-      itm_he_swa_t6_full_e,itm_we_swa_spear_lance_colouredry,itm_we_swa_spear_lance_colouredwr
+      itm_he_swa_t6_full_e,itm_we_swa_spear_lance_colouredry,itm_we_swa_spear_lance_colouredwr,itm_we_swa_sword_twohanded_claymore
     ],
     str_17|agi_11|int_13|cha_13|level(34),wp_one_handed(240)|wp_two_handed(160)|wp_polearm(220)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
     knows_common|knows_ironflesh_6|knows_power_strike_7|knows_power_throw_3|knows_shield_7|knows_athletics_4|knows_riding_5,
@@ -1504,7 +1504,7 @@ troops_part1 = [
       itm_ar_swa_t7_fullplate_a,itm_bo_swa_t7_greaves,itm_he_swa_t7_great_a,itm_ga_swa_a6_plate,itm_ga_swa_a6_dark,
       itm_sh_swa_hea_horseman,itm_we_swa_spear_lance_iron,itm_we_swa_sword_lord,itm_we_swa_blunt_morningstar,
       itm_ho_swa_charger_long,itm_ho_swa_long_lilyliondutch,itm_he_swa_t7_great_b,itm_he_swa_t7_great_c,
-      itm_he_swa_t7_great_d,itm_he_swa_t7_great_e,itm_he_swa_t7_great_f,itm_sh_swa_hea_french_e,itm_we_swa_sword_clamshell_claymorelong
+      itm_he_swa_t7_great_d,itm_he_swa_t7_great_e,itm_he_swa_t7_great_f,itm_sh_swa_hea_french_e,itm_we_swa_sword_clamshell_claymorelong,itm_we_swa_sword_dark
 
     ],
     str_14|agi_16|int_16|cha_14|level(40),wp_one_handed(276)|wp_two_handed(184)|wp_polearm(250)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
