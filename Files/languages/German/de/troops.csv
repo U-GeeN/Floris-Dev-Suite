@@ -1495,34 +1495,34 @@ trp_vaegir_r_extra4|I1 Umherziehender Vaegier-Kholop
 trp_vaegir_r_extra4_pl|I1 Vaegier-Kholopy
 trp_vaegir_r_extra5|I1 Fügsamer Vaegier-Kholop
 trp_vaegir_r_extra5_pl|I1 Vaegier-Kholopy
-trp_vaegir_e_kholop|I1 Vaegier-Kholop
-trp_vaegir_e_kholop_pl|I1 Vaegier-Kholopy
-trp_vaegir_e_otrok|I2 Vaegier-Otrok
-trp_vaegir_e_otrok_pl|I2 Vaegier-Otroki
+trp_vaegir_e_peasant|I1 Vaegier-Kholop
+trp_vaegir_e_peasant_pl|I1 Vaegier-Kholopy
+trp_vaegir_e_watchman|I2 Vaegier-Otrok
+trp_vaegir_e_watchman_pl|I2 Vaegier-Otroki
 trp_vaegir_e_pasynok|I2 Vaegier-Pasynok
 trp_vaegir_e_pasynok_pl|I2 Vaegier-Pasynoki
-trp_vaegir_e_kazak|I3 Vaegier-Kazak
-trp_vaegir_e_kazak_pl|I3 Vaegier-Kazaki
-trp_vaegir_e_kmet|A3 Vaegier-Kmet
-trp_vaegir_e_kmet_pl|A3 Vaegier-Kmety
-trp_vaegir_e_grid|I3 Vaegier-Grid'
-trp_vaegir_e_grid_pl|I3 Vaegier-Gridi
-trp_vaegir_e_yesaul|C4 Vaegier-Yesaul
-trp_vaegir_e_yesaul_pl|C4 Vaegier-Yesauly
-trp_vaegir_e_plastun|I4 Vaegier-Plastun
-trp_vaegir_e_plastun_pl|I4 Vaegier-Plastuny
-trp_vaegir_e_ratnik|H4 Vaegier-Ratnik
-trp_vaegir_e_ratnik_pl|H4 Vaegier-Ratniki
+trp_vaegir_e_noble_novice|I3 Vaegier-Edler Novize
+trp_vaegir_e_noble_novice_pl|I3 Vaegier-Edle Novizen
+trp_vaegir_e_luchnik_militia|A3 Vaegier-Kmet
+trp_vaegir_e_luchnik_militia_pl|A3 Vaegier-Kmety
+trp_vaegir_e_footman|I3 Vaegier-Grid'
+trp_vaegir_e_footman_pl|I3 Vaegier-Gridi
+trp_vaegir_e_young_boyar|C4 Vaegier-Yesaul
+trp_vaegir_e_young_boyar_pl|C4 Vaegier-Yesauly
+trp_vaegir_e_junior_druzhinnik|C4 Junger Vaegier-Druzhinnik
+trp_vaegir_e_junior_druzhinnik_pl|C4 Junge Vaegier-Druzhinniki
+trp_vaegir_e_mounted_ratnik|H4 Berittener Vaegier-Ratnik
+trp_vaegir_e_mounted_ratnik_pl|H4 Berittene Vaegier-Ratniki
 trp_vaegir_e_zalstrelshik|A4 Vaegier-Zalstrelshik
 trp_vaegir_e_zalstrelshik_pl|A4 Vaegier-Zalstrelshiki
-trp_vaegir_e_mladshiy_druzhinnik|I4 Vaegier-Mladshiy Druzhinnik
-trp_vaegir_e_mladshiy_druzhinnik_pl|I4 Vaegier-Mladshiy Druzhinniki
+trp_vaegir_e_trained_footman|I4 Ausgebildeter Vaegier-Fußsoldat
+trp_vaegir_e_trained_footman_pl|I4 Ausgebildete Vaegier-Fußsoldaten
 trp_vaegir_e_poztoma_druzhinaik|I4 Vaegier-Poztoma Druzhinaik
 trp_vaegir_e_poztoma_druzhinaik_pl|I4 Vaegier-Poztoma Druzhinaiki
 trp_vaegir_e_ataman|C5 Vaegier-Ataman
 trp_vaegir_e_ataman_pl|C5 Vaegier-Atamany
-trp_vaegir_e_pansirniy_kazan|C5 Vaegier-Pansirniy Kazan
-trp_vaegir_e_pansirniy_kazan_pl|C5 Vaegier-Pansirniy Kazany
+trp_vaegir_e_boyar|C5 Vaegier-Bojar
+trp_vaegir_e_boyar_pl|C5 Vaegier-Bojaren
 trp_vaegir_e_posadnik|H5 Vaegier-Posadnik
 trp_vaegir_e_posadnik_pl|H5 Vaegier-Posadniki
 trp_vaegir_e_golova|H5 Vaegier-Golova
@@ -1531,8 +1531,8 @@ trp_vaegir_e_luchnik|A5 Vaegier-Luchnik
 trp_vaegir_e_luchnik_pl|A5 Vaegier-Luchniki
 trp_vaegir_e_druzhinnik|C5 Vaegier-Druzhinnik
 trp_vaegir_e_druzhinnik_pl|C5 Vaegier-Druzhinniki
-trp_vaegir_e_druzhinnik_veteran|I5 Vaegier-Druzhinnik-Veteran
-trp_vaegir_e_druzhinnik_veteran_pl|I5 Vaegier-Druzhinniki-Veterany
+trp_vaegir_e_ratnik_infantry|I5 Vaegier-Ratnik
+trp_vaegir_e_ratnik_infantry_pl|I5 Vaegier-Ratniki
 trp_vaegir_e_legkoy_vityas|C6 Vaegier-Legkoy Vityas
 trp_vaegir_e_legkoy_vityas_pl|C6 Vaegier-Legkoi Vityasy
 trp_vaegir_e_vityas|C6 Vaegier-Vityas
@@ -1543,20 +1543,20 @@ trp_vaegir_e_metkiy_luchnik|A6 Vaegier-Metkiy Luchnik
 trp_vaegir_e_metkiy_luchnik_pl|A6 Vaegier-Metkiy Luchniki
 trp_vaegir_e_elitniy_druzhinnik|C6 Vaegier-Elitniy Druzhinnik
 trp_vaegir_e_elitniy_druzhinnik_pl|C6 Vaegier-Elitniy Druzhinniki
-trp_vaegir_e_bogatyr|C7 Vaegier-Bogatyr
-trp_vaegir_e_bogatyr_pl|C7 Vaegier-Bogatyry
+trp_vaegir_e_knyazs_guard|C7 Vaegier-Knyaz-Garde
+trp_vaegir_e_knyazs_guard_pl|C7 Vaegier-Knyaz-Garden
 trp_vaegir_e_sokoliniy_glaz|A7 Vaegier-Sokoliniy Glaz
 trp_vaegir_e_sokoliniy_glaz_pl|A7 Vaegier-Sokoliniy Glazy
-trp_vaegir_e_extra1|I1 Rebellischer Vaegier-Kholop
-trp_vaegir_e_extra1_pl|I1 Vaegier-Kholopy
-trp_vaegir_e_extra2|I1 Verwegener Vaegier-Kholop
-trp_vaegir_e_extra2_pl|I1 Vaegier-Kholopy
-trp_vaegir_e_extra3|I1 Missgünstiger Vaegier-Kholop
-trp_vaegir_e_extra3_pl|I1 Vaegier-Kholopy
-trp_vaegir_e_extra4|I1 Umherziehender Vaegier-Kholop
-trp_vaegir_e_extra4_pl|I1 Vaegier-Kholopy
-trp_vaegir_e_extra5|I1 Fügsamer Vaegier-Kholop
-trp_vaegir_e_extra5_pl|I1 Vaegier-Kholopy
+trp_vaegir_e_varangian_guard|I6 Vaegier-Warägergarde
+trp_vaegir_e_varangian_guard_pl|I6 Vaegier-Warägergarden
+trp_vaegir_e_adventurous_kholop|I1 Verwegener Vaegier-Kholop
+trp_vaegir_e_adventurous_kholop_pl|I1 Vaegier-Kholopy
+trp_vaegir_e_begrudged_kholop|I1 Missgünstiger Vaegier-Kholop
+trp_vaegir_e_begrudged_kholop_pl|I1 Vaegier-Kholopy
+trp_vaegir_e_travelling_kholop|I1 Umherziehender Vaegier-Kholop
+trp_vaegir_e_travelling_kholop_pl|I1 Vaegier-Kholopy
+trp_vaegir_e_docile_kholop|I1 Fügsamer Vaegier-Kholop
+trp_vaegir_e_docile_kholop_pl|I1 Vaegier-Kholopy
 trp_khergit_n_tariachin|Khergit-Stammeskrieger
 trp_khergit_n_tariachin_pl|Khergit-Stammeskrieger
 trp_khergit_n_qarbughaci|Khergit-Plänkler

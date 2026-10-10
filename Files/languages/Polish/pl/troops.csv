@@ -392,34 +392,34 @@ trp_vaegir_r_extra4|I1 Podróżujący Vaegirski Chłop
 trp_vaegir_r_extra4_pl|I1 Vaegirskich Chłopów
 trp_vaegir_r_extra5|I1 Łagodny Vaegirski Chłop
 trp_vaegir_r_extra5_pl|I1 Vaegirskich Chłopów
-trp_vaegir_e_kholop|I1 Vaegirski Chłop
-trp_vaegir_e_kholop_pl|I1 Vaegirskich Chłopów
-trp_vaegir_e_otrok|I2 Vaegirski Otrok
-trp_vaegir_e_otrok_pl|I2 Vaegirskich Otroków
+trp_vaegir_e_peasant|I1 Vaegirski Chłop
+trp_vaegir_e_peasant_pl|I1 Vaegirskich Chłopów
+trp_vaegir_e_watchman|I2 Vaegirski Strażnik
+trp_vaegir_e_watchman_pl|I2 Vaegirskich Strażników
 trp_vaegir_e_pasynok|I2 Vaegirski Pasynok
 trp_vaegir_e_pasynok_pl|I2 Vaegirskich Pasynoków
-trp_vaegir_e_kazak|I3 Vaegirski Kozak
-trp_vaegir_e_kazak_pl|I3 Vaegirskich Kozaków
-trp_vaegir_e_kmet|A3 Vaegirski Kmet
-trp_vaegir_e_kmet_pl|A3 Vaegirskich Kmetów
-trp_vaegir_e_grid|I3 Vaegirski Grid'
-trp_vaegir_e_grid_pl|I3 Vaegirskich Gridi
-trp_vaegir_e_yesaul|C4 Vaegirski Yesaul
-trp_vaegir_e_yesaul_pl|C4 Vaegirskich Yesaulów
-trp_vaegir_e_plastun|I4 Vaegirski Pichur
-trp_vaegir_e_plastun_pl|I4 Vaegirskich Piechurów
-trp_vaegir_e_ratnik|H4 Vaegirski Ratnik
-trp_vaegir_e_ratnik_pl|H4 Vaegirskich Ratników
+trp_vaegir_e_noble_novice|I3 Vaegirski Kozak
+trp_vaegir_e_noble_novice_pl|I3 Vaegirskich Kozaków
+trp_vaegir_e_luchnik_militia|A3 Vaegirski Łucznik Milicji
+trp_vaegir_e_luchnik_militia_pl|A3 Vaegirskich Łuczników Milicji
+trp_vaegir_e_footman|I3 Vaegirski Piechur
+trp_vaegir_e_footman_pl|I3 Vaegirskich Piechurów
+trp_vaegir_e_young_boyar|C4 Vaegirski Młody Bojar
+trp_vaegir_e_young_boyar_pl|C4 Vaegirskich Młodych Bojarów
+trp_vaegir_e_junior_druzhinnik|C4 Vaegirski Młody Drużynnik
+trp_vaegir_e_junior_druzhinnik_pl|C4 Vaegirskich Młodych Drużynników
+trp_vaegir_e_mounted_ratnik|H4 Vaegirski Konny Ratnik
+trp_vaegir_e_mounted_ratnik_pl|H4 Vaegirskich Konnych Ratników
 trp_vaegir_e_zalstrelshik|A4 Vaegirski Zalstrelshik
 trp_vaegir_e_zalstrelshik_pl|A4 Vaegirskich Zalstrelshików
-trp_vaegir_e_mladshiy_druzhinnik|I4 Vaegirski Młodszy Drużynnik
-trp_vaegir_e_mladshiy_druzhinnik_pl|I4 Vaegirskich Młodszych Drużynników
+trp_vaegir_e_trained_footman|I4 Vaegirski Wyszkolony Piechur
+trp_vaegir_e_trained_footman_pl|I4 Vaegirskich Wyszkolonych Piechurów
 trp_vaegir_e_poztoma_druzhinaik|I4 Vaegirski Pocztowy Drużynnik
 trp_vaegir_e_poztoma_druzhinaik_pl|I4 Vaegirskich Pocztowych Drużynników
 trp_vaegir_e_ataman|C5 Vaegirski Ataman
 trp_vaegir_e_ataman_pl|C5 Vaegirskich Atamanów
-trp_vaegir_e_pansirniy_kazan|C5 Vaegirski Pancerny Kozak
-trp_vaegir_e_pansirniy_kazan_pl|C5 Vaegirskich Pancernych Kozaków
+trp_vaegir_e_boyar|C5 Vaegirski Bojar
+trp_vaegir_e_boyar_pl|C5 Vaegirskich Bojarów
 trp_vaegir_e_posadnik|H5 Vaegirski Posadnik
 trp_vaegir_e_posadnik_pl|H5 Vaegirskich Posadników
 trp_vaegir_e_golova|H5 Vaegirski Golova
@@ -428,8 +428,8 @@ trp_vaegir_e_luchnik|A5 Vaegirski Łucznik
 trp_vaegir_e_luchnik_pl|A5 Vaegirskich Łuczników
 trp_vaegir_e_druzhinnik|C5 Vaegirski Drużynnik
 trp_vaegir_e_druzhinnik_pl|C5 Vaegirskich Drużynników
-trp_vaegir_e_druzhinnik_veteran|I5 Vaegirski Drużynnik-Weteran
-trp_vaegir_e_druzhinnik_veteran_pl|I5 Vaegirskich Drużynników-Weteranów
+trp_vaegir_e_ratnik_infantry|I5 Vaegirski Ratnik
+trp_vaegir_e_ratnik_infantry_pl|I5 Vaegirskich Ratników
 trp_vaegir_e_legkoy_vityas|C6 Vaegirski Lekki Vityas
 trp_vaegir_e_legkoy_vityas_pl|C6 Vaegirskich Lekkich Vityasów
 trp_vaegir_e_vityas|C6 Vaegirski Vityas
@@ -440,20 +440,20 @@ trp_vaegir_e_metkiy_luchnik|A6 Vaegirski Doborowy Łucznik
 trp_vaegir_e_metkiy_luchnik_pl|A6 Vaegirskich Doborowych Łuczników
 trp_vaegir_e_elitniy_druzhinnik|C6 Vaegirski Elitarny Drużynnik
 trp_vaegir_e_elitniy_druzhinnik_pl|C6 Vaegirskich Elitarnych Drużynników
-trp_vaegir_e_bogatyr|C7 Vaegirski Bojar
-trp_vaegir_e_bogatyr_pl|C7 Vaegirskich Bojarów
+trp_vaegir_e_knyazs_guard|C7 Gwardia Książęca Vaegirów
+trp_vaegir_e_knyazs_guard_pl|C7 Gwardie Książęce Vaegirów
 trp_vaegir_e_sokoliniy_glaz|A7 Vaegirski Wspaniały Sokolin
 trp_vaegir_e_sokoliniy_glaz_pl|A7 Vaegirskich Wspaniałych Sokolinów
-trp_vaegir_e_extra1|I1 Zbuntowany Vaegirski Chłop
-trp_vaegir_e_extra1_pl|I1 Vaegirskich Chłopów
-trp_vaegir_e_extra2|I1 Awanturniczy Vaegirski Chłop
-trp_vaegir_e_extra2_pl|I1 Vaegirskich Chłopów
-trp_vaegir_e_extra3|I1 Żałosny Vaegirski Chłop
-trp_vaegir_e_extra3_pl|I1 Vaegirskich Chłopów
-trp_vaegir_e_extra4|I1 Podróżujący Vaegirski Chłop
-trp_vaegir_e_extra4_pl|I1 Vaegirskich Chłopów
-trp_vaegir_e_extra5|I1 Łagodny Vaegirski Chłop
-trp_vaegir_e_extra5_pl|I1 Vaegirskich Chłopów
+trp_vaegir_e_varangian_guard|I6 Vaegirska Gwardia Wareska
+trp_vaegir_e_varangian_guard_pl|I6 Vaegirskie Gwardie Wareskie
+trp_vaegir_e_adventurous_kholop|I1 Awanturniczy Vaegirski Chłop
+trp_vaegir_e_adventurous_kholop_pl|I1 Vaegirskich Chłopów
+trp_vaegir_e_begrudged_kholop|I1 Rozżalony Vaegirski Chłop
+trp_vaegir_e_begrudged_kholop_pl|I1 Vaegirskich Chłopów
+trp_vaegir_e_travelling_kholop|I1 Podróżujący Vaegirski Chłop
+trp_vaegir_e_travelling_kholop_pl|I1 Vaegirskich Chłopów
+trp_vaegir_e_docile_kholop|I1 Łagodny Vaegirski Chłop
+trp_vaegir_e_docile_kholop_pl|I1 Vaegirskich Chłopów
 trp_vaegir_messenger|Vaegirski Posłaniec
 trp_vaegir_messenger_pl|Vaegirskich Posłańców
 trp_vaegir_deserter|Vaegirski Dezerter
