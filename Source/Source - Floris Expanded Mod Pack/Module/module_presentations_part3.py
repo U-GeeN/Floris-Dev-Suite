@@ -727,84 +727,85 @@ presentations_part3 = [
         (position_set_y, pos1, 500),
         (overlay_set_size, reg0, pos1),
 
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 0, "trp_vaegir_e_kholop", 60, 342),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 1, "trp_vaegir_e_otrok", 200, 342),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 2, "trp_vaegir_e_kmet", 340, 520),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 3, "trp_vaegir_e_grid", 340, 342),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 4, "trp_vaegir_e_kazak", 340, 164),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 5, "trp_vaegir_e_zalstrelshik", 480, 520),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_vaegir_e_ratnik", 480, 431),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_vaegir_e_mladshiy_druzhinnik", 480, 342),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_vaegir_e_plastun", 480, 253),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_vaegir_e_yesaul", 480, 164),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_vaegir_e_luchnik", 620, 520),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_vaegir_e_posadnik", 620, 431),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_vaegir_e_druzhinnik_veteran", 620, 342),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_vaegir_e_druzhinnik", 620, 253),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_vaegir_e_pansirniy_kazan", 620, 164),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_vaegir_e_metkiy_luchnik", 760, 520),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_vaegir_e_voevoda", 760, 431),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_vaegir_e_extra1", 760, 342),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_vaegir_e_vityas", 760, 164),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_vaegir_e_sokoliniy_glaz", 900, 520),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 20, "trp_vaegir_e_bogatyr", 900, 164),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 0, "trp_vaegir_e_peasant", 60, 342),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 1, "trp_vaegir_e_watchman", 200, 342),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 2, "trp_vaegir_e_luchnik_militia", 340, 431), # A3
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 3, "trp_vaegir_e_footman", 340, 342), # I3
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 4, "trp_vaegir_e_noble_novice", 340, 164), # C3
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 5, "trp_vaegir_e_zalstrelshik", 480, 431), # A4
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 6, "trp_vaegir_e_junior_druzhinnik", 480, 253), # C4 Junior Druzhinnik
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 7, "trp_vaegir_e_trained_footman", 480, 342), # I4 Trained Footman
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 8, "trp_vaegir_e_young_boyar", 480, 164), # C4
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 9, "trp_vaegir_e_luchnik", 620, 431), # A5
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 10, "trp_vaegir_e_druzhinnik", 620, 253), # C5
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_vaegir_e_ratnik_infantry", 620, 342), # I5 Vaegir Ratnik
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_vaegir_e_boyar", 620, 164), # C5
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_vaegir_e_varangian_guard", 760, 342), # I6
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_vaegir_e_elitniy_druzhinnik", 760, 164), # C6 Elitniy Druzhinnik
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_vaegir_e_vityas", 760, 253), # C6
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_vaegir_e_metkiy_luchnik", 760, 431), # A6
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_vaegir_e_sokoliniy_glaz", 900, 431), # A7
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_vaegir_e_knyazs_guard", 900, 164), # C7
 
         ## cost
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_kholop", 115, 397),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_otrok", 255, 397),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_kmet", 395, 575),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_grid", 395, 397),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_kazak", 395, 219),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_zalstrelshik", 535, 575),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_ratnik", 535, 486),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_mladshiy_druzhinnik", 535, 397),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_plastun", 535, 308),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_yesaul", 535, 219),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_luchnik", 675, 575),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_posadnik", 675, 486),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_druzhinnik_veteran", 675, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_peasant", 115, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_watchman", 255, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_luchnik_militia", 395, 486),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_footman", 395, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_noble_novice", 395, 219),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_zalstrelshik", 535, 486),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_junior_druzhinnik", 535, 308),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_trained_footman", 535, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_young_boyar", 535, 219),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_luchnik", 675, 486),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_druzhinnik", 675, 308),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_pansirniy_kazan", 675, 219),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_metkiy_luchnik", 815, 575),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_vityas", 815, 219),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_ratnik_infantry", 675, 397),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_boyar", 675, 219),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_metkiy_luchnik", 815, 486),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_elitniy_druzhinnik", 815, 219),
         ## cost
 
         ##### - lines
         (call_script, "script_prsnt_lines", 108, 4, 83, 382), # T1 kholop -> T2 otrok
         (call_script, "script_prsnt_lines", 108, 4, 223, 382), # T2 otrok -> T3 grid
         (call_script, "script_prsnt_lines", 54, 4, 223, 382), # T2 otrok split exit
-        (call_script, "script_prsnt_lines", 54, 4, 277, 560), # T2 otrok -> T3 kmet entry
-        (call_script, "script_prsnt_lines", 108, 4, 363, 560), # T3 kmet -> T4 zalstrelshik
-        (call_script, "script_prsnt_lines", 54, 4, 363, 560), # T3 kmet split exit
-        (call_script, "script_prsnt_lines", 54, 4, 417, 471), # T3 kmet -> T4 ratnik entry
-        (call_script, "script_prsnt_lines", 108, 4, 363, 382), # T3 grid -> T4 mladshiy
+        (call_script, "script_prsnt_lines", 54, 4, 277, 471), # T2 otrok -> A3 kmet entry
+        (call_script, "script_prsnt_lines", 108, 4, 363, 471), # T3 kmet -> T4 zalstrelshik
+        (call_script, "script_prsnt_lines", 108, 4, 363, 382), # T3 grid -> I4 trained footman
         (call_script, "script_prsnt_lines", 54, 4, 363, 382), # T3 grid split exit
-        (call_script, "script_prsnt_lines", 54, 4, 417, 293), # T3 grid -> T4 plastun entry
+        (call_script, "script_prsnt_lines", 54, 4, 417, 293), # T3 grid -> C4 junior entry
         (call_script, "script_prsnt_lines", 108, 4, 363, 204), # T3 kazak -> T4 yesaul
-        (call_script, "script_prsnt_lines", 108, 4, 503, 560), # T4 zalstrelshik -> T5 luchnik
-        (call_script, "script_prsnt_lines", 108, 4, 503, 471), # T4 ratnik -> T5 posadnik
-        (call_script, "script_prsnt_lines", 108, 4, 503, 382), # T4 mladshiy -> T5 druzh_vet
-        (call_script, "script_prsnt_lines", 54, 4, 557, 301), # T4 mladshiy -> T5 druzhinnik offset entry
-        (call_script, "script_prsnt_lines", 108, 4, 503, 293), # T4 plastun -> T5 druzhinnik
-        (call_script, "script_prsnt_lines", 108, 4, 503, 204), # T4 yesaul -> T5 pansirniy
-        (call_script, "script_prsnt_lines", 108, 4, 643, 560), # T5 luchnik -> T6 metkiy_luchnik
-        (call_script, "script_prsnt_lines", 108, 4, 643, 471), # T5 posadnik -> T6 voevoda
-        (call_script, "script_prsnt_lines", 108, 4, 643, 382), # T5 druzh_vet -> T6 varangian
-        (call_script, "script_prsnt_lines", 54, 4, 643, 293), # T5 druzhinnik -> T6 vityas split
-        (call_script, "script_prsnt_lines", 54, 4, 697, 204), # T5 druzhinnik -> T6 vityas entry
-        (call_script, "script_prsnt_lines", 108, 4, 643, 204), # T5 pansirniy -> T6 vityas
-        (call_script, "script_prsnt_lines", 108, 4, 783, 560), # T6 metkiy_luchnik -> T7 sokoliniy_glaz
-        (call_script, "script_prsnt_lines", 108, 4, 783, 204), # T6 vityas -> T7 bogatyr
+        (call_script, "script_prsnt_lines", 108, 4, 503, 471), # T4 zalstrelshik -> T5 luchnik
+        (call_script, "script_prsnt_lines", 108, 4, 503, 293), # C4 junior -> C5 senior
+        (call_script, "script_prsnt_lines", 108, 4, 503, 382), # I4 trained -> I5 veteran druzhinnik
+        (call_script, "script_prsnt_lines", 108, 4, 503, 204), # T4 yesaul -> T5 pansirniy_kazan
+        (call_script, "script_prsnt_lines", 108, 4, 643, 471), # T5 luchnik -> T6 metkiy_luchnik
+        (call_script, "script_prsnt_lines", 108, 4, 643, 297), # C5 druzhinnik -> C6 vityas
+        (call_script, "script_prsnt_lines", 54, 4, 643, 289), # C5 druzhinnik split exit -> C6 elitniy
+        (call_script, "script_prsnt_lines", 54, 4, 697, 212), # C5 druzhinnik split entry -> C6 elitniy
+        (call_script, "script_prsnt_lines", 108, 4, 643, 382), # I5 veteran druzhinnik -> I6 varangian guard
+        (call_script, "script_prsnt_lines", 108, 4, 643, 204), # C5 boyar -> C6 elitniy druzhinnik
+        (call_script, "script_prsnt_lines", 108, 4, 783, 204), # T6 boyar druzhinnik -> T7 bogatyr
+        (call_script, "script_prsnt_lines", 108, 4, 783, 471), # T6 metkiy_luchnik -> T7 sokoliniy_glaz
         ##### - lines
 
         ##### | lines
-        (call_script, "script_prsnt_lines", 4, 178, 277, 382), # T2 otrok branch
-        (call_script, "script_prsnt_lines", 4, 89, 417, 471), # T3 kmet -> T4 ratnik branch
-        (call_script, "script_prsnt_lines", 4, 89, 417, 293), # T3 grid -> T4 plastun branch
-        (call_script, "script_prsnt_lines", 4, 81, 557, 301), # T4 mladshiy -> T5 druzhinnik branch
-        (call_script, "script_prsnt_lines", 4, 89, 697, 204), # T5 druzhinnik -> T6 vityas branch
+        (call_script, "script_prsnt_lines", 4, 89, 277, 382), # T2 otrok branch
+        (call_script, "script_prsnt_lines", 4, 89, 417, 293), # T3 grid -> C4 junior branch
+        (call_script, "script_prsnt_lines", 4, 77, 697, 216), # T5 senior -> T6 vityas
         ##### | lines
+
+        ####### mouse fix pos system #######
+        (call_script, "script_mouse_fix_pos_ready"),
+        ####### mouse fix pos system #######
       ]),
+
+    (ti_on_presentation_run,
+     [
+        ####### mouse fix pos system #######
+        (call_script, "script_mouse_fix_pos_run"),
+        ####### mouse fix pos system #######
+    ]),
 
     (ti_on_presentation_event_state_change,
       [
@@ -1498,7 +1499,7 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_nord_e_axeman", 500, 350),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_khergit_e_kipchak", 500, 270),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 20, "trp_khergit_e_qubuci", 500, 190),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_vaegir_e_yesaul", 790, 430),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_vaegir_e_young_boyar", 790, 430),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 22, "trp_vaegir_e_zalstrelshik", 790, 350),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 23, "trp_sarranid_e_timariot", 790, 270),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 24, "trp_sarranid_e_badw", 790, 190),

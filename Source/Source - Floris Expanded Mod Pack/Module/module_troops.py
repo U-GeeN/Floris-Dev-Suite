@@ -189,28 +189,27 @@ upgrade(troops,"vaegir_r_mladshiy_druzhinnik","vaegir_r_druzhinnik_veteran")
 upgrade(troops,"vaegir_r_luchnik","vaegir_r_metkiy_luchnik")
 ##Expanded troop tree
 #Tier 1-2
-upgrade(troops,"vaegir_e_kholop","vaegir_e_otrok")
+upgrade(troops,"vaegir_e_peasant","vaegir_e_watchman")
 #Tier 2-3
-upgrade2(troops,"vaegir_e_otrok","vaegir_e_kmet","vaegir_e_grid")
+upgrade2(troops,"vaegir_e_watchman","vaegir_e_luchnik_militia","vaegir_e_footman")
 #Tier 3-4
-upgrade2(troops,"vaegir_e_kmet","vaegir_e_zalstrelshik","vaegir_e_ratnik")
-upgrade2(troops,"vaegir_e_grid","vaegir_e_mladshiy_druzhinnik","vaegir_e_plastun")
-upgrade(troops,"vaegir_e_kazak","vaegir_e_yesaul")
+upgrade(troops,"vaegir_e_footman","vaegir_e_trained_footman")
+upgrade(troops,"vaegir_e_footman","vaegir_e_junior_druzhinnik")
+upgrade(troops,"vaegir_e_luchnik_militia","vaegir_e_zalstrelshik")
+upgrade(troops,"vaegir_e_noble_novice","vaegir_e_young_boyar")
 #Tier 4-5
-upgrade(troops,"vaegir_e_yesaul","vaegir_e_pansirniy_kazan")
-upgrade(troops,"vaegir_e_plastun","vaegir_e_druzhinnik")
-upgrade2(troops,"vaegir_e_mladshiy_druzhinnik","vaegir_e_druzhinnik_veteran","vaegir_e_druzhinnik")
-upgrade(troops,"vaegir_e_ratnik","vaegir_e_posadnik")
+upgrade(troops,"vaegir_e_trained_footman","vaegir_e_ratnik_infantry")
+upgrade(troops,"vaegir_e_junior_druzhinnik","vaegir_e_druzhinnik")
 upgrade(troops,"vaegir_e_zalstrelshik","vaegir_e_luchnik")
+upgrade(troops,"vaegir_e_young_boyar","vaegir_e_boyar")
 #Tier 5-6
-upgrade(troops,"vaegir_e_pansirniy_kazan","vaegir_e_vityas")
-upgrade(troops,"vaegir_e_druzhinnik_veteran","vaegir_e_extra1")
-upgrade(troops,"vaegir_e_posadnik","vaegir_e_voevoda")
+upgrade(troops,"vaegir_e_ratnik_infantry","vaegir_e_varangian_guard")
 upgrade(troops,"vaegir_e_luchnik","vaegir_e_metkiy_luchnik")
-upgrade(troops,"vaegir_e_druzhinnik","vaegir_e_vityas")
+upgrade2(troops,"vaegir_e_druzhinnik","vaegir_e_vityas","vaegir_e_elitniy_druzhinnik")
+upgrade(troops,"vaegir_e_boyar","vaegir_e_elitniy_druzhinnik")
 #Tier 6-7
-upgrade(troops,"vaegir_e_vityas","vaegir_e_bogatyr")
 upgrade(troops,"vaegir_e_metkiy_luchnik","vaegir_e_sokoliniy_glaz")
+upgrade(troops,"vaegir_e_elitniy_druzhinnik","vaegir_e_knyazs_guard")
 ##
 
 
@@ -543,7 +542,7 @@ upgrade2(troops,"bandit_e_mountain","rhodok_e_milizia","rhodok_e_recluta_balestr
 upgrade2(troops,"bandit_e_forest","swadian_e_trained_archer","swadian_e_foot_soldier")
 upgrade2(troops,"bandit_e_sea_raider","nord_e_warrior","nord_e_axeman")
 upgrade2(troops,"bandit_e_steppe","khergit_e_kipchak","khergit_e_qubuci")
-upgrade2(troops,"bandit_e_taiga","vaegir_e_yesaul","vaegir_e_zalstrelshik")
+upgrade2(troops,"bandit_e_taiga","vaegir_e_young_boyar","vaegir_e_zalstrelshik")
 upgrade2(troops,"bandit_e_desert","sarranid_e_timariot","sarranid_e_badw")
 ##Manhunters
 upgrade(troops,"bandit_e_manhunter","bandit_e_slave_driver")
