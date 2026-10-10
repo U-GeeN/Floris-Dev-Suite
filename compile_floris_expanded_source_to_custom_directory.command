@@ -1,10 +1,16 @@
 #!/bin/bash
+set -e
+
 cd "$(dirname "$0")"
 
 echo "Compiling Floris Expanded Mod Pack to a custom directory"
 
 LOG_FILE="Process_Log.txt"
 touch "$LOG_FILE"
+
+# Remove bytecode from previous builds before importing generated ID files.
+rm -f *.pyc
+rm -f *.py ground_spec_codes.h
 
 cp ./Source/Source\ -\ Floris\ Expanded\ Mod\ Pack/header\ files/* ./ >> "$LOG_FILE"
 cp ./Source/Source\ -\ Floris\ Expanded\ Mod\ Pack/ID\ files/* ./ >> "$LOG_FILE"
@@ -16,6 +22,10 @@ cp ./Source/Source\ -\ Floris\ Expanded\ Mod\ Pack/Variables/* ./ >> "$LOG_FILE"
 cp ./Source/Source\ -\ Floris\ Expanded\ Mod\ Pack/Other\ Files/* ./ >> "$LOG_FILE"
 cp ./Module\ Info/* ./ >> "$LOG_FILE"
 cp ./Source/Files\ for\ Batch/* ./ >> "$LOG_FILE"
+
+test -f ./process_strings.py
+test -f ./process_operations.py
+test -f ./module_info.py
 
 python2 info.py
 
