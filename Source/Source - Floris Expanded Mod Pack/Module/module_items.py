@@ -624,13 +624,33 @@ items = [
 ##One-handed - 25
 #Swadia - 2
 #Minimal - 2
-["we_swa_axe_hatchet", "Hatchet", [("we_swa_axe_hatchet",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,13,weight(2)|abundance(100)|difficulty(0)|spd_rtng(97)|weapon_length(60)|swing_damage(23,cut)|thrust_damage(0,pierce),imodbits_axe,[],[fac_kingdom_1]],
-["we_swa_axe_swadian", "Swadian Axe", [("we_swa_axe_swadian",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,84,weight(1.75)|abundance(80)|difficulty(8)|spd_rtng(95)|weapon_length(60)|swing_damage(31,cut)|thrust_damage(0,pierce),imodbits_sword_high,[],[fac_kingdom_1]],
+["we_swa_axe_hatchet", "Hatchet", [("we_swa_axe_hatchet",0)], 
+  itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, 
+  itc_scimitar|itcf_carry_axe_left_hip,13,
+  weight(2)|abundance(100)|difficulty(0)|spd_rtng(97)|weapon_length(60)|swing_damage(23,cut)|thrust_damage(0,pierce),
+  imodbits_axe,[],[fac_kingdom_1]
+],
+["we_swa_axe_swadian", "Swadian Axe", [("we_swa_axe_swadian",0)], 
+  itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, 
+  itc_scimitar|itcf_carry_axe_left_hip,84,
+  weight(1.75)|abundance(80)|difficulty(8)|spd_rtng(95)|weapon_length(60)|swing_damage(31,cut)|thrust_damage(0,pierce),
+  imodbits_sword_high,[],[fac_kingdom_1]
+],
 #Expanded - 0
 #Vaegir - 2
 #Minimal - 2
-["we_vae_axe_onehanded", "One Handed Axe", [("we_vae_axe_onehanded",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,21,weight(1.5)|abundance(100)|difficulty(0)|spd_rtng(92)|weapon_length(71)|swing_damage(25,cut)|thrust_damage(0,pierce),imodbits_axe,[],[fac_kingdom_2]],
-["we_vae_axe_vaegir", "Vaegir Axe", [("we_vae_axe_vaegir",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,78,weight(2)|abundance(80)|difficulty(8)|spd_rtng(93)|weapon_length(70)|swing_damage(30,cut)|thrust_damage(0,pierce),imodbits_sword_high,[],[fac_kingdom_2]],
+["we_vae_axe_onehanded", "One Handed Axe", [("we_vae_axe_onehanded",0)], 
+  itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, 
+  itc_scimitar|itcf_carry_axe_left_hip,21,
+  weight(1.5)|abundance(100)|difficulty(0)|spd_rtng(92)|weapon_length(71)|swing_damage(25,cut)|thrust_damage(0,pierce),
+  imodbits_axe,[],[fac_kingdom_2]
+],
+["we_vae_axe_vaegir", "Vaegir Axe", [("we_vae_axe_vaegir",0)], 
+  itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, 
+  itc_scimitar|itcf_carry_axe_left_hip,78,
+  weight(2)|abundance(80)|difficulty(8)|spd_rtng(93)|weapon_length(70)|swing_damage(30,cut)|thrust_damage(0,pierce),
+  imodbits_sword_high,[],[fac_kingdom_2]
+],
 #Expanded - 0
 #Khergit - 2
 #Minimal - 2
@@ -732,19 +752,68 @@ items = [
 ["we_swa_blunt_morningstar_small", "Small Swadian Morningstar", [("we_swa_blunt_morningstar_small",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,152,weight(4.5)|difficulty(11)|spd_rtng(91)|weapon_length(62)|swing_damage(30,pierce)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_1]],
 #Vaegir - 12
 #Minimal - 6
-["we_vae_blunt_club", "Vaegir Club", [("we_vae_blunt_club",0)], itp_type_one_handed_wpn|itp_merchandise| itp_can_knock_down|itp_primary|itp_wooden_parry|itp_wooden_attack, itc_scimitar,11,weight(2.5)|abundance(100)|difficulty(0)|spd_rtng(98)|weapon_length(70)|swing_damage(20,blunt)|thrust_damage(0,pierce),imodbits_none,[],[fac_kingdom_2]],
-["we_vae_blunt_hammer", "Hammer", [("we_vae_blunt_hammer",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar,30,weight(2)|difficulty(0)|spd_rtng(98)|weapon_length(60)|swing_damage(24,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2,fac_player_faction]],
-["we_vae_blunt_hammerthick", "Thick Hammer", [("we_vae_blunt_hammerthick",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,109,weight(2.3)|difficulty(8)|spd_rtng(92)|weapon_length(70)|swing_damage(28,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2]],
-["we_vae_blunt_hammersleek", "Sleek Hammer", [("we_vae_blunt_hammersleek",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,185,weight(2.3)|difficulty(8)|spd_rtng(93)|weapon_length(70)|swing_damage(29,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2]],
-["we_vae_blunt_hammerempirewar", "Empire War Hammer", [("we_vae_blunt_hammerempirewar",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,232, weight(3)|difficulty(9)|spd_rtng(90)|weapon_length(75)|swing_damage(30,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2]],
-["we_vae_blunt_hammermilitary", "Military Hammer", [("we_vae_blunt_hammermilitary",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,317,weight(2)|difficulty(10)|spd_rtng(95)|weapon_length(70)|swing_damage(31,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2]],
+["we_vae_blunt_club", "Vaegir Club", [("we_vae_blunt_club",0)], 
+  itp_type_one_handed_wpn|itp_merchandise| itp_can_knock_down|itp_primary|itp_wooden_parry|itp_wooden_attack,itc_scimitar,11,
+  weight(2.5)|abundance(100)|difficulty(0)|spd_rtng(98)|weapon_length(70)|swing_damage(20,blunt)|thrust_damage(0,pierce),
+  imodbits_none,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammer", "Hammer", [("we_vae_blunt_hammer",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise|itp_primary|itp_wooden_parry, itc_scimitar,30,
+  weight(2)|difficulty(0)|spd_rtng(98)|weapon_length(60)|swing_damage(24,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2,fac_player_faction]
+],
+["we_vae_blunt_hammerthick", "Thick Hammer", [("we_vae_blunt_hammerthick",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry,itc_scimitar|itcf_carry_mace_left_hip,109,
+  weight(2.3)|difficulty(8)|spd_rtng(92)|weapon_length(70)|swing_damage(28,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammersleek", "Sleek Hammer", [("we_vae_blunt_hammersleek",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise|itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,185,
+  weight(2.3)|difficulty(8)|spd_rtng(93)|weapon_length(70)|swing_damage(29,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammerempirewar", "Empire War Hammer", [("we_vae_blunt_hammerempirewar",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,232, 
+  weight(3)|difficulty(9)|spd_rtng(90)|weapon_length(75)|swing_damage(30,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammermilitary", "Military Hammer", [("we_vae_blunt_hammermilitary",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,317,
+  weight(2)|difficulty(10)|spd_rtng(95)|weapon_length(70)|swing_damage(31,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
 #Expanded - 6
-["we_vae_blunt_hammerfootman", "Footmans Hammer", [("we_vae_blunt_hammerfootman",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar,44,weight(2.5)|difficulty(0)|spd_rtng(98)|weapon_length(70)|swing_damage(23,blunt)|thrust_damage(19,pierce),imodbits_mace,[],[fac_kingdom_2]],
-["we_vae_blunt_hammerempire", "Empire Hammer", [("we_vae_blunt_hammerempire",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,85,weight(2.1)|difficulty(7)|spd_rtng(93)|weapon_length(65)|swing_damage(25,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2]],
-["we_vae_blunt_hammerwar", "War Hammer", [("we_vae_blunt_hammerwar",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,132,weight(2.4)|difficulty(8)|spd_rtng(91)|weapon_length(70)|swing_damage(28,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2]],
-["we_vae_blunt_hammerknight", "Knight Hammer", [("we_vae_blunt_hammerknight",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,193,weight(2.5)|difficulty(8)|spd_rtng(89)|weapon_length(75)|swing_damage(29,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2]],
-["we_vae_blunt_hammerbastard", "Bastard Knight Hammer", [("we_vae_blunt_hammerbastard",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,241,weight(3)|difficulty(9)|spd_rtng(89)|weapon_length(75)|swing_damage(30,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2]],
-["we_vae_blunt_hammerinquisition", "Inquisition Hammer", [("we_vae_blunt_hammerinquisition",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,278,weight(3)|difficulty(9)|spd_rtng(98)|weapon_length(75)|swing_damage(31,blunt)|thrust_damage(0,pierce),imodbits_mace,[],[fac_kingdom_2]],
+["we_vae_blunt_hammerfootman", "Footmans Hammer", [("we_vae_blunt_hammerfootman",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar,44,
+  weight(2.5)|difficulty(0)|spd_rtng(98)|weapon_length(70)|swing_damage(23,blunt)|thrust_damage(19,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammerempire", "Empire Hammer", [("we_vae_blunt_hammerempire",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,85,
+  weight(2.1)|difficulty(7)|spd_rtng(93)|weapon_length(65)|swing_damage(25,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammerwar", "War Hammer", [("we_vae_blunt_hammerwar",0)], 
+ itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise|itp_primary|itp_wooden_parry, 
+  itc_scimitar|itcf_carry_mace_left_hip,132,
+  weight(2.4)|difficulty(8)|spd_rtng(91)|weapon_length(70)|swing_damage(28,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammerknight", "Knight Hammer", [("we_vae_blunt_hammerknight",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,193,
+  weight(2.5)|difficulty(8)|spd_rtng(89)|weapon_length(75)|swing_damage(29,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammerbastard", "Bastard Knight Hammer", [("we_vae_blunt_hammerbastard",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,241,
+  weight(3)|difficulty(9)|spd_rtng(89)|weapon_length(75)|swing_damage(30,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammerinquisition", "Inquisition Hammer", [("we_vae_blunt_hammerinquisition",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,278,
+  weight(3)|difficulty(9)|spd_rtng(98)|weapon_length(75)|swing_damage(31,blunt)|thrust_damage(0,pierce),
+  imodbits_mace,[],[fac_kingdom_2]
+],
 #Khergit - 1
 #Minimal - 1
 ["we_khe_blunt_club", "Khergit Club", [("we_khe_blunt_club",0)], itp_type_one_handed_wpn|itp_merchandise| itp_can_knock_down|itp_primary|itp_wooden_parry|itp_wooden_attack, itc_scimitar,11,weight(2.5)|abundance(100)|difficulty(0)|spd_rtng(98)|weapon_length(70)|swing_damage(20,blunt)|thrust_damage(0,pierce),imodbits_none,[],[fac_kingdom_3]],
@@ -823,33 +892,83 @@ items = [
   itp_type_polearm|itp_merchandise|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed,itc_staff|itcf_carry_spear,245,weight(2.5)|abundance(80)|difficulty(9)|spd_rtng(82)|weapon_length(163)|swing_damage(31,cut)|thrust_damage(28,pierce),
   imodbits_polearm,[],[fac_kingdom_1]],
 ["we_swa_spear_glaive","Glaive",[("we_swa_spear_glaive",0)],
-  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,270,weight(2.25)|abundance(70)|difficulty(10)|spd_rtng(80)|weapon_length(170)|swing_damage(34,cut)|thrust_damage(29,pierce),
+  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,270,weight(2.25)|abundance(70)|difficulty(10)|spd_rtng(80)|weapon_length(170)|swing_damage(34,cut)|thrust_damage(29,pierce),
   imodbits_polearm,[],[fac_kingdom_1]],
 ["we_swa_spear_bill_english", "English Bill", [("we_swa_spear_bill_english",0)], 
-  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,541,weight(5.5)|abundance(60)|difficulty(12)|spd_rtng(75)|weapon_length(182)|swing_damage(44,cut)|thrust_damage(32,pierce),
+  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,541,weight(5.5)|abundance(60)|difficulty(12)|spd_rtng(75)|weapon_length(182)|swing_damage(44,cut)|thrust_damage(32,pierce),
   imodbits_polearm,[],[fac_kingdom_1]],
 #Expanded - 3
 ["we_swa_spear_bill", "Bill", [("we_swa_spear_bill",0)],
-  itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,393,weight(5.3)|abundance(80)|difficulty(12)|spd_rtng(74)|weapon_length(190)|swing_damage(40,cut)|thrust_damage(34,pierce),
+  itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,393,weight(5.3)|abundance(80)|difficulty(12)|spd_rtng(74)|weapon_length(190)|swing_damage(40,cut)|thrust_damage(34,pierce),
   imodbits_polearm,[],[fac_kingdom_1]],
 ["we_swa_spear_glaive_long", "Long Glaive", [("we_swa_spear_glaive_long",0)], 
-  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,481,weight(5.5)|abundance(70)|difficulty(12)|spd_rtng(85)|weapon_length(180)|swing_damage(43,cut)|thrust_damage(38,pierce),
+  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,481,weight(5.5)|abundance(70)|difficulty(12)|spd_rtng(85)|weapon_length(180)|swing_damage(43,cut)|thrust_damage(38,pierce),
   imodbits_polearm,[],[fac_kingdom_1]],
 ["we_swa_spear_glaive_hooked", "Hooked Glaive", [("we_swa_spear_glaive_hooked",0)], 
-  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,527,weight(5.5)|abundance(60)|difficulty(13)|spd_rtng(82)| weapon_length(190)|swing_damage(44,cut)|thrust_damage(38,pierce),
+  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,527,
+  weight(5.5)|abundance(60)|difficulty(13)|spd_rtng(82)| weapon_length(190)|swing_damage(44,cut)|thrust_damage(38,pierce),
   imodbits_polearm,[],[fac_kingdom_1]],
 #Vaegir - 9
 #Minimal - 4
-["we_vae_spear_scythe", "Scythe", [("we_vae_spear_scythe",0)], itp_type_polearm|itp_offset_lance|itp_merchandise|itp_primary|itp_penalty_with_shield|itp_wooden_parry, itc_staff|itcf_carry_spear,43,weight(3)|abundance(100)|difficulty(0)|spd_rtng(79)|weapon_length(182)|swing_damage(19,cut)|thrust_damage(14,pierce),imodbits_polearm,[],[fac_kingdom_2]],
-["we_vae_spear_scythe_military", "Military Scythe", [("we_vae_spear_scythe_military",0),("we_vae_spear_scythe_military_bad",imodbits_bad)], itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear|itcf_carry_spear,155,weight(2.5)|abundance(80)|difficulty(11)|spd_rtng(90)|weapon_length(155)|swing_damage(36,cut)|thrust_damage(25,pierce),imodbits_polearm,[],[fac_kingdom_2]],
-["we_vae_spear_scythe_shortened", "Shortened Military Scythe", [("we_vae_spear_scythe_shortened",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back,364,weight(3.0)|abundance(70)|difficulty(11)|spd_rtng(90)|weapon_length(112)|swing_damage(45,cut)|thrust_damage(0,pierce),imodbits_sword_high,[],[fac_kingdom_2]],
-["we_vae_spear_polehammer", "Vaegir Polehammer", [("we_vae_spear_polehammer",0)], itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,549,weight(7)|abundance(60)|difficulty(15)|spd_rtng(71)|weapon_length(160)|swing_damage(46,blunt)|thrust_damage(20,pierce),imodbits_polearm,[],[fac_kingdom_2]],
+["we_vae_spear_scythe", "Scythe", [("we_vae_spear_scythe",0)], 
+  itp_type_polearm|itp_offset_lance|itp_merchandise|itp_primary|itp_penalty_with_shield|itp_wooden_parry,
+  itc_staff|itcf_carry_spear,43,
+  weight(3)|abundance(100)|difficulty(0)|spd_rtng(79)|weapon_length(182)|swing_damage(19,cut)|thrust_damage(14,pierce),
+  imodbits_polearm,[],[fac_kingdom_2]
+],
+["we_vae_spear_scythe_military", "Military Scythe", [("we_vae_spear_scythe_military",0),
+  ("we_vae_spear_scythe_military_bad",imodbits_bad)], 
+  itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_penalty_with_shield|itp_wooden_parry, 
+  itc_cutting_spear|itcf_carry_spear,155,
+  weight(2.5)|abundance(80)|difficulty(11)|spd_rtng(90)|weapon_length(155)|swing_damage(36,cut)|thrust_damage(25,pierce),
+  imodbits_polearm,[],[fac_kingdom_2]
+],
+["we_vae_spear_scythe_shortened", "Shortened Military Scythe", [("we_vae_spear_scythe_shortened",0)], 
+itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back,364,
+weight(3.0)|abundance(70)|difficulty(11)|spd_rtng(90)|weapon_length(112)|swing_damage(45,cut)|thrust_damage(0,pierce),
+imodbits_sword_high,[],[fac_kingdom_2]
+],
+["we_vae_spear_polehammer", "Vaegir Polehammer", [("we_vae_spear_polehammer",0)], 
+  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed,itc_staff|itcf_carry_spear,549,
+  weight(7)|abundance(60)|difficulty(15)|spd_rtng(71)|weapon_length(160)|swing_damage(46,blunt)|thrust_damage(20,pierce),
+  imodbits_polearm,[],[fac_kingdom_2]
+],
 #Expanded - 5
-["we_vae_spear_vaegir", "Vaegir Spear", [("we_vae_spear_vaegir",0)], itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,91,weight(2.4)|abundance(90)|difficulty(0)|spd_rtng(94)|weapon_length(156)|swing_damage(15,cut)|thrust_damage(26,pierce),imodbits_polearm,[],[fac_kingdom_2]],
-["we_vae_spear_pike", "Vaegir Pike", [("we_vae_spear_pike",0)], itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,351,weight(3.25)|abundance(70)|difficulty(9)|spd_rtng(93)|weapon_length(210)|swing_damage(19,cut)|thrust_damage(33,pierce),imodbits_polearm,[],[fac_kingdom_2]],
-["we_vae_spear_polehammer_short", "Short Polehammer", [("we_vae_spear_polehammer_short",0)], itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,244,weight(6)|abundance(80)|difficulty(10)|spd_rtng(80)|weapon_length(130)|swing_damage(42,blunt)|thrust_damage(15,pierce),imodbits_polearm,[],[fac_kingdom_2]],
-["we_vae_spear_polehammer_knight", "Knight Polehammer", [("we_vae_spear_polehammer_knight",0)], itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,415,weight(7)|abundance(60)|difficulty(13)|spd_rtng(69)|weapon_length(170)|swing_damage(45,blunt)|thrust_damage(20,pierce),imodbits_polearm,[],[fac_kingdom_2]],
-["we_vae_spear_polehammer_knightlong", "Long Knight Polehammer", [("we_vae_spear_polehammer_knightlong",0)], itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, itc_staff|itcf_carry_spear,583,weight(8)|abundance(50)|difficulty(16)|spd_rtng(65)|weapon_length(180)|swing_damage(48,blunt)|thrust_damage(20,pierce),imodbits_polearm,[],[fac_kingdom_2]],
+["we_vae_spear_vaegir", "Vaegir Spear", [("we_vae_spear_vaegir",0)], 
+  itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,91,
+  weight(2.4)|abundance(90)|difficulty(0)|spd_rtng(94)|weapon_length(156)|swing_damage(15,cut)|thrust_damage(26,pierce),
+  imodbits_polearm,[],[fac_kingdom_2]
+],
+["we_vae_spear_pike", "Vaegir Pike", [("we_vae_spear_pike",0)], 
+  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,351,
+  weight(3.25)|abundance(70)|difficulty(9)|spd_rtng(93)|weapon_length(210)|swing_damage(19,cut)|thrust_damage(33,pierce),
+  imodbits_polearm,[],[fac_kingdom_2]
+],
+["we_vae_spear_polehammer_short", "Short Polehammer", [("we_vae_spear_polehammer_short",0)], 
+  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,244,
+  weight(6)|abundance(80)|difficulty(10)|spd_rtng(80)|weapon_length(130)|swing_damage(42,blunt)|thrust_damage(15,pierce),
+  imodbits_polearm,[],[fac_kingdom_2]
+],
+["we_vae_spear_polehammer_knight", "Knight Polehammer", [("we_vae_spear_polehammer_knight",0)], 
+  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,415,
+  weight(7)|abundance(60)|difficulty(13)|spd_rtng(69)|weapon_length(170)|swing_damage(45,blunt)|thrust_damage(20,pierce),
+  imodbits_polearm,[],[fac_kingdom_2]
+],
+["we_vae_spear_polehammer_knightlong", "Long Knight Polehammer", [("we_vae_spear_polehammer_knightlong",0)], 
+  itp_type_polearm|itp_merchandise|itp_cant_use_on_horseback|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_two_handed, 
+  itc_staff|itcf_carry_spear,583,
+  weight(8)|abundance(50)|difficulty(16)|spd_rtng(65)|weapon_length(180)|swing_damage(48,blunt)|thrust_damage(20,pierce),
+  imodbits_polearm,[],[fac_kingdom_2]
+],
 #Khergit - 14
 #Minimal - 6
 ["we_khe_spear_staff", "Khergit Staff", [("we_khe_spear_staff",0)], itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_penalty_with_shield|itp_wooden_parry|itp_wooden_attack, itc_staff|itcf_carry_sword_back,40,weight(1.5)|abundance(120)|difficulty(0)|spd_rtng(100)|weapon_length(130)|swing_damage(18,blunt)|thrust_damage(19,blunt),imodbits_polearm,[],[fac_kingdom_3]],
@@ -952,10 +1071,22 @@ items = [
 ["we_swa_spear_lance_iron", "Iron Lance", [("we_swa_spear_lance_iron",0)], itp_couchable|itp_type_polearm|itp_merchandise| itp_primary|itp_penalty_with_shield|itp_wooden_parry, itc_greatlance,1000,weight(7)|abundance(40)|difficulty(13)|spd_rtng(50)|weapon_length(320)|swing_damage(0,cut)|thrust_damage(32,pierce),imodbits_polearm,[],[fac_kingdom_1]],
 #Vaegir - 3
 #Minimal - 1
-["we_vae_spear_lance", "Vaegir Lance", [("we_vae_spear_lance",0)], itp_couchable|itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear,270,weight(2.5)|abundance(80)|difficulty(9)|spd_rtng(80)|weapon_length(180)|swing_damage(16,blunt)|thrust_damage(26,pierce),imodbits_polearm,[],[fac_kingdom_2]],
+["we_vae_spear_lance", "Vaegir Lance", [("we_vae_spear_lance",0)], 
+  itp_couchable|itp_type_polearm|itp_offset_lance|itp_merchandise|itp_primary|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear,270,
+  weight(2.5)|abundance(80)|difficulty(9)|spd_rtng(80)|weapon_length(180)|swing_damage(16,blunt)|thrust_damage(26,pierce),
+  imodbits_polearm,[],[fac_kingdom_2]
+],
 #Expanded - 2
-["we_vae_spear_lancedouble", "Double Sided Lance", [("we_vae_spear_lancedouble",0)], itp_couchable|itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_wooden_parry, itc_staff,261,weight(4.0)|abundance(100)|difficulty(8)|spd_rtng(95)|weapon_length(128)|swing_damage(25,cut)|thrust_damage(27,pierce),imodbits_polearm,[],[fac_kingdom_2]],
-["we_vae_spear_lancefootman", "Footman Lance", [("we_vae_spear_lancefootman",0)], itp_couchable|itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear,399,weight(2.5)|abundance(60)|difficulty(11)|spd_rtng(88)|weapon_length(170)|swing_damage(15,blunt)|thrust_damage(34,pierce),imodbits_polearm,[],[fac_kingdom_2]],
+["we_vae_spear_lancedouble", "Double Sided Lance", [("we_vae_spear_lancedouble",0)], 
+ itp_couchable|itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_wooden_parry, itc_staff,261,
+ weight(4.0)|abundance(100)|difficulty(8)|spd_rtng(95)|weapon_length(128)|swing_damage(25,cut)|thrust_damage(27,pierce),
+ imodbits_polearm,[],[fac_kingdom_2]
+ ],
+["we_vae_spear_lancefootman", "Footman Lance", [("we_vae_spear_lancefootman",0)], 
+itp_couchable|itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear,399,
+weight(2.5)|abundance(60)|difficulty(11)|spd_rtng(88)|weapon_length(170)|swing_damage(15,blunt)|thrust_damage(34,pierce),
+imodbits_polearm,[],[fac_kingdom_2]
+],
 #Khergit - 7
 #Minimal - 3
 ["we_khe_spear_lance", "Khergit Lance", [("we_khe_spear_lance",0)], itp_couchable|itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear,240,weight(4)|abundance(80)|difficulty(9)|spd_rtng(55)|weapon_length(240)|swing_damage(19,blunt)|thrust_damage(20,pierce),imodbits_polearm,[],[fac_kingdom_3]],
@@ -1001,22 +1132,49 @@ items = [
 ["we_swa_sword_lord", "Swadian Lord Sword", [("we_swa_sword_lord",0),("we_swa_scabbard_lord", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,612,weight(2.5)|abundance(40)|difficulty(9)|spd_rtng(94)|weapon_length(100)|swing_damage(34,cut)|thrust_damage(25,pierce),imodbits_sword_high,[],[fac_kingdom_1]],
 #Expanded - 5
 ["we_swa_sword_estocdagger", "Estoc Dagger", [("we_swa_sword_estocdagger",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_no_parry, itc_dagger|itcf_carry_dagger_front_left,40,weight(1)|abundance(100)|difficulty(0)|spd_rtng(106)|weapon_length(53)|swing_damage(15,cut)|thrust_damage(21,pierce),imodbits_sword_high,[],[fac_kingdom_1]],
-["we_swa_sword_steel", "Prince Sword", [("we_swa_sword_prince",0),("we_swa_scabbard_prince", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,163,weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(99)|weapon_length(95)|swing_damage(27,cut)|thrust_damage(22,pierce),imodbits_sword_high,[],[fac_kingdom_1]],
+["we_swa_sword_steel", "Arming Sword", [("we_swa_sword_prince",0),("we_swa_scabbard_prince", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,163,weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(99)|weapon_length(95)|swing_damage(27,cut)|thrust_damage(22,pierce),imodbits_sword_high,[],[fac_kingdom_1]],
 ["we_swa_sword_albion", "Albion Sword", [("we_swa_sword_albion",0),("we_swa_scabbard_albion", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,308,weight(2.0)|abundance(80)|difficulty(7)|spd_rtng(99)|weapon_length(80)|swing_damage(29,cut)|thrust_damage(23,pierce),imodbits_sword_high,[],[fac_kingdom_1]],
 ["we_swa_sword_albionlong", "Long Albion Sword", [("we_swa_sword_albionlong",0),("we_swa_scabbard_albionlong", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,446,weight(2.1)|abundance(70)|difficulty(8)|spd_rtng(97)|weapon_length(80)|swing_damage(31,cut)|thrust_damage(24,pierce),imodbits_sword_high,[],[fac_kingdom_1]],
 ["we_swa_sword_bayeux", "Bayeux Sword", [("we_swa_sword_bayeux",0),("we_swa_scabbard_bayeux", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,455,weight(1.8)|abundance(70)|difficulty(8)|spd_rtng(100)|weapon_length(95)|swing_damage(31,cut)|thrust_damage(24,pierce),imodbits_sword_high,[],[fac_kingdom_1]],
 ##Vaegir - 9
 #Minimal - 5
-["we_vae_sword_sickle", "Sickle", [("we_vae_sword_sickle",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_no_parry|itp_wooden_parry, itc_cleaver,9,weight(1.5)|abundance(100)|difficulty(0)|spd_rtng(99)|weapon_length(40)|swing_damage(20,cut)|thrust_damage(0,pierce),imodbits_none,[],[fac_kingdom_2]],
-["we_vae_sword_knife", "Knife", [("we_vae_sword_knife",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_no_parry, itc_dagger|itcf_carry_dagger_front_left,33,weight(0.5)|abundance(100)|difficulty(0)|spd_rtng(110)|weapon_length(40)|swing_damage(21,cut)|thrust_damage(13,pierce),imodbits_sword,[],[fac_kingdom_2]],
-["we_vae_sword_sickle_military", "Military Sickle", [("we_vae_sword_sickle_military",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,220,weight(1.0)|abundance(70)|difficulty(9)|spd_rtng(100)|weapon_length(75)|swing_damage(26,pierce)|thrust_damage(0,pierce),imodbits_axe,[],[fac_kingdom_2]],
-["we_vae_sword_jarl", "Jarl Sword", [("we_vae_sword_jarl",0),("we_vae_scabbard_jarl", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,461,weight(1.5)|abundance(50)|difficulty(8)|spd_rtng(100)|weapon_length(95)|swing_damage(31,cut)|thrust_damage(24,pierce),imodbits_sword_high,[],[fac_kingdom_2]],
-["we_vae_sword_cleaver_military", "Military Cleaver", [("we_vae_sword_cleaver_military",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_scimitar|itcf_carry_sword_left_hip,588,weight(1.5)|abundance(40)|difficulty(9)|spd_rtng(96)|weapon_length(95)|swing_damage(35,cut)|thrust_damage(0,pierce),imodbits_sword_high,[],[fac_kingdom_2]],
+["we_vae_sword_sickle", "Sickle", [("we_vae_sword_sickle",0)], 
+ itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_no_parry|itp_wooden_parry, itc_cleaver,9,
+ weight(1.5)|abundance(100)|difficulty(0)|spd_rtng(99)|weapon_length(40)|swing_damage(20,cut)|thrust_damage(0,pierce),
+ imodbits_none,[],[fac_kingdom_2]],
+["we_vae_sword_knife", "Knife", [("we_vae_sword_knife",0)], 
+itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_no_parry, itc_dagger|itcf_carry_dagger_front_left,33,
+weight(0.5)|abundance(100)|difficulty(0)|spd_rtng(110)|weapon_length(40)|swing_damage(21,cut)|thrust_damage(13,pierce),
+imodbits_sword,[],[fac_kingdom_2]],
+["we_vae_sword_sickle_military", "Military Sickle", [("we_vae_sword_sickle_military",0)], 
+itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,220,
+weight(1.0)|abundance(70)|difficulty(9)|spd_rtng(100)|weapon_length(75)|swing_damage(26,pierce)|thrust_damage(0,pierce),
+imodbits_axe,[],[fac_kingdom_2]],
+["we_vae_sword_jarl", "Jarl Sword", [("we_vae_sword_jarl",0),("we_vae_scabbard_jarl", ixmesh_carry)], 
+ itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,461,
+ weight(1.5)|abundance(50)|difficulty(8)|spd_rtng(100)|weapon_length(95)|swing_damage(31,cut)|thrust_damage(24,pierce),
+ imodbits_sword_high,[],[fac_kingdom_2]],
+["we_vae_sword_cleaver_military", "Military Cleaver", [("we_vae_sword_cleaver_military",0)], 
+ itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_scimitar|itcf_carry_sword_left_hip,588,
+ weight(1.5)|abundance(40)|difficulty(9)|spd_rtng(96)|weapon_length(95)|swing_damage(35,cut)|thrust_damage(0,pierce),
+ imodbits_sword_high,[],[fac_kingdom_2]],
 #Expanded - 4
-["we_vae_sword_cleaver", "Cleaver", [("we_vae_sword_cleaver",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_no_parry|itp_wooden_parry, itc_cleaver,60,weight(1.5)|abundance(100)|difficulty(0)|spd_rtng(103)|weapon_length(35)|swing_damage(24,cut)|thrust_damage(0,pierce),imodbits_none,[],[fac_kingdom_2]],
-["we_vae_sword_cleaver_soldier", "Soldier's Cleaver", [("we_vae_sword_cleaver_soldier",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_scimitar|itcf_carry_sword_left_hip,454,weight(1.5)|abundance(60)|difficulty(8)|spd_rtng(96)|weapon_length(95)|swing_damage(31,cut)|thrust_damage(0,pierce),imodbits_sword_high,[],[fac_kingdom_2]],
-["we_vae_sword_sovereign", "Sovereign Sword", [("we_vae_sword_sovereign",0),("we_vae_scabbard_sovereign", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,458,weight(2)|abundance(60)|difficulty(8)|spd_rtng(100)|weapon_length(95)|swing_damage(31,cut)|thrust_damage(24,pierce),imodbits_sword_high,[],[fac_kingdom_2]],
-["we_vae_sword_cleaver_butcher", "Butcher Cleaver", [("we_vae_sword_cleaver_butcher",0),("we_vae_scabbard_cleaver_butcher", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_scimitar|itcf_carry_sword_left_hip,508,weight(1.5)|abundance(50)|difficulty(9)|spd_rtng(90)|weapon_length(110)|swing_damage(33,cut)|thrust_damage(0,pierce),imodbits_sword_high,[],[fac_kingdom_2]],
+["we_vae_sword_cleaver", "Cleaver", [("we_vae_sword_cleaver",0)], 
+ itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_no_parry|itp_wooden_parry, itc_cleaver,60,
+ weight(1.5)|abundance(100)|difficulty(0)|spd_rtng(103)|weapon_length(35)|swing_damage(24,cut)|thrust_damage(0,pierce),
+ imodbits_none,[],[fac_kingdom_2]],
+["we_vae_sword_cleaver_soldier", "Soldier's Cleaver", [("we_vae_sword_cleaver_soldier",0)], 
+itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_scimitar|itcf_carry_sword_left_hip,454,
+weight(1.5)|abundance(60)|difficulty(8)|spd_rtng(96)|weapon_length(95)|swing_damage(31,cut)|thrust_damage(0,pierce),
+imodbits_sword_high,[],[fac_kingdom_2]],
+["we_vae_sword_sovereign", "Sovereign Sword", [("we_vae_sword_sovereign",0),("we_vae_scabbard_sovereign", ixmesh_carry)], 
+itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,458,
+weight(2)|abundance(60)|difficulty(8)|spd_rtng(100)|weapon_length(95)|swing_damage(31,cut)|thrust_damage(24,pierce),
+imodbits_sword_high,[],[fac_kingdom_2]],
+["we_vae_sword_cleaver_butcher", "Butcher Cleaver", [("we_vae_sword_cleaver_butcher",0),("we_vae_scabbard_cleaver_butcher", ixmesh_carry)], 
+itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_scimitar|itcf_carry_sword_left_hip,508,
+weight(1.5)|abundance(50)|difficulty(9)|spd_rtng(90)|weapon_length(110)|swing_damage(33,cut)|thrust_damage(0,pierce),
+imodbits_sword_high,[],[fac_kingdom_2]],
 ##Khergit - 11
 #Minimal - 6
 ["we_khe_sword_dagger", "Khergit Dagger", [("we_khe_sword_dagger",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_no_parry, itc_dagger|itcf_carry_dagger_front_left,39,weight(1)|abundance(100)|difficulty(0)|spd_rtng(108)|weapon_length(41)|swing_damage(23,cut)|thrust_damage(14,pierce),imodbits_sword_high,[],[fac_kingdom_3]],
@@ -1110,9 +1268,19 @@ items = [
 ["we_swa_sword_dark", "Twohanded Dark Sword", [("we_swa_sword_dark",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back,1305,weight(3)|abundance(60)|difficulty(13)|spd_rtng(95)|weapon_length(130)|swing_damage(53,cut)|thrust_damage(34,pierce),imodbits_sword_high,[],[fac_kingdom_1]],
 ##Vaegir - 2
 #Minimal - 1
-["we_vae_sword_cleaverwar", "War Cleaver", [("we_vae_sword_cleaverwar",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back,620,weight(2.75)|abundance(80)|difficulty(11)|spd_rtng(93)|weapon_length(120)|swing_damage(45,cut)|thrust_damage(0,cut),imodbits_sword_high,[],[fac_kingdom_2]],
+[
+  "we_vae_sword_cleaverwar", "War Cleaver", [("we_vae_sword_cleaverwar",0)], 
+  itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary,itc_nodachi|itcf_carry_sword_back,620,
+  weight(2.75)|abundance(80)|difficulty(11)|spd_rtng(93)|weapon_length(120)|swing_damage(45,cut)|thrust_damage(0,cut),
+  imodbits_sword_high,[],[fac_kingdom_2]
+],
 #Expanded - 1
-["we_vae_sword_lord", "Vaegir Lord Sword", [("we_vae_sword_lord",0)], itp_type_two_handed_wpn|itp_merchandise| itp_primary, itc_bastardsword|itcf_carry_sword_left_hip,293,weight(2.9)|abundance(100)|difficulty(0)|spd_rtng(94)|weapon_length(110)|swing_damage(35,cut)|thrust_damage(25,pierce),imodbits_sword_high,[],[fac_kingdom_2]],
+[
+  "we_vae_sword_lord", "Vaegir Lord Sword", [("we_vae_sword_lord",0)], 
+  itp_type_two_handed_wpn|itp_merchandise|itp_primary,itc_bastardsword|itcf_carry_sword_left_hip,293,
+  weight(2.9)|abundance(100)|difficulty(0)|spd_rtng(94)|weapon_length(110)|swing_damage(35,cut)|thrust_damage(25,pierce),
+  imodbits_sword_high,[],[fac_kingdom_2]
+],
 ##Khergit - 4
 #Minimal - 2
 ["we_khe_sword_sabre", "Two Handed Sabre", [("we_khe_sword_sabre",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back,523,weight(2.75)|abundance(80)|difficulty(11)|spd_rtng(96)|weapon_length(120)|swing_damage(40,cut)|thrust_damage(0,pierce),imodbits_sword_high,[],[fac_kingdom_3]],
@@ -1421,7 +1589,7 @@ items = [
 ["ar_vae_t5_studded_e", "Blue Studded Leather Coat", [("ar_vae_t5_studded_e",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,748,weight(17)|abundance(60)|head_armor(0)|body_armor(44)|leg_armor(11)|difficulty(10),imodbits_armor,[],[fac_kingdom_2]],
 ["ar_vae_t6_banded_a", "Vaegir Banded Armor", [("ar_vae_t6_banded_a",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,3160,weight(21)|abundance(50)|head_armor(0)|body_armor(53)|leg_armor(16)|difficulty(12),imodbits_plate,[],[fac_kingdom_2]],
 ["ar_vae_t6_cuirbouilli_b", "Black Cuir Bouilli", [("ar_vae_t6_cuirbouilli_b",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,3078,weight(22)|abundance(50)|head_armor(0)|body_armor(53)|leg_armor(16)|difficulty(12),imodbits_plate,[],[fac_kingdom_2]],
-["ar_vae_t6_cuirbouilli_c", "Green Cuir Bouilli", [("ar_vae_t6_cuirbouilli_c",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,3078,weight(22)|abundance(50)|head_armor(0)|body_armor(53)|leg_armor(16)|difficulty(12),imodbits_plate,[],[fac_kingdom_2]],
+["ar_vae_t6_cuirbouilli_c", "White Cuir Bouilli", [("ar_vae_t6_cuirbouilli_c",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,3078,weight(22)|abundance(50)|head_armor(0)|body_armor(53)|leg_armor(16)|difficulty(12),imodbits_plate,[],[fac_kingdom_2]],
 ["ar_vae_t6_kuyak_a", "Green Kuyak", [("ar_vae_t6_kuyak_a",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,2916,weight(21)|abundance(50)|head_armor(0)|body_armor(54)|leg_armor(14)|difficulty(12),imodbits_plate,[],[fac_kingdom_2]],
 ["ar_vae_t6_kuyak_b", "Yellow Kuyak", [("ar_vae_t6_kuyak_b",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,2916,weight(21)|abundance(50)|head_armor(0)|body_armor(54)|leg_armor(14)|difficulty(12),imodbits_plate,[],[fac_kingdom_2]],
 ["ar_vae_t7_elite_d", "Vaegir Gray Elite Armor", [("ar_vae_t7_elite_d",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs ,0,6627,weight(23)|abundance(40)|head_armor(0)|body_armor(56)|leg_armor(17)|difficulty(14) ,imodbits_plate,[],[fac_kingdom_2]],
@@ -2404,25 +2572,118 @@ items = [
 ["sh_swa_hea_french_e", "Big Lily Heater Shield", [("sh_swa_hea_french_e",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,300,weight(3.5)|abundance(55)|hit_points(290)|body_armor(18)|spd_rtng(90)|shield_width(50)|difficulty(4),imodbits_shield,[],[fac_kingdom_1]],
 ##Vaegir - 18
 #Minimal - 9
-["sh_vae_rou_bandit_a", "Hide Covered Round Shield", [("sh_vae_rou_bandit_a",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,97,weight(2)|abundance(10)|hit_points(310)|body_armor(13)|spd_rtng(100)|shield_width(40)|difficulty(2),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_kit_fur", "Fur Covered Kite Shield", [("sh_vae_kit_fur",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,38,weight(3.5)|abundance(100)|hit_points(170)|body_armor(5)|spd_rtng(76)|shield_width(81)|difficulty(1),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_kit_old", "Old Kite Shield", [("tableau_shield_kite_1" ,0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,38,weight(2)|abundance(100)|hit_points(170)|body_armor(5)|spd_rtng(96)|shield_width(36)|shield_height(70)|difficulty(1),imodbits_shield, [(ti_on_init_item, [(store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_kite_shield_1", ":agent_no", ":troop_no")])],[fac_kingdom_2]],
-["sh_vae_kit_plain", "Plain Kite Shield", [("tableau_shield_kite_3" ,0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,38,weight(2.5)|abundance(100)|hit_points(170)|body_armor(5)|spd_rtng(93)|shield_width(36)|shield_height(70)|difficulty(1),imodbits_shield, [(ti_on_init_item, [(store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_kite_shield_3", ":agent_no", ":troop_no")])],[fac_kingdom_2]],
-["sh_vae_kit_leather", "Leather Kite Shield", [("sh_vae_kit_leather",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,65,weight(3.5)|abundance(85)|hit_points(205)|body_armor(13)|spd_rtng(76)|shield_width(81)|difficulty(2),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_hae_striped_a", "Red Shield", [("sh_vae_hae_striped_a",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,150,weight(3.5)|abundance(70)|hit_points(250)|body_armor(15)|spd_rtng(80)|shield_width(50)|difficulty(3),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_hae_striped_b", "Blue Shield", [("sh_vae_hae_striped_b",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,150,weight(3.5)|abundance(70)|hit_points(250)|body_armor(15)|spd_rtng(80)|shield_width(50)|difficulty(3),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_kit_heavy", "Heavy Kite Shield", [("tableau_shield_kite_2" ,0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,146,weight(3.5)|abundance(70)|hit_points(255)|body_armor(13)|spd_rtng(87)|shield_width(36)|shield_height(70)|difficulty(2),imodbits_shield, [(ti_on_init_item, [(store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_kite_shield_2", ":agent_no", ":troop_no")])],[fac_kingdom_2]],
-["sh_vae_kit_vaegir_a", "Blue-Red Vaegir Kite Shield", [("sh_vae_kit_vaegir_a",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,weight(3.5)|abundance(55)|hit_points(330)|body_armor(18)|spd_rtng(76)|shield_width(81)|difficulty(4),imodbits_shield,[],[fac_kingdom_2]],
+[
+  "sh_vae_rou_bandit_a", "Hide Covered Round Shield", [("sh_vae_rou_bandit_a",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,97,
+  weight(2)|abundance(10)|hit_points(310)|body_armor(13)|spd_rtng(100)|shield_width(40)|difficulty(2),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_kit_fur", "Fur Covered Kite Shield", [("sh_vae_kit_fur",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,38,
+  weight(3.5)|abundance(100)|hit_points(170)|body_armor(5)|spd_rtng(76)|shield_width(40)|shield_height(80)|difficulty(1),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_kit_old", "Old Kite Shield", [("tableau_shield_kite_1" ,0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,38,
+  weight(2)|abundance(100)|hit_points(170)|body_armor(5)|spd_rtng(96)|shield_width(36)|shield_height(70)|difficulty(1),
+  imodbits_shield, [(ti_on_init_item, [
+    (store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_kite_shield_1", ":agent_no", ":troop_no")
+  ])],[fac_kingdom_2]
+],
+[
+  "sh_vae_kit_plain", "Plain Kite Shield", [("tableau_shield_kite_3" ,0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,38,
+  weight(2.5)|abundance(100)|hit_points(170)|body_armor(5)|spd_rtng(93)|shield_width(36)|shield_height(70)|difficulty(1),
+  imodbits_shield, [(ti_on_init_item, [
+    (store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_kite_shield_3", ":agent_no", ":troop_no")
+  ])],[fac_kingdom_2]],
+[
+  "sh_vae_kit_leather", "Leather Kite Shield", [("sh_vae_kit_leather",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,65,
+  weight(3.5)|abundance(85)|hit_points(205)|body_armor(13)|spd_rtng(76)|shield_width(81)|difficulty(2),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_hae_striped_a", "Red Shield", [("sh_vae_hae_striped_a",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,150,
+  weight(3.5)|abundance(70)|hit_points(250)|body_armor(15)|spd_rtng(80)|shield_width(50)|difficulty(3),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_hae_striped_b", "Blue Shield", [("sh_vae_hae_striped_b",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,150,
+  weight(3.5)|abundance(70)|hit_points(250)|body_armor(15)|spd_rtng(80)|shield_width(50)|difficulty(3),
+  imodbits_shield,[],[fac_kingdom_2]
+  ],
+[
+  "sh_vae_kit_heavy", "Heavy Kite Shield", [("tableau_shield_kite_2" ,0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,146,
+  weight(3.5)|abundance(70)|hit_points(255)|body_armor(13)|spd_rtng(87)|shield_width(36)|shield_height(70)|difficulty(2),
+  imodbits_shield, [(ti_on_init_item, [
+    (store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_kite_shield_2", ":agent_no", ":troop_no")
+  ])],[fac_kingdom_2]
+],
+["sh_vae_kit_vaegir_a", "Blue-Red Vaegir Kite Shield", [("sh_vae_kit_vaegir_a",0)], 
+ itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,
+ weight(3.5)|abundance(55)|hit_points(330)|body_armor(18)|spd_rtng(76)|shield_width(81)|difficulty(4),
+ imodbits_shield,[],[fac_kingdom_2]],
 #Expanded - 9
-["sh_vae_rou_bandit_b", "Vaegir Wooden Shield", [("sh_vae_rou_bandit_b",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,97,weight(2)|abundance(10)|hit_points(310)|body_armor(13)|spd_rtng(100)|shield_width(50)|difficulty(2),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_hea_wood", "Wooden Heater Shield", [("sh_vae_hea_wood",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,43,weight(3.5)|abundance(100)|hit_points(165)|body_armor(6)|spd_rtng(80)|shield_width(50)|difficulty(1),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_hea_steel", "Vaegir Steel Heater Shield", [("sh_vae_hea_steel",0)], itp_merchandise|itp_type_shield, itcf_carry_kite_shield,150,weight(5)|abundance(70)|hit_points(250)|body_armor(15)|spd_rtng(58)|shield_width(50)|difficulty(3),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_kit_vaegir_b", "Blue-Yellow Vaegir Kite Shield", [("sh_vae_kit_vaegir_b",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_kit_vaegir_c", "Blue-White Vaegir Kite Shield", [("sh_vae_kit_vaegir_c",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_kit_vaegir_d", "Green-Black Vaegir Kite Shield", [("sh_vae_kit_vaegir_d",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_kit_vaegir_e", "Green-White Vaegir Kite Shield", [("sh_vae_kit_vaegir_e",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_kit_vaegir_f", "Green-Yellow Vaegir Kite Shield", [("sh_vae_kit_vaegir_f",0)], itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),imodbits_shield,[],[fac_kingdom_2]],
-["sh_vae_kit_steel", "Steel Kite", [("sh_vae_kit_steel",0)], itp_merchandise|itp_type_shield, itcf_carry_kite_shield,380,weight(5.5)|abundance(40)|hit_points(235)|body_armor(23)|spd_rtng(58)|shield_width(36)|shield_height(70)|difficulty(4),imodbits_shield,[],[fac_kingdom_2]],
+[
+  "sh_vae_rou_bandit_b", "Vaegir Wooden Shield", [("sh_vae_rou_bandit_b",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,97,
+  weight(2)|abundance(10)|hit_points(310)|body_armor(13)|spd_rtng(100)|shield_width(50)|difficulty(2),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_hea_wood", "Wooden Heater Shield", [("sh_vae_hea_wood",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,43,
+  weight(3.5)|abundance(100)|hit_points(165)|body_armor(6)|spd_rtng(80)|shield_width(50)|difficulty(1),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_hea_steel", "Vaegir Steel Heater Shield", [("sh_vae_hea_steel",0)], 
+  itp_merchandise|itp_type_shield, itcf_carry_kite_shield,150,
+  weight(5)|abundance(70)|hit_points(255)|body_armor(16)|spd_rtng(58)|shield_width(50)|difficulty(3),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_kit_vaegir_b", "Blue-Yellow Vaegir Kite Shield", [("sh_vae_kit_vaegir_b",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,
+  weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_kit_vaegir_c", "Blue-White Vaegir Kite Shield", [("sh_vae_kit_vaegir_c",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,
+  weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_kit_vaegir_d", "Green-Black Vaegir Kite Shield", [("sh_vae_kit_vaegir_d",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,
+  weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_kit_vaegir_e", "Green-White Vaegir Kite Shield", [("sh_vae_kit_vaegir_e",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,
+  weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_kit_vaegir_f", "Green-Yellow Vaegir Kite Shield", [("sh_vae_kit_vaegir_f",0)], 
+  itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_kite_shield,340,
+  weight(2.5)|abundance(55)|hit_points(320)|body_armor(18)|spd_rtng(82)|shield_width(36)|shield_height(90)|difficulty(4),
+  imodbits_shield,[],[fac_kingdom_2]
+],
+[
+  "sh_vae_kit_steel", "Steel Kite", [("sh_vae_kit_steel",0)], 
+  itp_merchandise|itp_type_shield, itcf_carry_kite_shield,380,
+  weight(5.5)|abundance(40)|hit_points(235)|body_armor(23)|spd_rtng(58)|shield_width(36)|shield_height(70)|difficulty(4),
+  imodbits_shield,[],[fac_kingdom_2]
+],
 ##Khergit - 18
 #Minimal - 9
 ["sh_khe_rou_bandit_a", "Face Shield", [("sh_khe_rou_bandit_a",0)], itp_merchandise|itp_type_shield, itcf_carry_round_shield,115,weight(4)|abundance(10)|hit_points(320)|body_armor(13)|spd_rtng(61)|shield_width(40)|difficulty(2),imodbits_shield,[],[fac_kingdom_3]],
