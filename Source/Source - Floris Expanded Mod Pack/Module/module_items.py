@@ -388,22 +388,80 @@ items = [
 ["ho_swa_steppe_blackappaloosa","Black Appaloosa Steppe Horse", [("ho_swa_steppe_blackappaloosa",0)], itp_merchandise|itp_type_horse, 0, 189,abundance(80)|hit_points(120)|body_armor(10)|difficulty(2)|horse_speed(39)|horse_maneuver(52)|horse_charge(8)|horse_scale(98),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 #Vaegir - 15
 #Minimal - 2
-["ho_vae_saddle_feather","Feather Saddle Horse", [("ho_vae_saddle_feather",0)], itp_merchandise|itp_type_horse, 0, 250,abundance(90)|hit_points(100)|body_armor(8)|difficulty(1)|horse_speed(45)|horse_maneuver(45)|horse_charge(11)|horse_scale(104),imodbits_horse_basic, [], [fac_kingdom_2,fac_player_faction]],
-["ho_vae_rus_brown","Brown Vaegir Horse",[("ho_vae_rus_brown",0)], itp_merchandise|itp_type_horse,0,594,abundance(100)|hit_points(150)|body_armor(20)|difficulty(2)|horse_speed(40)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2,fac_player_faction]],
+[
+  "ho_vae_saddle_feather","Feather Saddle Horse", [("ho_vae_saddle_feather",0)], itp_merchandise|itp_type_horse, 0, 250,
+  abundance(90)|hit_points(100)|body_armor(8)|difficulty(1)|horse_speed(45)|horse_maneuver(45)|horse_charge(11)|horse_scale(104),
+  imodbits_horse_basic, [], [fac_kingdom_2,fac_player_faction]],
+[
+  "ho_vae_rus_brown","Brown Vaegir Horse",[("ho_vae_rus_brown",0)], itp_merchandise|itp_type_horse,0,594,
+  abundance(100)|hit_points(150)|body_armor(20)|difficulty(2)|horse_speed(40)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2,fac_player_faction]
+],
 #Expanded - 13
-["ho_vae_arab_chestnut","Chestnut Desert Horse", [("ho_vae_arab_chestnut",0)], itp_merchandise|itp_type_horse, 0, 707,abundance(70)|hit_points(120)|body_armor(10)|difficulty(3)|horse_speed(46)|horse_maneuver(54)|horse_charge(16)|horse_scale(100),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_destrier_baybrown","Brown Bay Destrier", [("ho_vae_destrier_baybrown",0)], itp_merchandise|itp_type_horse, 0, 830,abundance(80)|hit_points(160)|body_armor(19)|difficulty(3)|horse_speed(43)|horse_maneuver(43)|horse_charge(24)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_courser_chestnut","Chestnut Courser", [("ho_vae_courser_chestnut",0)], itp_merchandise|itp_type_horse, 0, 597,abundance(90)|hit_points(115)|body_armor(11)|difficulty(2)|horse_speed(49)|horse_maneuver(43)|horse_charge(12)|horse_scale(106),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_rouncy_chestnut","Chestnut Rouncey", [("ho_vae_rouncy_chestnut",0)], itp_merchandise|itp_type_horse, 0, 242,abundance(60)|hit_points(100)|body_armor(8)|difficulty(1)|horse_speed(45)|horse_maneuver(45)|horse_charge(10)|horse_scale(104),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_rus_baybrindle","Brindle Bay Vaegir Horse",[("ho_vae_rus_baybrindle",0)], itp_merchandise|itp_type_horse,0,634,abundance(100)|hit_points(150)|body_armor(21)|difficulty(2)|horse_speed(41)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_rus_blueroan","Blue Roan Vaegir Horse",[("ho_vae_rus_blueroan",0)], itp_merchandise|itp_type_horse,0,629,abundance(100)|hit_points(150)|body_armor(21)|difficulty(2)|horse_speed(40)|horse_maneuver(41)|horse_charge(8)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_rus_brownlight","Light Brown Vaegir Horse",[("ho_vae_rus_brownlight",0)], itp_merchandise|itp_type_horse,0,610,abundance(100)|hit_points(150)|body_armor(20)|difficulty(2)|horse_speed(40)|horse_maneuver(41)|horse_charge(8)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_rus_chestnutmealy","Mealy Chestnut Vaegir Horse",[("ho_vae_rus_chestnutmealy",0)], itp_merchandise|itp_type_horse,0,589,abundance(100)|hit_points(150)|body_armor(19)|difficulty(2)|horse_speed(41)|horse_maneuver(41)|horse_charge(8)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_rus_gullo","Grullo Vaegir Horse",[("ho_vae_rus_gullo",0)], itp_merchandise|itp_type_horse,0,620,abundance(100)|hit_points(150)|body_armor(21)|difficulty(2)|horse_speed(40)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_rus_palomino","Palomino Vaegir Horse",[("ho_vae_rus_palomino",0)], itp_merchandise|itp_type_horse,0,599,abundance(100)|hit_points(150)|body_armor(20)|difficulty(2)|horse_speed(41)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_rus_palominospotted","Spotted Palomino Vaegir Horse",[("ho_vae_rus_palominospotted",0)], itp_merchandise|itp_type_horse,0,585,abundance(100)|hit_points(150)|body_armor(19)|difficulty(2)|horse_speed(40)|horse_maneuver(39)|horse_charge(8)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_rus_redroan","Red Roan Vaegir Horse",[("ho_vae_rus_redroan",0)], itp_merchandise|itp_type_horse,0,580,abundance(100)|hit_points(150)|body_armor(19)|difficulty(2)|horse_speed(40)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_sumpter_brown","Brown Sumpter Horse", [("ho_vae_sumpter_brown",0)], itp_merchandise|itp_type_horse, 0, 137,abundance(90)|hit_points(100)|body_armor(14)|difficulty(1)|horse_speed(38)|horse_maneuver(38)|horse_charge(9)|horse_scale(100),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
+[
+  "ho_vae_arab_chestnut","Chestnut Desert Horse", [("ho_vae_arab_chestnut",0)], itp_merchandise|itp_type_horse, 0, 707,
+  abundance(70)|hit_points(120)|body_armor(10)|difficulty(3)|horse_speed(46)|horse_maneuver(54)|horse_charge(16)|horse_scale(100),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_destrier_baybrown","Brown Bay Destrier", [("ho_vae_destrier_baybrown",0)], itp_merchandise|itp_type_horse, 0, 830,
+  abundance(80)|hit_points(160)|body_armor(19)|difficulty(3)|horse_speed(43)|horse_maneuver(43)|horse_charge(24)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_courser_chestnut","Chestnut Courser", [("ho_vae_courser_chestnut",0)], itp_merchandise|itp_type_horse, 0, 597,
+  abundance(90)|hit_points(115)|body_armor(11)|difficulty(2)|horse_speed(49)|horse_maneuver(43)|horse_charge(12)|horse_scale(106),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_rouncy_chestnut","Chestnut Rouncey", [("ho_vae_rouncy_chestnut",0)], itp_merchandise|itp_type_horse, 0, 242,
+abundance(60)|hit_points(100)|body_armor(8)|difficulty(1)|horse_speed(45)|horse_maneuver(45)|horse_charge(10)|horse_scale(104),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_rus_baybrindle","Brindle Bay Vaegir Horse",[("ho_vae_rus_baybrindle",0)], itp_merchandise|itp_type_horse,0,634,
+  abundance(100)|hit_points(150)|body_armor(21)|difficulty(2)|horse_speed(41)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_rus_blueroan","Blue Roan Vaegir Horse",[("ho_vae_rus_blueroan",0)], itp_merchandise|itp_type_horse,0,629,
+  abundance(100)|hit_points(150)|body_armor(21)|difficulty(2)|horse_speed(40)|horse_maneuver(41)|horse_charge(8)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_rus_brownlight","Light Brown Vaegir Horse",[("ho_vae_rus_brownlight",0)], itp_merchandise|itp_type_horse,0,610,
+  abundance(100)|hit_points(150)|body_armor(20)|difficulty(2)|horse_speed(40)|horse_maneuver(41)|horse_charge(8)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_rus_chestnutmealy","Mealy Chestnut Vaegir Horse",[("ho_vae_rus_chestnutmealy",0)], itp_merchandise|itp_type_horse,0,589,
+  abundance(100)|hit_points(150)|body_armor(19)|difficulty(2)|horse_speed(41)|horse_maneuver(41)|horse_charge(8)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_rus_gullo","Grullo Vaegir Horse",[("ho_vae_rus_gullo",0)], itp_merchandise|itp_type_horse,0,620,
+  abundance(100)|hit_points(150)|body_armor(21)|difficulty(2)|horse_speed(40)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_rus_palomino","Palomino Vaegir Horse",[("ho_vae_rus_palomino",0)], itp_merchandise|itp_type_horse,0,599,
+  abundance(100)|hit_points(150)|body_armor(20)|difficulty(2)|horse_speed(41)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_rus_palominospotted","Spotted Palomino Vaegir Horse",[("ho_vae_rus_palominospotted",0)], itp_merchandise|itp_type_horse,0,585,
+  abundance(100)|hit_points(150)|body_armor(19)|difficulty(2)|horse_speed(40)|horse_maneuver(39)|horse_charge(8)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
+[
+  "ho_vae_rus_redroan","Red Roan Vaegir Horse",[("ho_vae_rus_redroan",0)], itp_merchandise|itp_type_horse,0,580,
+  abundance(100)|hit_points(150)|body_armor(19)|difficulty(2)|horse_speed(40)|horse_maneuver(40)|horse_charge(8)|horse_scale(108),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_sumpter_brown","Brown Sumpter Horse", [("ho_vae_sumpter_brown",0)], itp_merchandise|itp_type_horse, 0, 137,
+  abundance(90)|hit_points(100)|body_armor(14)|difficulty(1)|horse_speed(38)|horse_maneuver(38)|horse_charge(9)|horse_scale(100),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
 #Khergit - 14
 #Minimal - 2
 ["ho_khe_saddle_coloured","Coloured Saddle Horse", [("ho_khe_saddle_coloured",0)], itp_merchandise|itp_type_horse, 0, 230,abundance(90)|hit_points(100)|body_armor(8)|difficulty(1)|horse_speed(44)|horse_maneuver(45)|horse_charge(10)|horse_scale(104),imodbits_horse_basic, [], [fac_kingdom_3,fac_player_faction]],
@@ -489,42 +547,136 @@ items = [
 ##War Horses - 105
 #Swadia - 16
 #Minimal - 2
-["ho_swa_war_white","White Warhorse", [("ho_swa_war_white",0)], itp_merchandise|itp_type_horse, 0, 1230,abundance(50)|hit_points(155)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_charger_long","Long Barded Charger", [("ho_swa_charger_long",0)], itp_merchandise|itp_type_horse, 0, 1951,abundance(40)|hit_points(165)|body_armor(60)|difficulty(4)|horse_speed(37)|horse_maneuver(43)|horse_charge(34)|horse_scale(112),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_war_white","White Warhorse", [("ho_swa_war_white",0)], itp_merchandise|itp_type_horse, 0, 1230,
+abundance(50)|hit_points(155)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_charger_long","Long Barded Charger", [("ho_swa_charger_long",0)], itp_merchandise|itp_type_horse, 0, 1951,
+abundance(40)|hit_points(165)|body_armor(60)|difficulty(4)|horse_speed(37)|horse_maneuver(43)|horse_charge(34)|horse_scale(112),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 #Expanded - 14
-["ho_swa_cata_brownie","Brownie Half Cataphract", [("ho_swa_cata_brownie",0)], itp_merchandise|itp_type_horse, 0, 1024,abundance(55)|hit_points(165)|body_armor(29)|difficulty(3)|horse_speed(44)|horse_maneuver(41)|horse_charge(26)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_long_lilyblue","Long Barded Blue Lily Warhorse", [("ho_swa_long_lilyblue",0)], itp_merchandise|itp_type_horse, 0, 1337,abundance(45)|hit_points(165)|body_armor(45)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_long_lilygreen","Long Barded Green Lily Warhorse", [("ho_swa_long_lilygreen",0)], itp_merchandise|itp_type_horse, 0, 1352,abundance(45)|hit_points(165)|body_armor(45)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_long_lilyred","Long Barded Red Lily Warhorse", [("ho_swa_long_lilyred",0)], itp_merchandise|itp_type_horse, 0, 1352,abundance(45)|hit_points(165)|body_armor(45)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_long_lilygriffon","Long Barded White Griffon Warhorse", [("ho_swa_long_lilygriffon",0)], itp_merchandise|itp_type_horse, 0, 1304,abundance(45)|hit_points(165)|body_armor(43)|difficulty(4)|horse_speed(39)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_long_lilylionblack","Long Barded Yellow Lion Black Warhorse", [("ho_swa_long_lilylionblack",0)], itp_merchandise|itp_type_horse, 0, 1355,abundance(45)|hit_points(175)|body_armor(45)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_long_lilyliondutch","Long Barded Black Lily Lion Warhorse", [("ho_swa_long_lilyliondutch",0)], itp_merchandise|itp_type_horse, 0, 1316,abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_long_lilylionenglish","Long Barded Lily Lion Warhorse", [("ho_swa_long_lilylionenglish",0)], itp_merchandise|itp_type_horse, 0, 1315,abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_long_lilyredblack","Long Barded Black Red Lily Warhorse", [("ho_swa_long_lilyredblack",0)], itp_merchandise|itp_type_horse, 0, 1299,abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(27)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_long_lionblue","Long Barded Yellow Lion Blue Warhorse", [("ho_swa_long_lionblue",0)], itp_merchandise|itp_type_horse, 0, 1296,abundance(45)|hit_points(165)|body_armor(43)|difficulty(4)|horse_speed(39)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_war_lilycrossed","Crossed Lily Warhorse", [("ho_swa_war_lilycrossed",0)], itp_merchandise|itp_type_horse,0,1293,abundance(50)|hit_points(175)|body_armor(40)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion,[],[fac_kingdom_1]],
-["ho_swa_war_lilylion","Lily Lion Warhorse", [("ho_swa_war_lilylion",0)], itp_merchandise|itp_type_horse, 0, 1215,abundance(50)|hit_points(165)|body_armor(39)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_war_lilyred","Yellow Lilies Red Warhorse", [("ho_swa_war_lilyred",0)], itp_merchandise|itp_type_horse, 0, 1252,abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_war_lilywhite","Yellow Lily White Warhorse", [("ho_swa_war_lilywhite",0)], itp_merchandise|itp_type_horse, 0, 1237,abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
-["ho_swa_war_lionyellowblack","Yellow Lion Black Warhorse", [("ho_swa_war_lionyellowblack",0)], itp_merchandise|itp_type_horse, 0, 1255,abundance(50)|hit_points(175)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_cata_brownie","Brownie Half Cataphract", [("ho_swa_cata_brownie",0)], itp_merchandise|itp_type_horse, 0, 1024,
+abundance(55)|hit_points(165)|body_armor(29)|difficulty(3)|horse_speed(44)|horse_maneuver(41)|horse_charge(26)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_long_lilyblue","Long Barded Blue Lily Warhorse", [("ho_swa_long_lilyblue",0)], itp_merchandise|itp_type_horse, 0, 1337,
+abundance(45)|hit_points(165)|body_armor(45)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_long_lilygreen","Long Barded Green Lily Warhorse", [("ho_swa_long_lilygreen",0)], itp_merchandise|itp_type_horse, 0, 1352,
+abundance(45)|hit_points(165)|body_armor(45)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_long_lilyred","Long Barded Red Lily Warhorse", [("ho_swa_long_lilyred",0)], itp_merchandise|itp_type_horse, 0, 1352,
+abundance(45)|hit_points(165)|body_armor(45)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_long_lilygriffon","Long Barded White Griffon Warhorse", [("ho_swa_long_lilygriffon",0)], itp_merchandise|itp_type_horse, 0, 1304,
+abundance(45)|hit_points(165)|body_armor(43)|difficulty(4)|horse_speed(39)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_long_lilylionblack","Long Barded Yellow Lion Black Warhorse", [("ho_swa_long_lilylionblack",0)], itp_merchandise|itp_type_horse, 0, 1355,
+abundance(45)|hit_points(175)|body_armor(45)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_long_lilyliondutch","Long Barded Black Lily Lion Warhorse", [("ho_swa_long_lilyliondutch",0)], itp_merchandise|itp_type_horse, 0, 1316,
+abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_long_lilylionenglish","Long Barded Lily Lion Warhorse", [("ho_swa_long_lilylionenglish",0)], itp_merchandise|itp_type_horse, 0, 1315,
+abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_long_lilyredblack","Long Barded Black Red Lily Warhorse", [("ho_swa_long_lilyredblack",0)], itp_merchandise|itp_type_horse, 0, 1299,
+abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(27)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_long_lionblue","Long Barded Yellow Lion Blue Warhorse", [("ho_swa_long_lionblue",0)], itp_merchandise|itp_type_horse, 0, 1296,
+abundance(45)|hit_points(165)|body_armor(43)|difficulty(4)|horse_speed(39)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_war_lilycrossed","Crossed Lily Warhorse", [("ho_swa_war_lilycrossed",0)], itp_merchandise|itp_type_horse,0,1293,
+abundance(50)|hit_points(175)|body_armor(40)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion,[],[fac_kingdom_1]],
+["ho_swa_war_lilylion","Lily Lion Warhorse", [("ho_swa_war_lilylion",0)], itp_merchandise|itp_type_horse, 0, 1215,
+abundance(50)|hit_points(165)|body_armor(39)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_war_lilyred","Yellow Lilies Red Warhorse", [("ho_swa_war_lilyred",0)], itp_merchandise|itp_type_horse, 0, 1252,
+abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_war_lilywhite","Yellow Lily White Warhorse", [("ho_swa_war_lilywhite",0)], itp_merchandise|itp_type_horse, 0, 1237,
+abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
+["ho_swa_war_lionyellowblack","Yellow Lion Black Warhorse", [("ho_swa_war_lionyellowblack",0)], itp_merchandise|itp_type_horse, 0, 1255,
+abundance(50)|hit_points(175)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_1]],
 #Vaegir - 15
 #Minimal - 2
-["ho_vae_war_leathered","Leathered Warhorse", [("ho_vae_war_leathered",0)], itp_merchandise|itp_type_horse, 0, 1240,abundance(50)|hit_points(155)|body_armor(41)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_charger_leathered","Leathered Charger", [("ho_vae_charger_leathered",0)], itp_merchandise|itp_type_horse,0,1804,abundance(40)|hit_points(165)|body_armor(58)|difficulty(4)|horse_speed(40)|horse_maneuver(44)|horse_charge(32)|horse_scale(112),imodbits_horse_basic|imodbit_champion,[],[fac_kingdom_2]],
+[
+  "ho_vae_war_leathered","Leathered Warhorse", [("ho_vae_war_leathered",0)], itp_merchandise|itp_type_horse, 0, 1240,
+  abundance(50)|hit_points(155)|body_armor(41)|difficulty(4)|horse_speed(41)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_charger_leathered","Leathered Charger", [("ho_vae_charger_leathered",0)], itp_merchandise|itp_type_horse,0,1804,
+  abundance(40)|hit_points(165)|body_armor(58)|difficulty(4)|horse_speed(40)|horse_maneuver(44)|horse_charge(32)|horse_scale(112),
+  imodbits_horse_basic|imodbit_champion,[],[fac_kingdom_2]
+],
 #Expanded - 13
-["ho_vae_long_eagleblack","Long Barded Black Eagle Red Warhorse", [("ho_vae_long_eagleblack",0)], itp_merchandise|itp_type_horse, 0, 1301,abundance(45)|hit_points(165)|body_armor(43)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_long_eaglewhite","Long Barded White Eagle Black Warhorse", [("ho_vae_long_eaglewhite",0)], itp_merchandise|itp_type_horse, 0, 1320,abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_long_royalred","Long Barded Royal Red Warhorse", [("ho_vae_long_royalred",0)], itp_merchandise|itp_type_horse, 0, 1338,abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(41)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_sumpter_leathered","Leathered Sumpter Horse", [("ho_vae_sumpter_leathered",0)], itp_merchandise|itp_type_horse, 0, 387,abundance(60)|hit_points(100)|body_armor(18)|difficulty(1)|horse_speed(37)|horse_maneuver(38)|horse_charge(9)|horse_scale(100),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_war_appaloosa","Appaloosa Warhorse", [("ho_vae_war_appaloosa",0)], itp_merchandise|itp_type_horse, 0, 1266,abundance(50)|hit_points(155)|body_armor(37)|difficulty(4)|horse_speed(40)|horse_maneuver(44)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_war_eagleblack","Black Eagle Red Warhorse", [("ho_vae_war_eagleblack",0)], itp_merchandise|itp_type_horse, 0, 1200,abundance(50)|hit_points(165)|body_armor(39)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_war_eaglewhite","White Eagle Red Warhorse", [("ho_vae_war_eaglewhite",0)], itp_merchandise|itp_type_horse, 0, 1236,abundance(50)|hit_points(175)|body_armor(40)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_war_imperial","Red Imperial Warhorse", [("ho_vae_war_imperial",0)], itp_merchandise|itp_type_horse, 0, 1251,abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion,[],[fac_kingdom_2]],
-["ho_vae_war_palomino","Palomino Warhorse", [("ho_vae_war_palomino",0)], itp_merchandise|itp_type_horse, 0, 1293,abundance(40)|hit_points(165)|body_armor(38)|difficulty(4)|horse_speed(39)|horse_maneuver(44)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_war_scaledbrown","Brown Scaled Warhorse", [("ho_vae_war_scaledbrown",0)], itp_merchandise|itp_type_horse, 0, 1239,abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(39)|horse_maneuver(42)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_war_scaledgrey","Grey Scaled Warhorse", [("ho_vae_war_scaledgrey",0)], itp_merchandise|itp_type_horse, 0, 1203,abundance(50)|hit_points(165)|body_armor(39)|difficulty(4)|horse_speed(39)|horse_maneuver(42)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_war_scaledorange","Orange Scaled Warhorse", [("ho_vae_war_scaledorange",0)], itp_merchandise|itp_type_horse, 0, 1221,abundance(50)|hit_points(165)|body_armor(40)|difficulty(4)|horse_speed(39)|horse_maneuver(42)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
-["ho_vae_war_scaledorangeleather","Orange Leather Scaled Warhorse", [("ho_vae_war_scaledorangeleather",0)], itp_merchandise|itp_type_horse, 0, 1228,abundance(50)|hit_points(175)|body_armor(40)|difficulty(4)|horse_speed(39)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]],
+[
+  "ho_vae_long_eagleblack","Long Barded Black Eagle Red Warhorse", [("ho_vae_long_eagleblack",0)], itp_merchandise|itp_type_horse, 0, 1301,
+  abundance(45)|hit_points(165)|body_armor(43)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_long_eaglewhite","Long Barded White Eagle Black Warhorse", [("ho_vae_long_eaglewhite",0)], itp_merchandise|itp_type_horse, 0, 1320,
+  abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_long_royalred","Long Barded Royal Red Warhorse", [("ho_vae_long_royalred",0)], itp_merchandise|itp_type_horse, 0, 1338,
+  abundance(45)|hit_points(165)|body_armor(44)|difficulty(4)|horse_speed(41)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_sumpter_leathered","Leathered Sumpter Horse", [("ho_vae_sumpter_leathered",0)], itp_merchandise|itp_type_horse, 0, 387,
+  abundance(60)|hit_points(100)|body_armor(18)|difficulty(1)|horse_speed(37)|horse_maneuver(38)|horse_charge(9)|horse_scale(100),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_war_appaloosa","Appaloosa Warhorse", [("ho_vae_war_appaloosa",0)], itp_merchandise|itp_type_horse, 0, 1266,
+  abundance(50)|hit_points(155)|body_armor(37)|difficulty(4)|horse_speed(40)|horse_maneuver(44)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_war_eagleblack","Black Eagle Red Warhorse", [("ho_vae_war_eagleblack",0)], itp_merchandise|itp_type_horse, 0, 1200,
+  abundance(50)|hit_points(165)|body_armor(39)|difficulty(4)|horse_speed(40)|horse_maneuver(40)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_war_eaglewhite","White Eagle Red Warhorse", [("ho_vae_war_eaglewhite",0)], itp_merchandise|itp_type_horse, 0, 1236,
+  abundance(50)|hit_points(175)|body_armor(40)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_war_imperial","Red Imperial Warhorse", [("ho_vae_war_imperial",0)], itp_merchandise|itp_type_horse, 0, 1251,
+  abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(40)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion,[],[fac_kingdom_2]
+],
+[
+  "ho_vae_war_palomino","Palomino Warhorse", [("ho_vae_war_palomino",0)], itp_merchandise|itp_type_horse, 0, 1293,
+  abundance(40)|hit_points(165)|body_armor(38)|difficulty(4)|horse_speed(39)|horse_maneuver(44)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_war_scaledbrown","Brown Scaled Warhorse", [("ho_vae_war_scaledbrown",0)], itp_merchandise|itp_type_horse, 0, 1239,
+  abundance(50)|hit_points(165)|body_armor(41)|difficulty(4)|horse_speed(39)|horse_maneuver(42)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_war_scaledgrey","Grey Scaled Warhorse", [("ho_vae_war_scaledgrey",0)], itp_merchandise|itp_type_horse, 0, 1203,
+  abundance(50)|hit_points(165)|body_armor(39)|difficulty(4)|horse_speed(39)|horse_maneuver(42)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_war_scaledorange","Orange Scaled Warhorse", [("ho_vae_war_scaledorange",0)], itp_merchandise|itp_type_horse, 0, 1221,
+  abundance(50)|hit_points(165)|body_armor(40)|difficulty(4)|horse_speed(39)|horse_maneuver(42)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
+[
+  "ho_vae_war_scaledorangeleather","Orange Leather Scaled Warhorse", [("ho_vae_war_scaledorangeleather",0)], itp_merchandise|itp_type_horse, 0, 1228,
+  abundance(50)|hit_points(175)|body_armor(40)|difficulty(4)|horse_speed(39)|horse_maneuver(41)|horse_charge(28)|horse_scale(110),
+  imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_2]
+],
 #Khergit - 15
 #Minimal - 2
 ["ho_khe_war_brass","Brass Warhorse", [("ho_khe_war_brass",0)], itp_merchandise|itp_type_horse, 0, 1236,abundance(50)|hit_points(165)|body_armor(40)|difficulty(4)|horse_speed(42)|horse_maneuver(41)|horse_charge(27)|horse_scale(110),imodbits_horse_basic|imodbit_champion, [], [fac_kingdom_3]],
@@ -768,9 +920,14 @@ items = [
   imodbits_mace,[],[fac_kingdom_2]
 ],
 ["we_vae_blunt_hammersleek", "Sleek Hammer", [("we_vae_blunt_hammersleek",0)], 
-  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise|itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,185,
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise|itp_primary|itp_wooden_parry|itp_next_item_as_melee, itc_scimitar|itcf_carry_mace_left_hip,185,
   weight(2.3)|difficulty(8)|spd_rtng(93)|weapon_length(70)|swing_damage(29,blunt)|thrust_damage(0,pierce),
   imodbits_mace,[],[fac_kingdom_2]
+],
+["we_vae_blunt_hammersleek_alt", "Sleek Hammer", [("we_vae_blunt_hammersleek_alt",0)], 
+  itp_type_one_handed_wpn|itp_can_knock_down|itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,185,
+  weight(2.3)|difficulty(8)|spd_rtng(93)|weapon_length(70)|swing_damage(19,pierce)|thrust_damage(0,pierce),
+  imodbits_mace,[],[]
 ],
 ["we_vae_blunt_hammerempirewar", "Empire War Hammer", [("we_vae_blunt_hammerempirewar",0)], 
   itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip,232, 
@@ -1553,7 +1710,7 @@ imodbits_sword_high,[],[fac_kingdom_2]],
 ["ar_vae_t2_leather_a", "Green Leather Armor", [("ar_vae_t2_leather_a",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,34,weight(8)|abundance(90)|head_armor(0)|body_armor(17)|leg_armor(4)|difficulty(7),imodbits_cloth,[],[fac_kingdom_2]],
 ["ar_vae_t3_padded_a", "Blue Padded Leather", [("ar_vae_t3_padded_a",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,78,weight(11)|abundance(80)|head_armor(0)|body_armor(23)|leg_armor(7)|difficulty(8),imodbits_armor,[],[fac_kingdom_2]],
 ["ar_vae_t4_jerkin_a", "Leather Jerkin", [("ar_vae_t4_jerkin_a",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs ,0,202, weight(12)|abundance(70)|head_armor(0)|body_armor(31)|leg_armor(10)|difficulty(9) ,imodbits_armor,[],[fac_kingdom_2]],
-["ar_vae_t4_jerkin_b", "Red Leather Jerkin", [("ar_vae_t4_jerkin_b",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs ,0,202, weight(12)|abundance(70)|head_armor(0)|body_armor(31)|leg_armor(10)|difficulty(9) ,imodbits_armor,[],[fac_kingdom_2]],
+["ar_vae_t4_jerkin_b", "Green Leather Jerkin", [("ar_vae_t4_jerkin_b",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs ,0,202, weight(12)|abundance(70)|head_armor(0)|body_armor(31)|leg_armor(10)|difficulty(9) ,imodbits_armor,[],[fac_kingdom_2]],
 ["ar_vae_t5_studded_a", "Green Plated Leather Armor", [("ar_vae_t5_studded_a",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,748,weight(17)|abundance(60)|head_armor(0)|body_armor(44)|leg_armor(11)|difficulty(10),imodbits_armor,[],[fac_kingdom_2]],
 ["ar_vae_t6_cuirbouilli_a", "Red Cuir Bouilli", [("ar_vae_t6_cuirbouilli_a",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs,0,3078,weight(22)|abundance(50)|head_armor(0)|body_armor(53)|leg_armor(16)|difficulty(12),imodbits_plate,[],[fac_kingdom_2]],
 ["ar_vae_t7_elite_a", "Vaegir Yellow Elite Armor", [("ar_vae_t7_elite_a",0)], itp_merchandise|itp_type_body_armor|itp_covers_legs ,0,6627,weight(23)|abundance(40)|head_armor(0)|body_armor(56)|leg_armor(17)|difficulty(14) ,imodbits_plate,[],[fac_kingdom_2]],
