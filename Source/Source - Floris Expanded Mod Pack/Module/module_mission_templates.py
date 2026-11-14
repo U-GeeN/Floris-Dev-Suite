@@ -16227,6 +16227,43 @@ lethal_overkill_death = (
     (try_end),
   ])
 
+sleek_hammer_mode_item_swap = (
+  0, 0, 0,
+  [(game_key_clicked, gk_toggle_weapon_mode)],
+  [
+    (get_player_agent_no, ":player_agent"),
+    (ge, ":player_agent", 0),
+    (agent_get_wielded_item, ":current_item", ":player_agent", 0),
+    (try_begin),
+      (eq, ":current_item", "itm_we_vae_blunt_hammersleek"),
+      (assign, ":target_item", "itm_we_vae_blunt_hammersleek_alt"),
+    (else_try),
+      (eq, ":current_item", "itm_we_vae_blunt_hammersleek_alt"),
+      (assign, ":target_item", "itm_we_vae_blunt_hammersleek"),
+    (else_try),
+      (assign, ":target_item", -1),
+    (try_end),
+    (try_begin),
+      (ge, ":target_item", 0),
+      (assign, ":found_slot", 0),
+      (try_for_range, ":slot", 0, 4),
+        (try_begin),
+          (eq, ":found_slot", 0),
+          (troop_get_inventory_slot, ":slot_item", "trp_player", ":slot"),
+          (eq, ":slot_item", ":current_item"),
+          (troop_get_inventory_slot_modifier, ":item_modifier", "trp_player", ":slot"),
+          (troop_set_inventory_slot, "trp_player", ":slot", ":target_item"),
+          (troop_set_inventory_slot_modifier, "trp_player", ":slot", ":item_modifier"),
+          (agent_unequip_item, ":player_agent", ":current_item"),
+          (agent_equip_item, ":player_agent", ":target_item"),
+          (agent_set_wielded_item, ":player_agent", ":target_item"),
+          (assign, ":found_slot", 1),
+        (try_end),
+      (try_end),
+    (try_end),
+  ]
+)
+
 # Damage Recalculation System - Inject triggers into combat mission templates
 for i_mt in range(len(mission_templates)):
   mt = list(mission_templates[i_mt])
