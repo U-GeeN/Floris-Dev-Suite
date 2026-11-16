@@ -1658,7 +1658,7 @@ troops_part1 = [
     knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_2|knows_shield_2|knows_athletics_2|knows_riding_1|knows_horse_archery_1,
     vaegir_man_face_young_1,vaegir_man_face_old_2
   ],
-  ["vaegir_e_junior_druzhinnik","C4 Vaegir Druzhinnik","C4 Vaegir Druzhinniki",
+  ["vaegir_e_junior_druzhinnik","C4 Vaegir Junior Druzhinnik","C4 Vaegir Junior Druzhinniki",
     tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
     [
       itm_ho_vae_rus_brownlight,itm_ar_vae_t4_jerkin_d,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_b,
@@ -1749,7 +1749,7 @@ troops_part1 = [
     knows_common|knows_ironflesh_4|knows_power_strike_6|knows_power_throw_2|knows_power_draw_3|knows_shield_1|knows_athletics_2|knows_riding_2|knows_horse_archery_1,
     vaegir_man_face_middle_3,vaegir_man_face_older_4
   ],
-  ["vaegir_e_ratnik_infantry","I5 Vaegir Ratnik","I5 Vaegir Ratniki",
+  ["vaegir_e_ratnik","I5 Vaegir Ratnik","I5 Vaegir Ratniki",
     tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
     [
       itm_ar_vae_t5_studded_d,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_d,itm_ga_vae_a4_leather,
@@ -1844,7 +1844,7 @@ troops_part1 = [
     knows_common|knows_ironflesh_7|knows_power_strike_9|knows_power_draw_3|knows_shield_5|knows_athletics_4|knows_horse_archery_1,
     vaegir_man_face_middle_1,vaegir_man_face_older_2
   ],
-  ["vaegir_e_adventurous_kholop","I1 Adventurous Vaegir Kholop","I1 Vaegir Kholopy",
+  ["vaegir_e_extra2","I1 Adventurous Vaegir Kholop","I1 Vaegir Kholopy",
     tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
     [
       itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
@@ -1857,7 +1857,7 @@ troops_part1 = [
     knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
     vaegir_man_face_younger_3,vaegir_man_face_young_4
   ],
-  ["vaegir_e_begrudged_kholop","I1 Begrudged Vaegir Kholop","I1 Vaegir Kholopy",
+  ["vaegir_e_extra3","I1 Begrudged Vaegir Kholop","I1 Vaegir Kholopy",
     tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
     [
       itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
@@ -1870,7 +1870,7 @@ troops_part1 = [
     knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
     vaegir_man_face_younger_1,vaegir_man_face_young_4
   ],
-  ["vaegir_e_travelling_kholop","I1 Travelling Vaegir Kholop","I1 Vaegir Kholopy",
+  ["vaegir_e_extra4","I1 Travelling Vaegir Kholop","I1 Vaegir Kholopy",
     tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
     [
       itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
@@ -1883,7 +1883,7 @@ troops_part1 = [
     knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
     vaegir_man_face_younger_2,vaegir_man_face_young_3
   ],
-  ["vaegir_e_docile_kholop","I1 Docile Vaegir Kholop","I1 Vaegir Kholopy",
+  ["vaegir_e_extra5","I1 Docile Vaegir Kholop","I1 Vaegir Kholopy",
     tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
     [
       itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
