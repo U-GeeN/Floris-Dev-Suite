@@ -3,5 +3,21 @@
   "[python]": {
     "editor.defaultFormatter": null,
     "editor.formatOnSave": false
-  }
+  },
+  "chat.tools.terminal.autoApprove": {
+    "/^python3 - <<'PY'\nimport re\nfrom pathlib import Path\nitems_path = Path\\('Source/Source - Floris Expanded Mod Pack/Module/module_items\\.py'\\)\ntroops_path = Path\\('Source/Source - Floris Expanded Mod Pack/Module/module_troops_part1\\.py'\\)\nitems = items_path\\.read_text\\(\\)\ntroops = troops_path\\.read_text\\(\\)\nstart = troops\\.index\\('##### Here are the Vaegir Troops from the Expanded Tree'\\)\nend = troops\\.index\\('###Khergit', start\\)\nsection = troops\\[start:end\\]\nall_horses = set\\(re\\.findall\\(r'\"\\(ho_vae_\\[a-z0-9_\\]\\+\\)\"', items\\)\\)\nassigned = set\\(re\\.findall\\(r'itm_\\(ho_vae_\\[a-z0-9_\\]\\+\\)', section\\)\\)\nprint\\(f'Vaegir horse item definitions: \\{len\\(all_horses\\)\\}'\\)\nprint\\(f'Used by Vaegir Expanded tree: \\{len\\(assigned\\)\\}'\\)\nprint\\('Unassigned:', ', '\\.join\\(sorted\\(all_horses - assigned\\)\\) or 'none'\\)\nprint\\('Undefined:', ', '\\.join\\(sorted\\(assigned - all_horses\\)\\) or 'none'\\)\nPY\npython3 -c 'from pathlib import Path; p=Path\\(\"Source/Source - Floris Expanded Mod Pack/Module/module_troops_part1\\.py\"\\); compile\\(p\\.read_text\\(\\), str\\(p\\), \"exec\"\\)'$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^python3 - <<'PY'\nimport re\nfrom collections import Counter\nfrom pathlib import Path\nitems = Path\\('Source/Source - Floris Expanded Mod Pack/Module/module_items\\.py'\\)\\.read_text\\(\\)\ntroops = Path\\('Source/Source - Floris Expanded Mod Pack/Module/module_troops_part1\\.py'\\)\\.read_text\\(\\)\nstart = troops\\.index\\('##### Here are the Vaegir Troops from the Expanded Tree'\\)\nend = troops\\.index\\('###Khergit', start\\)\nsection = troops\\[start:end\\]\ndefinitions = set\\(re\\.findall\\(r'\"\\(ho_vae_\\[a-z0-9_\\]\\+\\)\"\\(\\?=\\.\\*\\?itp_type_horse\\)', items, re\\.S\\)\\)\nassigned = re\\.findall\\(r'itm_\\(ho_vae_\\[a-z0-9_\\]\\+\\)', section\\)\ncounts = Counter\\(assigned\\)\nprint\\(f'defined=\\{len\\(definitions\\)\\} assigned_unique=\\{len\\(counts\\)\\} references=\\{len\\(assigned\\)\\}'\\)\nprint\\('missing:', sorted\\(definitions - counts\\.keys\\(\\)\\)\\)\nprint\\('unknown:', sorted\\(counts\\.keys\\(\\) - definitions\\)\\)\nprint\\('reused:', \\{name: count for name, count in counts\\.items\\(\\) if count > 1\\}\\)\nPY\npython3 -c 'from pathlib import Path; p=Path\\(\"Source/Source - Floris Expanded Mod Pack/Module/module_troops_part1\\.py\"\\); compile\\(p\\.read_text\\(\\), str\\(p\\), \"exec\"\\)'\ngit diff --check -- 'Source/Source - Floris Expanded Mod Pack/Module/module_troops_part1\\.py'\ngit status --short -- 'Source/Source - Floris Expanded Mod Pack/Module/module_troops_part1\\.py'$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^file \"Files/Resource/ext_itm_weapons_blunt\\.brf\"; xxd -l 64 \"Files/Resource/ext_itm_weapons_blunt\\.brf\"; strings -a \"Files/Resource/ext_itm_weapons_blunt\\.brf\" \\| grep -n -E 'we_vae_blunt_hammersleek\\|_alt\\|mirror' \\| head -80$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  },
+  "chat.editor.preferCopilotHarness": false,
+  "chat.defaultToCopilotHarness": false
 }
