@@ -16272,7 +16272,7 @@ for i_mt in range(len(mission_templates)):
   # Only add to combat-oriented missions to avoid crashes and technical mission conflicts
   is_combat = False
   if type(mt_name) == str:
-    if any(x in mt_name for x in ["charge", "siege", "battle", "arena", "tournament", "raid", "duel", "village", "fight"]):
+    if any(x in mt_name for x in ["charge", "siege", "battle", "arena", "tournament", "raid", "duel", "village", "fight", "training"]):
       is_combat = True
     
   if is_combat:
@@ -16281,6 +16281,7 @@ for i_mt in range(len(mission_templates)):
     mt_triggers.append(damage_recalculation_hit)
     mt_triggers.append(damage_recalculation_apply_blunt)
     mt_triggers.append(lethal_overkill_death)
+    mt_triggers.append(sleek_hammer_mode_item_swap)
     mt[5] = mt_triggers
     mission_templates[i_mt] = tuple(mt)
 
