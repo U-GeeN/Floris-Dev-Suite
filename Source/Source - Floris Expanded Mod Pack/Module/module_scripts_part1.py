@@ -1481,11 +1481,6 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_mercenary_landsknecht, "trp_mercenary_e_landsknecht"),
 	(troop_set_slot, troop_trees_2, slot_mercenary_hochmeister, "trp_mercenary_e_hochmeister"),
 	#Extra
-	(troop_set_slot, troop_trees_2, slot_mercenary_extra1, "trp_mercenary_e_extra1"),
-	(troop_set_slot, troop_trees_2, slot_mercenary_extra2, "trp_mercenary_e_extra2"),
-	(troop_set_slot, troop_trees_2, slot_mercenary_extra3, "trp_mercenary_e_extra3"),
-	(troop_set_slot, troop_trees_2, slot_mercenary_extra4, "trp_mercenary_e_extra4"),
-	(troop_set_slot, troop_trees_2, slot_mercenary_extra5, "trp_mercenary_e_extra5"),
 	###Swadian
 	##Native
 	#Tier 1
@@ -1599,11 +1594,6 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_swadian_baron_mineures, "trp_swadian_e_baron_mineures"),
 	(troop_set_slot, troop_trees_2, slot_swadian_retinue_longbowman, "trp_swadian_e_retinue_longbowman"),
 	#Extra
-	(troop_set_slot, troop_trees_2, slot_swadian_extra1, "trp_swadian_e_extra1"),
-	(troop_set_slot, troop_trees_2, slot_swadian_extra2, "trp_swadian_e_extra2"),
-	(troop_set_slot, troop_trees_2, slot_swadian_extra3, "trp_swadian_e_extra3"),
-	(troop_set_slot, troop_trees_2, slot_swadian_extra4, "trp_swadian_e_extra4"),
-	(troop_set_slot, troop_trees_2, slot_swadian_extra5, "trp_swadian_e_extra5"),
 	###Vaegir
 	##Native
 	#Tier 1
@@ -1843,11 +1833,6 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_khergit_cherbi, "trp_khergit_e_cherbi"),
 	(troop_set_slot, troop_trees_2, slot_khergit_mandugai, "trp_khergit_e_mandugai"),
 	#Extra
-	(troop_set_slot, troop_trees_2, slot_khergit_extra1, "trp_khergit_e_extra1"),
-	(troop_set_slot, troop_trees_2, slot_khergit_extra2, "trp_khergit_e_extra2"),
-	(troop_set_slot, troop_trees_2, slot_khergit_extra3, "trp_khergit_e_extra3"),
-	(troop_set_slot, troop_trees_2, slot_khergit_extra4, "trp_khergit_e_extra4"),
-	(troop_set_slot, troop_trees_2, slot_khergit_extra5, "trp_khergit_e_extra5"),
 	###Nord
 	##Native
 	#Tier 1
@@ -1970,11 +1955,6 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_nord_aetheling, "trp_nord_e_berserkr"),
 	(troop_set_slot, troop_trees_2, slot_nord_vaeringi, "trp_nord_e_elite_huskarl"),
 	#Extra
-	(troop_set_slot, troop_trees_2, slot_nord_extra1, "trp_nord_e_extra1"),
-	(troop_set_slot, troop_trees_2, slot_nord_extra2, "trp_nord_e_extra2"),
-	(troop_set_slot, troop_trees_2, slot_nord_extra3, "trp_nord_e_extra3"),
-	(troop_set_slot, troop_trees_2, slot_nord_extra4, "trp_nord_e_extra4"),
-	(troop_set_slot, troop_trees_2, slot_nord_extra5, "trp_nord_e_extra5"),
 	###Rhodok
 	##Native
 	#Tier 1
@@ -2093,11 +2073,6 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_rhodok_condottiero, "trp_rhodok_e_condottiero"),
 	(troop_set_slot, troop_trees_2, slot_rhodok_condottiero_d_assedio, "trp_rhodok_e_condottiero_d_assedio"),
 	#Extra
-	(troop_set_slot, troop_trees_2, slot_rhodok_extra1, "trp_rhodok_e_extra1"),
-	(troop_set_slot, troop_trees_2, slot_rhodok_extra2, "trp_rhodok_e_extra2"),
-	(troop_set_slot, troop_trees_2, slot_rhodok_extra3, "trp_rhodok_e_extra3"),
-	(troop_set_slot, troop_trees_2, slot_rhodok_extra4, "trp_rhodok_e_extra4"),
-	(troop_set_slot, troop_trees_2, slot_rhodok_extra5, "trp_rhodok_e_extra5"),
 	###Sarranid
 	##Native
 	#Tier 1
@@ -2220,11 +2195,6 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_sarranid_hasham, "trp_sarranid_e_hasham"),
 	(troop_set_slot, troop_trees_2, slot_sarranid_iqta_dar, "trp_sarranid_e_iqta_dar"),
 	#Extra
-	(troop_set_slot, troop_trees_2, slot_sarranid_extra1, "trp_sarranid_e_extra1"),
-	(troop_set_slot, troop_trees_2, slot_sarranid_extra2, "trp_sarranid_e_extra2"),
-	(troop_set_slot, troop_trees_2, slot_sarranid_extra3, "trp_sarranid_e_extra3"),
-	(troop_set_slot, troop_trees_2, slot_sarranid_extra4, "trp_sarranid_e_extra4"),
-	(troop_set_slot, troop_trees_2, slot_sarranid_extra5, "trp_sarranid_e_extra5"),
 	###Custom
 	##Native
 	#Tier 1
@@ -2481,11 +2451,6 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_woman_black_widow, "trp_woman_e_black_widow"),
 	(troop_set_slot, troop_trees_2, slot_woman_walkure, "trp_woman_e_walkure"),
 	#Extra
-	(troop_set_slot, troop_trees_2, slot_woman_extra1, "trp_woman_e_extra1"),
-	(troop_set_slot, troop_trees_2, slot_woman_extra2, "trp_woman_e_extra2"),
-	(troop_set_slot, troop_trees_2, slot_woman_extra3, "trp_woman_e_extra3"),
-	(troop_set_slot, troop_trees_2, slot_woman_extra4, "trp_woman_e_extra4"),
-	(troop_set_slot, troop_trees_2, slot_woman_extra5, "trp_woman_e_extra5"),
 	
     ]),
 	##Floris MTT end

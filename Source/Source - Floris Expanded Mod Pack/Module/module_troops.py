@@ -52,11 +52,6 @@ upgrade(troops,"mercenary_r_armbrust_soldner","mercenary_r_armbrust_komtur")
 #Tier 1-2
 upgrade2(troops,"mercenary_e_townsman","mercenary_e_miliz","mercenary_e_edelknecht")
 upgrade2(troops,"mercenary_e_farmer","mercenary_e_spiessknecht","mercenary_e_armbruster")
-upgrade2(troops,"mercenary_e_extra1","mercenary_e_miliz","mercenary_e_edelknecht")
-upgrade2(troops,"mercenary_e_extra2","mercenary_e_miliz","mercenary_e_edelknecht")
-upgrade2(troops,"mercenary_e_extra3","mercenary_e_miliz","mercenary_e_edelknecht")
-upgrade2(troops,"mercenary_e_extra4","mercenary_e_miliz","mercenary_e_edelknecht")
-upgrade2(troops,"mercenary_e_extra5","mercenary_e_miliz","mercenary_e_edelknecht")
 #Tier 2-3
 upgrade2(troops,"mercenary_e_miliz","mercenary_e_brabanzon","mercenary_e_burger")
 upgrade2(troops,"mercenary_e_edelknecht","mercenary_e_volksheer","mercenary_e_halberdier")
@@ -121,11 +116,6 @@ upgrade(troops,"swadian_r_chevalier","swadian_r_chevalier_banneret")
 ##Expanded troop tree
 #Tier 1-2
 upgrade2(troops,"swadian_e_peasant","swadian_e_militia","swadian_e_peasant_archer")
-upgrade2(troops,"swadian_e_extra1","swadian_e_militia","swadian_e_peasant_archer")
-upgrade2(troops,"swadian_e_extra2","swadian_e_militia","swadian_e_peasant_archer")
-upgrade2(troops,"swadian_e_extra3","swadian_e_militia","swadian_e_peasant_archer")
-upgrade2(troops,"swadian_e_extra4","swadian_e_militia","swadian_e_peasant_archer")
-upgrade2(troops,"swadian_e_extra5","swadian_e_militia","swadian_e_peasant_archer")
 #Tier 2-3
 upgrade(troops,"swadian_e_militia","swadian_e_vougier")
 upgrade(troops,"swadian_e_peasant_archer","swadian_e_archer_militia")
@@ -252,11 +242,6 @@ upgrade(troops,"khergit_r_aqala_teriguci","khergit_r_keshig")
 ##Expanded troop tree
 #Tier 1-2
 upgrade2(troops,"khergit_e_tariachin","khergit_e_tsereg","khergit_e_qarbughaci")
-upgrade2(troops,"khergit_e_extra1","khergit_e_tsereg","khergit_e_qarbughaci")
-upgrade2(troops,"khergit_e_extra2","khergit_e_tsereg","khergit_e_qarbughaci")
-upgrade2(troops,"khergit_e_extra3","khergit_e_tsereg","khergit_e_qarbughaci")
-upgrade2(troops,"khergit_e_extra4","khergit_e_tsereg","khergit_e_qarbughaci")
-upgrade2(troops,"khergit_e_extra5","khergit_e_tsereg","khergit_e_qarbughaci")
 #Tier 2-3
 upgrade2(troops,"khergit_e_tsereg","khergit_e_morici","khergit_e_asud")
 upgrade2(troops,"khergit_e_qarbughaci","khergit_e_surcin","khergit_e_abaci")
@@ -325,11 +310,6 @@ upgrade(troops,"nord_r_skjadsveinn","nord_r_husbondi")
 ####Expanded troop tree
 #Tier 1-2  (Recruit -> Footman)
 upgrade(troops,"nord_e_recruit","nord_e_footman")
-upgrade(troops,"nord_e_extra1","nord_e_footman")
-upgrade(troops,"nord_e_extra2","nord_e_footman")
-upgrade(troops,"nord_e_extra3","nord_e_footman")
-upgrade(troops,"nord_e_extra4","nord_e_footman")
-upgrade(troops,"nord_e_extra5","nord_e_footman")
 #Tier 2-3  (Footman -> A3 Huntsman OR I3 Trained Footman)
 upgrade2(troops,"nord_e_footman","nord_e_huntsman","nord_e_trained_footman")
 #Tier 3-4  (Huntsman -> A4 Skirmisher OR A4 Archer)
@@ -394,11 +374,6 @@ upgrade(troops,"rhodok_r_balestriere_d_assedio","rhodok_r_capitano_d_assedio")
 ##Expanded troop tree
 #Tier 1-2
 upgrade2(troops,"rhodok_e_cittadino","rhodok_e_novizio","rhodok_e_recluta")
-upgrade2(troops,"rhodok_e_extra1","rhodok_e_novizio","rhodok_e_recluta")
-upgrade2(troops,"rhodok_e_extra2","rhodok_e_novizio","rhodok_e_recluta")
-upgrade2(troops,"rhodok_e_extra3","rhodok_e_novizio","rhodok_e_recluta")
-upgrade2(troops,"rhodok_e_extra4","rhodok_e_novizio","rhodok_e_recluta")
-upgrade2(troops,"rhodok_e_extra5","rhodok_e_novizio","rhodok_e_recluta")
 #Tier 2-3
 upgrade2(troops,"rhodok_e_novizio","rhodok_e_milizia","rhodok_e_milizia_balestriere")
 upgrade2(troops,"rhodok_e_recluta","rhodok_e_recluta_balestriere","rhodok_e_lanciere")
@@ -466,11 +441,6 @@ upgrade(troops,"sarranid_r_yerliyya","sarranid_r_yeniceri")
 ##Expanded troop tree
 #Tier 1-2
 upgrade2(troops,"sarranid_e_millet","sarranid_e_ajam","sarranid_e_oglan")
-upgrade2(troops,"sarranid_e_extra1","sarranid_e_ajam","sarranid_e_oglan")
-upgrade2(troops,"sarranid_e_extra2","sarranid_e_ajam","sarranid_e_oglan")
-upgrade2(troops,"sarranid_e_extra3","sarranid_e_ajam","sarranid_e_oglan")
-upgrade2(troops,"sarranid_e_extra4","sarranid_e_ajam","sarranid_e_oglan")
-upgrade2(troops,"sarranid_e_extra5","sarranid_e_ajam","sarranid_e_oglan")
 #Tier 2-3
 upgrade2(troops,"sarranid_e_ajam","sarranid_e_azab","sarranid_e_cemaat")
 upgrade2(troops,"sarranid_e_oglan","sarranid_e_jebelus","sarranid_e_ghulam")
@@ -595,11 +565,6 @@ upgrade(troops,"woman_r_kriegerin","woman_r_schildmaid")
 #Tier 1-2
 upgrade2(troops,"woman_e_refugee","woman_e_militia","woman_e_camp_follower")
 upgrade2(troops,"woman_e_peasant","woman_e_camp_follower","woman_e_dressed_up")
-upgrade2(troops,"woman_e_extra1","woman_e_militia","woman_e_camp_follower")
-upgrade2(troops,"woman_e_extra2","woman_e_militia","woman_e_camp_follower")
-upgrade2(troops,"woman_e_extra3","woman_e_militia","woman_e_camp_follower")
-upgrade2(troops,"woman_e_extra4","woman_e_militia","woman_e_camp_follower")
-upgrade2(troops,"woman_e_extra5","woman_e_militia","woman_e_camp_follower")
 #Tier 2-3
 upgrade2(troops,"woman_e_militia","woman_e_warrior","woman_e_nurse")
 upgrade(troops,"woman_e_camp_follower","woman_e_huntress")

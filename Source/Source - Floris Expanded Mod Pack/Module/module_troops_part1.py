@@ -1223,61 +1223,6 @@ troops_part1 = [
     mercenary_man_face_middle_2,mercenary_man_face_older_4
   ],
 #Extra units. Not used in the mod, but are present for if you want to add a few new troops.
-  ["mercenary_e_extra1","I1 Rebelous Townsman","I1 Rebelous Townsmen",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,no_scene,reserved,fac_commoners,
-    [
-      itm_ar_pla_tun_tunic,itm_bo_pla_t2_ankle,itm_he_pla_pri_hood,itm_we_pla_sword_reeve,
-      itm_we_pla_sword_dagger,itm_we_pla_spear_crook_shepperd,itm_we_rho_spear_fork_pitch,itm_we_vae_sword_sickle,
-      itm_we_vae_blunt_club,itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(70)|wp_archery(40)|wp_crossbow(60)|wp_throwing(40),
-    knows_common|knows_ironflesh_2|knows_shield_1|knows_athletics_1,
-    mercenary_man_face_younger_1,mercenary_man_face_young_2
-  ],
-  ["mercenary_e_extra2","I1 Adventurous Townsman","I1 Adventurous Townsmen",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,no_scene,reserved,fac_commoners,
-    [
-      itm_ar_pla_tun_tunic,itm_bo_pla_t2_ankle,itm_he_pla_pri_hood,itm_we_pla_sword_reeve,
-      itm_we_pla_sword_dagger,itm_we_pla_spear_crook_shepperd,itm_we_rho_spear_fork_pitch,itm_we_vae_sword_sickle,
-      itm_we_khe_blunt_club,itm_we_khe_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(70)|wp_archery(40)|wp_crossbow(60)|wp_throwing(40),
-    knows_common|knows_ironflesh_2|knows_shield_1|knows_athletics_1,
-    mercenary_man_face_younger_3,mercenary_man_face_young_4
-  ],
-  ["mercenary_e_extra3","I1 Begrudged Townsman","I1 Begrudged Townsmen",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,no_scene,reserved,fac_commoners,
-    [
-      itm_ar_pla_tun_tunic,itm_bo_pla_t2_ankle,itm_he_pla_pri_hood,itm_we_pla_sword_reeve,
-      itm_we_pla_sword_dagger,itm_we_pla_spear_crook_shepperd,itm_we_rho_spear_fork_pitch,itm_we_vae_sword_sickle,
-      itm_we_nor_blunt_stick,itm_we_nor_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(70)|wp_archery(40)|wp_crossbow(60)|wp_throwing(40),
-    knows_common|knows_ironflesh_2|knows_shield_1|knows_athletics_1,
-    mercenary_man_face_younger_1,mercenary_man_face_young_4
-  ],
-  ["mercenary_e_extra4","I1 Travelling Townsman","I1 Travelling Townsmen",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,no_scene,reserved,fac_commoners,
-    [
-      itm_ar_pla_tun_tunic,itm_bo_pla_t2_ankle,itm_he_pla_pri_hood,itm_we_pla_sword_reeve,
-      itm_we_pla_sword_dagger,itm_we_pla_spear_crook_shepperd,itm_we_rho_spear_fork_pitch,itm_we_vae_sword_sickle,
-      itm_we_rho_blunt_club,itm_we_rho_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(70)|wp_archery(40)|wp_crossbow(60)|wp_throwing(40),
-    knows_common|knows_ironflesh_2|knows_shield_1|knows_athletics_1,
-    mercenary_man_face_younger_2,mercenary_man_face_young_3
-  ],
-  ["mercenary_e_extra5","I1 Docile Townsman","I1 Docile Townsmen",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,no_scene,reserved,fac_commoners,
-    [
-      itm_ar_pla_tun_tunic,itm_bo_pla_t2_ankle,itm_he_pla_pri_hood,itm_we_pla_sword_reeve,
-      itm_we_pla_sword_dagger,itm_we_pla_spear_crook_shepperd,itm_we_rho_spear_fork_pitch,itm_we_vae_sword_sickle,
-      itm_we_sar_blunt_club,itm_we_sar_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(70)|wp_archery(40)|wp_crossbow(60)|wp_throwing(40),
-    knows_common|knows_ironflesh_2|knows_shield_1|knows_athletics_1,
-    mercenary_man_face_younger_1,mercenary_man_face_young_4
-  ],
 ##Expanded troop tree - Expanded Items
 ##### Here are the Swadian Troops from the Expanded Tree using the Expanded items #####
 #Tier 1
@@ -1523,66 +1468,6 @@ troops_part1 = [
     swadian_man_face_middle_3,swadian_man_face_older_4
   ],
 #Extra units. Not used in the mod, but are present for if you want to add a few new troops.
-  ["swadian_e_extra1","I1 Rebelous Swadian Peasant","I1 Rebelous Swadian Peasants",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_1,
-    [
-      itm_ar_swa_tun_tabard,itm_bo_swa_t1_sandal,itm_he_swa_t1_common_a,itm_we_swa_sword_clamshelldagger,
-      itm_we_swa_axe_hatchet,itm_ar_swa_shi_linen,itm_ar_swa_shi_linen_a,itm_ar_swa_shi_linen_b,
-      itm_ar_swa_tun_tabard_a,itm_ar_swa_tun_tabard_b,itm_ar_swa_tun_tabard_c,itm_bo_swa_t2_hose,
-      itm_we_swa_blunt_club,itm_we_swa_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(70)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_2|knows_power_throw_1|knows_shield_1,
-    swadian_man_face_younger_1,swadian_man_face_young_2
-  ],
-  ["swadian_e_extra2","I1 Adventurous Swadian Peasant","I1 Adventurous Swadian Peasants",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_1,
-    [
-      itm_ar_swa_tun_tabard,itm_bo_swa_t1_sandal,itm_he_swa_t1_common_a,itm_we_swa_sword_clamshelldagger,
-      itm_we_swa_axe_hatchet,itm_ar_swa_shi_linen,itm_ar_swa_shi_linen_a,itm_ar_swa_shi_linen_b,
-      itm_ar_swa_tun_tabard_a,itm_ar_swa_tun_tabard_b,itm_ar_swa_tun_tabard_c,itm_bo_swa_t2_hose,
-      itm_we_swa_blunt_club,itm_we_swa_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(70)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_2|knows_power_throw_1|knows_shield_3,
-    swadian_man_face_younger_3,swadian_man_face_young_4
-  ],
-  ["swadian_e_extra3","I1 Begrudged Swadian Peasant","I1 Begrudged Swadian Peasants",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_1,
-    [
-      itm_ar_swa_tun_tabard,itm_bo_swa_t1_sandal,itm_he_swa_t1_common_a,itm_we_swa_sword_clamshelldagger,
-      itm_we_swa_axe_hatchet,itm_ar_swa_shi_linen,itm_ar_swa_shi_linen_a,itm_ar_swa_shi_linen_b,
-      itm_ar_swa_tun_tabard_a,itm_ar_swa_tun_tabard_b,itm_ar_swa_tun_tabard_c,itm_bo_swa_t2_hose,
-      itm_we_swa_blunt_club,itm_we_swa_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(70)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_2|knows_power_throw_1|knows_shield_1,
-    swadian_man_face_younger_1,swadian_man_face_young_4
-  ],
-  ["swadian_e_extra4","I1 Travelling Swadian Peasant","I1 Travelling Swadian Peasants",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_1,
-    [
-      itm_ar_swa_tun_tabard,itm_bo_swa_t1_sandal,itm_he_swa_t1_common_a,itm_we_swa_sword_clamshelldagger,
-      itm_we_swa_axe_hatchet,itm_ar_swa_shi_linen,itm_ar_swa_shi_linen_a,itm_ar_swa_shi_linen_b,
-      itm_ar_swa_tun_tabard_a,itm_ar_swa_tun_tabard_b,itm_ar_swa_tun_tabard_c,itm_bo_swa_t2_hose,
-      itm_we_swa_blunt_club,itm_we_swa_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(70)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_2|knows_power_throw_1|knows_shield_2,
-    swadian_man_face_younger_2,swadian_man_face_young_3
-  ],
-  ["swadian_e_extra5","I1 Docile Swadian Peasant","I1 Docile Swadian Peasants",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_1,
-    [
-      itm_ar_swa_tun_tabard,itm_bo_swa_t1_sandal,itm_he_swa_t1_common_a,itm_we_swa_sword_clamshelldagger,
-      itm_we_swa_axe_hatchet,itm_ar_swa_shi_linen,itm_ar_swa_shi_linen_a,itm_ar_swa_shi_linen_b,
-      itm_ar_swa_tun_tabard_a,itm_ar_swa_tun_tabard_b,itm_ar_swa_tun_tabard_c,itm_bo_swa_t2_hose,
-      itm_we_swa_blunt_club,itm_we_swa_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(70)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_2|knows_power_throw_1|knows_shield_1,
-    swadian_man_face_younger_1,swadian_man_face_young_4
-  ],
 ##Expanded troop tree - Expanded Items
 ##### Here are the Vaegir Troops from the Expanded Tree using the Expanded items #####
 #Tier 1
@@ -1843,58 +1728,6 @@ troops_part1 = [
     def_attrib|level(36),wp_one_handed(240)|wp_two_handed(235)|wp_polearm(252)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
     knows_common|knows_ironflesh_7|knows_power_strike_9|knows_power_draw_3|knows_shield_5|knows_athletics_4|knows_horse_archery_1,
     vaegir_man_face_middle_1,vaegir_man_face_older_2
-  ],
-  ["vaegir_e_extra2","I1 Adventurous Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_3,vaegir_man_face_young_4
-  ],
-  ["vaegir_e_extra3","I1 Begrudged Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_1,vaegir_man_face_young_4
-  ],
-  ["vaegir_e_extra4","I1 Travelling Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_2,vaegir_man_face_young_3
-  ],
-  ["vaegir_e_extra5","I1 Docile Vaegir Kholop","I1 Vaegir Kholopy",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_2,
-    [
-      itm_ar_vae_tun_red,itm_bo_vae_t1_sandal,itm_he_vae_t1_common_a,itm_we_vae_sword_sickle,
-      itm_we_vae_axe_onehanded,itm_ar_vae_shi_red,itm_ar_vae_shi_blue,itm_ar_vae_shi_green,
-      itm_ar_vae_tun_black,itm_ar_vae_tun_purple,itm_ar_vae_tun_white,itm_bo_vae_t2_shoes,
-      itm_sh_vae_kit_old,itm_sh_vae_kit_plain,itm_we_vae_blunt_club,itm_we_vae_axe_onehanded,
-      itm_we_vae_throw_snow
-    ],
-    def_attrib|level(4),wp_one_handed(50)|wp_two_handed(40)|wp_polearm(60)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_strike_1|knows_power_draw_2|knows_horse_archery_1,
-    vaegir_man_face_younger_1,vaegir_man_face_young_4
   ],
 ##General Units
 ##### Here are the Vaegir Guards using the Minimal items #####
@@ -2262,66 +2095,6 @@ troops_part1 = [
     khergit_man_face_middle_3,khergit_man_face_older_4
   ],
 #Extra units. Not used in the mod, but are present for if you want to add a few new troops.
-  ["khergit_e_extra1","I1 Rebelous Khergit Tariachin","I1 Rebelous Khergit Tariachinuud",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,
-    [
-      itm_ar_khe_tun_furcoat,itm_bo_khe_t1_sandal,itm_he_khe_t1_common_a,itm_we_khe_bow_practice,
-      itm_we_khe_sword_dagger,itm_we_khe_arrow_khergit,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,
-      itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,
-      itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,
-    khergit_man_face_younger_1,khergit_man_face_young_2
-  ],
-  ["khergit_e_extra2","I1 Adventurous Khergit Tariachin","I1 Adventurous Khergit Tariachinuud",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,
-    [
-      itm_ar_khe_tun_furcoat,itm_bo_khe_t1_sandal,itm_he_khe_t1_common_a,itm_we_khe_bow_practice,
-      itm_we_khe_sword_dagger,itm_we_khe_arrow_khergit,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,
-      itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,
-      itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,
-    khergit_man_face_younger_3,khergit_man_face_young_4
-  ],
-  ["khergit_e_extra3","I1 Begrudged Khergit Tariachin","I1 Begrudged Khergit Tariachinuud",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,
-    [
-      itm_ar_khe_tun_furcoat,itm_bo_khe_t1_sandal,itm_he_khe_t1_common_a,itm_we_khe_bow_practice,
-      itm_we_khe_sword_dagger,itm_we_khe_arrow_khergit,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,
-      itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,
-      itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,
-    khergit_man_face_younger_1,khergit_man_face_young_4
-  ],
-  ["khergit_e_extra4","I1 Travelling Khergit Tariachin","I1 Travelling Khergit Tariachinuud",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,
-    [
-      itm_ar_khe_tun_furcoat,itm_bo_khe_t1_sandal,itm_he_khe_t1_common_a,itm_we_khe_bow_practice,
-      itm_we_khe_sword_dagger,itm_we_khe_arrow_khergit,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,
-      itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,
-      itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,
-    khergit_man_face_younger_2,khergit_man_face_young_3
-  ],
-  ["khergit_e_extra5","I1 Docile Khergit Tariachin","I1 Docile Khergit Tariachinuud",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_3,
-    [
-      itm_ar_khe_tun_furcoat,itm_bo_khe_t1_sandal,itm_he_khe_t1_common_a,itm_we_khe_bow_practice,
-      itm_we_khe_sword_dagger,itm_we_khe_arrow_khergit,itm_ar_khe_shi_peltcoat,itm_ar_khe_shi_peltcoat_a,
-      itm_ar_khe_shi_peltcoat_b,itm_ar_khe_tun_furcoat_a,itm_ar_khe_tun_furcoat_b,itm_ar_khe_tun_furcoat_c,
-      itm_bo_khe_t2_boots,itm_we_khe_blunt_club,itm_we_khe_spear_bamboolong,itm_we_khe_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(50)|wp_polearm(40)|wp_archery(70)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_riding_1|knows_horse_archery_2,
-    khergit_man_face_younger_1,khergit_man_face_young_4
-  ],
 ##Expanded troop tree - Expanded Items
 ##### Here are the Nord Troops from the Expanded Tree using the Expanded items #####
 #Tier 1
@@ -2632,66 +2405,6 @@ troops_part1 = [
     nord_man_face_middle_3,nord_man_face_older_4
   ],
 #Extra units. Not used in the mod, but are present for if you want to add a few new troops.
-  ["nord_e_extra1","I1 Rebelous Nord Bondi","I1 Rebelous Nord Bondir",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_4,
-    [
-      itm_ar_nor_tun_blue,itm_bo_nor_t1_sandal,itm_he_nor_t1_common_a,itm_we_nor_sword_seax,
-      itm_we_nor_axe_jomsviking,itm_ar_nor_shi_skjortira,itm_ar_nor_shi_skjortira_a,itm_ar_nor_shi_skjortira_b,
-      itm_ar_nor_tun_green,itm_ar_nor_tun_purple,itm_ar_nor_tun_red,itm_bo_nor_t2_shoes,
-      itm_we_nor_blunt_stick,itm_we_nor_spear_sviar,itm_we_nor_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(40)|wp_crossbow(40)|wp_throwing(60),
-    knows_common|knows_ironflesh_2|knows_power_throw_2|knows_athletics_2,
-    nord_man_face_younger_1,nord_man_face_young_2
-  ],
-  ["nord_e_extra2","I1 Adventurous Nord Bondi","I1 Adventurous Nord Bondir",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_4,
-    [
-      itm_ar_nor_tun_blue,itm_bo_nor_t1_sandal,itm_he_nor_t1_common_a,itm_we_nor_sword_seax,
-      itm_we_nor_axe_jomsviking,itm_ar_nor_shi_skjortira,itm_ar_nor_shi_skjortira_a,itm_ar_nor_shi_skjortira_b,
-      itm_ar_nor_tun_green,itm_ar_nor_tun_purple,itm_ar_nor_tun_red,itm_bo_nor_t2_shoes,
-      itm_we_nor_blunt_stick,itm_we_nor_spear_sviar,itm_we_nor_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(40)|wp_crossbow(40)|wp_throwing(60),
-    knows_common|knows_ironflesh_2|knows_power_throw_2|knows_athletics_2,
-    nord_man_face_younger_3,nord_man_face_young_4
-  ],
-  ["nord_e_extra3","I1 Begrudged Nord Bondi","I1 Begrudged Nord Bondir",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_4,
-    [
-      itm_ar_nor_tun_blue,itm_bo_nor_t1_sandal,itm_he_nor_t1_common_a,itm_we_nor_sword_seax,
-      itm_we_nor_axe_jomsviking,itm_ar_nor_shi_skjortira,itm_ar_nor_shi_skjortira_a,itm_ar_nor_shi_skjortira_b,
-      itm_ar_nor_tun_green,itm_ar_nor_tun_purple,itm_ar_nor_tun_red,itm_bo_nor_t2_shoes,
-      itm_we_nor_blunt_stick,itm_we_nor_spear_sviar,itm_we_nor_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(40)|wp_crossbow(40)|wp_throwing(60),
-    knows_common|knows_ironflesh_2|knows_power_throw_2|knows_athletics_2,
-    nord_man_face_younger_1,nord_man_face_young_4
-  ],
-  ["nord_e_extra4","I1 Travelling Nord Bondi","I1 Travelling Nord Bondir",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_4,
-    [
-      itm_ar_nor_tun_blue,itm_bo_nor_t1_sandal,itm_he_nor_t1_common_a,itm_we_nor_sword_seax,
-      itm_we_nor_axe_jomsviking,itm_ar_nor_shi_skjortira,itm_ar_nor_shi_skjortira_a,itm_ar_nor_shi_skjortira_b,
-      itm_ar_nor_tun_green,itm_ar_nor_tun_purple,itm_ar_nor_tun_red,itm_bo_nor_t2_shoes,
-      itm_we_nor_blunt_stick,itm_we_nor_spear_sviar,itm_we_nor_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(40)|wp_crossbow(40)|wp_throwing(60),
-    knows_common|knows_ironflesh_2|knows_power_throw_2|knows_athletics_2,
-    nord_man_face_younger_2,nord_man_face_young_3
-  ],
-  ["nord_e_extra5","I1 Docile Nord Bondi","I1 Docile Nord Bondir",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_4,
-    [
-      itm_ar_nor_tun_blue,itm_bo_nor_t1_sandal,itm_he_nor_t1_common_a,itm_we_nor_sword_seax,
-      itm_we_nor_axe_jomsviking,itm_ar_nor_shi_skjortira,itm_ar_nor_shi_skjortira_a,itm_ar_nor_shi_skjortira_b,
-      itm_ar_nor_tun_green,itm_ar_nor_tun_purple,itm_ar_nor_tun_red,itm_bo_nor_t2_shoes,
-      itm_we_nor_blunt_stick,itm_we_nor_spear_sviar,itm_we_nor_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(40)|wp_crossbow(40)|wp_throwing(60),
-    knows_common|knows_ironflesh_2|knows_power_throw_2|knows_athletics_2,
-    nord_man_face_younger_1,nord_man_face_young_4
-  ],
 ##Expanded troop tree - Expanded Items
 ##### Here are the Rhodok Troops from the Expanded Tree using the Expanded items #####
 #Tier 1
@@ -2977,66 +2690,6 @@ troops_part1 = [
     rhodok_man_face_middle_1,rhodok_man_face_older_4
   ],
 #Extra units. Not used in the mod, but are present for if you want to add a few new troops.
-  ["rhodok_e_extra1","I1 Rebelous Rhodok Cittadino","I1 Rebelous Rhodok Cittadini",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_5,
-    [
-      itm_ar_rho_tun_vest,itm_bo_rho_t1_bear,itm_he_rho_t1_common_a,itm_we_rho_sword_rondeldagger,
-      itm_we_rho_axe_pick,itm_ar_rho_shi_capegreen,itm_ar_rho_shi_capered,itm_ar_rho_shi_capeyellow,
-      itm_ar_rho_tun_vest_a,itm_ar_rho_tun_vest_b,itm_ar_rho_tun_vest_c,itm_bo_rho_t2_highlander,
-      itm_we_rho_blunt_club,itm_we_rho_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(50)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),
-    knows_common|knows_ironflesh_1|knows_power_strike_1|knows_athletics_2,
-    rhodok_man_face_younger_1,rhodok_man_face_young_2
-  ],
-  ["rhodok_e_extra2","I1 Adventurous Rhodok Cittadino","I1 Adventurous Rhodok Cittadini",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_5,
-    [
-      itm_ar_rho_tun_vest,itm_bo_rho_t1_bear,itm_he_rho_t1_common_a,itm_we_rho_sword_rondeldagger,
-      itm_we_rho_axe_pick,itm_ar_rho_shi_capegreen,itm_ar_rho_shi_capered,itm_ar_rho_shi_capeyellow,
-      itm_ar_rho_tun_vest_a,itm_ar_rho_tun_vest_b,itm_ar_rho_tun_vest_c,itm_bo_rho_t2_highlander,
-      itm_we_rho_blunt_club,itm_we_rho_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(50)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),
-    knows_common|knows_ironflesh_1|knows_power_strike_1|knows_athletics_2,
-    rhodok_man_face_younger_3,rhodok_man_face_young_4
-  ],
-  ["rhodok_e_extra3","I1 Begrudged Rhodok Cittadino","I1 Begrudged Rhodok Cittadini",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_5,
-    [
-      itm_ar_rho_tun_vest,itm_bo_rho_t1_bear,itm_he_rho_t1_common_a,itm_we_rho_sword_rondeldagger,
-      itm_we_rho_axe_pick,itm_ar_rho_shi_capegreen,itm_ar_rho_shi_capered,itm_ar_rho_shi_capeyellow,
-      itm_ar_rho_tun_vest_a,itm_ar_rho_tun_vest_b,itm_ar_rho_tun_vest_c,itm_bo_rho_t2_highlander,
-      itm_we_rho_blunt_club,itm_we_rho_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(50)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),
-    knows_common|knows_ironflesh_1|knows_power_strike_1|knows_athletics_2,
-    rhodok_man_face_younger_1,rhodok_man_face_young_4
-  ],
-  ["rhodok_e_extra4","I1 Travelling Rhodok Cittadino","I1 Travelling Rhodok Cittadini",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_5,
-    [
-      itm_ar_rho_tun_vest,itm_bo_rho_t1_bear,itm_he_rho_t1_common_a,itm_we_rho_sword_rondeldagger,
-      itm_we_rho_axe_pick,itm_ar_rho_shi_capegreen,itm_ar_rho_shi_capered,itm_ar_rho_shi_capeyellow,
-      itm_ar_rho_tun_vest_a,itm_ar_rho_tun_vest_b,itm_ar_rho_tun_vest_c,itm_bo_rho_t2_highlander,
-      itm_we_rho_blunt_club,itm_we_rho_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(50)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),
-    knows_common|knows_ironflesh_1|knows_power_strike_1|knows_athletics_2,
-    rhodok_man_face_younger_2,rhodok_man_face_young_3
-  ],
-  ["rhodok_e_extra5","I1 Docile Rhodok Cittadino","I1 Docile Rhodok Cittadini",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_5,
-    [
-      itm_ar_rho_tun_vest,itm_bo_rho_t1_bear,itm_he_rho_t1_common_a,itm_we_rho_sword_rondeldagger,
-      itm_we_rho_axe_pick,itm_ar_rho_shi_capegreen,itm_ar_rho_shi_capered,itm_ar_rho_shi_capeyellow,
-      itm_ar_rho_tun_vest_a,itm_ar_rho_tun_vest_b,itm_ar_rho_tun_vest_c,itm_bo_rho_t2_highlander,
-      itm_we_rho_blunt_club,itm_we_rho_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(60)|wp_two_handed(40)|wp_polearm(50)|wp_archery(40)|wp_crossbow(70)|wp_throwing(40),
-    knows_common|knows_ironflesh_1|knows_power_strike_1|knows_athletics_2,
-    rhodok_man_face_younger_1,rhodok_man_face_young_4
-  ],
 ##Expanded troop tree - Expanded Items
 ##### Here are the Sarranid Troops from the Expanded Tree using the Expanded items #####
 #Tier 1
@@ -3354,66 +3007,6 @@ troops_part1 = [
     sarranid_man_face_middle_3,sarranid_man_face_older_4
   ],
 #Extra units. Not used in the mod, but are present for if you want to add a few new troops.
-  ["sarranid_e_extra1","I1 Rebelous Sarranid Millet","I1 Rebelous Sarranid Milletani",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_6,
-    [
-      itm_ar_sar_tun_robeblack,itm_bo_sar_t1_sandal,itm_he_sar_t1_common_a,itm_we_sar_sword_khyber,
-      itm_we_sar_blunt_maceiron,itm_ar_sar_shi_robe,itm_ar_sar_shi_robe_a,itm_ar_sar_shi_robe_b,
-      itm_ar_sar_tun_robebeige,itm_ar_sar_tun_robegreen,itm_ar_sar_tun_robered,itm_bo_sar_t2_shoes,
-      itm_we_sar_blunt_maceiron,itm_we_sar_blunt_club,itm_we_sar_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(60)|wp_polearm(40)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_throw_1|knows_riding_2|knows_horse_archery_1,
-    sarranid_man_face_younger_1,sarranid_man_face_young_2
-  ],
-  ["sarranid_e_extra2","I1 Adventurous Sarranid Millet","I1 Adventurous Sarranid Milletani",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_6,
-    [
-      itm_ar_sar_tun_robeblack,itm_bo_sar_t1_sandal,itm_he_sar_t1_common_a,itm_we_sar_sword_khyber,
-      itm_we_sar_blunt_maceiron,itm_ar_sar_shi_robe,itm_ar_sar_shi_robe_a,itm_ar_sar_shi_robe_b,
-      itm_ar_sar_tun_robebeige,itm_ar_sar_tun_robegreen,itm_ar_sar_tun_robered,itm_bo_sar_t2_shoes,
-      itm_we_sar_blunt_maceiron,itm_we_sar_blunt_club,itm_we_sar_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(60)|wp_polearm(40)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_throw_1|knows_riding_2|knows_horse_archery_1,
-    sarranid_man_face_younger_3,sarranid_man_face_young_4
-  ],
-  ["sarranid_e_extra3","I1 Begrudged Sarranid Millet","I1 Begrudged Sarranid Milletani",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_6,
-    [
-      itm_ar_sar_tun_robeblack,itm_bo_sar_t1_sandal,itm_he_sar_t1_common_a,itm_we_sar_sword_khyber,
-      itm_we_sar_blunt_maceiron,itm_ar_sar_shi_robe,itm_ar_sar_shi_robe_a,itm_ar_sar_shi_robe_b,
-      itm_ar_sar_tun_robebeige,itm_ar_sar_tun_robegreen,itm_ar_sar_tun_robered,itm_bo_sar_t2_shoes,
-      itm_we_sar_blunt_maceiron,itm_we_sar_blunt_club,itm_we_sar_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(60)|wp_polearm(40)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_throw_1|knows_riding_2|knows_horse_archery_1,
-    sarranid_man_face_younger_1,sarranid_man_face_young_4
-  ],
-  ["sarranid_e_extra4","I1 Travelling Sarranid Millet","I1 Travelling Sarranid Milletani",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_6,
-    [
-      itm_ar_sar_tun_robeblack,itm_bo_sar_t1_sandal,itm_he_sar_t1_common_a,itm_we_sar_sword_khyber,
-      itm_we_sar_blunt_maceiron,itm_ar_sar_shi_robe,itm_ar_sar_shi_robe_a,itm_ar_sar_shi_robe_b,
-      itm_ar_sar_tun_robebeige,itm_ar_sar_tun_robegreen,itm_ar_sar_tun_robered,itm_bo_sar_t2_shoes,
-      itm_we_sar_blunt_maceiron,itm_we_sar_blunt_club,itm_we_sar_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(60)|wp_polearm(40)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_throw_1|knows_riding_2|knows_horse_archery_1,
-    sarranid_man_face_younger_2,sarranid_man_face_young_3
-  ],
-  ["sarranid_e_extra5","I1 Docile Sarranid Millet","I1 Docile Sarranid Milletani",
-    tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_kingdom_6,
-    [
-      itm_ar_sar_tun_robeblack,itm_bo_sar_t1_sandal,itm_he_sar_t1_common_a,itm_we_sar_sword_khyber,
-      itm_we_sar_blunt_maceiron,itm_ar_sar_shi_robe,itm_ar_sar_shi_robe_a,itm_ar_sar_shi_robe_b,
-      itm_ar_sar_tun_robebeige,itm_ar_sar_tun_robegreen,itm_ar_sar_tun_robered,itm_bo_sar_t2_shoes,
-      itm_we_sar_blunt_maceiron,itm_we_sar_blunt_club,itm_we_sar_throw_stone
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(60)|wp_polearm(40)|wp_archery(50)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_throw_1|knows_riding_2|knows_horse_archery_1,
-    sarranid_man_face_younger_1,sarranid_man_face_young_4
-  ],
 
 ##Expanded troop tree
 
@@ -4653,56 +4246,6 @@ troops_part1 = [
     mercenary_woman_face_middle_2,mercenary_woman_face_older_4
   ],
 #Extra units. Not used in the mod, but are present for if you want to add a few new troops.
-  ["woman_e_extra1","I1 Lost Refugee","I1 Lost Refugees",
-    tf_female|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_commoners,
-    [
-      itm_dress_swadia_common_a,itm_bo_pla_t2_ankle,itm_he_swa_lad_common_a,itm_we_pla_sword_dagger,
-      itm_we_pla_spear_crook_shepperd,itm_we_vae_sword_sickle,itm_we_swa_axe_hatchet,itm_we_swa_blunt_club
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(60)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_shield_2|knows_riding_1,
-    mercenary_woman_face_younger_1,mercenary_woman_face_young_2
-  ],
-  ["woman_e_extra2","I1 Tired Refugee","I1 Tired Refugees",
-    tf_female|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_commoners,
-    [
-      itm_dress_swadia_common_a,itm_bo_pla_t2_ankle,itm_he_swa_lad_common_a,itm_we_pla_sword_dagger,
-      itm_we_pla_spear_crook_shepperd,itm_we_vae_sword_sickle,itm_we_swa_axe_hatchet,itm_we_swa_blunt_club
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(60)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_shield_2|knows_riding_1,
-    mercenary_woman_face_younger_3,mercenary_woman_face_young_4
-  ],
-  ["woman_e_extra3","I1 Slutty Refugee","I1 Slutty Refugees",
-    tf_female|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_commoners,
-    [
-      itm_dress_swadia_common_a,itm_bo_pla_t2_ankle,itm_he_swa_lad_common_a,itm_we_pla_sword_dagger,
-      itm_we_pla_spear_crook_shepperd,itm_we_vae_sword_sickle,itm_we_swa_axe_hatchet,itm_we_swa_blunt_club
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(60)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_shield_2|knows_riding_1,
-    mercenary_woman_face_younger_1,mercenary_woman_face_young_4
-  ],
-  ["woman_e_extra4","I1 Widowed Refugee","I1 Widowed Refugees",
-    tf_female|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_commoners,
-    [
-      itm_dress_swadia_common_a,itm_bo_pla_t2_ankle,itm_he_swa_lad_common_a,itm_we_pla_sword_dagger,
-      itm_we_pla_spear_crook_shepperd,itm_we_vae_sword_sickle,itm_we_swa_axe_hatchet,itm_we_swa_blunt_club
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(60)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_shield_2|knows_riding_1,
-    mercenary_woman_face_younger_2,mercenary_woman_face_young_3
-  ],
-  ["woman_e_extra5","I1 Wannabe Refugee","I1 Wannabe Refugees",
-    tf_female|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet,0,0,fac_commoners,
-    [
-      itm_dress_swadia_common_a,itm_bo_pla_t2_ankle,itm_he_swa_lad_common_a,itm_we_pla_sword_dagger,
-      itm_we_pla_spear_crook_shepperd,itm_we_vae_sword_sickle,itm_we_swa_axe_hatchet,itm_we_swa_blunt_club
-    ],
-    def_attrib|level(4),wp_one_handed(70)|wp_two_handed(50)|wp_polearm(40)|wp_archery(60)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_power_draw_1|knows_shield_2|knows_riding_1,
-    mercenary_woman_face_younger_1,mercenary_woman_face_young_4
-  ],
 ##
 
 ##Caravan Master #Minimal Items

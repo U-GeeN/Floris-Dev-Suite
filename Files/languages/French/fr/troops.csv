@@ -66,16 +66,6 @@ trp_mercenary_n_komtur_ritter|Cavalerie mercenaire
 trp_mercenary_n_komtur_ritter_pl|Cavalerie mercenaires
 trp_mercenary_n_extra1|Habitant rebelle
 trp_mercenary_n_extra1_pl|Habitants rebelles
-trp_mercenary_e_extra1|I1 Habitant rebelle
-trp_mercenary_e_extra1_pl|I1 Habitants rebelles
-trp_mercenary_e_extra2|I1 Habitant aventureux
-trp_mercenary_e_extra2_pl|I1 Habitants aventureuxs
-trp_mercenary_e_extra3|I1 Habitant forcé
-trp_mercenary_e_extra3_pl|I1 Habitants forcés
-trp_mercenary_e_extra4|I1 Habitant voyageur
-trp_mercenary_e_extra4_pl|I1 Habitants voyageurs
-trp_mercenary_e_extra5|I1 Habitant docile
-trp_mercenary_e_extra5_pl|I1 Habitants dociles
 trp_mercenaries_end|fin des mercenaires
 trp_mercenaries_end_pl|fin des mercenaires
 trp_swadian_n_peasant|Recrue Swadienne
@@ -200,16 +190,6 @@ trp_swadian_e_baron_mineures|C7 Baron Swadien
 trp_swadian_e_baron_mineures_pl|C7 Barons Swadiens
 trp_swadian_e_retinue_longbowman|A7 Archer d'élite Swadien
 trp_swadian_e_retinue_longbowman_pl|A7 Archers d'élite Swadiens
-trp_swadian_e_extra1|I1 Paysan rebelle Swadien
-trp_swadian_e_extra1_pl|I1 Paysans rebelles Swadiens
-trp_swadian_e_extra2|I1 Paysan aventureux Swadien
-trp_swadian_e_extra2_pl|I1 Paysans aventureux Swadiens
-trp_swadian_e_extra3|I1 Paysan forcé Swadien
-trp_swadian_e_extra3_pl|I1 Paysans forcés Swadiens
-trp_swadian_e_extra4|I1 Paysan voyageur Swadien
-trp_swadian_e_extra4_pl|I1 Paysans voyageurs Swadiens
-trp_swadian_e_extra5|I1 Paysan docile Swadien
-trp_swadian_e_extra5_pl|I1 Paysans dociles Swadiens
 trp_swadian_messenger|Messager Swadien
 trp_swadian_messenger_pl|Messagers Swadiens
 trp_swadian_deserter|Déserteur Swadien
@@ -288,16 +268,6 @@ trp_vaegir_r_extra4|I1 Kholop voyageur Vaegir
 trp_vaegir_r_extra4_pl|I1 Kholopy Vaegirs
 trp_vaegir_r_extra5|I1 Kholop docile Vaegir
 trp_vaegir_r_extra5_pl|I1 Kholopy Vaegirs
-trp_vaegir_e_extra1|I1 Kholop rebelle Vaegir
-trp_vaegir_e_extra1_pl|I1 Kholopy Vaegirs
-trp_vaegir_e_extra2|I1 Kholop aventureux Vaegir
-trp_vaegir_e_extra2_pl|I1 Kholopy Vaegirs
-trp_vaegir_e_extra3|I1 Kholop forcé Vaegir
-trp_vaegir_e_extra3_pl|I1 Kholopy Vaegirs
-trp_vaegir_e_extra4|I1 Kholop voyageur Vaegir
-trp_vaegir_e_extra4_pl|I1 Kholopy Vaegirs
-trp_vaegir_e_extra5|I1 Kholop docile Vaegir
-trp_vaegir_e_extra5_pl|I1 Kholopy Vaegirs
 trp_vaegir_messenger|Messager Vaegir
 trp_vaegir_messenger_pl|Messagers Vaegirs
 trp_vaegir_deserter|Déserteur Vaegir
@@ -368,16 +338,6 @@ trp_khergit_r_extra4|I1 Tariachin voyageur Khergit
 trp_khergit_r_extra4_pl|I1 Tariachinuud voyageurs Khergits
 trp_khergit_r_extra5|I1 Tariachin docile Khergit
 trp_khergit_r_extra5_pl|I1 Tariachinuud dociles Khergits
-trp_khergit_e_extra1|I1 Tariachin rebelle Khergit
-trp_khergit_e_extra1_pl|I1 Tariachinuud rebelles Khergits
-trp_khergit_e_extra2|I1 Tariachin aventureux Khergit
-trp_khergit_e_extra2_pl|I1 Tariachinuud aventureux Khergits
-trp_khergit_e_extra3|I1 Tariachin forcé Khergit
-trp_khergit_e_extra3_pl|I1 Tariachinuud forcés Khergits
-trp_khergit_e_extra4|I1 Tariachin voyageur Khergit
-trp_khergit_e_extra4_pl|I1 Tariachinuud voyageurs Khergits
-trp_khergit_e_extra5|I1 Tariachin docile Khergit
-trp_khergit_e_extra5_pl|I1 Tariachinuud dociles Khergits
 trp_khergit_messenger|Messager Khergit
 trp_khergit_messenger_pl|Messagers Khergits
 trp_khergit_deserter|Déserteur Khergit
@@ -454,16 +414,6 @@ trp_nord_r_extra4|I1 Bondi voyageur Nordique
 trp_nord_r_extra4_pl|I1 Bondir voyageurs Nordiques
 trp_nord_r_extra5|I1 Bondi docile Nordique
 trp_nord_r_extra5_pl|I1 Bondir dociles Nordiques
-trp_nord_e_extra1|I1 Bondi rebelle Nordique
-trp_nord_e_extra1_pl|I1 Bondir rebelles Nordiques
-trp_nord_e_extra2|I1 Bondi aventureux Nordique
-trp_nord_e_extra2_pl|I1 Bondir aventureux Nordiques
-trp_nord_e_extra3|I1 Bondi forcé Nordique
-trp_nord_e_extra3_pl|I1 Bondir forcés Nordiques
-trp_nord_e_extra4|I1 Bondi voyageur Nordique
-trp_nord_e_extra4_pl|I1 Bondir voyageurs Nordiques
-trp_nord_e_extra5|I1 Bondi docile Nordique
-trp_nord_e_extra5_pl|I1 Bondir dociles Nordiques
 trp_nord_messenger|Messager Nordique
 trp_nord_messenger_pl|Messagers Nordiques
 trp_nord_deserter|Déserteur Nordique
@@ -540,16 +490,6 @@ trp_rhodok_r_extra4|I1 Cittadino voyageur Rhodok
 trp_rhodok_r_extra4_pl|I1 Cittadini voyageurs Rhodoks
 trp_rhodok_r_extra5|I1 Cittadino docile Rhodok
 trp_rhodok_r_extra5_pl|I1 Cittadini dociles Rhodoks
-trp_rhodok_e_extra1|I1 Cittadino rebelle Rhodok
-trp_rhodok_e_extra1_pl|I1 Cittadini rebelles Rhodoks
-trp_rhodok_e_extra2|I1 Cittadino aventureux Rhodok
-trp_rhodok_e_extra2_pl|I1 Cittadini aventureux Rhodoks
-trp_rhodok_e_extra3|I1 Cittadino forcé Rhodok
-trp_rhodok_e_extra3_pl|I1 Cittadini forcés Rhodoks
-trp_rhodok_e_extra4|I1 Cittadino voyageur Rhodok
-trp_rhodok_e_extra4_pl|I1 Cittadini voyageurs Rhodoks
-trp_rhodok_e_extra5|I1 Cittadino docile Rhodok
-trp_rhodok_e_extra5_pl|I1 Cittadini dociles Rhodoks
 trp_rhodok_messenger|Messager Rhodok
 trp_rhodok_messenger_pl|Messagers Rhodoks
 trp_rhodok_deserter|Déserteur Rhodok
@@ -628,16 +568,6 @@ trp_sarranid_r_extra4|I1 Millet voyageur Sarranide
 trp_sarranid_r_extra4_pl|I1 Milletani voyageurs Sarranides
 trp_sarranid_r_extra5|I1 Millet docile Sarranide
 trp_sarranid_r_extra5_pl|I1 Milletani dociles Sarranides
-trp_sarranid_e_extra1|I1 Millet rebelle Sarranide
-trp_sarranid_e_extra1_pl|I1 Milletani rebelles Sarranides
-trp_sarranid_e_extra2|I1 Millet aventureux Sarranide
-trp_sarranid_e_extra2_pl|I1 Milletani aventureux Sarranides
-trp_sarranid_e_extra3|I1 Millet forcé Sarranide
-trp_sarranid_e_extra3_pl|I1 Milletani forcés Sarranides
-trp_sarranid_e_extra4|I1 Millet voyageur Sarranide
-trp_sarranid_e_extra4_pl|I1 Milletani voyageurs Sarranides
-trp_sarranid_e_extra5|I1 Millet docile Sarranide
-trp_sarranid_e_extra5_pl|I1 Milletani dociles Sarranides
 trp_sarranid_messenger|Messager Sarranide
 trp_sarranid_messenger_pl|Messagers Sarranides
 trp_sarranid_deserter|Déserteur Sarranide

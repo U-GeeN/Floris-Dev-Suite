@@ -170,16 +170,6 @@ trp_mercenary_e_landsknecht|I6 Najemny Landsknecht
 trp_mercenary_e_landsknecht_pl|I6 Najemnych Landsknechtów
 trp_mercenary_e_hochmeister|C6 Najemny Wielki Mistrz
 trp_mercenary_e_hochmeister_pl|C6 Najemnych Wielkich Mistrzów
-trp_mercenary_e_extra1|I1 Zbuntowany Mieszczanin
-trp_mercenary_e_extra1_pl|I1 Zbuntowani Mieszczanie
-trp_mercenary_e_extra2|I1 Awanturniczy Mieszczanin
-trp_mercenary_e_extra2_pl|I1 Awanturniczy Mieszczanie
-trp_mercenary_e_extra3|I1 Żałosny Mieszczanin
-trp_mercenary_e_extra3_pl|I1 Żałosni Mieszczanie
-trp_mercenary_e_extra4|I1 Podróżujący Mieszczanin
-trp_mercenary_e_extra4_pl|I1 Podróżujący Mieszczanie
-trp_mercenary_e_extra5|I1 Łagodny Mieszczanin
-trp_mercenary_e_extra5_pl|I1 Łagodni Mieszczanie
 trp_mercenaries_end|mercenaries end
 trp_mercenaries_end_pl|mercenaries end
 trp_swadian_n_peasant|Swadiański Rekrut
@@ -304,16 +294,6 @@ trp_swadian_e_baron_mineures|C7 Swadiański Baron klasy niższej
 trp_swadian_e_baron_mineures_pl|C7 Swadiańskich Baronów klasy niższej
 trp_swadian_e_retinue_longbowman|A7 Swadiański Doborowy łucznik z długim łukiem
 trp_swadian_e_retinue_longbowman_pl|A7 Swadiańskich Doborowych łuczników z długimi łukami
-trp_swadian_e_extra1|I1 Zbuntowany Swadiański Wieśniak
-trp_swadian_e_extra1_pl|I1 Zbuntowanych Swadiańskich Wieśniaków
-trp_swadian_e_extra2|I1 Awanturniczy Swadiański Wieśniak
-trp_swadian_e_extra2_pl|I1 Awanturniczych Swadiańskich Wieśniaków
-trp_swadian_e_extra3|I1 Żałosny Swadiański Wieśniak
-trp_swadian_e_extra3_pl|I1 Żałosnych Swadiańskich Wieśniaków
-trp_swadian_e_extra4|I1 Podróżujący Swadiański Wieśniak
-trp_swadian_e_extra4_pl|I1 Podróżujących Swadiańskich Wieśniaków
-trp_swadian_e_extra5|I1 Łagodny Swadiański Wieśniak
-trp_swadian_e_extra5_pl|I1 Łagodnych Swadiańskich Wieśniaków
 trp_swadian_messenger|Swadiański Posłaniec
 trp_swadian_messenger_pl|Swadiańskich Posłańców
 trp_swadian_deserter|Swadiański Dezerter
@@ -578,16 +558,6 @@ trp_khergit_e_cherbi|C7 Khergicki Cherbi
 trp_khergit_e_cherbi_pl|C7 Khergickich Cherbinów
 trp_khergit_e_mandugai|H7 Khergicki Mandugai
 trp_khergit_e_mandugai_pl|H7 Khergickich Mandugainów
-trp_khergit_e_extra1|I1 Zbuntowany Khergicki Plemieniec
-trp_khergit_e_extra1_pl|I1 Zbuntowanych Khergickich Plemieńców
-trp_khergit_e_extra2|I1 Awanturniczy Khergicki Plemieniec
-trp_khergit_e_extra2_pl|I1 Awanturniczych Khergickich Plemieńców
-trp_khergit_e_extra3|I1 Żałosny Khergicki Plemieniec
-trp_khergit_e_extra3_pl|I1 Żałosnych Khergickich Plemieńców
-trp_khergit_e_extra4|I1 Podróżujący Khergicki Plemieniec
-trp_khergit_e_extra4_pl|I1 Podróżujących Khergickich Plemieńców
-trp_khergit_e_extra5|I1 Łagodny Khergicki Plemieniec
-trp_khergit_e_extra5_pl|I1 Łagodnych Khergickich Plemieńców
 trp_khergit_messenger|Khergicki Posłaniec
 trp_khergit_messenger_pl|Khergickich Posłańców
 trp_khergit_deserter|Khergicki Dezerter
@@ -720,16 +690,6 @@ trp_nord_e_aetheling|I7 Nordycki Aetheling
 trp_nord_e_aetheling_pl|I7 Nordyckich Aethelingerów
 trp_nord_e_vaeringi|I7 Nordycki Vaeringi
 trp_nord_e_vaeringi_pl|I7 Nordyckich Vaeringirów
-trp_nord_e_extra1|I1 Zbuntowany Nordycki rolnik
-trp_nord_e_extra1_pl|I1 Zbuntowanych Nordyckich rolników
-trp_nord_e_extra2|I1 Awanturniczy Nordycki rolnik
-trp_nord_e_extra2_pl|I1 Awanturniczych Nordyckich rolników
-trp_nord_e_extra3|I1 Żałosny Nordycki rolnik
-trp_nord_e_extra3_pl|I1 Żałosnych Nordyckich rolników
-trp_nord_e_extra4|I1 Podróżujący Nordycki rolnik
-trp_nord_e_extra4_pl|I1 Podróżujących Nordyckich rolników
-trp_nord_e_extra5|I1 Łagodny Nordycki rolnik
-trp_nord_e_extra5_pl|I1 Łagodnych Nordyckich rolników
 trp_nord_messenger|Nordycki Posłaniec
 trp_nord_messenger_pl|Nordyckich Posłańców
 trp_nord_deserter|Nordycki Dezerter
@@ -860,16 +820,6 @@ trp_rhodok_e_condottiero_d_assedio|A7 Rhodocki Kondotier Oblężeń
 trp_rhodok_e_condottiero_d_assedio_pl|A7 Rhodockich Kondotierów Oblężeń
 trp_rhodok_e_condottiero|I7 Rhodocki Kondotier
 trp_rhodok_e_condottiero_pl|I7 Rhodockich Kondotierów
-trp_rhodok_e_extra1|I1 Zbuntowany Rhodocki Obywaltel
-trp_rhodok_e_extra1_pl|I1 Zbuntowanych Rhodockich Obywalteli
-trp_rhodok_e_extra2|I1 Awanturniczych Rhodocki Obywaltel
-trp_rhodok_e_extra2_pl|I1 Awanturniczych Rhodockich Obywalteli
-trp_rhodok_e_extra3|I1 Żałosny Rhodocki Obywaltel
-trp_rhodok_e_extra3_pl|I1 Żałosnych Rhodockich Obywalteli
-trp_rhodok_e_extra4|I1 Podróżujący Rhodocki Obywaltel
-trp_rhodok_e_extra4_pl|I1 Podróżujących Rhodockich Obywalteli
-trp_rhodok_e_extra5|I1 Łagodny Rhodocki Obywaltel
-trp_rhodok_e_extra5_pl|I1 Łagodnych Rhodockich Obywalteli
 trp_rhodok_messenger|Rhodocki Posłaniec
 trp_rhodok_messenger_pl|Rhodockich Posłańców
 trp_rhodok_deserter|Rhodocki Dezerter
@@ -1004,16 +954,6 @@ trp_sarranid_e_hasham|C7 Sarranidzki Hasham
 trp_sarranid_e_hasham_pl|C7 Sarranidzkich Hashamlerów
 trp_sarranid_e_iqta_dar|H7 Sarranidzki Iqta'dar
 trp_sarranid_e_iqta_dar_pl|H7 Sarranidzkich Iqta'darani
-trp_sarranid_e_extra1|I1 Zbuntowany Sarranidzki Millet
-trp_sarranid_e_extra1_pl|I1 Zbuntowanych Sarranidzkich Milletów
-trp_sarranid_e_extra2|I1 Awanturniczy Sarranidzki Millet
-trp_sarranid_e_extra2_pl|I1 Awanturniczych Sarranidzkich Milletów
-trp_sarranid_e_extra3|I1 Żałosny Sarranidzki Millet
-trp_sarranid_e_extra3_pl|I1 Żałosnych Sarranidzkich Milletów
-trp_sarranid_e_extra4|I1 Podróżujący Sarranidzki Millet
-trp_sarranid_e_extra4_pl|I1 Podróżujących Sarranidzkich Milletów
-trp_sarranid_e_extra5|I1 Łagodny Sarranidzki Millet
-trp_sarranid_e_extra5_pl|I1 Łagodnych Sarranidzkich Milletów
 trp_sarranid_messenger|Sarranidzki Posłaniec
 trp_sarranid_messenger_pl|Sarranidzkich Posłańców
 trp_sarranid_deserter|Sarranidzki Dezerter
@@ -1504,16 +1444,6 @@ trp_woman_e_black_widow|H6 Czarna Wdowa
 trp_woman_e_black_widow_pl|H6 Czarne Wdowy
 trp_woman_e_walkure|C6 Walkiria
 trp_woman_e_walkure_pl|C6 Walkirie
-trp_woman_e_extra1|I1 Zagubiona Uciekinierka
-trp_woman_e_extra1_pl|I1 Zagubione Uciekinierki
-trp_woman_e_extra2|I1 Zmęczona Uciekinierka
-trp_woman_e_extra2_pl|I1 Zmęczone Uciekinierki
-trp_woman_e_extra3|I1 Wyuzdana Uciekinierka
-trp_woman_e_extra3_pl|I1 Wyuzdane Uciekinierki
-trp_woman_e_extra4|I1 Owdowiona Uciekinierka
-trp_woman_e_extra4_pl|I1 Owdowione Uciekinierki
-trp_woman_e_extra5|I1 Ochotniczka Uciekinierka
-trp_woman_e_extra5_pl|I1 Ochotniczki Uciekinierki
 trp_caravan_master|Dowódca Karawany
 trp_caravan_master_pl|Dowódcy Karawany
 trp_kidnapped_girl|Porwane Dziewczę

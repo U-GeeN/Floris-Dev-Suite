@@ -1283,16 +1283,6 @@ trp_mercenary_e_landsknecht|I6 Landsknecht-Landsknecht
 trp_mercenary_e_landsknecht_pl|I6 Landsknecht-Landsknechte
 trp_mercenary_e_hochmeister|C6 Landsknecht-Hochmeister
 trp_mercenary_e_hochmeister_pl|C6 Landsknecht-Hochmeister
-trp_mercenary_e_extra1|I1 Rebellischer Städter
-trp_mercenary_e_extra1_pl|I1 Rebellische Städter
-trp_mercenary_e_extra2|I1 Verwegener Städter
-trp_mercenary_e_extra2_pl|I1 Verwegene Städter
-trp_mercenary_e_extra3|I1 Missgünstiger Städter
-trp_mercenary_e_extra3_pl|I1 Missgünstige Städter
-trp_mercenary_e_extra4|I1 Umherziehender Städter
-trp_mercenary_e_extra4_pl|I1 Umherziehende Städter
-trp_mercenary_e_extra5|I1 Fügsamer Städter
-trp_mercenary_e_extra5_pl|I1 Fügsame Städter
 trp_swadian_n_peasant|Schwadischer Rekrut
 trp_swadian_n_peasant_pl|Schwadische Rekruten
 trp_swadian_n_militia|Schwadische Miliz
@@ -1415,16 +1405,6 @@ trp_swadian_e_baron_mineures|C7 Schwadischer Freiherr-Mineure
 trp_swadian_e_baron_mineures_pl|C7 Schwadische Freiherr-Mineure
 trp_swadian_e_retinue_longbowman|A7 Schwadischer Garde-Lanbogenschütze
 trp_swadian_e_retinue_longbowman_pl|A7 Schwadische Garde-Lanbogenschützen
-trp_swadian_e_extra1|I1 Rebellischer Schwadischer Bauer
-trp_swadian_e_extra1_pl|I1 Rebellische Schwadische Bauern
-trp_swadian_e_extra2|I1 Verwegener Schwadischer Bauer
-trp_swadian_e_extra2_pl|I1 Verwegene Schwadische Bauern
-trp_swadian_e_extra3|I1 Missgünstiger Schwadischer Bauer
-trp_swadian_e_extra3_pl|I1 Missgünstige Schwadische Bauern
-trp_swadian_e_extra4|I1 Umherziehender Schwadischer Bauer
-trp_swadian_e_extra4_pl|I1 Umherziehende Schwadische Bauern
-trp_swadian_e_extra5|I1 Fügsamer Schwadischer Bauer
-trp_swadian_e_extra5_pl|I1 Fügsame Schwadische Bauern
 trp_vaegir_n_kholop|Vaegier-Rekrut
 trp_vaegir_n_kholop_pl|Vaegier-Rekruten
 trp_vaegir_n_otrok|Vaegier-Fußsoldat
@@ -1673,16 +1653,6 @@ trp_khergit_e_cherbi|C7 Khergit-Cherbi
 trp_khergit_e_cherbi_pl|C7 Khergit-Cherbinuud
 trp_khergit_e_mandugai|H7 Khergit-Mandugai
 trp_khergit_e_mandugai_pl|H7 Khergit-Mandugainuud
-trp_khergit_e_extra1|I1 Rebellischer Khergit-Tariachin
-trp_khergit_e_extra1_pl|I1 Rebellische Khergit-Tariachinuud
-trp_khergit_e_extra2|I1 Verwegener Khergit-Tariachin
-trp_khergit_e_extra2_pl|I1 Verwegene Khergit-Tariachinuud
-trp_khergit_e_extra3|I1 Missgünstiger Khergit-Tariachin
-trp_khergit_e_extra3_pl|I1 Missgünstige Khergit-Tariachinuud
-trp_khergit_e_extra4|I1 Umherziehender Khergit-Tariachin
-trp_khergit_e_extra4_pl|I1 Umherziehende Khergit-Tariachinuud
-trp_khergit_e_extra5|I1 Fügsamer Khergit-Tariachin
-trp_khergit_e_extra5_pl|I1 Fügsame Khergit-Tariachinuud
 trp_nord_n_bondi|Nord-Rekrut
 trp_nord_n_bondi_pl|Nord-Rekruten
 trp_nord_n_huskarl|Nord-Fußsoldat
@@ -1807,16 +1777,6 @@ trp_nord_e_aetheling|I7 Nord-Aetheling
 trp_nord_e_aetheling_pl|I7 Nord-Aethelinger
 trp_nord_e_vaeringi|I7 Nord-Vaeringi
 trp_nord_e_vaeringi_pl|I7 Nord-Vaeringir
-trp_nord_e_extra1|I1 Rebellischer Nord-Bondi
-trp_nord_e_extra1_pl|I1 Rebellische Nord-Bondir
-trp_nord_e_extra2|I1 Verwegener Nord-Bondi
-trp_nord_e_extra2_pl|I1 Verwegene Nord-Bondir
-trp_nord_e_extra3|I1 Missgünstiger Nord-Bondi
-trp_nord_e_extra3_pl|I1 Missgünstige Nord-Bondir
-trp_nord_e_extra4|I1 Umherziehender Nord-Bondi
-trp_nord_e_extra4_pl|I1 Umherziehende Nord-Bondir
-trp_nord_e_extra5|I1 Fügsamer Nord-Bondi
-trp_nord_e_extra5_pl|I1 Fügsame Nord-Bondir
 trp_rhodok_n_cittadino|Rhodok-Stammeskrieger
 trp_rhodok_n_cittadino_pl|Rhodok-Stammeskrieger
 trp_rhodok_n_novizio|Rhodok-Speerträger
@@ -1939,16 +1899,6 @@ trp_rhodok_e_condottiero_d_assedio|A7 Rhodok-Condottiero d'Assedio
 trp_rhodok_e_condottiero_d_assedio_pl|A7 Rhodok-Condottieri d'Assedi
 trp_rhodok_e_condottiero|I7 Rhodok-Condottiero
 trp_rhodok_e_condottiero_pl|I7 Rhodok-Condottieri
-trp_rhodok_e_extra1|I1 Rebellischer Rhodok-Cittadino
-trp_rhodok_e_extra1_pl|I1 Rebellische Rhodok-Cittadini
-trp_rhodok_e_extra2|I1 Verwegener Rhodok-Cittadino
-trp_rhodok_e_extra2_pl|I1 Verwegene Rhodok-Cittadini
-trp_rhodok_e_extra3|I1 Missgünstiger Rhodok-Cittadino
-trp_rhodok_e_extra3_pl|I1 Missgünstige Rhodok-Cittadini
-trp_rhodok_e_extra4|I1 Umherziehender Rhodok-Cittadino
-trp_rhodok_e_extra4_pl|I1 Umherziehende Rhodok-Cittadini
-trp_rhodok_e_extra5|I1 Fügsamer Rhodok-Cittadino
-trp_rhodok_e_extra5_pl|I1 Fügsame Rhodok-Cittadini
 trp_sarranid_n_millet|Sarranidischer Rekrut
 trp_sarranid_n_millet_pl|Sarranidische Rekruten
 trp_sarranid_n_ajam|Sarranidischer Fußsoldat
@@ -2075,16 +2025,6 @@ trp_sarranid_e_hasham|C7 Sarranidischer Hasham
 trp_sarranid_e_hasham_pl|C7 Sarranidische Hashamler
 trp_sarranid_e_iqta_dar|H7 Sarranidischer Iqta'dar
 trp_sarranid_e_iqta_dar_pl|H7 Sarranidische Iqta'darani
-trp_sarranid_e_extra1|I1 Rebellischer Sarranidischer Millet
-trp_sarranid_e_extra1_pl|I1 Rebellische Sarranidische Milletani
-trp_sarranid_e_extra2|I1 Verwegener Sarranidischer Millet
-trp_sarranid_e_extra2_pl|I1 Verwegene Sarranidische Milletani
-trp_sarranid_e_extra3|I1 Missgünstiger Sarranidischer Millet
-trp_sarranid_e_extra3_pl|I1 Missgünstige Sarranidische Milletani
-trp_sarranid_e_extra4|I1 Umherziehender Sarranidischer Millet
-trp_sarranid_e_extra4_pl|I1 Umherziehende Sarranidische Milletani
-trp_sarranid_e_extra5|I1 Fügsamer Sarranidischer Millet
-trp_sarranid_e_extra5_pl|I1 Fügsame Sarranidische Milletani
 trp_custom_n_recruit|Freilandser-Rekrut
 trp_custom_n_recruit_pl|Freilandser-Rekruten
 trp_custom_n_recruit_equip|Freilandser-Rekrut
@@ -2567,16 +2507,6 @@ trp_woman_e_black_widow|H6 Schwarze Witwe
 trp_woman_e_black_widow_pl|H6 Schwarze Witwen
 trp_woman_e_walkure|C6 Walküre
 trp_woman_e_walkure_pl|C6 Walküren
-trp_woman_e_extra1|I1 Verlorener Flüchtling
-trp_woman_e_extra1_pl|I1 Verlorene Flüchtlinge
-trp_woman_e_extra2|I1 Müder Flüchtling
-trp_woman_e_extra2_pl|I1 Müde Flüchtlinge
-trp_woman_e_extra3|I1 Verlotterter Flüchtling
-trp_woman_e_extra3_pl|I1 Verlotterte Flüchtlinge
-trp_woman_e_extra4|I1 Verwitweter Flüchtling
-trp_woman_e_extra4_pl|I1 Verwitweter Flüchtlinge
-trp_woman_e_extra5|I1 Möchtegern-Flüchtling
-trp_woman_e_extra5_pl|I1 Möchtegern-Flüchtlinge
 trp_swadian_town_walker_m_average|Städter
 trp_swadian_town_walker_m_average_pl|Städter
 trp_swadian_town_walker_f_average|Städterin
