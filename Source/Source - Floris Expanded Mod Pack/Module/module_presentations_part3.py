@@ -1488,7 +1488,7 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_nord_e_axeman", 500, 350),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_khergit_e_kipchak", 500, 270),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 20, "trp_khergit_e_qubuci", 500, 190),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_vaegir_e_yesaul", 790, 430),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_vaegir_e_junior_druzhinnik", 790, 430),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 22, "trp_vaegir_e_zalstrelshik", 790, 350),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 23, "trp_sarranid_e_timariot", 790, 270),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 24, "trp_sarranid_e_badw", 790, 190),

@@ -1698,7 +1698,7 @@ scripts_part1 = [
 #	(troop_set_slot, troop_trees_2, slot_vaegir_golova, "trp_vaegir_e_golova"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_luchnik, "trp_vaegir_e_luchnik"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_druzhinnik, "trp_vaegir_e_druzhinnik"),
-  (troop_set_slot, troop_trees_2, slot_vaegir_druzhinnik_veteran, "trp_vaegir_e_ratnik_infantry"),
+  #(troop_set_slot, troop_trees_2, slot_vaegir_druzhinnik_veteran, "trp_vaegir_e_ratnik_infantry"),
 	#Tier 6
 #	(troop_set_slot, troop_trees_2, slot_vaegir_legkoy_vityas, "trp_vaegir_e_legkoy_vityas"),
 	(troop_set_slot, troop_trees_2, slot_vaegir_vityas, "trp_vaegir_e_vityas"),
@@ -1710,10 +1710,10 @@ scripts_part1 = [
 	(troop_set_slot, troop_trees_2, slot_vaegir_sokoliniy_glaz, "trp_vaegir_e_sokoliniy_glaz"),
 	#Extra
   (troop_set_slot, troop_trees_2, slot_vaegir_extra1, "trp_vaegir_e_varangian_guard"),
-  (troop_set_slot, troop_trees_2, slot_vaegir_extra2, "trp_vaegir_e_adventurous_kholop"),
-  (troop_set_slot, troop_trees_2, slot_vaegir_extra3, "trp_vaegir_e_begrudged_kholop"),
-  (troop_set_slot, troop_trees_2, slot_vaegir_extra4, "trp_vaegir_e_travelling_kholop"),
-  (troop_set_slot, troop_trees_2, slot_vaegir_extra5, "trp_vaegir_e_docile_kholop"),
+  #(troop_set_slot, troop_trees_2, slot_vaegir_extra2, "trp_vaegir_e_adventurous_kholop"),
+  #(troop_set_slot, troop_trees_2, slot_vaegir_extra3, "trp_vaegir_e_begrudged_kholop"),
+  #(troop_set_slot, troop_trees_2, slot_vaegir_extra4, "trp_vaegir_e_travelling_kholop"),
+  #(troop_set_slot, troop_trees_2, slot_vaegir_extra5, "trp_vaegir_e_docile_kholop"),
 	###Khergit
 	##Native
 	#Tier 1
@@ -3101,8 +3101,8 @@ scripts_part1 = [
 		  (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_archer, "trp_swadian_e_selfbow_archer"),
 		  (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_swadian_e_lancer"),
 		  (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_cavalry, "trp_swadian_e_chevalier_banneret"),
-		  (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_vaegir_e_noble_novice"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_vaegir_e_ratnik_infantry"),
+		  (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_vaegir_e_footman"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_vaegir_e_ratnik"),
       (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_vaegir_e_luchnik_militia"),
 		  (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_archer, "trp_vaegir_e_luchnik"),
       (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_cavalry, "trp_vaegir_e_mounted_ratnik"),
