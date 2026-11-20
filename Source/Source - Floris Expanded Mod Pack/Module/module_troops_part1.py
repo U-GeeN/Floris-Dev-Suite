@@ -1543,17 +1543,17 @@ troops_part1 = [
     knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_2|knows_shield_2|knows_athletics_2|knows_riding_1|knows_horse_archery_1,
     vaegir_man_face_young_1,vaegir_man_face_old_2
   ],
-  ["vaegir_e_junior_druzhinnik","C4 Vaegir Junior Druzhinnik","C4 Vaegir Junior Druzhinniki",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_rus_brownlight,itm_ar_vae_t4_jerkin_d,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_b,
-      itm_ga_vae_a4_leather,itm_sh_vae_kit_leather,itm_we_vae_sword_cleaverwar,itm_we_vae_sword_sickle_military
-    ],
-    def_attrib|level(24),wp_one_handed(156)|wp_two_handed(154)|wp_polearm(128)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_3|knows_power_strike_7|knows_power_draw_3|knows_shield_2|knows_athletics_3|knows_riding_2|knows_horse_archery_1,
-    vaegir_man_face_young_1,vaegir_man_face_old_2
-  ],
-["vaegir_e_mounted_ratnik","H4 Vaegir Ratnik","H4 Vaegir Ratniki",
+  # ["vaegir_e_junior_druzhinnik","C4 Vaegir Junior Druzhinnik","C4 Vaegir Junior Druzhinniki",
+  #   tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
+  #   [
+  #     itm_ho_vae_rus_brownlight,itm_ar_vae_t4_jerkin_d,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_b,
+  #     itm_ga_vae_a4_leather,itm_sh_vae_kit_leather,itm_we_vae_sword_cleaverwar,itm_we_vae_sword_sickle_military
+  #   ],
+  #   def_attrib|level(24),wp_one_handed(156)|wp_two_handed(154)|wp_polearm(128)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
+  #   knows_common|knows_ironflesh_3|knows_power_strike_7|knows_power_draw_3|knows_shield_2|knows_athletics_3|knows_riding_2|knows_horse_archery_1,
+  #   vaegir_man_face_young_1,vaegir_man_face_old_2
+  # ],
+["vaegir_e_junior_druzhinnik","H4 Vaegir Junior Druzhinnik","H4 Vaegir Junior Druzhinniki",
     tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
     [
       itm_ho_vae_rus_redroan,itm_ar_vae_t3_padded_c,itm_bo_vae_t3_leather,itm_he_vae_t3_furcap_c,
@@ -1601,7 +1601,7 @@ troops_part1 = [
     knows_common|knows_ironflesh_5|knows_power_strike_5|knows_power_draw_2|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_1,
     vaegir_man_face_middle_1,vaegir_man_face_older_2
   ],
-  ["vaegir_e_posadnik","H5 Vaegir Posadnik","H5 Vaegir Posadniki",
+  ["vaegir_e_druzhinnik","H5 Vaegir Druzhinnik","H5 Vaegir Druzhinniki",
     tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
     [
       itm_ho_vae_war_eagleblack,itm_ar_vae_t4_jerkin_j,itm_bo_vae_t4_shoes,itm_he_vae_t4_helmet_e,
@@ -1612,7 +1612,7 @@ troops_part1 = [
     knows_common|knows_ironflesh_4|knows_power_strike_4|knows_power_draw_5|knows_shield_2|knows_athletics_2|knows_riding_3|knows_horse_archery_3,
     vaegir_man_face_middle_1,vaegir_man_face_older_4
   ],
-#  ["vaegir_e_golova","H5 Vaegir Golova","H5 Vaegir Golovy",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,												[itm_ho_vae_rus_blueroan											,itm_ar_vae_t4_jerkin_g											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_f				,itm_ga_vae_a4_leather			,itm_sh_vae_hae_striped_b		,itm_we_vae_bow_black					,itm_we_vae_sword_sickle_military		,itm_we_vae_arrow_sharp					,itm_ho_vae_rus_redroan],def_attrib|level(29),wp_one_handed(195)|wp_two_handed(63)|wp_polearm(83)|wp_archery(231)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_7|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_4,vaegir_man_face_middle_1,vaegir_man_face_older_4],
+  ["vaegir_e_golova","H5 Vaegir Elitniy Druzhinnik","H5 Vaegir Golovy",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,												[itm_ho_vae_rus_blueroan											,itm_ar_vae_t4_jerkin_g											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_f				,itm_ga_vae_a4_leather			,itm_sh_vae_hae_striped_b		,itm_we_vae_bow_black					,itm_we_vae_sword_sickle_military		,itm_we_vae_arrow_sharp					,itm_ho_vae_rus_redroan],def_attrib|level(29),wp_one_handed(195)|wp_two_handed(63)|wp_polearm(83)|wp_archery(231)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_7|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_4,vaegir_man_face_middle_1,vaegir_man_face_older_4],
   ["vaegir_e_luchnik","A5 Vaegir Luchnik","A5 Vaegir Luchniki",
     tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,
     [
@@ -1623,17 +1623,17 @@ troops_part1 = [
     knows_common|knows_ironflesh_4|knows_power_strike_4|knows_power_draw_5|knows_shield_2|knows_athletics_3|knows_horse_archery_1,
     vaegir_man_face_middle_1,vaegir_man_face_older_4
   ],
-  ["vaegir_e_druzhinnik","C5 Vaegir Druzhinnik","C5 Vaegir Druzhinniki",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_rus_chestnutmealy,itm_ar_vae_t5_studded_c,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_c,
-      itm_ga_vae_a4_leather,itm_sh_vae_kit_heavy,itm_we_vae_blunt_greathammer,itm_we_vae_blunt_hammerempirewar,
-      itm_we_vae_blunt_hammerbastard,itm_we_vae_blunt_maul_manhunter
-    ],
-    def_attrib|level(26),wp_one_handed(170)|wp_two_handed(170)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),
-    knows_common|knows_ironflesh_4|knows_power_strike_6|knows_power_throw_2|knows_power_draw_3|knows_shield_1|knows_athletics_2|knows_riding_2|knows_horse_archery_1,
-    vaegir_man_face_middle_3,vaegir_man_face_older_4
-  ],
+  # ["vaegir_e_druzhinnik","C5 Vaegir Elitniy Druzhinnik","C5 Vaegir Druzhinniki",
+  #   tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
+  #   [
+  #     itm_ho_vae_rus_chestnutmealy,itm_ar_vae_t5_studded_c,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_c,
+  #     itm_ga_vae_a4_leather,itm_sh_vae_kit_heavy,itm_we_vae_blunt_greathammer,itm_we_vae_blunt_hammerempirewar,
+  #     itm_we_vae_blunt_hammerbastard,itm_we_vae_blunt_maul_manhunter
+  #   ],
+  #   def_attrib|level(26),wp_one_handed(170)|wp_two_handed(170)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),
+  #   knows_common|knows_ironflesh_4|knows_power_strike_6|knows_power_throw_2|knows_power_draw_3|knows_shield_1|knows_athletics_2|knows_riding_2|knows_horse_archery_1,
+  #   vaegir_man_face_middle_3,vaegir_man_face_older_4
+  # ],
   ["vaegir_e_ratnik","I5 Vaegir Ratnik","I5 Vaegir Ratniki",
     tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
     [
@@ -1646,19 +1646,19 @@ troops_part1 = [
   ],
 #Tier 6
 #  ["vaegir_e_legkoy_vityas","C6 Vaegir Legkoy Vityas","C6 Vaegir Legkoi Vityasy",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,												[itm_ho_vae_rus_baybrindle											,itm_ar_vae_t6_banded_a											,itm_bo_vae_t6_leather											,itm_he_vae_t6_warhelmet_a			,itm_ga_vae_a6_black			,itm_sh_vae_kit_vaegir_a		,itm_we_vae_spear_lancefootman			,itm_we_vae_sword_cleaverwar													,itm_ho_vae_rus_palomino,itm_ho_vae_rus_brownlight,itm_he_vae_t6_warhelmet_b,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c],def_attrib|level(36),wp_one_handed(137)|wp_two_handed(232)|wp_polearm(249)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),knows_common|knows_ironflesh_6|knows_power_strike_8|knows_power_draw_3|knows_shield_5|knows_athletics_3|knows_riding_5|knows_horse_archery_1,vaegir_man_face_middle_1,vaegir_man_face_older_2],
-  ["vaegir_e_vityas","C6 Vaegir Vityaz","C6 Vaegir Vityazy",
-    tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
-    [
-      itm_ho_vae_war_eaglewhite,itm_ar_vae_t6_kuyak_a,itm_bo_vae_t6_leather,itm_he_vae_t6_warhelmet_c,
-      itm_ga_vae_a6_red,itm_sh_vae_kit_vaegir_a,itm_we_vae_spear_lancefootman,itm_we_vae_sword_cleaver_butcher,
-      itm_ho_vae_war_imperial,itm_ar_vae_t6_kuyak_b,itm_he_vae_t6_warhelmet_d,itm_sh_vae_kit_vaegir_b,
-      itm_sh_vae_kit_vaegir_c
-    ],
-    def_attrib|level(35),wp_one_handed(233)|wp_two_handed(128)|wp_polearm(242)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_6|knows_power_strike_6|knows_power_draw_2|knows_shield_4|knows_athletics_3|knows_riding_4|knows_horse_archery_1,
-    vaegir_man_face_middle_1,vaegir_man_face_older_2
-  ],
-  ["vaegir_e_voevoda","H6 Vaegir Voevoda","H6 Vaegir Voevody",
+  # ["vaegir_e_vityas","C6 Vaegir Vityaz","C6 Vaegir Vityazy",
+  #   tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
+  #   [
+  #     itm_ho_vae_war_eaglewhite,itm_ar_vae_t6_kuyak_a,itm_bo_vae_t6_leather,itm_he_vae_t6_warhelmet_c,
+  #     itm_ga_vae_a6_red,itm_sh_vae_kit_vaegir_a,itm_we_vae_spear_lancefootman,itm_we_vae_sword_cleaver_butcher,
+  #     itm_ho_vae_war_imperial,itm_ar_vae_t6_kuyak_b,itm_he_vae_t6_warhelmet_d,itm_sh_vae_kit_vaegir_b,
+  #     itm_sh_vae_kit_vaegir_c
+  #   ],
+  #   def_attrib|level(35),wp_one_handed(233)|wp_two_handed(128)|wp_polearm(242)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
+  #   knows_common|knows_ironflesh_6|knows_power_strike_6|knows_power_draw_2|knows_shield_4|knows_athletics_3|knows_riding_4|knows_horse_archery_1,
+  #   vaegir_man_face_middle_1,vaegir_man_face_older_2
+  # ],
+  ["vaegir_e_elitniy_druzhinnik","H6 Vaegir Elitniy Druzhinnik","H6 Vaegir Elitniye Druzhinniki",
     tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
     [
       itm_ho_vae_long_eagleblack,itm_ar_vae_t5_studded_a,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_e,
@@ -1679,7 +1679,7 @@ troops_part1 = [
     knows_common|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_6|knows_shield_2|knows_athletics_4|knows_horse_archery_1,
     vaegir_man_face_middle_1,vaegir_man_face_older_4
   ],
-  ["vaegir_e_elitniy_druzhinnik","C6 Vaegir Elitniy Druzhinnik","C6 Vaegir Elitniy Druzhinniki",
+  ["vaegir_e_voevoda","C6 Vaegir Voevoda","C6 Vaegir Voevody", #"C6 Vaegir Elitniy Druzhinnik","C6 Vaegir Elitniy Druzhinniki",
     tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,
     [
       itm_ho_vae_war_scaledbrown,itm_ar_vae_t6_cuirbouilli_a,itm_bo_vae_t6_leather,itm_he_vae_t6_warhelmet_e,
@@ -1705,7 +1705,7 @@ troops_part1 = [
     knows_common|knows_ironflesh_8|knows_power_strike_9|knows_power_draw_3|knows_shield_6|knows_athletics_3|knows_riding_7|knows_horse_archery_1,
     vaegir_man_face_middle_1,vaegir_man_face_older_2
   ],
-  ["vaegir_e_sokoliniy_glaz","A7 Vaegir Sokoliniy Glaz","A7 Vaegir Sokoliniy Glazy",
+  ["vaegir_e_vityas","H7 Vaegir Vityaz","H7 Vaegir Vityazy",
     tf_guarantee_ranged|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,
     [
       itm_ar_vae_t5_studded_b,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_f,itm_ga_vae_a4_leather,

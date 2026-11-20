@@ -741,10 +741,10 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 12, "trp_vaegir_e_boyar", 620, 164), # C5
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 13, "trp_vaegir_e_varangian_guard", 760, 342), # I6
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 11, "trp_vaegir_e_ratnik", 620, 342), # I5 Veteran Druzhinnik
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_vaegir_e_elitniy_druzhinnik", 760, 164), # C6 Elitniy Druzhinnik
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_vaegir_e_vityas", 760, 253), # C6
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 14, "trp_vaegir_e_voevoda", 760, 164), # C6 Voevoda
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 15, "trp_vaegir_e_elitniy_druzhinnik", 760, 253), # C6
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 16, "trp_vaegir_e_metkiy_luchnik", 760, 431), # A6
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_vaegir_e_sokoliniy_glaz", 900, 431), # A7
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 17, "trp_vaegir_e_vityas", 900, 431), # A7
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_vaegir_e_knyazs_guard", 900, 164), # C7
 
         ## cost
@@ -762,7 +762,7 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_boyar", 675, 219),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_ratnik", 675, 397),
         (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_metkiy_luchnik", 815, 486),
-        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_elitniy_druzhinnik", 815, 219),
+        (call_script, "script_prsnt_upgrade_tree_troop_cost", "trp_vaegir_e_voevoda", 815, 219),
         ## cost
 
         ##### - lines
@@ -1488,7 +1488,7 @@ presentations_part3 = [
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 18, "trp_nord_e_axeman", 500, 350),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 19, "trp_khergit_e_kipchak", 500, 270),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 20, "trp_khergit_e_qubuci", 500, 190),
-        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_vaegir_e_junior_druzhinnik", 790, 430),
+        (call_script, "script_prsnt_upgrade_tree_troop_and_name", 21, "trp_vaegir_e_trained_footman", 790, 430),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 22, "trp_vaegir_e_zalstrelshik", 790, 350),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 23, "trp_sarranid_e_timariot", 790, 270),
         (call_script, "script_prsnt_upgrade_tree_troop_and_name", 24, "trp_sarranid_e_badw", 790, 190),
