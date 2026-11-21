@@ -1504,8 +1504,8 @@ troops_part1 = [
       itm_ar_vae_t3_padded_a,itm_bo_vae_t3_leather,itm_he_vae_t3_furcap_a,itm_ga_vae_a4_leather,
       itm_sh_vae_kit_leather,itm_we_vae_sword_lord,itm_we_vae_sword_cleaver
     ],
-    def_attrib|level(17),wp_one_handed(107)|wp_two_handed(98)|wp_polearm(128)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_2|knows_power_strike_3|knows_power_draw_2|knows_shield_1|knows_athletics_1|knows_horse_archery_1,
+    def_attrib|level(13),wp_one_handed(82)|wp_two_handed(76)|wp_polearm(108)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
+    knows_common|knows_ironflesh_2|knows_power_strike_2|knows_power_draw_2|knows_shield_1|knows_athletics_1|knows_riding_1|knows_horse_archery_1,
     vaegir_man_face_young_1,vaegir_man_face_old_2
   ],
   ["vaegir_e_luchnik_militia","A3 Vaegir Luchnik Militia","A3 Vaegir Luchnik Militias",
@@ -1516,8 +1516,8 @@ troops_part1 = [
       itm_he_vae_t2_furcap_d,itm_he_vae_t2_furcap_e,itm_sh_vae_kit_plain,itm_we_vae_blunt_hammer,
       itm_we_vae_blunt_hammerfootman
     ],
-    def_attrib|level(14),wp_one_handed(90)|wp_two_handed(63)|wp_polearm(83)|wp_archery(111)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_2|knows_power_strike_3|knows_power_draw_3|knows_shield_1|knows_athletics_1|knows_horse_archery_1,
+    def_attrib|level(16),wp_one_handed(96)|wp_two_handed(76)|wp_polearm(88)|wp_archery(128)|wp_crossbow(40)|wp_throwing(63),
+    knows_common|knows_ironflesh_2|knows_power_strike_3|knows_power_draw_4|knows_shield_2|knows_athletics_2|knows_horse_archery_2,
     vaegir_man_face_young_1,vaegir_man_face_old_4
   ],
   ["vaegir_e_footman","I3 Vaegir Footman","I3 Vaegir Footmen",
@@ -1527,8 +1527,8 @@ troops_part1 = [
       itm_sh_vae_kit_leather,itm_we_vae_blunt_hammerthick,itm_we_vae_sword_throw_daggers,itm_ar_vae_t3_padded_d,
       itm_we_vae_blunt_hammerempire,itm_we_vae_blunt_hammerwar,itm_we_vae_blunt_maul
     ],
-    def_attrib|level(17),wp_one_handed(107)|wp_two_handed(98)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),
-    knows_common|knows_ironflesh_1|knows_power_strike_3|knows_power_throw_2|knows_power_draw_2|knows_shield_1|knows_athletics_1|knows_horse_archery_1,
+    def_attrib|level(15),wp_one_handed(98)|wp_two_handed(92)|wp_polearm(88)|wp_archery(92)|wp_crossbow(40)|wp_throwing(112),
+    knows_common|knows_ironflesh_2|knows_power_strike_3|knows_power_throw_2|knows_power_draw_2|knows_shield_2|knows_athletics_2|knows_horse_archery_1,
     vaegir_man_face_middle_3,vaegir_man_face_older_4
   ],
 #Tier 4
@@ -1539,8 +1539,8 @@ troops_part1 = [
       itm_ga_vae_a5_mail,itm_sh_vae_kit_heavy,itm_we_vae_spear_lance,itm_we_vae_sword_sickle_military,
       itm_we_vae_sword_cleaverwar
     ],
-    def_attrib|level(23),wp_one_handed(137)|wp_two_handed(128)|wp_polearm(158)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_2|knows_shield_2|knows_athletics_2|knows_riding_1|knows_horse_archery_1,
+    def_attrib|level(20),wp_one_handed(128)|wp_two_handed(118)|wp_polearm(148)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
+    knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_2|knows_shield_2|knows_athletics_2|knows_riding_2|knows_horse_archery_1,
     vaegir_man_face_young_1,vaegir_man_face_old_2
   ],
   # ["vaegir_e_junior_druzhinnik","C4 Vaegir Junior Druzhinnik","C4 Vaegir Junior Druzhinniki",
@@ -1560,8 +1560,8 @@ troops_part1 = [
       itm_ga_vae_a2_leather,itm_sh_vae_hea_wood,itm_we_vae_bow_hunting,itm_we_vae_sword_cleaver,
       itm_we_vae_arrow_sharp,itm_he_vae_t3_furcap_e
     ],
-    def_attrib|level(20),wp_one_handed(132)|wp_two_handed(63)|wp_polearm(83)|wp_archery(159)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_4|knows_shield_1|knows_athletics_1|knows_riding_2|knows_horse_archery_2,
+    def_attrib|level(22),wp_one_handed(142)|wp_two_handed(78)|wp_polearm(98)|wp_archery(176)|wp_crossbow(40)|wp_throwing(63),
+    knows_common|knows_ironflesh_3|knows_power_strike_4|knows_power_draw_5|knows_shield_1|knows_athletics_2|knows_riding_2|knows_horse_archery_2,
     vaegir_man_face_young_1,vaegir_man_face_old_4
   ],
   ["vaegir_e_zalstrelshik","A4 Vaegir Zalstrelshik","A4 Vaegir Zalstrelshiki",
@@ -1582,8 +1582,8 @@ troops_part1 = [
       itm_sh_vae_kit_leather,itm_we_vae_blunt_sledgehammer,itm_we_vae_blunt_hammersleek,itm_we_vae_blunt_hammerknight,
       itm_we_vae_blunt_maul_magnus
     ],
-    def_attrib|level(21),wp_one_handed(135)|wp_two_handed(130)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),
-    knows_common|knows_ironflesh_2|knows_power_strike_5|knows_power_throw_2|knows_power_draw_2|knows_shield_1|knows_athletics_2|knows_horse_archery_1,
+    def_attrib|level(23),wp_one_handed(152)|wp_two_handed(146)|wp_polearm(72)|wp_archery(92)|wp_crossbow(40)|wp_throwing(112),
+    knows_common|knows_ironflesh_3|knows_power_strike_5|knows_power_throw_2|knows_power_draw_3|knows_shield_2|knows_athletics_3|knows_horse_archery_1,
     vaegir_man_face_young_3,vaegir_man_face_old_4
   ],
 #  ["vaegir_e_poztoma_druzhinaik","I4 Vaegir Poztoma Druzhinaik","I4 Vaegir Poztoma Druzhinaiki",tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,															[																	itm_ar_vae_t4_jerkin_e											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_d				,itm_ga_vae_a4_leather			,itm_sh_vae_kit_leather			,itm_we_vae_blunt_hammersleek			,itm_we_vae_sword_throw_bollock													,itm_we_vae_blunt_hammerknight],def_attrib|level(22),wp_one_handed(142)|wp_two_handed(98)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(138),knows_common|knows_ironflesh_2|knows_power_strike_5|knows_power_throw_3|knows_power_draw_2|knows_shield_1|knows_athletics_2|knows_horse_archery_1,vaegir_man_face_young_3,vaegir_man_face_old_4],
@@ -1597,8 +1597,8 @@ troops_part1 = [
       itm_ar_vae_t5_lamellar_d,itm_ar_vae_t5_lamellar_e,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c,
       itm_we_vae_sword_cleaver_soldier
     ],
-    def_attrib|level(30),wp_one_handed(193)|wp_two_handed(128)|wp_polearm(207)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_5|knows_power_strike_5|knows_power_draw_2|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_1,
+    def_attrib|level(26),wp_one_handed(176)|wp_two_handed(112)|wp_polearm(188)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
+    knows_common|knows_ironflesh_5|knows_power_strike_6|knows_power_draw_3|knows_shield_4|knows_athletics_3|knows_riding_4|knows_horse_archery_1,
     vaegir_man_face_middle_1,vaegir_man_face_older_2
   ],
   ["vaegir_e_druzhinnik","H5 Vaegir Druzhinnik","H5 Vaegir Druzhinniki",
@@ -1608,8 +1608,8 @@ troops_part1 = [
       itm_ga_vae_a4_leather,itm_sh_vae_hae_striped_a,itm_we_vae_bow_black,itm_we_vae_sword_sickle_military,
       itm_we_vae_arrow_sharp
     ],
-    def_attrib|level(27),wp_one_handed(181)|wp_two_handed(63)|wp_polearm(83)|wp_archery(215)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_4|knows_power_strike_4|knows_power_draw_5|knows_shield_2|knows_athletics_2|knows_riding_3|knows_horse_archery_3,
+    def_attrib|level(28),wp_one_handed(188)|wp_two_handed(72)|wp_polearm(92)|wp_archery(224)|wp_crossbow(40)|wp_throwing(63),
+    knows_common|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_6|knows_shield_3|knows_athletics_3|knows_riding_4|knows_horse_archery_3,
     vaegir_man_face_middle_1,vaegir_man_face_older_4
   ],
   ["vaegir_e_golova","H5 Vaegir Elitniy Druzhinnik","H5 Vaegir Golovy",tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_kingdom_2,												[itm_ho_vae_rus_blueroan											,itm_ar_vae_t4_jerkin_g											,itm_bo_vae_t4_shoes											,itm_he_vae_t4_helmet_f				,itm_ga_vae_a4_leather			,itm_sh_vae_hae_striped_b		,itm_we_vae_bow_black					,itm_we_vae_sword_sickle_military		,itm_we_vae_arrow_sharp					,itm_ho_vae_rus_redroan],def_attrib|level(29),wp_one_handed(195)|wp_two_handed(63)|wp_polearm(83)|wp_archery(231)|wp_crossbow(40)|wp_throwing(63),knows_common|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_7|knows_shield_3|knows_athletics_2|knows_riding_3|knows_horse_archery_4,vaegir_man_face_middle_1,vaegir_man_face_older_4],
@@ -1640,8 +1640,8 @@ troops_part1 = [
       itm_ar_vae_t5_studded_d,itm_bo_vae_t5_chausses,itm_he_vae_t5_helmet_d,itm_ga_vae_a4_leather,
       itm_sh_vae_kit_heavy,itm_we_vae_blunt_hammerempirewar,itm_we_vae_sword_throw_dirk,itm_we_vae_blunt_hammerbastard
     ],
-    def_attrib|level(27),wp_one_handed(177)|wp_two_handed(98)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(178),
-    knows_common|knows_ironflesh_4|knows_power_strike_7|knows_power_throw_5|knows_power_draw_4|knows_shield_3|knows_athletics_4|knows_horse_archery_1,
+    def_attrib|level(28),wp_one_handed(184)|wp_two_handed(112)|wp_polearm(72)|wp_archery(92)|wp_crossbow(40)|wp_throwing(188),
+    knows_common|knows_ironflesh_5|knows_power_strike_7|knows_power_throw_5|knows_power_draw_5|knows_shield_4|knows_athletics_4|knows_horse_archery_1,
     vaegir_man_face_young_1,vaegir_man_face_old_3
   ],
 #Tier 6
@@ -1665,8 +1665,8 @@ troops_part1 = [
       itm_ga_vae_a5_mail,itm_sh_vae_hea_steel,itm_we_vae_bow_war,itm_we_vae_sword_jarl,
       itm_we_vae_arrow_imperial,itm_we_vae_sword_cleaver_soldier
     ],
-    def_attrib|level(32),wp_one_handed(216)|wp_two_handed(63)|wp_polearm(83)|wp_archery(255)|wp_crossbow(40)|wp_throwing(63),
-    knows_common|knows_ironflesh_5|knows_power_strike_7|knows_power_draw_8|knows_shield_3|knows_athletics_2|knows_riding_6|knows_horse_archery_4,
+    def_attrib|level(35),wp_one_handed(232)|wp_two_handed(72)|wp_polearm(92)|wp_archery(282)|wp_crossbow(40)|wp_throwing(63),
+    knows_common|knows_ironflesh_6|knows_power_strike_8|knows_power_draw_9|knows_shield_4|knows_athletics_4|knows_riding_7|knows_horse_archery_5,
     vaegir_man_face_middle_1,vaegir_man_face_older_4
   ],
   ["vaegir_e_metkiy_luchnik","A6 Vaegir Metkiy Luchnik","A6 Vaegir Metkiy Luchniki",
@@ -1688,8 +1688,8 @@ troops_part1 = [
       itm_ar_vae_t6_cuirbouilli_c,itm_he_vae_t6_warhelmet_f,itm_sh_vae_kit_vaegir_e,itm_sh_vae_kit_vaegir_f,
       itm_we_vae_blunt_hammerinquisition
     ],
-    def_attrib|level(33),wp_one_handed(219)|wp_two_handed(226)|wp_polearm(60)|wp_archery(92)|wp_crossbow(40)|wp_throwing(98),
-    knows_common|knows_ironflesh_5|knows_power_strike_9|knows_power_throw_2|knows_power_draw_4|knows_shield_3|knows_athletics_3|knows_riding_4|knows_horse_archery_1,
+    def_attrib|level(32),wp_one_handed(214)|wp_two_handed(218)|wp_polearm(72)|wp_archery(92)|wp_crossbow(40)|wp_throwing(112),
+    knows_common|knows_ironflesh_6|knows_power_strike_9|knows_power_throw_3|knows_power_draw_4|knows_shield_4|knows_athletics_4|knows_riding_5|knows_horse_archery_1,
     vaegir_man_face_middle_3,vaegir_man_face_older_4
   ],
 #Tier 7
@@ -1701,8 +1701,8 @@ troops_part1 = [
       itm_ho_vae_long_eaglewhite,itm_ar_vae_t7_elite_b,itm_ar_vae_t7_elite_c,itm_ar_vae_t7_elite_d,
       itm_ar_vae_t7_elite_e,itm_ar_vae_t7_elite_f,itm_he_vae_t7_warmask_b
     ],
-    def_attrib|level(40),wp_one_handed(268)|wp_two_handed(128)|wp_polearm(282)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_8|knows_power_strike_9|knows_power_draw_3|knows_shield_6|knows_athletics_3|knows_riding_7|knows_horse_archery_1,
+    def_attrib|level(39),wp_one_handed(260)|wp_two_handed(120)|wp_polearm(276)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
+    knows_common|knows_ironflesh_8|knows_power_strike_10|knows_power_draw_3|knows_shield_6|knows_athletics_4|knows_riding_7|knows_horse_archery_1,
     vaegir_man_face_middle_1,vaegir_man_face_older_2
   ],
   ["vaegir_e_vityas","H7 Vaegir Vityaz","H7 Vaegir Vityazy",
@@ -1725,8 +1725,8 @@ troops_part1 = [
       itm_ar_vae_t6_cuirbouilli_c,itm_he_vae_t6_warhelmet_f,itm_sh_vae_kit_vaegir_b,itm_sh_vae_kit_vaegir_c,
       itm_we_vae_blunt_mallet,itm_we_vae_blunt_hammermilitary
     ],
-    def_attrib|level(36),wp_one_handed(240)|wp_two_handed(235)|wp_polearm(252)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
-    knows_common|knows_ironflesh_7|knows_power_strike_9|knows_power_draw_3|knows_shield_5|knows_athletics_4|knows_horse_archery_1,
+    def_attrib|level(35),wp_one_handed(234)|wp_two_handed(228)|wp_polearm(248)|wp_archery(92)|wp_crossbow(40)|wp_throwing(40),
+    knows_common|knows_ironflesh_7|knows_power_strike_9|knows_power_throw_3|knows_power_draw_3|knows_shield_5|knows_athletics_5|knows_horse_archery_1,
     vaegir_man_face_middle_1,vaegir_man_face_older_2
   ],
 ##General Units
